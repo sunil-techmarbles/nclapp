@@ -10,18 +10,28 @@
 |
 */
 
-Route::middleware(['guest'])->group(function () {
+Route::middleware(['guest'])->group(function () { 
  
 	Route::get('/','LoginController@index')->name('login.view');  
+	
 	Route::get('/login','LoginController@index')->name('login.view');
+	
 	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');  
 
-	// Route::group(function () {
+	Route::get('/register', 'RegisterController@index');      
 
-	// 	// Route::get('/','DashbController@index')->name('login.view'); 
-	// });
+});   
 
-}); 
+
+  	Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');  ;      
+
+    Route::get('/logout', 'LoginController@logout')->name('logout'); 
+
+    Route::get('/users', 'UsersController@index');  
+
+
+
+ 
 
 
 
