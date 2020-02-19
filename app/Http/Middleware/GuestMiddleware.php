@@ -17,25 +17,11 @@ class GuestMiddleware
      */
     public function handle( $request, Closure $next )
     { 
-        
-        // $user = Sentinel::findUserById(1);
-        // Sentinel::logout($user);
-
         if ( Sentinel::guest() ) {  
-      
             return $next( $request ) ; 
-      
         } else { 
-
-            // $user = Sentinel::findUserById(1);
-
-            // Sentinel::logout( $user ); 
-          
-            //return back()->with('401', 'You have no permission to access this page.');
             return abort(401); 
-
         }
-
         return $next( $request );
 
     }

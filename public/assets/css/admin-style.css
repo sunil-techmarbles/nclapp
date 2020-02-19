@@ -1,0 +1,352 @@
+body
+{
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	background-color: #F1F2F2;
+	background: url('/assets/images/bg_main.png') no-repeat #F1F2F2;
+	background-position: center center;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.ms {
+	font-size: 0.6em;
+}
+.menu-item {
+	font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    transition: all 200ms ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 155px;
+    border-bottom: 5px solid transparent;
+}
+.menu-item span {
+	background:#107878;
+	color:white;
+	border-radius: 1em;
+	padding: 15px;
+	width: 75px;
+	height: 75px; 
+	font-size: 2em;
+	display: block;
+	margin: auto;
+	text-decoration: none;
+}
+
+.menu-item a {
+	color:#666666;
+}
+
+.menu-item a:hover {
+	text-decoration: none;
+}
+
+.menu-item:hover {
+	border-bottom: 5px solid #107878;
+}
+
+.close-link
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background-color: #E2EAE7;
+}
+#edit-link
+{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-align: right;
+}
+#uhint 
+{
+	position: absolute;
+	display: none;
+	padding: 5px;
+	font: 16px tahoma, sans-serif;
+	border: 1px solid #ccc;
+	background-color: #f3f3f3;
+	min-width: 250px;
+}
+#hints 
+{
+	margin-right: 20px;
+	margin-top: 15px;
+}
+.taskgrp {
+	border-top: 1px solid #cecece;
+}
+.asinrow {
+	cursor: pointer;
+}
+.tasklist::after { 
+  content: "â–¢\00a0 â–¢";
+  float: right;
+  font-size: 14px;
+  line-height: 14px;
+}
+.grp-head {
+	width: 35%;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.req {
+	font-weight: bold;
+	color: red;
+}
+.ttl {
+	font-size: 1.5em ;
+	color: #66659e;
+}
+
+#page-logo {
+	margin-bottom: 5px;
+	padding:20px;
+	text-align: center;
+	line-height: 100%;
+}
+
+#img-logo {
+	border: 0px; 
+	display: inline-block; 
+	width: 45%;
+	vertical-align: middle;
+}
+
+#page-head {
+	text-align: center;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#page-bottom {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em ;
+	color: #66659e;
+	text-decoration: none;
+}
+
+.bottom-url {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
+
+.form-initial .form-control {
+	display: block;
+	width: 100%;
+}
+
+.form-initial .btn {
+	display: block;
+}
+
+.form-initial .form-group {
+	display: block;
+	width: 100%;
+}
+
+.cb-cnt {
+	display: inline-block;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	color: #5c5b93;
+	margin-top: 10px;
+}
+
+#preview {
+	display: none;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    padding: 8px;
+    color:#2f2e5f;
+}
+
+#main-form {
+	padding: 8px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    color:#2f2e5f;
+}
+
+#main-form input, #main-form select, #main-form textarea {
+	background-color: #eceef2;
+}	
+
+.formitem
+{
+	margin: 10px 0;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #c5c0fa;
+}
+
+.form-group{
+	margin-right: 10px;
+}
+
+.question-group {
+	display: block;
+	padding: 5px;
+	border: 2px solid #aca6f7;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+div.success, div.notice, div.error {
+    padding: 0 30px;
+    margin-top: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background-position: 5px 5px;
+}
+.error {
+    border: 1px solid maroon;
+    color: #000;
+    background: url("../img/error.png") no-repeat pink;
+}
+.notice {
+    border: 1px solid #00a200;
+    color: #000;
+    background: url("../img/info.png") no-repeat #acf2ac;
+}
+.success h1, .notice h1, .error h1 {
+    border-bottom: 2px solid;
+    font-weight: bold;
+    text-align: left;
+}
+div.error h1 {
+    border-color: #ff0000;
+}
+div.notice h1 {
+    border-color: #007700;
+}
+label.btn span {
+  font-size: 1.5em ;
+}
+
+label input[type="radio"] ~ i.fa.fa-circle-o{
+    color: #c8c8c8;    display: inline;
+}
+label input[type="radio"] ~ i.fa.fa-dot-circle-o{
+    display: none;
+}
+label input[type="radio"]:checked ~ i.fa.fa-circle-o{
+    display: none;
+}
+label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
+    color: #7AA3CC;    display: inline;
+}
+label:hover input[type="radio"] ~ i.fa {
+color: #7AA3CC;
+}
+
+label input[type="checkbox"] ~ i.fa.fa-square-o{
+    color: #c8c8c8;    display: inline;
+}
+label input[type="checkbox"] ~ i.fa.fa-check-square-o{
+    display: none;
+}
+label input[type="checkbox"]:checked ~ i.fa.fa-square-o{
+    display: none;
+}
+label input[type="checkbox"]:checked ~ i.fa.fa-check-square-o{
+    color: #7AA3CC;    display: inline;
+}
+label:hover input[type="checkbox"] ~ i.fa {
+	color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label.active{
+    color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 2em;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	cursor: pointer;
+	background-color: none;
+	border: 0px solid 
+	#c8c8c8;
+	border-radius: 3px;
+	color: #c8c8c8;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+div[data-toggle="buttons"] label:hover {
+	color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+@media print {
+    .noprint {
+		display: none;
+	}
+	td {
+		padding: 2px !important;
+		font-size: 12px;
+		text-align: center !important;
+	}
+	th {
+		padding: 4px !important;
+		text-align: center;
+		font-size: 10px;
+	}
+	body {
+		padding: 0;
+	}
+	.container {
+		padding: 0;
+		margin: 0;
+	}
+	.formitem {
+		margin: 0;
+    	padding-bottom: 0;
+    	border: none;
+    	font-size: 12px;
+	}
+	.tasklist, .frmrow, .cspecs {
+		margin: 0;
+    	padding-bottom: 0;
+    	font-size: 12px;
+	}
+	.grp-head {
+		width: 35%;
+		font-weight: bold;
+    	font-size: 12px;
+    	vertical-align: top;
+	}
+} 
+
+@page {
+    margin: 2mm;
+    size: 8in 11in;
+} 

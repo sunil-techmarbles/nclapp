@@ -14,21 +14,17 @@ use Redirect;
 class LoginController extends Controller  { 
    
    
-   public function index() {
-   		 
-   		// Sentinel::logout(); 
+   	public function index() {
 
    		return view('auth.login'); 
-
-   }   
+  	}   
  
-    
     public function loginAuthenticate( Request $request ) {
 
     	try {
             if (Sentinel::authenticate($request->all())) {
-                
-                    return redirect('/admin/dashboard');
+
+                return redirect()->route('dashboard');
                 
             } else {
                 return redirect()->back()->with(['error' => 'Wrong Credentials']);
