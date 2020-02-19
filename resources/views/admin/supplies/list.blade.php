@@ -37,7 +37,7 @@
 						<a href="javascript:void(0)" onclick="del_confirm(51)" title="Delete Item ID 51">
 							<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
 						</a>&nbsp;&nbsp;
-						<a href="{{route(editsupplies)}}" title="Edit">
+						<a href="{{route('edit.supplies')}}" title="Edit">
 							<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
 						</a></td>
 				</th>
