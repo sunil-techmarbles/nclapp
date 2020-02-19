@@ -14,7 +14,6 @@ class UsersTableSeeder extends Seeder
         $admin_data = [
         'first_name' => 'Admin',
         'last_name' => 'Admin',
-        'username' => 'admin',
         'email'    => 'admin@site.com',
         'password' => 123456789,
       ];
