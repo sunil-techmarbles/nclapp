@@ -29,4 +29,4 @@ class CheckForAdminPermissions
         return $next($request);
     }  
 
-}
+} 
