@@ -9,6 +9,7 @@ use Cartalyst\Sentinel\Users\EloquentUser;
 
 class User extends EloquentUser {
 
+
 	public static function checkEmailExits( $email='' ) {
 		$isCheck = false;
 		$exits = self::where([ 'email' => $email ])->first(); 
@@ -18,4 +19,6 @@ class User extends EloquentUser {
 		}
 
 	}
+
+
 }

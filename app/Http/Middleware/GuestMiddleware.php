@@ -16,11 +16,13 @@ class GuestMiddleware
      * @return mixed
      */
     public function handle( $request, Closure $next )
-    { 
+    {  
+
         if( \Route::current()->uri()  == 'register' ) { 
             
             if ( $user = Sentinel::check() ) { 
                 $slug = Sentinel::getUser()->roles()->first()->slug;  
+
                 if ($slug == 'admin') { 
                     return $next( $request ) ;   
                 } else {
@@ -30,21 +32,26 @@ class GuestMiddleware
                 return redirect()->back()->with(['error' => 'You have no permission to access this page.']); 
             } 
 
-        } else
-        { 
+        } else if (  \Route::current()->uri()  == 'admin/dashboard' ) {   
 
-            if ( Sentinel::guest() ) {  
+            if ( Sentinel::guest() ) {    
+                return redirect()->route('login.view')->with(['error' => 'You have no permission to access this page.']); 
+            } 
+
+        } else {
+
+            if ( Sentinel::guest() ) {    
            
                 // user not logged in ..
                 return $next( $request ) ;  
       
-            } else {  
+            } else {   
 
                 $user = Sentinel::getUser();  
                 $slug = Sentinel::getUser()->roles()->first()->slug;  
 
                 if ($slug == 'admin') {  
-                    return redirect()->route('dashboard');      
+                   return redirect()->route('dashboard'); 
                 } else { 
 
                   return redirect()->back()->with(['error' => 'You have no permission to access this page.']);  
@@ -52,6 +59,7 @@ class GuestMiddleware
                 }
     
             }
+
         } 
         return $next( $request );
     }

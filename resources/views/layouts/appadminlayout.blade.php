@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
 </head>   
 
-	<body>
+	<body> 
 		<div id="main_content">
 			<div class="container">
 				@include('layouts.adminheader')
@@ -24,7 +24,7 @@
 			</div>
 			@include('layouts.adminfooter') 
 		<div> 
-	</body> 
+	</body>   
 
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>

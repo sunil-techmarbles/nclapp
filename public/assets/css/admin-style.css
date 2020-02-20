@@ -105,16 +105,19 @@ body
 
 #page-logo {
 	margin-bottom: 5px;
-	padding:20px;
-	text-align: center;
-	line-height: 100%;
+    padding: 20px;
+    text-align: center;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 #img-logo {
-	border: 0px; 
-	display: inline-block; 
-	width: 45%;
-	vertical-align: middle;
+	border: 0px;
+    display: inline-block;
+    max-width: 370px;
 }
 
 #page-head {
