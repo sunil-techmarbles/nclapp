@@ -20,6 +20,7 @@
 				<div id="page-logo">
 					<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">
 				</div>
+				@include('admin.message')
 				@yield('content')
 			</div>
 			@include('layouts.footer') 

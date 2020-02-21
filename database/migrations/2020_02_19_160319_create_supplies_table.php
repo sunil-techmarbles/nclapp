@@ -20,7 +20,6 @@ class CreateSuppliesTable extends Migration
             $table->integer('qty');
             $table->string('part_num', 100);
             $table->longText('description');
-            $table->string('applicable_models', 255);
             $table->string('dept', 100);
             $table->double('price', 11, 2);
             $table->string('vendor', 200);
@@ -28,7 +27,6 @@ class CreateSuppliesTable extends Migration
             $table->integer('reorder_qty');
             $table->string('dlv_time', 500);
             $table->longText('bulk_options');
-            $table->string('emails', 500);
             $table->string('email_subj', 500);
             $table->longText('email_tpl');
             $table->timestamp('email_sent');

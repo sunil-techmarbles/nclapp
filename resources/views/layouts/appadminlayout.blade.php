@@ -18,7 +18,9 @@
 			<div class="container">
 				@include('layouts.adminheader')
 				<div id="page-logo">
-					<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">
+					<a href="{{URL('/')}}">
+						<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">	
+					</a>
 				</div>
 
 				@yield('content')

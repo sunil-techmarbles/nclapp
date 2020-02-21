@@ -2,12 +2,12 @@
 @section('title', 'Supplies')
 @section('content')
 <div class="abs" style="text-align: center;">
-	<table id="supplies" class="table" cellspacing="0" cellpadding="0" border="0">
+	<table class="table" cellspacing="0" cellpadding="0" border="0">
 		<tbody>
 			<tr>
 				<td>
-					<a class="btn btn-default btn-sm border" href="{{route('add.supplies')}}" &quot;index.php?&amp;start=0&amp;ad=&amp;sort=&amp;s=&amp;f=&amp;mte_a=new&quot;" >Add Record</a>
-					<a class="btn btn-default btn-sm border" href="{{route('export.supplies')}}" onclick="window.location=&quot;export.php&quot;">Export</a>
+					<a class="btn btn-primary btn-sm border" href="{{route('add.supplies')}}" >Add Record</a>
+					<a class="btn btn-default btn-sm border" href="{{route('export.supplies')}}">Export</a>
 				</td>
 				<td nowrap="" style="text-align: right">
 					<form method="post" action="{{route('import.supplies')}}" enctype="multipart/form-data">
@@ -29,7 +29,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<table class="table">
+	<table id="supplies" class="table">
 		<thead>
 			<tr>
 				<th></th>

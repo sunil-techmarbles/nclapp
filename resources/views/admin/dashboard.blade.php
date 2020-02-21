@@ -36,8 +36,8 @@
         </div> 
 
         <div class="menu-item">
-            <a href="asins/index.php"><span class="fa fa-hdd-o"></span></a>
-            <a href="asins/index.php">ASINs</a>
+            <a href="{{route('asin')}}"><span class="fa fa-hdd-o"></span></a>
+            <a href="{{route('asin')}}">ASINs</a>
         </div>
         <div class="menu-item">
             <a href="index.php?page=packages"><span class="fa fa-sign-in"></span></a>

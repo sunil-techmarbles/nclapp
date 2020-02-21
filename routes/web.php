@@ -38,11 +38,15 @@ Route::middleware(['checkadminpermissions'])->group(function () {
 	    Route::get('/softDeleteUser/{id}', 'UsersController@softDeleteUser')->name('softDelete.user');        
 	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
-		Route::get('/addsupplies','SuppliesController@addsupplies')->name('add.supplies');
-		Route::get('/editsupplies','SuppliesController@editsupplies')->name('edit.supplies');
-		Route::get('/exportsupplies','SuppliesController@exportsupplies')->name('export.supplies');
-		Route::get('/importsupplies','SuppliesController@importsupplies')->name('import.supplies');
+		Route::get('/addsupplies','SuppliesController@addSupplies')->name('add.supplies');
+		Route::post('/storesupplies','SuppliesController@storeSupplies')->name('store.supplies');
+		Route::get('/editsupplies','SuppliesController@editSupplies')->name('edit.supplies');
+		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
+		Route::get('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
      
+		Route::get('/asin','AsinController@index')->name('asin');
+		Route::get('/addasin','AsinController@addAsins')->name('add.asins');
+		Route::get('/editasin','AsinController@editAsin')->name('edit.asin');
 	});
 
 });
