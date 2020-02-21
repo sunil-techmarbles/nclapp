@@ -2,23 +2,21 @@
 @section('title' , 'Add User')
 @section('content') 
 
-@if (Session('error'))
-<div class="alert alert-danger alert-dismissible">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	<strong>{{ Session::get('error') }}</strong>
-</div> 
-@endif   
-
-@if (Session('success'))
-<div class="alert alert-success alert-dismissible">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	<strong>{{ Session::get('success') }}</strong>
-</div>
-@endif   
- 
 <div class="row justify-content-center text-center">
+	<table  class="table table-hover">
+		<tbody>
+			<tr> 
+				<td class = "">
+					<h3 class="float-left">Add User</h3>
+				</td>
+				<td class = "float-right">
+					<a class=" btn btn-primary btn-sm btn-sm border" href="{{route('users')}}" >Cancel</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
 	<div class="col-6">
-		<h3 class="text-center">Register User</h3>
 		<form method="post" action="{{route('register.registerAuthenticate')}}">  
 			@csrf  
 			
@@ -71,7 +69,7 @@
 				</select> 
 			</div> 
 
-			<button type="submit" class="btn btn-primary"> Register </button> 
+			<button type="submit" class="btn btn-primary"> Save </button> 
 		</form>
 	</div> 
 </div>  

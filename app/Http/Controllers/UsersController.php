@@ -9,18 +9,22 @@ use App\User;
 class UsersController extends Controller
 { 
 
-	public function index() {  
+	public $roles;  
+
+	public function __Construct(){
+		$this->roles = \DB::table('roles')->select( 'name' , 'id' )->get(); 
+	}
+
+
+	public function index() {   
 		$users = User::all();   
-		return view( 'admin.users.list' , compact('users') );
+		return view( 'admin.users.list' , compact('users') ); 
 	}   
 
-
 	public function edituser( $id ){    
-		$user = User::findorfail( $id ); 
-		$roles = \DB::table('roles')->select( 'name' , 'id' )->get();  
-		return view( 'admin.users.edit' , compact('user' , 'roles' ) );            
+		$user = User::getUserDetail( $id );      
+		return view( 'admin.users.edit' , compact('user') )->with(['roles' => $this->roles]);  
 	} 
-
 
 	public function edituserHandle( $id , Request $request ) {
 		 
@@ -64,14 +68,11 @@ class UsersController extends Controller
 			 } catch( Exception $error ) { 
  
 			 	return redirect()->route('users')->with('success', 'Error occred Please try again.'); 
-
-			 }  
+		}  
 
 	}	
 
-
-
-	public function softDeleteUser( $id ) {
+	public function softDeleteUser( $id ) { 
 
 		dd( $id );   
 

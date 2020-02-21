@@ -9,9 +9,9 @@ use Redirect;
 
 class LoginController extends Controller  { 
 
-    public function index() {
+    public function index() { 
         return view('auth.login'); 
-    }   
+    } 
 
     public function loginAuthenticate( Request $request ) { 
         $validator = $request->validate([
@@ -30,7 +30,7 @@ class LoginController extends Controller  {
         } catch (NotActivatedException $e) {
             return redirect()->back()->with(['error' => $e->getMessage()]);
         }
-        return redirect('/');      
+        return redirect('/');   
     } 
 
     public function logout( Request $request ) {  

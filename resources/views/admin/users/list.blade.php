@@ -2,21 +2,17 @@
 @section('title' , 'Users List')
 @section('content') 
 
-@if (Session('error'))
-<div class="alert alert-danger alert-dismissible">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	<strong>{{ Session::get('error') }}</strong>
-</div> 
-@endif   
+<table  class="table table-hover"> 
+	<tbody>
+		<tr>
+			<td class = "float-right">
+				<a class="float-right btn btn-primary btn-sm btn-sm border" href="{{route('user.register')}}" >Add User</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
-@if (Session('success'))
-<div class="alert alert-success alert-dismissible">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	<strong>{{ Session::get('success') }}</strong>
-</div>
-@endif
-
-<table class="table table-hover">
+<table class="table table-hover"> 
 	<thead>
 		<th>User ID</th>
 		<th>User name</th>
@@ -32,8 +28,8 @@
 			<td>{{$user->email}}</td> 
 			<td> {{ $user->roles()->get()[0]->name }} </td>   
 			<td>
-				<a href = "{{route('edit.user', $user->id)}}" > <button class="btn btn-primary"> Edit </button> </a>
-				<a href = "{{route('softDelete.user', $user->id)}}" ><button class="btn btn-danger"> Delete </button></a>  
+				<small><a href = "{{route('edit.user', $user->id)}}" > <button class="btn btn-primary btn-sm"> Edit </button> </a></small>
+				<small><a href = "{{route('softDelete.user', $user->id)}}" ><button class="btn btn-danger btn-sm"> Delete </button></a> </small>
 			</td>
 		</tr>
 		@endforeach 
