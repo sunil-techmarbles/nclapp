@@ -1,4 +1,5 @@
-<?php if ( $user = Sentinel::getUser() ) { 
+<?php 
+	if ( $user = Sentinel::getUser() ) { 
 		$slug = Sentinel::getUser()->roles()->first()->slug;  
 	?>
 
@@ -11,7 +12,7 @@
 				<a  class="nav-link" href="{{route('dashboard')}}"> Home </a>
 			</li>
 
-			<?php if ($slug == 'admin') {    ?> 
+			<?php if ( $slug == 'admin') {  ?>
 			
 			<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
 				<a class="nav-link" href="{{route('users')}}"> View User </a>

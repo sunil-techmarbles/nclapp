@@ -4,7 +4,7 @@
 
 @if (Session('error'))
 <div class="alert alert-danger alert-dismissible">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
 	<strong>{{ Session::get('error') }}</strong>
 </div>
 @endif    
@@ -16,7 +16,7 @@
 			@csrf  
 			<div class="form-group text-left">
 				<label for="email">Email:</label>
-				<input type="email" class="form-control" value="{{ old('fname') }}" id="email" placeholder="Enter email" name="email">
+				<input type="email" class="form-control" value="{{ old('email') }}" id="email" placeholder="Enter email" name="email">
 				@if ($errors->has('email'))
                 	<span class="text-danger">{{ $errors->first('email') }}</span>
             	@endif 

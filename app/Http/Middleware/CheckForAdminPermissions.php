@@ -26,7 +26,7 @@ class CheckForAdminPermissions
             } else {
                 return redirect()->route('dashboard')->with('error', 'You have no permission to access this page.'); 
             } 
-        return $next($request);
+            return $next($request);
     }  
 
 } 

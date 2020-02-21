@@ -22,7 +22,7 @@ class UsersController extends Controller
 	} 
 
 
-	public function edituserHandle( $id , Request $request ){   
+	public function edituserHandle( $id , Request $request ) {
 		 
 		$validator = $request->validate(
 				[
@@ -65,21 +65,21 @@ class UsersController extends Controller
  
 			 	return redirect()->route('users')->with('success', 'Error occred Please try again.'); 
 
-			 }
+			 }  
 
-	}
+	}	
 
 
 
-	public function softDeleteUser( $id ){
+	public function softDeleteUser( $id ) {
 
-		
+		dd( $id );   
+
 		// $user = Sentinel::findById( $id );
 		// $user->delete(); 
 		// return redirect()->route('users')->with('success', 'User Deleted successfully.'); 
 
 	}
-
 
 
 }
