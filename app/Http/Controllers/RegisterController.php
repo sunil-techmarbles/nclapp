@@ -9,12 +9,10 @@ use App\User;
 class RegisterController extends Controller
 { 
    
-   public function index() {  
-
+   	public function index() {
    		$roles = \DB::table('roles')->select( 'name' , 'id' )->get();  
    		return view('auth.register' , compact("roles"))->with('pageTitle',  "Add User");    
- 
-   }	 
+   	}	 
 
    	public function registerAuthenticate( Request $request ) {    
 
@@ -43,7 +41,7 @@ class RegisterController extends Controller
 
         if( $isExists ) {
             return redirect()->back()->with(['error' => 'That email address is already registered.']);
-        }
+        } 
   
       	$user_data = [
 		    'first_name' => $request->fname ,

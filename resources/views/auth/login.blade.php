@@ -9,15 +9,14 @@
 </div>
 @endif    
 
-<div class="row justify-content-center text-center">
+<div class="row justify-content-center text-center"> 
 	<div class="col-6">
 		<h3 class="text-center">Sign in</h3>
 		<form method="post" action="{{route('login.authenticate')}}"> 
 			@csrf  
-			
 			<div class="form-group text-left">
 				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+				<input type="email" class="form-control" value="{{ old('fname') }}" id="email" placeholder="Enter email" name="email">
 				@if ($errors->has('email'))
                 	<span class="text-danger">{{ $errors->first('email') }}</span>
             	@endif 
