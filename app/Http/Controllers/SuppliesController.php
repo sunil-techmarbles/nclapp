@@ -40,6 +40,7 @@ class SuppliesController extends Controller
 
     public function addsupplies()
     {
+        return view ('admin.supplies.add');
 
     }
     	# code...

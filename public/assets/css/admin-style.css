@@ -71,6 +71,11 @@ body
 	background-color: #f3f3f3;
 	min-width: 250px;
 }
+.icons {
+	width: 22px;
+	height: auto;
+	border: 0;
+} 
 #hints 
 {
 	margin-right: 20px;

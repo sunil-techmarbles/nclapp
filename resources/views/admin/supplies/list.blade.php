@@ -2,7 +2,7 @@
 @section('title', 'Supplies')
 @section('content')
 <div class="abs" style="text-align: center;">
-	<table  class="table" cellspacing="0" cellpadding="0" border="0">
+	<table id="supplies" class="table" cellspacing="0" cellpadding="0" border="0">
 		<tbody>
 			<tr>
 				<td>
@@ -16,7 +16,7 @@
 					</form>
 				</td>
 				<td nowrap="" style="text-align: right">
-					<form method="get" action="index.php">
+					<form method="get" action="{{route('supplies')}}">
 						<input type="text" name="s" value="" placeholder=" Search">
 						<select name="f" style="height:26px;border: 0;">
 							@foreach($searchItemsLists as $key => $searchItem)
@@ -32,15 +32,7 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>
-					<td nowrap="">
-						<a href="javascript:void(0)" onclick="del_confirm(51)" title="Delete Item ID 51">
-							<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
-						</a>&nbsp;&nbsp;
-						<a href="{{route('edit.supplies')}}" title="Edit">
-							<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
-						</a></td>
-				</th>
+				<th></th>
 				<th> Item ID</th>
 				<th> Item Name</th>
 				<th> Quantity  </th>
@@ -58,7 +50,14 @@
 		<tbody>
 			@foreach($supplieLists as $supplie)
 			<tr>
-				<td></td>
+				<td nowrap="">
+					<a href="javascript:void(0)" onclick="del_confirm({{$supplie->id}})">
+						<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
+					</a>&nbsp;&nbsp;
+					<a href="{{route('edit.supplies', $supplie->id)}}">
+						<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
+					</a>
+				</td>
 				<td>{{$supplie->id}}</td>
 				<td>{{$supplie->item_name}}</td>
 				<td>{{$supplie->qty}}</td>

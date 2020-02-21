@@ -44,7 +44,7 @@ Route::middleware(['checkadminpermissions'])->group(function () {
 		Route::get('/importsupplies','SuppliesController@importsupplies')->name('import.supplies');
      
 	});
- 
+
 });
 
 

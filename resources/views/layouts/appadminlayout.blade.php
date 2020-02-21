@@ -1,16 +1,17 @@
 <!DOCTYPE html> 
 <html lang="en"> 
-<head> 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>
-		{{ config('app.name') }} - @yield('title')
-	</title>
-	<link href="{{URL('assets/css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
-	<link href="{{URL('assets/css/bootstrap/font-awesome.min.css')}}" rel="stylesheet">
-	<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
-	<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
-</head>   
+	<head> 
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>
+			{{ config('app.name') }} - @yield('title')
+		</title>
+		<link href="{{URL('assets/css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+		<link href="{{URL('assets/css/bootstrap/font-awesome.min.css')}}" rel="stylesheet">
+		<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
+		<link href="{{URL('assets/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+		<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
+	</head>   
 
 	<body> 
 		<div id="main_content">
@@ -27,6 +28,8 @@
 	</body>   
 
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/jquery.dataTables.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
 
 </html>  
