@@ -2,7 +2,6 @@
 @section('title' , 'Edit User')
 @section('content') 
 
-
 <div class="row justify-content-center text-center">
 
 	<table  class="table table-hover">
