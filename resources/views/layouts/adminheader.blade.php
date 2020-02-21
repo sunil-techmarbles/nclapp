@@ -15,13 +15,9 @@
 			<?php if ( $slug == 'admin') {  ?>
 			
 			<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-				<a class="nav-link" href="{{route('users')}}"> Users </a>
+				<a class="nav-link" href="{{route('users')}}"> Users </a> 
 			</li>
 			
-			<li class="nav-item {{ request()->segment(count(request()->segments())) == 'register' ? 'active' : '' }}">
-				<a class="nav-link"  href="{{route('user.register')}}"> Add User </a> 
-			</li>
-
 			<?php  } ?>
 		</ul> 
 		<a class="nav-link" href="{{route('logout')}}"> Logout </a>   
