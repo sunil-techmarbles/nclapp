@@ -16,7 +16,7 @@ class CreateSupplieEmailsTable extends Migration
         Schema::create('supplie_emails', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('supplie_id');
-            $table->integer('email');
+            $table->string('email', 200);
             $table->timestamps();
         });
     }

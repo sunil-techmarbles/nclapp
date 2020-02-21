@@ -16,17 +16,17 @@ class CreateSuppliesTable extends Migration
         Schema::create('supplies', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('item_name', 200);
-            $table->string('item_url', 500);
+            $table->string('item_url', 500)->nullable();
             $table->integer('qty');
             $table->string('part_num', 100);
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->string('dept', 100);
             $table->double('price', 11, 2);
             $table->string('vendor', 200);
             $table->integer('low_stock');
             $table->integer('reorder_qty');
             $table->string('dlv_time', 500);
-            $table->longText('bulk_options');
+            $table->longText('bulk_options')->nullable();
             $table->string('email_subj', 500);
             $table->longText('email_tpl');
             $table->timestamp('email_sent');

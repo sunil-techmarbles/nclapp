@@ -1,8 +1,8 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Supplies')
 @section('content')
-<div class="abs" style="text-align: center;">
-	<table class="table" cellspacing="0" cellpadding="0" border="0">
+<div class="abs" style="text-align: center;"
+>	<table class="table" cellspacing="0" cellpadding="0" border="0">
 		<tbody>
 			<tr>
 				<td>
@@ -60,7 +60,16 @@
 				</td>
 				<td>{{$supplie->id}}</td>
 				<td>{{$supplie->item_name}}</td>
-				<td>{{$supplie->qty}}</td>
+				<td style="padding:5px;white-space:nowrap">
+					<form method="GET">
+						<a href="#" onclick="reorderItem(313,50)">
+							<img src="{{URL('assets/images/cart.png')}}" alt="Reorder" title="Reorder">
+						</a>&nbsp;
+						<input type="hidden" name="qtyid" value="{{$supplie->id}}">
+						<input type="number" style="width:70px;min-width:70px;height:20px" min="0" name="qtyval" value="0">
+						<input type="image" style="width:20px;min-width:20px;height:20px; border:none" src="{{URL('assets/images/tick.png')}}" title="Save" alt="Save">
+					</form>
+				</td>
 				<td>{{$supplie->part_num}}</td>
 				<td>{{$supplie->description}}</td>
 				<td>{{$supplie->dept}}</td>

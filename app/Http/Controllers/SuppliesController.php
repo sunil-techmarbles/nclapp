@@ -60,7 +60,7 @@ class SuppliesController extends Controller
     public function addSupplies()
     {
         $models = Asin::getModelList();
-       
+
         return view ('admin.supplies.add',compact('models'))->with([
             'adminEmails' => $this->adminEmails,
             'emailTemplate' => $this->emailTemplate
@@ -85,8 +85,17 @@ class SuppliesController extends Controller
         $supplieID = Supplies::addSupplies($request);
 
         if($supplieID){
-            SupplieEmail::addSupplieEmail($supplieID, $request);
-            SupplieAsinModel::addSupplieAsinModel($supplieID, $request);
+            $supplieEmails = array_filter($request->get('emails'));
+            $applicableModels = array_filter($request->get('applicable_models'));
+
+            foreach ($supplieEmails as $key => $email) {
+                SupplieEmail::addSupplieEmail($email, $supplieID);
+                # code...
+            }
+            foreach ($applicableModels as $key => $applicableModel) {
+                SupplieAsinModel::addSupplieAsinModel($applicableModel, $supplieID);
+                # code...
+            }
             return redirect()->route('supplies')->with('success','Item created successfully!');
         }
         else{
@@ -94,6 +103,62 @@ class SuppliesController extends Controller
         }
         # code...
     }
+
+    public function editSupplies(Request $request, $supplieID)
+    {
+        $supplieDetail = Supplies::getSupplieById($supplieID);
+        $models = Asin::getModelList();
+
+        if($supplieDetail){
+            return view ('admin.supplies.edit',compact('models', 'supplieDetail'))->with([
+                'adminEmails' => $this->adminEmails,
+                'emailTemplate' => $this->emailTemplate
+            ]);        # code...
+        }
+        else{
+            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
+        }
+        abort('404');
+
+    }
+
+    public function updateSupplies(Request $request)
+    {
+        $validatedData = $request->validate([
+            'item_name' => 'required',
+            'qty' => 'required|integer',
+            'part_num' => 'required',
+            'dept' => 'required',
+            'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'vendor' => 'required',
+            'low_stock' => 'required|integer',
+            'reorder_qty' => 'required|integer',
+        ]);
+
+        $result = Supplies::updateSupplieById($request);
+        
+        if($result){
+
+            $supplieEmails = array_filter($request->get('emails'));
+            $applicableModels = array_filter($request->get('applicable_models'));
+
+            foreach ($supplieEmails as $key => $email) {
+                SupplieEmail::updateSupplieEmail($email, $supplieID);
+                # code...
+            }
+            foreach ($applicableModels as $key => $applicableModel) {
+                SupplieAsinModel::updateSupplieAsinModel($applicableModel, $supplieID);
+                # code...
+            }
+            return redirect()->route('supplies')->with('success','Item update successfully!');
+        }
+        else
+        {
+            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
+        }
+        # code...
+    }
+
     public function exportSupplies()
     {
     	# code...

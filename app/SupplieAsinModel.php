@@ -19,12 +19,12 @@ class SupplieAsinModel extends Model
 		'asin_model_id',	
     ];
 
-    public static function addSupplieAsinModel($request, $supplie_id)
+    public static function addSupplieAsinModel($asin_model_id, $supplie_id)
     {       
         $result = false;
         $supplieAsinModel = new SupplieAsinModel();
         $supplieAsinModel->supplie_id = $supplie_id;
-        $supplieAsinModel->asin_model_id = $request->asin_model_id;
+        $supplieAsinModel->asin_model_id = $asin_model_id;
 
         if($supplieAsinModel->save())
         {

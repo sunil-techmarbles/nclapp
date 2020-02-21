@@ -36,7 +36,8 @@ class Supplies extends Model
     // Get All Supplies
     public static function getAllSupplies()
     {
-    	return self::get();
+    	return self::orderBy('id', 'DESC')
+    		->get();
     }
 
     public static function addSupplies($request)
@@ -66,5 +67,53 @@ class Supplies extends Model
     	
     	return $result;
     	# code...
+    }
+
+    public static function updateSupplieById($request)
+    {		
+    	$result = false;
+
+    	$outPut = self::where(['id' => $request->id])
+    		->update([
+		    	'item_name' => $request->item_name,
+		    	'item_url' => $request->item_ur,
+		    	'qty' => $request->qty,
+		    	'part_num' => $request->part_nu,
+		    	'description' => $request->descriptio,
+		    	'dept'	=> $request->dept,
+				'price' => $request->price,
+				'vendor' => $request->vendor,
+				'low_stock' => $request->low_stock,
+				'reorder_qty' => $request->reorder_qty,
+				'dlv_time'	=> $request->dlv_time,
+				'bulk_options'	=> $request->bulk_options,
+				'email_subj' => $request->email_subj,
+				'email_tpl' => $request->email_tpl,
+				'email_sent' => $request->email_sen,
+    		]);
+
+		if($outPut)
+		{
+			$result = true;
+		}
+    	return $result;
+    	# code...
+    }
+
+    public static function getSupplieById($supplieId)
+    {
+    	return self::with(['getSupplieAsinModels', 'getSupplieEmails'])
+    		->where(['id' => $supplieId])
+    		->first();
+    }
+
+    public function getSupplieAsinModels()
+    {
+    	return $this->hasMany('App\SupplieAsinModel', 'supplie_id', 'id');
+    }
+
+    public function getSupplieEmails()
+    {
+    	return $this->hasMany('App\SupplieEmail', 'supplie_id', 'id');
     }
 }
