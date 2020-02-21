@@ -29,7 +29,7 @@ Route::prefix('admin')->group(function () {
 	Route::get('/dashboard','DashboardController@index')->name('dashboard'); 
 	Route::get('/supplies','SuppliesController@index')->name('supplies');
 	Route::get('/addsupplies','SuppliesController@addsupplies')->name('add.supplies');
-	Route::get('/editsupplies','SuppliesController@editsupplies')->name('edit.supplies');
+	Route::get('/editsupplies/{suppliesid}','SuppliesController@editsupplies')->name('edit.supplies');
 	Route::get('/exportsupplies','SuppliesController@exportsupplies')->name('export.supplies');
 	Route::get('/importsupplies','SuppliesController@importsupplies')->name('import.supplies');
     
