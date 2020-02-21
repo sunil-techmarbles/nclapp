@@ -38,9 +38,10 @@ Route::middleware(['checkadminpermissions'])->group(function () {
 	    Route::get('/softDeleteUser/{id}', 'UsersController@softDeleteUser')->name('softDelete.user');        
 	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
-		Route::get('/addsupplies','SuppliesController@addSupplies')->name('add.supplies');
-		Route::post('/storesupplies','SuppliesController@storeSupplies')->name('store.supplies');
-		Route::get('/editsupplies','SuppliesController@editSupplies')->name('edit.supplies');
+		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
+		Route::post('/storesupplie','SuppliesController@storeSupplies')->name('store.supplies');
+		Route::get('/editsupplie/{supplieid}','SuppliesController@editSupplies')->name('edit.supplies');
+		Route::post('/updatesupplie','SuppliesController@updateSupplies')->name('update.supplies');
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::get('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
      

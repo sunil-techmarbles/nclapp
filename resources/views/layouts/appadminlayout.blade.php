@@ -22,7 +22,7 @@
 						<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">	
 					</a>
 				</div>
-
+				@include('admin.message')
 				@yield('content')
 			</div>
 			@include('layouts.adminfooter') 
@@ -30,8 +30,8 @@
 	</body>   
 
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.dataTables.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
 
 </html>  

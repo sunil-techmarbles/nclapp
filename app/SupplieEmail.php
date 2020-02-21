@@ -19,12 +19,12 @@ class SupplieEmail extends Model
 		'email',	
     ];
 
-    public static function addSupplieEmail($request, $supplie_id)
+    public static function addSupplieEmail($email, $supplie_id)
     {       
         $result = false;
         $supplieEmail = new SupplieEmail();
         $supplieEmail->supplie_id = $supplie_id;
-        $supplieEmail->email = $request->email;
+        $supplieEmail->email = $email;
 
         if($supplieEmail->save())
         {
