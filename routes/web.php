@@ -10,6 +10,7 @@
 |
 */
 
+
 Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');      
 
 Route::middleware(['guest'])->group(function () { 
@@ -35,7 +36,7 @@ Route::middleware(['checkadminpermissions'])->group(function () {
 	    Route::get('/users', 'UsersController@index')->name('users');     
 	    Route::get('/edituser/{id}', 'UsersController@edituser')->name('edit.user');    
 	    Route::post('/edituserHandle/{id}', 'UsersController@edituserHandle')->name('edit.edituserHandle');     
-	    Route::get('/softDeleteUser/{id}', 'UsersController@softDeleteUser')->name('softDelete.user');        
+	    Route::get('/DeleteUser/{id}', 'UsersController@DeleteUser')->name('delete.user');        
 	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
@@ -51,5 +52,3 @@ Route::middleware(['checkadminpermissions'])->group(function () {
 	});
 
 });
-
-

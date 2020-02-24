@@ -12,26 +12,27 @@
 	</tbody>
 </table>
 
-<table class="table table-hover"> 
+<table class="table table-hover users_table">  
 	<thead>
 		<th>User ID</th>
 		<th>User name</th>
 		<th>Email</th>
 		<th>Role</th>
-		<th>Action</th> 
-	</thead> 
+		<th>Action</th>  
+	</thead>  
 	<tbody> 
 		@foreach( $users as $user )
-		<tr> 
+		<tr>  
 			<td>{{$user->id}}</td>
 			<td>{{$user->first_name}} {{$user->last_name}} </td> 
 			<td>{{$user->email}}</td> 
 			<td> {{ $user->roles()->get()[0]->name }} </td>   
-			<td>
-				<small><a href = "{{route('edit.user', $user->id)}}" > <button class="btn btn-primary btn-sm"> Edit </button> </a></small>
-				<small><a href = "{{route('softDelete.user', $user->id)}}" ><button class="btn btn-danger btn-sm"> Delete </button></a> </small>
+			<td>  
+				 <a href = "{{route('edit.user', $user->id)}}" > <button class="btn btn-primary btn-sm"> Edit </button> </a>
+				 <a href = "{{route('delete.user', $user->id)}}" ><button data-userid = "{{$user->id}}" class="deleteUser btn btn-danger btn-sm"> Delete </button></a> 
+				 <!-- <a href = "" ><button class="btn btn-danger btn-sm"> Reset Password </button></a>  -->
 			</td>
-		</tr>
+		</tr> 
 		@endforeach 
 	</tbody>
 </table>

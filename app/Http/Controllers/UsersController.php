@@ -24,17 +24,16 @@ class UsersController extends Controller
 	public function edituser( $id ){    
 		$user = User::getUserDetail( $id );      
 		return view( 'admin.users.edit' , compact('user') )->with(['roles' => $this->roles]);  
-	} 
+	}  
 
-	public function edituserHandle( $id , Request $request ) {
+	public function edituserHandle( $id , Request $request ) { 
 		 
 		$validator = $request->validate(
 				[
 					'fname' => 'required|min:2|max:50',
-					'lname' => 'required|min:2|max:50',            
-					'password' => 'required|min:6',                 
-					'confirm_password' => 'required|min:6|max:20|same:password',
-				],
+					'lname' => 'required|min:2|max:50',  
+					'email' => 'required|unique:users,email,'.$id        
+				], 
 				[
 					'fname.required' => 'First Name is required',
 					'fname.min' => 'First Name must be at least 2 characters.',
@@ -42,7 +41,7 @@ class UsersController extends Controller
 					'lname.required' => 'Last Name is required',
 					'lname.min' => 'Last Name must be at least 2 characters.',
 					'lname.max' => 'Last Name should not be greater than 50 characters.',
-				] 
+				]  
 			); 
 
 			try { 	  
@@ -50,8 +49,7 @@ class UsersController extends Controller
 				$user_data = [ 
 				    'first_name' => $request->fname ,
 				    'last_name' => $request->lname ,
-				    'email'    => $request->email,
-				    'password' => $request->password,   
+				    'email'    => $request->email, 
 		     	]; 
 		    
 		 		$user = User::findorfail( $id );    
@@ -72,7 +70,7 @@ class UsersController extends Controller
 
 	}	
 
-	public function softDeleteUser( $id ) { 
+	public function DeleteUser( $id ) {  
 
 		dd( $id );   
 

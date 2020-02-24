@@ -45,22 +45,6 @@
 			</div>   
 
 			<div class="form-group text-left">
-				<label for="pwd">Password:</label>
-				<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
-				@if ($errors->has('password'))
-				<span class="text-danger">{{ $errors->first('password') }}</span> 
-				@endif
-			</div>
-
-			<div class="form-group text-left">
-				<label for="pwd">Confirm Password:</label> 
-				<input type="password" class="form-control" id="pwd" placeholder="Enter password" name="confirm_password">
-				@if ($errors->has('confirm_password'))
-				<span class="text-danger">{{ $errors->first('confirm_password') }}</span> 
-				@endif
-			</div>
-
-			<div class="form-group text-left">
 				<label for="sel1">Role:</label>
 				<select class="form-control" name="user_role">  
 					@foreach($roles as $role)

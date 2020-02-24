@@ -27,11 +27,11 @@
 			</div>
 			@include('layouts.adminfooter') 
 		<div> 
-	</body>   
-
+	</body>     
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/jquery.dataTables.min.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/jquery.dataTables.min.js')}}" ></script> 
+	<script type="text/javascript" src="{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>  
 	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
-
+	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script> 
 </html>  
