@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Exports\SuppliesExport;
+use App\Imports\SuppliesImport;
+use Carbon\Carbon;
+use Excel;
 use App\Supplies;
 use App\SupplieEmail;
 use App\SupplieAsinModel;
@@ -50,10 +55,10 @@ class SuppliesController extends Controller
                     Thanks!";
     }
 
-    public function index()
+    public function index(Request $request)
     {
 		$searchItemsLists = $this->searchItemsLists;
-    	$supplieLists = Supplies::getAllSupplies();
+    	$supplieLists = Supplies::getAllSupplies($request);
     	return view ('admin.supplies.list', compact('supplieLists','searchItemsLists'));
     }
 
@@ -84,21 +89,31 @@ class SuppliesController extends Controller
 
         $supplieID = Supplies::addSupplies($request);
 
-        if($supplieID){
-            $supplieEmails = array_filter($request->get('emails'));
-            $applicableModels = array_filter($request->get('applicable_models'));
+        if($supplieID)
+        {
 
-            foreach ($supplieEmails as $key => $email) {
-                SupplieEmail::addSupplieEmail($email, $supplieID);
-                # code...
+            if($request->get('email'))
+            {   
+                $supplieEmails = array_filter(explode(',',$request->get('email')));
+                foreach ($supplieEmails as $key => $email)
+                {
+                    SupplieEmail::addSupplieEmail($email, $supplieID);
+                }
             }
-            foreach ($applicableModels as $key => $applicableModel) {
-                SupplieAsinModel::addSupplieAsinModel($applicableModel, $supplieID);
-                # code...
+
+            if($request->get('applicable_models'))
+            {
+                $applicableModels = array_filter($request->get('applicable_models'));
+                foreach ($applicableModels as $key => $applicableModel)
+                {
+                    SupplieAsinModel::addSupplieAsinModel($applicableModel, $supplieID);
+                }
             }
+
             return redirect()->route('supplies')->with('success','Item created successfully!');
         }
-        else{
+        else
+        {
             return redirect()->route('supplies')->with('error','Something went wrong! Please try again');
         }
         # code...
@@ -108,14 +123,15 @@ class SuppliesController extends Controller
     {
         $supplieDetail = Supplies::getSupplieById($supplieID);
         $models = Asin::getModelList();
-
-        if($supplieDetail){
+        if($supplieDetail)
+        {
             return view ('admin.supplies.edit',compact('models', 'supplieDetail'))->with([
                 'adminEmails' => $this->adminEmails,
                 'emailTemplate' => $this->emailTemplate
             ]);        # code...
         }
-        else{
+        else
+        {
             return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
         }
         abort('404');
@@ -134,38 +150,143 @@ class SuppliesController extends Controller
             'low_stock' => 'required|integer',
             'reorder_qty' => 'required|integer',
         ]);
-
         $result = Supplies::updateSupplieById($request);
-        
+        $supplieID = $request->id;
         if($result){
 
-            $supplieEmails = array_filter($request->get('emails'));
-            $applicableModels = array_filter($request->get('applicable_models'));
+            if($request->get('email'))
+            {   
+                $supplieEmails = array_filter(explode(',',$request->get('email')));
+                foreach ($supplieEmails as $key => $email)
+                {
+                    SupplieEmail::addSupplieEmail($email, $supplieID);
+                }
+            }
 
-            foreach ($supplieEmails as $key => $email) {
-                SupplieEmail::updateSupplieEmail($email, $supplieID);
-                # code...
+            if($request->get('applicable_models'))
+            {
+                $applicableModels = array_filter($request->get('applicable_models'));
+                foreach ($applicableModels as $key => $applicableModel)
+                {
+                    SupplieAsinModel::addSupplieAsinModel($applicableModel, $supplieID);
+                }
             }
-            foreach ($applicableModels as $key => $applicableModel) {
-                SupplieAsinModel::updateSupplieAsinModel($applicableModel, $supplieID);
-                # code...
+
+            if($request->get('exists_email'))
+            {
+                $supplieEmailId = array_unique(array_filter($request->get('exists_email')));
+                SupplieEmail::deleteSupplieEmail($supplieEmailId);
             }
+
+            if($request->get('exists_asinid'))
+            {
+                $supplieAsinModelId = array_unique(array_filter($request->get('exists_asinid')));
+                SupplieAsinModel::deleteSupplieAsinModel($supplieAsinModelId);                
+            }
+
             return redirect()->route('supplies')->with('success','Item update successfully!');
         }
         else
         {
-            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
+            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');
         }
-        # code...
+    }
+
+    public function updateQtyReorder(Request $request)
+    {   
+        if($request->ajax())
+        {
+            $sid = intval($request->supplieid);
+            $qty = intval($request->quantity);
+            $result = Supplies::updateQuantityBySupplieID($sid,$qty);        
+            if ($result) 
+            {
+                $supplieEmails = Supplies::getSupplieDetailAndEmails($sid);
+                $var_keys = array_keys($supplieEmails->toArray());
+                $supplieEmails["reorder_qty"] = ($qty) ? $qty : 0 ;
+                $body = $supplieEmails['email_tpl'];
+                $subject = $supplieEmails['email_subj'];
+                foreach($var_keys as $v)
+                {
+                    $body = str_replace("[".$v."]",$supplieEmails[$v],$body);
+                }
+
+                $user = [];
+                foreach ($supplieEmails['getSupplieEmails'] as $key => $value)
+                {
+                    array_push($user, $value['email']);
+                }
+                $response['message'] = 'Quantity of supplie update successfully';
+                if(sizeof($user) > 0)
+                {   
+                    $current = Carbon::now();
+                    Supplies::updateMailSentTime($sid,$current);
+                    Mail::raw($body, function ($m) use ($subject,$user) {
+                        $m->to($user)
+                        ->subject($subject);
+                    });
+                    $response['message'] = 'Quantity of supplie update & email send successfully';
+                }
+
+                $response['status']  = 'success';
+            }
+            else 
+            {
+                $response['status']  = 'error';
+                $response['message'] = 'Something went wrong! Please try again';
+            }
+            return response()->json($response);
+        }
+        else
+        {
+            $sid = intval($request->supplieid);
+            $qty = intval($request->qty);
+            $result = Supplies::updateQuantityBySupplieID($sid,$qty);
+            if ($result)
+            {
+                return redirect()->route('supplies')->with('success','Item quantity update successfully!');
+            }
+            else
+            {
+                return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
+            }
+        }
     }
 
     public function exportSupplies()
     {
-    	# code...
+    	return Excel::download(new SuppliesExport, 'supplies.xlsx');
     }
 
-    public function importSupplies()
+    public function importSupplies(Request $request)
     {
-    	# code...
+        $validatedData = $request->validate([
+            'impfile' => 'required|mimes:xlsx,csv',
+            ],
+            [
+                'impfile.required' => 'Please upload a file',
+                'impfile.mimes' => 'Only csv and excel file allowed',
+            ]
+        );
+    	Excel::import(new SuppliesImport,request()->file('impfile'));
+        return redirect()->route('supplies')->with('success','Record import successfully');
     }
+
+    public function deleteSupplie(Request $request, $supplieID)
+    {
+        $sid = intval($supplieID);
+        $result = Supplies::deleteSupplieByID($sid);        
+        if ($result)
+        {
+            $response['status']  = 'success';
+            $response['message'] = 'Supplie deleted successfully';
+        }
+        else
+        {
+            $response['status']  = 'error';
+            $response['message'] = 'Unable to delete supplie';
+        }
+        return response()->json($response);
+    }
+
 }

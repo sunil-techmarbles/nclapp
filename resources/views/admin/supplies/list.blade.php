@@ -7,23 +7,30 @@
 			<tr>
 				<td>
 					<a class="btn btn-primary btn-sm border" href="{{route('add.supplies')}}" >Add Record</a>
-					<a class="btn btn-default btn-sm border" href="{{route('export.supplies')}}">Export</a>
+					<a class="btn btn-secondary btn-sm border" href="{{route('export.supplies')}}">Export</a>
 				</td>
 				<td nowrap="" style="text-align: right">
 					<form method="post" action="{{route('import.supplies')}}" enctype="multipart/form-data">
+						@csrf
 						<input type="file" name="impfile">
-						<input type="submit" class="btn btn-default btn-sm border" value="Import">
+						@if($errors->has('impfile'))
+							<div class="error">{{ $errors->first('impfile') }}</div>
+						@endif
+						<input type="submit" class="btn btn-secondary btn-sm border" value="Import">
 					</form>
 				</td>
 				<td nowrap="" style="text-align: right">
 					<form method="get" action="{{route('supplies')}}">
-						<input type="text" name="s" value="" placeholder=" Search">
+						<input type="text" name="s" value="{{request()->get('s')}}" placeholder=" Search">
 						<select name="f" style="height:26px;border: 0;">
 							@foreach($searchItemsLists as $key => $searchItem)
-								<option value="{{$key}}">{{$searchItem}}</option>
+								<option @if(request()->get('f') == $key) selected @endif value="{{$key}}">{{$searchItem}}</option>
 							@endforeach
-						</select> 
-						<input class="btn btn-default btn-sm border" type="submit" value="Search">
+						</select>						
+						<input class="btn btn-success btn-sm border" type="submit" value="Search">
+						@if(request()->get('s') || request()->get('f'))
+							<a class="btn btn-dark btn-sm border" href="{{route('supplies')}}">Reset</a>
+						@endif
 					</form>
 				</td>
 			</tr>
@@ -51,7 +58,7 @@
 			@foreach($supplieLists as $supplie)
 			<tr>
 				<td nowrap="">
-					<a href="javascript:void(0)" onclick="del_confirm({{$supplie->id}})">
+					<a href="javascript:void(0)" onclick="del_confirm({{$supplie->id}},'deletesupplie','Supplie')">
 						<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
 					</a>&nbsp;&nbsp;
 					<a href="{{route('edit.supplies', $supplie->id)}}">
@@ -61,12 +68,12 @@
 				<td>{{$supplie->id}}</td>
 				<td>{{$supplie->item_name}}</td>
 				<td style="padding:5px;white-space:nowrap">
-					<form method="GET">
-						<a href="#" onclick="reorderItem(313,50)">
+					<form method="GET" action="{{route('update.qty.reorder')}}">
+						<a href="javascript:void(0)" onclick="reorderItem({{$supplie->id}},{{$supplie->qty}}, 'updateqtyreorder')">
 							<img src="{{URL('assets/images/cart.png')}}" alt="Reorder" title="Reorder">
 						</a>&nbsp;
-						<input type="hidden" name="qtyid" value="{{$supplie->id}}">
-						<input type="number" style="width:70px;min-width:70px;height:20px" min="0" name="qtyval" value="0">
+						<input type="hidden" name="supplieid" value="{{$supplie->id}}">
+						<input type="number" style="width:70px;min-width:70px;height:20px" min="0" name="qty" value="{{$supplie->qty}}">
 						<input type="image" style="width:20px;min-width:20px;height:20px; border:none" src="{{URL('assets/images/tick.png')}}" title="Save" alt="Save">
 					</form>
 				</td>

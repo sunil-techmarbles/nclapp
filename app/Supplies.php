@@ -1,12 +1,14 @@
 <?php
 
 namespace App;
-
+use DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes; // <-- This is required
 
 class Supplies extends Model
-{
+{   
+    use SoftDeletes;
+
 	protected $dates = ['deleted_at'];
     
     /**
@@ -32,12 +34,17 @@ class Supplies extends Model
 		'email_sent',
     ];
 
-
     // Get All Supplies
-    public static function getAllSupplies()
+    public static function getAllSupplies($request)
     {
-    	return self::orderBy('id', 'DESC')
-    		->get();
+    	$query = self::select('*');
+
+        if ($request->has('s') || $request->has('f')) {
+            $query->where($request->get('f'), 'like', '%' .$request->get('s'). '%');
+        }
+
+    	return $query->orderBy('id', 'DESC')
+            ->get();
     }
 
     public static function addSupplies($request)
@@ -58,8 +65,6 @@ class Supplies extends Model
 		$supplies->bulk_options	= $request->bulk_options;		
 		$supplies->email_subj = $request->email_subj;	
 		$supplies->email_tpl = $request->email_tpl;		
-		$supplies->email_sent = $request->email_sent;
-
 		if($supplies->save())
 		{
 			$result = $supplies->id;
@@ -72,13 +77,12 @@ class Supplies extends Model
     public static function updateSupplieById($request)
     {		
     	$result = false;
-
-    	$outPut = self::where(['id' => $request->id])
+    	$updateSupplie = self::where(['id' => $request->id])
     		->update([
 		    	'item_name' => $request->item_name,
 		    	'item_url' => $request->item_ur,
 		    	'qty' => $request->qty,
-		    	'part_num' => $request->part_nu,
+		    	'part_num' => $request->part_num,
 		    	'description' => $request->descriptio,
 		    	'dept'	=> $request->dept,
 				'price' => $request->price,
@@ -89,10 +93,9 @@ class Supplies extends Model
 				'bulk_options'	=> $request->bulk_options,
 				'email_subj' => $request->email_subj,
 				'email_tpl' => $request->email_tpl,
-				'email_sent' => $request->email_sen,
     		]);
 
-		if($outPut)
+		if($updateSupplie)
 		{
 			$result = true;
 		}
@@ -100,11 +103,58 @@ class Supplies extends Model
     	# code...
     }
 
+    public static function updateQuantityBySupplieID($supplieId, $Qty)
+    {
+        $result = false;
+        $updateSupplieQty = self::where(['id' => $supplieId])
+            ->update([
+                'qty' => $Qty,
+            ]);
+
+        if($updateSupplieQty)
+        {
+            $result = true;
+        }
+        return $result;
+    }
+
     public static function getSupplieById($supplieId)
     {
     	return self::with(['getSupplieAsinModels', 'getSupplieEmails'])
     		->where(['id' => $supplieId])
     		->first();
+    }
+
+    public static function getMissingParts($asinID='', $qty)
+    {   
+        return $parts = self::select('supplies.*')
+            ->selectSub('(p.qty * '.$qty.')', 'required_qty')
+            ->selectSub('(p.qty * '.$qty.' - supplies.qty)', 'missing')
+            ->join('supplie_asin_models as p', function($join) use($asinID){
+                $join->on('supplies.id', '=', 'p.supplie_id')
+                        ->where('p.asin_model_id','=',$asinID);
+                })
+            ->get();
+    }
+
+    public static function getSupplieDepartmentsByDistinct()
+    {
+        return self::distinct()
+            ->get([
+                'dept'
+            ]);
+    }
+
+    public static function deleteSupplieByID($sid)
+    {
+        $result = false;
+        $supplie = self::find($sid);
+        if($supplie->delete())
+        {
+            $result = true;
+        }
+
+        return $result;
     }
 
     public function getSupplieAsinModels()
@@ -115,5 +165,34 @@ class Supplies extends Model
     public function getSupplieEmails()
     {
     	return $this->hasMany('App\SupplieEmail', 'supplie_id', 'id');
+    }
+
+    public static function getSupplieDetailAndEmails($supplie_id)
+    {
+        return self::with(['getSupplieEmails'])
+            ->where(['id' => $supplie_id])
+            ->first();
+    }
+
+    public static function getAllPartsSpecificFields($specificFields, $orderBy, $asinID)
+    {
+        return self::with(['getSupplieAsinModels'])
+            ->select($specificFields)
+            ->orderBy($orderBy)
+            ->get();
+    }
+
+    public static function updateMailSentTime($sid, $current)
+    {
+        return self::where(['id' => $sid])
+            ->update(['email_sent' => $current]);
+    }
+
+    public static function getExportResult()
+    {
+        return self::select('id','item_name','item_url','qty','part_num','description','dept', 'price',
+                'vendor','low_stock','reorder_qty','dlv_time','bulk_options', 'email_subj','email_tpl')
+            ->with(['getSupplieEmails'])
+            ->get();
     }
 }
