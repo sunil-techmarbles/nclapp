@@ -30,6 +30,7 @@ class CreateSuppliesTable extends Migration
             $table->string('email_subj', 500);
             $table->longText('email_tpl');
             $table->timestamp('email_sent');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

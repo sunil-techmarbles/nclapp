@@ -42,4 +42,9 @@ class SupplieAsinModel extends Model
             return true;
         }
     }
+
+    public static function getSupplieIdExistsAsinValue($asinID)
+    {
+        return self::where(['asin_model_id' => $asinID])->pluck('supplie_id','id');
+    }
 }

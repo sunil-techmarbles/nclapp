@@ -32,6 +32,7 @@ class CreateAsinsTable extends Migration
             $table->string('webcam', 200);
             $table->string('link', 200)->nullable();
             $table->string('shopify_product_id', 200)->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

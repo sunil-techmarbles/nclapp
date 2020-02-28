@@ -26,8 +26,8 @@
         </div>   
 
         <div class="menu-item">
-            <a href="index.php?page=refurb"><span class="fa fa-refresh"></span></a>
-            <a href="index.php?page=refurb">Refurb</a>
+            <a href="{{route('refurb')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('refurb')}}">Refurb</a>
         </div>  
 
         <div class="menu-item">

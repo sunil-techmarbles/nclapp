@@ -18,6 +18,7 @@ class CreateSupplieAsinModelsTable extends Migration
             $table->integer('supplie_id');
             $table->integer('asin_model_id');
             $table->integer('qty')->default(1);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

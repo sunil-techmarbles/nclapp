@@ -69,7 +69,7 @@
 				<th>HDD</th>
 			</tr>
 			@foreach($models as $m)
-			<tr style="cursor: pointer" class="mdlrow" data-model="<?=strtolower($m['asin'].$m['model'])?>" onclick="location.href = 'index.php?page=parts&model=<?=$m['id']?>'">
+			<tr style="cursor: pointer" class="mdlrow" data-model="{{strtolower($m['asin'].$m['model'])}}" onclick="location.href = '{{route("parts.asin", $m["id"])}}'">
 				<td>{{$m['asin']}}</td>
 				<td>{{$m['model']}}</td>
 				<td>{{$m['form_factor']}}</td>
@@ -84,10 +84,8 @@
 			<button class="btn btn-default" onclick="$('#all_parts').toggle()">Show/Hide Parts ({{$asinsParts['model']}} ({{$asinsParts['asin']}})
 			</button>
 		</div>
-		<form id="all_parts" style="display:none;" method="post" action="index.php">
+		<form id="all_parts" style="display:none;" method="GET" action="{{route('parts.asin', $asinsParts['id'])}}">
 			<div style="height:600px;overflow: auto">
-				<input type="hidden" name="assign_model" value="{{$asinsParts['id']}}"/>
-				<input type="hidden" name="page" value="parts"/>
 				<table style="background-color: #eceef2;" class="table table-striped table-condensed table-hover">
 					<tr>
 						<th>Part Number</th>
@@ -118,7 +116,7 @@
 				</table>
 			</div>
 			<div style="margin-bottom: 10px;text-align: right">
-				<button type="submit" class="btn btn-primary">Assign selected Parts</button>
+				<button type="submit" value="1" name="assignasinsparts" class="btn btn-primary">Assign selected Parts</button>
 			</div>
 		</form>
 	</div>

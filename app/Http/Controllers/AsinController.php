@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Asin;
 use App\Supplies;
 use App\SupplieEmail;
+use App\SupplieAsinModel;
 
 class AsinController extends Controller
 {
@@ -124,16 +125,34 @@ class AsinController extends Controller
     {
         $qty = ($request->has('qty')) ? $request->get('qty') : 1;
         $pparts = ($request->has("ppart")) ? $request->get('ppart') : [];
-        if($request->has('reorder'))
-        {
-            // $qty
-        }
         $specificFields = ['id','item_name','part_num','dept','vendor'];
         $asinsParts = Asin::getAsinsPartsById($asinID);
         $models = Asin::getAllAsins($request);
         $parts = Supplies::getMissingParts($asinID,$qty);
         $mailSent = [];
         $status = '';
+        $message = '';
+
+        if($request->has('assignasinsparts'))
+        {
+            $assignAsinsParts = ($request->get('mpart')) ? $request->get('mpart') : [];
+            if(!empty($assignAsinsParts))
+            {   
+                $supplieAsinModelId = [];
+                $supplieId = [];
+                $currentParts = SupplieAsinModel::getSupplieIdExistsAsinValue($asinID);
+                foreach ($currentParts as $key => $value) {
+                    $supplieAsinModelId[] = $key;
+                    $supplieId[] = $value;
+                } 
+                SupplieAsinModel::deleteSupplieAsinModel($supplieAsinModelId);
+                foreach($assignAsinsParts as $assignAsinsPart)
+                {
+                    SupplieAsinModel::addSupplieAsinModel($asinID, $assignAsinsPart);
+                }
+            }
+        }
+
         foreach($parts as $p)
         {
             if($request->has('withdraw'))
@@ -142,6 +161,9 @@ class AsinController extends Controller
                 {
                     $newQty = max(0,$p["qty"]-$p["required_qty"]);
                     Supplies::updateQuantityBySupplieID($p["id"], $newQty);
+                    $status = 'success';
+                    $message = 'Withdraw successfully';
+                    \Session::flash($status, $message);
                 }
             }
 
@@ -166,19 +188,21 @@ class AsinController extends Controller
                             $m->to($user->toArray())
                             ->subject($subject);
                         });
-                        $mailSent[] = $p["part_num"].' Mail sent successfully';
+                        $mailSent[] = $p["part_num"];
                         $status = 'success';
+                        $message = 'Part number '.implode(',', $mailSent).' Mail has been sent successfully';
+                        \Session::flash($status, $message);
                     }
                     continue;
                 }
             }
         }
-        // die;
+    
         $departments = Supplies::getSupplieDepartmentsByDistinct();
         $allParts = resultInReadableform(
             Supplies::getAllPartsSpecificFields($specificFields, $orderBy='item_name', $asinID)
         );
-        return view ('admin.asin.parts', compact('asinsParts','qty','parts','models','departments','allParts'))->with([$status => $mailSent]);
+        return view('admin.asin.parts', compact('asinsParts','qty','parts','models','departments','allParts'));
         abort('404');
     }
 
