@@ -56,6 +56,11 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');
+		Route::post('/saveasin','RefurbController@saveAsin')->name('save.asin');
+		Route::post('/savecoa','RefurbController@saveCOA')->name('save.coa');
+		Route::post('/saveissue','RefurbController@saveIssue')->name('save.issue');
+		Route::any('/setwholesale','RefurbController@setWholesale')->name('set.wholesale');
+		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 	});
 
 });

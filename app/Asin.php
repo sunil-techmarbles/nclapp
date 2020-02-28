@@ -132,5 +132,42 @@ class Asin extends Model
 
         return $result;
     }
+
+    public static function getSpecificFirstRecord($fields, $model, $part1, $part2, $part3)
+    {
+        return self::select($fields)
+            ->where(function($q) use ($model, $part1, $part2, $part3){
+                $q->where([
+                    "cpu_core"=> $part1,
+                    "cpu_speed" => $part3
+                ]);
+                $q->where("cpu_model", 'LIKE', $part2);
+                $q->orWhere('model', $model);
+                $q->orWhere("model_alias", 'LIKE', $model);
+            })
+            ->get();
+    }
+
+    public static function getSpecificSecoundRecord($fields, $model, $part1)
+    {
+        return self::select($fields)
+            ->where(function($q) use ($model, $part1){
+                $q->where([
+                    "cpu_core"=> $part1,
+                ]);
+                $q->orWhere('model', $model);
+                $q->orWhere("model_alias", 'LIKE', $model);
+            })
+            ->get();
+    }
+
+    public static function getSpecificThirdRecord($fields, $query)
+    {
+        return self::select($fields)
+            ->where(function($q) use ($query){
+               $q->where("model", '!=', $query);
+            })
+            ->get();
+    }
     
 }
