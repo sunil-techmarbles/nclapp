@@ -36,7 +36,7 @@ Route::middleware(['checkadminpermissions'])->group(function () {
 	    Route::get('/users', 'UsersController@index')->name('users');     
 	    Route::get('/edituser/{id}', 'UsersController@edituser')->name('edit.user');    
 	    Route::post('/edituserHandle/{id}', 'UsersController@edituserHandle')->name('edit.edituserHandle');     
-	    Route::get('/DeleteUser/{id}', 'UsersController@DeleteUser')->name('delete.user');        
+	    Route::get('/DeleteUser/{id}', 'UsersController@DeleteUser');   
 	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');

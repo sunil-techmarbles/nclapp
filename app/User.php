@@ -5,9 +5,15 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Cartalyst\Sentinel\Users\EloquentUser; 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class User extends EloquentUser {
 
+
+	use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
 	public static function checkEmailExits( $email='' ) {
 		$isCheck = false;

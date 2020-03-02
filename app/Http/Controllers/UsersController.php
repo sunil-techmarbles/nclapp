@@ -70,9 +70,11 @@ class UsersController extends Controller
 
 	}	
 
-	public function DeleteUser( $id ) {  
+	public function DeleteUser( $id ) {   
 
-		dd( $id );   
+		// dd( $id );   
+
+		echo $id;  
 
 		// $user = Sentinel::findById( $id );
 		// $user->delete(); 

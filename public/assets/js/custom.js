@@ -1,19 +1,40 @@
-$(document).ready(function(){
-	$('.users_table').DataTable();
-}); 
+jQuery(document).ready(function(){
+	jQuery('.users_table').DataTable();
+});   
 
-jQuery( document ).on( 'click' , '.deleteUser' , function( e ){
-	e.preventDefault();
+function del_confirm( id, url, text ) {   
 	
-	swal("Are you sure You want to delete this user.")
-	.then((value) => {
-
-
-			var user_id = jQuery(this).data('user_id');
-
-			console.log( ); 
-
-	   			// swal('ok user deleted now');
-	});
+	swal({
+		title: 'Are you sure?',
+		text: "You won't be able to revert this!",
+		icon: "warning",
+		buttons: true,
+		dangerMode: true,
+	})
+	.then((willDelete) => {
+		if ( willDelete ) { 
+		
+			$.ajax({
+				url: url + '/' + id,
+				type: 'GET',
+				dataType: 'json'
+			}) 
+			.done(function( response ) {   
  
-});
+				console.log( response ); 
+ 
+			 	// swal('Deleted!', response.message, response.status);
+		 		// readProducts();
+	     	})
+			.fail(function(){
+			 	swal('Oops...', 'Something went wrong with ajax !', 'error');
+			});
+
+			swal("Poof! Your record deleted!", {
+			icon: "success",
+		});
+		} else {
+			swal("Your record is safe!");
+		}
+	});
+}
