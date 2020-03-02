@@ -37,8 +37,8 @@
             <a href="index.php?page=packages">Inbound</a>
         </div>
         <div class="menu-item">
-            <a href="index.php?page=shipments"><span class="fa fa-sign-out"></span></a>
-            <a href="index.php?page=shipments">Outbound</a>
+            <a href="{{route('shipments')}}"><span class="fa fa-sign-out"></span></a>
+            <a href="{{route('shipments')}}">Outbound</a>
         </div>
         <div class="menu-item">
             <a href="index.php?page=sessions"><span class="fa fa-tasks"></span></a>

@@ -61,4 +61,11 @@ class AsinAsset extends Model
             return ['count' => 0, 'output' => 0];
         }
     }
+    
+    public static function getAsinsAidByAssest($value)
+    {
+        return self::where(['asset'=>$value])
+            ->pluck('aid')
+            ->first();
+    }
 }

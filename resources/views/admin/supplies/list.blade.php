@@ -1,8 +1,8 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Supplies')
 @section('content')
-<div class="abs" style="text-align: center;"
->	<table class="table" cellspacing="0" cellpadding="0" border="0">
+<div class="abs" style="text-align: center;">
+	<table class="table" cellspacing="0" cellpadding="0" border="0">
 		<tbody>
 			<tr>
 				<td>

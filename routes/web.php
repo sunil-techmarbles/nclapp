@@ -10,16 +10,12 @@
 |
 */
 
-
 Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');      
 Route::get('/logout', 'LoginController@logout')->name('logout');  
 Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');   
 Route::post('/SendPasswordResetEmail', 'LoginController@sendPasswordResetEmail')->name('sendPasswordResetEmail');   
 Route::get('/ResetPasswordForm/{token}', 'LoginController@resetPasswordForm')->name('resetPasswordForm');   
 Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPassword');     
-
-
-
 
 Route::middleware(['guest','revalidate'])->group(function () { 
 	Route::get('/','LoginController@index')->name('login.view');  
@@ -32,7 +28,10 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	});
 });  
  
+Route::get('/logout', 'LoginController@logout')->name('logout');  
+
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
+
 	Route::prefix('admin')->group(function () { 
 
 	    Route::get('/users', 'UsersController@index')->name('users');     
@@ -67,5 +66,8 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
+
+		Route::get('/shipments','ShipmentController@index')->name('shipments');
+		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 	});
 });
