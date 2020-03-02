@@ -115,6 +115,13 @@ class Asin extends Model
             ->first();
     }
 
+    public static function getAsinsIdByAsin($asinID='')
+    {
+        return self::where(['asin' => $asinID])
+            ->pluck('id')
+            ->first();
+    }
+
     public static function getAsinById($asinID)
     {
         return self::where(['id' => $asinID])

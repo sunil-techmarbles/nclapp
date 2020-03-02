@@ -63,6 +63,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
+
+		Route::get('/shipments','ShipmentController@index')->name('shipments');
+		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 	});
 
 });

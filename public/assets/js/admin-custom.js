@@ -1,7 +1,40 @@
 $(document).ready(function(){
+	$('#asset').focus();
+	$(document).keydown(function(event){
+	    if(event.keyCode == 13) {
+	      	if($("#asset").is(":focus"))
+	      	{
+				event.preventDefault();
+				if ($("#asset").val().length > 3) $('#main-form').submit();
+				return true;
+			}
+			else
+			{
+				return true;
+			}
+	    }
+	});
+});
+
+$(document).ready(function(){
 	$('#supplies').DataTable();
 	$('#asins').DataTable();
-
+	$('#shipment').DataTable({
+		"searching": false,
+		"bPaginate": false,
+	    "bLengthChange": false,
+	    "bFilter": true,
+	    "bInfo": false,
+	    "bAutoWidth": false
+	});
+	$('#shipment-asin').DataTable({
+		"searching": false,
+		"bPaginate": false,
+	    "bLengthChange": false,
+	    "bFilter": true,
+	    "bInfo": false,
+	    "bAutoWidth": false
+	});
 	if($('#supplie').length > 0)
 	{
 		$( "#supplie" ).validate({
