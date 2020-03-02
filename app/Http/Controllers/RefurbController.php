@@ -382,4 +382,32 @@ class RefurbController extends Controller
 			return response()->json(['message' => 'something went wrong with ajax request', 'type' => 'error', 'status' => false]);
 		}
 	}
+
+	public function checkCOA(Request $request)
+	{
+		if($request->ajax())
+		{
+			$asset = $request->get("asset");
+			$refurbAssetData = $this->refurbAssetData.'/'.$asset.'.json';
+			if(File::exists($refurbAssetData))
+			{
+				$adata = json_decode(file_get_contents($refurbAssetData),true);
+				$adata['new_coa'] = $request->get("new_coa");
+				$adata['old_coa'] = $request->get("old_coa");
+				$adata['win8'] = $request->get("win8");
+				$sn = $adata['Serial'];
+				if(!empty($request->get("asin"))) $adata['asin_id'] = $request->get("asin");
+				file_put_contents($refurbAssetData,json_encode($adata));
+				return response()->json(['message' => 'COA for this Asset Id is already saved in database', 'type' => 'success', 'status' => true]);
+			}
+			else
+			{
+				return response()->json(['message' => 'something went wrong with ajax request', 'type' => 'waring', 'status' => false]);
+			}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'type' => 'error', 'status' => false]);
+		}
+	}
 }

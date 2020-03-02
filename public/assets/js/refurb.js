@@ -198,7 +198,7 @@ function getAssetData(fId)
 					}
 					else if(itm.type=="mult")
 					{
-                       $("#f_"+itm.key+"").text(itm.value.join("; "));
+                       	$("#f_"+itm.key+"").text(itm.value.join("; "));
 						$(".c_"+itm.key+"").show();
 						adata.descr[itm.key]=itm.value; 
 						$(".frmrow").show();
@@ -221,19 +221,17 @@ function getAssetData(fId)
 				}
 				obj['Reported_Issues'] = 'Reported_Issues';
 				var akeys = akeysA[0];
-				adata["conf"].push(
-					{
-						key: "Reported_Issues",
-						options: []
-					}
-				);
+				adata["conf"].push({
+					key: "Reported_Issues",
+					options: []
+				});
 				for (var i in adata["conf"])
 				{
 					var itm = adata["conf"][i];
 					var ka = akeys[itm.key];
                     if(akeys[itm.key] == undefined)
                     {
-	                    $("#tab-content").append('<div id="edit_'+itm.key+'" class="tab-pane fade '+(i==0?'in active':'')+'"><h3>'+itm.key+'</h3></div>'); 
+	                    $("#tab-content").append('<div id="edit_'+itm.key+'" class="tab-pane '+(i==0?'in active':'')+'"><h3>'+itm.key+'</h3></div>'); 
 						for (var j in itm.options)
 						{
 							var opt = itm.options[j];
@@ -256,7 +254,7 @@ function getAssetData(fId)
                     }
                     else
                     {
-						$("#tab-content").append('<div id="edit_'+ka+'" class="tab-pane fade '+(i==0?'in active':'')+'"><h3>'+itm.key+'</h3></div>'); 
+						$("#tab-content").append('<div id="edit_'+ka+'" class="tab-pane '+(i==0?'in active':'')+'"><h3>'+itm.key+'</h3></div>'); 
 						for (var j in itm.options)
 						{
 							var opt = itm.options[j];
@@ -352,12 +350,14 @@ function setAsin(aId)
 		$(".specs").show();
 		$(".specsram").show();
 	}
-	if(a["hdd"] != adata.HDD) {
+	if(a["hdd"] != adata.HDD)
+	{
 		$(".specs").show();
 		$(".specshdd").show();
 		
 	}
-	if($("#f_os_label").text()!=a["os"]) {
+	if($("#f_os_label").text()!=a["os"])
+	{
 		$(".specsos").show();
 	}
 	$("#asinModal").modal("hide");
@@ -377,8 +377,8 @@ function editProps()
 
 function nextTab(tabId)
 {
-	$("#printsaved").hide();
 	var nTab = parseInt(tabId) + 1;
+	$("#printsaved").hide();
 	$(".tab-pane:eq("+tabId+")").removeClass("in active");
 	$(".tab-pane:eq("+nTab+")").addClass("in active");
 	alignTab();
@@ -386,8 +386,8 @@ function nextTab(tabId)
 
 function prevTab(tabId)
 {
-	$("#printsaved").hide();
 	var nTab = parseInt(tabId) -1;
+	$("#printsaved").hide();
 	$(".tab-pane:eq("+tabId+")").removeClass("in active");
 	$(".tab-pane:eq("+nTab+")").addClass("in active");
 	alignTab();
@@ -544,6 +544,17 @@ function setNextProcess()
 	}
 }
 
+function checkWin8()
+{
+	$.post("/"+urlPrefix+"/checkcoa", { _token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id}, function(response){
+		// console.log(response);
+		if(response.status)
+		{
+			swal(response.type, response.message, response.type);
+		}
+	});
+}
+
 var cbWidth=0;
 function alignCB()
 {
@@ -606,9 +617,8 @@ function printLabel()
 function savePrint()
 {
 	var data = $("#asset_form").html();
-	$.post("ajax.php", {print: data, action: 'savePrint', asset: assetNumber}, function(result)
-	{
-	    return false;
+	$.post("/"+urlPrefix+"/saveprint", { _token:_token, print: data, asset: assetNumber}, function(response){
+    	return false;
 	});
 }
 
