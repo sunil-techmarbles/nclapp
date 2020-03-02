@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SupplieAsinModel extends Model
 {
+    use SoftDeletes;
     protected $dates = ['deleted_at'];
     
     /**
@@ -16,7 +17,8 @@ class SupplieAsinModel extends Model
      */
     protected $fillable = [
         'supplie_id',	
-		'asin_model_id',	
+		'asin_model_id',
+        'qty'	
     ];
 
     public static function addSupplieAsinModel($asin_model_id, $supplie_id)
@@ -30,8 +32,19 @@ class SupplieAsinModel extends Model
         {
             $result = $supplieAsinModel->id;
         }
-        
         return $result;
-        # code...
+    }
+
+    public static function deleteSupplieAsinModel($supplieAsinModelId)
+    {
+        if(self::whereIn('id',$supplieAsinModelId)->delete())
+        {
+            return true;
+        }
+    }
+
+    public static function getSupplieIdExistsAsinValue($asinID)
+    {
+        return self::where(['asin_model_id' => $asinID])->pluck('supplie_id','id');
     }
 }

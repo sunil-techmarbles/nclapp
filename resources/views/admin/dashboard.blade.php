@@ -2,13 +2,6 @@
 @section('title', 'Dashboard')
 @section('content')
 
-@if (Session('error'))
-<div class="alert alert-danger alert-dismissible">
-    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    <strong>{{ Session::get('error') }}</strong>
-</div>
-@endif    
-
 <div class="abs" style="text-align: center;">
     <div style="text-align: center;font-size: 30px;font-weight: bold;color:#107878;">
         WE’RE SAVING THE PLANET
@@ -26,8 +19,8 @@
         </div>   
 
         <div class="menu-item">
-            <a href="index.php?page=refurb"><span class="fa fa-refresh"></span></a>
-            <a href="index.php?page=refurb">Refurb</a>
+            <a href="{{route('refurb')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('refurb')}}">Refurb</a>
         </div>  
 
         <div class="menu-item">

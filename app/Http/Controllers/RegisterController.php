@@ -62,7 +62,10 @@ class RegisterController extends Controller
 
 			$user->save(); 
 		} 
-     	return back()->with('success', 'User created successfully.'); 
+
+        return redirect()->route('users')->with('success', 'User created successfully.'); 
+
+
    } 
  
 }

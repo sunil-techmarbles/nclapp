@@ -6,33 +6,29 @@ use Illuminate\Http\Request;
 use App\User;  
 
 
-class UsersController extends Controller
-{ 
-
+class UsersController extends Controller { 
 	public $roles;  
 
 	public function __Construct(){
 		$this->roles = \DB::table('roles')->select( 'name' , 'id' )->get(); 
 	}
 
-
 	public function index() {   
 		$users = User::all();   
 		return view( 'admin.users.list' , compact('users') ); 
 	}   
 
-	public function edituser( $id ){    
-		$user = User::getUserDetail( $id );      
+	public function edituser( $Userid ){     
+		$user = User::getUserDetail( $Userid );      
 		return view( 'admin.users.edit' , compact('user') )->with(['roles' => $this->roles]);  
 	}  
 
-	public function edituserHandle( $id , Request $request ) { 
-		 
+	public function edituserHandle( Request $request , $Userid ) {  
 		$validator = $request->validate(
 				[
 					'fname' => 'required|min:2|max:50',
 					'lname' => 'required|min:2|max:50',  
-					'email' => 'required|unique:users,email,'.$id        
+					'email' => 'required|unique:users,email,'.$Userid        
 				], 
 				[
 					'fname.required' => 'First Name is required',
@@ -45,14 +41,13 @@ class UsersController extends Controller
 			); 
 
 			try { 	  
-
 				$user_data = [ 
 				    'first_name' => $request->fname ,
 				    'last_name' => $request->lname ,
 				    'email'    => $request->email, 
 		     	]; 
 		    
-		 		$user = User::findorfail( $id );    
+		 		$user = User::findorfail( $Userid );     
 				$user = Sentinel::update( $user, $user_data );  
 
 				$role = Sentinel::findRoleById( $user->roles()->get()[0]->id );  
@@ -64,23 +59,25 @@ class UsersController extends Controller
 			 	return redirect()->route('users')->with('success', 'User Updated successfully.'); 
 
 			 } catch( Exception $error ) { 
- 
 			 	return redirect()->route('users')->with('success', 'Error occred Please try again.'); 
 		}  
-
 	}	
 
-	public function DeleteUser( $id ) {   
-
-		// dd( $id );   
-
-		echo $id;  
-
-		// $user = Sentinel::findById( $id );
-		// $user->delete(); 
-		// return redirect()->route('users')->with('success', 'User Deleted successfully.'); 
-
+	public function DeleteUser(  Request $request, $UserID ) {  
+	  	$uid = intval($UserID);
+        $result = User::deleteUserByID($uid);        
+        if ( $result) {
+            $response['status']  = 'success';
+            $response['message'] = 'User deleted successfully';
+        } else {
+            $response['status']  = 'error';
+            $response['message'] = 'Unable to delete user';
+        } 
+        return response()->json($response);
 	}
 
 
 }
+
+
+

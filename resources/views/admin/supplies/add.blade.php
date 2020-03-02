@@ -155,7 +155,7 @@
 
 					<tr style="background:#eee">
 						<td><b>Emails</b></td>
-						<td><input type="text" name="emails[]" value="" maxlength="varchar(500)" id="emails">
+						<td><input type="text" name="email" value="" maxlength="varchar(500)" id="emails">
 						@foreach($adminEmails as $emails)
 							<label style="display:block">
 							<input name="emails[]" type="checkbox" style="width: 16px;height: 16px; min-width: 20px;" class="email_list" value="{{$emails}}">{{$emails}}</label><label style="display:block">

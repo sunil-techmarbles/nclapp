@@ -17,6 +17,7 @@ class CreateSupplieEmailsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('supplie_id');
             $table->string('email', 200);
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SupplieEmail extends Model
 {
+    use SoftDeletes;
     protected $dates = ['deleted_at'];
     
     /**
@@ -33,5 +34,24 @@ class SupplieEmail extends Model
         
         return $result;
         # code...
+    }
+
+    public static function deleteSupplieEmail($supplieEmailId)
+    {
+        if(self::whereIn('id',$supplieEmailId)->delete())
+        {
+            return true;
+        }
+    }
+
+    public static function getsuppliersEmails($suplieID)
+    {
+        return self::where(['supplie_id' => $suplieID])->pluck('email');
+    }
+
+    public static function getSupplieEmails($sID)
+    {
+        return self::where(['supplie_id' => $sID])
+            ->pluck('email');
     }
 }

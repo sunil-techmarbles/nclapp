@@ -76,12 +76,20 @@
 						<td>
 							<div style="max-height:250px;overflow:auto">
 								@foreach($models as $model)
-									@foreach($supplieDetail->getSupplieAsinModels as $supplieModel)
+									@if(!$supplieDetail->getSupplieAsinModels->isEmpty())
+										@foreach($supplieDetail->getSupplieAsinModels as $supplieModel)
+											<input type="hidden" name="exists_asinid[]" value="{{$supplieModel['id']}}">
+											<label style="display:block">
+												<input name="applicable_models[]" @if($supplieModel["asin_model_id"] == $model->id) checked @endif type="checkbox" style="width: 16px;height: 16px; min-width: 20px;" class="model_list" value="{{$model->id}}">
+												{{$model->asin}} {{$model->model}} {{$model->form_factor}} 
+											</label>
+										@endforeach
+									@else
 										<label style="display:block">
-											<input name="applicable_models[]" @if($supplieModel["asin_model_id"] == $model->id) checked @endif type="checkbox" style="width: 16px;height: 16px; min-width: 20px;" class="model_list" value="{{$model->id}}">
+											<input name="applicable_models[]" type="checkbox" style="width: 16px;height: 16px; min-width: 20px;" class="model_list" value="{{$model->id}}">
 											{{$model->asin}} {{$model->model}} {{$model->form_factor}} 
 										</label>
-									@endforeach
+									@endif
 								@endforeach
 							</div>
 						</td>
@@ -158,10 +166,15 @@
 					<tr style="background:#eee">
 						<td><b>Emails</b></td>
 						<td>
-							<input type="text" name="emails[]" value="@php echo implodeSupplieEmails($supplieDetail->getSupplieEmails); @endphp" maxlength="varchar(500)" id="emails">
+							@if(!$supplieDetail->getSupplieEmails->isEmpty())
+								@foreach($supplieDetail->getSupplieEmails as $supplieEmail)
+									<input type="hidden" name="exists_email[]" value="{{$supplieEmail->id}}">
+								@endforeach
+							@endif
+							<input type="text" name="email" value="@php echo implodeSupplieEmails($supplieDetail->getSupplieEmails); @endphp" maxlength="varchar(500)" id="emails">
 							@foreach($adminEmails as $emails)
 								<label style="display:block">
-								<input name="emails[]" type="checkbox" style="width: 16px;height: 16px; min-width: 20px;" class="email_list" value="{{$emails}}">{{$emails}}</label><label style="display:block">
+								<input name="emails[]" @if(in_array($emails,supplieEmialArray($supplieDetail->getSupplieEmails))) checked @endif type="checkbox" style="width: 16px;height: 16px; min-width: 20px;" class="email_list" value="{{$emails}}">{{$emails}}</label><label style="display:block">
 							@endforeach
 						</td>
 						<td style="min-width:300px;">Emails for notifications separated by comma</td>
