@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Carbon\Carbon;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use File;
+use Config;
 use App\Shipment;
 use App\ShipmentsData;
 use App\Asin;
@@ -13,12 +15,14 @@ use App\AsinAsset;
 
 class ShipmentController extends Controller
 {
-	public $basePath, $refurbLabels, $current, $refurbAssetData, $formData;
+	public $basePath, $refurbLabels, $current, $refurbAssetData, $formData, $sessionReports;
 
 	public function __construct()
     {
     	$this->basePath = base_path().'/public';
     	$this->current = Carbon::now();
+    	$this->sessionReports = $this->basePath.'/session-reports';
+    	$this->formData = $this->basePath.'/form-data';
     	$this->formData = $this->basePath.'/form-data';
     	$this->refurbAssetData = $this->basePath.'/refurb-asset-data';
     	$this->refurbLabels = $this->basePath.'/refurb-labels';
@@ -76,7 +80,7 @@ class ShipmentController extends Controller
 						"added_by" => Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name
 					];
 					ShipmentsData::deleteOldShipmentData($sess,$asset);
-					ShipmentsData::addShipmentData($data);
+					ShipmentsData::addShipmentData((object) $data, $this->current);
 					$assetNumber .= ",#" .$asset;
 					$result = ['status' => true, 'message' => 'ASIN Record added for asset'.$assetNumber];
 				}
@@ -166,7 +170,7 @@ class ShipmentController extends Controller
 			$currentSession = Shipment::getOpenShipment($request);
 			$updateShipment = Shipment::updateShipmentRecord($request, $this->current);
 			$addShipment = Shipment::addShipmentRecord($request, $this->current);
-			if($shipment)
+			if($addShipment)
 			{
 				$status = 'active';
 				$sessionSummary = ShipmentsData::sessionSummary($currentSession, $status);
@@ -199,16 +203,19 @@ class ShipmentController extends Controller
 
 	public function createShipmentReport($request, $sessionItems, $currentSession, $sessionSummary)
 	{
-		$data = ["items"=>$sessionSummary,"summary"=>$sessionSummary,"name"=>$db->get("tech_shipments","name",["id"=>$currentSession])];
-		$out = new Output("_ship_email.php",$data);
-		$eml = $out->render();
+		$shipmentName = Shipment::getNameOfRecordByID($currentSession);
+		$data = [
+			"tems" => $sessionSummary, 
+			"summary" => $sessionSummary,
+			"name" => $shipmentName
+		];
 
-		if (!file_exists('session-reports'))
+		if (!File::exists($this->sessionReports))
 		{
-		    mkdir('session-reports', 0777, true);
+			File::makeDirectory($this->sessionReports, 0777, true, true);
 		}
 
-		$fp = fopen('session-reports/coa'.$currentSession.'.csv', "w");
+		$fp = fopen($this->sessionReports.'/coa'.$currentSession.'.csv', "w");
 		fputcsv($fp, ["Shipment ID","Asset","S/N","Old COA","New COA","WIN8","Model","CPU","Added"]);
 		foreach ($sessionSummary as $i) {
 		    $itm = [
@@ -225,7 +232,7 @@ class ShipmentController extends Controller
 		    fputcsv($fp, $itm);
 		}
 		fclose($fp);
-		$fp = fopen('session-reports/shipment'.$currentSession.'.csv', "w");
+		$fp = fopen($this->sessionReports.'/shipment'.$currentSession.'.csv', "w");
 		fputcsv($fp, ["ASIN","Asset","Model","Form Factor","S/N","CPU","Price","Added"]);
 		foreach ($sessionSummary as $i)
 		{
@@ -240,16 +247,22 @@ class ShipmentController extends Controller
 				$i["added_on"]
 		    ];
 		    fputcsv($fp, $fields);
-		    $db->update("tech_sessions_data",['run_status'=>'shipped'],['asset'=>$i["asset"]]);
+		    ShipmentsData::updateShipmentRunStatus($i["asset"], $status='shipped');
 		}
 		fclose($fp);
-
-		$mail = new Email();
-		$attach = dirname(dirname(__FILE__)).'/session-reports/shipment'.$currentSession.'.csv';
-		$attach2 = dirname(dirname(__FILE__)).'/session-reports/coa'.$currentSession.'.csv';
-		$mid = $mail->queue(str_replace(",",";",SHIPMENT_EMAILS),'Shipment details',$eml,true,'',$attach.';'.$attach2);
-		$mail->release($mid);
-
-		Utils::redir("index.php?page=shipments&s=$currentSession&newlink=".time());
+		$shipmentEmails = Config::get('constants.shipmentEmails');
+		$subject = 'Shipment details';
+		$name = $currentSession.'.csv';
+		$files[] = $this->sessionReports.'/shipment'.$name;
+		$files[] = $this->sessionReports.'/coa'.$name;
+		Mail::send('admin.emails.shipmail', $data, function ($m) use ($subject, $shipmentEmails, $files, $name) {
+            $m->to($shipmentEmails)->subject($subject);
+            foreach($files as $file) {
+                $m->attach($file, array(
+                    'as' => $name,
+                    'mime' => 'csv')
+                );
+            }
+        });
 	}
 }

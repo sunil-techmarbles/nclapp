@@ -44,8 +44,8 @@
             <a href="{{route('shipments')}}">Outbound</a>
         </div>
         <div class="menu-item">
-            <a href="index.php?page=sessions"><span class="fa fa-tasks"></span></a>
-            <a href="index.php?page=sessions">Sessions</a>
+            <a href="{{route('sessions')}}"><span class="fa fa-tasks"></span></a>
+            <a href="{{route('sessions')}}">Sessions</a>
         </div>
         <div class="menu-item">
             <a href="index.php?page=newlist"><span class="fa fa-shopping-cart"></span></a>

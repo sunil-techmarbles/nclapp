@@ -28,7 +28,6 @@ class ShipmentsData extends Model
 		'status',
     ];
 
-
     public static function addShipmentData($request, $current)
     {
         $result = false;
@@ -75,6 +74,12 @@ class ShipmentsData extends Model
     		->update(["status"=> $status]);
     }
 
+    public static function updateShipmentRunStatus($r, $status)
+    {
+        return self::where(["asset"=> $r])
+            ->update(["run_status"=> $status]);
+    }
+
     public static function getResultAsinsAndShipmentData($status, $shipmentName)
     {
     	return self::select('shipments_data.aid', 'shipments_data.sid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
@@ -106,9 +111,12 @@ class ShipmentsData extends Model
     {
     	$result = false;
         $shipmentsData = self::where(["sid" => $sess,"asset" => $asset])->first();
-        if($shipmentData->delete())
+        if($shipmentsData)
         {
-            $result = true;
+            if($shipmentData->delete())
+            {
+                $result = true;
+            }
         }
         return $result;
     }
@@ -117,7 +125,7 @@ class ShipmentsData extends Model
     {
         return self::select('shipments_data.aid', 's.id', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
             ->selectSub('count(shipments_data.id)', 'cnt')
-            ->join('asins as a', function($join) use($currentSession){
+            ->join('asins as a', function($join) use($currentSession, $status){
                 $join->on('shipments_data.aid', '=', 'a.id')
                     ->where('shipments_data.sid','=', $currentSession)
                     ->where('shipments_data.status','=', $status);
@@ -131,7 +139,7 @@ class ShipmentsData extends Model
 
     public static function sessionItems($currentSession, $status)
     {
-        return self::select('shipments_data.aid', 's.id', 'd.old_coa',  'd.new_coa', 'd.win8_activated', 'd.asset', 'd.sn', 'd.added_on', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+        return self::select('shipments_data.aid', 's.id', 'shipments_data.old_coa',  'shipments_data.new_coa', 'shipments_data.win8_activated', 'shipments_data.asset', 'shipments_data.sn', 'shipments_data.added_on', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
             ->join('asins as a', function($join) use($currentSession, $status){
                 $join->on('shipments_data.aid', '=', 'a.id')
                     ->where('shipments_data.sid','=', $currentSession)
@@ -147,17 +155,17 @@ class ShipmentsData extends Model
 
     public static function shipmentParts($currentSession, $status)
     {
-        return self::select('i*')
-            ->selectSub('(p.qty * '.$qty.')', 'required_qty')
-            ->selectSub('(p.qty * '.$qty.' - supplies.qty)', 'missing')
+        return self::select('i.id', 'i.part_num', 'i.item_name', 'i.qty', 'i.vendor', 'i.dlv_time', 'i.low_stock', 'i.reorder_qty', 'i.email_tpl', 'i.email_subj')
+            ->selectSub('sum(p.qty)', 'required_qty')
+            ->selectSub('sum(p.qty) - i.qty', 'missing')
             ->join('supplies as i', function($join) use($currentSession){
-                $join->on('shipments_data.aid', '=', 's.id');
+                $join->on('shipments_data.aid', '=', 'i.id');
             })
             ->join('supplie_asin_models as p', function($join) use($currentSession){
-                $join->on('i.id', '=', 'p.part_id');
+                $join->on('i.id', '=', 'p.supplie_id');
             })
             ->join('shipments_data as d', function($join) use($currentSession, $status){
-                $join->on('d.aid', '=', 'p.asin_id')
+                $join->on('d.aid', '=', 'p.asin_model_id')
                     ->where('d.sid','=', $currentSession)
                     ->where('d.status','=', $status);
             })

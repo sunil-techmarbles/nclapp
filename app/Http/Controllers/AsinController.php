@@ -126,7 +126,7 @@ class AsinController extends Controller
         $qty = ($request->has('qty')) ? $request->get('qty') : 1;
         $pparts = ($request->has("ppart")) ? $request->get('ppart') : [];
         $specificFields = ['id','item_name','part_num','dept','vendor'];
-        $asinsParts = Asin::getAsinsPartsById($asinID);
+        $asinsParts = Asin::getAsinById($asinID);
         $models = Asin::getAllAsins($request);
         $parts = Supplies::getMissingParts($asinID,$qty);
         $mailSent = [];
