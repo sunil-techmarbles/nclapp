@@ -44,6 +44,12 @@ class Shipment extends Model
 		return $satus;
     }
 
+    public static function updateShipmentRecord($request, $current)
+    {
+    	return self::where(['status' => 'open'])
+    		->update(['updated_on'=> $current, 'status'=>'closed']);
+    }
+
     public static function getOpenShipment($request)
     {
     	return self::where(['status' => 'open'])->pluck('id');
