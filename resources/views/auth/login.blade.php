@@ -7,7 +7,14 @@
 	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
 	<strong>{{ Session::get('error') }}</strong>
 </div>
-@endif    
+@endif   
+
+@if (Session('success'))
+<div class="alert alert-success alert-dismissible">
+	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
+	<strong>{{ Session::get('success') }}</strong>
+</div> 
+@endif     
 
 <div class="row justify-content-center text-center"> 
 	<div class="col-6">

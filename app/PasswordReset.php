@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Illuminate\Support\Str; 
 use Illuminate\Database\Eloquent\SoftDeletes; // <-- This is required
 
 class PasswordReset extends Model
@@ -19,4 +21,66 @@ class PasswordReset extends Model
 	    'email',		
 		'token',
 	];
+
+
+	public static function AddForgetPasswordToken( $user ) { 
+    	//create a new token to be sent to the user. 
+		$satus = false;
+    	$passwordreset = new PasswordReset();
+    	$passwordreset->email = $user->email;	
+		$passwordreset->token = Str::random(60);
+		
+		if($passwordreset->save())
+		{ 
+			$satus = $passwordreset;
+		}
+		return $satus; 
+	} 
+
+
+	public static function ValidatePasswordResetToken( $token ) { 
+
+		$token_data = self::where('token','=',$token)
+						->first();  
+
+		if(isset( $token_data->email) && !empty( $token_data->email))
+		{
+			return true ; 
+		} 
+		else 
+		{  
+			return false ; 
+		}  
+	}  
+
+
+	public static function ResetUserPassword( $newPassword , $token ) {   
+		$user_data =   self::where('token', '=' , $token )  
+							->first();   
+		$getusercredentials = [ 
+    		'login' => $user_data->email ,
+		];
+		$user = Sentinel::findByCredentials($getusercredentials);
+
+		$updatepasswordcredentials = [
+			'password' => $newPassword ,
+		]; 
+		$user = Sentinel::update( $user, $updatepasswordcredentials ); 
+		
+		if($user) 
+		{    
+			return true ;  
+		}
+
+		return false ; 
+	} 
+
+
+	public static function RemovePasswordResetToken( $token ){
+		return self::where('token','=',$token)
+						->delete(); 
+	}
+
+
+
 }
