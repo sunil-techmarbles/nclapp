@@ -12,7 +12,7 @@ class SuppliesExport implements FromCollection, WithHeadings, ShouldAutoSize
     use Exportable;
 
     public function collection()
-    {
+    { 
         $supplieWithEmails = [];
 
         $abc = Supplies::getExportResult();

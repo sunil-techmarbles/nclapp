@@ -7,6 +7,10 @@ use Carbon\Carbon;
 use Config;
 use File;
 use DB;
+use App\Exports\CoaReportExport;
+use App\Exports\IssuesReportExport; 
+
+use Excel;
 
 use App\Refurb;
 use App\FormsConfig;
@@ -410,4 +414,15 @@ class RefurbController extends Controller
 			return response()->json(['message' => 'something went wrong with ajax request', 'type' => 'error', 'status' => false]);
 		}
 	}
+ 
+	public function ExportcoaReport()
+	{    
+ 		return (new CoaReportExport)->download('coa.csv', \Maatwebsite\Excel\Excel::CSV);  
+	}
+
+	public function ExportIssueReport()
+	{
+		return (new IssuesReportExport)->download('issues.csv', \Maatwebsite\Excel\Excel::CSV); 
+	}
+
 }

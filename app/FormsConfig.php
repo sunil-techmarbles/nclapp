@@ -58,4 +58,12 @@ class FormsConfig extends Model
     {
     	return self::where(['tab' => $tab, 'grp' => $group])->get();
     }
+
+
+    public static function GetTab( $tabname ){  
+    	
+    	return self::where(['tab' => $tabname, 'is_active' => 'yes'])->get(); 
+
+	} 
+
 }

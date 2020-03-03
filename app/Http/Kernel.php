@@ -59,12 +59,13 @@ class Kernel extends HttpKernel
         //'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'guest' => \App\Http\Middleware\GuestMiddleware::class, 
         'checkadminpermissions' =>\App\Http\Middleware\CheckForAdminPermissions::class,
+        'changereportheader' =>\App\Http\Middleware\ChangeReportHeader::class,
         'password.confirm' => \Illuminate\Auth\Middleware\RequirePassword::class, 
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'revalidate' => \App\Http\Middleware\RevalidateBackHistory::class,
-    ];
+    ]; 
 
     /**
      * The priority-sorted list of middleware.

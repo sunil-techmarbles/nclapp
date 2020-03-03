@@ -38,4 +38,12 @@ class AsinIssue extends Model
         
         return $result;
     }
+
+    
+    public static function getIssuesReportFields()
+    {
+        return self::select("asset","issue","added_on")->get();
+
+    }
+
 }

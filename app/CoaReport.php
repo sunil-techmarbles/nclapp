@@ -55,4 +55,10 @@ class CoaReport extends Model
     	]);
     }
 
+
+    public static function getCoaReportFields() 
+    { 
+        return self::select('asset','sn','old_coa','new_coa','added_on')->get();
+    }
+
 }

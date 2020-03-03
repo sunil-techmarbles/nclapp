@@ -28,7 +28,15 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	});
 });  
  
-Route::get('/logout', 'LoginController@logout')->name('logout');  
+Route::get('/logout', 'LoginController@logout')->name('logout');
+
+Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () { 
+	Route::prefix('admin')->group(function () { 
+		// refub 
+		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report'); 
+		Route::get('/exportissuereport','RefurbController@ExportIssueReport')->name('get.issue.report');
+	});
+});  
 
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 
@@ -39,9 +47,8 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');      
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');    
 
-	    Route::get('/audit','AuditController@index')->name('audit'); 
+	    Route::any('/audit','AuditController@index')->name('audit');  
 	    
-	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
 		Route::get('/updateqtyreorder','SuppliesController@updateQtyReorder')->name('update.qty.reorder');
@@ -68,11 +75,12 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/setwholesale','RefurbController@setWholesale')->name('set.wholesale');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
-		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
+		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');  
 
-		Route::any('/shipments','ShipmentController@index')->name('shipments');
+		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
-		
-		Route::any('/sessions','SessionController@index')->name('sessions');
+
+		Route::any('/sessions','SessionController@index')->name('sessions'); 
+
 	});
 });
