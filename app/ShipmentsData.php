@@ -112,4 +112,56 @@ class ShipmentsData extends Model
         }
         return $result;
     }
+
+    public static function sessionSummary($currentSession, $status)
+    {
+        return self::select('shipments_data.aid', 's.id', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+            ->selectSub('count(shipments_data.id)', 'cnt')
+            ->join('asins as a', function($join) use($currentSession){
+                $join->on('shipments_data.aid', '=', 'a.id')
+                    ->where('shipments_data.sid','=', $currentSession)
+                    ->where('shipments_data.status','=', $status);
+            })
+            ->join('shipments as s', function($join) use($currentSession){
+                $join->on('shipments_data.aid', '=', 's.id');
+            })
+            ->groupBy('shipments_data.aid')
+            ->get();
+    }
+
+    public static function sessionItems($currentSession, $status)
+    {
+        return self::select('shipments_data.aid', 's.id', 'd.old_coa',  'd.new_coa', 'd.win8_activated', 'd.asset', 'd.sn', 'd.added_on', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+            ->join('asins as a', function($join) use($currentSession, $status){
+                $join->on('shipments_data.aid', '=', 'a.id')
+                    ->where('shipments_data.sid','=', $currentSession)
+                    ->where('shipments_data.status','=', $status);
+            })
+            ->join('shipments as s', function($join) use($currentSession){
+                $join->on('shipments_data.aid', '=', 's.id');
+            })
+            ->orderBy('shipments_data.aid', 'DESC')
+            ->orderBy('shipments_data.asset', 'DESC')
+            ->get();
+    }
+
+    public static function shipmentParts($currentSession, $status)
+    {
+        return self::select('i*')
+            ->selectSub('(p.qty * '.$qty.')', 'required_qty')
+            ->selectSub('(p.qty * '.$qty.' - supplies.qty)', 'missing')
+            ->join('supplies as i', function($join) use($currentSession){
+                $join->on('shipments_data.aid', '=', 's.id');
+            })
+            ->join('supplie_asin_models as p', function($join) use($currentSession){
+                $join->on('i.id', '=', 'p.part_id');
+            })
+            ->join('shipments_data as d', function($join) use($currentSession, $status){
+                $join->on('d.aid', '=', 'p.asin_id')
+                    ->where('d.sid','=', $currentSession)
+                    ->where('d.status','=', $status);
+            })
+            ->groupBy('i.id')
+            ->get();
+    }
 }

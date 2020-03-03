@@ -22,7 +22,10 @@
 					<input style="width:160px" class="form-control" type="text" name="session_name" id="session_name"/>
 					<button class="btn btn-warning" name="new_session" value="1" type="submit">New Shipment</button>
 				</div>
-			</div>	
+				@if ($errors->has('session_name'))
+					<span class="text-danger">{{ $errors->first('session_name') }}</span>
+				@endif	
+			</div>
 		</form>
 		<table id="shipment" class="table">
 			<thead> 

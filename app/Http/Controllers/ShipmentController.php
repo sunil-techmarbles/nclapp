@@ -153,105 +153,103 @@ class ShipmentController extends Controller
 
 	public function addShipment(Request $request)
 	{
-		$shipment = Shipment::addShipmentRecord($request, $this->current);
-		if($shipment)
+		$validatedData = $request->validate(
+			[
+            	'session_name' => 'required',
+        	],
+       		[
+        	'session_name.required' => 'Please add shipment name',
+        ]);
+
+		if($request->get('new_session') && $request->get('session_name'))
 		{
-			return redirect()->route('shipments')->with([
-				'success', 'Shipment added successfully.'
-			]);
-		}
-		else
-		{
-			return redirect()->route('shipments')->with([
-				'error', 'Somethging went wrong'
-			]);
+			$currentSession = Shipment::getOpenShipment($request);
+			$updateShipment = Shipment::updateShipmentRecord($request, $this->current);
+			$addShipment = Shipment::addShipmentRecord($request, $this->current);
+			if($shipment)
+			{
+				$status = 'active';
+				$sessionSummary = ShipmentsData::sessionSummary($currentSession, $status);
+				$sessionItems = ShipmentsData::sessionItems($currentSession, $status);
+				$parts = ShipmentsData::shipmentParts($currentSession, $status);
+
+				foreach($parts as $p)
+				{
+					$nqty = max(0,$p["qty"]-$p["required_qty"]);
+					$db->update("tech_inventory",["qty"=>$nqty],["id"=>$p["id"]]);
+				}
+
+				if (!empty($sessionItems))
+				{
+					$this->createShipmentReport($request, $sessionItems, $currentSession, $sessionSummary);
+				}
+
+				return redirect()->route('shipments')->with([
+					'success', 'Shipment added successfully.'
+				]);
+			}
+			else
+			{
+				return redirect()->route('shipments')->with([
+					'error', 'Somethging went wrong'
+				]);
+			}
 		}
 	}
 
+	public function createShipmentReport($request, $sessionItems, $currentSession, $sessionSummary)
+	{
+		$data = ["items"=>$sessionSummary,"summary"=>$sessionSummary,"name"=>$db->get("tech_shipments","name",["id"=>$currentSession])];
+		$out = new Output("_ship_email.php",$data);
+		$eml = $out->render();
 
-	// public function FunctionName($value='')
-	// {
-	// 	if($req->getParam('new_session') && $req->getParam('session_name')) {
-	// 	$current_session = $db->get('tech_shipments','id',['status'=>'open']);
-	// 	$db->update("tech_shipments",['updated_on'=>date('Y-m-d H:i:s'),'status'=>'closed'],['status'=>'open']);
-	// 	$db->insert("tech_shipments",['started_on'=>date('Y-m-d H:i:s'),'name'=>$req->getParam('session_name')]);
+		if (!file_exists('session-reports'))
+		{
+		    mkdir('session-reports', 0777, true);
+		}
 
-	// 	$sql = "select d.aid, s.id, count(d.aid) as cnt,
-	// 			a.asin, a.price, a.model, a.form_factor, a.cpu_core, a.cpu_model, a.cpu_speed, a.ram, a.hdd, a.os, a.webcam, a.notes, a.link
-	// 	 		from tech_shipments_data d inner join tech_asins a on d.aid = a.id inner join tech_shipments s on d.sid = s.id
-	// 	 		where d.sid='$current_session' and d.status='active' group by d.aid";
-	// 	$session_summary = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+		$fp = fopen('session-reports/coa'.$currentSession.'.csv', "w");
+		fputcsv($fp, ["Shipment ID","Asset","S/N","Old COA","New COA","WIN8","Model","CPU","Added"]);
+		foreach ($sessionSummary as $i) {
+		    $itm = [
+		    	$i["id"],
+		    	$i["asset"],
+		    	$i["sn"],
+		    	$i["old_coa"],
+		    	$i["new_coa"],
+		    	($i["win8_activated"]?'WIN8 Activated':''),
+		    	$i["model"],
+		    	$i['cpu_core'].' '.$i['cpu_model'].' CPU @' .$i['cpu_speed'],
+		    	$i["added_on"]
+		    ];
+		    fputcsv($fp, $itm);
+		}
+		fclose($fp);
+		$fp = fopen('session-reports/shipment'.$currentSession.'.csv', "w");
+		fputcsv($fp, ["ASIN","Asset","Model","Form Factor","S/N","CPU","Price","Added"]);
+		foreach ($sessionSummary as $i)
+		{
+		    $fields = [
+		    	$i["asin"],
+				$i["asset"],
+				$i["model"],
+				$i["form_factor"],
+				$i["sn"],
+				$i["cpu_core"].' '.$i["cpu_model"].' CPU @ '.$i["cpu_speed"],
+				number_format($i["price"],2),
+				$i["added_on"]
+		    ];
+		    fputcsv($fp, $fields);
+		    $db->update("tech_sessions_data",['run_status'=>'shipped'],['asset'=>$i["asset"]]);
+		}
+		fclose($fp);
 
-	// 	$sql = "select d.aid, s.id, d.old_coa, d.new_coa, d.win8_activated, d.asset, d.sn, d.added_on,
-	// 			a.asin, a.price, a.model, a.form_factor, a.cpu_core, a.cpu_model, a.cpu_speed, a.ram, a.hdd, a.os, a.webcam, a.notes, a.link
-	// 	 		from tech_shipments_data d inner join tech_asins a on d.aid = a.id inner join tech_shipments s on d.sid = s.id
-	// 	 		where d.sid='$current_session' and d.status='active' order by d.aid, d.asset";
-	// 	$session_items = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+		$mail = new Email();
+		$attach = dirname(dirname(__FILE__)).'/session-reports/shipment'.$currentSession.'.csv';
+		$attach2 = dirname(dirname(__FILE__)).'/session-reports/coa'.$currentSession.'.csv';
+		$mid = $mail->queue(str_replace(",",";",SHIPMENT_EMAILS),'Shipment details',$eml,true,'',$attach.';'.$attach2);
+		$mail->release($mid);
 
-	// 	$sql = "select i.id, i.part_num, i.item_name, i.qty, sum(p.qty) as required_qty, sum(p.qty) - i.qty as missing,
-	// 			i.vendor, i.dlv_time, i.low_stock, i.reorder_qty, i.email_tpl, i.emails, i.email_subj
-	// 			from tech_inventory i inner join tech_asins_parts p on i.id = p.part_id
-	// 			inner join tech_shipments_data d on p.asin_id = d.aid
-	// 			where d.sid = '$current_session' and d.status='active' group by i.id";
-	// 	$parts = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-	// 	foreach($parts as $p) {
-	// 		$nqty = max(0,$p["qty"]-$p["required_qty"]);
-	// 		$db->update("tech_inventory",["qty"=>$nqty],["id"=>$p["id"]]);
-	// 	}
-
-	// 	if (!empty($session_items)) {
-	// 		$data = ["items"=>$session_items,"summary"=>$session_summary,"name"=>$db->get("tech_shipments","name",["id"=>$current_session])];
-	// 		$out = new Output("_ship_email.php",$data);
-	// 		$eml = $out->render();
-
-	// 		if (!file_exists('session-reports')) {
-	// 		    mkdir('session-reports', 0777, true);
-	// 		}
-
-	// 		$fp = fopen('session-reports/coa'.$current_session.'.csv', "w");
-	// 		fputcsv($fp, ["Shipment ID","Asset","S/N","Old COA","New COA","WIN8","Model","CPU","Added"]);
-	// 		foreach ($session_items as $i) {
-	// 		    $itm = [
-	// 		    	$i["id"],
-	// 		    	$i["asset"],
-	// 		    	$i["sn"],
-	// 		    	$i["old_coa"],
-	// 		    	$i["new_coa"],
-	// 		    	($i["win8_activated"]?'WIN8 Activated':''),
-	// 		    	$i["model"],
-	// 		    	$i['cpu_core'].' '.$i['cpu_model'].' CPU @' .$i['cpu_speed'],
-	// 		    	$i["added_on"]
-	// 		    ];
-	// 		    fputcsv($fp, $itm);
-	// 		}
-	// 		fclose($fp);
-
-
-	// 		$fp = fopen('session-reports/shipment'.$current_session.'.csv', "w");
-	// 		fputcsv($fp, ["ASIN","Asset","Model","Form Factor","S/N","CPU","Price","Added"]);
-	// 		foreach ($session_items as $i) {
-	// 		    $fields = [
-	// 		    	$i["asin"],
-	// 				$i["asset"],
-	// 				$i["model"],
-	// 				$i["form_factor"],
-	// 				$i["sn"],
-	// 				$i["cpu_core"].' '.$i["cpu_model"].' CPU @ '.$i["cpu_speed"],
-	// 				number_format($i["price"],2),
-	// 				$i["added_on"]
-	// 		    ];
-	// 		    fputcsv($fp, $fields);
-	// 		    $db->update("tech_sessions_data",['run_status'=>'shipped'],['asset'=>$i["asset"]]);
-	// 		}
-	// 		fclose($fp);
-
-	// 		$mail = new Email();
-	// 		$attach = dirname(dirname(__FILE__)).'/session-reports/shipment'.$current_session.'.csv';
-	// 		$attach2 = dirname(dirname(__FILE__)).'/session-reports/coa'.$current_session.'.csv';
-	// 		$mid = $mail->queue(str_replace(",",";",SHIPMENT_EMAILS),'Shipment details',$eml,true,'',$attach.';'.$attach2);
-	// 		$mail->release($mid);
-	// 	}
-	// 	Utils::redir("index.php?page=shipments&s=$current_session&newlink=".time());
-	// 	}
-	// }
+		Utils::redir("index.php?page=shipments&s=$currentSession&newlink=".time());
+	}
 }
