@@ -52,7 +52,7 @@ class Shipment extends Model
 
     public static function getOpenShipment($request)
     {
-    	return self::where(['status' => 'open'])->pluck('id');
+    	return self::where(['status' => 'open'])->pluck('id')->first();
     }
 
     public static function getNameOfRecordByID($ID)

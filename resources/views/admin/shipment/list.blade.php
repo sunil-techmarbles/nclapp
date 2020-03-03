@@ -53,10 +53,10 @@
 					<td>{{$p["status"]}}</td>
 					<td>{{$p["count"]}}</td>
 					<td>@if($p["status"] == 'open')
-							<span style="cursor:pointer" onclick="$(\'#asinModal\').modal(\'toggle\')" class="glyphicon glyphicon-plus">
+							<span style="cursor:pointer" onclick="$('#asinModal').modal('toggle')" class="fa fa-plus" aria-hidden="true">
 							</span>
 						@else
-							''
+							
 						@endif
 					</td>
 				</tr>

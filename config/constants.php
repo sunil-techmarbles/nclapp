@@ -3652,5 +3652,15 @@ return [
         "Will_Not_Power_On" => "Functional",
         "Worn_COA" => "Cosmetic",
         "Worn_Trackpad" => "Cosmetic"
+    ],
+    'shipmentEmails' => [
+        "rahuls.techmarbles@gmail.com",
+        // "randy@itamg.com",
+        // "richy@itamg.com",
+        // "support@refurbconnect.com",
+        // "diego@refurbconnect.com",
+        // "taylor@refurbconnect.com",
+        // "richard@itamg.com",
+        // "julio@itamg.com",
     ]
 ];

@@ -109,12 +109,6 @@ class Asin extends Model
     		->get();	
     }
 
-    public static function getAsinsPartsById($asinID='')
-    {
-        return self::where(['id' => $asinID])
-            ->first();
-    }
-
     public static function getAsinsIdByAsin($asinID='')
     {
         return self::where(['asin' => $asinID])

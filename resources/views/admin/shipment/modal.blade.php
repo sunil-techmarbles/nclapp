@@ -1,7 +1,8 @@
 <div class="modal fade" id="asinModal" tabindex="-1" role="dialog" aria-labelledby="asinModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
-            <form method="post" id="addform" action="index.php">
+            <form method="post" id="addform" action="{{route('shipments')}}">
+                @csrf
                 <div class="modal-header">
                     <h3 class="modal-title" id="asinModalLabel">Add Items to Shipment</h3>
                 </div>
