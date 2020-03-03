@@ -16,7 +16,8 @@ $(document).ready(function(){
 	});
 });
 
-$(document).ready(function(){
+$(document).ready(function()
+{
 	$('#supplies').DataTable();
 	$('#asins').DataTable();
 	$('#shipment').DataTable({
@@ -27,7 +28,7 @@ $(document).ready(function(){
 	    "bInfo": false,
 	    "bAutoWidth": false
 	});
-	$('#shipment-asin').DataTable({
+	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable({
 		"searching": false,
 		"bPaginate": false,
 	    "bLengthChange": false,
@@ -110,7 +111,8 @@ function getAssetData(fId)
 	}
 }
 
-function filterModels(str){
+function filterModels(str)
+{
 	if (str.length > 2) {
 		$('.mdlrow').hide();
 		$("tr[data-model*='" + str.toLowerCase() +"']" ).show();
@@ -119,7 +121,8 @@ function filterModels(str){
 	}
 }
 
-function deptFilter() {
+function deptFilter()
+{
 	$('.invrow').hide();
 	$('.dcb').each(function(){
 		if($(this).prop('checked')) {
@@ -128,7 +131,8 @@ function deptFilter() {
 	});
 }
 		
-function del_confirm(id,url,text) {
+function del_confirm(id,url,text)
+{
 	swal({
 		title: 'Are you sure?',
 		text: "You won't be able to revert this!",
@@ -155,4 +159,34 @@ function del_confirm(id,url,text) {
 			swal("Your record is safe!");
 		}
 	}); 
+}
+
+function getAssetData(fId)
+{
+	var asin=$('#asset_num').val();
+	if (asin.length >= 10)
+	{
+		$.get("ajax.php?action=getASIN&asin="+asin+"&t="+Math.random(), function(data) {
+			if(data=='0')
+			{
+				alert('ASIN not found. Please check and try again');
+			}
+			else
+			{
+				location.href = 'index.php?page=parts&model='+data;
+			}
+		});
+	}
+}
+
+function setBulkAsin(sid)
+{
+	var asset = sid.replace("asset","");
+	var aid = $('#'+sid).val();
+	if(aid !='')
+	{
+		$.get("ajax.php?action=setBulkAsin&aid="+aid+"&asset="+asset, function(data) {
+			$('#'+data).parent().hide();
+		}); 
+	}
 }

@@ -36,11 +36,10 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 
 	    Route::get('/users', 'UsersController@index')->name('users');     
 	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');    
-	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');      
-	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');    
-
-	    Route::get('/audit','AuditController@index')->name('audit'); 
+	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
+	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
 	    
+	    Route::get('/audit','AuditController@index')->name('audit'); 
 	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
