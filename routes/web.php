@@ -11,9 +11,13 @@
 */
 
 Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');      
+Route::get('/logout', 'LoginController@logout')->name('logout');  
+Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');   
+Route::post('/SendPasswordResetEmail', 'LoginController@sendPasswordResetEmail')->name('sendPasswordResetEmail');   
+Route::get('/ResetPasswordForm/{token}', 'LoginController@resetPasswordForm')->name('resetPasswordForm');   
+Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPassword');     
 
 Route::middleware(['guest','revalidate'])->group(function () { 
- 
 	Route::get('/','LoginController@index')->name('login.view');  
 	Route::get('/login','LoginController@index')->name('login.view');
 	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');  
@@ -22,7 +26,6 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () { 
 		Route::get('/dashboard','DashboardController@index')->name('dashboard');  
 	});
-	
 });  
  
 Route::get('/logout', 'LoginController@logout')->name('logout');  
@@ -32,9 +35,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () { 
 
 	    Route::get('/users', 'UsersController@index')->name('users');     
-	    Route::get('/edituser/{id}', 'UsersController@edituser')->name('edit.user');    
-	    Route::post('/edituserHandle/{id}', 'UsersController@edituserHandle')->name('edit.edituserHandle');     
-	    Route::get('/DeleteUser/{id}', 'UsersController@DeleteUser')->name('delete.user');        
+	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');    
+	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');      
+	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');    
 	
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
@@ -67,5 +70,4 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 	});
-
 });

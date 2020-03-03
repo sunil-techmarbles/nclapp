@@ -28,6 +28,7 @@ class ShipmentsData extends Model
 		'status',
     ];
 
+
     public static function addShipmentData($request, $current)
     {
         $result = false;
@@ -48,6 +49,7 @@ class ShipmentsData extends Model
         
         return $result;
     }
+
 
     public static function updateRecord($request)
     {
