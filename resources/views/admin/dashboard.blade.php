@@ -13,9 +13,12 @@
     <div style="padding-top:100px;max-width: 700px;margin: auto;"> <!--border-bottom: 3px solid #107878-->
 
         <div class="menu-item">
-            <a href="index.php?page=index" style="color: white;text-decoration: none;">
+            <a href="{{route('audit')}}" style="color: white;text-decoration: none;">
             <span class="fa fa-check-square-o"></span></a>
-            <a href="index.php?page=index">Audit</a> 
+            <a href="{{route('audit')}}">Audit</a> 
+
+            <!-- <a href="{{route('refurb')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('refurb')}}">Audit</a> -->
         </div>   
 
         <div class="menu-item">
