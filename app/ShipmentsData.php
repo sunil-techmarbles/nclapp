@@ -28,7 +28,6 @@ class ShipmentsData extends Model
 		'status',
     ];
 
-
     public static function addShipmentData($request, $current)
     {
         $result = false;

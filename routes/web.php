@@ -69,5 +69,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 
 		Route::any('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
+		
+		Route::any('/sessions','SessionController@index')->name('sessions');
 	});
 });
