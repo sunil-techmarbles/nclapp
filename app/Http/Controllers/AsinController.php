@@ -222,4 +222,14 @@ class AsinController extends Controller
         }
         return response()->json($response);
     }
+
+    public function PartLookup(Request $request)
+    {   
+        $models = Asin::getAsinLookupFields();
+        return view ('admin.partslook.list', compact('models'));
+
+    }
+
+
+
 }

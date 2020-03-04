@@ -12,7 +12,7 @@
 	</tbody>
 </table>
 
-<table class="table table-hover users_table">  
+<table id="users_table" class="table table-hover">
 	<thead>
 		<th></th>
 		<th>User ID</th>

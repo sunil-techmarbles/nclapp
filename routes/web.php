@@ -47,8 +47,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
 	    
-	    Route::get('/audit','AuditController@index')->name('audit'); 
-	
+	    Route::get('/audit','AuditController@index')->name('audit');   
+		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number'); 
+
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
 		Route::get('/updateqtyreorder','SuppliesController@updateQtyReorder')->name('update.qty.reorder');
@@ -66,6 +67,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/editasin/{asinid}','AsinController@editAsin')->name('edit.asin');
 		Route::get('/asinparts/{asinid}','AsinController@partsAsin')->name('parts.asin');
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
+
+		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup'); 
+
 
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');

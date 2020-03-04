@@ -178,7 +178,7 @@ class Asin extends Model
                 $q->where([
                     "cpu_core" => $cpuCore,
                 ]);
-                $q->where('cpu_model' 'LIKE', $cpuMdl);
+                $q->where('cpu_model', 'LIKE', $cpuMdl);
                 $q->orWhere('model', 'LIKE', $model);
                 $q->orWhere("model_alias", 'LIKE', $model);
             })
@@ -207,4 +207,13 @@ class Asin extends Model
             })
             ->get();
     }
+
+    public static function getAsinLookupFields() 
+    {
+        return self::select('id','asin','price','model','form_factor','cpu_core','cpu_model','cpu_speed','ram','hdd')
+                        ->where('asin', '!=' , '0' )
+                        ->get();  
+    }
+
+
 }

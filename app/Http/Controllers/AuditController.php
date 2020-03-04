@@ -8,10 +8,30 @@ use App\Audit;
 
 class AuditController extends Controller
 { 
- 
 
-  // Load the view after login
-    public function index()
+	
+	public function AddPartNumber(Request $request) 
+	{ 
+		$newpartnumber = FALSE;    
+ 		
+ 		$response['status']  = 'error';
+        $response['message'] = 'Unable to add Part Number'; 
+		
+		// add to lenovo_model_data
+		// $newpartnumber = LenovoModalData::insertNewPartNumber($request->modal, $request->partnumber );
+
+		if($newpartnumber) 
+		{
+			$response['status']  = 'success';
+        	$response['message'] = 'New Part Number added'; 
+		}
+
+		return response()->json($response);
+ 
+	}
+
+ 
+    public function index(Request $request)
     { 
     	$forms_data = FormsConfig::GetTab('Notes');    
     	$output = "";
@@ -21,7 +41,9 @@ class AuditController extends Controller
     	{
 			$qtype = $formdata->qtype;
 			$grp = $formdata->grp;
-			if ($grp != $cgrp) { 
+			
+			if ($grp != $cgrp) 
+			{
 				if ($cgrp != "X" && $cgrp != "") $output .= "</div>";
 				if ($grp != "") $output .= "<div class='question-group'><h3>$grp</h3>";
 				$cgrp = $grp;

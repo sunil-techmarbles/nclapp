@@ -9,7 +9,6 @@
 
 <div class="row justify-content-center text-center">
 	<div class="col-6">
-		
 		<form method="post" id="main-form" action="">    
 			@csrf  
 			<input type="hidden" name="page" value="proc"/>
@@ -22,11 +21,7 @@
 			<div class="form-initial" style="text-align: center;">
 				@php echo $output @endphp
 			</div> 
-
 		</form>  
-
 	</div>
-
 </div>
-
 @endsection

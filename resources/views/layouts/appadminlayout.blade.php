@@ -38,4 +38,5 @@
 	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script> 
+	
 </html>  
