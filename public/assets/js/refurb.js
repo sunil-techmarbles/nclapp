@@ -73,7 +73,11 @@ function saveCoa()
 		$.post("/"+urlPrefix+"/savecoa", 
 			{_token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id},
 			function(ressponse){
-				swal(response.type, response.message, response.type);
+				swalWithBootstrapButtons.fire( 
+					response.type,
+					response.message ,
+					response.status
+				) 
 		    	$('#detailModal').modal('hide');
 		});
 	}
@@ -300,14 +304,22 @@ function getAssetData(fId)
 			}
 			else
 			{
-				swal('Oops...', 'Nothing found!', 'error');
+				Swal.fire({
+					  icon: 'error',
+					  title: 'Oops...',
+					  text: 'Nothing found!',
+				})
 			}
 		});
 	}
 	else
 	{
-		swal('Oops...', 'Please add asset number!', 'warning');
-		$("#asset_form").hide();
+		Swal.fire({
+					  icon: 'warning',
+					  title: 'Oops...',
+					  text: 'Please add asset number!',
+				})
+		$("#asset_form").hide(); 
 		$("#tab-headers").html('');
 		$("#tab-content").html('');
 	}
@@ -364,7 +376,11 @@ function setAsin(aId)
 	$("#btnSetAsin").show();
 
 	$.post("/"+urlPrefix+"/saveasin", {_token:_token, aid: a.id, asset: assetNumber}, function(response){
-		swal(response.type, response.message, response.type);
+		swalWithBootstrapButtons.fire( 
+					response.type,
+					response.message ,
+					response.status
+				) 
 	    return false;
 	});
 }
@@ -410,7 +426,11 @@ function setDescriptions()
 			{_token:_token, asset:assetNumber, sn:adata.Serial, issue:ri},
 			function(response)
 			{
-				swal(response.type, response.message, response.type);
+				swalWithBootstrapButtons.fire( 
+					response.type,
+					response.message ,
+					response.status
+				) 
 			}
 		);
 	}
@@ -431,7 +451,11 @@ function setWholesale()
 	var a = $('#ws_list').val();
 	$.post("/"+urlPrefix+"/setwholesale", {a: a, _token:_token,}, function(response)
 	{
-	    swal(response.type, response.message, response.type);
+	    swalWithBootstrapButtons.fire( 
+					response.type,
+					response.message ,
+					response.status
+				) 
 		$('#ws_list').val('');
 		$('#wsModal').modal('hide');
 	});
@@ -441,7 +465,11 @@ function setWS()
 {
 	$.get("/"+urlPrefix+"/setwholesale?a="+assetNumber+"&t="+Math.random(), function(response)
 	{
-		swal(response.type, response.message, response.type);
+		swalWithBootstrapButtons.fire( 
+					response.type,
+					response.message ,
+					response.status
+				) 
 	});
 	forceWS = true;
 	$(".tab-pane").removeClass("in active");
@@ -550,7 +578,11 @@ function checkWin8()
 		// console.log(response);
 		if(response.status)
 		{
-			swal(response.type, response.message, response.type);
+			swalWithBootstrapButtons.fire( 
+					response.type,
+					response.message ,
+					response.status
+				) 
 		}
 	});
 }
