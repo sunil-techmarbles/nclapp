@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2349US9
+Computer Serial: PBBK1CR
+Motherboard Vendor: LENOVO
+Motherboard Model: 2349US9
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 28:d2:44:42:11:ec
+NIC: Vendor: Intel Corporation, Model: Centrino Ultimate-N 6300, MAC Address: Unavailable
+DVD-RAM writer: DVDRAM GT80N
+Drive 1: Model: HGST HTS725032A7E630, Serial: TF645AY12P8Z6T, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: E006E00B-1FEF-49A9-85B2-4B6955F6F2FC
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 520773
+User3: ITAMG
+User4: 11725
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: HGST HTS725032A7E630
+             Serial: TF645AY12P8Z6T Size: 320.07 GB
+
+UUID: D5B12154-E532-4260-A3B0-104BEF7501A8
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 07 Nov 2019 at 09:45:16
+Date & time operation was completed: Thursday, 07 Nov 2019 at 10:55:57
+Total elapsed time (HH:MM:SS): 01:10:41
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

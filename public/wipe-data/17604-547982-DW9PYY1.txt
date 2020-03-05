@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E5530 non-vPro
+Computer Serial: DW9PYY1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 05GRXT
+Processor: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 2048 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4313 802.11bgn Wireless Network Adapter, MAC Address: 48:5a:b6:89:70:9b
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5761 Gigabit Ethernet PCIe, MAC Address: f0:1f:af:6a:f5:c6
+DVD-RAM writer: DVD+-RW GTA0N
+Drive 1: Model: WDC WD3200BEKX-75B7WT0, Serial: WD-WXF1AA3C2891, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 12C8F91A-EBC3-4EFC-A37C-460C96F2ADFC
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 547982
+Lot Name: Related Companies
+Lot Number: 17604
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD3200BEKX-75B7WT0
+             Serial: WD-WXF1AA3C2891 Size: 320.07 GB
+
+UUID: 7B25AFB6-3C09-4AC4-9540-5BE19706CE5A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 1
+Sectors Overwritten: 130535938
+Sectors Not Overwritten: 494606510
+Sectors Verified: 2
+Action Start Time: Wednesday, 22 Jan 2020 at 12:58:26
+Action End Time: Wednesday, 22 Jan 2020 at 14:13:03
+Action Duration: 01:14:37
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: FAILED!
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

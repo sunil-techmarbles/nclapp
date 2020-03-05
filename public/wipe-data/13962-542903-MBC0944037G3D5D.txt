@@ -1,0 +1,147 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3D5D
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:54
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:55
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:56
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:57
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:2f:f4
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:2f:f5
+Drive 1: Model: ST9900805SS, Serial: 6XS3T59A0000B3329Y7K, Size: 900.19 GB
+Drive 2: Model: ST9900805SS, Serial: 6XS3S4LJ0000B3329SUW, Size: 900.19 GB
+Drive 3: Model: ST9900805SS, Serial: 6XS3TE980000B332AKZ2, Size: 900.19 GB
+Drive 4: Model: ST9900805SS, Serial: 6XS3TE6P0000B331LGEK, Size: 900.19 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 25695EFB-24A2-496F-9E6F-EB14C8CCB5F1
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 542903
+Lot Name: Perkins Eastman
+Lot Number: 13962
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: IBM-ESXS Model: ST9900805SS
+             Serial: 6XS3T59A0000B3329Y7K Size: 900.19 GB
+
+UUID: 081874ED-FA7A-4FAB-9C85-763838DBA1ED
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758174768
+Sectors Not Overwritten: 0
+Sectors Verified: 175817477
+Action Start Time: Tuesday, 10 Dec 2019 at 06:57:17
+Action End Time: Tuesday, 10 Dec 2019 at 09:09:27
+Action Duration: 02:12:10
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: IBM-ESXS Model: ST9900805SS
+             Serial: 6XS3S4LJ0000B3329SUW Size: 900.19 GB
+
+UUID: 8050DE5C-0385-4632-97B4-EF3919B6B075
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758174768
+Sectors Not Overwritten: 0
+Sectors Verified: 175817477
+Action Start Time: Tuesday, 10 Dec 2019 at 06:57:17
+Action End Time: Tuesday, 10 Dec 2019 at 09:07:40
+Action Duration: 02:10:23
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: IBM-ESXS Model: ST9900805SS
+             Serial: 6XS3TE980000B332AKZ2 Size: 900.19 GB
+
+UUID: 8ADAFFD1-BD13-4F42-B48F-4966C59A30AC
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758174768
+Sectors Not Overwritten: 0
+Sectors Verified: 175817477
+Action Start Time: Tuesday, 10 Dec 2019 at 06:57:17
+Action End Time: Tuesday, 10 Dec 2019 at 09:08:01
+Action Duration: 02:10:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: IBM-ESXS Model: ST9900805SS
+             Serial: 6XS3TE6P0000B331LGEK Size: 900.19 GB
+
+UUID: 64CD7106-55CE-4ECA-BF50-B6852B6DB846
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 0
+Sectors Not Overwritten: 1758174768
+Sectors Verified: 0
+Action Start Time: Tuesday, 10 Dec 2019 at 06:57:17
+Action End Time: Tuesday, 10 Dec 2019 at 06:57:21
+Action Duration: 00:00:04
+
+Action Result: FAILURE
+
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

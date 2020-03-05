@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro13,3
+Computer Serial: C02SYAL0GTFM
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-A5C67F76ED83108C
+Processor: Intel(R) Core(TM) i7-6820HQ CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: 00:90:4c:0d:f4:3e
+Drive 1: Model: APPLE SSD SM0512L, Serial: C02651700S5HCGX1X, Size: 500.28 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Baffin [Radeon RX 460/560D / Pro 450/455/460/555/555X/560/560X]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Advanced Micro Devices, Inc. [AMD/ATI]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 100 Series/C230 Series Chipset Family HD Audio Controller
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 04D19BFE-429A-4E44-A0E3-7CA22F25F752
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 553142
+Lot Name: Hasbro Inc
+Lot Number: 18868
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0512L
+             Serial: C02651700S5HCGX1X Size: 500.28 GB
+
+UUID: 6AF06573-A033-4906-8C07-8397F4BC0D47
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 122138132
+Sectors Not Overwritten: 0
+Sectors Verified: 12213814
+Action Start Time: Wednesday, 18 Dec 2019 at 17:46:26
+Action End Time: Wednesday, 18 Dec 2019 at 17:47:25
+Action Duration: 00:00:59
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

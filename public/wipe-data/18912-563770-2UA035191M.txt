@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Z400 Workstation
+Computer Serial: 2UA035191M
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 0B4Ch
+Processor: Intel(R) Xeon(R) CPU W3520 @ 2.67GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 3072 MB, Memory banks: 3, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: d4:85:64:94:c0:97
+DVD-RAM writer: DVD A DH16AAL
+Drive 1: Model: ST3500418AS, Serial: 5VMF3N62, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G96GL [Quadro FX 580]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: BE5FFB56-7E7A-4487-9CB5-97F2999B9E9A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 563770
+User3: Northwell Health
+User4: 18912
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3500418AS
+             Serial: 5VMF3N62 Size: 500.11 GB
+
+UUID: 4A9BC858-C1E8-4D3F-9796-C098F5F34095
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 02 Jan 2020 at 11:42:28
+Date & time operation was completed: Thursday, 02 Jan 2020 at 17:02:33
+Total elapsed time (HH:MM:SS): 05:20:05
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

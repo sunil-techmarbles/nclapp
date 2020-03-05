@@ -1,0 +1,223 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3E55
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:38:98
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:38:99
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:56:46
+Drive 1: Model: WDC WD3200BEKT-75PVMT1, Serial: WD-WXB1A4318993, Size: 320.07 GB
+Drive 2: Model: INTEL SSDSA2BW160G3L, Serial: PEPR151500NC160DGN, Size: 160.04 GB
+Drive 3: Model: TOSHIBA MQ01ABD032, Serial: 63Q6PKCBT, Size: 320.07 GB
+Drive 4: Model: INTEL SSDSA2BW160G3L, Serial: CVPR153300FG160DGN, Size: 160.04 GB
+Drive 5: Model: KINGSTON SUV400S37240G, Serial: 50026B766A01F092, Size: 240.06 GB
+Drive 6: Model: INTEL SSDSA2BW160G3L, Serial: PEPR151500JY160DGN, Size: 160.04 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 3BAB7A1E-DBFF-4CCF-83FC-059AFAF5462E
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999990
+Lot Name: Itamg
+Lot Number: 11725
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD3200BEKT-75PVMT1
+             Serial: WD-WXB1A4318993 Size: 320.07 GB
+
+UUID: E8EAE112-EA7A-47F9-BBBB-8ED14AA4090F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62514245
+Action Start Time: Tuesday, 03 Dec 2019 at 07:17:02
+Action End Time: Tuesday, 03 Dec 2019 at 08:55:07
+Action Duration: 01:38:05
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: PEPR151500NC160DGN Size: 160.04 GB
+
+UUID: EB6BEAEF-21B8-46C6-BF39-49523620B719
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 312581808
+Sectors Not Overwritten: 0
+Sectors Verified: 31258181
+Action Start Time: Tuesday, 03 Dec 2019 at 07:17:02
+Action End Time: Tuesday, 03 Dec 2019 at 07:19:44
+Action Duration: 00:02:42
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: Toshiba Model: TOSHIBA MQ01ABD032
+             Serial: 63Q6PKCBT Size: 320.07 GB
+
+UUID: C54DA08A-D4DD-4895-9D1D-E9FF76FE71EC
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62528016
+Action Start Time: Tuesday, 03 Dec 2019 at 07:17:03
+Action End Time: Tuesday, 03 Dec 2019 at 09:13:22
+Action Duration: 01:56:19
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: CVPR153300FG160DGN Size: 160.04 GB
+
+UUID: 7025B20F-E25E-490B-B54E-C34FBABE5FB0
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 312581808
+Sectors Not Overwritten: 0
+Sectors Verified: 31258181
+Action Start Time: Tuesday, 03 Dec 2019 at 07:17:02
+Action End Time: Tuesday, 03 Dec 2019 at 07:19:46
+Action Duration: 00:02:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: Kingston Model: KINGSTON SUV400S37240G
+             Serial: 50026B766A01F092 Size: 240.06 GB
+
+UUID: 37C6ED3F-26B7-4C9E-9766-2BA2D529106B
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 468862128
+Sectors Not Overwritten: 0
+Sectors Verified: 46896016
+Action Start Time: Tuesday, 03 Dec 2019 at 07:17:02
+Action End Time: Tuesday, 03 Dec 2019 at 07:22:07
+Action Duration: 00:05:05
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: PEPR151500JY160DGN Size: 160.04 GB
+
+UUID: 3287DDDD-2884-4C4A-94EF-31BAB4D1422E
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 312581808
+Sectors Not Overwritten: 0
+Sectors Verified: 31258181
+Action Start Time: Tuesday, 03 Dec 2019 at 07:17:02
+Action End Time: Tuesday, 03 Dec 2019 at 07:19:47
+Action Duration: 00:02:45
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

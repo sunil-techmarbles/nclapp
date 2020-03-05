@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro8,1
+Computer Serial: C02HF1F4DV17
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-94245B3640C91C81
+Processor: Intel(R) Core(TM) i7-2640M CPU @ 2.80GHz, Speed: 2800 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: 40:6c:8f:17:5f:73
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+DVD writer: DVD-R UJ-8A8
+Drive 1: Model: TOSHIBA MK7559GSXF, Serial: Y1S2CRTFT, Size: 750.16 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 14
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: DADE4E09-7A24-4CD5-874D-99584C7F9417
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 132000
+Lot Name: Ogilvy
+Lot Number: 12332
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK7559GSXF
+             Serial: Y1S2CRTFT Size: 750.16 GB
+
+UUID: 32DCC63E-E9B1-48C5-BE40-421C32D03C9E
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 01 Jan 2001 at 00:07:13
+Date & time operation was completed: Monday, 01 Jan 2001 at 10:20:19
+Total elapsed time (HH:MM:SS): 10:13:06
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

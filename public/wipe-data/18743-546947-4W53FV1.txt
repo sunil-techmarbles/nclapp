@@ -1,0 +1,58 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6320
+Computer Serial: 4W53FV1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 05VMY6
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GH, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:3b:da:a3
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW DU-8A4SH
+Drive 1: Model: ST9250410AS, Serial: 5VGC3BJ6, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D6B3AFC8-ADC1-42DD-A400-E4F9DC4F3525
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 546947
+User3: PRA Health Sciences
+User4: 18743
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9250410AS
+             Serial: 5VGC3BJ6 Size: 250.06 GB
+
+UUID: 7E4A4135-F339-4930-B936-B9D2181F11B4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 05 Dec 2019 at 14:16:20
+Date & time operation was completed: Thursday, 05 Dec 2019 at 17:53:25
+Total elapsed time (HH:MM:SS): 03:37:05
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 47
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

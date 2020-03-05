@@ -1,0 +1,165 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBP0944037G3C1A
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:4d:c8:18
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:4d:c8:19
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:4d:c8:1a
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:4d:c8:1b
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:98:4c
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:98:4d
+DVD reader: Unavailable
+Drive 1: Model: ST1000NM0001, Serial: Z1N2HCH1, Size: 1000.20 GB
+Drive 2: Model: ST1000NM0001, Serial: Z1N0FEL2, Size: 1000.20 GB
+Drive 3: Model: ST31000424SS, Serial: 9WK3JXNK, Size: 1000.20 GB
+Drive 4: Model: WD1000FYYG, Serial: WMAWP0038269, Size: 1000.20 GB
+Drive 5: Model: MK1001TRKB, Serial: 52V0A01OFLD6, Size: 1000.20 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: A82A7A05-C8D4-45F9-8B2C-44EC23834626
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 9999999999
+User3: Related Companies
+User4: 17605
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: SEAGATE Model: ST1000NM0001
+             Serial: Z1N2HCH1 Size: 1000.20 GB
+
+UUID: 8916B50C-7EF4-4A10-9A3D-86858EDFD5EE
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 06 Nov 2019 at 03:13:59
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 12:09:00
+Total elapsed time (HH:MM:SS): 08:55:01
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: SEAGATE Model: ST1000NM0001
+             Serial: Z1N0FEL2 Size: 1000.20 GB
+
+UUID: 81AE3942-872B-4C8B-8DEF-ADE61E1252FE
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 06 Nov 2019 at 03:13:59
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 12:35:37
+Total elapsed time (HH:MM:SS): 09:21:38
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: SEAGATE Model: ST31000424SS
+             Serial: 9WK3JXNK Size: 1000.20 GB
+
+UUID: 01515547-C198-4B0D-AF93-309C913A8E61
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 06 Nov 2019 at 03:13:57
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 12:44:15
+Total elapsed time (HH:MM:SS): 09:30:18
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: WD Model: WD1000FYYG
+             Serial: WMAWP0038269 Size: 1000.20 GB
+
+UUID: E3E28D67-54B7-4B59-AA90-7057E144D5B8
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 06 Nov 2019 at 03:13:59
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 13:23:07
+Total elapsed time (HH:MM:SS): 10:09:08
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: TOSHIBA Model: MK1001TRKB
+             Serial: 52V0A01OFLD6 Size: 1000.20 GB
+
+UUID: 4F6503CE-D647-4E24-B4D1-AB2F65BE43C4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 06 Nov 2019 at 03:13:57
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 13:05:48
+Total elapsed time (HH:MM:SS): 09:51:51
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

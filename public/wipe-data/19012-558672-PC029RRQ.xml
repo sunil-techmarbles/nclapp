@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 8.3 32-bit">
+        <KernelVersion>4.12.12-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>LENOVO</ComputerVendor>
+            <ComputerModel>20B7000QUS</ComputerModel>
+            <ComputerSerial>PC029RRQ</ComputerSerial>
+            <MotherboardVendor>LENOVO</MotherboardVendor>
+            <MotherboardModel>20B7000QUS</MotherboardModel>
+            <AssetTag>No Asset Information</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz</Name>
+                    <Speed>1900 MHz</Speed>
+                    <ID>CPU Socket - U3E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>32 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>3072 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Hynix/Hyundai</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>385A9DEB</SerialNumber>
+                    <AssetTag>None</AssetTag>
+                    <PartNumber>HMT451S6BFR8A-PB</PartNumber>
+                </Stick>
+                <MemoryBanks>1</MemoryBanks>
+                <Description>DDR3 SODIMM</Description>
+                <TotalCapacity>4096 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Ethernet Connection I218-LM</Product>
+                    <MACAddress>68:f7:28:2e:7c:c8</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:155A</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Wireless 7260</Product>
+                    <MACAddress>Unavailable</MACAddress>
+                    <Speed>Unavailable</Speed>
+                    <PciId>8086:8B2</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device index="1">
+                    <Vendor>Toshiba</Vendor>
+                    <Product>TOSHIBA MQ01ACF050</Product>
+                    <Serial>Y482P1QBT</Serial>
+                    <Firmware>AV002E</Firmware>
+                    <Gigabytes>500.11</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SATA</Interface>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Haswell-ULT Integrated Graphics Controller</Product>
+                    <PciId>8086:A16</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Haswell-ULT HD Audio Controller</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>8 Series HD Audio Controller</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>SANYO</Vendor>
+                    <Product>45N1775</Product>
+                    <SerialNumber>18721</SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>0</CurrentCapacity>
+                    <DesignCapacity>23200000</DesignCapacity>
+                    <FullCapacity>14460000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>8 Series SATA Controller 1 [AHCI mode]</Product>
+                    <Description>SATA controller</Description>
+                    <PciId>8086:9C03</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>3</USBPorts>
+            <USB2Ports>1</USB2Ports>
+            <USB3Ports>1</USB3Ports>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>142C72E4-755D-4B24-8861-FEABB9B84202</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>558672</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Northwell Health</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19012</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Laptop</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="3223710312213024912111217618113129108211104160">
+                    <UUID>DF10DA32-D7AF-48CC-B350-B258DA485789</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Tuesday, 04 Feb 2020 12:32:35</StartTime>
+                    <Duration>00:00:02</Duration>
+                    <ActionResult Index="5">Failure</ActionResult>
+                    <FailureReason>Failure writing data to device</FailureReason>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>1</DriveErrorsDetected>
+                    <DCOLocked>Yes</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>0</SectorsOverwritten>
+                    <SectorsNotOverwritten>976773168</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>Toshiba</Vendor>
+                    <Product>TOSHIBA MQ01ACF050</Product>
+                    <Serial>Y482P1QBT</Serial>
+                    <Gigabytes>500.11</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <PreWipeSMARTStatus>UNKNOWN!</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>UNKNOWN!</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

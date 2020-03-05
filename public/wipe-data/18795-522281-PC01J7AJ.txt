@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20B7000QUS
+Computer Serial: PC01J7AJ
+Motherboard Vendor: LENOVO
+Motherboard Model: 20B7000QUS
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 68:f7:28:07:83:14
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+Drive 1: Model: HGST HTS725050A7E630, Serial: RC055ACB0KKRSJ, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 3C5E29E3-F733-4733-B7F8-15B3E54F3227
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 522281
+User3: Northwell Health
+User4: 18795
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: HGST HTS725050A7E630
+             Serial: RC055ACB0KKRSJ Size: 500.11 GB
+
+UUID: 810EB846-5CCE-427B-B0FB-B2D2DCD5A59D
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 08 Nov 2019 at 15:17:33
+Date & time operation was completed: Friday, 08 Nov 2019 at 21:06:12
+Total elapsed time (HH:MM:SS): 05:48:39
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

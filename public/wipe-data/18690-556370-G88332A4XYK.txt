@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro3,1
+Computer Serial: G88332A4XYK
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F42C88C8
+Processor: Intel(R) Xeon(R) CPU           E, Speed: 2800 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: Unavailable
+Processor: Intel(R) Xeon(R) CPU           E, Speed: 2800 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 16384 MB, Memory banks: 6, DDR2 FB-DIMM FB-DIMM
+NIC: Vendor: Intel Corporation, Model: 80003ES2LAN Gigabit Ethernet Controller (Copper), MAC Address: 00:1f:5b:3a:5a:b0
+NIC: Vendor: Intel Corporation, Model: 80003ES2LAN Gigabit Ethernet Controller (Copper), MAC Address: 00:1f:5b:3a:5a:b1
+DVD writer: DVD-RW DVR-112D
+Drive 1: Model: Hitachi HUA722010CLA330, Serial: JPW9J0N00NKU7L, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: RV630 XT [Radeon HD 2600 XT]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 631xESB/632xESB High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 84F77AD3-8AA1-4135-AD62-A2C262F4FDDE
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 556370
+Lot Name: Global Brands Group
+Lot Number: 18690
+\"Product\": Computer
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HUA722010CLA330
+             Serial: JPW9J0N00NKU7L Size: 1000.20 GB
+
+UUID: 58487106-631C-4D92-A29E-387DEE4424F4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 16 Jan 2020 at 19:48:52
+Action End Time: Thursday, 16 Jan 2020 at 22:30:46
+Action Duration: 02:41:54
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,88 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: MBD-X8DT6-A-IS018
+Computer Serial: 1234567890
+Motherboard Vendor: Supermicro
+Motherboard Model: X8DT6
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 40960 MB, Memory banks: 5, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:8e
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:8f
+Drive 1: Model: WDC WD800JD-75MSA1, Serial: WD-WMAM9R905028, Size: 80.00 GB
+Drive 2: Model: WDC WD800AAJS-75M0A0, Serial: WD-WCAV38522113, Size: 80.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 8DE8E376-6A2B-47DF-B445-6F643EA0728E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 9999999911
+User3: ITAMG
+User4: 11725
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD800JD-75MSA1
+             Serial: WD-WMAM9R905028 Size: 80.00 GB
+
+UUID: 60C7E42B-3441-4BAE-B3D9-8BD94FC9D478
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 04 Dec 2019 at 19:19:37
+Date & time operation was completed: Wednesday, 04 Dec 2019 at 19:48:47
+Total elapsed time (HH:MM:SS): 00:29:10
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD800AAJS-75M0A0
+             Serial: WD-WCAV38522113 Size: 80.00 GB
+
+UUID: 831F2335-49ED-45FA-9FE1-D86155A7B683
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 04 Dec 2019 at 19:19:37
+Date & time operation was completed: Wednesday, 04 Dec 2019 at 19:38:40
+Total elapsed time (HH:MM:SS): 00:19:03
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

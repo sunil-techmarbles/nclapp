@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Precision M4800
+Computer Serial: FJGFJ12
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0T3YTY
+Processor: Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: ec:f4:bb:60:0f:db
+NIC: Vendor: Broadcom Limited, Model: BCM4352 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+DVD reader: DVD-ROM DU90N
+Drive 1: Model: ST500LM000-1EJ162, Serial: W761AW02, Size: 500.11 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Venus XT [Radeon HD 8870M / R9 M270X/M370X]
+Display Adapter: Vendor: Intel Corporation, Model: 4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cape Verde/Pitcairn HDMI Audio [Radeon HD 7700/7800 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 27E74DBC-1E5E-4E0C-9B29-277215ED9DEA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 513324
+User3: Rye City School District
+User4: 17495
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM000-1EJ162
+             Serial: W761AW02 Size: 500.11 GB
+
+UUID: 7F63080D-193F-455E-BB15-0DA7503E01C2
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 22 Nov 2019 at 09:21:22
+Date & time operation was completed: Friday, 22 Nov 2019 at 11:16:21
+Total elapsed time (HH:MM:SS): 01:54:59
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6530
+Computer Serial: 6PZTGV1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0JC5MT
+Processor: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:58:07:3e
+NIC: Vendor: Broadcom Limited, Model: BCM4313 802.11bgn Wireless Network Adapter, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW UJ8B2
+Drive 1: Model: TOSHIBA MK3261GSYN, Serial: 7247F14CS, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 31E96E40-C3D6-46D0-ADF7-6A7D752E5F63
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 547969
+User3: Related Companies
+User4: 17604
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK3261GSYN
+             Serial: 7247F14CS Size: 320.07 GB
+
+UUID: B21338D1-58DE-47CB-A7BA-9F7903CBE082
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 14 Jan 2014 at 13:11:57
+Date & time operation was completed: Tuesday, 14 Jan 2014 at 16:48:54
+Total elapsed time (HH:MM:SS): 03:36:57
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

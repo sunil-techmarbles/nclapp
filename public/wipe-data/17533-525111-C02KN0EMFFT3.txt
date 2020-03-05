@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro10,1
+Computer Serial: C02KN0EMFFT3
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-C3EC7CD22292981F
+Processor: Intel(R) Core(TM) i7-3635QM CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57786 Gigabit Ethernet PCIe, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+Drive 1: Model: APPLE SSD SD512E, Serial: 134278402109, Size: 500.28 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 650M Mac Edition]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 1A20EA3D-BF17-4331-8F7C-004673D2D8B0
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525111
+Lot Name: Ogilvy Common Health Worldwide
+Lot Number: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SD512E
+             Serial: 134278402109 Size: 500.28 GB
+
+UUID: 756ED4E5-DE6B-470C-BD70-607862C45AA9
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 01 Jan 2018 at 01:42:45
+Date & time operation was completed: Monday, 01 Jan 2018 at 02:02:49
+Total elapsed time (HH:MM:SS): 00:20:04
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

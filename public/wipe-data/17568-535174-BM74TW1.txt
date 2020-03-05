@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 7010
+Computer Serial: BM74TW1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0GXM1W
+Processor: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 2048 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 90:b1:1c:a2:4f:3b
+Drive 1: Model: ST250DM000-1BD141, Serial: Z3T3AN4E, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 9D9A32F9-6185-4C8B-B006-4634A193F796
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 535174
+User3: PRA Health Sciences
+User4: 17568
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST250DM000-1BD141
+             Serial: Z3T3AN4E Size: 250.06 GB
+
+UUID: 2B303E09-7EDC-4B97-AF54-21AD0E22F112
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 08:52:51
+Date & time operation was completed: Thursday, 14 Nov 2019 at 11:18:46
+Total elapsed time (HH:MM:SS): 02:25:55
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

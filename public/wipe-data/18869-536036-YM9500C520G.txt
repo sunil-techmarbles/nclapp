@@ -1,0 +1,121 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro4,1
+Computer Serial: YM9500C520G
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 8, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:f2:8a:53
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:f2:95:4f
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD writer: DVD-RW GH41N
+Drive 1: Model: WDC WD6400AAKS-41H2B0, Serial: WD-WCASY7170177, Size: 640.14 GB
+Drive 2: Model: WDC WD6400AAKS-41H2B0, Serial: WD-WCASY9231598, Size: 640.14 GB
+Drive 3: Model: WDC WD2500JD-22HBB0, Serial: WD-WCAL73630338, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G96 [GeForce 9500 GT]
+Display Adapter: Vendor: NVIDIA Corporation, Model: G96 [GeForce 9500 GT]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 12
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 1A54A07E-D2E1-48E7-85C7-4A5F908625E2
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 536036
+Lot Name: Ogilvy
+Lot Number: 18869
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD6400AAKS-41H2B0
+             Serial: WD-WCASY7170177 Size: 640.14 GB
+
+UUID: D8957E62-B711-41E4-A1EF-C0A8C8989845
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Monday, 18 Nov 2019 at 20:05:30
+Date & time operation was completed: Monday, 18 Nov 2019 at 22:04:05
+Total elapsed time (HH:MM:SS): 01:58:35
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD6400AAKS-41H2B0
+             Serial: WD-WCASY9231598 Size: 640.14 GB
+
+UUID: 6B2B4B71-EFE8-4D5C-B40D-DB0C42EEF3B3
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Monday, 18 Nov 2019 at 20:05:30
+Date & time operation was completed: Monday, 18 Nov 2019 at 22:09:30
+Total elapsed time (HH:MM:SS): 02:04:00
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: Western Digital Model: WDC WD2500JD-22HBB0
+             Serial: WD-WCAL73630338 Size: 250.06 GB
+
+UUID: 039B240A-EFC5-4D65-84D7-DC453B90823B
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Monday, 18 Nov 2019 at 20:05:31
+Date & time operation was completed: Monday, 18 Nov 2019 at 21:27:23
+Total elapsed time (HH:MM:SS): 01:21:52
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

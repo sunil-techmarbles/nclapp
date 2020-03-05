@@ -71,7 +71,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
 		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup'); 
 
-
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');
 		Route::post('/saveasin','RefurbController@saveAsin')->name('save.asin');
@@ -85,7 +84,10 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 
-		Route::any('/sessions','SessionController@index')->name('sessions'); 
+		Route::any('/sessions','SessionController@index')->name('sessions');
+		Route::get('/checktravelerid', 'AuditController@checkTravelerId')->name('check.traveler.id');
+		Route::get('/gettab', 'AuditController@getTab')->name('get.tab');
+		Route::get('/checktraveleridformobile', 'AuditController@CheckTravelerIdForMobile')->name('check.traveler.id.for.mobile');
 
 	});
 });

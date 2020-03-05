@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook Folio 9470m
+Computer Serial: CNU342928N
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18DF
+Processor: Intel(R) Core(TM) i5-3317U CPU @ 1.70GHz, Speed: 1700 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 9c:b6:54:9e:1e:19
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: Unavailable
+Drive 1: Model: LITEONIT LMS-32L6M-HP, Serial: 002337120726, Size: 32.02 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 9424BCD0-467A-4FAA-BC37-AAE737D5EF8B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 550944
+User3: Virtua Health System
+User4: 17451
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: LITEONIT LMS-32L6M-HP
+             Serial: 002337120726 Size: 32.02 GB
+
+UUID: 1F8C2E51-F39D-4B53-9BBA-6CD22AB03B17
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 04 Feb 2020 at 10:22:20
+Date & time operation was completed: Tuesday, 04 Feb 2020 at 10:59:08
+Total elapsed time (HH:MM:SS): 00:36:48
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

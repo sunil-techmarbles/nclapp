@@ -1,0 +1,87 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro14,1
+Computer Serial: C02TV4NUHV2H
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-B4831CEBD52A0C4C
+Processor: Intel(R) Core(TM) i7-7660U CPU @ 2.50GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM4350 802.11ac Wireless Network Adapter, MAC Address: dc:a9:04:80:05:f1
+Drive 1: Model: APPLE SSD AP0512J, Serial: C08643100VBGXR5A1, Size: 0.00 GB
+Drive 2: Model: APPLE SSD AP0512J, Serial: C08643100VBGXR5A1, Size: 500.28 GB
+Display Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Broadcom Limited, Model: 720p FaceTime HD Camera
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 0
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: DAA524BC-BFCD-48D4-856C-E1A71359B917
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 519634
+Lot Name: Constituency Management Group
+Lot Number: 18666
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD AP0512J
+             Serial: C08643100VBGXR5A1 Size: 0.00 GB
+
+UUID: 5B0980CE-7A5E-4B0C-8DB7-94525CD3E4EE
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Sunday, 01 Jan 2017 at 02:39:31
+Date & time operation was completed: Sunday, 01 Jan 2017 at 02:40:01
+Total elapsed time (HH:MM:SS): 00:00:30
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Apple Model: APPLE SSD AP0512J
+             Serial: C08643100VBGXR5A1 Size: 500.28 GB
+
+UUID: 28F134D2-594A-49E3-9AE4-A510AD63EA4B
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Sunday, 01 Jan 2017 at 02:39:31
+Date & time operation was completed: Sunday, 01 Jan 2017 at 02:46:19
+Total elapsed time (HH:MM:SS): 00:06:48
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

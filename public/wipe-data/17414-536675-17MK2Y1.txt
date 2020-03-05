@@ -1,0 +1,125 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R320
+Computer Serial: 17MK2Y1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0R5KP9
+Processor: Intel(R) Xeon(R) CPU E5-2440 0 @ 2.40GHz, Speed: 2400 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:46:a4:e9
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:46:a4:ea
+DVD reader: DVD-ROM DS-8D9SH
+Drive 1: Model: ST3600057SS, Serial: 6SL63H3S, Size: 599.55 GB
+Drive 2: Model: PERC H710, Serial: 00b5ccdc13656e6925001114e5a0a38c, Size: 599.55 GB
+Drive 3: Model: PERC H710, Serial: 0056dfd613646e6925001114e5a0a38c, Size: 599.55 GB
+Drive 4: Model: PERC H710, Serial: 009dacd113646e6925001114e5a0a38c, Size: 599.55 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 29160D53-596F-4971-B037-1D59D746C6C0
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 536675
+User3: Abacus Group
+User4: 17414
+\"Product\": Server
+
+>> Raid device #1  Vendor: SEAGATE Model: ST3600057SS
+             Serial: 6SL63H3S Size: 599.55 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST3600057SS
+             Serial: 6SL63H3S Size: 558.375 GB  [ 32:1 ]
+
+UUID: 7DC2498F-3256-40F6-89C6-6C634BF8845F
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 21 Nov 2019 at 15:49:05
+Date & time operation was completed: Thursday, 21 Nov 2019 at 16:57:13
+Total elapsed time (HH:MM:SS): 01:08:08
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #2  Vendor: DELL Model: PERC H710
+             Serial: 00b5ccdc13656e6925001114e5a0a38c Size: 599.55 GB
+
+UUID: C233F31F-26FA-4100-83F7-CC8BEAA935BA
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 21 Nov 2019 at 15:49:05
+Date & time operation was completed: Thursday, 21 Nov 2019 at 16:56:45
+Total elapsed time (HH:MM:SS): 01:07:40
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 30
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #3  Vendor: DELL Model: PERC H710
+             Serial: 0056dfd613646e6925001114e5a0a38c Size: 599.55 GB
+
+UUID: 36E0AE95-4425-40B7-B317-1DDB0408AC6D
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 21 Nov 2019 at 15:49:05
+Date & time operation was completed: Thursday, 21 Nov 2019 at 16:56:49
+Total elapsed time (HH:MM:SS): 01:07:44
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 20
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #4  Vendor: DELL Model: PERC H710
+             Serial: 009dacd113646e6925001114e5a0a38c Size: 599.55 GB
+
+UUID: B172C383-4B3C-4B68-9DEA-1F53A74C5CD4
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 21 Nov 2019 at 15:49:05
+Date & time operation was completed: Thursday, 21 Nov 2019 at 16:54:39
+Total elapsed time (HH:MM:SS): 01:05:34
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 17
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

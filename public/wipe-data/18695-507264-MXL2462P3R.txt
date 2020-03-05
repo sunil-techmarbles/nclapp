@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq Pro 6300 SFF
+Computer Serial: MXL2462P3R
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 339A
+Processor: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 12288 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: b4:b5:2f:e0:86:cb
+DVD-RAM writer: DVD A DH16ACSHR
+Drive 1: Model: Hitachi HDS721050CLA660, Serial: JP1570FR0WLM6K, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 5A939618-440E-4327-A136-1CE5CFF4B937
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 507264
+User3: World Wrestling Entertainment
+User4: 18695
+\"Product\": Computer
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HDS721050CLA660
+             Serial: JP1570FR0WLM6K Size: 500.11 GB
+
+UUID: 36B929E6-2466-493A-809F-5CF8C55E3E0B
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 13 Jan 2020 at 15:53:02
+Date & time operation was completed: Monday, 13 Jan 2020 at 17:14:12
+Total elapsed time (HH:MM:SS): 01:21:10
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

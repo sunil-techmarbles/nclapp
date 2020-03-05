@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac7,1
+Computer Serial: W874310HX8A
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F42386C8
+Processor: Intel(R) Core(TM)2 Extreme CPU X7900  @ 2.80GHz, Speed: 2800 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 4096 kB
+RAM: 2048 MB, Memory banks: 2, DDR2 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4321 802.11a/b/g/n, MAC Address: 00:1d:4f:f6:cb:35
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88E8058 PCI-E Gigabit Ethernet Controller, MAC Address: 00:1b:63:aa:0a:6a
+DVD writer: DVD-R UJ-85J
+Drive 1: Model: WDC WD5000AAKS-40TMA0, Serial: WD-WCAPW5421025, Size: 500.11 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: RV630/M76 [Mobility Radeon HD 2600 XT/2700]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801H (ICH8 Family) HD Audio Controller
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 1113D337-A140-4311-B141-6B78047F2FC2
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 548354
+Lot Name: 18658
+Lot Number: 18658
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKS-40TMA0
+             Serial: WD-WCAPW5421025 Size: 500.11 GB
+
+UUID: 8675E781-8C87-410E-B188-A28D97831EFD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97677317
+Action Start Time: Wednesday, 08 Jan 2020 at 20:45:36
+Action End Time: Wednesday, 08 Jan 2020 at 22:57:21
+Action Duration: 02:11:45
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

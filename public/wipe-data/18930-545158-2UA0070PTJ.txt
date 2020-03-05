@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Z400 Workstation
+Computer Serial: 2UA0070PTJ
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 0B4Ch
+Processor: Intel(R) Xeon(R) CPU W3505 @ 2.53GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: f4:ce:46:2d:98:3c
+DVD-RAM writer: DVD-RAM GH40L
+Drive 1: Model: WDC WD5000AAKX-08ERMA0, Serial: WD-WCC2EAU09560, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G96GL [Quadro FX 380]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: E725C58E-DB48-4B37-8B04-CE665F2FF246
+Current user: ITAMG
+Computer ID: 2UA0070PTJ
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 545158
+Lot Name: Northwell Health
+Lot Number: 18930
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-08ERMA0
+             Serial: WD-WCC2EAU09560 Size: 500.11 GB
+
+UUID: 8B8F34E9-28C1-4395-8736-E206FBA036AB
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 08 Jan 2020 at 17:35:15
+Action End Time: Wednesday, 08 Jan 2020 at 23:20:12
+Action Duration: 05:44:57
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 76
+Dirty Sectors: 9024
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown

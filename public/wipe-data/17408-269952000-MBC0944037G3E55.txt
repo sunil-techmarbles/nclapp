@@ -1,0 +1,204 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3E55
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:38:98
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:38:99
+Drive 1: Model: EH0072FARWC, Serial: PKWK0G4E, Size: 73.41 GB
+Drive 2: Model: EG0600FBDSR, Serial: EA01PC81K8DE1235, Size: 600.13 GB
+Drive 3: Model: EG0600FBDSR, Serial: EA01PC81K6591234, Size: 600.13 GB
+Drive 4: Model: EH0072FARWC, Serial: PKWREN3E, Size: 73.41 GB
+Drive 5: Model: EG0600FBDSR, Serial: EA01PC81K8A11235, Size: 600.13 GB
+Drive 6: Model: EG0600FBDSR, Serial: EA01PC81K9BH1235, Size: 600.13 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: C0D8405B-537B-487E-965A-8327F9DB6CF7
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 269952000
+Lot Name: Conde Nast
+Lot Number: 17408
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: HP Model: EH0072FARWC
+             Serial: PKWK0G4E Size: 73.41 GB
+
+UUID: 580F7766-B585-4753-9EF8-C27ABF1B1134
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 143374738
+Sectors Not Overwritten: 0
+Sectors Verified: 14337474
+Action Start Time: Tuesday, 10 Dec 2019 at 06:41:33
+Action End Time: Tuesday, 10 Dec 2019 at 06:51:22
+Action Duration: 00:09:49
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: HP Model: EG0600FBDSR
+             Serial: EA01PC81K8DE1235 Size: 600.13 GB
+
+UUID: B3A06195-5782-4D93-8B7F-F2F1FD61AFD9
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 117212357
+Action Start Time: Tuesday, 10 Dec 2019 at 06:41:33
+Action End Time: Tuesday, 10 Dec 2019 at 08:07:15
+Action Duration: 01:25:42
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: HP Model: EG0600FBDSR
+             Serial: EA01PC81K6591234 Size: 600.13 GB
+
+UUID: CCEB7BE4-92F1-4A36-A001-FE5A48436EC5
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 117212357
+Action Start Time: Tuesday, 10 Dec 2019 at 06:41:33
+Action End Time: Tuesday, 10 Dec 2019 at 08:07:44
+Action Duration: 01:26:11
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: HP Model: EH0072FARWC
+             Serial: PKWREN3E Size: 73.41 GB
+
+UUID: A0D829DF-C9EF-4434-B02A-078E5D40A8BF
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 143374738
+Sectors Not Overwritten: 0
+Sectors Verified: 14337474
+Action Start Time: Tuesday, 10 Dec 2019 at 06:41:33
+Action End Time: Tuesday, 10 Dec 2019 at 06:51:22
+Action Duration: 00:09:49
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: HP Model: EG0600FBDSR
+             Serial: EA01PC81K8A11235 Size: 600.13 GB
+
+UUID: 0B77EDA5-FC82-43DE-963D-F97F34750574
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 117212357
+Action Start Time: Tuesday, 10 Dec 2019 at 06:41:33
+Action End Time: Tuesday, 10 Dec 2019 at 08:07:15
+Action Duration: 01:25:42
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: HP Model: EG0600FBDSR
+             Serial: EA01PC81K9BH1235 Size: 600.13 GB
+
+UUID: 73C1A6B4-7D4D-4951-9D70-A0204D356384
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 117212357
+Action Start Time: Tuesday, 10 Dec 2019 at 06:41:33
+Action End Time: Tuesday, 10 Dec 2019 at 08:08:43
+Action Duration: 01:27:10
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

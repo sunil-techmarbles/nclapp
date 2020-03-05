@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro4,1
+Computer Serial: H09304BE20H
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 8, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:ef:67:68
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:ef:57:41
+DVD writer: DVD-RW GH41N
+Drive 1: Model: ST31000528AS, Serial: 9VP15ERW, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: RV770 [Radeon HD 4870]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: DC3F897F-3602-4A4A-A812-C7AD20608CAC
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524826
+Lot Name: Ogilvy Common Health Worldwide
+Lot Number: 17533
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST31000528AS
+             Serial: 9VP15ERW Size: 1000.20 GB
+
+UUID: 9450E8B6-C1AF-4152-A82D-B79F972C038E
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Wednesday, 30 Oct 2019 at 18:02:21
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 20:49:27
+Total elapsed time (HH:MM:SS): 02:47:06
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

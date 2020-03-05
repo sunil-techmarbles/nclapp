@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq 6005 Pro SFF PC
+Computer Serial: 2UA1370998
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 3047h
+Processor: AMD Phenom(tm) II X3 B75 Processor, Speed: 3000 MHz, Cores: 3, L1 Cache: 384 kB, L2 Cache: 1536 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5761 Gigabit Ethernet PCIe, MAC Address: 3c:d9:2b:5b:bc:8c
+DVD-RAM writer: CDDVDW SH-216AL
+Drive 1: Model: ST3250312AS, Serial: 9VYDS267, Size: 250.06 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: RS880 [Radeon HD 4200]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: SBx00 Azalia (Intel HDA)
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: CB7642F9-681C-4BF2-BD02-5B0C5F9F8202
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561045
+User3: New York Athletic Club
+User4: 18917
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3250312AS
+             Serial: 9VYDS267 Size: 250.06 GB
+
+UUID: 3A5F90D4-2F2A-420C-9EB0-0A00B0746BE7
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 26 Dec 2019 at 15:05:00
+Date & time operation was completed: Thursday, 26 Dec 2019 at 15:49:18
+Total elapsed time (HH:MM:SS): 00:44:18
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

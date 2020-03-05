@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 820 G2
+Computer Serial: 5CG533491B
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 225A
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 58:20:b1:dc:5f:a9
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 94:65:9c:3a:98:a0
+Drive 1: Model: SAMSUNG MZ7PD256HCGM-000H7, Serial: S1N8NSAFC46566, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 5659D1AA-8C38-4418-87EC-641CA268DB60
+Current user: ITAMG
+Computer ID: 5CG533491B
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 547394
+Lot Name: FCB Global
+Lot Number: 18794
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZ7PD256HCGM-000H7
+             Serial: S1N8NSAFC46566 Size: 256.06 GB
+
+UUID: 139D1201-C53F-44A5-8163-E2615E030A75
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Wednesday, 11 Dec 2019 at 09:51:46
+Action End Time: Wednesday, 11 Dec 2019 at 09:53:44
+Action Duration: 00:01:58
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

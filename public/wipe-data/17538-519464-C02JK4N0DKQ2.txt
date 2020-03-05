@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro10,1
+Computer Serial: C02JK4N0DKQ2
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-C3EC7CD22292981F
+Processor: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57786 Gigabit Ethernet PCIe, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+Drive 1: Model: APPLE SSD SM512E, Serial: S118NYACA18729, Size: 500.28 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 650M Mac Edition]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: A7815197-114E-41F8-BBF5-ABF60F13B224
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 519464
+Lot Name: Havas Health
+Lot Number: 17538
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM512E
+             Serial: S118NYACA18729 Size: 500.28 GB
+
+UUID: 35C63096-D59D-4587-BE0B-57DD0995C39D
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 24 Oct 2019 at 19:12:08
+Date & time operation was completed: Thursday, 24 Oct 2019 at 19:29:56
+Total elapsed time (HH:MM:SS): 00:17:48
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

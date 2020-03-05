@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3460AWU
+Computer Serial: PK0BG0H
+Motherboard Vendor: LENOVO
+Motherboard Model: 3460AWU
+Processor: Intel(R) Core(TM) i7-3667U CPU @ 2.00GHz, Speed: 2000 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 84:3a:4b:cd:7e:40
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+Drive 1: Model: SanDisk SD5SG2256G1052E, Serial: 130281401861, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 26B21BBF-F1E1-49A8-818B-626A72E51829
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524665
+Lot Name: Bain & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD5SG2256G1052E
+             Serial: 130281401861 Size: 256.06 GB
+
+UUID: 6881CCFF-93CA-4CB9-BA61-870FF63A3E4E
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Tuesday, 05 Nov 2019 at 09:32:51
+Date & time operation was completed: Tuesday, 05 Nov 2019 at 09:44:43
+Total elapsed time (HH:MM:SS): 00:11:52
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

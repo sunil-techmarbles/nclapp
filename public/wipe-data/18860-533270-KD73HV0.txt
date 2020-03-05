@@ -1,0 +1,151 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: System x3550 M3 -[7944KAG]-
+Computer Serial: KD73HV0
+Motherboard Vendor: IBM
+Motherboard Model: 90Y4784
+Processor: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz, Speed: 2400 MHz, Cores: 6, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5645  @ 2.40GHz, Speed: 2400 MHz, Cores: 6, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 98304 MB, Memory banks: 15, Other DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 5c:f3:fc:4c:d6:fc
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 5c:f3:fc:4c:d6:fe
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:36:14:24
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:36:14:26
+NIC: Vendor: Intel Corporation, Model: 82571EB Gigabit Ethernet Controller, MAC Address: 00:15:17:bb:91:74
+NIC: Vendor: Intel Corporation, Model: 82571EB Gigabit Ethernet Controller, MAC Address: 00:15:17:bb:91:75
+NIC: Vendor: Intel Corporation, Model: 82571EB Gigabit Ethernet Controller, MAC Address: 00:15:17:d1:e4:be
+NIC: Vendor: Intel Corporation, Model: 82571EB Gigabit Ethernet Controller, MAC Address: 00:15:17:d1:e4:bf
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 5e:f3:fc:52:d6:ff
+DVD-RAM writer: DVDRAM GT30N
+Drive 1: Model: ESXSST9146803SS, Serial: B53E6SD1WFQD0716B53E, Size: 146.00 GB
+Drive 2: Model: ESXSST9146803SS, Serial: B53E6SD1WFVD0716B53E, Size: 146.00 GB
+Drive 3: Model: 42D0743, Serial: 42D0746IBM, Size: 499.00 GB
+Drive 4: Model: 42D0743, Serial: 42D0746IBM, Size: 499.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EV
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: FD314068-08FC-46A3-9228-C7C48CCE8C00
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 533270
+User3: Tuttnauer
+User4: 18860
+\"Product\": Server
+
+>> Raid device #1  Vendor: IBM Model: ESXSST9146803SS
+             Serial: B53E6SD1WFQD0716B53E Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSST9146803SS
+             Serial: B53E6SD1WFQD0716B53E Size: 136.731 GB  [ 64:0 ]
+
+UUID: 6D592B04-8CE5-4B91-9951-17F0F49E6016
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 14 Nov 2019 at 17:17:06
+Date & time operation was completed: Thursday, 14 Nov 2019 at 18:12:01
+Total elapsed time (HH:MM:SS): 00:54:55
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: IBM Model: ESXSST9146803SS
+             Serial: B53E6SD1WFVD0716B53E Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSST9146803SS
+             Serial: B53E6SD1WFVD0716B53E Size: 136.731 GB  [ 64:1 ]
+
+UUID: FB736103-EFF4-4934-8C16-06E38A34B05E
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 14 Nov 2019 at 17:17:06
+Date & time operation was completed: Thursday, 14 Nov 2019 at 18:11:02
+Total elapsed time (HH:MM:SS): 00:53:56
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: 9SP11KPEST9500530NS Model: 42D0743
+             Serial: 42D0746IBM Size: 499.00 GB
+    >>> Raid member #1  Vendor: 9SP11KPEST9500530NS Model: 42D0743
+             Serial: 42D0746IBM Size: 465.761 GB  [ 64:2 ]
+
+UUID: 26E86B95-35D8-4560-B100-EED4211D62AC
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 14 Nov 2019 at 17:17:06
+Date & time operation was completed: Thursday, 14 Nov 2019 at 19:52:47
+Total elapsed time (HH:MM:SS): 02:35:41
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: 9SP1B73KST9500530NS Model: 42D0743
+             Serial: 42D0746IBM Size: 499.00 GB
+    >>> Raid member #1  Vendor: 9SP1B73KST9500530NS Model: 42D0743
+             Serial: 42D0746IBM Size: 465.761 GB  [ 64:3 ]
+
+UUID: 8B2DC5EC-E97C-4AD8-8A25-C6CFF51D1F04
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 14 Nov 2019 at 17:17:06
+Date & time operation was completed: Thursday, 14 Nov 2019 at 19:52:47
+Total elapsed time (HH:MM:SS): 02:35:41
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

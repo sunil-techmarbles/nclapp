@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7470
+Computer Serial: DPLJQ72
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0T6HHJ
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 84:7b:eb:2c:44:a1
+Drive 1: Model: SK hynix SC300 M.2 2280 256GB, Serial: FJ62N517311102S0U, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B2BA7EE9-19AC-4A2F-920A-2D715A8B8005
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 546937
+User3: PRA Health Sciences
+User4: 18743
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: SK hynix SC300 M.2 2280 256GB
+             Serial: FJ62N517311102S0U Size: 256.06 GB
+
+UUID: 886BB8B1-1829-4F23-B61C-4205D8C53D58
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 09 Dec 2019 at 11:11:15
+Date & time operation was completed: Monday, 09 Dec 2019 at 11:44:03
+Total elapsed time (HH:MM:SS): 00:32:48
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

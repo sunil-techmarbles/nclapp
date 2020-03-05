@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 423662U
+Computer Serial: PBLAKP3
+Motherboard Vendor: LENOVO
+Motherboard Model: 423662U
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 00:21:cc:c0:0c:df
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 8c:70:5a:29:0d:ec
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD-RAM writer: DVD RW AD-7740H
+Drive 1: Model: WDC WD3200BEKT-08PVMT1, Serial: WD-WXD1C1234848, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 17B4EFEB-1A88-455E-BDF7-0E479163DF39
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524959
+Lot Name: 17533
+Lot Number: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD3200BEKT-08PVMT1
+             Serial: WD-WXD1C1234848 Size: 320.07 GB
+
+UUID: 0BC848D3-574A-4036-A192-71BB832ADE64
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Wednesday, 30 Oct 2019 at 15:24:01
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 16:18:53
+Total elapsed time (HH:MM:SS): 00:54:52
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

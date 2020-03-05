@@ -1,0 +1,91 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: IBM System x3550 M4: -[7914AC1]-
+Computer Serial: E2CF907
+Motherboard Vendor: IBM
+Motherboard Model: 00AM544
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 65536 MB, Memory banks: 8, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:21:a0:52
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:21:a0:53
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:21:a0:54
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:21:a0:55
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 9a:be:94:21:a0:51
+DVD reader: DEVICE 81Y3682
+Drive 1: Model: ESXSST9146853SS, Serial: B63K6XM4D82A0513B643, Size: 146.00 GB
+Drive 2: Model: ESXSST9146853SS, Serial: B63K6XM4D7C20513B643, Size: 146.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 07DFBC3B-670F-4A50-A62E-CF3BBD3BE618
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 564683
+User3: Northwell Health
+User4: 18978
+\"Product\": Server
+
+>> Raid device #1  Vendor: IBM Model: ESXSST9146853SS
+             Serial: B63K6XM4D82A0513B643 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSST9146853SS
+             Serial: B63K6XM4D82A0513B643 Size: 136.731 GB  [ 252:0 ]
+
+UUID: 48B7D632-D1F6-4FE9-9514-0B2C95932FC2
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 13:42:27
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 14:39:34
+Total elapsed time (HH:MM:SS): 00:57:07
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: IBM Model: ESXSST9146853SS
+             Serial: B63K6XM4D7C20513B643 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSST9146853SS
+             Serial: B63K6XM4D7C20513B643 Size: 136.731 GB  [ 252:1 ]
+
+UUID: 3FA74271-2E5C-4B31-A6C9-99A58D704B53
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 13:42:27
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 14:38:34
+Total elapsed time (HH:MM:SS): 00:56:07
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

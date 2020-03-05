@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10A8S14J00
+Computer Serial: MJ01ZT17
+Motherboard Vendor: LENOVO
+Motherboard Model: SHARKBAY
+Processor: Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 6c:0b:84:04:16:36
+DVD-RAM writer: DVD-RAM SW840
+Drive 1: Model: INTEL SSDSC2BW180A3L, Serial: CVCV425007MN180EGN, Size: 180.05 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 7B591760-AEAF-4071-9553-EBBAC6B8EA0C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 558931
+User3: Goodwin Procter LLP
+User4: 17637
+\"Product\": Computer
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSC2BW180A3L
+             Serial: CVCV425007MN180EGN Size: 180.05 GB
+
+UUID: 152D2FA8-D9CE-4D71-A0BC-3584A2EC5D97
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 20 Dec 2019 at 07:51:11
+Date & time operation was completed: Friday, 20 Dec 2019 at 07:59:52
+Total elapsed time (HH:MM:SS): 00:08:41
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

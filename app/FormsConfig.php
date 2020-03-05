@@ -56,12 +56,15 @@ class FormsConfig extends Model
 
     public static function getConfigValueByTab($tab, $group)
     {
-    	return self::where(['tab' => $tab, 'grp' => $group])->get();
+    	return self::where(['tab' => $tab, 'grp' => $group])
+    	->get();
     }
 
-    public static function GetTab( $tabname )
+    public static function getTab( $tabname, $isActive )
     {
-    	return self::where(['tab' => $tabname, 'is_active' => 'yes'])->get(); 
+    	return self::where(['tab' => $tabname, 'is_active' => $isActive])
+    		->orderBy('tab_order')
+    		->get(); 
 	} 
 
 }

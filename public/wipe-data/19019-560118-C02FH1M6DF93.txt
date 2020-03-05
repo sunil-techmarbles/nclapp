@@ -1,0 +1,66 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro8,3
+Computer Serial: C02FH1M6DF93
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-942459F5819B171B
+Processor: Intel(R) Core(TM) i7-2720QM CPU @ 2.20GHz, Speed: 2200 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: c8:2a:14:25:aa:cc
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4331 802.11a/b/g/n, MAC Address: e0:f8:47:33:fd:9a
+DVD writer: DVD-R UJ-898
+Drive 1: Model: SAMSUNG SSD 830 Series, Serial: S0Z3NEAC829219, Size: 128.04 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Whistler [Radeon HD 6630M/6650M/6750M/7670M/7690M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Turks HDMI Audio [Radeon HD 6500/6600 / 6700M Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: CF064EBA-9896-4882-801C-FAE52F3FED20
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 560118
+Lot Name: Control V Symphony
+Lot Number: 19019
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD 830 Series
+             Serial: S0Z3NEAC829219 Size: 128.04 GB
+
+UUID: 0E986E31-005F-4D19-86D9-9EFE7F3C7613
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Monday, 01 Jan 2001 at 05:26:21
+Action End Time: Monday, 01 Jan 2001 at 05:34:38
+Action Duration: 00:08:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

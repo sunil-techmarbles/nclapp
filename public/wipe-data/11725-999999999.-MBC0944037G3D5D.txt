@@ -1,0 +1,355 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3D5D
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:54
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:55
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:56
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:56:c2:57
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:2f:f4
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:2f:f5
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:56:46
+DVD reader: Device-CD#0
+Drive 1: Model: Samsung SSD 840 EVO 120GB, Serial: S1D5NSAFB92528W, Size: 120.03 GB
+Drive 2: Model: SK hynix SH920 2.5 7MM 128GB, Serial: EIE8M003010708C6F, Size: 128.04 GB
+Drive 3: Model: Samsung SSD 850 EVO 120GB, Serial: S21TNSAG434049L, Size: 120.03 GB
+Drive 4: Model: Samsung SSD 850 PRO 512GB, Serial: S39FNX0J621239A, Size: 512.11 GB
+Drive 5: Model: INTEL SSDSA2BW160G3L, Serial: PEPR151500HH160DGN, Size: 160.04 GB
+Drive 6: Model: INTEL SSDSC2BW180A3L, Serial: CVCV425103FN180EGN, Size: 180.05 GB
+Drive 7: Model: SAMSUNG MZ7PD256HAFV-000H7, Serial: S16PNSAF201244, Size: 256.06 GB
+Drive 8: Model: SAMSUNG MZ7PD128HAFV-000H7, Serial: S16NNSAF604053, Size: 128.04 GB
+Drive 9: Model: INTEL SSDSA2BW160G3L, Serial: PEPR151500FS160DGN, Size: 160.04 GB
+Drive 10: Model: SAMSUNG SSD PM851 2.5 7mm 128GB, Serial: S1CTNYAFC48055, Size: 128.04 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: F55F6D05-FA0C-4C51-9F12-C8BB24D4B5AE
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 999999999.
+Lot Name: Itamg
+Lot Number: 11725
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 840 EVO 120GB
+             Serial: S1D5NSAFB92528W Size: 120.03 GB
+
+UUID: 56FFEBC8-96FE-44C3-953A-622375989273
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 234441648
+Sectors Not Overwritten: 0
+Sectors Verified: 23444165
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:33:19
+Action Duration: 00:21:20
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: SK hynix Model: SK hynix SH920 2.5 7MM 128GB
+             Serial: EIE8M003010708C6F Size: 128.04 GB
+
+UUID: 69D31EA3-E6E0-4C76-93E2-3432F3F1AF78
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:37:10
+Action Duration: 00:25:11
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: Samsung Model: Samsung SSD 850 EVO 120GB
+             Serial: S21TNSAG434049L Size: 120.03 GB
+
+UUID: 7CB7C58A-1025-4835-AFFF-D00F8B19A284
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 234441648
+Sectors Not Overwritten: 0
+Sectors Verified: 23444165
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:32:37
+Action Duration: 00:20:38
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: Samsung Model: Samsung SSD 850 PRO 512GB
+             Serial: S39FNX0J621239A Size: 512.11 GB
+
+UUID: D1BA9B6A-0D84-4BE0-95C6-80B1FCF2E72F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 1000215216
+Sectors Not Overwritten: 0
+Sectors Verified: 100021522
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:47:06
+Action Duration: 00:35:07
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: PEPR151500HH160DGN Size: 160.04 GB
+
+UUID: CEED5373-700D-4D1F-9263-81360BDF7B9E
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 312581808
+Sectors Not Overwritten: 0
+Sectors Verified: 31258181
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:14:46
+Action Duration: 00:02:47
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: Intel Model: INTEL SSDSC2BW180A3L
+             Serial: CVCV425103FN180EGN Size: 180.05 GB
+
+UUID: DBAFC023-BDD4-4033-A96E-0D4798FBA040
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 351651888
+Sectors Not Overwritten: 0
+Sectors Verified: 35165189
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:16:16
+Action Duration: 00:04:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: Samsung Model: SAMSUNG MZ7PD256HAFV-000H7
+             Serial: S16PNSAF201244 Size: 256.06 GB
+
+UUID: 3004255E-935C-448F-A83F-062B925E2C57
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:15:58
+Action Duration: 00:03:59
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: Samsung Model: SAMSUNG MZ7PD128HAFV-000H7
+             Serial: S16NNSAF604053 Size: 128.04 GB
+
+UUID: A1539CDF-5B6C-4B32-A637-0B5C06C88BA4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:13:30
+Action Duration: 00:01:31
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #9  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: PEPR151500FS160DGN Size: 160.04 GB
+
+UUID: 3BF19EA3-9E08-4647-B409-8B95BACE6934
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 312581808
+Sectors Not Overwritten: 0
+Sectors Verified: 31258181
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:14:48
+Action Duration: 00:02:49
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: Samsung Model: SAMSUNG SSD PM851 2.5 7mm 128GB
+             Serial: S1CTNYAFC48055 Size: 128.04 GB
+
+UUID: 1F9119F1-6198-4F38-95D6-511039F902CE
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Wednesday, 04 Dec 2019 at 00:11:59
+Action End Time: Wednesday, 04 Dec 2019 at 00:13:59
+Action Duration: 00:02:00
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

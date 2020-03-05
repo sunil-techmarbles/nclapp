@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro6,2
+Computer Serial: W80410LSAGZ
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F22586C8
+Processor: Intel(R) Core(TM) i7 CPU       M 620  @ 2.67GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: c8:bc:c8:96:d1:bc
+NIC: Vendor: Broadcom Limited, Model: BCM43224 802.11a/b/g/n, MAC Address: Unavailable
+DVD writer: DVD-R UJ-898
+Drive 1: Model: Hitachi HTS725050A9A362, Serial: 100920PCG420VLKH7LSC, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GT216M [GeForce GT 330M]
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GT216 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 10
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 64EDC06E-D723-4C59-A1E1-6D3727FFF3B2
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 525093
+User3: Ogilvy CommonHealth Worldwide LLC
+User4: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HTS725050A9A362
+             Serial: 100920PCG420VLKH7LSC Size: 500.11 GB
+
+UUID: 6BB50DAC-2FF2-4D70-A164-9DB8794FF6B3
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 01 Jan 2001 at 00:18:49
+Date & time operation was completed: Monday, 01 Jan 2001 at 02:15:53
+Total elapsed time (HH:MM:SS): 01:57:04
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

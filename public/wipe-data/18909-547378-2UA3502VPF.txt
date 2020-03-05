@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteDesk 800 G1 SFF
+Computer Serial: 2UA3502VPF
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 1998
+Processor: Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 2c:44:fd:32:e8:e8
+DVD reader: DVD-ROM DT80N
+Drive 1: Model: MTFDDAK256MAM-1K12, Serial: 134409572596, Size: 256.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119 [NVS 310]
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: B6FEEF14-CED8-481A-8208-06C21D0BAC87
+Current user: ITAMG
+Computer ID: 2UA3502VPF
+Custom Field: 
+Username: Randy Prashad
+User2: 547378
+User3: Sotheby’s
+User4: 18909
+\"Product\": Computer
+
+>> Drive #1  Vendor: Micron Model: MTFDDAK256MAM-1K12
+             Serial: 134409572596 Size: 256.06 GB
+
+UUID: CF16E3C1-68D8-411D-912B-0E03A5E484C0
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 05 Dec 2019 at 09:30:48
+Date & time operation was completed: Thursday, 05 Dec 2019 at 14:25:47
+Total elapsed time (HH:MM:SS): 04:54:59
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6330
+Computer Serial: 25XJSY1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0F7WM9
+Processor: Intel(R) Core(TM) i5-3340M CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:1f:af:46:ee:88
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW GU70N
+Drive 1: Model: TOSHIBA MQ01ACF032, Serial: 83BYCF47T, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: B37C9E27-1559-44A1-B226-74CBC49B2AC2
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 547081
+User3: PRA Health Sciences
+User4: 18832
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MQ01ACF032
+             Serial: 83BYCF47T Size: 320.07 GB
+
+UUID: 2335773B-DB18-4A77-B5F1-8E3A905B69F0
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 12 Dec 2019 at 08:31:28
+Date & time operation was completed: Thursday, 12 Dec 2019 at 12:00:40
+Total elapsed time (HH:MM:SS): 03:29:12
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

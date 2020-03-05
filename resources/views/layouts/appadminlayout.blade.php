@@ -8,6 +8,7 @@
 			{{ config('app.name') }} - @yield('title')
 		</title>
 		<link href="{{URL('assets/css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+		<link href="{{URL('assets/css/bootstrap/bootstrap-combobox.min.css')}}" rel="stylesheet">
 		<link href="{{URL('assets/css/bootstrap/font-awesome.min.css')}}" rel="stylesheet">
 		<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
 		<link href="{{URL('assets/css/dataTables/jquery.dataTables.min.css')}}" rel="stylesheet">
@@ -26,17 +27,19 @@
 				@include('admin.message')
 				@yield('content')
 			</div>
-			@include('layouts.adminfooter') 
+			@include('layouts.adminfooter')
 		</div> 
 	</body>     
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap-combobox.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" ></script> 
 	<script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script> 
 	<script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>  
 	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/audit.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script> 
 	
 </html>  

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro11,2
+Computer Serial: C02NN10KG3QN
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-3CBD00234E554E41
+Processor: Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz, Speed: 3600 MHz, Cores: 4, L1 Cache: 6144 KB, L2 Cache: Unavailable
+Processor: Intel(R) Core(TM) i7-4870HQ CPU @ 2.50GHz, Speed: 3500 MHz, Cores: 4, L1 Cache: 6144 KB, L2 Cache: Unavailable
+RAM: 16GiB, Memory banks: 2, SODIMM DDR3 Synchronous 1600 MHz (0.6 ns)
+NIC: Vendor: Broadcom Limited, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:56:3b
+Drive 1: Model: APPLE SSD SM0512F, Serial: S1K5NYAFA44704, Size: 500.28 GB
+Display Adapter: Vendor: Intel Corporation, Model: Crystal Well Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Crystal Well HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+Multimedia Adapter: Vendor: Broadcom Limited, Model: 720p FaceTime HD Camera
+USB Ports: 11
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: E5B6E913-3A7C-4170-B4CF-A8C335F2A9DB
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525081
+Lot Name: Ogilvy Common Health Worldwide
+Lot Number: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0512F
+             Serial: S1K5NYAFA44704 Size: 500.28 GB
+
+UUID: A31E520A-5540-49BF-B2A6-FFA9A0CF8101
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+Date & time operation was started: Thursday, 31 Oct 2019 at 19:16:18
+Date & time operation was completed: Thursday, 31 Oct 2019 at 20:27:52
+Total elapsed time (HH:MM:SS): 01:11:34
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

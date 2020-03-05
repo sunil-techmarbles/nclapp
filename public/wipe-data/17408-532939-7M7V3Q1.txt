@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6410
+Computer Serial: 7M7V3Q1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0667CC
+Processor: Intel(R) Core(TM) i5 CPU       M 580  @ 2.67GH, Speed: 2700 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LM Gigabit Network Connection, MAC Address: 5c:26:0a:45:3b:c9
+NIC: Vendor: Broadcom Limited, Model: BCM4313 802.11bgn Wireless Network Adapter, MAC Address: 68:a3:c4:3f:b3:10
+DVD-RAM writer: DVD+-RW AD-7930H
+Drive 1: Model: ST9500420AS, Serial: 5VJASK7Q, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 7BC0B5C3-4037-4A12-A94C-9333E9D9EE3B
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 532939
+Lot Name: Conde Nast
+Lot Number: 17408
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9500420AS
+             Serial: 5VJASK7Q Size: 500.11 GB
+
+UUID: 59D0C403-0D9D-4816-8BCF-69CC4905AD97
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 15 Feb 2011 at 12:47:33
+Date & time operation was completed: Tuesday, 15 Feb 2011 at 14:56:54
+Total elapsed time (HH:MM:SS): 02:09:21
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
