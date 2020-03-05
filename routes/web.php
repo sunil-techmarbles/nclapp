@@ -82,6 +82,10 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');  
 
+		//In bound
+		// Route::get('/packages','PackagesController@index')->name('packages');
+		
+		//Out bound
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 

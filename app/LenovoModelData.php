@@ -10,25 +10,20 @@ use Carbon\Carbon;
 class LenovoModelData extends Model
 {
 	
-	use SoftDeletes;
-	protected $dates = ['deleted_at'];
+	  use SoftDeletes;
+	  protected $dates = ['deleted_at'];
 
-	protected $fillable = [
+	  protected $fillable = [
 	    'model',
 	    'part_number',
-	    'created_at',
     ];
-    
 
    	public static function InsertNewPartNumber($modal, $partNumber)
    	{
-   		$result = false; 
+   		  $result = false; 
         $LenovoModelData = new LenovoModelData();
-        
         $LenovoModelData->model = $modal;   
         $LenovoModelData->part_number = $partNumber;
-        $LenovoModelData->created_at = Carbon::now();
-        
         if($LenovoModelData->save())
         {
             $result = $LenovoModelData->id;
@@ -36,7 +31,16 @@ class LenovoModelData extends Model
         return $result; 
    	}
 
-
+    public static function CheckIfPartNumberExists($partNumber)
+    {
+      $ifExist = false;
+      $exits = self::where([ 'part_number' => $partNumber ])->first(); 
+      if( $exits )
+      {  
+         $ifExist = true;
+      }     
+      return $ifExist;  
+    }
 
 
 }
