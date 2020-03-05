@@ -3662,5 +3662,16 @@ return [
         // "taylor@refurbconnect.com",
         // "richard@itamg.com",
         // "julio@itamg.com",
-    ]
+    ],
+    'sessionEmails' => [
+        "rahuls.techmarbles@gmail.com",
+        // "randy@itamg.com",
+        // "richy@itamg.com",
+        // "support@refurbconnect.com",
+        // "diego@refurbconnect.com",
+        // "taylor@refurbconnect.com",
+        // "richard@itamg.com",
+        // "julio@itamg.com",
+    ],
+
 ];
