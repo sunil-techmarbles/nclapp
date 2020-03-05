@@ -31,7 +31,7 @@ class AuditController extends Controller
  
     public function index(Request $request)
     { 
-    	$forms_data = FormsConfig::GetTab('Notes');    
+    	$forms_data = FormsConfig::GetTab($tab = 'Notes');    
     	$output = "";
     	$cgrp = "X"; 
 
