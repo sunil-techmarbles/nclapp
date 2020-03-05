@@ -1,0 +1,132 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R510
+Computer Serial: D3SM4M1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0W844P
+Processor: Intel(R) Xeon(R) CPU           E5530  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5530  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 8, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5716 Gigabit Ethernet, MAC Address: a4:ba:db:15:40:fd
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5716 Gigabit Ethernet, MAC Address: a4:ba:db:15:40:fe
+DVD reader: DVD-ROM DV-28SW
+Drive 1: Model: ST3250310NS, Serial: 9SF1WMXD, Size: 249.38 GB
+Drive 2: Model: PERC H700, Serial: 00bb452d05d0ea5e2500c3e408b0ad4b, Size: 249.38 GB
+Drive 3: Model: PERC H700, Serial: 006d19a205d8ea5e2500c3e408b0ad4b, Size: 249.38 GB
+Drive 4: Model: PERC H700, Serial: 00adbbc104c9ea5e2500c3e408b0ad4b, Size: 249.51 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 016FD0F0-5FDD-433B-BB70-173E6DF38607
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 534701
+User3: PRA Health Sciences
+User4: 17536
+\"Product\": Server
+
+>> Raid device #1  Vendor: Seagate Model: ST3250310NS
+             Serial: 9SF1WMXD Size: 249.38 GB
+    >>> Raid member #1  Vendor: ATA Model: ST3250310NS
+             Serial: 9SF1WMXD Size: 232.25 GB  [ 32:1 ]
+
+UUID: 874AE013-FA29-4C7A-843C-CC57869561E0
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:31:15
+Date & time operation was completed: Wednesday, 13 Nov 2019 at 16:55:44
+Total elapsed time (HH:MM:SS): 00:24:29
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #2  Vendor: DELL Model: PERC H700
+             Serial: 00bb452d05d0ea5e2500c3e408b0ad4b Size: 249.38 GB
+
+UUID: DF8B82AB-5854-47FF-95D0-79D5779F307F
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:31:15
+Date & time operation was completed: Wednesday, 13 Nov 2019 at 19:49:34
+Total elapsed time (HH:MM:SS): 03:18:19
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: DELL Model: PERC H700
+             Serial: 006d19a205d8ea5e2500c3e408b0ad4b Size: 249.38 GB
+
+UUID: F1AC28E7-B5C4-4D56-831A-7214F6DF2240
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:31:15
+Date & time operation was completed: Wednesday, 13 Nov 2019 at 20:14:45
+Total elapsed time (HH:MM:SS): 03:43:30
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 155
+Total dirty or unreadable disk sectors: 7337
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #4  Vendor: DELL Model: PERC H700
+             Serial: 00adbbc104c9ea5e2500c3e408b0ad4b Size: 249.51 GB
+
+UUID: DDE4CC46-3B92-434A-8F45-A120652BED66
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:31:15
+Date & time operation was completed: Wednesday, 13 Nov 2019 at 19:47:14
+Total elapsed time (HH:MM:SS): 03:15:59
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

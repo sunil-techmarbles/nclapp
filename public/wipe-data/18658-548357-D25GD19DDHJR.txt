@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac12,1
+Computer Serial: D25GD19DDHJR
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-942B5BF58194151B
+Processor: Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: c8:2a:14:49:11:42
+NIC: Vendor: Qualcomm Atheros, Model: AR93xx Wireless Network Adapter, MAC Address: Unavailable
+DVD writer: DVD RW AD-5690H
+Drive 1: Model: WDC WD5000AAKS-402AA0, Serial: WD-WCAWFD806124, Size: 500.11 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Whistler [Radeon HD 6630M/6650M/6750M/7670M/7690M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Turks HDMI Audio [Radeon HD 6500/6600 / 6700M Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 12
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: A6FEDEA8-49C1-4B33-B355-AFACCD4FF723
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548357
+User3: Irvington UFSD
+User4: 18658
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKS-402AA0
+             Serial: WD-WCAWFD806124 Size: 500.11 GB
+
+UUID: 5D2A58B5-2E16-42C0-AFD6-C8273B91B4E5
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 08 Jan 2020 at 13:14:00
+Date & time operation was completed: Wednesday, 08 Jan 2020 at 14:53:26
+Total elapsed time (HH:MM:SS): 01:39:26
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

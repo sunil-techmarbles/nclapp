@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 390
+Computer Serial: 8RZQWR1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0M5DCD
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.10GH, Speed: 3100 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: d0:67:e5:04:ce:02
+DVD writer: DVD+-RW TS-H653B
+Drive 1: Model: ST3250312AS, Serial: 5VY727P5, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: F3651054-678A-4B9C-8F77-C8BEFB3C3DDE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 554267
+User3: Arkwin Industries, Inc.
+User4: 18724
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3250312AS
+             Serial: 5VY727P5 Size: 250.06 GB
+
+UUID: 5122372F-CE8A-4DC6-8B54-54AF816E8396
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 17 Dec 2019 at 16:12:47
+Date & time operation was completed: Tuesday, 17 Dec 2019 at 17:07:17
+Total elapsed time (HH:MM:SS): 00:54:30
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

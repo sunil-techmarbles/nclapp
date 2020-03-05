@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq Pro 6300 SFF
+Computer Serial: 2UA3491KBG
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 339A
+Processor: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 2c:44:fd:25:e2:c8
+DVD-RAM writer: DVD-RAM SW830
+Drive 1: Model: WDC WD2500AAKX-60U6AA0, Serial: WD-WCC2ETM50673, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 4D7F5F61-E16D-4059-A295-100E8FEDA55C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578787
+User3: Avis Budget Group
+User4: 19134
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-60U6AA0
+             Serial: WD-WCC2ETM50673 Size: 250.06 GB
+
+UUID: 208C69FC-564F-488B-AAA0-E036FD537E9C
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Friday, 31 Jan 2020 at 12:39:50
+Date & time operation was completed: Friday, 31 Jan 2020 at 13:25:22
+Total elapsed time (HH:MM:SS): 00:45:32
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

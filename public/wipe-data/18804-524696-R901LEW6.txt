@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20A8S03N00
+Computer Serial: R901LEW6
+Motherboard Vendor: LENOVO
+Motherboard Model: 20A8S03N00
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 54:ee:75:85:3c:f0
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: e8:2a:ea:15:74:f8
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: f2:76:89:b2:6e:7a
+Drive 1: Model: LITEONIT LGT-256M6G, Serial: S45N7160Z1ZSX8018112, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 37C76E75-3B9A-4C15-A0A9-425C0BA6089B
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524696
+Lot Name: BAIN & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: LITEONIT LGT-256M6G
+             Serial: S45N7160Z1ZSX8018112 Size: 256.06 GB
+
+UUID: 4D4DBC7E-4A2D-4197-B004-196A5CF5A196
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 2
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 04 Nov 2019 at 15:45:10
+Date & time operation was completed: Monday, 04 Nov 2019 at 16:05:44
+Total elapsed time (HH:MM:SS): 00:20:34
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

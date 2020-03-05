@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac16,2
+Computer Serial: D25QP08EGG7F
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-FFE5EF870D7BA81A
+Processor: Intel(R) Core(TM) i5-5675R CPU @ 3.10GHz, Speed: 3500 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 38:c9:86:1f:73:22
+Drive 1: Model: APPLE SSD SM0512G, Serial: S29ANYCG708971, Size: 500.28 GB
+Display Adapter: Vendor: Intel Corporation, Model: Iris Pro Graphics 6200
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 9 Series Chipset Family HD Audio Controller
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 284944A2-627F-443A-AFCC-CDA729E14080
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 566117
+User3: Global Brands Group
+User4: 18690
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0512G
+             Serial: S29ANYCG708971 Size: 500.28 GB
+
+UUID: FB845463-4CBC-4127-A672-B6C43E7F316D
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 07 Jan 2020 at 16:53:05
+Date & time operation was completed: Tuesday, 07 Jan 2020 at 16:54:05
+Total elapsed time (HH:MM:SS): 00:01:00
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 820 G3
+Computer Serial: 5CG6423JL1
+Motherboard Vendor: HP
+Motherboard Model: 807C
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2800 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: b8:8a:60:8c:f5:0f
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: c8:d3:ff:6a:39:d8
+Drive 1: Model: INTEL SSDSCKJF240A5H REF, Serial: CVTQ632400TC240B, Size: 240.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 1DD415F7-3C34-46F3-B620-3D0862001709
+Current user: ITAMG
+Computer ID: 5CG6423JL1
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 550323
+Lot Name: World Wrestling Entertainment
+Lot Number: 17561
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSCKJF240A5H REF
+             Serial: CVTQ632400TC240B Size: 240.06 GB
+
+UUID: C6DE7647-8F09-4516-999E-BA0266ED3BE3
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 468862128
+Sectors Not Overwritten: 0
+Sectors Verified: 46886213
+Action Start Time: Tuesday, 04 Feb 2020 at 09:32:33
+Action End Time: Tuesday, 04 Feb 2020 at 09:37:43
+Action Duration: 00:05:10
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

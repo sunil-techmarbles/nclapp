@@ -1,0 +1,85 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: Not Specified
+Computer Serial: XxXxXxX
+Motherboard Vendor: IBM
+Motherboard Model: 49Y6512
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 131072 MB, Memory banks: 16, Other DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:2c:10:28
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:2c:10:2a
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: e6:1f:13:25:60:2b
+DVD reader: UJDA782 DVD/CDRW
+Drive 1: Model: ST973452SS, Serial: 3TA0K2YV00009012ME6P, Size: 73.41 GB
+Drive 2: Model: ST973452SS, Serial: 3TA0A3TQ00009012RMBZ, Size: 73.41 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EV
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: E6DFCC6E-43F1-405F-B264-B453D4286C16
+Current user: ITAMG
+Computer ID: none
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 571397
+Lot Name: Northwell Health
+Lot Number: 18978
+\"Product\": Server
+
+>> Drive #1  Vendor: IBM-ESXS Model: ST973452SS
+             Serial: 3TA0K2YV00009012ME6P Size: 73.41 GB
+
+UUID: AB53B2E8-D6F3-4923-BDB0-5EEFFAB6C2A0
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 143374000
+Sectors Not Overwritten: 0
+Sectors Verified: 500736
+Action Start Time: Wednesday, 29 Jan 2020 at 16:07:57
+Action End Time: Wednesday, 29 Jan 2020 at 16:36:46
+Action Duration: 00:28:49
+
+Action Result: FAILURE
+
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #2  Vendor: IBM-ESXS Model: ST973452SS
+             Serial: 3TA0A3TQ00009012RMBZ Size: 73.41 GB
+
+UUID: 2B204BAA-970C-426A-9670-182C6FACB553
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 1
+Sectors Overwritten: 0
+Sectors Not Overwritten: 143374744
+Sectors Verified: 0
+Action Start Time: Wednesday, 29 Jan 2020 at 16:12:00
+Action End Time: Wednesday, 29 Jan 2020 at 16:17:54
+Action Duration: 00:05:54
+
+Action Result: FAILURE
+
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

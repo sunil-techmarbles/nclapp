@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20F5S2FL00
+Computer Serial: PC0CA9FR
+Motherboard Vendor: LENOVO
+Motherboard Model: 20F5S2FL00
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: 44:85:00:65:cd:59
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 50:7b:9d:bb:fe:67
+Drive 1: Model: Samsung SSD 850 PRO 512GB, Serial: S39FNX0J550993F, Size: 512.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: EAEA1AFF-1A27-4461-8EFC-361D9149E4C8
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 522634
+Lot Name: 1899
+Lot Number: 18799
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 PRO 512GB
+             Serial: S39FNX0J550993F Size: 512.11 GB
+
+UUID: BB832A3C-33E5-482B-B47C-98834C1C092B
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1000215216
+Sectors Not Overwritten: 0
+Sectors Verified: 100021522
+Action Start Time: Wednesday, 15 Jan 2020 at 14:56:30
+Action End Time: Wednesday, 15 Jan 2020 at 15:00:58
+Action Duration: 00:04:28
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

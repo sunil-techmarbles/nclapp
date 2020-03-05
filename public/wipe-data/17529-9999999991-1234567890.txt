@@ -1,0 +1,798 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: MBD-X8DT6-A-IS018
+Computer Serial: 1234567890
+Motherboard Vendor: Supermicro
+Motherboard Model: X8DT6
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 40960 MB, Memory banks: 5, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:8e
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:8f
+Drive 1: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070205085, Size: 3000.59 GB
+Drive 2: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070205449, Size: 3000.59 GB
+Drive 3: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070205676, Size: 3000.59 GB
+Drive 4: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070220205, Size: 3000.59 GB
+Drive 5: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070194948, Size: 3000.59 GB
+Drive 6: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070222029, Size: 3000.59 GB
+Drive 7: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070192514, Size: 3000.59 GB
+Drive 8: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070190461, Size: 3000.59 GB
+Drive 9: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070239973, Size: 3000.59 GB
+Drive 10: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070218480, Size: 3000.59 GB
+Drive 11: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070205399, Size: 3000.59 GB
+Drive 12: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070215970, Size: 3000.59 GB
+Drive 13: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070209755, Size: 3000.59 GB
+Drive 14: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070220227, Size: 3000.59 GB
+Drive 15: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070239067, Size: 3000.59 GB
+Drive 16: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070239132, Size: 3000.59 GB
+Drive 17: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070236811, Size: 3000.59 GB
+Drive 18: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070205249, Size: 3000.59 GB
+Drive 19: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070190025, Size: 3000.59 GB
+Drive 20: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070209811, Size: 3000.59 GB
+Drive 21: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070215766, Size: 3000.59 GB
+Drive 22: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070224261, Size: 3000.59 GB
+Drive 23: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070239187, Size: 3000.59 GB
+Drive 24: Model: WDC WD30EZRX-00AZ6B0, Serial: WD-WCC070215212, Size: 3000.59 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 848AAB9C-957D-4CFA-BD30-6DC7414F6692
+Current user: ITAMG
+Computer ID: To Be Filled By O.E.M.
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999991
+Lot Name: PRA Health Science
+Lot Number: 17529
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070205085 Size: 3000.59 GB
+
+UUID: 6947E3A7-568C-410D-A147-B0CE1BFA4E1F
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:30:17
+Action Duration: 33:22:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070205449 Size: 3000.59 GB
+
+UUID: D37DDBE1-4B4C-473F-B04E-BA0E19688643
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 01:18:56
+Action Duration: 34:11:24
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070205676 Size: 3000.59 GB
+
+UUID: 829A798B-72EA-4E4F-957B-22E24A510D38
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Saturday, 07 Dec 2019 at 23:57:50
+Action Duration: 32:50:18
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070220205 Size: 3000.59 GB
+
+UUID: 3747EB8E-20FE-4CF5-9978-C0190AEAC8D9
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:35:37
+Action Duration: 33:28:04
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070194948 Size: 3000.59 GB
+
+UUID: 18F6AD07-89D6-42C7-BD50-DAE4B5519D25
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:30:26
+Action Duration: 33:22:53
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070222029 Size: 3000.59 GB
+
+UUID: 474730CA-55F3-460D-BF27-5E758D826D8E
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:45:23
+Action Duration: 33:37:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070192514 Size: 3000.59 GB
+
+UUID: 0716099E-52AC-4348-B0EA-928474AD1169
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 00:03:09
+Action Duration: 32:55:37
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070190461 Size: 3000.59 GB
+
+UUID: F3041230-2B5F-4D80-A7D8-A88CA4239BFC
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 01:15:46
+Action Duration: 34:08:13
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #9  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070239973 Size: 3000.59 GB
+
+UUID: 89D6C44B-BFEA-4CDE-BAFC-2B2E9C786FE3
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:44:17
+Action Duration: 33:36:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070218480 Size: 3000.59 GB
+
+UUID: 80016883-171B-4D8E-91AE-EDFDE3E41391
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:08:00
+Action Duration: 33:00:27
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #11  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070205399 Size: 3000.59 GB
+
+UUID: 72B961AE-B24D-40D4-81B0-C9F60FCC48AF
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:03:48
+Action Duration: 32:56:15
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #11 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #12  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070215970 Size: 3000.59 GB
+
+UUID: 77A13C53-93CF-4903-B09C-A3E12D12418F
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 00:01:44
+Action Duration: 32:54:12
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #13  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070209755 Size: 3000.59 GB
+
+UUID: 7BD0E239-2AA5-4AC0-AA6F-5F29EE392AAC
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 00:28:13
+Action Duration: 33:20:41
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #13 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #14  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070220227 Size: 3000.59 GB
+
+UUID: 3F69188C-5837-4223-857A-C6346C953953
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Saturday, 07 Dec 2019 at 23:40:23
+Action Duration: 32:32:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #14 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #15  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070239067 Size: 3000.59 GB
+
+UUID: DBDC8BA3-7AA7-4C1D-AA67-170D5C43F792
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Saturday, 07 Dec 2019 at 23:37:13
+Action Duration: 32:29:40
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #15 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #16  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070239132 Size: 3000.59 GB
+
+UUID: A795277C-DD2A-498E-85F8-148C27AD8AB2
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 00:58:05
+Action Duration: 33:50:33
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #16 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #17  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070236811 Size: 3000.59 GB
+
+UUID: E1B22873-49F3-4D42-9906-3778AEEBB9BF
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 00:25:21
+Action Duration: 33:17:49
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #17 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #18  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070205249 Size: 3000.59 GB
+
+UUID: 4C713106-B3FE-4DFD-9EE2-26BB90F41EB9
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:45:57
+Action Duration: 33:38:24
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #18 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #19  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070190025 Size: 3000.59 GB
+
+UUID: E31B2097-834D-45E5-B2E6-178B369CC2AE
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 00:12:03
+Action Duration: 33:04:31
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #19 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #20  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070209811 Size: 3000.59 GB
+
+UUID: 3DAE4C3A-4662-44FD-8366-F3A104674223
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:19:04
+Action Duration: 33:11:31
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #20 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #21  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070215766 Size: 3000.59 GB
+
+UUID: D528ED4E-134B-4DA5-91A2-4EE100901D4A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:45:52
+Action Duration: 33:38:19
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #21 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #22  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070224261 Size: 3000.59 GB
+
+UUID: 4F7F5BB1-73C8-45D6-B1B7-ED9B66AE4CDE
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:32
+Action End Time: Sunday, 08 Dec 2019 at 01:23:29
+Action Duration: 34:15:57
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #22 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #23  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070239187 Size: 3000.59 GB
+
+UUID: A161871C-AF1D-4B2C-8E58-7E4BE4583E33
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 01:10:19
+Action Duration: 34:02:46
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #23 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #24  Vendor: Western Digital Model: WDC WD30EZRX-00AZ6B0
+             Serial: WD-WCC070215212 Size: 3000.59 GB
+
+UUID: E7E93F3E-22B1-405F-82B4-18CFFB0C86A6
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 5860533168
+Sectors Not Overwritten: 0
+Sectors Verified: 5860533168
+Action Start Time: Friday, 06 Dec 2019 at 15:07:33
+Action End Time: Sunday, 08 Dec 2019 at 00:48:13
+Action Duration: 33:40:40
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #24 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

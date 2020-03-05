@@ -1,0 +1,94 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3E55
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:38:98
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:38:99
+Drive 1: Model: ST6000DM004-2EH11C, Serial: ZA18K2YZ, Size: 6001.18 GB
+Drive 2: Model: ST6000DM004-2EH11C, Serial: ZA16T1DL, Size: 6001.18 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 494650F0-4514-43BB-A72F-B682F4717BE2
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 1868699990
+Lot Name: Blue Wolf Capital LLC
+Lot Number: 18686
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Seagate Model: ST6000DM004-2EH11C
+             Serial: ZA18K2YZ Size: 6001.18 GB
+
+UUID: 83A6CD32-8A4E-441F-8B15-74EE80F7FB96
+Action: Overwrite disk.
+Wipe Method: Single overwrite, Number of Passes: 1
+Sectors Overwritten: 11721045168
+Sectors Not Overwritten: 0
+Sectors Verified: 16
+Action Start Time: Saturday, 14 Dec 2019 at 02:25:14
+Action End Time: Saturday, 14 Dec 2019 at 16:00:08
+Action Duration: 13:34:54
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Overwrite Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Seagate Model: ST6000DM004-2EH11C
+             Serial: ZA16T1DL Size: 6001.18 GB
+
+UUID: B5F5DCA2-AEA2-4527-90CE-798A3E1BAB37
+Action: Overwrite disk.
+Wipe Method: Single overwrite, Number of Passes: 1
+Sectors Overwritten: 11721045168
+Sectors Not Overwritten: 0
+Sectors Verified: 16
+Action Start Time: Saturday, 14 Dec 2019 at 02:25:14
+Action End Time: Saturday, 14 Dec 2019 at 16:23:43
+Action Duration: 13:58:29
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Overwrite Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

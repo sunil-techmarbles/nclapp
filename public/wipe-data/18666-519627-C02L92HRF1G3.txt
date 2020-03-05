@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro9,1
+Computer Serial: C02L92HRF1G3
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-4B7AC7E43945597E
+Processor: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: 68:5b:35:88:ea:e7
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+DVD writer: DVD-R UJ-8A8
+Drive 1: Model: Samsung SSD 850 EVO 500GB, Serial: S21HNXAG806061P, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 650M Mac Edition]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 45E9E638-3936-457D-9991-4BB5A30A4058
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 519627
+Lot Name: Constituency Management Group
+Lot Number: 18666
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 EVO 500GB
+             Serial: S21HNXAG806061P Size: 500.11 GB
+
+UUID: DEA48735-D7EC-42F3-9F33-124D9942BB79
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Monday, 04 Jan 2016 at 05:53:03
+Date & time operation was completed: Monday, 04 Jan 2016 at 07:20:27
+Total elapsed time (HH:MM:SS): 01:27:24
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

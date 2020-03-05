@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 23243VU
+Computer Serial: PK2DBVF
+Motherboard Vendor: LENOVO
+Motherboard Model: 23243VU
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 3c:97:0e:e6:5b:b3
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 22:37:92:b1:d1:cb
+Drive 1: Model: KINGSTON SKC300S37A240G, Serial: 50026B723C0CFF8C, Size: 240.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: D1AD92BF-D2E2-4993-8630-4C5270FF4F5A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 567040
+User3: Proskauer Rose
+User4: 18833
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Kingston Model: KINGSTON SKC300S37A240G
+             Serial: 50026B723C0CFF8C Size: 240.06 GB
+
+UUID: 4B426E95-531B-4F6B-A392-B1DAF37C14FD
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 27 Jan 2020 at 14:48:16
+Date & time operation was completed: Monday, 27 Jan 2020 at 15:20:53
+Total elapsed time (HH:MM:SS): 00:32:37
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 820 G2
+Computer Serial: 5CG53778GC
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 225A
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: b0:5a:da:3b:5f:39
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 94:65:9c:be:2a:58
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+Drive 1: Model: SanDisk SD7TB3Q-256G-1006, Serial: 153175404746, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 869931D5-39EA-46FD-A46E-D2ABCF682EB0
+Current user: ITAMG
+Computer ID: 5CG53778GC
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 526054
+Lot Name: 18794
+Lot Number: 18794
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD7TB3Q-256G-1006
+             Serial: 153175404746 Size: 256.06 GB
+
+UUID: C45F2FF9-896B-4DB3-A499-85E3A5FAEBBE
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Friday, 01 Nov 2019 at 16:16:15
+Date & time operation was completed: Friday, 01 Nov 2019 at 16:16:21
+Total elapsed time (HH:MM:SS): 00:00:06
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

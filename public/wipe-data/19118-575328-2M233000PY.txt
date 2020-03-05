@@ -1,0 +1,247 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL380p Gen8
+Computer Serial: 2M233000PY
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 196608 MB, Memory banks: 24, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: d8:9d:67:23:48:60
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: d8:9d:67:23:48:61
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: d8:9d:67:23:48:62
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: d8:9d:67:23:48:63
+Drive 1: Model: EH0300FCBVC, Serial: Y290A18QFRP81245, Size: 299.97 GB
+Drive 2: Model: EH0300FBQDD, Serial: 6XN2BC4M0000N316312K, Size: 299.97 GB
+Drive 3: Model: EH0300FCBVC, Serial: X2D0A029FRP81241, Size: 299.97 GB
+Drive 4: Model: EH0300FBQDD, Serial: 6XN3VL8B0000B341GQTM, Size: 299.97 GB
+Drive 5: Model: EG0600FBDBU, Serial: PZHATRAD, Size: 600.09 GB
+Drive 6: Model: EG0600FBLSH, Serial: 6XR3HT2K0000M23672ZM, Size: 600.09 GB
+Drive 7: Model: EG0600FCVBK, Serial: Z0M0AEJ80000C533HUHR, Size: 600.09 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EH
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 6E49E0F0-6B64-4DDC-B54D-F5E1F076B3B2
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 575328
+Lot Name: Mishcon de Reya
+Lot Number: 19118
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EH0300FCBVC
+             Serial: Y290A18QFRP81245 Size: 299.97 GB
+    >>> Raid member #1  Vendor: HP Model: EH0300FCBVC
+             Serial: Y290A18QFRP81245 Size: 300 GB  [ 2:1 ]
+
+UUID: B70FC9A6-81FD-4E00-BF54-E53C9C7090AF
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 585871964
+Sectors Not Overwritten: 0
+Sectors Verified: 58587197
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:52
+Action End Time: Thursday, 30 Jan 2020 at 13:48:12
+Action Duration: 00:31:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EH0300FBQDD
+             Serial: 6XN2BC4M0000N316312K Size: 299.97 GB
+    >>> Raid member #1  Vendor: HP Model: EH0300FBQDD
+             Serial: 6XN2BC4M0000N316312K Size: 300 GB  [ 2:2 ]
+
+UUID: 14EF1BA2-2DB8-497F-9688-D2280A25DFE2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 585871964
+Sectors Not Overwritten: 0
+Sectors Verified: 58587197
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:54
+Action End Time: Thursday, 30 Jan 2020 at 13:46:55
+Action Duration: 00:30:01
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: HP Model: EH0300FCBVC
+             Serial: X2D0A029FRP81241 Size: 299.97 GB
+    >>> Raid member #1  Vendor: HP Model: EH0300FCBVC
+             Serial: X2D0A029FRP81241 Size: 300 GB  [ 2:3 ]
+
+UUID: AEF4E5FC-EB26-4F85-A36F-7EF591F2E4FE
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 585871964
+Sectors Not Overwritten: 0
+Sectors Verified: 58587197
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:53
+Action End Time: Thursday, 30 Jan 2020 at 13:47:39
+Action Duration: 00:30:46
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: HP Model: EH0300FBQDD
+             Serial: 6XN3VL8B0000B341GQTM Size: 299.97 GB
+    >>> Raid member #1  Vendor: HP Model: EH0300FBQDD
+             Serial: 6XN3VL8B0000B341GQTM Size: 300 GB  [ 2:4 ]
+
+UUID: F49E16C1-E662-4601-ABCD-9735C6E1BCB8
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 585871964
+Sectors Not Overwritten: 0
+Sectors Verified: 58587197
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:54
+Action End Time: Thursday, 30 Jan 2020 at 13:49:03
+Action Duration: 00:32:09
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHATRAD Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHATRAD Size: 600 GB  [ 2:5 ]
+
+UUID: 67AE2320-27D7-4DFE-B179-CD49DDE0F0F6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 117205804
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:53
+Action End Time: Thursday, 30 Jan 2020 at 14:34:52
+Action Duration: 01:17:59
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: HP Model: EG0600FBLSH
+             Serial: 6XR3HT2K0000M23672ZM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBLSH
+             Serial: 6XR3HT2K0000M23672ZM Size: 600 GB  [ 2:6 ]
+
+UUID: E084D00A-44B7-484D-907E-61A33CBC6FB3
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 106251158
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:54
+Action End Time: Thursday, 30 Jan 2020 at 14:41:57
+Action Duration: 01:25:03
+
+Action Result: FAILURE
+
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Raid device #7  Vendor: HP Model: EG0600FCVBK
+             Serial: Z0M0AEJ80000C533HUHR Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FCVBK
+             Serial: Z0M0AEJ80000C533HUHR Size: 600 GB  [ 2:7 ]
+
+UUID: 72507AAE-2679-4F5E-984A-EC693E00F63E
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 117205804
+Action Start Time: Thursday, 30 Jan 2020 at 13:16:52
+Action End Time: Thursday, 30 Jan 2020 at 14:20:06
+Action Duration: 01:03:14
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

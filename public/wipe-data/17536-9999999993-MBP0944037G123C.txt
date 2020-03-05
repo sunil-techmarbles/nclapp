@@ -1,0 +1,138 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBP0944037G123C
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:69:ad:25
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:69:ad:26
+DVD reader: Unavailable
+Drive 1: Model: MB1000EBZQB, Serial: Z1N14Z7G, Size: 1000.20 GB
+Drive 2: Model: GB1000EAFJL, Serial: 9QJ2B6HX, Size: 1000.20 GB
+Drive 3: Model: GB1000EAMYC, Serial: WMATV1612008, Size: 1000.20 GB
+Drive 4: Model: ST31000340NS, Serial: 9QJ87W9H, Size: 1000.20 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 378745EB-3F2A-46E0-A66F-87EF4E57ED45
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 9999999993
+User3: PRA Health Sciences
+User4: 17536
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: None found Model: MB1000EBZQB
+             Serial: Z1N14Z7G Size: 1000.20 GB
+
+UUID: 16546E24-7735-486B-9C39-799E3B40887A
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 04:38:07
+Date & time operation was completed: Thursday, 14 Nov 2019 at 13:40:50
+Total elapsed time (HH:MM:SS): 09:02:43
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: None found Model: GB1000EAFJL
+             Serial: 9QJ2B6HX Size: 1000.20 GB
+
+UUID: 79F81E22-DB39-4882-9E96-7D8464C7105E
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 04:38:08
+Date & time operation was completed: Thursday, 14 Nov 2019 at 14:21:43
+Total elapsed time (HH:MM:SS): 09:43:35
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #3  Vendor: None found Model: GB1000EAMYC
+             Serial: WMATV1612008 Size: 1000.20 GB
+
+UUID: C49970DA-4D2E-4C57-B5B0-58C13C353579
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 04:38:07
+Date & time operation was completed: Thursday, 14 Nov 2019 at 16:47:50
+Total elapsed time (HH:MM:SS): 12:09:43
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: Seagate Model: ST31000340NS
+             Serial: 9QJ87W9H Size: 1000.20 GB
+
+UUID: 633DD7EA-61BB-43F2-9C9D-39F98238C763
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 04:38:08
+Date & time operation was completed: Thursday, 14 Nov 2019 at 16:05:39
+Total elapsed time (HH:MM:SS): 11:27:31
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

@@ -1,0 +1,57 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro7,1
+Computer Serial: W804555DATM
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F222BEC8
+Processor: Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: c8:bc:c8:a5:b8:af
+DVD writer: DVD-R UJ-898
+Drive 1: Model: ST95005620AS, Serial: 5YX1LBYD, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: MCP89 [GeForce 320M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: MCP89 High Definition Audio
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 220BBADF-0A2F-436B-8BFA-8721F5837CAA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 530306
+User3: Conde Nast
+User4: 17405
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST95005620AS
+             Serial: 5YX1LBYD Size: 500.11 GB
+
+UUID: 18353F39-7139-43F1-AD1B-BC3845F705A8
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 07 Nov 2019 at 19:00:05
+Date & time operation was completed: Thursday, 07 Nov 2019 at 19:14:28
+Total elapsed time (HH:MM:SS): 00:14:23
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

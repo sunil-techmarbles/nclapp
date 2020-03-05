@@ -1,0 +1,95 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL360 G7
+Computer Serial: MXQ23403B2
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5606 @ 2.13GHz, Speed: 2100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: b4:b5:2f:5e:f4:ac
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: b4:b5:2f:5e:f4:ae
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: b4:b5:2f:5e:f4:d4
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: b4:b5:2f:5e:f4:d6
+DVD-RAM writer: DVD A DS8A8SH
+Drive 1: Model: EH0146FARUB, Serial: D301PC60VBS51225, Size: 146.78 GB
+Drive 2: Model: EH0146FARUB, Serial: D301PC60VBNS1225, Size: 146.78 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: ES1000
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 8F8CA103-2531-4840-AA9F-F7ADAC32FF4D
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 544505
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EH0146FARUB
+             Serial: D301PC60VBS51225 Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FARUB
+             Serial: D301PC60VBS51225 Size: 146 GB  [ 1:1 ]
+
+UUID: B3100272-4779-4473-A986-F3DB90BE5DB8
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Thursday, 05 May 2011 at 01:30:42
+Action End Time: Thursday, 05 May 2011 at 01:51:10
+Action Duration: 00:20:28
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EH0146FARUB
+             Serial: D301PC60VBNS1225 Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FARUB
+             Serial: D301PC60VBNS1225 Size: 146 GB  [ 1:2 ]
+
+UUID: 6A618306-F5AE-43BF-9368-6486B505F647
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Thursday, 05 May 2011 at 01:30:41
+Action End Time: Thursday, 05 May 2011 at 01:51:13
+Action Duration: 00:20:32
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,93 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Oracle Corporation
+Computer Model: SUN FIRE X4170 M3
+Computer Serial: 1318FML03C
+Motherboard Vendor: Oracle Corporation
+Motherboard Model: MOTHER BOARD ASSEMBL
+Processor: Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz, Speed: 2900 MHz, Cores: 8, L1 Cache: 512 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz, Speed: 2900 MHz, Cores: 8, L1 Cache: 512 kB, L2 Cache: 2048 kB
+RAM: 262144 MB, Memory banks: 16, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 00:10:e0:32:30:e0
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 00:10:e0:32:30:e1
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 00:10:e0:32:30:e2
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 00:10:e0:32:30:e3
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: a0:36:9f:1c:d0:44
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: a0:36:9f:1c:d0:46
+Drive 1: Model: H109060SESUN600G, Serial: 001316BWAJ2F        KNHWAJ2F, Size: 600.13 GB
+Drive 2: Model: H109060SESUN600G, Serial: 001316BWML9F        KNHWML9F, Size: 600.13 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 259265A8-EA44-4011-BFEB-C4D8DFE4FD09
+Current user: ITAMG
+Computer ID: 7064195
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 555645
+Lot Name: Northwell Health
+Lot Number: 18982
+\"Product\": Server
+
+>> Drive #1  Vendor: HITACHI Model: H109060SESUN600G
+             Serial: 001316BWAJ2F        KNHWAJ2F Size: 600.13 GB
+
+UUID: 7A4A1970-7027-45CA-8BF4-1DD8539107F6
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 1172123568
+Action Start Time: Monday, 23 Dec 2019 at 18:11:26
+Action End Time: Monday, 23 Dec 2019 at 22:33:44
+Action Duration: 04:22:18
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: HITACHI Model: H109060SESUN600G
+             Serial: 001316BWML9F        KNHWML9F Size: 600.13 GB
+
+UUID: 236863AF-FA1B-45E7-AFB4-13C3741C9E67
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 1172123568
+Action Start Time: Monday, 23 Dec 2019 at 18:11:26
+Action End Time: Monday, 23 Dec 2019 at 22:29:13
+Action Duration: 04:17:47
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 7010
+Computer Serial: BC06M02
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0YXT71
+Processor: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 34:17:eb:97:ed:16
+DVD-RAM writer: DVD+-RW SW830
+Drive 1: Model: ST500DM002-1BD142, Serial: Z6E2VFD4, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 8D1EA4F6-ECF0-4A18-A45D-2C546CD6C0BD
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 555772
+User3: Northwell Health
+User4: 18982
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z6E2VFD4 Size: 500.11 GB
+
+UUID: 9F134AF4-4209-44BD-BC96-E9E297F0AE2F
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 23 Jan 2020 at 17:03:03
+Date & time operation was completed: Thursday, 23 Jan 2020 at 22:09:19
+Total elapsed time (HH:MM:SS): 05:06:16
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

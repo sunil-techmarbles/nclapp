@@ -1,0 +1,414 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL360 G7
+Computer Serial: MXQ2020DL9
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5606 @ 2.13GHz, Speed: 2100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU E5606 @ 2.13GHz, Speed: 2100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:fa:b8
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:fa:ba
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:fa:b4
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:fa:b6
+DVD-RAM writer: DVD A DS8A5LH
+Drive 1: Model: EH0146FARWD, Serial: PLVJ4T6E, Size: 146.78 GB
+Drive 2: Model: EH0146FARWD, Serial: PLVG5DBE, Size: 146.78 GB
+Drive 3: Model: EH0072FAWJA, Serial: 6TA07CYC0000B119HG9A, Size: 73.37 GB
+Drive 4: Model: EH0072FAWJA, Serial: 6TA07K9R0000B119LXXH, Size: 73.37 GB
+Drive 5: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-9T6LXCTCDY5252X6, Size: 200.05 GB
+Drive 6: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-Y1957IW93H742WBK, Size: 200.05 GB
+Drive 7: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-Y3M3IRY25N6J9QT9, Size: 200.05 GB
+Drive 8: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-80651DLBZ1R15454, Size: 200.05 GB
+Drive 9: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-ZLBV400499W65809, Size: 200.05 GB
+Drive 10: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-HP73ZOW2DR1905EQ, Size: 200.05 GB
+Drive 11: Model: OCZ Z-DRIVE R4 RM88, Serial: A1407011325000008, Size: 200.05 GB
+Drive 12: Model: OCZ Z-DRIVE R4 RM88, Serial: OCZ-C3JNYI89KZ434I90, Size: 200.05 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: ES1000
+USB Ports: 7
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 1B1C89CC-6DB6-4F0D-AD75-30B5B3362C83
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 542944
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EH0146FARWD
+             Serial: PLVJ4T6E Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FARWD
+             Serial: PLVJ4T6E Size: 146 GB  [ 1:1 ]
+
+UUID: 49875E6D-2124-44B6-A272-A960574EF0B7
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:58:09
+Action Duration: 00:19:22
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EH0146FARWD
+             Serial: PLVG5DBE Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FARWD
+             Serial: PLVG5DBE Size: 146 GB  [ 1:2 ]
+
+UUID: E88D1993-571F-4E7E-AEC7-3DB0E407D442
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:58:39
+Action Duration: 00:19:52
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: HP Model: EH0072FAWJA
+             Serial: 6TA07CYC0000B119HG9A Size: 73.37 GB
+    >>> Raid member #1  Vendor: HP Model: EH0072FAWJA
+             Serial: 6TA07CYC0000B119HG9A Size: 72 GB  [ 1:3 ]
+
+UUID: 1C4ED66A-32BA-4B71-B569-ED6541D0C615
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 143305920
+Sectors Not Overwritten: 0
+Sectors Verified: 14330593
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:48:48
+Action Duration: 00:10:01
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: HP Model: EH0072FAWJA
+             Serial: 6TA07K9R0000B119LXXH Size: 73.37 GB
+    >>> Raid member #1  Vendor: HP Model: EH0072FAWJA
+             Serial: 6TA07K9R0000B119LXXH Size: 72 GB  [ 1:4 ]
+
+UUID: F8D3ED91-951C-466F-A389-21BE5AFB8699
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 143305920
+Sectors Not Overwritten: 0
+Sectors Verified: 14330593
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:48:29
+Action Duration: 00:09:42
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-9T6LXCTCDY5252X6 Size: 200.05 GB
+
+UUID: 031CAEB3-4970-4DCC-999A-26D8D2E39884
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:38
+Action Duration: 00:02:51
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-Y1957IW93H742WBK Size: 200.05 GB
+
+UUID: 70C013A3-7703-45FC-8E0A-42C64C584760
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:44
+Action Duration: 00:02:57
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-Y3M3IRY25N6J9QT9 Size: 200.05 GB
+
+UUID: 5E0A9AC1-AB91-457F-88F5-B1025A559E83
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:48
+Action Duration: 00:03:01
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-80651DLBZ1R15454 Size: 200.05 GB
+
+UUID: 426BD761-481F-44FA-8FAE-78E7456126B0
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:42
+Action Duration: 00:02:55
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #9  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-ZLBV400499W65809 Size: 200.05 GB
+
+UUID: B9DFE302-29F0-4C98-84D1-4D7DA3629C0F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:45
+Action Duration: 00:02:58
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-HP73ZOW2DR1905EQ Size: 200.05 GB
+
+UUID: 671F7173-E11C-42EB-976F-F104A6B9CF29
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:40
+Action Duration: 00:02:53
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #11  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: A1407011325000008 Size: 200.05 GB
+
+UUID: C2FDCB16-2CDE-4BAA-ACBB-318FD7E4DB1C
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:40
+Action Duration: 00:02:53
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #11 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #12  Vendor: OCZ Model: OCZ Z-DRIVE R4 RM88
+             Serial: OCZ-C3JNYI89KZ434I90 Size: 200.05 GB
+
+UUID: 14653A75-5920-4919-9EE7-AB84FA01ABEB
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 390721968
+Sectors Not Overwritten: 0
+Sectors Verified: 39072197
+Action Start Time: Wednesday, 27 Nov 2019 at 18:38:47
+Action End Time: Wednesday, 27 Nov 2019 at 18:41:47
+Action Duration: 00:03:00
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

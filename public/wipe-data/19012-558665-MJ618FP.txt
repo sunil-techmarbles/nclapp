@@ -1,0 +1,57 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3660D5U
+Computer Serial: MJ618FP
+Motherboard Vendor: LENOVO
+Motherboard Model: Unavailable
+Processor: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 74:27:ea:64:15:b4
+DVD-RAM writer: DVD-RAM GHA2N
+Drive 1: Model: ST_M13FQBL, Serial: QNR_BFW, Size: 4.14 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 49B5D031-8561-450E-BAAA-F22AA9F5BF37
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 558665
+User3: Northwell Health
+User4: 19012
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST_M13FQBL
+             Serial: QNR_BFW Size: 4.14 GB
+
+UUID: 845CE959-7D19-48E0-9B25-174D9C003EFE
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Friday, 24 Jan 2020 at 12:51:42
+Date & time operation was completed: Friday, 24 Jan 2020 at 12:51:44
+Total elapsed time (HH:MM:SS): 00:00:02
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: UNKNOWN!
+Post-wipe SMART health status: UNKNOWN!
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

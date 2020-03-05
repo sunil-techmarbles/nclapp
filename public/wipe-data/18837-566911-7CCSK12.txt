@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6440
+Computer Serial: 7CCSK12
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0X8DN1
+Processor: Intel(R) Core(TM) i5-4310M CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: f8:ca:b8:30:92:60
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW SU-208GB
+Drive 1: Model: WDC WDS250G1B0A-00H9H0, Serial: 174067805545, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 1EFFF6D5-7B6C-4D6D-8EA6-E796F6013F64
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 566911
+User3: Tangoe US, Inc.
+User4: 18837
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WDS250G1B0A-00H9H0
+             Serial: 174067805545 Size: 250.06 GB
+
+UUID: 7350BC7C-A0D2-4A23-9CDA-5CF90AD6F287
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 15:50:24
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 16:38:02
+Total elapsed time (HH:MM:SS): 00:47:38
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

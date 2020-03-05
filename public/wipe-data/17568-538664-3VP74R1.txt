@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6320
+Computer Serial: 3VP74R1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0GJF11
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GH, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 5c:26:0a:64:89:af
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW TS-U633J
+Drive 1: Model: WDC WD2500BEKT-75PVMT0, Serial: WD-WXG1A6182492, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 72AC8B4E-F84B-46DA-AE03-419760346728
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 538664
+User3: PRA Health Sciences
+User4: 17568
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500BEKT-75PVMT0
+             Serial: WD-WXG1A6182492 Size: 250.06 GB
+
+UUID: EFA9B0DB-01BF-4496-8D88-D25EAA83E1BA
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 26 Nov 2019 at 09:56:51
+Date & time operation was completed: Tuesday, 26 Nov 2019 at 13:41:47
+Total elapsed time (HH:MM:SS): 03:44:56
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: FAILED!
+Post-wipe SMART health status: FAILED!
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4177Q5U
+Computer Serial: R8RHA2P
+Motherboard Vendor: LENOVO
+Motherboard Model: 4177Q5U
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 00:21:cc:b6:dd:39
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 10:0b:a9:84:fa:50
+DVD-RAM writer: DVDRAM GT50N
+Drive 1: Model: ST9320423AS, Serial: W3300CHD, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 851157D1-6EC1-432D-9F2B-8C432E096A3E
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 548006
+Lot Name: 17604
+Lot Number: 17604
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9320423AS
+             Serial: W3300CHD Size: 320.07 GB
+
+UUID: 6EE7C258-24F5-47E8-84F1-7F20122C1764
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 625142448
+Action Start Time: Wednesday, 22 Jan 2020 at 13:21:23
+Action End Time: Wednesday, 22 Jan 2020 at 18:07:40
+Action Duration: 04:46:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

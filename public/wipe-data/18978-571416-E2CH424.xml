@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 8.3 32-bit">
+        <KernelVersion>4.12.12-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>IBM</ComputerVendor>
+            <ComputerModel>IBM System x3650 M4: -[7915AC1]-</ComputerModel>
+            <ComputerSerial>E2CH424</ComputerSerial>
+            <MotherboardVendor>IBM</MotherboardVendor>
+            <MotherboardModel>00KF656</MotherboardModel>
+            <AssetTag>none</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>Socket 2</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>Socket 2</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>292DBD9</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B1K70QB0-CK0</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30F3</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30EB</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30CB</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B302E</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B300D</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30BB</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B3096</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B303B</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30F1</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B302A</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30DA</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30E9</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B301B</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>908B30E6</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7EFR4C-PB</PartNumber>
+                </Stick>
+                <MemoryBanks>15</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>122880 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>98:be:94:44:26:5a</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>98:be:94:44:26:5b</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>98:be:94:44:26:5c</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>98:be:94:44:26:5d</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Unavailable</Vendor>
+                    <Product>Unavailable</Product>
+                    <MACAddress>9a:be:94:44:26:59</MACAddress>
+                    <Speed>Unavailable</Speed>
+                    <PciId>Unavailable</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>IBM SATA</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>DEVICE 81Y3682</Product>
+                    <Capabilities>removable audio dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device index="1">
+                    <Vendor>LENOVO</Vendor>
+                    <Product>XST9146853SS</Product>
+                    <Serial>L63L6XM4KP1B0331B644</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.00</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface></Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="2">
+                    <Vendor>LENOVO</Vendor>
+                    <Product>XST9146853SS</Product>
+                    <Serial>L63L6XM4KQHR0331B644</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.00</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface></Interface>
+                    <RaidDrives/>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>G200eR2</Product>
+                    <PciId>102B:534</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>LSI Logic / Symbios Logic</Vendor>
+                    <Product>MegaRAID SAS 2208 [Thunderbolt]</Product>
+                    <Description>RAID bus controller</Description>
+                    <PciId>1000:5B</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>C600/X79 series chipset 6-Port SATA AHCI Controller</Product>
+                    <Description>SATA controller</Description>
+                    <PciId>8086:1D02</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>0</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>EEC888EC-19D9-40FC-B44D-3D3A1DDCA182</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>571416</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Northwell Health</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>18978</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Server</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="21810944155133117175914377192224223417">
+                    <UUID>655CB240-F1C5-4696-914F-AADB9C9803BF</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 29 Jan 2020 10:21:30</StartTime>
+                    <Duration>00:56:05</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>285155328</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285155328</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>LENOVO</Vendor>
+                    <Product>XST9146853SS</Product>
+                    <Serial>L63L6XM4KP1B0331B644</Serial>
+                    <Gigabytes>146.00</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="2" SecurityCode="50148219229145205641642551491472181446216384">
+                    <UUID>9689CD2C-4609-45C1-AD95-9B69BB5C4655</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 29 Jan 2020 10:21:30</StartTime>
+                    <Duration>00:56:47</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>285155328</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285155328</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>LENOVO</Vendor>
+                    <Product>XST9146853SS</Product>
+                    <Serial>L63L6XM4KQHR0331B644</Serial>
+                    <Gigabytes>146.00</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

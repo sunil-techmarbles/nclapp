@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac14,2
+Computer Serial: D25MX02AF8JC
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-27ADBB7B4CEE8E61
+Processor: Intel(R) Core(TM) i5-4670 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 32768 MB, Memory banks: 4, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 0c:4d:e9:a7:ff:cf
+Drive 1: Model: APPLE HDD ST1000DM003, Serial: Z1DCHCBV, Size: 1000.20 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK104M [GeForce GTX 775M Mac Edition]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK104 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 7737EF39-EF5A-41CE-8EC3-1589FDF8D2D2
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 567951
+Lot Name: 18890
+Lot Number: 18890
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Seagate Model: APPLE HDD ST1000DM003
+             Serial: Z1DCHCBV Size: 1000.20 GB
+
+UUID: AA1DFCE1-9F45-49AB-ADCB-52763FB6D258
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195360016
+Action Start Time: Thursday, 09 Jan 2020 at 20:39:22
+Action End Time: Thursday, 09 Jan 2020 at 22:45:27
+Action Duration: 02:06:05
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

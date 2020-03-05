@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq 8100 Elite SFF PC
+Computer Serial: MXL1130R1N
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 304Ah
+Processor: Intel(R) Core(TM) i7 CPU         870  @ 2.93GHz, Speed: 2900 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 12288 MB, Memory banks: 3, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82578DM Gigabit Network Connection, MAC Address: 6c:62:6d:dc:0f:a9
+DVD-RAM writer: DVD A DH16ABLH
+Drive 1: Model: Hitachi HDS721010CLA332, Serial: JP6940HZ1A2WGF, Size: 1000.20 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GT218 [NVS 300]
+Display Adapter: Vendor: NVIDIA Corporation, Model: G86 [Quadro NVS 290]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D2395110-36E1-4899-B0C1-EC83618FA109
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 86035
+User3: Starboard Value LP
+User4: 12039
+\"Product\": Computer
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HDS721010CLA332
+             Serial: JP6940HZ1A2WGF Size: 1000.20 GB
+
+UUID: 82557A5F-4046-43A3-907F-E877BE407732
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 31 Dec 2018 at 15:17:17
+Date & time operation was completed: Tuesday, 01 Jan 2019 at 03:11:43
+Total elapsed time (HH:MM:SS): 11:54:26
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

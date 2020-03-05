@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E5470
+Computer Serial: GNRRNH2
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0VHKV0
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: a4:4c:c8:28:1b:c0
+Drive 1: Model: INTEL SSDSCKKF256H6 SATA 256GB, Serial: CVLY734504T7256J, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 57BE5698-D941-4D4C-993A-89A3143DE8AE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 566830
+User3: Tangoe US, Inc.
+User4: 18837
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSCKKF256H6 SATA 256GB
+             Serial: CVLY734504T7256J Size: 256.06 GB
+
+UUID: 3A0BEAC3-4A86-40A5-9734-ED930B84E95E
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 03 Feb 2020 at 11:57:22
+Date & time operation was completed: Monday, 03 Feb 2020 at 13:44:13
+Total elapsed time (HH:MM:SS): 01:46:51
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

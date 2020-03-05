@@ -1,0 +1,201 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3859
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+Drive 1: Model: ST3450857SS, Serial: 3SK0TVWQ00009051M21K, Size: 450.10 GB
+Drive 2: Model: ST3450857SS, Serial: 3SK16LC700009051M0DP, Size: 450.10 GB
+Drive 3: Model: ST3450857SS, Serial: 3SK161GW00009051AYPU, Size: 450.10 GB
+Drive 4: Model: ST3450857SS, Serial: 3SK1555J00009051M1D7, Size: 450.10 GB
+Drive 5: Model: ST3450857SS, Serial: 3SK111H000009052NR8W, Size: 450.10 GB
+Drive 6: Model: ST3450857SS, Serial: 3SK0Q5KX00009051LZ25, Size: 450.10 GB
+USB Ports: 0
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 52A799CF-C625-4CE0-8B0F-1AF7F9C10AE4
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999991
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: SEAGATE Model: ST3450857SS
+             Serial: 3SK0TVWQ00009051M21K Size: 450.10 GB
+
+UUID: 1C86B590-E675-442A-B4ED-FCC518EA481A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 02 Dec 2019 at 20:07:13
+Action End Time: Monday, 02 Dec 2019 at 20:54:34
+Action Duration: 00:47:21
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: SEAGATE Model: ST3450857SS
+             Serial: 3SK16LC700009051M0DP Size: 450.10 GB
+
+UUID: E84CED0E-B90C-4ED3-94FE-98359B4B0335
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 02 Dec 2019 at 20:07:12
+Action End Time: Monday, 02 Dec 2019 at 20:54:05
+Action Duration: 00:46:53
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: SEAGATE Model: ST3450857SS
+             Serial: 3SK161GW00009051AYPU Size: 450.10 GB
+
+UUID: A90C7D9A-7FB0-4B1C-8E2D-FBA5D22182A6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 02 Dec 2019 at 20:07:13
+Action End Time: Monday, 02 Dec 2019 at 20:54:39
+Action Duration: 00:47:26
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: SEAGATE Model: ST3450857SS
+             Serial: 3SK1555J00009051M1D7 Size: 450.10 GB
+
+UUID: E45C9E60-E5F0-42E6-900A-EEC7F917C0B8
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 02 Dec 2019 at 20:07:12
+Action End Time: Monday, 02 Dec 2019 at 20:54:19
+Action Duration: 00:47:07
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: SEAGATE Model: ST3450857SS
+             Serial: 3SK111H000009052NR8W Size: 450.10 GB
+
+UUID: 35556F25-47A1-4FDD-AF51-E272A6792385
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 02 Dec 2019 at 20:07:12
+Action End Time: Monday, 02 Dec 2019 at 22:27:32
+Action Duration: 02:20:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: SEAGATE Model: ST3450857SS
+             Serial: 3SK0Q5KX00009051LZ25 Size: 450.10 GB
+
+UUID: EB181EA1-E174-4F73-9D45-019320A7E7E4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 02 Dec 2019 at 20:07:12
+Action End Time: Monday, 02 Dec 2019 at 20:55:03
+Action Duration: 00:47:51
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

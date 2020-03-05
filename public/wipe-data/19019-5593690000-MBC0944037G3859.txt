@@ -1,0 +1,96 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3859
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:02:d8
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:02:d9
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6e:ea
+DVD reader: Device-CD#0
+Drive 1: Model: ST2000NM0033-9ZM175, Serial: Z1Y0KM7A, Size: 2000.40 GB
+Drive 2: Model: ST2000NM0033-9ZM175, Serial: Z1X4B5HV, Size: 2000.40 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D8FFDDC6-A32A-46DD-AE22-F144B0CA308D
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 5593690000
+Lot Name: Control V Symphony
+Lot Number: 19019
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Seagate Model: ST2000NM0033-9ZM175
+             Serial: Z1Y0KM7A Size: 2000.40 GB
+
+UUID: 153B29F4-BFC6-48D2-BCE9-72E0343A673F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 3907029168
+Sectors Not Overwritten: 0
+Sectors Verified: 390702917
+Action Start Time: Monday, 06 Jan 2020 at 18:26:08
+Action End Time: Monday, 06 Jan 2020 at 22:57:42
+Action Duration: 04:31:34
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Seagate Model: ST2000NM0033-9ZM175
+             Serial: Z1X4B5HV Size: 2000.40 GB
+
+UUID: 52ADC502-599A-421E-9858-610E7FE58DEB
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 3907029168
+Sectors Not Overwritten: 0
+Sectors Verified: 390702917
+Action Start Time: Monday, 06 Jan 2020 at 18:26:08
+Action End Time: Monday, 06 Jan 2020 at 23:12:10
+Action Duration: 04:46:02
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro4,1
+Computer Serial: YM9360Z020G
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 10240 MB, Memory banks: 8, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:f0:92:12
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:f0:cd:0e
+DVD writer: DVD-RW GH41N
+Drive 1: Model: WDC WD6400AAKS-41H2B0, Serial: WD-WCASY7177128, Size: 640.14 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G96 [GeForce 9500 GT]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D551BA95-734C-4875-A2CB-727260A996E5
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 572786
+Lot Name: Mc Cann Erickson
+Lot Number: 19102
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD6400AAKS-41H2B0
+             Serial: WD-WCASY7177128 Size: 640.14 GB
+
+UUID: E26DECFC-1A7E-4BBB-8341-D7D3140CEF46
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1250263728
+Sectors Not Overwritten: 0
+Sectors Verified: 125026373
+Action Start Time: Friday, 17 Jan 2020 at 17:44:14
+Action End Time: Friday, 17 Jan 2020 at 20:06:31
+Action Duration: 02:22:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

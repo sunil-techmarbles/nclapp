@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro4,1
+Computer Serial: YM02102S20G
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: e8:06:88:ca:21:45
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: e8:06:88:ca:17:de
+DVD writer: DVD-RW GH41N
+Drive 1: Model: WDC WD6400AAKS-41H2B0, Serial: WD-WCASYC676534, Size: 640.14 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cypress XT [Radeon HD 5870]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cypress HDMI Audio [Radeon HD 5830/5850/5870 / 6850/6870 Rebrand]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B5AA12D9-7F3F-4FCC-82A9-B5C0750AA1B6
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 523062
+Lot Name: Ogilvy
+Lot Number: 12893
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD6400AAKS-41H2B0
+             Serial: WD-WCASYC676534 Size: 640.14 GB
+
+UUID: 3AFC505E-DDD0-4036-AA8B-3745096007DA
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Friday, 01 Nov 2019 at 19:54:27
+Date & time operation was completed: Friday, 01 Nov 2019 at 21:52:08
+Total elapsed time (HH:MM:SS): 01:57:41
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

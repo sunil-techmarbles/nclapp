@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: WYSE
+Computer Model: XM CLASS
+Computer Serial: 95EDLB00118
+Motherboard Vendor: Inventec
+Motherboard Model: XM CLASS
+Processor: AMD G-T56N Processor, Speed: 1700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 2048 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Qualcomm Atheros, Model: AR93xx Wireless Network Adapter, MAC Address: 00:0e:8e:41:d2:6f
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 00:80:64:a6:62:18
+Drive 1: Model: 4GB ATA Flash Disk, Serial: C321057326A1Yj7C9CpS, Size: 4.10 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Wrestler [Radeon HD 6320]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Wrestler HDMI Audio
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: SBx00 Azalia (Intel HDA)
+USB Ports: 4
+USB2 Ports: 3
+USB3 Ports: 0
+
+Job UUID: 4684399B-2E39-4523-8BD7-A0AC878BA91C
+Current user: ITAMG
+Computer ID: None
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 535325
+Lot Name: Fragomen, Del Rey, Bernsen & Loewy, LLP
+Lot Number: 17470
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: 4GB ATA Flash Disk
+             Serial: C321057326A1Yj7C9CpS Size: 4.10 GB
+
+UUID: FD5A0E55-011B-4903-BCD9-369B2B2A0672
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Tuesday, 18 Sep 2018 at 19:04:55
+Date & time operation was completed: Tuesday, 18 Sep 2018 at 19:08:29
+Total elapsed time (HH:MM:SS): 00:03:34
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

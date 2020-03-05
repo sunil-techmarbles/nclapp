@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BTS0YG00
+Computer Serial: R90GD1YE
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BTS0YG00
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 54:ee:75:58:f8:f0
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 5c:e0:c5:05:bd:a6
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:56:22
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 3c:18:a0:f0:4d:80
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 5a:85:35:d2:3d:7c
+Drive 1: Model: SAMSUNG MZNLN256HCHP-000L7, Serial: S20GNYAG502780, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 12DDA279-2301-45DF-A05D-63CC1AAA51DB
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525273
+Lot Name: Bain & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNLN256HCHP-000L7
+             Serial: S20GNYAG502780 Size: 256.06 GB
+
+UUID: 741CBAF6-0D28-4BAB-9BD2-B767478C2EAB
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Monday, 04 Nov 2019 at 14:52:38
+Date & time operation was completed: Monday, 04 Nov 2019 at 15:14:41
+Total elapsed time (HH:MM:SS): 00:22:03
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

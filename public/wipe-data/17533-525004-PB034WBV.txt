@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20AMS0WQ0V
+Computer Serial: PB034WBV
+Motherboard Vendor: LENOVO
+Motherboard Model: 20AMS0WQ0V
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 28:d2:44:a9:18:84
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+Drive 1: Model: HGST HTS725050A7E630, Serial: TF655BWJ1WK8DZ, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 2
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: D207441C-BA3C-4DAF-832B-B75DBC14BEDC
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 525004
+User3: Ogilvy CommonHealth Worldwide LLC
+User4: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: HGST HTS725050A7E630
+             Serial: TF655BWJ1WK8DZ Size: 500.11 GB
+
+UUID: 74F59F28-9129-464F-A681-16BB8A28BF33
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 30 Oct 2019 at 16:01:51
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 17:46:10
+Total elapsed time (HH:MM:SS): 01:44:19
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

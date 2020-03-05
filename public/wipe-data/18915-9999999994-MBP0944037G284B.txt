@@ -1,0 +1,147 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBP0944037G284B
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:33:e2
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:33:e3
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+Drive 1: Model: EG0900FBVFQ, Serial: KPV2Z2HF, Size: 900.19 GB
+Drive 2: Model: EH0146FARWD, Serial: PLY52SNE, Size: 146.82 GB
+Drive 3: Model: EH0146FARWD, Serial: PLY53GTE, Size: 146.82 GB
+Drive 4: Model: EG0900FBVFQ, Serial: KPV3M4XF, Size: 900.19 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 837B397D-3ECC-48C7-AFC2-E4BFB937A079
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999994
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: HP Model: EG0900FBVFQ
+             Serial: KPV2Z2HF Size: 900.19 GB
+
+UUID: 0F1F351A-29FB-43DD-94BD-FB6C691A8F06
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758174768
+Sectors Not Overwritten: 0
+Sectors Verified: 175817477
+Action Start Time: Wednesday, 04 Dec 2019 at 02:47:02
+Action End Time: Wednesday, 04 Dec 2019 at 04:31:39
+Action Duration: 01:44:37
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: HP Model: EH0146FARWD
+             Serial: PLY52SNE Size: 146.82 GB
+
+UUID: 389F3DB5-67D6-42C2-B773-2D689D4AD4AB
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286749488
+Sectors Not Overwritten: 0
+Sectors Verified: 28674949
+Action Start Time: Wednesday, 04 Dec 2019 at 02:47:01
+Action End Time: Wednesday, 04 Dec 2019 at 03:06:21
+Action Duration: 00:19:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: HP Model: EH0146FARWD
+             Serial: PLY53GTE Size: 146.82 GB
+
+UUID: FD4C262A-70BA-40A9-88EF-7CAC155E5B6A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286749488
+Sectors Not Overwritten: 0
+Sectors Verified: 28674949
+Action Start Time: Wednesday, 04 Dec 2019 at 02:47:02
+Action End Time: Wednesday, 04 Dec 2019 at 03:05:56
+Action Duration: 00:18:54
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: HP Model: EG0900FBVFQ
+             Serial: KPV3M4XF Size: 900.19 GB
+
+UUID: 15B8289F-19AF-413E-BF67-C0851DE9B2E1
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758174768
+Sectors Not Overwritten: 0
+Sectors Verified: 175817477
+Action Start Time: Wednesday, 04 Dec 2019 at 02:47:02
+Action End Time: Wednesday, 04 Dec 2019 at 04:30:38
+Action Duration: 01:43:36
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

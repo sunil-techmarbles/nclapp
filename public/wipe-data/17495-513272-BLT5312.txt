@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude 3440
+Computer Serial: BLT5312
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 05J70X
+Processor: Intel(R) Core(TM) i5-4200U CPU @ 1.60GHz, Speed: 1600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Qualcomm Atheros, Model: QCA9565 / AR9565 Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: b8:2a:72:9f:72:58
+DVD-RAM writer: DVD+-RW UJ8E2
+Drive 1: Model: WDC WD5000LPVX-75V0TT0, Serial: WX21A34R4864, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 2
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 6B2A3D01-3CC7-425D-9D73-A9582138A012
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 513272
+User3: PRA Health Sciences
+User4: 18703
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000LPVX-75V0TT0
+             Serial: WX21A34R4864 Size: 500.11 GB
+
+UUID: BB6FB414-949F-4B27-814D-4C072E8AA516
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 26 Nov 2019 at 16:37:09
+Date & time operation was completed: Tuesday, 26 Nov 2019 at 23:05:35
+Total elapsed time (HH:MM:SS): 06:28:26
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 2
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

@@ -1,0 +1,99 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro5,1
+Computer Serial: C07KL08QF4MG
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           W3565  @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 40:6c:8f:bd:58:ff
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 40:6c:8f:bd:69:dd
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: a8:96:8a:f2:05:c6
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+DVD writer: DVD-RW GH80N
+Drive 1: Model: WDC WD20EARX-008FB0, Serial: WD-WCAZAL103897, Size: 2000.40 GB
+Drive 2: Model: WDC WD1001FALS-41Y6A1, Serial: WD-WCATRC305439, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cypress XT [Radeon HD 5870]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cypress HDMI Audio [Radeon HD 5830/5850/5870 / 6850/6870 Rebrand]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 13
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 25AA15B5-6CBA-4E43-A377-367D1A9FB1B2
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 551309
+Lot Name: Metropolitan Museum of Art
+Lot Number: 17594
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD20EARX-008FB0
+             Serial: WD-WCAZAL103897 Size: 2000.40 GB
+
+UUID: 45AA8665-61ED-42B2-BA93-57397E7FC1EE
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 3907029168
+Sectors Not Overwritten: 0
+Sectors Verified: 3907029168
+Action Start Time: Friday, 20 Dec 2019 at 19:44:04
+Action End Time: Saturday, 21 Dec 2019 at 17:34:13
+Action Duration: 21:50:09
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD1001FALS-41Y6A1
+             Serial: WD-WCATRC305439 Size: 1000.20 GB
+
+UUID: D5123B98-3C56-4B39-82E1-8FC1B139F1BB
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Friday, 20 Dec 2019 at 19:44:04
+Action End Time: Saturday, 21 Dec 2019 at 06:02:11
+Action Duration: 10:18:07
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

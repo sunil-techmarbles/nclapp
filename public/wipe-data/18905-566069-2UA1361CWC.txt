@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq 6200 Pro SFF PC
+Computer Serial: 2UA1361CWC
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 1497
+Processor: Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 3c:d9:2b:5f:20:72
+DVD reader: DVDROM DH40N
+Drive 1: Model: WDC WD2500AAKX-603CA0, Serial: WD-WMAYW2531720, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: AD219B20-5B29-4DCD-8EDF-3ED8BC42A940
+Current user: ITAMG
+Computer ID: 2UA1361CWC
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 566069
+Lot Name: Epic Brokers
+Lot Number: 18905
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-603CA0
+             Serial: WD-WMAYW2531720 Size: 250.06 GB
+
+UUID: EE0CE9B5-0309-4505-B398-A1D8957702D0
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Wednesday, 08 Jan 2020 at 15:11:01
+Action End Time: Wednesday, 08 Jan 2020 at 15:54:53
+Action Duration: 00:43:52
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

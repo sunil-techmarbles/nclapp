@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2349G2U
+Computer Serial: PBC6M4T
+Motherboard Vendor: LENOVO
+Motherboard Model: 2349G2U
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 28:d2:44:23:25:a2
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: a4:4e:31:48:ea:f4
+DVD-RAM writer: DVD-RAM UJ8C0
+Drive 1: Model: Samsung SSD 850 PRO 256GB, Serial: S251NXAG909322X, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 4C8389F9-1B08-479F-BB6D-96BB9FD0871C
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525068
+Lot Name: 17533
+Lot Number: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 PRO 256GB
+             Serial: S251NXAG909322X Size: 256.06 GB
+
+UUID: 1618A1E1-609D-47BC-8CCF-EB005BF43C30
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Thursday, 31 Oct 2019 at 08:56:53
+Date & time operation was completed: Thursday, 31 Oct 2019 at 09:10:01
+Total elapsed time (HH:MM:SS): 00:13:08
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

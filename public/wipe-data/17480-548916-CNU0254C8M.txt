@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ProBook 6550b
+Computer Serial: CNU0254C8M
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 146D
+Processor: Intel(R) Core(TM) i3 CPU       M 350  @ 2.27GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LC Gigabit Network Connection, MAC Address: d8:d3:85:3a:6c:5d
+NIC: Vendor: Broadcom Limited, Model: BCM43224 802.11a/b/g/n, MAC Address: 00:26:82:af:7f:92
+DVD-RAM writer: DVD RW AD-7586H
+Drive 1: Model: ST9320423AS, Serial: 5VH36WX1, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: F58F049A-1DF6-4B2D-AB36-C6B5677CB827
+Current user: ITAMG
+Computer ID: CNU0254C8M
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 548916
+Lot Name: Virtua Health System
+Lot Number: 17480
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9320423AS
+             Serial: 5VH36WX1 Size: 320.07 GB
+
+UUID: FF473627-F138-4F82-B8B7-C8D25CD26F48
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 10 Jan 2001 at 01:31:02
+Date & time operation was completed: Wednesday, 10 Jan 2001 at 02:51:22
+Total elapsed time (HH:MM:SS): 01:20:20
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

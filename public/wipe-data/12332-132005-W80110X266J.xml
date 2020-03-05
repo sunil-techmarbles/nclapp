@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 8.3.2 64-bit">
+        <KernelVersion>4.16.15-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>Apple Inc.</ComputerVendor>
+            <ComputerModel>MacBookPro5,5</ComputerModel>
+            <ComputerSerial>W80110X266J</ComputerSerial>
+            <MotherboardVendor>Apple Inc.</MotherboardVendor>
+            <MotherboardModel>Mac-F2268AC8</MotherboardModel>
+            <AssetTag>Asset Tag#</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM)2 Duo CPU     P8700  @ 2.53GHz</Name>
+                    <Speed>2500 MHz</Speed>
+                    <ID>U2E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>2</NumThreads>
+                    <L1Cache>32 kB</L1Cache>
+                    <L2Cache>Unavailable</L2Cache>
+                    <L3Cache>Unavailable</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>0x80AD</Vendor>
+                    <Capacity>2048 MB</Capacity>
+                    <Speed>1067 MHz</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x1D2047C5</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>0x484D54313235533642465238432D47372020</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>0x80AD</Vendor>
+                    <Capacity>2048 MB</Capacity>
+                    <Speed>1067 MHz</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x1D3047F5</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>0x484D54313235533642465238432D47372020</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <Description>DDR3 SODIMM</Description>
+                <TotalCapacity>4096 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>MCP79 Ethernet</Product>
+                    <MACAddress>34:15:9e:23:0c:86</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>10DE:AB0</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Limited</Vendor>
+                    <Product>BCM4322 802.11a/b/g/n Wireless LAN Controller</Product>
+                    <MACAddress>Unavailable</MACAddress>
+                    <Speed>Unavailable</Speed>
+                    <PciId>14E4:432B</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>HL-DT-ST</Vendor>
+                    <Description>DVD writer</Description>
+                    <Product>DVDRW GS23N</Product>
+                    <Capabilities>removable audio cd-r cd-rw dvd dvd-r</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device index="1">
+                    <Vendor>Toshiba</Vendor>
+                    <Product>TOSHIBA MK2555GSXF</Product>
+                    <Serial>X0R1P5LIT</Serial>
+                    <Firmware>FH305B</Firmware>
+                    <Gigabytes>250.06</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SATA</Interface>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>C79 [GeForce 9400M]</Product>
+                    <PciId>10DE:863</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>MCP79 High Definition Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>DP</Vendor>
+                    <Product>bq20z451</Product>
+                    <SerialNumber>Unavailable</SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>0</CurrentCapacity>
+                    <DesignCapacity>5450000</DesignCapacity>
+                    <FullCapacity>4399000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>MCP79 AHCI Controller</Product>
+                    <Description>SATA controller</Description>
+                    <PciId>10DE:AB9</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>9</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>1</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>39C012C9-195A-4CD8-AEA9-02CB1756F9B9</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>Asset Tag#</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>132005</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Ogilvy</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>12332</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Laptop</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="19835274981417617314202449495117186126">
+                    <UUID>F1AFCFDA-757D-454B-9FFE-3AAFE55CCCEF</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Monday, 01 Jan 2001 00:05:46</StartTime>
+                    <Duration>00:05:34</Duration>
+                    <ActionResult Index="5">Failure</ActionResult>
+                    <FailureReason>Failure writing data to device</FailureReason>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>1</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>12056576</SectorsOverwritten>
+                    <SectorsNotOverwritten>476340592</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>Toshiba</Vendor>
+                    <Product>TOSHIBA MK2555GSXF</Product>
+                    <Serial>X0R1P5LIT</Serial>
+                    <Gigabytes>250.06</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>1</ID>
+                            <Name>Raw_Read_Error_Rate</Name>
+                            <Flag>0x000b</Flag>
+                            <Value>100</Value>
+                            <Worst>097</Worst>
+                            <Threshold>050</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>2</ID>
+                            <Name>Throughput_Performance</Name>
+                            <Flag>0x0005</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>050</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Offline</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>3</ID>
+                            <Name>Spin_Up_Time</Name>
+                            <Flag>0x0027</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>001</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1250</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>4</ID>
+                            <Name>Start_Stop_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>8049</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>0x0033</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>050</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>124</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>7</ID>
+                            <Name>Seek_Error_Rate</Name>
+                            <Flag>0x000b</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>050</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>8</ID>
+                            <Name>Seek_Time_Performance</Name>
+                            <Flag>0x0005</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>050</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Offline</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>075</Value>
+                            <Worst>075</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>10181</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>10</ID>
+                            <Name>Spin_Retry_Count</Name>
+                            <Flag>0x0033</Flag>
+                            <Value>253</Value>
+                            <Worst>100</Worst>
+                            <Threshold>030</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>12</ID>
+                            <Name>Power_Cycle_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>4815</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>191</ID>
+                            <Name>G-Sense_Error_Rate</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1269</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>192</ID>
+                            <Name>Power-Off_Retract_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>095</Value>
+                            <Worst>095</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>2745</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>193</ID>
+                            <Name>Load_Cycle_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>010</Value>
+                            <Worst>010</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>902188</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>194</ID>
+                            <Name>Temperature_Celsius</Name>
+                            <Flag>0x0022</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>27 (Min/Max 3/45)</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>196</ID>
+                            <Name>Reallocated_Event_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>91</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>197</ID>
+                            <Name>Current_Pending_Sector</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1218</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>198</ID>
+                            <Name>Offline_Uncorrectable</Name>
+                            <Flag>0x0030</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Offline</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>199</ID>
+                            <Name>UDMA_CRC_Error_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>200</Value>
+                            <Worst>200</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>220</ID>
+                            <Name>Disk_Shift</Name>
+                            <Flag>0x0002</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>27</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>222</ID>
+                            <Name>Loaded_Hours</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>081</Value>
+                            <Worst>081</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>7742</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>223</ID>
+                            <Name>Load_Retry_Count</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>224</ID>
+                            <Name>Load_Friction</Name>
+                            <Flag>0x0022</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>226</ID>
+                            <Name>Load-in_Time</Name>
+                            <Flag>0x0026</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>241</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>240</ID>
+                            <Name>Head_Flying_Hours</Name>
+                            <Flag>0x0001</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>001</Threshold>
+                            <Type>Pre-fail</Type>
+                            <Updated>Offline</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>254</ID>
+                            <Name>Free_Fall_Sensor</Name>
+                            <Flag>0x0032</Flag>
+                            <Value>100</Value>
+                            <Worst>100</Worst>
+                            <Threshold>000</Threshold>
+                            <Type>Old_age</Type>
+                            <Updated>Always</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>2344</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

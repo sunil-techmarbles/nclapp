@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.1.3 64-bit">
+        <KernelVersion>4.14.65-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>LENOVO</ComputerVendor>
+            <ComputerModel>20K3S0YQ00</ComputerModel>
+            <ComputerSerial>PF12L3DD</ComputerSerial>
+            <MotherboardVendor>LENOVO</MotherboardVendor>
+            <MotherboardModel>20K3S0YQ00</MotherboardModel>
+            <AssetTag>No Asset Information</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz</Name>
+                    <Speed>2600 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>128 kB</L1Cache>
+                    <L2Cache>512 kB</L2Cache>
+                    <L3Cache>4096 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>SK Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>Row Of Chips</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>00000000</SerialNumber>
+                    <AssetTag>None</AssetTag>
+                    <PartNumber>H9CCNNNCLGALAR-NUD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>SK Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>Row Of Chips</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>00000000</SerialNumber>
+                    <AssetTag>None</AssetTag>
+                    <PartNumber>H9CCNNNCLGALAR-NUD</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <Description>LPDDR3 Row Of Chips</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Wireless 8260</Product>
+                    <MACAddress>a0:af:bd:4f:1e:ab</MACAddress>
+                    <Speed>Unavailable</Speed>
+                    <PciId>8086:24F3</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Ethernet Connection I219-LM</Product>
+                    <MACAddress>8c:16:45:09:ea:0d</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:156F</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device index="1">
+                    <Vendor>Samsung</Vendor>
+                    <Product>SAMSUNG MZVLW256HEHP-000L7</Product>
+                    <Serial>S35ENA0K125497</Serial>
+                    <Firmware>4L7QCXB7</Firmware>
+                    <Gigabytes>256.06</Gigabytes>
+                    <Bytes>256060514304</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <Interface>NVMe</Interface>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Skylake GT2 [HD Graphics 520]</Product>
+                    <PciId>8086:1916</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>SMP</Vendor>
+                    <Product>01AV430</Product>
+                    <SerialNumber>9449</SerialNumber>
+                    <Type>Li-poly</Type>
+                    <CurrentCapacity>0</CurrentCapacity>
+                    <DesignCapacity>57020000</DesignCapacity>
+                    <FullCapacity>54570000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>NVMe SSD Controller SM961/PM961</Product>
+                    <Description>Non-Volatile memory controller</Description>
+                    <PciId>144D:A804</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>4</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>518E64AD-F25F-4E9E-8FF5-452F73BBDF66</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>No Asset Information</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>551548</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Goodwin Procter LLP</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>17540</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Laptop</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="1951514910112177701501212277916223111816132">
+                    <UUID>D84682E5-B1C8-49C0-AD46-6D7942E274CD</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Monday, 03 Feb 2020 16:16:41</StartTime>
+                    <Duration>00:47:07</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>500118192</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>50011820</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear. This drive is capable of getting Purge, but didn't due to an error.</NISTMethodTypeReason>
+                    <Vendor>Samsung</Vendor>
+                    <Product>SAMSUNG MZVLW256HEHP-000L7</Product>
+                    <Serial>S35ENA0K125497</Serial>
+                    <Gigabytes>256.06</Gigabytes>
+                    <Bytes>256060514304</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

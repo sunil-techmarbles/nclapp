@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2347H6U
+Computer Serial: PB4C4N2
+Motherboard Vendor: LENOVO
+Motherboard Model: 2347H6U
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 00:21:cc:db:a1:be
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 84:3a:4b:55:2b:1c
+DVD-RAM writer: DVDRAM GT50N
+Drive 1: Model: ST320LT007-9ZV142, Serial: W0Q89BV5, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 5E8ED34B-B416-41D8-82C1-829292DB3C7F
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 561908
+Lot Name: Northwell Health
+Lot Number: 18912
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST320LT007-9ZV142
+             Serial: W0Q89BV5 Size: 320.07 GB
+
+UUID: C60D0E97-735A-47FC-BFAF-F6EBCBE08DA5
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 625142448
+Action Start Time: Monday, 01 Jan 2001 at 00:02:27
+Action End Time: Monday, 01 Jan 2001 at 04:03:16
+Action Duration: 04:00:49
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

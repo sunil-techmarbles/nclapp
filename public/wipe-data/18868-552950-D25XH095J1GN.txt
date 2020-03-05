@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac18,3
+Computer Serial: D25XH095J1GN
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-BE088AF8C5EB4FA2
+Processor: Intel(R) Core(TM) i5-7500 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, DDR4 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: 14:20:5e:0a:98:da
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 68:fe:f7:03:a8:43
+Drive 1: Model: APPLE SSD SM0512L, Serial: S3CXNY0K530057, Size: 500.28 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Ellesmere [Radeon RX 470/480/570/570X/580/580X]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Ellesmere [Radeon RX 580]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 100 Series/C230 Series Chipset Family HD Audio Controller
+USB Ports: 7
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: C1214514-9DDA-4886-A2B2-1420465EB1D4
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 552950
+Lot Name: Hasbro Inc
+Lot Number: 18868
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0512L
+             Serial: S3CXNY0K530057 Size: 500.28 GB
+
+UUID: 2B11FB5E-71AC-4614-BA4A-AC9741B2CADF
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 122138132
+Sectors Not Overwritten: 0
+Sectors Verified: 12213814
+Action Start Time: Thursday, 19 Dec 2019 at 18:44:04
+Action End Time: Thursday, 19 Dec 2019 at 18:45:07
+Action Duration: 00:01:03
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10AM000VUS
+Computer Serial: MG00FM7D
+Motherboard Vendor: LENOVO
+Motherboard Model: SHARKBAY
+Processor: Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 00:23:24:8f:6d:af
+DVD-RAM writer: DVD-RAM GHC0N
+Drive 1: Model: ST500LM021-1KJ152, Serial: W625FLDG, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: EBF39964-2926-46F2-95D8-7653AA28E6D8
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 513342
+User3: Rye City School District
+User4: 17495
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W625FLDG Size: 500.11 GB
+
+UUID: BE84BC73-8320-4C98-9221-4016F45B98F9
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 21 Nov 2019 at 10:46:40
+Date & time operation was completed: Thursday, 21 Nov 2019 at 12:17:28
+Total elapsed time (HH:MM:SS): 01:30:48
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

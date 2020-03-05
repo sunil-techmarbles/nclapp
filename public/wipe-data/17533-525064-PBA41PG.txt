@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2349G2U
+Computer Serial: PBA41PG
+Motherboard Vendor: LENOVO
+Motherboard Model: 2349G2U
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 28:d2:44:1b:7e:be
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 6c:88:14:fc:42:84
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD-RAM writer: DVD-RW DS8A8SH
+Drive 1: Model: Samsung SSD 850 EVO 250GB, Serial: S2R5NX0J549635A, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 5F8CF3CA-AB00-4250-AE29-732264C3B0F5
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525064
+Lot Name: 17533
+Lot Number: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 EVO 250GB
+             Serial: S2R5NX0J549635A Size: 250.06 GB
+
+UUID: C2FCED59-2CBD-4BDC-945F-3C9670E9B0B7
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Wednesday, 30 Oct 2019 at 15:23:59
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 15:43:35
+Total elapsed time (HH:MM:SS): 00:19:36
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

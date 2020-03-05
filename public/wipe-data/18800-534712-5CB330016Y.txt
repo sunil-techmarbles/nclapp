@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 8570w
+Computer Serial: 5CB330016Y
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 176B
+Processor: Intel(R) Core(TM) i7-3740QM CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:c9:ef:53:59:f9
+NIC: Vendor: Intel Corporation, Model: Centrino Ultimate-N 6300, MAC Address: 3c:a9:f4:4d:3d:ac
+DVD-RAM writer: DVD-RAM UJ8D1
+Drive 1: Model: INTEL SSDMAEXC024G3H, Serial: CVHA3182021W024D, Size: 24.02 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107GLM [Quadro K2000M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 3C07C889-8585-4AF0-81F2-4AD7533A17A7
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 534712
+Lot Name: Greenman Pederen Inc.
+Lot Number: 18800
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDMAEXC024G3H
+             Serial: CVHA3182021W024D Size: 24.02 GB
+
+UUID: 7A2B8A75-BE36-458F-97A5-F013D847A536
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 13 Nov 2019 at 12:02:05
+Date & time operation was completed: Wednesday, 13 Nov 2019 at 12:02:50
+Total elapsed time (HH:MM:SS): 00:00:45
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

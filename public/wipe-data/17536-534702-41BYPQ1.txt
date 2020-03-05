@@ -1,0 +1,241 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R510
+Computer Serial: 41BYPQ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0DPRKF
+Processor: Intel(R) Xeon(R) CPU           E5649  @ 2.53GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 16384 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5716 Gigabit Ethernet, MAC Address: 78:2b:cb:1c:ca:e0
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5716 Gigabit Ethernet, MAC Address: 78:2b:cb:1c:ca:e1
+DVD reader: DVD-ROM DV-28SW
+Drive 1: Model: ST31000424SS, Serial: 9WK3T6HQ, Size: 999.65 GB
+Drive 2: Model: PERC H700, Serial: 0060deeb0d5fe85e2500574e26b0bc82, Size: 999.65 GB
+Drive 3: Model: PERC H700, Serial: 0008e2d80c4de85e2500574e26b0bc82, Size: 999.65 GB
+Drive 4: Model: PERC H700, Serial: 00fd5b670c46e85e2500574e26b0bc82, Size: 999.65 GB
+Drive 5: Model: PERC H700, Serial: 00717b880e69e85e2500574e26b0bc82, Size: 999.65 GB
+Drive 6: Model: PERC H700, Serial: 005f3dd60e6ee85e2500574e26b0bc82, Size: 999.65 GB
+Drive 7: Model: PERC H700, Serial: 005c7f350d53e85e2500574e26b0bc82, Size: 999.65 GB
+Drive 8: Model: PERC H700, Serial: 00bd28930d59e85e2500574e26b0bc82, Size: 999.65 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: E603ED2E-F74C-4112-8E89-A63AFD1C831F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 534702
+User3: PRA Health Sciences
+User4: 17536
+\"Product\": Server
+
+>> Raid device #1  Vendor: SEAGATE Model: ST31000424SS
+             Serial: 9WK3T6HQ Size: 999.65 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST31000424SS
+             Serial: 9WK3T6HQ Size: 931.0 GB  [ 32:3 ]
+
+UUID: 0BD51398-BF4D-49C8-ABEA-34DFAFE20EA0
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 00:51:14
+Total elapsed time (HH:MM:SS): 08:32:36
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: DELL Model: PERC H700
+             Serial: 0060deeb0d5fe85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: 952C4649-1EAC-4E66-AA37-E1F669CF92B4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 01:52:45
+Total elapsed time (HH:MM:SS): 09:34:07
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: DELL Model: PERC H700
+             Serial: 0008e2d80c4de85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: 63B3D093-2E93-4527-9450-44612E8C8F70
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 01:51:27
+Total elapsed time (HH:MM:SS): 09:32:49
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: DELL Model: PERC H700
+             Serial: 00fd5b670c46e85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: DBA058E8-A03C-4854-A967-B6FBB633A297
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 01:59:42
+Total elapsed time (HH:MM:SS): 09:41:04
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: DELL Model: PERC H700
+             Serial: 00717b880e69e85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: B9A125F7-CB62-47FE-A29E-8CAABBEB6026
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 01:56:51
+Total elapsed time (HH:MM:SS): 09:38:13
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: DELL Model: PERC H700
+             Serial: 005f3dd60e6ee85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: 7A716430-75A0-486A-951E-70EC53BB722C
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 01:42:29
+Total elapsed time (HH:MM:SS): 09:23:51
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: DELL Model: PERC H700
+             Serial: 005c7f350d53e85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: 41618CE5-87C8-4E8C-8BA8-C4BC0B32F04F
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 02:05:09
+Total elapsed time (HH:MM:SS): 09:46:31
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: DELL Model: PERC H700
+             Serial: 00bd28930d59e85e2500574e26b0bc82 Size: 999.65 GB
+
+UUID: 708298CE-3E10-4A00-9918-4A23D6DBFE46
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 16:18:38
+Date & time operation was completed: Thursday, 14 Nov 2019 at 01:45:58
+Total elapsed time (HH:MM:SS): 09:27:20
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

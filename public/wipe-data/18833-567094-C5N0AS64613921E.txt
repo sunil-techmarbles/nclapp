@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: ASUSTeK Computer Inc.
+Computer Model: K54C
+Computer Serial: C5N0AS64613921E
+Motherboard Vendor: ASUSTeK Computer Inc.
+Motherboard Model: K54C
+Processor: Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz, Speed: 2200 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 0 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Ralink corp., Model: RT5390 Wireless 802.11n 1T/1R PCIe, MAC Address: e0:06:e6:68:6a:ca
+NIC: Vendor: Qualcomm Atheros, Model: AR8151 v2.0 Gigabit Ethernet, MAC Address: 10:bf:48:26:ad:e7
+DVD-RAM writer: CDDVDW SN-208BB
+Drive 1: Model: TOSHIBA MQ01ABD032, Serial: 528LF4DAS, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 4B2B4E8F-EF96-4692-A069-E41DCB553E9C
+Current user: ITAMG
+Computer ID: ATN12345678901234567
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 567094
+Lot Name: Proskauer Rose
+Lot Number: 18833
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MQ01ABD032
+             Serial: 528LF4DAS Size: 320.07 GB
+
+UUID: 44F2FF8A-8871-4C43-B569-12D883D807B0
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 625142448
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Monday, 03 Feb 2020 at 13:56:12
+Action End Time: Monday, 03 Feb 2020 at 18:14:43
+Action Duration: 04:18:31
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

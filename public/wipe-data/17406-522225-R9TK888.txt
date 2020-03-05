@@ -1,0 +1,56 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 23532MU
+Computer Serial: R9TK888
+Motherboard Vendor: LENOVO
+Motherboard Model: 23532MU
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 3c:97:0e:3b:6c:ee
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD-RAM UJ8B2
+Drive 1: Model: HITACHI HTS725050A7E630, Serial: TF1500Y9H1H11B, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: F0F4A457-A0D9-48B7-BEAB-116060407A32
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 522225
+User3: Tory Burch
+User4: 17406
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: HITACHI HTS725050A7E630
+             Serial: TF1500Y9H1H11B Size: 500.11 GB
+
+UUID: 30B55D10-7B50-49DA-9475-0468E780C171
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Friday, 01 Nov 2019 at 11:09:37
+Date & time operation was completed: Friday, 01 Nov 2019 at 11:15:40
+Total elapsed time (HH:MM:SS): 00:06:03
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

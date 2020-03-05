@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 2560p
+Computer Serial: CNU1380KJM
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 162B
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 10:1f:74:e7:ab:8a
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: CDDVDW TS-U633J
+Drive 1: Model: ST750LX003-1AC154, Serial: W20047JH, Size: 750.16 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 75996C8B-43BB-4B44-9DE0-AD5405A6379F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 550273
+User3: World Wrestling Entertainment
+User4: 17561
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST750LX003-1AC154
+             Serial: W20047JH Size: 750.16 GB
+
+UUID: 5EE834D3-E957-46CF-9D80-34411055A497
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 03 Feb 2020 at 13:25:14
+Date & time operation was completed: Monday, 03 Feb 2020 at 16:09:09
+Total elapsed time (HH:MM:SS): 02:43:55
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
