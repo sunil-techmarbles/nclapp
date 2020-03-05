@@ -54,10 +54,10 @@ class SessionData extends Model
 
     public static function updateSessionStatus($session,$r,$satus)
     {
-    	return self::update(["status"=> $satus])
-    		->where(["sid"=> $session,
-    			"asset"=>$r
-    		]);
+    	return self::where(["sid"=> $session,
+                "asset"=>$r
+            ])
+            ->update(["status"=> $satus]);
     }
 
     public static function updateRecord($request)

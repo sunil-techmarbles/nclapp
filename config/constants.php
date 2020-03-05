@@ -3663,7 +3663,7 @@ return [
         // "richard@itamg.com",
         // "julio@itamg.com",
     ],
-    'sessionEmails' => [
+    'sessionEmailsgit ' => [
         "rahuls.techmarbles@gmail.com",
         // "randy@itamg.com",
         // "richy@itamg.com",

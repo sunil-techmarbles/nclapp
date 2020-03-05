@@ -17,6 +17,7 @@ use App\Shipment;
 use App\Session;
 use App\ShipmentsData;
 use App\SessionData;
+use App\SupplieEmail;
 
 class SessionController extends Controller
 {
@@ -172,15 +173,24 @@ class SessionController extends Controller
     public function sessionSearchAndWithdrawAndReorder($request, $session)
     {
 		$sessionName = Session::getCurrentSessionName($session);
+		$result = ['status' => false, 'message' => 'Something went wrong'];
 		if($r = $request->get('remove'))
 		{
-			SessionData::updateSessionStatus($session,$r,$satus='removed');
+			$outpout = SessionData::updateSessionStatus($session,$r,$satus='removed');
+			if($outpout)
+			{
+				$result = ['status' => true, 'message' => 'Remove successfully'];
+			}
 		}
 		if($r = $request->get('restore'))
 		{
-			SessionData::updateSessionStatus($session,$r,$satus='active');
-			return true;
+			$outpout = SessionData::updateSessionStatus($session,$r,$satus='active');
+			if($outpout)
+			{
+				$result = ['status' => true, 'message' => 'Restore successfully'];
+			}
 		}
+		return $result;
     }
 
     public function index(Request $request)
@@ -228,6 +238,13 @@ class SessionController extends Controller
 		{	
 			$sessionName = Session::getCurrentSessionName($session);
 			$output = $this->sessionSearchAndWithdrawAndReorder($request, $session);
+			if($output['status'])
+			{
+				$status = 'success';
+                $message = $output['message'];
+                \Session::flash($status, $message);
+			}
+
 			$items = SessionData::getSessionItems($session, $satus='active');
 			$assts = SessionData::getSessionAssets($session, $satus='active');
 			foreach($assts as $a)
@@ -243,7 +260,7 @@ class SessionController extends Controller
 			foreach($parts as $p)
 	        {
 	            if($request->has('withdraw'))
-	            {   
+	            {
 	                if(in_array($p["id"],$pparts))
 	                {
 	                    $newQty = max(0,$p["qty"]-$p["required_qty"]);

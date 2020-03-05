@@ -14,8 +14,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label for="session_name">Session Name:</label>
-						<input class="form-control" type="text" name="session_name" id="session_name"/>
+						<input class="form-control" placeholder="Session Name" type="text" name="session_name" id="session_name"/>
 						<button class="btn btn-warning" name="new_session" value="1" type="submit">New Session</button>
 					</div>
 				</div>
@@ -56,12 +55,12 @@
 						<th>CPU</th>
 						<th>Price</th>
 						<th>Count</th>
-					</tr>					
+					</tr>
 				</thead>
 				<tbody>	
 					@foreach($items as $i)
 						<tr>
-							<td><a href="#" onclick="$('.assets{{$i['aid']}}').toggle();">{{$i["asin"]}}</a></td>
+							<td><a href="javascript:void(0);" onclick="$('.assets{{$i['aid']}}').toggle();">{{$i["asin"]}}</a></td>
 							<td>{{$i["model"]}}</td>
 							<td>{{$i["form_factor"]}}</td>
 							<td>{{$i["cpu_core"]}} {{$i["cpu_model"]}} CPU @ {{htmlspecialchars($i["cpu_speed"])}}</td>
@@ -72,31 +71,34 @@
 							<tr class="assets{{$i['aid']}}" style="display: none">
 								<td colspan="6">
 									@if(!empty($assets['asin'.$i['aid']]['active']))
-										<b>Asset Numbers:</b> 
+										<b>Asset Numbers {{$i["asin"]}}:</b> 
 										@foreach($assets['asin'.$i['aid']]['active'] as $itm)
 											<a href="{{route('sessions', [
-												's' => request()->get('balls'),
+												's' => request()->get('s'),
 												'remove' => $itm
 
-											])}}
-											">
+											])}}">
 										{{$itm}}</a>&nbsp;
 										@endforeach
 										(click to remove)<br/>
 									@endif
 									@if(!empty($assets['asin'.$i['aid']]['removed']))
-										<b>Asset Numbers:</b> 
+										<b>Asset Numbers {{$i["asin"]}}:</b> 
 										@foreach($assets['asin'.$i['aid']]['removed'] as $itm)
 											<a href="{{route('sessions', [
-												's' => request()->get('balls'),
+												's' => request()->get('s'),
 												'restore' => $itm
 
-											])}}
-											">{{$itm}}</a>&nbsp;
+											])}}">{{$itm}}</a>&nbsp;
 										@endforeach
 										(click to restore)
 									@endif
 								</td>
+								<td style="display: none;"></td>
+								<td style="display: none;"></td>
+								<td style="display: none;"></td>
+								<td style="display: none;"></td>
+								<td style="display: none;"></td>
 							</tr>
 						@endif
 					@endforeach
@@ -144,7 +146,7 @@
 						<button class="btn btn-danger" name="withdraw" value="1" type="submit">Withdraw</button>
 						@if(@$miss>0)
 							<a href="{{route('sessions', [
-									's' => request()->get('balls'),
+									's' => request()->get('s'),
 									'reorder' => 1
 
 								])}}" onclick="$(this).hide()" class="btn btn-warning">Reorder</a>
