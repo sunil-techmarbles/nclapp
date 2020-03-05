@@ -60,6 +60,12 @@ jQuery(document).on('click', '.addPartNumber', function(e) {
 	});
 }); 
 
+
+function savePN(){
+
+	
+}
+
 function filterModels(str)
 { 
 	if (str.length > 2) 

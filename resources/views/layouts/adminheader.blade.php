@@ -79,7 +79,7 @@
 				</li>  
 
 				<li class="nav-item">
-					<a class="addPartNumber nav-link" href=""> Add Part Number </a> 
+					<a class="nav-link" href="#" data-toggle="modal" data-target="#pnModal">Add Part Number</a><br/>
 				</li>   
 			@endif 
 			

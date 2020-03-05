@@ -69,7 +69,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/editasin/{asinid}','AsinController@editAsin')->name('edit.asin');
 		Route::get('/asinparts/{asinid}','AsinController@partsAsin')->name('parts.asin');
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
-
 		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup'); 
 
 
