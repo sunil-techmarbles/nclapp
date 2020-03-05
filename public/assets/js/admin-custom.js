@@ -27,7 +27,7 @@ $(document).ready(function()
 		"bFilter": true,
 		"bInfo": false,
 		"bAutoWidth": false
-	}); 
+	});
 	
 	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable({
 		"searching": false,

@@ -11,7 +11,7 @@ use Config;
 use App\Shipment;
 use App\ShipmentsData;
 use App\Asin;
-use App\AsinAsset;
+use App\SessionData;
 
 class ShipmentController extends Controller
 {
@@ -42,7 +42,7 @@ class ShipmentController extends Controller
 			}
 			foreach($assets as $asset)
 			{
-				if(!$aid) $aid = AsinAsset::getAsinsAidByAssest($asset);
+				if(!$aid) $aid = SessionData::getAsinsAidByAssest($asset);
 				$sn = '';
 				$old_coa = '';
 				$new_coa = '';

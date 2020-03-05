@@ -15,7 +15,7 @@ use Excel;
 use App\Refurb;
 use App\FormsConfig;
 use App\Asin;
-use App\AsinAsset;
+use App\SessionData;
 use App\CoaReport;
 use App\ShipmentsData;
 use App\AsinIssue;
@@ -251,7 +251,7 @@ class RefurbController extends Controller
 			$refurbAssetData = $this->refurbAssetData.'/'.$asset.'.json';
 			if($asset && $aid)
 			{
-				AsinAsset::updateRecord(["aid" => $aid, "asset" => $asset]);
+				SessionData::updateRecord(["aid" => $aid, "asset" => $asset]);
 				if(File::exists($refurbAssetData))
 				{
 					$adata = json_decode(file_get_contents($refurbAssetData),true);
@@ -347,7 +347,7 @@ class RefurbController extends Controller
 			$asset = $request->get("a");
 			$alist = explode(PHP_EOL,$asset);
 			$alist = array_unique($alist);
-			$upd = AsinAsset::updateRecordRunStatus($alist, $text= 'wholesale');
+			$upd = SessionData::updateRecordRunStatus($alist, $text= 'wholesale');
 			if($upd['output'])
 			{
 				return response()->json(['message' => count($upd).' assets updated', 'type' => 'success', 'status' => true]);

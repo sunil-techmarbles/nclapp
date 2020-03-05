@@ -36,7 +36,7 @@
 				@foreach($sessions as $p)
 					<tr>
 						<td>{{$p["id"]}}</td>
-						<td><a href="index.php?page=sessions&s=<?=$p["id"]?>">{{$p["name"]}}</a></td>
+						<td><a href="{{route('sessions', ['s' => $p['id']])}}">{{$p["name"]}}</a></td>
 						<td>{{$p["started_on"]}}</td>
 						<td>{{$p["status"] == 'open' ? '' : $p["updated_on"]}}</td>
 						<td>{{$p["status"]}}</td>
@@ -46,7 +46,7 @@
 			</tbody>
 		</table>
 		@if(!empty($items))
-			<h3>Items for session {{$sess_name}}</h3>
+			<h3>Items for session {{$sessionName}}</h3>
 			<table id="sessions-asins" class="table">
 				<thead>
 					<tr>
@@ -74,14 +74,25 @@
 									@if(!empty($assets['asin'.$i['aid']]['active']))
 										<b>Asset Numbers:</b> 
 										@foreach($assets['asin'.$i['aid']]['active'] as $itm)
-											<a href="index.php?page=sessions&s=<?=$sess?>&remove=<?=$itm?>&t=<?=time()?>">{{$itm}}</a>&nbsp;
+											<a href="{{route('sessions', [
+												's' => request()->get('balls'),
+												'remove' => $itm
+
+											])}}
+											">
+										{{$itm}}</a>&nbsp;
 										@endforeach
 										(click to remove)<br/>
 									@endif
 									@if(!empty($assets['asin'.$i['aid']]['removed']))
 										<b>Asset Numbers:</b> 
 										@foreach($assets['asin'.$i['aid']]['removed'] as $itm)
-											<a href="index.php?page=sessions&s=<?=$sess?>&restore=<?=$itm?>&t=<?=time()?>">{{$itm}}</a>&nbsp;
+											<a href="{{route('sessions', [
+												's' => request()->get('balls'),
+												'restore' => $itm
+
+											])}}
+											">{{$itm}}</a>&nbsp;
 										@endforeach
 										(click to restore)
 									@endif
@@ -95,7 +106,8 @@
 		
 		@if(!empty($parts))
 			<h3>Required Parts</h3>
-			<form method="post" class="form-inline" action="index.php">
+			<form method="post" action="{{route('sessions')}}">
+				@csrf
 				<table id="sessions-asins-part" class="table">
 					<thead>
 						<tr>
@@ -107,7 +119,11 @@
 						</tr>
 					</thead>
 					<tbody>
+						@php $miss = 0 @endphp
 						@foreach($parts as $p)
+							@if($p["missing"] > 0)
+								@php $miss += $p["missing"]; @endphp
+							@endif
 							<tr>
 								<td>
 									<input type="checkbox" name="ppart[]" checked="checked" id="ppart{{$p["id"]}}" value="{{$p["id"]}}">
@@ -116,23 +132,26 @@
 								<td>{{$p["item_name"]}}</td>
 								<td>{{$p["required_qty"]}}</td>
 								<td>{{$p["qty"]}}</td>
-								<td>{{$p["missing"] > 0 ? $p["missing"] : '&nbsp;'}}</td>
+								<td>{{$p["missing"] > 0 ? $p["missing"] : ''}}</td>
 							</tr>
-						<?php endforeach ?>
+						@endforeach
 					</tbody>
 				</table>
-				<div style="text-align: right; margin-bottom: 10px">
+				<div class="mb-3">
 					<input type="hidden" name="page" value="sessions"/>
-					<input type="hidden" name="s" value="<?=$sess?>"/>
+					<input type="hidden" name="s" value="{{request()->get('s')}}"/>
 					<div class="form-group">
 						<button class="btn btn-danger" name="withdraw" value="1" type="submit">Withdraw</button>
-					</div>
-					@if($miss>0)
-						<a style="float:right" href="index.php?page=sessions&s=<?=$sess?>&reorder=1&t=<?=time()?>" onclick="$(this).hide()" class="btn btn-warning">Reorder</a>
-					@endif
+						@if(@$miss>0)
+							<a href="{{route('sessions', [
+									's' => request()->get('balls'),
+									'reorder' => 1
+
+								])}}" onclick="$(this).hide()" class="btn btn-warning">Reorder</a>
+						@endif
+					</div>					
 				</div>
 			</form>
-			<div style="margin-bottom: 10px"></div>
 		@endif
 	</div>
 </div>
