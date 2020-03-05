@@ -8,6 +8,14 @@ var new_coa = "";
 var win8 = 0;
 var _token = $('meta[name="csrf-token"]').attr('content');
 
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'btn btn-danger'
+  },
+  buttonsStyling: false
+})
+
 $(document).ready(function()
 {
 	$(document).keydown(function(event)
@@ -73,10 +81,11 @@ function saveCoa()
 		$.post("/"+urlPrefix+"/savecoa", 
 			{_token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id},
 			function(ressponse){
+				var icon = (response.status) ? 'success' : 'error';
 				swalWithBootstrapButtons.fire( 
 					response.type,
 					response.message ,
-					response.status
+					icon
 				) 
 		    	$('#detailModal').modal('hide');
 		});
@@ -376,10 +385,11 @@ function setAsin(aId)
 	$("#btnSetAsin").show();
 
 	$.post("/"+urlPrefix+"/saveasin", {_token:_token, aid: a.id, asset: assetNumber}, function(response){
+		var icon = (response.status) ? 'success' : 'error';
 		swalWithBootstrapButtons.fire( 
 					response.type,
 					response.message ,
-					response.status
+					icon
 				) 
 	    return false;
 	});
@@ -426,10 +436,11 @@ function setDescriptions()
 			{_token:_token, asset:assetNumber, sn:adata.Serial, issue:ri},
 			function(response)
 			{
+				var icon = (response.status) ? 'success' : 'error';
 				swalWithBootstrapButtons.fire( 
 					response.type,
 					response.message ,
-					response.status
+					icon
 				) 
 			}
 		);
@@ -451,10 +462,11 @@ function setWholesale()
 	var a = $('#ws_list').val();
 	$.post("/"+urlPrefix+"/setwholesale", {a: a, _token:_token,}, function(response)
 	{
-	    swalWithBootstrapButtons.fire( 
+	    var icon = (response.status) ? 'success' : 'error';
+	    swalWithBootstrapButtons.fire(  
 					response.type,
-					response.message ,
-					response.status
+					response.message , 
+					icon
 				) 
 		$('#ws_list').val('');
 		$('#wsModal').modal('hide');
@@ -465,10 +477,11 @@ function setWS()
 {
 	$.get("/"+urlPrefix+"/setwholesale?a="+assetNumber+"&t="+Math.random(), function(response)
 	{
+		var icon = (response.status) ? 'success' : 'error';
 		swalWithBootstrapButtons.fire( 
 					response.type,
 					response.message ,
-					response.status
+					icon
 				) 
 	});
 	forceWS = true;
@@ -578,10 +591,11 @@ function checkWin8()
 		// console.log(response);
 		if(response.status)
 		{
+			var icon = (response.status) ? 'success' : 'error';
 			swalWithBootstrapButtons.fire( 
 					response.type,
 					response.message ,
-					response.status
+					icon
 				) 
 		}
 	});

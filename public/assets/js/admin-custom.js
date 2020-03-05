@@ -1,7 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
 	$('#asset').focus();
-	$(document).keydown(function(event){
-		if(event.keyCode == 13) {
+	$(document).keydown(function(event)
+	{
+		if(event.keyCode == 13) 
+		{
 			if($("#asset").is(":focus"))
 			{
 				event.preventDefault();
@@ -14,13 +17,14 @@ $(document).ready(function(){
 			}
 		}
 	});
-});
+}); 
 
 $(document).ready(function()
 {
 	$('#supplies, #asins, #users_table ').DataTable();
 	
-	$('#shipment').DataTable({
+	$('#shipment').DataTable
+	({
 		"searching": false,
 		"bPaginate": false,
 		"bLengthChange": false,
@@ -29,7 +33,8 @@ $(document).ready(function()
 		"bAutoWidth": false
 	});
 	
-	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable({
+	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable
+	({
 		"searching": false,
 		"bPaginate": false,
 		"bLengthChange": false,
@@ -38,14 +43,16 @@ $(document).ready(function()
 		"bAutoWidth": false
 	});
 
-	$('#lookup').DataTable({
+	$('#lookup').DataTable
+	({
 		"searching": false,
 		"bPaginate": false, 
 	}); 
 
 	if($('#supplie').length > 0)
 	{
-		$( "#supplie" ).validate({
+		$( "#supplie" ).validate
+		({
 			rules: {
 				qty: {
 					digits: true
@@ -73,9 +80,11 @@ $(document).ready(function()
 	if($(".email_list").length > 0)
 	{
 		var earr=[];
-		$(".email_list").on('change', function(argument) {
+		$(".email_list").on('change', function(argument)
+		{
 			earr=[];
-			$('.email_list').each(function(){
+			$('.email_list').each(function()
+			{
 				if($(this).prop('checked')) earr.push($(this).val());
 			});
 			$('input[name=email]').val(earr.join(','));
@@ -92,7 +101,8 @@ function reorderItem(iid, dqty, url)
 	} 
 	else 
 	{
-		$.ajax({
+		$.ajax
+		({
 			url: url,
 			type: 'GET',
 			data: {supplieid: iid, quantity: qty},
@@ -100,19 +110,21 @@ function reorderItem(iid, dqty, url)
 		})
 		.done(function(response)
 		{
-			swalWithBootstrapButtons.fire( 
-					'Deleted!',
-					response.message ,
-					response.status
+			swalWithBootstrapButtons.fire
+			( 
+				'Deleted!',
+				response.message ,
+				response.status
 			) 
 		}) 
 		.fail(function()
 		{
-			Swal.fire({
-					  icon: 'error',
-					  title: 'Oops...',
-					  text: 'Something went wrong with ajax !',
-				})
+			Swal.fire
+			({
+				icon: 'error',
+				title: 'Oops...',
+				text: 'Something went wrong with ajax !',
+			})
 		});
 	}
 }
@@ -164,7 +176,8 @@ function deptFilter()
 function del_confirm(id,url,text)
 {
 
-	const swalWithBootstrapButtons = Swal.mixin({
+	const swalWithBootstrapButtons = Swal.mixin
+	({
 		customClass: {
 			confirmButton: 'btn btn-success',
 			cancelButton: 'btn btn-danger'
@@ -172,7 +185,8 @@ function del_confirm(id,url,text)
 		buttonsStyling: true
 	})
 
-	swalWithBootstrapButtons.fire({
+	swalWithBootstrapButtons.fire
+	({
 		title: 'Are you sure?',
 		text: "You won't be able to revert this!",
 		icon: 'warning',
@@ -248,7 +262,8 @@ function setBulkAsin(sid)
 	var aid = $('#'+sid).val();
 	if(aid !='')
 	{
-		$.get("ajax.php?action=setBulkAsin&aid="+aid+"&asset="+asset, function(data) {
+		$.get("ajax.php?action=setBulkAsin&aid="+aid+"&asset="+asset, function(data) 
+		{
 			$('#'+data).parent().hide();
 		}); 
 	}
