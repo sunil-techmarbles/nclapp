@@ -18,8 +18,8 @@ $(document).ready(function(){
 
 $(document).ready(function()
 {
-	$('#supplies').DataTable();
-	$('#asins').DataTable();
+	$('#supplies, #asins, #users_table ').DataTable();
+	
 	$('#shipment').DataTable({
 		"searching": false,
 		"bPaginate": false,
@@ -27,7 +27,8 @@ $(document).ready(function()
 		"bFilter": true,
 		"bInfo": false,
 		"bAutoWidth": false
-	});
+	}); 
+	
 	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable({
 		"searching": false,
 		"bPaginate": false,
@@ -37,11 +38,9 @@ $(document).ready(function()
 		"bAutoWidth": false
 	});
 
-	$('#users_table').DataTable();
 	$('#lookup').DataTable({
-		language: {
-			searchPlaceholder: "Search Asin records"
-		} 
+		"searching": false,
+		"bPaginate": false, 
 	}); 
 
 	if($('#supplie').length > 0)

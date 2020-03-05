@@ -35,6 +35,10 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		// refub 
 		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report'); 
 		Route::get('/exportissuereport','RefurbController@ExportIssueReport')->name('get.issue.report');
+
+		// supplies 
+		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
+		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
 	});
 });  
 
@@ -56,8 +60,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/storesupplie','SuppliesController@storeSupplies')->name('store.supplies');
 		Route::get('/editsupplie/{supplieid}','SuppliesController@editSupplies')->name('edit.supplies');
 		Route::post('/updatesupplie','SuppliesController@updateSupplies')->name('update.supplies');
-		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
-		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
 		Route::get('/deletesupplie/{supplieid}','SuppliesController@deleteSupplie')->name('delete.supplies');
      
 		Route::get('/asin','AsinController@index')->name('asin');

@@ -5,29 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\FormsConfig;
 use App\Audit;
+use App\LenovoModelData;
+
 
 class AuditController extends Controller
-{ 
-
+{  
 	
 	public function AddPartNumber(Request $request) 
-	{ 
-		$newpartnumber = FALSE;    
- 		
- 		$response['status']  = 'error';
-        $response['message'] = 'Unable to add Part Number'; 
-		
-		// add to lenovo_model_data
-		// $newpartnumber = LenovoModalData::insertNewPartNumber($request->modal, $request->partnumber );
+	{  
+		$newpartnumber = LenovoModelData::InsertNewPartNumber( $request->modal, $request->partnumber ); 
 
-		if($newpartnumber) 
-		{
+		if(!empty( $newpartnumber ) && $newpartnumber != false)
+		{	
 			$response['status']  = 'success';
         	$response['message'] = 'New Part Number added'; 
 		}
-
+		else 
+		{ 
+			$response['status']  = 'error';
+        	$response['message'] = 'Unable to add Part Number'; 
+		} 
 		return response()->json($response);
- 
 	}
 
  
@@ -63,7 +61,8 @@ class AuditController extends Controller
     public function get_form_text($fld) 
     {
 		$output = "";
-		if ($fld["qtype"]=="text") {
+		if ($fld["qtype"]=="text") 
+		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 				<div class='form-group'>
@@ -77,7 +76,8 @@ class AuditController extends Controller
 	public function get_form_number($fld) 
 	{
 		$output = "";
-		if ($fld["qtype"]=="number") {
+		if ($fld["qtype"]=="number") 
+		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 				<div class='form-group'>
@@ -91,7 +91,8 @@ class AuditController extends Controller
 	public function get_form_area($fld) 
 	{
 		$output = "";
-		if ($fld["qtype"]=="area") {
+		if ($fld["qtype"]=="area") 
+		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 				<div class='form-group' style='width:100%'>
@@ -105,7 +106,8 @@ class AuditController extends Controller
 	public function get_form_bool($fld) 
 	{
 		$output = "";
-		if ($fld["qtype"]=="bool") {
+		if ($fld["qtype"]=="bool") 
+		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 				<div class='btn-group btn-group-horizontal' data-toggle='buttons'>
@@ -119,32 +121,34 @@ class AuditController extends Controller
 	public function get_form_mult($fld) 
 	{
 		$output = "";
-		if ($fld["qtype"]=="mult") {
+		if ($fld["qtype"]=="mult") 
+		{
 			$options = explode(";",$fld["options"]);
 			$grades = explode(";",$fld["grades"]);
 
 			if($fld["sort"]!="no") natsort($options);
 			$output = "<label class='ttl'>".$fld["question"].($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>";
 			$itemname = $fld["qtype"] . "_" . $fld["id"] . "[]";
-			foreach($options as $oid=>$oname){
-
-				foreach($grades as $key => $grade) {
-						if($oid == $key) {
+			foreach($options as $oid=>$oname)
+			{
+				foreach($grades as $key => $grade) 
+				{
+						if($oid == $key) 
+						{
 
 							$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
-				$output .= "<div class='cb-cnt'><label class='btn' for='$itemid'><input class='calculate_grade' data-grade='$grade' type='checkbox' value='".htmlentities($oname, ENT_QUOTES).
-					"' id='$itemid' name='$itemname' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
-					<span>" . $oname . "</span></label></div>";
-
+							$output .= "<div class='cb-cnt'><label class='btn' for='$itemid'><input class='calculate_grade' data-grade='$grade' type='checkbox' value='".htmlentities($oname, ENT_QUOTES).
+								"' id='$itemid' name='$itemname' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+								<span>" . $oname . "</span></label></div>";
 						}
 				}
-
-					
 			}
-			if ($fld["allow_new"]) {
+			if ($fld["allow_new"]) 
+			{
 				$confdata = explode(" ",$fld["config"]);
 				$olbl="Other:";
-				foreach($confdata as $cd) {
+				foreach($confdata as $cd) 
+				{
 					$itm = explode("=",$cd);
 					if(count($itm)==2 && trim($itm[0])=="data-customlabel") $olbl = trim(str_replace('"','',$itm[1]));
 				}
@@ -159,25 +163,29 @@ class AuditController extends Controller
 	public function get_form_radio($fld) 
 	{
 		$output = "";
-		if ($fld["qtype"]=="radio") {
+		if ($fld["qtype"]=="radio") 
+		{
 			$output .= "<div class='form-group'>";
 			$options = explode(";",$fld["options"]);
 			if($fld["sort"]!="no") natsort($options);
 			if (count($options)==1) $fld["config"] .= " checked='checked'";
 			$output .= "<label class='ttl'>".$fld["question"].($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>";
 			$itemname = $fld["qtype"] . "_" . $fld["id"];
-			foreach($options as $oid=>$oname){
+			foreach($options as $oid=>$oname)
+			{
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
 				$output .= "
 					<label class='btn' for='$itemid'><input type='radio' id='$itemid'  value='".htmlentities($oname, ENT_QUOTES)."' name='$itemname' "
 					.$fld["config"].($fld["required"]?" required='true'":"").($fld["default_val"]==$oname?" checked='checked'":"")."/>
 					<span>" . $oname . "</span></label>";
 			}
-			if ($fld["allow_new"]) {
+			if ($fld["allow_new"]) 
+			{
 				$confdata = explode(" ",$fld["config"]);
 				$olbl="Other:";
 				$addopts="";
-				foreach($confdata as $cd) {
+				foreach($confdata as $cd) 
+				{
 					$itm = explode("=",$cd);
 					if(count($itm)==2 && trim($itm[0])=="data-customlabel") $olbl = trim(str_replace('"','',$itm[1]));
 					if(count($itm)==2 && trim($itm[0])=="data-capitalize") $addopts.=' style="text-transform:uppercase"';
@@ -210,7 +218,8 @@ class AuditController extends Controller
   					<select class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
   					self::getOptions($options,$fld["default_val"]).  
   					"</select></div>";
-			if ($fld["allow_new"]) {
+			if ($fld["allow_new"]) 
+			{
 				$selid = $itemid;
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_new";
 				$output .= " <div class='form-group' style='vertical-align:bottom;'><label for='$itemid'>Other:</label> <input type='text' class='form-control' 
@@ -220,11 +229,4 @@ class AuditController extends Controller
 		return $output;
 	}
  
-
-
-
-
-
-
-
 }

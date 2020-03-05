@@ -1,6 +1,6 @@
 jQuery(document).on('click', '.addPartNumber', function(e) {
 	e.preventDefault();  
-	
+
 	Swal.fire({ 
 		title: 'Add Part Number',
 		html: '<input type="text" class="swal2-input" id="modal" placeholder="Enter Modal" name="modal">' +
@@ -11,20 +11,19 @@ jQuery(document).on('click', '.addPartNumber', function(e) {
 			let modal = Swal.getPopup().querySelector('#modal').value;
 			let partnumber = Swal.getPopup().querySelector('#partnumber').value;
 			
-			if (modal === '' || partnumber === '') {
-				Swal.showValidationMessage('Modal or Part Number is empty')
+			if(modal === '' || partnumber === '') 
+			{
+				Swal.showValidationMessage('Modal or Part Number is empty');
 			} 
 		} 
 	})
-	.then(( result ) => {      
-
+	.then(( result ) => {   
 		if(result.value) 
 		{
-			
 			let modal = Swal.getPopup().querySelector('#modal').value;
 			let partnumber = Swal.getPopup().querySelector('#partnumber').value;
 
-			$.ajax({
+			$.ajax({ 
 				url: 'addpartnumber/',
 				type: 'GET', 
 				data: {'modal':modal, 'partnumber':partnumber},
@@ -32,28 +31,22 @@ jQuery(document).on('click', '.addPartNumber', function(e) {
 			}) 
 			.done(function(response)
 			{  
-
 				if( response.status == 'success')
 				{ 
-
 					Swal.fire({
 						icon: 'success',
 						title: 'Added',
 						text: 'Part Number has been added successfully',
 					})
-
 				}
 				else 
 				{ 
-
 					Swal.fire({
 						icon: 'error',
 						title: 'Oops...',
 						text: 'Something went wrong, Please try again!',
 					})
-
 				}
-
 			})
 			.fail(function()
 			{
@@ -63,8 +56,24 @@ jQuery(document).on('click', '.addPartNumber', function(e) {
 					text: 'Something went wrong with ajax !',
 				})
 			});
-
 		}
 	});
-
 }); 
+
+function filterModels(str)
+{ 
+	if (str.length > 2) 
+	{
+		$('.mdlrow').hide();
+		$("tr[data-model*='" + str.toLowerCase() +"']" ).show();
+	} 
+	else 
+	{
+		$('.mdlrow').show();
+	}
+}
+
+
+
+
+
