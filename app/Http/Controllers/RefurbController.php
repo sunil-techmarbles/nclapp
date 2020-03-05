@@ -32,6 +32,7 @@ class RefurbController extends Controller
     {
     	$this->process = Config::get('constants.process');
     	$this->basePath = base_path().'/public';
+
     	$this->formData = $this->basePath.'/form-data';
     	$this->refurbAssetData = $this->basePath.'/refurb-asset-data';
     	$this->refurbLabels = $this->basePath.'/refurb-labels';

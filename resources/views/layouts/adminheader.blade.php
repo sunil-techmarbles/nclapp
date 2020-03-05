@@ -35,16 +35,6 @@
 				</li> 
 			@endif
 
-			@if ( request()->segment(count(request()->segments())) == 'partlookup' ) 
-				<li class="nav-item">
-					<a class="nav-link" href="{{route('asin')}}"> ASIN Database </a>  
-				</li>
-
-				<li class="nav-item">
-					<a class="nav-link" href="{{route('supplies')}}"> Supplies </a> 
-				</li> 
-			@endif
-
 			@if ( request()->segment(count(request()->segments())) == 'asin' ) 
 				<li class="nav-item">
 					<a class="nav-link" href="{{route('supplies')}}"> Supplies </a> 
@@ -73,7 +63,7 @@
 				</li> 
 			@endif 
 
-			@if ( request()->segment(count(request()->segments())) == 'sessions' ) 
+			@if ( request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup'  ) 
 				<li class="nav-item">
 					<a class="nav-link" href="{{route('asin')}}"> ASIN Database </a>  
 				</li>
