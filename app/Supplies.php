@@ -195,4 +195,21 @@ class Supplies extends Model
             ->with(['getSupplieEmails'])
             ->get();
     }
+
+    public static function getSessionParts($session, $satus)
+    {
+        return self::select('supplies.id', 'supplies.part_num', 'supplies.item_name', 'supplies.qty', 'supplies.vendor', 'supplies.dlv_time', 'supplies.low_stock', 'supplies.reorder_qty', 'supplies.email_tpl', 'supplies.email_subj')
+            ->selectSub('sum(p.qty)', 'required_qty')
+            ->selectSub('sum(p.qty) - supplies.qty', 'missing')
+            ->join('supplie_asin_models as p', function($join) use($session){
+                $join->on('supplies.id', '=', 'p.supplie_id');
+            })
+            ->join('session_data as d', function($join) use($session, $satus){
+                $join->on('d.aid', '=', 'p.asin_model_id')
+                    ->where('d.sid','=', $session)
+                    ->where('d.status','=', $satus);
+            })
+            ->groupBy('supplies.id')
+            ->get();
+    }
 }

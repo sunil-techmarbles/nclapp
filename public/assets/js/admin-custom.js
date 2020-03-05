@@ -28,7 +28,7 @@ $(document).ready(function()
 		"bInfo": false,
 		"bAutoWidth": false
 	});
-	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable({
+	$('#shipment-asin, #sessions, #sessions-asins-part').DataTable({
 		"searching": false,
 		"bPaginate": false,
 		"bLengthChange": false,

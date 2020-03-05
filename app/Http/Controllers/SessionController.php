@@ -12,11 +12,11 @@ use File;
 use PDF;
 use Config;
 use App\Asin;
+use App\Supplies;
 use App\Shipment;
 use App\Session;
 use App\ShipmentsData;
 use App\SessionData;
-use App\AsinAsset;
 
 class SessionController extends Controller
 {
@@ -33,7 +33,7 @@ class SessionController extends Controller
     	$this->refurbLabels = $this->basePath.'/refurb-labels';
     }
 
-    public function getAssetsAsinId($request)
+    public function getAssetsAsinId($request, $currentSession)
     {
     	$pageMessage = [];
 		foreach ($request as $key => $value)
@@ -69,7 +69,7 @@ class SessionController extends Controller
 			        {
 			            $aid = $asins[0]["id"];
 			            $data = [
-			                "sid" => $current_session,
+			                "sid" => $currentSession,
 			                "aid" => $aid,
 			                "asset" => $asset,
 			                "added_by" => Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name,
@@ -100,7 +100,7 @@ class SessionController extends Controller
 
     public function sendSessionPdfReport($request)
     {
-    	$currentSession = Session::getOpenStatucRecord($request, $status='open');
+    	$currentSession = Session::getOpenStatucRecord($request, $status = 'open');
     	if(count($currentSession) > 0)
     	{
 	    	$currentSession = $currentSession[0];
@@ -138,12 +138,9 @@ class SessionController extends Controller
 				{
 					File::makeDirectory($this->sessionReports, 0777, true, true);
 				}
-				// $out = new Output("_sess_email.php",$data);
-				// $eml = $out->render();
 				
 				$pdf = PDF::loadView('admin.pdf.sessdetails', $data);
 				$pdf->save($this->sessionReports.'/session'.$currentSession.'.pdf');
-
 				$sessionEmails = Config::get('constants.sessionEmails');
 				$subject = 'Session details';
 				$name = $currentSession.'.csv';
@@ -169,97 +166,21 @@ class SessionController extends Controller
 		            }
 		        });
 			}
-			// Utils::redir("index.php?page=sessions&s=$current_session&reorder=1&newlink=".time());
     	}
     }
 
-    public function sessionSearchAndWithdrawAndReorder($request)
+    public function sessionSearchAndWithdrawAndReorder($request, $session)
     {
-		$sess_name = $db->get("tech_sessions","name",["id"=>$sess]);
+		$sessionName = Session::getCurrentSessionName($session);
 		if($r = $request->get('remove'))
 		{
-			$db->update("tech_sessions_data",["status"=>"removed"],["AND"=>["sid"=>$sess,"asset"=>$r]]);
-			Utils::redir("index.php?page=sessions&s=".$sess. "&t=".time());
+			SessionData::updateSessionStatus($session,$r,$satus='removed');
 		}
-		if($r = $req->getParam('restore'))
+		if($r = $request->get('restore'))
 		{
-			$db->update("tech_sessions_data",["status"=>"active"],["AND"=>["sid"=>$sess,"asset"=>$r]]);
-			Utils::redir("index.php?page=sessions&s=".$sess. "&t=".time());
+			SessionData::updateSessionStatus($session,$r,$satus='active');
+			return true;
 		}
-		$sql = "select d.aid, count(d.aid) as cnt, 
-				a.asin, a.price, a.model, a.form_factor, a.cpu_core, a.cpu_model, a.cpu_speed, a.ram, a.hdd, a.os, a.webcam, a.notes, a.link
-		 		from tech_sessions_data d inner join tech_asins a on d.aid = a.id where d.sid='$sess' and d.status='active' group by d.aid";
-		$items = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC); 	
-		
-		$sql = "select d.aid, d.asset, d.status
-		 		from tech_sessions_data d where d.sid='$sess'";
-		$assts = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-		$assets = [];
-		foreach($assts as $a)
-		{
-			if(!empty($a['asset']))
-			{
-				if(!isset($assets['asin'.$a['aid']])) $assets['asin'.$a['aid']] = ["active"=>[],"removed"=>[]];
-				$assets['asin'.$a['aid']][$a['status']][] = $a['asset'];	
-			}
-		} 
-		
-		$sql = "select i.id, i.part_num, i.item_name, i.qty, sum(p.qty) as required_qty, sum(p.qty) - i.qty as missing,
-				i.vendor, i.dlv_time, i.low_stock, i.reorder_qty, i.email_tpl, i.emails, i.email_subj
-				from tech_inventory i inner join tech_asins_parts p on i.id = p.part_id 
-				inner join tech_sessions_data d on p.asin_id = d.aid
-				where d.sid = '$sess' and d.status='active' group by i.id";
-		$parts = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC); 	
-		$page_msg = [];
-		$miss=0;
-		$cnt = 0;
-		if($request->get("reorder")) $mail = new Email();
-		$process = $request->get("withdraw");
-		if(!$pparts = $request->get("ppart")) $pparts = [];
-		foreach($parts as $p)
-		{
-			if($process)
-			{
-				if(in_array($p["id"],$pparts))
-				{
-					$nqty = max(0,$p["qty"]-$p["required_qty"]);
-					$db->update("tech_inventory",["qty"=>$nqty],["id"=>$p["id"]]);
-				}
-			}
-			if($p["missing"]>0)
-			{
-				$p["reorder_qty"] = max($p["missing"] + $p["low_stock"],$p["reorder_qty"]);
-				$miss += $p["missing"];
-				if($request->get("reorder"))
-				{
-					$vars = array_keys($p);
-					$body = $p["email_tpl"];
-					
-					foreach($vars as $v)
-					{
-						$body = str_replace("[$v]",$p[$v],$body);
-					}
-					$emails = explode(",",$p["emails"]);
-					$mid = $mail->queue(implode(";",$emails),$p["email_subj"],$body); //implode(";",$emails)
-					$cnt++;
-				}
-			}
-		}
-		if($process) Utils::redir("index.php?page=sessions&s=".$sess. "&t=".time());
-		if($request->get("reorder"))
-		{
-			$page_msg[] = "$cnt emails sent";
-			$miss=0;
-			$mail->release();
-			if($req->getParam("newlink"))
-			{
-				Utils::redir("index.php?page=sessions");
-			}
-			else
-			{
-				Utils::redir("index.php?page=sessions&s=".$sess. "&t=".time());
-			}
-		}	
     }
 
     public function index(Request $request)
@@ -268,6 +189,7 @@ class SessionController extends Controller
 		$items = [];
 		$parts = [];
 		$sessions = [];
+		$assets = [];
 		if ($request->isMethod('post'))
 		{
 			if($request->has('bulk_upload'))
@@ -279,6 +201,7 @@ class SessionController extends Controller
 					{	
 						$import = new SessionsImport();
 						Excel::import($import,request()->file('bulk_data'));
+						$this->getAssetsAsinId($import->data, $currentSession);
 					}
 					catch (\Maatwebsite\Excel\Validators\ValidationException $e)
 					{
@@ -289,25 +212,79 @@ class SessionController extends Controller
 							$failure->attribute(); // either heading key (if using heading row concern) or column index
 						}
 					}
-					$pageMessage = $this->getAssetsAsinId($import->data);
-					$sessions = Session::getSessionRecord($request);
-					// foreach($sessions as &$s)
-					// {
-					// 	$s['count'] = Session::getSessionDataCount($s['id']);
-					// }
-					// if($sess = $request->get('s'))
-					// {		
-					// 	$this->sessionSearchAndWithdrawAndReorder($request);
-					// }
-					// print_r($sessions);
 				}
 			}
-			if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
-			{
-				$pageMessage = $this->sendSessionPdfReport($request);						
-			}
 		}
-		return view('admin.sessions.list', compact('sessions','pageMessage'));
+		if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
+		{
+			$this->sendSessionPdfReport($request);						
+		}
+		$sessions = Session::getSessionRecord($request);
+		foreach($sessions as &$s)
+		{
+			$s['count'] = SessionData::getSessionDataCount($s['id']);
+		}
+		if($session = $request->get('s'))
+		{	
+			$sessionName = Session::getCurrentSessionName($session);
+			$output = $this->sessionSearchAndWithdrawAndReorder($request, $session);
+			$items = SessionData::getSessionItems($session, $satus='active');
+			$assts = SessionData::getSessionAssets($session, $satus='active');
+			foreach($assts as $a)
+			{
+				if(!empty($a['asset']))
+				{
+					if(!isset($assets['asin'.$a['aid']])) $assets['asin'.$a['aid']] = ["active"=>[],"removed"=>[]];
+					$assets['asin'.$a['aid']][$a['status']][] = $a['asset'];	
+				}
+			}
+			$parts = Supplies::getSessionParts($session, $satus='active');
+			if(!$pparts = $request->get("ppart")) $pparts = [];
+			foreach($parts as $p)
+	        {
+	            if($request->has('withdraw'))
+	            {   
+	                if(in_array($p["id"],$pparts))
+	                {
+	                    $newQty = max(0,$p["qty"]-$p["required_qty"]);
+	                    Supplies::updateQuantityBySupplieID($p["id"], $newQty);
+	                    $status = 'success';
+	                    $message = 'Withdraw successfully';
+	                    \Session::flash($status, $message);
+	                }
+	            }
 
+	            if($p["missing"] > 0)
+	            {
+	                $p["reorder_qty"] = max($p["missing"] + $p["low_stock"],$p["reorder_qty"]);
+	                if($request->has('reorder'))
+	                {
+	                    $vars = array_keys($p->toArray());
+	                    $body = $p["email_tpl"];
+	                    foreach($vars as $v)
+	                    {
+	                        $body = str_replace("[".$v."]",$p[$v],$body);
+	                    }
+	                    $user = SupplieEmail::getsuppliersEmails(intval($p["id"]));
+	                    $subject = $p['email_subj'];
+	                    if(sizeof($user) > 0)
+	                    {
+	                        $current = Carbon::now();
+	                        Supplies::updateMailSentTime($p["id"],$current);
+	                        Mail::raw($body, function ($m) use ($subject,$user) {
+	                            $m->to($user->toArray())
+	                            ->subject($subject);
+	                        });
+	                        $mailSent[] = $p["part_num"];
+	                        $status = 'success';
+	                        $message = 'Part number '.implode(',', $mailSent).' Mail has been sent successfully';
+	                        \Session::flash($status, $message);
+	                    }
+	                    continue;
+	                }
+	            }
+	        }
+		}
+		return view('admin.sessions.list', compact('sessionName', 'sessions', 'pageMessage', 'assets', 'parts','items'));
 	}
 }

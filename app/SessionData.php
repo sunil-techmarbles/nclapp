@@ -52,6 +52,60 @@ class SessionData extends Model
 			->count();
     }
 
+    public static function updateSessionStatus($session,$r,$satus)
+    {
+    	return self::update(["status"=> $satus])
+    		->where(["sid"=> $session,
+    			"asset"=>$r
+    		]);
+    }
+
+    public static function updateRecord($request)
+    {
+        return self::where(["asset" => $request['asset']])->update(['aid' => $request['aid']]);
+    }
+
+    public static function updateRecordRunStatus($ids, $text )
+    {
+        $rowCount = self::WhereIn("asset" ,$ids)->count();
+        $output =  self::whereIn("asset" ,$ids)->update(['run_status' => $text]);
+        if($output)
+        {
+            return ['count' => $rowCount, 'output' => $output];
+        }
+        else
+        {
+            return ['count' => 0, 'output' => 0];
+        }
+    }
+    
+    public static function getAsinsAidByAssest($value)
+    {
+        return self::where(['asset'=>$value])
+            ->pluck('aid')
+            ->first();
+    }
+
+    public static function getSessionItems($session,$satus)
+    {
+    	return self::select('session_data.aid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+			->selectSub('count(session_data.aid)', 'cnt')
+    		->join('asins as a', function($join) use($session, $satus){
+                $join->on('session_data.aid', '=', 'a.id')
+                        ->where('session_data.sid','=', $session)
+                        ->where('session_data.status','=', $satus);
+                })
+    		->groupBy('session_data.aid')
+            ->get();
+    }
+
+    public static function getSessionAssets($session,$satus)
+   	{
+   		return self::select('aid','asset','status')
+   			->where(['sid' => $session])
+   			->get();
+   	}
+
     public static function sessionSummary($currentSession)
     {
     	return self::select('session_data.aid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
@@ -81,12 +135,11 @@ class SessionData extends Model
 
     public static function sessionParts($currentSession)
     {
-    	return [];
     	return self::select('i.id', 'i.part_num', 'i.item_name', 'i.qty', 'i.vendor', 'i.dlv_time', 'i.low_stock', 'i.reorder_qty', 'i.email_tpl', 'i.email_subj')
             ->selectSub('sum(p.qty)', 'required_qty')
             ->selectSub('sum(p.qty) - i.qty', 'missing')
             ->join('supplies as i', function($join) use($currentSession){
-                $join->on('d.aid', '=', 'i.id');
+                $join->on('session_data.aid', '=', 'i.id');
             })
             ->join('supplie_asin_models as p', function($join) use($currentSession){
                 $join->on('i.id', '=', 'p.supplie_id');
