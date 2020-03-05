@@ -9,6 +9,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\SessionsImport;
 use Carbon\Carbon;
 use File;
+use PDF;
 use Config;
 use App\Asin;
 use App\Shipment;
@@ -100,73 +101,76 @@ class SessionController extends Controller
     public function sendSessionPdfReport($request)
     {
     	$currentSession = Session::getOpenStatucRecord($request, $status='open');
-    	$currentSession = $currentSession[0];
-    	Session::updateSessionRecord($status="closed", $this->current);
-    	Session::addSessionRecord($request, $this->current);
-		$sessionSummary = SessionData::sessionSummary($currentSession);
-		$sessionItems = SessionData::sessionItems($currentSession);
-		$sessionParts = SessionData::sessionParts($currentSession);
-		if (!empty($sessionItems))
-		{		
-			$fp = fopen('session-reports/session'.$current_session.'.csv', "w");
-			fputcsv($fp, ["ASIN","Asset","Model","Form Factor","CPU","Price","Added"]);
-			foreach ($sessionItems as $i)
-			{
-			    $fields = [
-			    	$i["asin"],
-					$i["asset"],
-					$i["model"],
-					$i["form_factor"],
-					$i["cpu_core"].' '.$i["cpu_model"].' CPU @ '.$i["cpu_speed"],
-					number_format($i["price"],2),
-					$i["added_on"]
-			    ];
-			    fputcsv($fp, $fields);
+    	if(count($currentSession) > 0)
+    	{
+	    	$currentSession = $currentSession[0];
+	    	Session::updateSessionRecord($status="closed", $this->current);
+	    	Session::addSessionRecord($request, $this->current);
+			$sessionSummary = SessionData::sessionSummary($currentSession);
+			$sessionItems = SessionData::sessionItems($currentSession);
+			$sessionParts = SessionData::sessionParts($currentSession);
+			if (!empty($sessionItems))
+			{		
+				$fp = fopen($this->sessionReports.'/session'.$currentSession.'.csv', "w");
+				fputcsv($fp, ["ASIN","Asset","Model","Form Factor","CPU","Price","Added"]);
+				foreach ($sessionItems as $i)
+				{
+				    $fields = [
+				    	$i["asin"],
+						$i["asset"],
+						$i["model"],
+						$i["form_factor"],
+						$i["cpu_core"].' '.$i["cpu_model"].' CPU @ '.$i["cpu_speed"],
+						number_format($i["price"],2),
+						$i["added_on"]
+				    ];
+				    fputcsv($fp, $fields);
+				}
+				fclose($fp);
+				$data = [
+					"items" => $sessionItems,
+					"parts" => $sessionParts,
+					"summary" => $sessionSummary,
+					"name" => Session::getCurrentSessionName($currentSession)
+				];
+
+				if (!File::exists($this->sessionReports))
+				{
+					File::makeDirectory($this->sessionReports, 0777, true, true);
+				}
+				// $out = new Output("_sess_email.php",$data);
+				// $eml = $out->render();
+				
+				$pdf = PDF::loadView('admin.pdf.sessdetails', $data);
+				$pdf->save($this->sessionReports.'/session'.$currentSession.'.pdf');
+
+				$sessionEmails = Config::get('constants.sessionEmails');
+				$subject = 'Session details';
+				$name = $currentSession.'.csv';
+				$name2 = $currentSession.'.pdf';
+				$files[] = [
+					'url' => $this->sessionReports.'/session'.$name, 
+					'name' =>  $name,
+					'extension' => substr($name, strpos($name, ".") + 1)
+				];
+				$files[] = [
+					'url' => $this->sessionReports.'/session'.$name2,
+					'name' => $name2,
+					'extension' => substr($name2, strpos($name2, ".") + 1)
+				];
+				Mail::send('admin.emails.sessemail', $data, function ($m) use ($subject, $sessionEmails, $files, $name) {
+		            $m->to($sessionEmails)->subject($subject);
+		            foreach($files as $file)
+		            {
+		                $m->attach($file['url'], array(
+		                    'as' => $file['name'],
+		                    'mime' => $file['extension'])
+		                );
+		            }
+		        });
 			}
-			fclose($fp);
-			$data = [
-				"items" => $sessionItems,
-				"parts" => $sessionParts,
-				"summary" => $sessionSummary,
-				"name" => Session::getCurrentSessionName($currentSession)
-			];
-			$out = new Output("_sess_email.php",$data);
-			$eml = $out->render();
-			
-			$out = new Output("_sess_details.php",$data);
-			$att = $out->render();
-			
-			if (!file_exists('session-reports')) {
-			    mkdir('session-reports', 0777, true);
-			}
-			
-			$post = [
-			    'apikey' => '2ca05a5d-cafe-464e-856b-780246c03780',
-			    'value' => $att,
-			    'PageSize' => 'Letter',
-			    'MarginLeft' => 20,
-			    'MarginTop' => 15
-			];
-
-			$ch = curl_init('http://api.html2pdfrocket.com/pdf');
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-
-			// execute!
-			$response = curl_exec($ch);
-
-			// close the connection, release resources used
-			curl_close($ch);
-			
-			file_put_contents('session-reports/session'.$current_session.'.pdf',$response);
-			
-			$mail = new Email();
-			$attach = dirname(dirname(__FILE__)).'/session-reports/session'.$current_session.'.pdf';
-			$attach2 = dirname(dirname(__FILE__)).'/session-reports/session'.$current_session.'.csv';
-			if(is_readable($attach)) $mid = $mail->queue(str_replace(",",";",SESSION_EMAILS),'Session details',$eml,true,'',$attach.';'.$attach2);
-			$mail->release($mid);
-		}
-		Utils::redir("index.php?page=sessions&s=$current_session&reorder=1&newlink=".time());
+			// Utils::redir("index.php?page=sessions&s=$current_session&reorder=1&newlink=".time());
+    	}
     }
 
     public function sessionSearchAndWithdrawAndReorder($request)
@@ -286,10 +290,6 @@ class SessionController extends Controller
 						}
 					}
 					$pageMessage = $this->getAssetsAsinId($import->data);
-					// if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
-					// {
-					// 	$pageMessage = $this->sendSessionPdfReport($request);						
-					// }
 					$sessions = Session::getSessionRecord($request);
 					// foreach($sessions as &$s)
 					// {
@@ -301,6 +301,10 @@ class SessionController extends Controller
 					// }
 					// print_r($sessions);
 				}
+			}
+			if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
+			{
+				$pageMessage = $this->sendSessionPdfReport($request);						
 			}
 		}
 		return view('admin.sessions.list', compact('sessions','pageMessage'));

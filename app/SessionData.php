@@ -54,26 +54,49 @@ class SessionData extends Model
 
     public static function sessionSummary($currentSession)
     {
-    	$sql = "select d.aid, count(d.aid) as cnt, 
-				a.asin, a.price, a.model, a.form_factor, a.cpu_core, a.cpu_model, a.cpu_speed, a.ram, a.hdd, a.os, a.webcam, a.notes, a.link
-		 		from tech_sessions_data d inner join tech_asins a on d.aid = a.id where d.sid='$current_session' and d.status='active' group by d.aid";
-		$sessionSummary = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+    	return self::select('session_data.aid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+			->selectSub('count(session_data.aid)', 'cnt')
+    		->join('asins as a', function($join) use($currentSession){
+                $join->on('session_data.aid', '=', 'a.id')
+                        ->where('session_data.sid','=', $currentSession)
+                        ->where('session_data.status','=', 'active');
+                })
+    		->groupBy('session_data.aid')
+            ->get();
     }
 
     public static function sessionItems($currentSession)
     {
-    	$sql = "select d.aid, d.asset, a.asin, a.price, a.model, a.form_factor, a.cpu_core, a.cpu_model, a.cpu_speed, a.ram, a.hdd, a.os, a.webcam, a.notes, a.link, d.added_on
-		 		from tech_sessions_data d inner join tech_asins a on d.aid = a.id where d.sid='$current_session' and d.status='active' order by d.aid, d.asset";
-		$session_items = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC); 
+    	return self::select('session_data.aid', 'session_data.asset', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link', 'session_data.added_on')
+			->selectSub('count(session_data.aid)', 'cnt')
+    		->join('asins as a', function($join) use($currentSession){
+                $join->on('session_data.aid', '=', 'a.id')
+                        ->where('session_data.sid','=', $currentSession)
+                        ->where('session_data.status','=', 'active');
+                })
+    		->orderBy('session_data.aid', 'DESC')
+    		->orderBy('session_data.asset', 'DESC')
+            ->get();
     }
 
     public static function sessionParts($currentSession)
     {
-    	$sql = "select i.id, i.part_num, i.item_name, i.qty, sum(p.qty) as required_qty, sum(p.qty) - i.qty as missing,
-				i.vendor, i.dlv_time, i.low_stock, i.reorder_qty, i.email_tpl, i.emails, i.email_subj
-				from tech_inventory i inner join tech_asins_parts p on i.id = p.part_id 
-				inner join tech_sessions_data d on p.asin_id = d.aid
-				where d.sid = '$current_session' and d.status='active' group by i.id";
-		$session_parts = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC); 
+    	return [];
+    	return self::select('i.id', 'i.part_num', 'i.item_name', 'i.qty', 'i.vendor', 'i.dlv_time', 'i.low_stock', 'i.reorder_qty', 'i.email_tpl', 'i.email_subj')
+            ->selectSub('sum(p.qty)', 'required_qty')
+            ->selectSub('sum(p.qty) - i.qty', 'missing')
+            ->join('supplies as i', function($join) use($currentSession){
+                $join->on('d.aid', '=', 'i.id');
+            })
+            ->join('supplie_asin_models as p', function($join) use($currentSession){
+                $join->on('i.id', '=', 'p.supplie_id');
+            })
+            ->join('session_data as d', function($join) use($currentSession){
+                $join->on('d.aid', '=', 'p.asin_model_id')
+                    ->where('d.sid','=', $currentSession)
+                    ->where('d.status','=', 'active');
+            })
+            ->groupBy('i.id')
+            ->get();
     }
 }
