@@ -26,54 +26,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default pull-right" onclick="savePN()">Save</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="modal fade bd-example-modal-lg" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-md" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 style="display:inline-block" class="modal-title" id="detModalLabel">Edit Capacity</h4>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<?php for($i=1;$i<4;$i++):?>
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="form-group">
-							<label for="capacity<?=$i?>">Capacity <?=$i?></label>
-							<input type="text" id="capacity<?=$i?>" class="form-control capedit"/>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="form-group">
-							<label for="qty<?=$i?>">Count</label>
-							<div class="input-group">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-row="<?=$i?>" data-field="">
-                                      <span class="glyphicon glyphicon-minus"></span>
-                                    </button>
-                                </span>
-                                <input type="text" id="qty<?=$i?>" class="form-control input-number capedit" min="1" max="1000">
-                                <span class="input-group-btn">
-                                    <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-row="<?=$i?>" data-field="">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
-                                </span>
-                            </div>
-						</div>
-					</div>
-				</div>
-				<?php endfor ?>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default pull-right" onclick="saveDetails()">Save</button>
-				<input type="hidden" id="capatype" value=""/>
+				<button type="button" class="btn btn-default pull-right" onclick="savePN('addpartnumber')">Save</button> 
 			</div>
 		</div>
 	</div>

@@ -1,5 +1,7 @@
-function savePN()
+function savePN(url)
 {
+	console.log( url );  
+
 	var modal = $('#pnModel').val();
 	var partnumber = $('#pnPn').val();
 
@@ -12,33 +14,33 @@ function savePN()
 			text: 'Please enter Model and Part Number !',
 		})
 		return false;
-	}
+	} 
 
 	$.ajax({
-			url: 'addpartnumber/',
-			type: 'GET', 
-			data: {'modal':modal, 'partnumber':partnumber},
-			dataType: 'json' 
-		}) 
-		.done(function(response)
-		{
-			Swal.fire({
-					icon: response.status,
-					title: response.title,
-					text: response.message,
-			})
-		}) 
-		.fail(function()
-		{
-			Swal.fire({
-				icon: 'error',
-				title: 'Oops...',
-				text: 'Something went wrong with ajax !',
-			});
+		url: url + '/',
+		type: 'GET', 
+		data: {'modal':modal, 'partnumber':partnumber},
+		dataType: 'json' 
+	}) 
+	.done(function(response)
+	{
+		Swal.fire({
+			icon: response.status,
+			title: response.title,
+			text: response.message,
+		})
+	}) 
+	.fail(function()
+	{
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Something went wrong with ajax !',
 		});
-		$('#pnModal').modal('hide'); 
-		$('#pnModel, #pnPn ').val(''); 
-}
+	});
+	$('#pnModal').modal('hide'); 
+	$('#pnModel, #pnPn ').val(''); 
+} 
 
 
 function filterModels(str)
@@ -53,4 +55,85 @@ function filterModels(str)
 		$('.mdlrow').show();
 	}
 }
+
+
+function newPackage() 
+{ 
+	$('#pkg_id').val('new'); 
+	$('#asinModalLabel').text('New Package');
+	// for (var i in sv) {
+	// 	$('#f_'+i).val('');
+	// }
+	$('#asinModal').modal('show');
+} 
+
+
+function addNewPackage(event, form, url)
+{ 
+	event.preventDefault(); 
+
+	$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }); 
+ 
+	$.ajax({
+		url: url, 
+		type: 'POST', 
+		data: $(form).serialize(),
+		dataType: 'json'
+	})
+	.done(function(response)
+	{
+		console.log( response ); 
+		// Swal.fire({
+		// 	icon: response.status,
+		// 	title: response.title,
+		// 	text: response.message,
+		// })
+	}) 
+	.fail(function()
+	{
+		// Swal.fire({
+		// 	icon: 'error',
+		// 	title: 'Oops...',
+		// 	text: 'Something went wrong with ajax !',
+		// });
+	});
+}
+
+
+$(document).ready(function () {
+    $('#newPackageForm').validate({
+        rules: { 
+            expected_arrival: {
+                required: true
+            },
+            description: {
+                required: true,
+            },
+            req_name: {
+                required: true,
+            },
+            tracking_number: {
+                required: true,
+            },
+            order_date: {
+                required: true,
+            },
+            carrier: {
+                required: true,
+            },
+            freight_ground: {
+                required: true,
+            },
+            qty:{
+            	required: true,
+            }
+        }
+    });
+});
+
+
 

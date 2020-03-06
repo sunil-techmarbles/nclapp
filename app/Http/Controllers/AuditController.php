@@ -9,6 +9,7 @@ use Config;
 use App\LenovoModelData;
 
 class AuditController extends Controller
+{
 
 	public $basePath, $formData;
 	/**
@@ -267,7 +268,7 @@ class AuditController extends Controller
 		if($request->ajax())
     	{
     		$travelerId = $request->get("trid");
-    		$this->basePath
+    		$this->basePath;
 			$fname =  $this->formData.'/'.$travelerId .'.json';
 			$fname2 = $this->checkFile($this->basePath.'wipe-data/*',$travelerId);
 			$fname3 = $this->checkFile($this->basePath.'wipe-data/bios-data/*',$travelerId);
