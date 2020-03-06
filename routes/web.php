@@ -27,16 +27,14 @@ Route::middleware(['guest','revalidate'])->group(function () {
 		Route::get('/dashboard','DashboardController@index')->name('dashboard');
 	});
 });
- 
-Route::get('/logout', 'LoginController@logout')->name('logout');
 
+Route::get('/logout', 'LoginController@logout')->name('logout');
 // Change header for reports, import and export
 Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () {
 	Route::prefix('admin')->group(function () {
 		// refub 
 		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report');
 		Route::get('/exportissuereport','RefurbController@ExportIssueReport')->name('get.issue.report');
-
 		// supplies 
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
@@ -80,17 +78,18 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
-
 		//In bound
 		Route::any('/packages','PackageController@index')->name('packages');  
-		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');   
-
-		
+		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');
 		//Out bound
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 
 		Route::any('/sessions','SessionController@index')->name('sessions');
-
+		Route::get('/checktravelerid', 'AuditController@checkTravelerId')->name('check.traveler.id');
+		Route::get('/gettab', 'AuditController@getTab')->name('get.tab');
+		Route::get('/checktraveleridformobile', 'AuditController@CheckTravelerIdForMobile')->name('check.traveler.id.for.mobile');
+		Route::get('/getmodels', 'AuditController@getModels')->name('get.models');
+		Route::get('/loadmodel', 'AuditController@loadModel')->name('load.model');
 	});
 });

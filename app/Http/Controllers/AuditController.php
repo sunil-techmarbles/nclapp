@@ -8,6 +8,7 @@ use App\Audit;
 use Config;
 use File;
 use App\LenovoModelData;
+use App\FormModel;
 
 class AuditController extends Controller
 {
@@ -78,6 +79,7 @@ class AuditController extends Controller
 		if ($grp != "") $output .= "</div>";
 		return $output;
 	}
+
     public function index(Request $request)
     { 
     	$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
@@ -188,7 +190,6 @@ class AuditController extends Controller
 		return $output;
 	} 
 	
-
 	public function get_form_radio($fld) 
 	{
 		$output = "";
@@ -485,7 +486,59 @@ class AuditController extends Controller
 		{
 			$response = 'Missing';
 		}
-
 		return $response ;
+	}
+
+	public function getModels(Request $request)
+	{
+		if($request->ajax())
+    	{
+			$res = "";
+			$fields = ["id","model","technology"];
+			if($request->get("tab") && $request->get("tech"))
+			{
+				$models = FormModel::getFormModelRecord($fields, $request, $isType = 'true');
+			}
+			else
+			{	
+				$models = FormModel::getFormModelRecord($fields, $request, $isType = 'false');
+			}
+
+			foreach($models as $f)
+			{
+				$res.="<p style=\"cursor:pointer\" id=\"model".$f['id']."\" onclick=\"getModelData(".$f['id'].",'".$request->get("tgt")."')\">" . $f['model'] . " (". $f['technology'] . ")</p>";
+			}
+			return $res;
+    	}
+    	else
+    	{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+    	}
+	}
+
+	public function loadModel(Request $request)
+	{
+		if($request->ajax())
+    	{
+			// $mid = $request->getParam("m");
+			// $sql = "select data from tech_form_data where type='model' and user='".$_SERVER['PHP_AUTH_USER']."' order by id desc limit 1";
+			// $res = $this->db->get("tech_form_data","data",array("AND"=>array("type"=>"model","trid"=>$mid)));
+			// if (!$res) $res = "false";
+			// else {
+			// 	$asin = $this->db->get("tech_form_models","asin_model",array("id"=>$mid));
+			// 	$data = json_decode($res,true);
+			// 	$data["asin"] = $asin;
+			// 	if($asin!='0') {
+			// 		$data["models"] = $this->db->select("tech_asins",["id","cpu_core","cpu_model","cpu_speed"],["AND"=>["id"=>explode(',',$asin),"notifications"=>1]]);
+			// 		if(!$data["models"]) $data['asin'] = 0;
+			// 	}
+			// 	$res = json_encode($data);
+			// }
+			return $res;
+    	}
+    	else
+    	{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+    	}
 	}
 }
