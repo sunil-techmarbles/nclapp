@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><root><report>
+    <blancco_data>
+        <description>
+            <document_id>0174543a-196c-471b-8f69-076b62c89b3a</document_id>
+            <document_log>
+                <log_entry>
+                    <author>
+                        <product_name id="30" name="Blancco Mobile Diagnostics and Erasure">Blancco 5 Mobile</product_name>
+                        <product_version>4.2</product_version>
+                        <product_revision>4.2</product_revision>
+                    </author>
+                    <date>2020-02-04T13:40:36+0000</date>
+                    <integrity>H06qERoGU06IvaEw53z8t4eQ1VJGL+/GkNAfe6ba/cagv0uiTLfaqYOkWPrxyln0qspuy8bzoiXantJQtPJ7yKUplfarbuaV3S3gJegRgHdufBzrTd2i+vd1VElMZFBkUxytb9pJ37fPX7jJyq3qgF3/3atXFN2RgRxQxAy5km3FBK1Vcc4aXNCTQ6lpJpP4CL1Xf8VUAofbcC6pt2R2uppNUI/2RKH1ubPfca1p4FryiHyZ+FycatiP4A5a6bGu8uV3wwqomNphpJ9CtUvvEFrV1wokfkMpjUP+05rzQqbdaLdvJAo1YWRMbIjYhTJed+GP9jvFTPpgA3zRIZIvaw==</integrity>
+                    <key identifier="300"></key>
+                </log_entry>
+                <log_entry>
+                    <author>
+                        <product_name id="51" name="Blancco Management Console">Blancco Management Console</product_name>
+                        <product_version>5.3.1</product_version>
+                        <product_revision>6b63874f0bbd+</product_revision>
+                    </author>
+                    <date>2020-02-04T13:40:40+0000</date>
+                    <integrity>HvT/BHNoyfL4ANSW7wLRCC+7aUOFhXFlmvOub74sUgLLetoKIjY1wAMlUvzyjj1LGrX4z5x8QmrTNNoVutm+dNvKoMI3+/xZhXnPcMxfYNODXb/SVLsSVVvkiyw+vfz1meO6Kq0gJcGOOzXkxrnMSPuj5m0BZL4O+syY7Jt0Hl5DzklupM54QJN0a7zHWRT43pi7jOINPjtd2zENxNFU8bXQZIlByDaTx0TRmOrEaWZatW/R+Mu+WR4QmDyPPjoe7G3WY7n5UnF75++AU64Fz/Y6hTna7W4wT5SqMxQVM98ymxm/vehxNtiasQ59OIdUQzKuUOgxKTgjex4Y9E0fTQ==</integrity>
+                    <key identifier="100"></key>
+                </log_entry>
+            </document_log>
+            <entry name="description_entries">
+                <entry name="verified" type="string">true</entry>
+                <entries name="company_information">
+                    <entry name="business_name" type="string"></entry>
+                    <entry name="business_location" type="string"></entry>
+                    <entry name="erasure_provider" type="string">ITAMG</entry>
+                    <entry name="erasure_person" type="string">Randy Prashad</entry>
+                </entries>
+            </entry>
+        </description>
+        <blancco_erasure_report>
+            <entries name="erasures">
+                <entries name="erasure">
+                    <entry name="timestamp" type="string">2020-01-30T20:04:55+0000</entry>
+                    <entry name="start_time" type="string">2020-01-30 20:04:55</entry>
+                    <entry name="end_time" type="string">2020-01-30 20:12:58</entry>
+                    <entry name="elapsed_time" type="string">00:08:03</entry>
+                    <entry name="erasure_standard_name" type="string">NIST 800-88 Purge</entry>
+                    <entry name="state" type="string">Successful</entry>
+                    <entries name="target">
+                        <entry name="type" type="string">Internal memory</entry>
+                        <entry name="capacity" type="uint">16000000000</entry>
+                        <entry name="serial" type="string">IMEI:356988066291432</entry>
+                        <entry name="vendor" type="string"></entry>
+                    </entries>
+                </entries>
+            </entries>
+        </blancco_erasure_report>
+        <blancco_hardware_report>
+            <entries name="system">
+                <entry name="manufacturer" type="string">Apple, Inc.</entry>
+                <entry name="name" type="string">iPhone 6 GSM+CDMA 16GB Space Gray</entry>
+                <entry name="market_name" type="string">iPhone 6</entry>
+                <entry name="model" type="string">iPhone 6 GSM+CDMA 16GB Space Gray</entry>
+                <entry name="ram" type="string">1GB</entry>
+                <entry name="device_color" type="string">Space Gray</entry>
+                <entry name="identifier" type="string">IMEI:356988066291432</entry>
+                <entry name="meid" type="string">35698806629143</entry>
+                <entry name="meid_fourteen" type="string">35698806629143</entry>
+                <entry name="imei" type="string">356988066291432</entry>
+                <entry name="serial" type="string">DNTNXNCQG5MC</entry>
+                <entry name="internal_model" type="string">initializing</entry>
+                <entry name="a_model_number" type="string">A1549</entry>
+                <entry name="firmware_version" type="string">12.4.4</entry>
+                <entry name="region" type="string">LL/A</entry>
+                <entry name="region_code" type="string">LL/A</entry>
+                <entry name="region_name" type="string">USA, Canada, [replacement unit]</entry>
+                <entry name="uuid" type="string">3f0da6f806e151c9b4926571067588366f65328b</entry>
+                <entry name="wifi_mac" type="string">f0:99:bf:52:be:ec</entry>
+                <entry name="ecid" type="string">00196C2A08326026</entry>
+                <entry name="chassis_type" type="string">Mobile Device</entry>
+                <entry name="find_my_iphone" type="string">Unlocked</entry>
+                <entry name="find_my_iphone_source" type="string">Prolog Mobile</entry>
+                <entry name="mdm_status" type="string">Unknown</entry>
+                <entry name="prolog_blacklisted" type="string">Unlocked</entry>
+                <entry name="prolog_graylisted" type="string">Unlocked</entry>
+                <entry name="manufacturing_date" type="string">201452</entry>
+                <entry name="touch_id_serial" type="string">F6G450337C7G2MMAIV</entry>
+                <entry name="carrier_code" type="string">Unknown</entry>
+            </entries>
+            <entries name="disks">
+                <entries name="disk">
+                    <entry name="type" type="string">Internal memory</entry>
+                    <entry name="serial" type="string">IMEI:356988066291432</entry>
+                    <entry name="capacity" type="uint">16000000000</entry>
+                    <entry name="vendor" type="string"></entry>
+                </entries>
+            </entries>
+            <entries name="mobile_battery">
+                <entry name="battery_serial" type="string">F5D445427QTFW5VBY</entry>
+                <entry name="battery_vendor" type="string">F</entry>
+                <entry name="battery_manufacture_date" type="string">201445</entry>
+                <entry name="battery_cycles" type="uint">497</entry>
+                <entry name="battery_capacity_design" type="uint">1751</entry>
+                <entry name="battery_capacity_current" type="uint">1499</entry>
+                <entry name="battery_capacity_wear_level" type="uint">14</entry>
+                <entry name="battery_capacity_health_level" type="uint">86</entry>
+                <entry name="battery_temperature" type="string">37</entry>
+            </entries>
+            <entries name="cameras">
+                <entries name="camera">
+                    <entry name="type" type="string">Front Camera</entry>
+                    <entry name="serial" type="string">00 02 04 31 06 02 2F F0</entry>
+                    <entry name="module_serial" type="string">F6J44963N00FTFP1Y</entry>
+                </entries>
+                <entries name="camera">
+                    <entry name="type" type="string">Back Camera</entry>
+                    <entry name="serial" type="string">00 00 04 33 02 00 92 2F</entry>
+                    <entry name="module_serial" type="string">DNL45120YCPFPDNA3</entry>
+                </entries>
+            </entries>
+        </blancco_hardware_report>
+        <blancco_software_report>
+            <entries name="operating_system">
+                <entry name="name" type="string">iOS</entry>
+                <entry name="version" type="string">12.4.4</entry>
+            </entries>
+        </blancco_software_report>
+    </blancco_data>
+    <user_data>
+        <entries name="fields">
+            <entry name="Comments" type="string"></entry>
+            <entry name="Lot Number" type="string">17561</entry>
+            <entry name="Asset ID" type="string">535627</entry>
+        </entries>
+    </user_data>
+</report></root>

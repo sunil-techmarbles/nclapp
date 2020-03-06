@@ -6,11 +6,12 @@ use Illuminate\Http\Request;
 use App\FormsConfig;
 use App\Audit;
 use Config;
+use File;
 use App\LenovoModelData;
 
 class AuditController extends Controller
 {
-	public $basePath, $formData;
+	public $basePath, $formData, $sandboxMode;
 	/**
      * Create a new controller instance.
      *
@@ -20,6 +21,7 @@ class AuditController extends Controller
     {
     	$this->basePath = base_path().'/public';
     	$this->formData = $this->basePath.'/form-data';
+    	$this->sandboxMode = false;
     }
 
 	public function AddPartNumber(Request $request) 
@@ -39,11 +41,9 @@ class AuditController extends Controller
 		return response()->json($response);
 	}
 
- 
-    public function index(Request $request)
-    { 
-    	$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
-    	$output = "";
+	public function renderHtml($formsDatas)
+	{
+		$output = "";
     	$cgrp = "X"; 
     	foreach ( $formsDatas as $formdata ) 
     	{
@@ -62,9 +62,15 @@ class AuditController extends Controller
 				$output .= "<div class='formitem'>" . $this->$function($formdata) . "</div>";
 	        }
 		}
+		if ($grp != "") $output .= "</div>";
+		return $output;
+	}
+    public function index(Request $request)
+    { 
+    	$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
+    	$output = $this->renderHtml($formsDatas);
 		$damageScores = Config::get('constants.auditDamageScores');;
 		$refurbBlacklist = Config::get('constants.auditRefurbBlacklist');;
-		if ($grp != "") $output .= "</div>";
     	return view('admin.audit.index' ,  compact('output', 'damageScores', 'refurbBlacklist') );    
     }
   
@@ -212,6 +218,24 @@ class AuditController extends Controller
 		}
 		return $output;
 	}
+
+	public static function getOptions($arr,$cv = "")
+	{
+		$res = "";
+		$cval= strval($cv);
+		if(is_array($arr))
+		{
+			foreach($arr as $val)
+			{
+				if ($val=="Please select") $key="";
+				else $key = htmlentities($val, ENT_QUOTES);
+				$res .= "<option value='".$key."'";
+				if($cval == strval($val)) $res .= " selected";
+				$res .= ">".$val."</option>\n";
+			}
+		}
+		return $res;
+	}
 	
 	public function get_form_dropdown($fld) 
 	{
@@ -250,22 +274,32 @@ class AuditController extends Controller
 		return false;
 	}
 
+	public static function getBetween($string, $start, $end)
+	{
+	    $string = ' ' . $string;
+	    $ini = strpos($string, $start);
+	    if ($ini == 0) return '';
+	    $ini += strlen($start);
+	    $len = strpos($string, $end, $ini) - $ini;
+	    if ($len<=0) return '';
+	    return substr($string, $ini, $len);
+	}
+
 	public function checkTravelerId(Request $request)
 	{
 		if($request->ajax())
     	{
     		$travelerId = $request->get("trid");
-    		$this->basePath
 			$fname =  $this->formData.'/'.$travelerId .'.json';
-			$fname2 = $this->checkFile($this->basePath.'wipe-data/*',$travelerId);
-			$fname3 = $this->checkFile($this->basePath.'wipe-data/bios-data/*',$travelerId);
-			$fname4 = $this->checkFile($this->basePath.'makor-processed-data/wipe-data/*',$travelerId);
-			$fname5 = $this->checkFile($this->basePath.'makor-processed-data/bios-data/*',$travelerId);
-			if( is_readable( $fname ))
+			$fname2 = $this->checkFile($this->basePath.'/wipe-data/*',$travelerId);
+			$fname3 = $this->checkFile($this->basePath.'/wipe-data/bios-data/*',$travelerId);
+			$fname4 = $this->checkFile($this->basePath.'/makor-processed-data/wipe-data/*',$travelerId);
+			$fname5 = $this->checkFile($this->basePath.'/makor-processed-data/bios-data/*',$travelerId);
+			if( File::exists( $fname ))
 			{
 				$resp = "Duplicate";
 			}
-			elseif ($fname2 || $fname3 || SANDBOX_MODE)
+			elseif ($fname2 || $fname3 || $this->sandboxMode)
 			{
 				$resp = "OK";
 			}
@@ -276,59 +310,73 @@ class AuditController extends Controller
 
 			if($fname2 || $fname4)
 			{
-				if ($fname2) $files = glob('wipe-data/*.xml');
-				if ($fname4) $files = glob('makor-processed-data/wipe-data/*.xml');
-				foreach($files as $f)
+				if ($fname2) $files = glob($this->basePath.'/wipe-data/*.xml');
+				if ($fname4) $files = glob($this->basePath.'/makor-processed-data/wipe-data/*.xml');
+				foreach($files as $key => $f)
 				{
-					if ( stripos( $f,$travelerId ) !== false )
-					{
+					if ( stripos($f,$travelerId ) !== false )
+					{	
 						try
-						{
-							$xml=simplexml_load_file($f);
-							$ram = $xml->Report->Hardware->RAM->TotalCapacity;
-							$hdd = $xml->Report->Hardware->Devices->Device;
-							$hddata=[];
-							foreach( $hdd as $h )
-							{
-								if (!empty($h->Gigabytes))
-								{
-									if($h->Gigabytes>1000) $label = "CAP".round($h->Gigabytes/1000,1)."TB";
-									else $label = "CAP".round($h->Gigabytes,0)."GB";
-									if(isset($hddata[$label])) $hddata[$label]+=1;
-									else $hddata[$label]=1;
-								}
-							}
-							$ramdata = [];
-							$ramsticks = $xml->Report->Hardware->RAM->Stick;
-							foreach($ramsticks as $s)
-							{
-								if (!empty($s->Capacity))
-								{
-									if(isset($ramdata["CAP".$s->Capacity])) $ramdata["CAP".$s->Capacity]+=1;
-									else $ramdata["CAP".$s->Capacity]=1;
-								}
-							}
+						{	
 							$ramstr="";
 							$hddstr="";
-							foreach($ramdata as $c=>$r)
+							$xml = simplexml_load_file($f);
+							if(isset($xml->Report->Hardware->RAM))
 							{
-								if (!empty($ramstr)) $ramstr.=";";
-								$ramstr.= str_replace("CAP","",$c)."_x_".$r;
+								$ram = (string) $xml->Report->Hardware->RAM->TotalCapacity;
+								$ramdata = [];
+								$ramsticks = $xml->Report->Hardware->RAM->Stick;
+								foreach($ramsticks as $s)
+								{
+									if (!empty($s->Capacity))
+									{
+										if(isset($ramdata["CAP".$s->Capacity])) $ramdata["CAP".$s->Capacity]+=1;
+										else $ramdata["CAP".$s->Capacity]=1;
+									}
+								}
+								foreach($ramdata as $c=>$r)
+								{
+									if (!empty($ramstr)) $ramstr.=";";
+									$ramstr.= str_replace("CAP","",$c)."_x_".$r;
+								}
 							}
-							foreach($hddata as $c=>$r)
+							if(isset($xml->Report->Hardware->Devices))
 							{
-								if (!empty($hddstr)) $hddstr.=";";
-								$hddstr.= str_replace("CAP","",$c)."_x_".$r;
+								$hdd = (array) $xml->Report->Hardware->Devices->Device;
+								$hddata=[];
+								foreach( $hdd as $h )
+								{
+									if (!empty($h->Gigabytes))
+									{
+										if($h->Gigabytes>1000) $label = "CAP".round($h->Gigabytes/1000,1)."TB";
+										else $label = "CAP".round($h->Gigabytes,0)."GB";
+										if(isset($hddata[$label])) $hddata[$label]+=1;
+										else $hddata[$label]=1;
+									}
+								}
+
+								foreach($hddata as $c=>$r)
+								{
+									if (!empty($hddstr)) $hddstr.=";";
+									$hddstr.= str_replace("CAP","",$c)."_x_".$r;
+								}
 							}
 							$resp = "Data|".$ram.":_".$ramstr."|".$hddstr."|CPU:";
-							$model = strtolower($xml->Report->Hardware->ComputerModel);
-							$cpus = $xml->Report->Hardware->Processors->Processor;
-							foreach($cpus as $cpu)
+							if(isset($xml->Report->Hardware->ComputerModel))
 							{
-								$cpuname = $cpu->Name;
-								$resp .= strtolower($cpuname);
-								$speed = trim(Utils::getBetween($cpuname,"@","GHz"));
-								$resp .= "|".$speed;
+								$model = strtolower($xml->Report->Hardware->ComputerModel);
+							}
+
+							if(isset($xml->Report->Hardware->Processors))
+							{
+								$cpus = $xml->Report->Hardware->Processors->Processor;
+								foreach($cpus as $cpu)
+								{
+									$cpuname = $cpu->Name;
+									$resp .= strtolower($cpuname);
+									$speed = trim(self::getBetween($cpuname,"@","GHz"));
+									$resp .= "|".$speed;
+								}
 							}
 						}
 						catch (Exception $e)
@@ -342,8 +390,8 @@ class AuditController extends Controller
 			{
 				if($fname3 || $fname5)
 				{
-					if($fname3) $files = glob('wipe-data/bios-data/*.xml');
-					if($fname5) $files = glob('makor-processed-data/bios-data/*.xml');
+					if($fname3) $files = glob($this->basePath.'/wipe-data/bios-data/*.xml');
+					if($fname5) $files = glob($this->basePath.'/makor-processed-data/bios-data/*.xml');
 					foreach($files as $f)
 					{
 						if (stripos($f,$travelerId)!==false)
@@ -353,14 +401,17 @@ class AuditController extends Controller
 								$resp = "Data|||CPU:";
 								$model = "";
 								$cpu = "";
-								foreach($xml->node->node->node as $s)
+								if(isset($xml->node->node))
 								{
-									if($s["id"]=="cpu:0" || $s["id"]=="cpu")
+									foreach($xml->node->node->node as $s)
 									{
-										$cpu = $s->product;
-										$resp .= strtolower($cpu);
-										$speed = trim(Utils::getBetween($cpu,"@","GHz"));
-										$resp .= "|".$speed;
+										if($s["id"]=="cpu:0" || $s["id"]=="cpu")
+										{
+											$cpu = $s->product;
+											$resp .= strtolower($cpu);
+											$speed = trim(self::getBetween($cpu,"@","GHz"));
+											$resp .= "|".$speed;
+										}
 									}
 								}
 							}
@@ -372,29 +423,56 @@ class AuditController extends Controller
 					}
 				}
 			}
+			return $resp;
     	}
     	else
     	{
     		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
     	}
-		
-		return $resp;
 	}
 
 	public function getTab(Request $request)
 	{
-		$out = "";
+		$output = "";
 		$tab = $request->get("tab");
 		if(!empty($tab))
 		{
-			$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
+			$formsDatas = FormsConfig::getTab($tab, $isActive = 'Yes');
+			$output = $this->renderHtml($formsDatas);
 		}
-		return $formsDatas;
+		return $output;
 	}
 
 	public function CheckTravelerIdForMobile(Request $request)
 	{
-		echo "hello";
-		return;
+		$response = '';
+		$travelerId = $request->get( "trid" );
+		$checkAssetidInXmldatafolder = $this->checkFile($this->basePath.'/wipe-data-mobile/*', $travelerId );
+		$checkAssetidInAdditionalXmldatafolder = $this->checkFile($this->basePath.'/blancco/xml_data/*', $travelerId );
+		$checkAssetidInExecutedXmldatafolder = $this->checkFile($this->basePath.'/makor-processed-data/additional-mobile-executed/*', $travelerId );
+		$checkAssetidInExecutedAdditionlXmldatafolder = $this->checkFile($this->basePath.'/makor-processed-data/blancco-mobile-executed/*', $travelerId );
+
+		if( $checkAssetidInXmldatafolder )
+		{
+			$response = 'OK';
+		}
+		else if ( $checkAssetidInAdditionalXmldatafolder )
+		{
+			$response = 'OK';
+		}
+		else if ( $checkAssetidInExecutedXmldatafolder )
+		{
+			$response = 'OK';
+		}
+		else if ( $checkAssetidInExecutedAdditionlXmldatafolder )
+		{
+			$response = 'OK';
+		}
+		else
+		{
+			$response = 'Missing';
+		}
+
+		return $response ;
 	}
 }

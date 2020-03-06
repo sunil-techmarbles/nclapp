@@ -249,6 +249,15 @@
 			setTimeout(refurbNotification,1000);
 	    });
 	}
+
+	function showSweetAlertMessage(type, message, icon)
+	{
+		swalWithBootstrapButtons.fire(
+    		type,
+			message,
+			icon
+		) 
+	}
 	
 	var selTab;
 	function checkTravelerId( tabId )
@@ -256,12 +265,8 @@
 	    selTab = tabId; 
 	    var trId = $('#text_1').val();
 	    if(trId.length < 3 )
-	    {
-	    	swalWithBootstrapButtons.fire(
-	    		'error',
-				'Please enter Asset ID',
-				'error'
-			) 
+	    {	
+	    	showSweetAlertMessage(type = 'error', message = 'Please enter Asset ID' , icon= 'error');
 			$('input[name=radio_2]').prop('checked',false);
 	    	$("#var_tab").html('');
 	    	$("#reviewBtn").hide();
@@ -273,8 +278,8 @@
 			$.get("/"+prefix+"/checktravelerid?trid=" + trId +"&t=" + Math.random(), function ( data ) { 
 		        var isErr = false;
 		        if ( !edit && data == "Duplicate" )
-		        {  
-					alert("Duplicate Entry");
+		        {
+		        	showSweetAlertMessage(type = 'warning', message = 'Duplicate Entry' , icon= 'warning');
 					$('#text_1').val("");
 		        	$('#text_1').focus();
 		        	isErr = true;
@@ -286,11 +291,7 @@
 				{
 					if (data=="Missing")
 					{
-						swalWithBootstrapButtons.fire(
-				    		'error',
-							'Data files not found for entered Asset Number',
-							'error'
-						)
+						showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');
 						$('#text_1').val("");
 			        	$('#text_1').focus();
 			        	isErr = true;
@@ -328,18 +329,13 @@
    			
    			if ( data == "Missing" )
    			{
-   				swalWithBootstrapButtons.fire(
-		    		'error',
-					'Data files not found for entered Asset Number',
-					'error'
-				)			
+   				showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');		
 				$('#text_1').val("");
 			    $('#text_1').focus();
 			    isErr = true;   
 			    $('input[name=radio_2]').prop('checked',false);
 			    $("#var_tab").html('');
 			    $("#reviewBtn").hide();
-
 			}
 			else
 			{	

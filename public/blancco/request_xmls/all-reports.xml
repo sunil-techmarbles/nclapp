@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<request>
+    <export-report>
+        <report mode="original"/>
+        <search path="report.report_date" value="2019-01-01 00:00:00" operator="gt" datatype="date" conjunction="true" />
+        <search path="blancco_data.blancco_erasure_report.erasures.erasure.state" value="Successful" operator="eq" datatype="string" conjunction="false"/>
+        <search path="blancco_data.blancco_erasure_report.erasures.erasure.state" value="Failed" operator="eq" datatype="string" conjunction="false"/>
+    </export-report> 
+</request> 
