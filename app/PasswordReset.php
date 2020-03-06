@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Str; 
-use Illuminate\Database\Eloquent\SoftDeletes; // <-- This is required
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class PasswordReset extends Model
 {

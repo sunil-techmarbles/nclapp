@@ -1,4 +1,4 @@
-<!-- Check in modal  --> 
+	<!-- Check in modal  --> 
 	<div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="checkModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm" role="document">
 			<div class="modal-content">
@@ -25,7 +25,7 @@
 	</div>
 
 
-<!-- New package / Edit package modal  -->
+	<!-- New package / Edit package modal  -->
 	<div class="modal fade" id="asinModal" tabindex="-1" role="dialog" aria-labelledby="asinModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">

@@ -1,9 +1,8 @@
 <?php
 
 namespace App;
-use DB;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes; // <-- This is required
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Supplies extends Model
 {   

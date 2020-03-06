@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes; // <-- This is required
+use Illuminate\Database\Eloquent\SoftDeletes; 
 
 class Refurb extends Model
 {

@@ -69,70 +69,69 @@ function newPackage()
 
 
 function addNewPackage(event, form, url)
-{ 
-	event.preventDefault(); 
+{
+	event.preventDefault();
 
 	$.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    }); 
- 
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});  
+
 	$.ajax({
 		url: url, 
 		type: 'POST', 
 		data: $(form).serialize(),
 		dataType: 'json'
-	})
-	.done(function(response)
-	{
+	}).done(function(response) {
+	
 		console.log( response ); 
-		// Swal.fire({
-		// 	icon: response.status,
-		// 	title: response.title,
-		// 	text: response.message,
-		// })
-	}) 
-	.fail(function()
-	{
-		// Swal.fire({
-		// 	icon: 'error',
-		// 	title: 'Oops...',
-		// 	text: 'Something went wrong with ajax !',
-		// });
+		
+	}).fail(function() {
+
+		
 	});
 }
 
-
 $(document).ready(function () {
-    $('#newPackageForm').validate({
-        rules: { 
-            expected_arrival: {
-                required: true
-            },
-            description: {
-                required: true,
-            },
-            req_name: {
-                required: true,
-            },
-            tracking_number: {
-                required: true,
-            },
-            order_date: {
-                required: true,
-            },
-            carrier: {
-                required: true,
-            },
-            freight_ground: {
-                required: true,
-            },
-            qty:{
-            	required: true,
-            }
-        }
-    });
+
+	$('.datepicker').datepicker({format: "yyyy-mm-dd"});
+
+	// $(".daterange").daterangepicker({
+	// 	    opens: 'left',
+	// 	    locale: {
+	//             format: 'YYYY-MM-DD'
+	//         }
+	// }); 
+
+	$('#newPackageForm').validate({
+		rules: { 
+			expected_arrival: {
+				required: true
+			},
+			description: {
+				required: true,
+			},
+			req_name: {
+				required: true,
+			},
+			tracking_number: {
+				required: true,
+			},
+			order_date: {
+				required: true,
+			},
+			carrier: {
+				required: true,
+			},
+			freight_ground: {
+				required: true,
+			},
+			qty:{
+				required: true,
+			}
+		}
+	});
 });
 
 
