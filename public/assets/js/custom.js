@@ -1,70 +1,47 @@
-jQuery(document).on('click', '.addPartNumber', function(e) {
-	e.preventDefault();  
+function savePN(url)
+{
+	console.log( url );  
 
-	Swal.fire({ 
-		title: 'Add Part Number',
-		html: '<input type="text" class="swal2-input" id="modal" placeholder="Enter Modal" name="modal">' +
-		'<input type="text" class="swal2-input" id="partnumber" placeholder="Enter Part Number" name="partnumber">',
-		confirmButtonText: 'Save',
-		showCancelButton: true, 
-		preConfirm: () => {  
-			let modal = Swal.getPopup().querySelector('#modal').value;
-			let partnumber = Swal.getPopup().querySelector('#partnumber').value;
-			
-			if(modal === '' || partnumber === '') 
-			{
-				Swal.showValidationMessage('Modal or Part Number is empty');
-			} 
-		} 
-	})
-	.then(( result ) => {   
-		if(result.value) 
-		{
-			let modal = Swal.getPopup().querySelector('#modal').value;
-			let partnumber = Swal.getPopup().querySelector('#partnumber').value;
+	var modal = $('#pnModel').val();
+	var partnumber = $('#pnPn').val();
 
-			$.ajax({ 
-				url: 'addpartnumber/',
-				type: 'GET', 
-				data: {'modal':modal, 'partnumber':partnumber},
-				dataType: 'json' 
-			}) 
-			.done(function(response)
-			{  
-				if( response.status == 'success')
-				{ 
-					Swal.fire({
-						icon: 'success',
-						title: 'Added',
-						text: 'Part Number has been added successfully',
-					})
-				}
-				else 
-				{ 
-					Swal.fire({
-						icon: 'error',
-						title: 'Oops...',
-						text: 'Something went wrong, Please try again!',
-					})
-				}
-			})
-			.fail(function()
-			{
-				Swal.fire({
-					icon: 'error',
-					title: 'Oops...',
-					text: 'Something went wrong with ajax !',
-				})
-			});
-		}
+	if(!modal || !partnumber) 
+	{
+		Swal.fire
+		({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Please enter Model and Part Number !',
+		})
+		return false;
+	} 
+
+	$.ajax({
+		url: url + '/',
+		type: 'GET', 
+		data: {'modal':modal, 'partnumber':partnumber},
+		dataType: 'json' 
+	}) 
+	.done(function(response)
+	{
+		Swal.fire({
+			icon: response.status,
+			title: response.title,
+			text: response.message,
+		})
+	}) 
+	.fail(function()
+	{
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Something went wrong with ajax !',
+		});
 	});
-}); 
+	$('#pnModal').modal('hide'); 
+	$('#pnModel, #pnPn ').val(''); 
+} 
 
-
-function savePN(){
-
-	
-}
 
 function filterModels(str)
 { 
@@ -80,6 +57,83 @@ function filterModels(str)
 }
 
 
+function newPackage() 
+{ 
+	$('#pkg_id').val('new'); 
+	$('#asinModalLabel').text('New Package');
+	// for (var i in sv) {
+	// 	$('#f_'+i).val('');
+	// }
+	$('#asinModal').modal('show');
+} 
+
+
+function addNewPackage(event, form, url)
+{ 
+	event.preventDefault(); 
+
+	$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    }); 
+ 
+	$.ajax({
+		url: url, 
+		type: 'POST', 
+		data: $(form).serialize(),
+		dataType: 'json'
+	})
+	.done(function(response)
+	{
+		console.log( response ); 
+		// Swal.fire({
+		// 	icon: response.status,
+		// 	title: response.title,
+		// 	text: response.message,
+		// })
+	}) 
+	.fail(function()
+	{
+		// Swal.fire({
+		// 	icon: 'error',
+		// 	title: 'Oops...',
+		// 	text: 'Something went wrong with ajax !',
+		// });
+	});
+}
+
+
+$(document).ready(function () {
+    $('#newPackageForm').validate({
+        rules: { 
+            expected_arrival: {
+                required: true
+            },
+            description: {
+                required: true,
+            },
+            req_name: {
+                required: true,
+            },
+            tracking_number: {
+                required: true,
+            },
+            order_date: {
+                required: true,
+            },
+            carrier: {
+                required: true,
+            },
+            freight_ground: {
+                required: true,
+            },
+            qty:{
+            	required: true,
+            }
+        }
+    });
+});
 
 
 

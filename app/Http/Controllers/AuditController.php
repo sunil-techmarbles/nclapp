@@ -11,6 +11,7 @@ use App\LenovoModelData;
 
 class AuditController extends Controller
 {
+
 	public $basePath, $formData, $sandboxMode;
 	/**
      * Create a new controller instance.
@@ -26,17 +27,29 @@ class AuditController extends Controller
 
 	public function AddPartNumber(Request $request) 
 	{  
+		$checkPartNumber = LenovoModelData::CheckIfPartNumberExists( trim($request->partnumber) );
+
+		if( $checkPartNumber )
+		{
+			$response['status']  = 'error';
+			$response['title']  = 'Already Exist';
+        	$response['message'] = 'Part Number already exists'; 
+        	return response()->json($response);
+		} 
+
 		$newpartnumber = LenovoModelData::InsertNewPartNumber( $request->modal, $request->partnumber ); 
 
 		if(!empty( $newpartnumber ) && $newpartnumber != false)
 		{	
 			$response['status']  = 'success';
-        	$response['message'] = 'New Part Number added'; 
+			$response['title']  = 'Added';
+        	$response['message'] = 'Part Number has been added successfully'; 
 		}
-		else 
-		{ 
+		else
+		{
 			$response['status']  = 'error';
-        	$response['message'] = 'Unable to add Part Number'; 
+			$response['title']  = 'Unable to add';
+        	$response['message'] = 'Something went wrong, Unable to add try again'; 
 		} 
 		return response()->json($response);
 	}

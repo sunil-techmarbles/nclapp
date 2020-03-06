@@ -10,15 +10,11 @@
         ONE COMPUTER AT A TIME
     </div>
 
-    <div style="padding-top:100px;max-width: 700px;margin: auto;"> <!--border-bottom: 3px solid #107878-->
+    <div style="padding-top:100px;max-width: 700px;margin: auto;">
 
         <div class="menu-item">
-            <a href="{{route('audit')}}" style="color: white;text-decoration: none;">
-            <span class="fa fa-check-square-o"></span></a>
-            <a href="{{route('audit')}}">Audit</a> 
-
-            <!-- <a href="{{route('refurb')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('refurb')}}">Audit</a> -->
+            <a href="{{route('audit')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('audit')}}">Audit</a>
         </div>   
 
         <div class="menu-item">
@@ -35,46 +31,57 @@
             <a href="{{route('asin')}}"><span class="fa fa-hdd-o"></span></a>
             <a href="{{route('asin')}}">ASINs</a>
         </div>
+
         <div class="menu-item">
-            <a href="index.php?page=packages"><span class="fa fa-sign-in"></span></a>
-            <a href="index.php?page=packages">Inbound</a>
+            <a href="{{route('packages')}}"><span class="fa fa-sign-in"></span></a>
+            <a href="{{route('packages')}}">Inbound</a>
         </div>
+
         <div class="menu-item">
             <a href="{{route('shipments')}}"><span class="fa fa-sign-out"></span></a>
             <a href="{{route('shipments')}}">Outbound</a>
         </div>
+
         <div class="menu-item">
             <a href="{{route('sessions')}}"><span class="fa fa-tasks"></span></a>
             <a href="{{route('sessions')}}">Sessions</a>
-        </div>
+        </div> 
+
         <div class="menu-item">
             <a href="index.php?page=newlist"><span class="fa fa-shopping-cart"></span></a>
             <a href="index.php?page=newlist">Inventory</a>
         </div>
+
         <div class="menu-item">
             <a href="index.php?page=tracker"><span class="fa fa-hourglass"></span></a>
             <a href="index.php?page=tracker">Time Tracker</a>
         </div>
+
         <div class="menu-item">
             <a href="import"><span class="fa fa-download"></span></a>
             <a href="import">Import</a>
         </div>
+
         <div class="menu-item">
             <a href="index.php?page=recycle"><span class="fa fa-refresh"></span></a>
             <a href="index.php?page=recycle">Recycle Trailer</a>
         </div>
+
          <div class="menu-item">
             <a href="Recycle2"><span class="fa fa-refresh"></span></a>
             <a href="Recycle2">Recycle2 Trailer</a>
         </div>
+
         <div class="menu-item">
             <a href="http://nclapp.com:8080/CustomerInventory/CustomerInventoryDetails.jsp" target="_blank"><span class="fa fa-user"></span>
             Customer Inventory</a>
         </div>
+
         <div class="menu-item">
             <a href="index.php?page=wipereport"><span class="fa fa-file-excel-o"></span></a>
             <a href="index.php?page=wipereport">Wipe Report</a>
         </div>
+
     </div>
 </div>
 

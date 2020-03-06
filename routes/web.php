@@ -10,49 +10,49 @@
 |
 */
 
-Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');      
-Route::get('/logout', 'LoginController@logout')->name('logout');  
-Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');   
-Route::post('/SendPasswordResetEmail', 'LoginController@sendPasswordResetEmail')->name('sendPasswordResetEmail');   
-Route::get('/ResetPasswordForm/{token}', 'LoginController@resetPasswordForm')->name('resetPasswordForm');   
-Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPassword');     
+Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate'); 
+Route::get('/logout', 'LoginController@logout')->name('logout');
+Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');
+Route::post('/SendPasswordResetEmail', 'LoginController@sendPasswordResetEmail')->name('sendPasswordResetEmail');
+Route::get('/ResetPasswordForm/{token}', 'LoginController@resetPasswordForm')->name('resetPasswordForm');
+Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPassword');
 
-Route::middleware(['guest','revalidate'])->group(function () { 
-	Route::get('/','LoginController@index')->name('login.view');  
+Route::middleware(['guest','revalidate'])->group(function () {
+	Route::get('/','LoginController@index')->name('login.view');
 	Route::get('/login','LoginController@index')->name('login.view');
-	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');  
+	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');
 	Route::get('/register', 'RegisterController@index')->name('user.register');
 	
-	Route::prefix('admin')->group(function () { 
-		Route::get('/dashboard','DashboardController@index')->name('dashboard');  
+	Route::prefix('admin')->group(function () {
+		Route::get('/dashboard','DashboardController@index')->name('dashboard');
 	});
-});  
+});
  
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
-Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () { 
-	Route::prefix('admin')->group(function () { 
+// Change header for reports, import and export
+Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () {
+	Route::prefix('admin')->group(function () {
 		// refub 
-		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report'); 
+		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report');
 		Route::get('/exportissuereport','RefurbController@ExportIssueReport')->name('get.issue.report');
 
 		// supplies 
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
 	});
-});  
+});
 
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
+	Route::prefix('admin')->group(function () {
 
-	Route::prefix('admin')->group(function () { 
-
-	    Route::get('/users', 'UsersController@index')->name('users');     
-	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');    
+	    Route::get('/users', 'UsersController@index')->name('users');
+	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
 	    
-	    Route::get('/audit','AuditController@index')->name('audit');   
-		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number'); 
+	    Route::get('/audit','AuditController@index')->name('audit');
+		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
 
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
@@ -69,7 +69,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/editasin/{asinid}','AsinController@editAsin')->name('edit.asin');
 		Route::get('/asinparts/{asinid}','AsinController@partsAsin')->name('parts.asin');
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
-		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup'); 
+		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup');
 
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');
@@ -79,15 +79,18 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/setwholesale','RefurbController@setWholesale')->name('set.wholesale');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
-		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');  
+		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 
+		//In bound
+		Route::any('/packages','PackageController@index')->name('packages');  
+		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');   
+
+		
+		//Out bound
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 
 		Route::any('/sessions','SessionController@index')->name('sessions');
-		Route::get('/checktravelerid', 'AuditController@checkTravelerId')->name('check.traveler.id');
-		Route::get('/gettab', 'AuditController@getTab')->name('get.tab');
-		Route::get('/checktraveleridformobile', 'AuditController@CheckTravelerIdForMobile')->name('check.traveler.id.for.mobile');
 
 	});
 });
