@@ -662,7 +662,7 @@
 			var x=position.left;
 			var y=position.top+h+10;
 			out.css(({left:x,top:y}));
-			$.get("ajax.php?action=getModels&tgt="+fId+"&part="+data+"&tab="+cTab+"&tech="+cTech+"&t="+Math.random(), function(data)
+			$.get("/"+prefix+"/getmodels?tgt="+fId+"&part="+data+"&tab="+cTab+"&tech="+cTech+"&t="+Math.random(), function(data)
 			{
 				if(data)
 				{

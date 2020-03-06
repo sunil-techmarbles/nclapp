@@ -18,12 +18,10 @@
 				<input type="hidden" name="cpuname" id="cpuname" value=""/>
 				<input type="hidden" name="grade" id="grade" value=""/> 
 
-				<div class="form-initial" style="text-align: center;">
-					{!!$output!!}
-				</div>
+				<div class="form-initial" style="text-align: center;">{!!$output!!}</div>
 				<div id="var_tab"></div>
-				<button style="display: none;" id="reviewBtn" type="button" class="btn btn-default" onclick="CheckRequired()">Review</button>
-				<button style="display: none;" id="submitBtn" type="submit" class="btn btn-default">Submit</button>
+				<button style="display: none;" id="reviewBtn" type="button" class="btn btn-primary" onclick="CheckRequired()">Review</button>
+				<button style="display: none;" id="submitBtn" type="submit" class="btn btn-success">Submit</button>
 				<div>&nbsp;</div>
 			</form>
 			<div id="preview">
