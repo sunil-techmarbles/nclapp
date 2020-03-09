@@ -3,12 +3,10 @@
 @section('content')
 
 <div class="container">
-	<div>
-		<button style="margin-top:10px;margin-left: 50px" class="btn btn-info" data-toggle="modal" data-target="#checkModal">Check 	In</button>
-		<button style="float:right;margin-top:10px" class="btn btn-primary" onclick="newPackage()">New Package</button>
-	</div>
-	<div id="page-head">
-		Packages
+	<div id="page-head">Packages</div>
+	<div class=" w-100 mb-3 float-right">
+		<button class="btn btn-info" data-toggle="modal" data-target="#checkModal">Check In</button>
+		<button class="btn btn-primary" onclick="newPackage()">New Package</button>
 	</div>
 	<form method="GET" enctype="multipart/form-data" autocomplete="off" action="{{route('packages')}}"> 
 		<div style="margin-bottom: 10px">
@@ -76,13 +74,13 @@
 						<input class="form-control" type="text" name="location" value="{{ Request::get('location') }}" id="location"/>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<div class="form-group-sm">
 						<label for="recipient" style="margin:0">Recipient or Dept:</label>
 						<input class="form-control" type="text" value="{{ Request::get('recipient') }}" name="recipient" id="recipient"/>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<div class="form-group-sm">
 						<label for="received" style="margin:0">Received?</label>
 						<select class="form-control" name="received" id="received">
@@ -92,22 +90,23 @@
 						</select>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-3">
 					<div class="form-group-sm">
 						<label for="worker_id" style="margin:0">Warehouse Worker ID:</label>
 						<input class="form-control" type="text" value="{{ Request::get('worker_id') }}" name="worker_id" id="worker_id"/>
 					</div>
 				</div>
-				<div class="col-sm-3">
-					<div class="form-group-sm float-right mt-2">
+			</div>
+			<div class="row">
+				<div class="w-100 float-right">
+					<div class="form-group-sm float-right mt-3">
 						<a href="{{route('packages')}}" class="btn btn-warning" >Reset</a>
 						<input class="btn btn-primary" type="submit" name="pkg_search" id="pkg_search" value="Search"/>
 					</div>
 				</div> 
 			</div>
 		</div>
-	</form>  
-
+	</form>
 	@if (!empty($searchedPackages))
 		<h3>Search Results</h3>
 		<table class="table table-striped table-condensed table-hover table-sm">
@@ -147,7 +146,6 @@
 			@endforeach
 		</table>
 	@endif
-
 	@include('admin.packages.modal')
 </div>
 @endsection  

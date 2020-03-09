@@ -9,15 +9,13 @@
 
 	<div class="row justify-content-center text-center">
 		<div class="col-12">
-			<form method="post" id="main-form" action="">    
-				@csrf  
-				<input type="hidden" name="page" value="proc"/>
+			<form method="post" id="main-form" action="{{route('store.audit.record')}}">    
+				@csrf
 				<input type="hidden" name="asinid" id="asinid" value="0"/>
 				<input type="hidden" name="refurb" id="refurb" value="0"/>
 				<input type="hidden" name="modelid" id="modelid" value="0"/>
 				<input type="hidden" name="cpuname" id="cpuname" value=""/>
 				<input type="hidden" name="grade" id="grade" value=""/> 
-
 				<div class="form-initial" style="text-align: center;">{!!$output!!}</div>
 				<div id="var_tab"></div>
 				<button style="display: none;" id="reviewBtn" type="button" class="btn btn-primary" onclick="CheckRequired()">Review</button>

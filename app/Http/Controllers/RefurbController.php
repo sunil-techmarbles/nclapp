@@ -3,15 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\CoaReportExport;
+use App\Exports\IssuesReportExport;
 use Carbon\Carbon;
 use Config;
 use File;
 use DB;
-use App\Exports\CoaReportExport;
-use App\Exports\IssuesReportExport; 
-
 use Excel;
-
 use App\Refurb;
 use App\FormsConfig;
 use App\Asin;

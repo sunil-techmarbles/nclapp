@@ -54,17 +54,32 @@ class FormsConfig extends Model
 		return false;
     }
 
+    public static function getAllRecord()
+    {
+    	return self::get();
+    }
+
     public static function getConfigValueByTab($tab, $group)
     {
     	return self::where(['tab' => $tab, 'grp' => $group])
     	->get();
     }
 
-    public static function getTab( $tabname, $isActive )
+    public static function getTab($tabname, $isActive )
     {
-    	return self::where(['tab' => $tabname, 'is_active' => $isActive])
-    		->orderBy('tab_order')
-    		->get(); 
-	} 
+    	$query = self::where(['tab' => $tabname]);
+    	if($isActive != '')
+    	{
+    		$query->where(['is_active' => $isActive]);
+    	}
+		return $query->orderBy('tab_order')
+    		->get();
+	}
 
+	public static function getFormConfigFields($key, $group)
+	{
+		return self::select('xml_grp', 'options')
+			->where(['tab' => $key, 'grp' =>  $group])
+			->get();
+	}
 }

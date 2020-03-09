@@ -86,6 +86,15 @@ class SessionData extends Model
             ->first();
     }
 
+    public static function deleteSeesionDataRecorde($sess, $text1 )
+    {
+        $recorde = self::where(["sid" => $sess, "asset" => $text1])->first();
+        if($recorde->isEmpty())
+        {
+            $recorde->delete();
+        }
+    }
+
     public static function getSessionItems($session,$satus)
     {
     	return self::select('session_data.aid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')

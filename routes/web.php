@@ -94,5 +94,12 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/checktraveleridformobile', 'AuditController@CheckTravelerIdForMobile')->name('check.traveler.id.for.mobile');
 		Route::get('/getmodels', 'AuditController@getModels')->name('get.models');
 		Route::get('/loadmodel', 'AuditController@loadModel')->name('load.model');
+		// Route::get('/savepartnumber', 'AuditController@savePartNumber')->name('save.part.number');
+		Route::get('/getfiles', 'AuditController@getFiles')->name('get.files');
+		Route::get('/loadxml', 'AuditController@loadXML')->name('load.xml');
+		Route::get('/loadlast', 'AuditController@loadLast')->name('load.last');
+		Route::get('/getrefnotification', 'AuditController@getRefNotification')->name('load.last');
+		Route::get('/getpreview', 'AuditController@getPreview')->name('get.preview');
+		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
 	});
 });

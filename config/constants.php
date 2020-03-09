@@ -3938,5 +3938,9 @@ return [
         "Case_Dent_Top_Cover_Severe"=>"Cosmetic",
         "Case_Dent_Coner_Minor"=>"Cosmetic",
         "Case_Dent_Coner_Severe"=>"Cosmetic"
+    ],
+    'adminEmail' =>[
+        "rahuls.techmarbles@gmail.com",
+        // "asovych@gmail.com"
     ]
 ];
