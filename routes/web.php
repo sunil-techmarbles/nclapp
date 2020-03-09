@@ -81,6 +81,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		//In bound
 		Route::any('/packages','PackageController@index')->name('packages');  
 		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');
+		Route::post('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package'); 
+
+
 		//Out bound
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');

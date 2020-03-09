@@ -13,14 +13,14 @@
 
 					<div class="form-group">
 						<label for="userName">Please enter the responsible User Name</label>
-						<input class="form-control" type="text" id="userName" value=""/>
+						<input class="form-control" type="text" id="userName" value="{{$userName}}"/>
 					</div> 
 
 				</div> 
 				<div class="modal-footer">
-					<button type="button" onclick="checkPackage()" class="btn btn-primary">Submit</button>
+					<button type="button" onclick="checkInPackage('checkinpackage')" class="btn btn-primary">Submit</button>
 				</div>
-			</div>
+			</div> 
 		</div>
 	</div>
 
@@ -29,7 +29,7 @@
 	<div class="modal fade" id="asinModal" tabindex="-1" role="dialog" aria-labelledby="asinModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
-				<form method="post" enctype="multipart/form-data" id="newPackageForm" autocomplete="off" onsubmit="return addNewPackage(event, this, 'addnewpackage')"> 
+				<form method="post" enctype="multipart/form-data" id="newPackageForm" autocomplete="off"> 
 					<div class="modal-header">
 						<h3 class="modal-title" id="asinModalLabel">New Package</h3> 
 					</div>
@@ -43,6 +43,7 @@
 									<div class="form-group-sm">	
 										<label for="f_expected_arrival" style="margin:0">Expected Arrival:</label><span class="req">*</span>
 										<input class="form-control datepicker" type="text" name="expected_arrival" id="f_expected_arrival"/>
+										<span class="text-danger"></span>
 									</div>
 								</div> 
 
@@ -50,18 +51,21 @@
 									<div class="form-group-sm">
 										<label for="f_description" style="margin:0">Description:</label><span class="req">*</span>
 										<input class="form-control" type="text" name="description" id="f_description"/>
+										<span class="text-danger"></span>
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="form-group-sm">
 										<label for="f_req_name" style="margin:0">Request Name:</label><span class="req">*</span>
 										<input class="form-control" type="text" name="req_name" id="f_req_name"/>
+										<span class="text-danger"></span>
 									</div>
 								</div>
 								<div class="col-sm-3">
 									<div class="form-group-sm">
 										<label for="f_tracking_number" style="margin:0">Tracking Number:</label><span class="req">*</span>
 										<input class="form-control" type="text" name="tracking_number" id="f_tracking_number"/>
+										<span class="text-danger"></span>
 									</div>
 								</div>
 							</div>
@@ -71,6 +75,7 @@
 									<div class="form-group-sm">
 										<label for="f_order_date" style="margin:0">Order Date:</label><span class="req">*</span>
 										<input class="form-control datepicker" type="text" name="order_date" id="f_order_date"/>
+										<span class="text-danger"></span>
 									</div>
 								</div>
 								<div class="col-sm-3">
@@ -83,6 +88,7 @@
 									<div class="form-group-sm">
 										<label for="f_carrier" style="margin:0">Carrier:</label><span class="req">*</span>
 										<input class="form-control" type="text" name="carrier" id="f_carrier"/>
+										<span class="text-danger"></span>
 									</div>
 								</div>
 								<div class="col-sm-3">
@@ -93,6 +99,7 @@
 											<option value="Freight">Freight</option>
 											<option value="Ground">Ground</option>
 										</select>
+										<span class="text-danger"></span>
 									</div>
 								</div>
 							</div>
@@ -120,7 +127,7 @@
 									<div class="form-group-sm">
 										<label for="f_received" style="margin:0">Received?</label>
 										<select class="form-control" name="received" id="f_received">
-											<option value="">Select</option>
+											<option value="" disabled>Select</option>
 											<option value="Y">Yes</option>
 											<option value="N" selected="selected">No</option>
 										</select>
@@ -133,6 +140,8 @@
 									<div class="form-group-sm">
 										<label for="f_qty" style="margin:0">Quantity:</label><span class="req">*</span>
 										<input class="form-control" type="text" name="qty" id="f_qty"/>
+										<span class="text-danger"></span>
+
 									</div>
 								</div>
 								<div class="col-sm-3">
