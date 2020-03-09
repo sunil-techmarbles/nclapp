@@ -3,17 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Illuminate\Support\Facades\Mail;
+use Carbon\Carbon;
 use App\FormsConfig;
 use App\Audit;
 use Config;
 use File;
 use App\LenovoModelData;
 use App\FormModel;
+use App\Asin;
+use App\FormData;
+use App\Session;
+use App\SessionData;
+use App\ListData;
 
 class AuditController extends Controller
 {
 
-	public $basePath, $formData, $sandboxMode;
+	public $basePath, $formData, $sandboxMode, $wipeDataAdditional, $wipeDataMobile;
 	/**
      * Create a new controller instance.
      *
@@ -21,9 +29,25 @@ class AuditController extends Controller
      */
     public function __construct()
     {
-    	$this->basePath = base_path().'/public';
-    	$this->formData = $this->basePath.'/form-data';
     	$this->sandboxMode = false;
+    	$this->basePath = base_path().'/public';
+    	$this->current = Carbon::now();
+    	$this->wipeDataAdditional = $this->basePath.'/wipe-data-additional';
+    	$this->wipeDataMobile = $this->basePath.'/wipe-data-mobile';
+    	$this->formData = $this->basePath.'/form-data';
+
+    	if(!File::exists($this->formData))
+		{
+			File::makeDirectory($this->formData, $mode = 0777, true, true);
+		}
+		if (!File::exists($this->wipeDataAdditional))
+		{
+		    File::makeDirectory($this->wipeDataAdditional, $mode = 0777, true, true);
+		}
+		if (!File::exists($this->wipeDataMobile))
+		{
+		    File::makeDirectory($this->wipeDataMobile, $mode = 0777, true, true);
+		}
     }
 
 	public function AddPartNumber(Request $request) 
@@ -520,25 +544,651 @@ class AuditController extends Controller
 	{
 		if($request->ajax())
     	{
-			// $mid = $request->getParam("m");
-			// $sql = "select data from tech_form_data where type='model' and user='".$_SERVER['PHP_AUTH_USER']."' order by id desc limit 1";
-			// $res = $this->db->get("tech_form_data","data",array("AND"=>array("type"=>"model","trid"=>$mid)));
-			// if (!$res) $res = "false";
-			// else {
-			// 	$asin = $this->db->get("tech_form_models","asin_model",array("id"=>$mid));
-			// 	$data = json_decode($res,true);
-			// 	$data["asin"] = $asin;
-			// 	if($asin!='0') {
-			// 		$data["models"] = $this->db->select("tech_asins",["id","cpu_core","cpu_model","cpu_speed"],["AND"=>["id"=>explode(',',$asin),"notifications"=>1]]);
-			// 		if(!$data["models"]) $data['asin'] = 0;
-			// 	}
-			// 	$res = json_encode($data);
-			// }
+			$mid = $request->get("m");
+			$res = FormData::getFormDataRecord($type='model', $mid);
+			if (!$res)
+			{
+				$res = "false";
+			} 
+			else
+			{
+				$asin = FormModel::getAsinModelRecord($mid);
+				$data = json_decode($res,true);
+				$data["asin"] = $asin;
+				if($asin!='0')
+				{
+					$data["models"] = Asin::getModelFromAsin($asin, $notifications=1);
+					if(!$data["models"]) $data['asin'] = 0;
+				}
+				$res = json_encode($data);
+			}
 			return $res;
     	}
     	else
     	{
     		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
     	}
+	}
+
+	public function savePartNumber(Request $request)
+	{
+		if($request->ajax())
+    	{
+    		$model = strtoupper($request->get('m'));
+			$pn    = strtoupper($request->get('p'));
+			$lenovoModelEx = LenovoModelData::CheckIfPartNumberExists($pn);
+			if(!$lenovoModelEx)
+			{
+				LenovoModelData::InsertNewPartNumber($model, $pn);
+				return "Part Number has been added successfully";
+			}
+			else
+			{
+				return "Part Number already exists";
+			}
+    	}
+    	else
+    	{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+    	}
+	}
+
+	public function getFiles(Request $request)
+	{
+		if($request->ajax())
+    	{
+			$res = "";
+			$part = $request->get("part");
+			$dst = $request->get("tgt");
+			$files = scandir($this->formData);
+			foreach($files as $f)
+			{
+				$f = str_replace(".json","",$f);
+				if (stristr($f,$part)) $res.="<a href='#' onclick=\"addTrId('".$f."','".$dst."')\">" . $f . "</a><br/>";
+			}
+			return $res;
+		}
+		else
+		{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
+	}
+
+	public function loadXML(Request $request)
+	{
+		if($request->ajax())
+    	{
+			$fname = $request->get("trid");
+			$itm = json_decode(file_get_contents($this->formData."/".$fname.".json"),true);
+			if(!empty($itm["model"]))
+			{
+				$asin = FormModel::getAsinModelRecord($itm["model"]);
+				$itm["models"] = Asin::getModelFromAsin($asin, $notifications='');
+			}
+			else
+			{
+				$itm["models"] = [];
+			}
+			$res = json_encode($itm);
+			return $res;
+		}
+		else
+		{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
+	}
+
+	public function loadLast(Request $request)
+	{
+		if($request->ajax())
+    	{
+    		$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
+    		$data = FormData::getLastRecordByAuthUser($authUserName, $type='data');
+			if (count($data)==1)
+			{
+				$itm = json_decode($data[0]["data"],true);
+				if(!empty($itm["model"]))
+				{
+					$asin = FormModel::getAsinModelRecord($itm["model"]);
+					$itm["models"] = Asin::getModelFromAsin($asin, $notifications='');
+				}
+				else
+				{
+					$itm["models"] = [];
+				}
+				$res = json_encode($itm);
+			}
+			else $res = "false";
+			return $res;
+    	}
+    	else
+    	{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+    	}
+	}
+
+	public function getRefNotification(Request $request)
+	{
+		if($request->ajax())
+    	{
+    		$asset = $request->get("a");
+			$model = $request->get("m");
+			$data = [
+				"models"  => [],
+				"cpuname" => ""
+			];
+
+			if(!empty($model))
+			{
+				$asin = FormModel::getAsinModelRecord($model);
+				if(count($asin) > 0)
+				{
+					$itm["models"] = Asin::getModelFromAsin($asin, $notifications=1);
+				}
+			}
+			else
+			{
+				$data["models"] = $this->getAssetModels();
+			}
+			$travelerId = $asset;
+			$fname =  $this->formData.'/'.$travelerId .'.json';
+			$fname2 = $this->checkFile($this->basePath.'/wipe-data/*',$travelerId);
+			$fname3 = $this->checkFile($this->basePath.'/wipe-data/bios-data/*',$travelerId);
+			$fname4 = $this->checkFile($this->basePath.'/makor-processed-data/wipe-data/*',$travelerId);
+			$fname5 = $this->checkFile($this->basePath.'/makor-processed-data/bios-data/*',$travelerId);
+			if($fname2 || $fname4)
+			{
+				if ($fname2) $files = glob($this->basePath.'/wipe-data/*.xml');
+				if ($fname4) $files = glob($this->basePath.'/makor-processed-data/wipe-data/*.xml');
+				foreach($files as $f)
+				{
+					if (stripos($f,$travelerId)!==false)
+					{
+						try
+						{
+							$xml = simplexml_load_file($f);
+							if(isset($xml->Report->Hardware->Processors))
+							{
+								$cpus = $xml->Report->Hardware->Processors->Processor;
+								foreach($cpus as $cpu)
+								{
+									$data["cpuname"] = strtolower($cpu->Name);
+								}
+							}
+						}
+						catch (Exception $e)
+						{
+						    $data["cpuname"] = "";
+						}
+					}
+				}
+			}
+			else
+			{
+				if($fname3 || $fname5)
+				{
+					if($fname3) $files = glob($this->basePath.'/wipe-data/bios-data/*.xml');
+					if($fname5) $files = glob($this->basePath.'/makor-processed-data/bios-data/*.xml');
+					foreach($files as $f)
+					{
+						if (stripos($f,$travelerId)!==false)
+						{
+							try
+							{
+								$xml=simplexml_load_file($f);
+								if(isset($xml->node->node))
+								{
+									foreach($xml->node->node->node as $s)
+									{
+										if($s["id"]=="cpu:0" || $s["id"]=="cpu")
+										{
+											$cpu = $s->product;
+											$data["cpuname"] = strtolower($cpu);
+										}
+									}
+								}
+							}
+							catch (Exception $e)
+							{
+							    $data["cpuname"] = "";
+							}
+						}
+					}
+				}
+			}
+			return json_encode($data);
+    	}
+    	else
+    	{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+    	}
+	}
+
+	public function getPreview(Request $request)
+	{
+		if($request->ajax())
+		{
+			$data = array();
+			$valid=1;
+			$ctab = $request->get("radio_2");
+			$config = FormsConfig::getTab($tabname='Notes', $isActive='');
+			if (!empty($ctab))
+			{
+				$config2 = FormsConfig::getTab($ctab, $isActive='');
+				$config = array_merge($config->toArray(),$config2->toArray());
+			}
+			foreach ($config as $fld)
+			{
+				$itmid = $fld["qtype"] . "_" . $fld["id"];
+				$itmidnew = $fld["qtype"] . "_" . $fld["id"]. "_new";
+				$qtype = $fld["qtype"];
+				$grp = $fld["grp"];
+				$key = $fld["question"];
+				if($fld["required"]) $key.="*";
+				$vals = explode(";",$fld["options"]);
+				if ($request->get($itmid) || $request->get($itmidnew) || $request->get($itmid)==="0" || $request->get($itmidnew)==="0")
+				{
+					if ($qtype=="mult")
+					{
+						$resp = $request->get($itmid);
+						if($request->get($itmidnew))
+						{
+							$resp[]=$request->get($itmidnew);
+						}
+						$response = implode("<br>",$resp);
+					}
+					elseif($qtype=="radio" || $qtype=="dropdown")
+					{
+						if($request->get($itmidnew))
+						{
+							$response = $request->get($itmidnew);
+						}
+						else
+						{
+							$response = $request->get($itmid);
+						} 
+					}
+					else
+					{
+						$response = $request->get($itmid);
+					}
+
+					if ($key=="Original HDD Size" || $key=="HDD Size")
+					{
+						if($response>50)
+						{
+							$response .= "GB";
+						}
+						else
+						{
+							$response .= "TB";
+						}
+					}
+					if ($key=="Original RAM Size" || $key=="RAM Size")
+					{
+						$response .= "GB";
+					}
+					if (isset($data[$key]))
+					{
+						$data[$key] .= "<br>".$response;
+					}
+					else
+					{
+						$data[$key] = $response;
+					}
+				}
+				else
+				{
+					if (!isset($data[$key]))
+					{
+						if($fld["required"])
+						{
+							$data[$key] = "<span style='color:red'>Not specified</span>";
+							$valid = 0;
+						}
+						else $data[$key] = "Not specified";
+					}
+				}
+			}
+			$output  = "<table class='table table-hover' id='preview-table'>";
+			$output .= "<tr><th>Question</th><th>Value</th></tr>";
+			foreach ($data as $key=>$val)
+			{
+				$output .= "<tr><td>" . $key."</td><td>" . $val. "</td></tr>";
+			}
+			$output .= "</table>";
+			if ($valid) $output .= "<input type='button' id='frmSubmitBtn' disabled class='btn btn-default border' value='Submit' onclick='frmSubmit()'/> ";
+			$output .= "<input type='button' class='btn btn-default border' value='Edit' onclick='hidePreview()'/>";
+			return $output;
+		}	
+		else
+    	{
+    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+    	}
+	}
+
+	public function storeAuditRecord(Request $request)
+	{
+		$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
+		$functionGroups = FormsConfig::getFormConfigFields($request->get('radio_2'), $group = 'Description');
+		$descrTypes = array();
+		foreach ($functionGroups as $functionGroup)
+		{
+		    $xmlGroups = explode(';', $functionGroup['xml_grp']);
+		    $options = explode(';', $functionGroup['options']);
+		    foreach ($options as $key => $option)
+		    {
+		        if (isset($xmlGroups[$key]))
+		        {
+		            $descrTypes[$option] = trim($xmlGroups[$key]);
+		        }
+		    }
+		}
+
+		$data["items"] = array();
+		if ($asin = $request->get('asinid'))
+		{
+		    $data["asin"] = $asin;
+		    $refurb = $request->get('refurb');
+		    $sess = Session::getOpenStatucRecord($request, $status='open');
+		    if(count($sess) > 0) $sess = $sess[0];
+		    if ($sess && $refurb)
+		    {
+		    	SessionData::deleteSeesionDataRecorde($sess, $request->get("text_1"));
+		    	$sessionRecorde = [
+		            "sid" => $sess,
+		            "aid" => $asin,
+		            "asset" => $request->get("text_1"),
+		            "added_by" => $authUserName,
+		            "added_on" => $this->current
+		        ];
+		    	SessionData::addSessionDataRecord((object) $sessionRecorde ,$this->current);
+		    }
+		}
+		else
+		{
+		    $data["asin"] = 0;
+		}
+		if ($model = $request->get('modelid'))
+		{
+		    $data["model"] = $model;
+		    $grade = $request->get('grade');
+		    if ($grade == "A" || $grade == "A+")
+		    {
+		    	ListData::deleteListDataRecorde($model, $request->get("text_1"));
+		        $tech = FormModel::getFormModelTab($model);
+		        if ($tech == "Laptop" || $tech == "Computer" || $tech == "All In One")
+		        {
+					$listData = [
+					    "mid" => $model,
+					    "cpu" => $request->get("cpuname"),
+					    "grade" => $grade,
+					    "asset" => $request->get("text_1"),
+					    "added_by" => $authUserName,
+					    "added_on" => $this->current
+					];
+		    		ListData::addListDataRecord((object) $listData);
+		        }
+		    }
+		}
+		else
+		{
+		    $data["model"] = 0;
+		}
+		$outxml = array("user" => $authUserName, "processed" => $this->current);
+		$config = FormsConfig::getAllRecord();
+		$travelerId = "";
+		foreach ($config as $fld)
+		{
+		    $item = array();
+		    $itmid = $fld["qtype"] . "_" . $fld["id"];
+		    $itmidnew = $fld["qtype"] . "_" . $fld["id"] . "_new";
+		    $qtype = $fld["qtype"];
+		    $grp = str_replace(array(" ", "-", ":", ".", "/"), "_", $fld["grp"]);
+		    $key = str_replace(array(" ", "-", ":", ".", "/"), "_", $fld["question"]);
+		    $vals = explode(";", $fld["options"]);
+		    if (stripos($fld["config"], "filltemplate") > 0)
+		    {
+		        $item["template"] = 1;
+		    }
+		    else
+		    {
+		        $item["template"] = 0;
+		    }
+		    if (stripos($fld["config"], "fillmodel") > 0)
+		    {
+		        $item["fillmodel"] = 1;
+		    }
+		    else
+		    {
+		        $item["fillmodel"] = 0;
+		    }
+		    $item["id"] = $itmid;
+		    $item["type"] = $qtype;
+		    $item["key"] = $key;
+		    $item["options"] = $vals;
+		    $item["new"] = "";
+		    $itmval = $request->get($itmid);
+		    $itmvalnew = $request->get($itmidnew);
+		    if (($itmval !== false && $itmval !== "") || ($itmvalnew !== false && $itmvalnew !== ""))
+		    {
+		        if ($key == "Asset_Number")
+		        {
+		            $traveler_id = $request->get($itmid);
+		            $data["text_1"] = $request->get($itmid);
+		        }
+		        if ($key == "Product_Name")
+		        {
+		            $data["radio_2"] = $request->get($itmid);
+		            $product = $request->get($itmid);
+		        }
+		        if ($key == "Technology")
+		        {
+		            $technology = $request->get($itmid);
+		        }
+		        if ($key == "Model")
+		        {
+		            $model = $request->get($itmid);
+		        }
+		        if ($qtype == "mult")
+		        {
+		            $resp = $request->get($itmid);
+		            if (!empty($itmvalnew))
+		            {
+		                $resp[] = $request->get($itmidnew);
+		                $item["new"] = $request->get($itmidnew);
+		            }
+		            $item["value"] = $resp;
+		            $response = array("mult" => $resp);
+		        }
+		        elseif ($qtype == "radio")
+		        {
+		            if (!empty($itmvalnew))
+		            {
+		                $response = $request->get($itmidnew);
+		                $item["new"] = $request->get($itmidnew);
+		            }
+		            else
+		            {
+	                	$response = $request->get($itmid);
+	                }
+	            	$item["value"] = array($response);
+		        }
+		        elseif ($qtype == "dropdown")
+		        {
+		            if (!empty($itmvalnew))
+		            {
+		                $response = $request->get($itmidnew);
+		                $item["new"] = $request->get($itmidnew);
+		            }
+		            else{
+		                $response = $request->get($itmid);
+		            }
+	            	$item["value"] = array($response);
+		        }
+		        else
+		        {
+		            $response = $request->get($itmid);
+		            $item["value"] = array($response);
+		        }
+		        $data["items"][] = $item;
+		        if ($key == "HDD_Size" || $key == "Original_HDD_Size")
+		        {
+		            if ($response > 50)
+		            {
+		                $response .= "GB";
+		            }
+		            else
+		            {
+		                $response .= "TB";
+		            }
+		        }
+		        if ($key == "RAM_Size" || $key == "Original_RAM_Size")
+		        {
+		            $response .= "GB";
+		        }
+		        if (!empty($grp))
+		        {
+		            if ($grp == "Description" && is_array($response))
+		            {
+		                foreach ($response["mult"] as $itm)
+		                {
+		                    if (isset($descr_types[$itm]))
+		                    {
+		                        $descr = $descr_types[$itm];
+		                    }
+		                    else
+		                    {
+		                        $descr = "Additional";
+		                    }
+	                    	$outxml[$grp][$descr]["mult"][] = $itm;
+		                    if ($descr !== $key)
+		                    {
+		                        $outxml[$grp][$key]["mult"][] = $itm;
+		                    }
+		                }
+		            }
+		            else
+		            {
+		                $outxml[$grp][$key] = $response;
+		            }
+		        }
+		        else
+		        {
+		            if (!empty($outxml[$key]))
+		            {
+		                $outxml[$key] .= ";" . $response;
+		            }
+		            else
+		            {
+		                $outxml[$key] = $response;
+		            }
+		        }
+		        $adminEmails = Config::get('constants.adminEmail');
+		        $subject = "New item addition request";
+		        if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
+		        {
+		            $body = $authUserName . " requested to add the value '" . $request->get($itmidnew) . "'" .
+		                    "to the set of options for question '" . $fld["question"] . "' in '" . $fld["tab"] . "' tab (ID:" . $fld["id"] . ").\n" ."Please verify and make corresponding change in form configuration.";
+			        Mail::raw($body, function ($m) use ($subject, $adminEmails) {
+			            $m->to($adminEmails)->subject($subject);
+			        });
+		        }
+		    }
+		}
+		$xmlData = new SimpleXMLElement('<?xml version="1.0"?><data/>');
+		$this->arrayToXML($outxml, $xmlData);
+		if ($travelerId != "")
+		{
+		    if ($product == "Mobile_Device")
+		    {
+		        $fname = $this->wipeDataMobile.'/'.$travelerId.'.xml';
+		    }
+		    else
+		    {
+		        $fname = $this->wipeDataAdditional.'/'.$travelerId.'.xml';
+		    }
+		    $result = $xmlData->asXML($fname);
+		}
+		else
+		{
+		    $result = false;
+		}
+
+		if ($travelerId != "")
+		{
+		    $fname = $this->formData.'/'.$travelerId.'.json';
+		    file_put_contents($fname, json_encode($data));
+		    FormData::deleteFormDataRecorde($type = "data", $authUserName);
+		    $formData = array(
+					"type" => "data",
+					"user" => $authUserName,
+					"trid" => $travelerId,
+					"product" => $product,
+					"data" => json_encode($data)
+				);
+		    FormData::saveFormDataRecorde((object) $formData);
+		}
+
+		if (!empty($product) && !empty($technology) && !empty($model))
+		{
+		    $add = $request->get("addModel");
+		    if ($add)
+		    {
+		        if (!FormModel::getFormAllRecordExist($product, $technology, $model))
+		        {
+		        	$formModelData = [
+		        		"tab" => $product,
+		        		"technology" => $technology,
+		        		"model" => $model
+		        	];
+		        	FormModel::saveFormRecord((object) $formModelData);
+		        }
+		    }
+		    $modelid = FormModel::getFormAllRecordExist($product, $technology, $model);
+		    if($modelid)
+		    {
+		    	FormData::deleteFormDataRecordeByID($type='model', $modelid->id);
+		    	$formData = [
+		    		"type" => "model",
+		            "user" => $authUserName,
+		            "trid" => $modelid->id,
+		            "product" => $product,
+		            "data" => json_encode($data)
+		    	];
+		    	FormData::saveFormDataRecorde((object) $formData);
+		    }
+		}		
+	}
+
+	public function arrayToXML($data, &$xmlData)
+	{	
+		foreach ($data as $key => $value)
+		{
+	        if (is_numeric($key))
+	        {
+	            $key = 'item' . $key; //dealing with <0/>..<n/> issues
+	        }
+	        if (is_array($value))
+	        {
+	            if (!empty($value["mult"]))
+	            {
+	                foreach ($value["mult"] as $val)
+	                {
+	                    if(!empty($key))
+	                    $xmlData->addChild("$key", htmlspecialchars("$val"));
+	                }
+	            }
+	            else
+	            {
+	                $subnode = $xmlData->addChild($key);
+	                arrayToXML($value, $subnode);
+	            }
+	        }
+	        else
+	        {
+	            $xmlData->addChild("$key", htmlspecialchars("$value"));
+	        }
+	    }
 	}
 }

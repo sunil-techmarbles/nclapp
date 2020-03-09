@@ -21,6 +21,20 @@ class FormModel extends Model
 	    'asin_model',
     ];
 
+    public static function saveFormRecord($data)
+    {
+        $result = false;
+        $formModel = new FormModel();
+        $formModel->tab = $data->tab;
+        $formModel->technology = $data->technology;
+        $formModel->model = $data->model;
+        if($formModel->save())
+        {
+            $result = $formModel->id;
+        }
+        return $result;
+    }
+
     public static function getFormModelRecord($fields, $request, $isType)
     {
     	$query = self::select($fields);
@@ -34,5 +48,23 @@ class FormModel extends Model
         }
     	return $query->get();
     }
-    
+
+    public static function getAsinModelRecord($mid)
+    {
+        return self::where(["id" => $mid])
+            ->pluck("asin_model");
+    }
+
+    public static function getFormModelTab($value)
+    {
+        return self::where(["id" => $value])
+            ->pluck("tab")
+            ->first();
+    }
+
+    public static function getFormAllRecordExist($product, $technology, $model)
+    {
+        return self::where(["tab" => $product, "technology" => $technology, "model" => $model])
+            ->first();
+    }
 }

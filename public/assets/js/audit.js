@@ -14,13 +14,6 @@
 	var asinid = 0;
 	var asinmodels = [];
 	var prefix = 'admin';
-	// const swalWithBootstrapButtons = Swal.mixin({
-	// 	customClass: {
-	// 		confirmButton: 'btn btn-success',
-	// 		cancelButton: 'btn btn-danger'
-	// 	},
-	// 	buttonsStyling: false
-	// })
 
 	$(window).on('resize', function(){
 	    setHeader();
@@ -28,18 +21,18 @@
 	
 	function savePN()
 	{
-		var m = $('#pnModel').val();
-		var p = $('#pnPn').val();
-		if(!m || !p)
-		{
-			alert('Please enter Model and Part Number');
-			return false;
-		}
-		$.get("ajax.php?action=savePN&m=" + m + "&p=" + p + "&t=" + Math.random(), function (data)
-		{
-			alert(data);
-			$('#pnModal').modal('hide');
-	    });
+		// var m = $('#pnModel').val();
+		// var p = $('#pnPn').val();
+		// if(!m || !p)
+		// {
+		// 	showSweetAlertMessage(type = 'error', message = 'Please enter Model and Part Number' , icon= 'error');
+		// 	return false;
+		// }
+		// $.get("/"+prefix+"/savepartnumber?m=" + m + "&p=" + p + "&t=" + Math.random(), function (data)
+		// {
+		// 	alert(data);
+		// 	$('#pnModal').modal('hide');
+	 	//  });
 	}
 	
 	function editCapacity(cType)
@@ -63,7 +56,8 @@
 				var k = parseInt(i)+1;
 				str = dstr[i];
 				var astr = str.split("x");
-				if(astr.length==2){
+				if(astr.length==2)
+				{
 					$("#capacity"+k).val(astr[0]);
 					$("#qty"+k).val(astr[1]);
 				}
@@ -147,7 +141,6 @@
 		var fh = $("#main-form").height();
 		var bh = $("#page-bottom").height();
 		var wh = $(window).height();
-		
 		var ch = Math.round((wh-fh-lh-hh-bh) / 6);
 		if (ch>0)
 		{
@@ -182,7 +175,6 @@
 		var A = grades_array.indexOf("A");
 		var B = grades_array.indexOf("B");
 		var C = grades_array.indexOf("C");
-
 		var result = '';
 		if(C >= 0)
 		{ 
@@ -201,9 +193,10 @@
 			result = 'A';
 		}
 		$('input[type="radio"]').each(function (key, value) {
-				if($(this).val() == result) {
-					$($(this)).prop("checked", true);
-				}
+			if($(this).val() == result)
+			{
+				$($(this)).prop("checked", true);
+			}
 		});
 	}
 	
@@ -222,8 +215,8 @@
 			$('.combobox').combobox({appendId:"_cb"});
 			$("input[data-hddcapacity='1']").val(hddc);
 			$("input[data-ramcapacity='1']").val(ramc);
-			$('input[data-ramcapacity="1"]').parent().append('<span style="font-size:20px;cursor:pointer" onclick="editCapacity(\'ram\')" class="glyphicon glyphicon-edit"></span>');
-			$('input[data-hddcapacity="1"]').parent().append('<span style="font-size:20px;cursor:pointer" onclick="editCapacity(\'hdd\')" class="glyphicon glyphicon-edit"></span>');
+			$('input[data-ramcapacity="1"]').parent().append('<span style="font-size:20px;cursor:pointer" onclick="editCapacity(\'ram\')" class="fa fa-edit"></span>');
+			$('input[data-hddcapacity="1"]').parent().append('<span style="font-size:20px;cursor:pointer" onclick="editCapacity(\'hdd\')" class="fa fa-edit"></span>');
         	if (items.length > 0)
         	{
 				fillData();
@@ -240,7 +233,7 @@
 	function frmPreview()
 	{
 	    $("input[data-disable=1]").prop("disabled",true);
-	    $.get("ajax.php?action=getPreview&" + $("#main-form").serialize() + "&t=" + Math.random(), function (data) {
+	    $.get("/"+prefix+"/getpreview?" + $("#main-form").serialize() + "&t=" + Math.random(), function (data) {
 			$("#preview-content").html(data);
 			$("#main-form").hide();
 			$("#page-logo").hide();
@@ -431,7 +424,6 @@
 	{
 		var inp=$("#"+fId);
 		var out=$("#uhint");
-
 		var data=encodeURIComponent(inp.val());
 		var position = inp.position();
 		if (edit && data.length>2)
@@ -440,13 +432,15 @@
 			var x=position.left;
 			var y=position.top+h+10;
 			out.css(({left:x,top:y}));
-			$.get("ajax.php?action=getFiles&tgt="+fId+"&part="+data+"&t="+Math.random(), function(data)
+			$.get("/"+prefix+"/getfiles?tgt="+fId+"&part="+data+"&t="+Math.random(), function(data)
 			{
-				if(data) {
+				if(data)
+				{
 					$("#hints").html(data);
 					out.show();
 				}
-				else {
+				else
+				{
 					out.hide();
 				}
 			});
@@ -461,7 +455,7 @@
 	{
 		$("#text_1").val(trid);
 		$("#uhint").hide();
-		$.get("ajax.php?action=loadXML&trid="+trid+"&t="+Math.random(), function(data)
+		$.get("/"+prefix+"/loadxml?trid="+trid+"&t="+Math.random(), function(data)
 		{
 			var fCnt = JSON.parse(data);
 			var prodName = fCnt['radio_2'];
@@ -472,7 +466,6 @@
 			}
 			$(":input[name='radio_2'][value='" + prodName + "']").prop('checked', true);
 			items = fCnt['items'];
-			//showTab(prodName);
 			checkTravelerId(prodName);
 		});		
 	}
@@ -482,14 +475,14 @@
 		var trId = $('#text_1').val();
 	    if (trId.length < 3)
 	    {
-			alert("Please enter Asset ID");
+	    	showSweetAlertMessage(type = 'warning', message = 'Please enter Asset ID' , icon= 'warning');
 			return false;
 		}
-		$.get("ajax.php?action=loadLast&t="+Math.random(), function(data)
+		$.get("/"+prefix+"/loadlast?t="+Math.random(), function(data)
 		{
 			if (data=="false")
 			{
-				alert("Data not found");
+	    		showSweetAlertMessage(type = 'error', message = 'Data not found' , icon= 'error');
 			}
 			else
 			{
@@ -509,7 +502,7 @@
 					}
 				}
 				lastload=true;
-				checkTravelerId(prodName);	
+				checkTravelerId(prodName);
 			}
 		});		
 	}
@@ -518,7 +511,7 @@
 	{
 		modelSet = true;
 		$("#uhint").hide();
-		$.get("ajax.php?action=loadModel&m="+modelId+"&t="+Math.random(), function(data)
+		$.get("/"+prefix+"/loadmodel?m="+modelId+"&t="+Math.random(), function(data)
 		{
 			if (data=="false")
 			{
@@ -539,7 +532,7 @@
 				fillData();	
 				$(":input[data-fillmodel]").closest(".formitem").hide();
 				$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").show();
-				$('input[data-modelname="1"]').closest(".formitem").append('<div class="form-group"><label class="ttl">&nbsp;</label><br/><button type="button" class="btn btn-default" onclick="showModelFields()">Toggle common data</button></div>');
+				$('input[data-modelname="1"]').closest(".formitem").append('<div class="form-group"><label class="ttl">&nbsp;</label><br/><button type="button" class="btn btn-secondary" onclick="showModelFields()">Toggle common data</button></div>');
 				if(fCnt['asin'] != '0')
 				{
 					asinmodels = fCnt['models'];
@@ -557,7 +550,7 @@
 		cpuspeed = 0;
 		asinmodels = [];
 		calcGrade(false);
-		$.get("ajax.php?action=getRefNotification&m="+modelId+"&a="+trId+"&t="+Math.random(), function(data)
+		$.get("/"+prefix+"/getrefnotification?m="+modelId+"&a="+trId+"&t="+Math.random(), function(data)
 		{
 			var rData = JSON.parse(data);
 			cpuname = rData["cpuname"];
@@ -566,7 +559,7 @@
 			checkRefurb();
 			if(forRefurb == true && damageScore <=3 && !isBlacklisted)
 			{
-				alert("This item is suitable for Refurb. Please put aside");
+				showSweetAlertMessage(type = 'error', message = 'This item is suitable for Refurb. Please put aside' , icon= 'error');
 				$('#refurb').val('1');
 			}
 			else
@@ -616,7 +609,8 @@
 	function showModelFields()
 	{
 		$(":input[data-fillmodel]").closest(".formitem").toggle();
-		$(':input[data-fillmodel="1"]').closest(".formitem").css("background-color","#F5F5DC");
+		// $(':input[data-fillmodel="1"]').closest(".formitem").css("background-color","#F5F5DC");
+		$(':input[data-fillmodel="1"]').closest(".formitem");
 		$('input[data-modelname="1"]').closest(".formitem").show();
 		return false;
 	}
@@ -640,9 +634,11 @@
 				{
 					modelSet = true; 
 					$('#main-form').append('<input type="hidden" name="addModel" value="1"/>');
-					$(':input[data-fillmodel="1"]').closest(".formitem").css("background-color","#F4A460");
-					$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").css("background-color","none");
-					alert("Template created. Please carefully fill highlighted fields and submit the form");	
+					// $(':input[data-fillmodel="1"]').closest(".formitem").css("background-color","#F4A460");
+					$(':input[data-fillmodel="1"]').closest(".formitem");
+					// $('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").css("background-color","none");
+					$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem");
+					showSweetAlertMessage(type = 'error', message = 'Template created. Please carefully fill highlighted fields and submit the form' , icon= 'error');
 				}
 			}
 		}
@@ -692,14 +688,14 @@
 		    {
 				$("#"+itm["id"]+"_new").val(itm["new"]);
 				$("#"+itm["id"]).val("Other:");
-				$("#"+itm["id"]+"_newitm").prop('checked', true);	
+				$("#"+itm["id"]+"_newitm").prop('checked', true);
 			}
 		    if (itm["type"] == "mult" || itm["type"] == "radio")
 		    {
 				for (j = 0; j < vals.length; ++j)
 				{
 					$(":input[name='"+itm["id"]+"'][value='" + vals[j] + "']").prop('checked', true);
-					$(":input[name='"+itm["id"]+"[]'][value='" + vals[j] + "']").prop('checked', true);		
+					$(":input[name='"+itm["id"]+"[]'][value='" + vals[j] + "']").prop('checked', true);
 				}	
 			}
 			else
@@ -756,7 +752,6 @@
 				}	
 				if (rowFields.first().val()=="") cRow.hide();
 			}
-			//$(".hdddynrow").hide();
 			$("#hddrow1").show();
 		}
 		
@@ -803,7 +798,7 @@
 					rowFields.closest(".form-group").first().width(fWidth);
 					rowFields.closest(".form-group").eq(1).width(sWidth);
 				}	
-				if (rowFields.first().val()=="") cRow.hide();		
+				if (rowFields.first().val()=="") cRow.hide();
 			}
 			//$(".ramdynrow").hide();
 			$("#ramrow1").show();
@@ -919,6 +914,6 @@
 	{
 		if ($("#"+itmId).val().length > 0)
 		{
-			alert("Please set the machine aside to be manually audited");
+			showSweetAlertMessage(type = 'error', message = 'Please set the machine aside to be manually audited' , icon= 'error');
 		}
 	}
