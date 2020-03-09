@@ -1,5 +1,4 @@
 $(document).ready(function () { 
-
 	$("#newPackageForm input").keyup(function(){
 		$(this).siblings('.text-danger').text('');   
 	});  
@@ -50,7 +49,7 @@ $(document).ready(function () {
 		submitHandler: function() {  
 			addNewPackage(event, 'addnewpackage');
 		}
-	});
+	}); 
 
 });
 
@@ -161,13 +160,12 @@ function addNewPackage(event , url)
 } 
 
 
-function checkInPackage(url){
+function checkInPackage(url)
+{ 
 	var tn = $("#checkNumber").val();
 	var un = $("#userName").val();
 
-	if (tn.length>3) {
-
-
+	if (tn.length>3) { 
 
 
 
@@ -180,9 +178,6 @@ function checkInPackage(url){
 			text: 'Invalid Tracking Number !!',
 		});
 	}
-
-	console.log( tn );
-	console.log( un ); 
 
 }
 
