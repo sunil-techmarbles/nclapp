@@ -1,7 +1,61 @@
+$(document).ready(function () { 
+
+	$("#newPackageForm input").keyup(function(){
+		$(this).siblings('.text-danger').text('');   
+	});  
+
+	$(" #newPackageForm select, #newPackageForm input ").change(function(){
+		$(this).siblings('.text-danger').text('');   
+	});
+
+	$('.datepicker').datepicker({format: "yyyy-mm-dd"}); 
+	$(".daterange").daterangepicker({
+		opens: 'left',
+		locale: {
+			format: 'YYYY-MM-DD'
+		},
+		autoUpdateInput: false
+	}).on('apply.daterangepicker', function(ev, picker){
+		picker.element.val(picker.startDate.format(picker.locale.format)+' - '+picker.endDate.format(picker.locale.format));
+	});
+
+	$('#newPackageForm').validate({
+		rules: { 
+			expected_arrival: {
+				required: true
+			},
+			description: {
+				required: true,
+			},
+			req_name: {
+				required: true,
+			},
+			tracking_number: {
+				required: true,
+			},
+			order_date: {
+				required: true,
+			},
+			carrier: {
+				required: true,
+			},
+			freight_ground: {
+				required: true,
+			},
+			qty:{
+				required: true,
+				number: true
+			}
+		},
+		submitHandler: function() {  
+			addNewPackage(event, 'addnewpackage');
+		}
+	});
+
+});
+
 function savePN(url)
 {
-	console.log( url );  
-
 	var modal = $('#pnModel').val();
 	var partnumber = $('#pnPn').val();
 
@@ -24,11 +78,7 @@ function savePN(url)
 	}) 
 	.done(function(response)
 	{
-		Swal.fire({
-			icon: response.status,
-			title: response.title,
-			text: response.message,
-		})
+		sweetAlertAfterResponse(response);
 	}) 
 	.fail(function()
 	{
@@ -58,82 +108,94 @@ function filterModels(str)
 
 
 function newPackage() 
-{ 
+{
 	$('#pkg_id').val('new'); 
 	$('#asinModalLabel').text('New Package');
-	// for (var i in sv) {
-	// 	$('#f_'+i).val('');
-	// }
 	$('#asinModal').modal('show');
-} 
-
-
-function addNewPackage(event, form, url)
-{ 
-	event.preventDefault(); 
-
-	$.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    }); 
- 
-	$.ajax({
-		url: url, 
-		type: 'POST', 
-		data: $(form).serialize(),
-		dataType: 'json'
-	})
-	.done(function(response)
-	{
-		console.log( response ); 
-		// Swal.fire({
-		// 	icon: response.status,
-		// 	title: response.title,
-		// 	text: response.message,
-		// })
-	}) 
-	.fail(function()
-	{
-		// Swal.fire({
-		// 	icon: 'error',
-		// 	title: 'Oops...',
-		// 	text: 'Something went wrong with ajax !',
-		// });
-	});
 }
 
 
-$(document).ready(function () {
-    $('#newPackageForm').validate({
-        rules: { 
-            expected_arrival: {
-                required: true
-            },
-            description: {
-                required: true,
-            },
-            req_name: {
-                required: true,
-            },
-            tracking_number: {
-                required: true,
-            },
-            order_date: {
-                required: true,
-            },
-            carrier: {
-                required: true,
-            },
-            freight_ground: {
-                required: true,
-            },
-            qty:{
-            	required: true,
-            }
-        }
-    });
-});
+function addNewPackage(event , url)
+{
+	event.preventDefault(); 
+
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});  
+
+	$.ajax({ 
+		url: url, 
+		type: 'POST', 
+		data: $('#newPackageForm').serialize(),
+		dataType: 'json'
+	}).done(function(response) { 
+
+		if( response.validation == 'errors' ) 
+		{  
+			$.each( response.messages , function( key, value ) 
+			{
+				$( "input[name='"+key+"']" ).siblings('.text-danger').text( value[0] );
+				$( "select[name='"+key+"']" ).siblings('.text-danger').text( value[0] ); 
+			});
+		} 
+		else
+		{
+			sweetAlertAfterResponse(response); 
+			if( response.status == 'success')
+			{
+				location.reload();
+			}
+		}
+		
+	}).fail(function() { 
+		
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Something went wrong with ajax !',
+		});
+		
+	});
+} 
+
+
+function checkInPackage(url){
+	var tn = $("#checkNumber").val();
+	var un = $("#userName").val();
+
+	if (tn.length>3) {
+
+
+
+
+
+	} 
+	else 
+	{
+		Swal.fire({
+			icon: 'error',
+			title: 'Oops...',
+			text: 'Invalid Tracking Number !!',
+		});
+	}
+
+	console.log( tn );
+	console.log( un ); 
+
+}
+
+
+function sweetAlertAfterResponse(response)
+{ 
+	Swal.fire({
+		icon: response.status,
+		title: response.title,
+		text: response.message, 
+		showConfirmButton: false
+	});
+}
 
 
 
