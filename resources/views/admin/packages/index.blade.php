@@ -3,12 +3,10 @@
 @section('content')
 
 <div class="container">
-	<div>
-		<button style="margin-top:10px;margin-left: 50px" class="btn btn-info" data-toggle="modal" data-target="#checkModal">Check 	In</button>
-		<button style="float:right;margin-top:10px" class="btn btn-primary" onclick="newPackage()">New Package</button>
-	</div>
-	<div id="page-head">
-		Packages
+	<div id="page-head">Packages</div>
+	<div class=" w-100 mb-3 float-right">
+		<button class="btn btn-info" data-toggle="modal" data-target="#checkModal">Check In</button>
+		<button class="btn btn-primary" onclick="newPackage()">New Package</button>
 	</div>
 	<form method="GET" enctype="multipart/form-data" autocomplete="off" action="{{route('packages')}}"> 
 		<div style="margin-bottom: 10px">
@@ -99,7 +97,7 @@
 					</div>
 				</div>
 				<div class="col-sm-3">
-					<div class="form-group-sm float-right mt-2">
+					<div class="form-group-sm float-right mt-3">
 						<a href="{{route('packages')}}" class="btn btn-warning" >Reset</a>
 						<input class="btn btn-primary" type="submit" name="pkg_search" id="pkg_search" value="Search"/>
 					</div>
@@ -147,7 +145,6 @@
 			@endforeach
 		</table>
 	@endif
-
 	@include('admin.packages.modal')
 </div>
 @endsection  
