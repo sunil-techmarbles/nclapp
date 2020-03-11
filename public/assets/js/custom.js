@@ -1,5 +1,4 @@
 $(document).ready(function () { 
-
 	$("#newPackageForm input").keyup(function(){
 		$(this).siblings('.text-danger').text('');   
 	});  
@@ -50,7 +49,7 @@ $(document).ready(function () {
 		submitHandler: function() {  
 			addNewPackage(event, 'addnewpackage');
 		}
-	});
+	}); 
 
 });
 
@@ -61,12 +60,7 @@ function savePN(url)
 
 	if(!modal || !partnumber) 
 	{
-		Swal.fire
-		({
-			icon: 'error',
-			title: 'Oops...',
-			text: 'Please enter Model and Part Number !',
-		})
+		sweetAlertAfterResponse( status = 'error' , title = 'Oops...', message = 'Please enter Model and Part Number !' , showbutton = true );
 		return false;
 	} 
 
@@ -76,17 +70,13 @@ function savePN(url)
 		data: {'modal':modal, 'partnumber':partnumber},
 		dataType: 'json' 
 	}) 
-	.done(function(response)
+	.done(function(response) 
 	{
-		sweetAlertAfterResponse(response);
+		sweetAlertAfterResponse(response.status, response.title, response.message , showbutton = true );  
 	}) 
 	.fail(function()
 	{
-		Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: 'Something went wrong with ajax !',
-		});
+		sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Something went wrong with ajax !' , showbutton = true );
 	});
 	$('#pnModal').modal('hide'); 
 	$('#pnModel, #pnPn ').val(''); 
@@ -131,7 +121,6 @@ function addNewPackage(event , url)
 		data: $('#newPackageForm').serialize(),
 		dataType: 'json'
 	}).done(function(response) { 
-
 		if( response.validation == 'errors' ) 
 		{  
 			$.each( response.messages , function( key, value ) 
@@ -142,58 +131,48 @@ function addNewPackage(event , url)
 		} 
 		else
 		{
-			sweetAlertAfterResponse(response); 
+			sweetAlertAfterResponse(response.status, response.title, response.message, showbutton = false ); 
 			if( response.status == 'success')
 			{
 				location.reload();
 			}
 		}
-		
-	}).fail(function() { 
-		
-		Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: 'Something went wrong with ajax !',
-		});
-		
+	}).fail(function() {
+		sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Something went wrong with ajax !', showbutton = true);
 	});
 } 
 
 
-function checkInPackage(url){
+function checkInPackage(url)
+{ 
 	var tn = $("#checkNumber").val();
 	var un = $("#userName").val();
 
-	if (tn.length>3) {
+	if (tn.length>3) 
+	{ 
+		$.get( url +"/?tn="+tn+"&un="+un, function(response)
+		{
 
+			console.log( response );  
 
-
-
+		});
 
 	} 
 	else 
 	{
-		Swal.fire({
-			icon: 'error',
-			title: 'Oops...',
-			text: 'Invalid Tracking Number !!',
-		});
+		sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Invalid Tracking Number !', showbutton = true);
 	}
-
-	console.log( tn );
-	console.log( un ); 
 
 }
 
 
-function sweetAlertAfterResponse(response)
-{ 
+function sweetAlertAfterResponse(status, title, message, showbutton)
+{
 	Swal.fire({
-		icon: response.status,
-		title: response.title,
-		text: response.message, 
-		showConfirmButton: false
+		icon: status,
+		title: title,
+		text: message, 
+		showConfirmButton: showbutton
 	});
 }
 

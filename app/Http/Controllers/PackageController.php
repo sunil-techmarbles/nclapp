@@ -67,8 +67,12 @@ class PackageController extends Controller
 	} 
 
 	
-	public function CheckInPackage(Request $request){ 
+	public function CheckInPackage(Request $request)
+	{ 
+		$checkTrackingId = Package::CH($request->tn);
 
+
+		// dd( $request );  
 
 
 	}

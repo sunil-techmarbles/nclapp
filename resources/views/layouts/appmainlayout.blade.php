@@ -27,7 +27,7 @@
 		<div> 
 	</body> 
 
-	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/jquery.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/jquery.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
 
 </html>  

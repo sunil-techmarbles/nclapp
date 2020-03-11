@@ -78,10 +78,11 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
+		
 		//In bound
 		Route::any('/packages','PackageController@index')->name('packages');  
 		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');
-		Route::post('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package'); 
+		Route::get('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package');  
 
 
 		//Out bound
