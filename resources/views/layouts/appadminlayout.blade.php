@@ -35,6 +35,7 @@
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.min.js')}}" ></script> 
 	<script type="text/javascript" src = "{{URL('assets/js/datepicker/moment.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/datepicker/datepicker.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap-combobox.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/datepicker/daterangepicker.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
@@ -43,5 +44,6 @@
 	<script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>  
 	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/audit.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script>  
 </html>
