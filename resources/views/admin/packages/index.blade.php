@@ -107,6 +107,7 @@
 			</div>
 		</div>
 	</form>
+	
 	@if (!empty($searchedPackages))
 		<h3>Search Results</h3>
 		<table class="table table-striped table-condensed table-hover table-sm">
@@ -146,6 +147,7 @@
 			@endforeach
 		</table>
 	@endif
+
 	@include('admin.packages.modal')
 </div>
 @endsection  
