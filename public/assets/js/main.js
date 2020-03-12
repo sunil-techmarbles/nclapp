@@ -67,7 +67,7 @@ $(document).ready(function()
 
 $(document).ready(function()
 {
-	$('#supplies, #asins, #users_table ').DataTable();
+	$('#supplies, #asins, #users_table').DataTable();
 	
 	$('#shipment').DataTable
 	({
@@ -79,7 +79,7 @@ $(document).ready(function()
 		"bAutoWidth": false
 	});
 	
-	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part').DataTable
+	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part, #package-table').DataTable
 	({
 		"searching": false,
 		"bPaginate": false,

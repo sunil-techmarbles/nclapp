@@ -28,20 +28,19 @@ class PackageController extends Controller
 	public function AddUpdatePackage(Request $request)
 	{
 		$validator = Validator::make($request->all(), [
-				'expected_arrival' => 'required|min:2|max:50',
-				'description' => 'required|min:2|max:50',  
-				'req_name' => 'required|min:2|max:50',  
-				'carrier' => 'required|min:2|max:50',  
-				'freight_ground' => 'required|min:2|max:50',  
-				'qty' => 'required|numeric|min:1|max:100', 
-				'order_date' => 'required|min:2|max:50', 
-			]);
+			'expected_arrival' => 'required|min:2|max:50',
+			'description' => 'required|min:2|max:50',  
+			'req_name' => 'required|min:2|max:50',  
+			'carrier' => 'required|min:2|max:50',  
+			'freight_ground' => 'required|min:2|max:50',  
+			'qty' => 'required|numeric|min:1|max:100', 
+			'order_date' => 'required|min:2|max:50', 
+		]);
  
-
 		if ($validator->fails()) 
 		{
 			$response['validation']  = 'errors';
-			$response['messages'] =  $validator->errors();  
+			$response['messages'] =  $validator->errors();
 			return response()->json($response); 
 		}
 		else 
@@ -49,45 +48,39 @@ class PackageController extends Controller
 			if($request->pkg_id == 'new')
 			{
 				$validator = Validator::make($request->all(), [
-					'tracking_number' => 'required|unique:packages,tracking_number', 
+					'tracking_number' => 'required|unique:packages,tracking_number',
 				]);
-				
-				if ($validator->fails()) 
+				if ($validator->fails())
 				{
 					$response['validation']  = 'errors';
-					$response['messages'] =  $validator->errors();  
-					return response()->json($response); 
+					$response['messages'] =  $validator->errors();
+					return response()->json($response);
 				}
-				
 				Package::AddPackageDetails($request); 	
 				$response['status']  = 'success';
 				$response['title']  = 'Package Added';
 				$response['message'] = 'New Package Added Successfully'; 
-
 			}
 			else
 			{
+				$id = intval($request->pkg_id);
 				$validator = Validator::make($request->all(), [
-					'tracking_number' => 'required|unique:packages,tracking_number,'. $request->tracking_number ,  
+					'tracking_number' => 'required|unique:packages,tracking_number,'.$id,
 				]);
-	 
-				if ($validator->fails()) 
+				if ($validator->fails())
 				{
 					$response['validation']  = 'errors';
-					$response['messages'] =  $validator->errors();  
+					$response['messages'] =  $validator->errors();
 					return response()->json($response); 
-				}
-
-				Package::UpdatePackageDetails($request);
+				} 
+				Package::UpdatePackageDetails($request);  
 				$response['status']  = 'success';
 				$response['title']  = 'Package Update';
 				$response['message'] = 'Package Update Successfully'; 
-
 			} 
-			
-			return response()->json($response); 
+			return response()->json($response);
 		}
-	} 
+	}
 
 	public function CheckInPackage(Request $request)
 	{

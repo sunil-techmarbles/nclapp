@@ -2,9 +2,11 @@
 var packageModalInputs = ["order_date", "expected_arrival", "description", "qty", "value", "req_name", "tracking_number", "ref_number", "carrier", "freight_ground", "recipient", "received", "worker_id", "location" ];
 
 // validation and form submit of AddUpdate Package 
-$(document).ready(function () { 
-	removePackageFormErr();
+$(document).on('change ,keyup , load, blur' , "#newPackageForm input, #newPackageForm select" , function(){ 
+ 	removeErrorMessage(this);
+});
 
+$(document).ready(function () {
 
 	$('.datepicker').datepicker({format: "yyyy-mm-dd"}); 
 	$(".daterange").daterangepicker({
@@ -101,8 +103,8 @@ function filterModels(str)
 
 // Add new Package in InBound Section 
 function newPackage()
-{ 
-	removePackageFormErr();
+{
+	$("#newPackageForm input, #newPackageForm select").siblings('.text-danger').text('');
 	$('#packageModal').find( "input" ).val('');
 	$('#newPackageForm').find( "select" ).val('');
 	$('#packageModalLabel').text('New Package'); 
@@ -111,10 +113,11 @@ function newPackage()
 	$('#packageModal').modal('show'); 
 }
 
+
 // Edit Existing Package in InBound Section 
 function editPackage(packageTr, packageId)
-{
-	removePackageFormErr(); 
+{ 
+	$("#newPackageForm input, #newPackageForm select").siblings('.text-danger').text('');
 	$('#packageModalLabel').text('Edit Package'); 
 	$('#pkg_id').val(packageId); 
 	$('#packageModalSubmit').text('Update Package');
@@ -135,22 +138,22 @@ function addUpdatePackage(event , url)
 	$.ajaxSetup({
 		headers: {
 			'X-CSRF-TOKEN': _token
-		} 
-	});  
-	$.ajax({ 
-		url: url, 
-		type: 'POST', 
+		}
+	});
+	$.ajax({
+		url: url,
+		type: 'POST',
 		data: $('#newPackageForm').serialize(),
 		dataType: 'json'
 	}).done(function(response) { 
-		if( response.validation == 'errors' ) 
+		if( response.validation == 'errors' )
 		{
-			$.each( response.messages , function( key, value ) 
+			$.each( response.messages , function( key, value )
 			{
 				$( "input[name='"+key+"']" ).siblings('.text-danger').text( value[0] );
 				$( "select[name='"+key+"']" ).siblings('.text-danger').text( value[0] ); 
 			});
-		} 
+		}
 		else
 		{
 			sweetAlertAfterResponse(response.status, response.title, response.message, showbutton = false ); 
@@ -162,7 +165,7 @@ function addUpdatePackage(event , url)
 	}).fail(function() {
 		sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Something went wrong with ajax !', showbutton = true);
 	});
-} 
+}
 
 
 // check in package form submit in In Bound Section 
@@ -173,13 +176,13 @@ function checkInPackage(url)
 	if (tn.length>3) 
 	{
 		$.get( url +"/?tn="+tn+"&un="+un, function(response)
-		{ 
+		{
 			sweetAlertAfterResponse(response.status, response.title, response.message, showbutton = true);
 			$('#checkInModal').modal('hide');
 			$('#trackingNumber').val('');
 		});
 	} 
-	else 
+	else
 	{
 		sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Invalid Tracking Number !', showbutton = true);
 	}
@@ -199,17 +202,5 @@ function sweetAlertAfterResponse(status, title, message, showbutton)
 // remove reeor messages
 function removeErrorMessage(el)
 {
-	$(el).siblings('.text-danger').text('');  
+	$(el).siblings('.text-danger').text('');
 }
-
-function removePackageFormErr()
-{ 
-	$("#newPackageForm input, #newPackageForm select").on('change, keyup, load' , function(){
-		 removeErrorMessage(this);
-	});
-
-}
-
-
-
-
