@@ -13,7 +13,8 @@ class User extends EloquentUser {
 
 	protected $dates = ['deleted_at'];
 
-	public static function checkEmailExits( $email='' ) {
+	public static function checkEmailExits( $email='' ) 
+	{
 		$isCheck = false;
 		$exits = self::where([ 'email' => $email ])->first(); 
 		if( $exits ) { 
@@ -22,22 +23,18 @@ class User extends EloquentUser {
 		return $isCheck;  
 	} 
 
-	public static function getUserDetail( $id ) { 
+	public static function getUserDetail( $id ) 
+	{ 
 		return $data = self::where('users.id' , $id )
 		->join('role_users', 'role_users.user_id', '=', 'users.id')
 		->select('*')
 		->first();
 	}
 	
-	public static function deleteUserByID( $uid ) { 
-		$result = false;
+	public static function deleteUserByID( $uid ) 
+	{ 
 		$user = self::find($uid);
-		if($user->delete())
-		{
-			$result = true;
-		} 
-
-		return $result;
+		return ($user->delete()) ? true : false;
 	}
 
 }

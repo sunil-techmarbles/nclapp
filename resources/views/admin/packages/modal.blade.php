@@ -1,5 +1,5 @@
 	<!-- Check in modal  --> 
-	<div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="checkModalLabel" aria-hidden="true">
+	<div class="modal fade" id="checkInModal" tabindex="-1" role="dialog" aria-labelledby="checkModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-sm" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -7,8 +7,8 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="checkNumber">Please scan or enter the Tracking Number</label>
-						<input class="form-control" type="text" id="checkNumber"/>
+						<label for="trackingNumber">Please scan or enter the Tracking Number</label>
+						<input class="form-control" type="text" id="trackingNumber"/>
 					</div>
 
 					<div class="form-group">
@@ -24,19 +24,18 @@
 		</div>
 	</div>
 
-
 	<!-- New package / Edit package modal  -->
-	<div class="modal fade" id="asinModal" tabindex="-1" role="dialog" aria-labelledby="asinModalLabel" aria-hidden="true">
+	<div class="modal fade" id="packageModal" tabindex="-1" role="dialog" aria-labelledby="packageModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<form method="post" enctype="multipart/form-data" id="newPackageForm" autocomplete="off"> 
 					<div class="modal-header">
-						<h3 class="modal-title" id="asinModalLabel">New Package</h3> 
+						<h3 class="modal-title" id="packageModalLabel">New Package</h3> 
 					</div>
-					<div class="modal-body">
+					<div class="modal-body"> 
 
 						<div style="margin-bottom: 10px">
-							<input type="hidden" name="pkg_id" id="pkg_id" value=""/>
+							<input type="hidden" name="pkg_id" id="pkg_id" value="new"/>
 							
 							<div class="row" style="margin-bottom:5px"> 
 								<div class="col-sm-3">
@@ -134,7 +133,6 @@
 									</div>
 								</div>
 							</div>
-							
 							<div class="row" style="margin-bottom:5px">
 								<div class="col-sm-3">
 									<div class="form-group-sm">
@@ -155,7 +153,7 @@
 						</div>
 					</div>
 					<div class="modal-footer">
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" id="packageModalSubmit" class="btn btn-primary">Add Package</button>
 					</div>
 				</form>
 			</div>

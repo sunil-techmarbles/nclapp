@@ -16,6 +16,8 @@ Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPas
 Route::post('/SendPasswordResetEmail', 'LoginController@sendPasswordResetEmail')->name('sendPasswordResetEmail');
 Route::get('/ResetPasswordForm/{token}', 'LoginController@resetPasswordForm')->name('resetPasswordForm');
 Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPassword');
+Route::get('/logout', 'LoginController@logout')->name('logout');
+
 
 Route::middleware(['guest','revalidate'])->group(function () {
 	Route::get('/','LoginController@index')->name('login.view');
@@ -28,14 +30,16 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	});
 });
 
-Route::get('/logout', 'LoginController@logout')->name('logout');
+
 // Change header for reports, import and export
 Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () {
 	Route::prefix('admin')->group(function () {
-		// refub 
+		
+		// refub Report
 		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report');
 		Route::get('/exportissuereport','RefurbController@ExportIssueReport')->name('get.issue.report');
-		// supplies 
+		
+		// supplies Report 
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
 	});
@@ -44,13 +48,13 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
 
+	    // Users Section
 	    Route::get('/users', 'UsersController@index')->name('users');
 	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
-	    
-	    Route::any('/audit','AuditController@index')->name('audit');
-		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
+
+		// Supplies Section
 
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
@@ -60,6 +64,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/updatesupplie','SuppliesController@updateSupplies')->name('update.supplies');
 		Route::get('/deletesupplie/{supplieid}','SuppliesController@deleteSupplie')->name('delete.supplies');
      
+		// Asin Section
 		Route::get('/asin','AsinController@index')->name('asin');
 		Route::get('/addasin','AsinController@addAsins')->name('add.asins');
 		Route::post('/storeasin','AsinController@storeAsins')->name('store.asin');
@@ -69,6 +74,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
 		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup');
 
+		// Refurb Section
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');
 		Route::post('/saveasin','RefurbController@saveAsin')->name('save.asin');
@@ -79,16 +85,19 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		
-		//In bound
+		//In bound Section
 		Route::any('/packages','PackageController@index')->name('packages');  
-		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');
+		Route::post('/addupdatepackage','PackageController@AddUpdatePackage')->name('addUpdate.package');
 		Route::get('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package');  
 
-		//Out bound
+		//Out bound Section
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
-
 		Route::any('/sessions','SessionController@index')->name('sessions');
+		
+		// Audit Section
+		Route::get('/audit','AuditController@index')->name('audit');
+		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
 		Route::get('/checktravelerid', 'AuditController@checkTravelerId')->name('check.traveler.id');
 		Route::get('/gettab', 'AuditController@getTab')->name('get.tab');
 		Route::get('/checktraveleridformobile', 'AuditController@CheckTravelerIdForMobile')->name('check.traveler.id.for.mobile');
