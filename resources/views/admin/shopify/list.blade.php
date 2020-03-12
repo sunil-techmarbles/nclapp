@@ -151,7 +151,7 @@
 						</td>
 						<td>{{$images}}</td>
 						<td style="text-align: center; {{ $price_display=='N/A' ? 'cursor:pointer':''}}" <?=$price_display=='N/A'?'onclick="setPrice(\''.$i["asin"].'\')"':''?>><?=$price_display ?></td>
-						<td>{{ $i["shopify_product_id"] ? ' <a href="{{route('inventory', ['goto' => $i['shopify_product_id']])}}">$i["shopify_product_id"]</a>' : ''}}</td>
+						<td>{{ $i["shopify_product_id"] ? ' <a href="route('inventory', ['goto' => $i['shopify_product_id']])">$i["shopify_product_id"]</a>' : ''}}</td>
 						<td  class="s_price" style="display:none;text-align: center;">
 							@if ($i["shopify_product_id"])
 								$price_data = getShopifyRunlistPrice($db, $i);

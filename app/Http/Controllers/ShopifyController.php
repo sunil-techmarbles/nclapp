@@ -33,7 +33,7 @@ class ShopifyController extends Controller
 		if(!empty($data['product']['handle']))
 		{
 			$producturl = $this->productMainSiteUrl."/".$data['product']['handle'];
-			Redirect::away($producturl)
+			Redirect::away($producturl);
 		}
     }
 
@@ -55,7 +55,7 @@ class ShopifyController extends Controller
 	{
 		if($request->ajax())
         {
-			$mid = $request->get('mid')
+			$mid = $request->get('mid');
 			$asin = str_replace('model','',$request->get('asin'));
 			if($mid && $asin)
 			{
