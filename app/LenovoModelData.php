@@ -31,12 +31,8 @@ class LenovoModelData extends Model
 
     public static function CheckIfPartNumberExists($partNumber)
     {
-        $ifExist = false;
         $exits = self::where([ 'part_number' => $partNumber ])->first(); 
-        if( $exits )
-        {  
-            $ifExist = true;
-        }     
-        return $ifExist;  
+        return ( $exits  ) ? true : false ;
     }
+
 }

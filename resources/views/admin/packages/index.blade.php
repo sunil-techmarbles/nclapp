@@ -5,7 +5,7 @@
 <div class="container">
 	<div id="page-head">Packages</div>
 	<div class=" w-100 mb-3 float-right">
-		<button class="btn btn-info" data-toggle="modal" data-target="#checkModal">Check In</button>
+		<button class="btn btn-info" data-toggle="modal" data-target="#checkInModal">Check In</button>
 		<button class="btn btn-primary" onclick="newPackage()">New Package</button>
 	</div>
 	<form method="GET" enctype="multipart/form-data" autocomplete="off" action="{{route('packages')}}"> 
@@ -65,7 +65,6 @@
 						</select>
 					</div>
 				</div>
-				
 			</div>
 			<div class="row" style="margin-bottom:5px">
 				<div class="col-sm-3">
@@ -107,7 +106,6 @@
 			</div>
 		</div>
 	</form>
-	
 	@if (!empty($searchedPackages))
 		<h3>Search Results</h3>
 		<table class="table table-striped table-condensed table-hover table-sm">
@@ -127,8 +125,9 @@
 				<th>Worker ID</th>
 				<th>location</th>
 			</tr>
-			@foreach($searchedPackages as $package)
-				<tr style="cursor: pointer" onclick="editPackage()">
+		@foreach($searchedPackages as $package)
+			@if (!empty($package->id))
+				<tr style="cursor: pointer" onclick="editPackage( this , {{$package->id}})">
 					<td>{{$package->order_date}}</td>
 					<td>{{$package->expected_arrival}}</td>
 					<td>{{$package->description}}</td>
@@ -144,10 +143,13 @@
 					<td>{{$package->worker_id}}</td>
 					<td>{{$package->location}}</td>
 				</tr>
-			@endforeach
+			@endif
+				<!-- <tr>
+					<td>No Result Find</td>
+				</tr> -->
+		@endforeach
 		</table>
 	@endif
-
 	@include('admin.packages.modal')
 </div>
 @endsection  

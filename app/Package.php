@@ -8,11 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Package extends Model
 {
-
 	use SoftDeletes;
 	protected $dates = ['deleted_at'];
-
-	
 	protected $fillable = [
 		'worker_id',
 		'value',
@@ -30,8 +27,7 @@ class Package extends Model
 		'order_date',
 	];
 
-
-	public static function AddPackage($packagedata) 
+	public static function AddPackageDetails($packagedata) 
 	{
 		$result = false; 
 
@@ -58,10 +54,49 @@ class Package extends Model
 		return $result; 
 	}
 
+	public static function UpdatePackageDetails($packagedata)
+	{
+
+		return self::where(["id" => $packagedata->pkg_id])->update([
+				"worker_id" => $packagedata->worker_id ,
+				"value" => $packagedata->value ,
+				"location" => $packagedata->location ,
+				"carrier" => $packagedata->carrier ,
+				"freight_ground" => $packagedata->freight_ground ,
+				"qty" => $packagedata->qty ,
+				"description" => $packagedata->description ,
+				"req_name" => $packagedata->req_name ,
+				"tracking_number" => $packagedata->tracking_number ,
+				"ref_number" => $packagedata->req_name ,
+				"expected_arrival" => $packagedata->expected_arrival ,
+				"order_date" => $packagedata->order_date ,
+				"received" => $packagedata->received ,
+				"recipient" => $packagedata->recipient ,
+		]); 
+ 
+	}
+
+	public static function CheckIfPackageExist($package_id)
+	{
+		$package = self::where('tracking_number','=',$package_id)
+						->first();
+		
+		return ( isset($package) ) ? true : false ;
+	
+	} 
+
+	public static function UpdatePackageRecived($package_details)
+	{ 
+		return self::where(["tracking_number" => $package_details->tn])->update(
+        	[
+				'received'  => 'Y',
+				'worker_id' => $package_details->un,
+			]
+        );
+	}
 
 	public static function getPackages($request)
 	{
-		
 		$query = self::select('*');
 		
 		if($request->has('received'))
@@ -134,19 +169,3 @@ class Package extends Model
 			->get();
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
