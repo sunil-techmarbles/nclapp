@@ -1,5 +1,51 @@
+var prefix = 'admin';
+var _token = $('meta[name="csrf-token"]').attr('content');
+
+const swalWithBootstrapButtons = Swal.mixin({
+	customClass: {
+		confirmButton: 'btn btn-success',
+		cancelButton: 'btn btn-danger'
+	},
+	buttonsStyling: false
+})
+
+function showSweetAlertMessage(type, message, icon)
+{
+	swalWithBootstrapButtons.fire(
+		type,
+		message,
+		icon
+	) 
+}
+
+function getAssetData(fId)
+{
+	var asin = $('#asset_num').val();
+	if (asin.length >= 10)
+	{
+		$.get("/"+prefix+"/getasin?asin=" + asin + "&t=" + Math.random(), function (data) {
+			if (data == '0')
+			{
+				showSweetAlertMessage(type = 'error', message = 'ASIN not found. Please check and try again' , icon= 'error');
+			}
+			else
+			{
+				location.href = 'index.php?page=parts&model=' + data;
+			}
+		});
+	}
+}
+
 $(document).ready(function()
 {
+	if($('.it-amg-redirect').length > 0)
+	{
+		setTimeout(
+			function(){
+				location.href =  $('.it-amg-redirect').attr('href');
+			}
+			,3000);
+	}
 	$('#asset').focus();
 	$(document).keydown(function(event)
 	{
@@ -129,25 +175,6 @@ function reorderItem(iid, dqty, url)
 	}
 }
 
-function getAssetData(fId)
-{
-	var asin=$('#asset_num').val();
-	if (asin.length >= 10) 
-	{
-		$.get("ajax.php?action=getASIN&asin="+asin+"&t="+Math.random(), function(data) 
-		{
-			if(data=='0') 
-			{
-				alert('ASIN not found. Please check and try again');
-			} 
-			else 
-			{
-				location.href = 'index.php?page=parts&model='+data;
-			}
-		});
-	}
-}
-
 function filterModels(str)
 {
 	if (str.length > 2) 
@@ -175,16 +202,6 @@ function deptFilter()
 
 function del_confirm(id,url,text)
 {
-
-	const swalWithBootstrapButtons = Swal.mixin
-	({
-		customClass: {
-			confirmButton: 'btn btn-success',
-			cancelButton: 'btn btn-danger'
-		},
-		buttonsStyling: true
-	})
-
 	swalWithBootstrapButtons.fire
 	({
 		title: 'Are you sure?',
@@ -234,37 +251,4 @@ function del_confirm(id,url,text)
 		} 
 		
 	})
-}
-
-
-function getAssetData(fId)
-{
-	var asin=$('#asset_num').val();
-	if (asin.length >= 10)
-	{
-		$.get("ajax.php?action=getASIN&asin="+asin+"&t="+Math.random(), function(data) 
-		{
-			if(data=='0')
-			{
-				alert('ASIN not found. Please check and try again');
-			}
-			else
-			{
-				location.href = 'index.php?page=parts&model='+data;
-			}
-		});
-	}
-}
-
-function setBulkAsin(sid)
-{
-	var asset = sid.replace("asset","");
-	var aid = $('#'+sid).val();
-	if(aid !='')
-	{
-		$.get("ajax.php?action=setBulkAsin&aid="+aid+"&asset="+asset, function(data) 
-		{
-			$('#'+data).parent().hide();
-		}); 
-	}
 }

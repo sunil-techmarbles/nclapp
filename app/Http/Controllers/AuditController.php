@@ -27,54 +27,50 @@ class AuditController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-    	$this->sandboxMode = false;
-    	$this->basePath = base_path().'/public';
-    	$this->current = Carbon::now();
-    	$this->wipeDataAdditional = $this->basePath.'/wipe-data-additional';
-    	$this->wipeDataMobile = $this->basePath.'/wipe-data-mobile';
-    	$this->formData = $this->basePath.'/form-data';
-
-    	if(!File::exists($this->formData))
+	public function __construct()
+	{
+		$this->sandboxMode = false;
+		$this->basePath = base_path().'/public';
+		$this->current = Carbon::now();
+		$this->wipeDataAdditional = $this->basePath.'/wipe-data-additional';
+		$this->wipeDataMobile = $this->basePath.'/wipe-data-mobile';
+		$this->formData = $this->basePath.'/form-data';
+		if(!File::exists($this->formData))
 		{
 			File::makeDirectory($this->formData, $mode = 0777, true, true);
 		}
 		if (!File::exists($this->wipeDataAdditional))
 		{
-		    File::makeDirectory($this->wipeDataAdditional, $mode = 0777, true, true);
+			File::makeDirectory($this->wipeDataAdditional, $mode = 0777, true, true);
 		}
 		if (!File::exists($this->wipeDataMobile))
 		{
-		    File::makeDirectory($this->wipeDataMobile, $mode = 0777, true, true);
+			File::makeDirectory($this->wipeDataMobile, $mode = 0777, true, true);
 		}
-    }
+	}
 
 	public function AddPartNumber(Request $request) 
-	{  
+	{
 		$checkPartNumber = LenovoModelData::CheckIfPartNumberExists( trim($request->partnumber) );
-
 		if( $checkPartNumber )
 		{
 			$response['status']  = 'error';
 			$response['title']  = 'Already Exist';
-        	$response['message'] = 'Part Number already exists'; 
-        	return response()->json($response);
+			$response['message'] = 'Part Number already exists'; 
+			return response()->json($response);
 		} 
-
 		$newpartnumber = LenovoModelData::InsertNewPartNumber( $request->modal, $request->partnumber ); 
-
 		if(!empty( $newpartnumber ) && $newpartnumber != false)
-		{	
+		{
 			$response['status']  = 'success';
 			$response['title']  = 'Added';
-        	$response['message'] = 'Part Number has been added successfully'; 
+			$response['message'] = 'Part Number has been added successfully'; 
 		}
 		else
 		{
 			$response['status']  = 'error';
 			$response['title']  = 'Unable to add';
-        	$response['message'] = 'Something went wrong, Unable to add try again'; 
+			$response['message'] = 'Something went wrong, Unable to add try again'; 
 		} 
 		return response()->json($response);
 	}
@@ -82,9 +78,9 @@ class AuditController extends Controller
 	public function renderHtml($formsDatas)
 	{
 		$output = "";
-    	$cgrp = "X"; 
-    	foreach ( $formsDatas as $formdata ) 
-    	{
+		$cgrp = "X"; 
+		foreach ( $formsDatas as $formdata ) 
+		{
 			$qtype = $formdata->qtype;
 			$grp = $formdata->grp;
 			if ($grp != $cgrp) 
@@ -92,68 +88,68 @@ class AuditController extends Controller
 				if ($cgrp != "X" && $cgrp != "") $output .= "</div>";
 				if ($grp != "") $output .= "<div class='question-group'><h3>$grp</h3>";
 				$cgrp = $grp;
-			}  
+			}
 			
-	        if( method_exists( $this , "get_form_$qtype" ) ) 
-	        {
+			if( method_exists( $this , "get_form_$qtype" ) ) 
+			{
 				$function = "get_form_$qtype"; 
 				$output .= "<div class='formitem'>" . $this->$function($formdata) . "</div>";
-	        }
+			}
 		}
 		if ($grp != "") $output .= "</div>";
 		return $output;
 	}
 
-    public function index(Request $request)
-    { 
-    	$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
-    	$output = $this->renderHtml($formsDatas);
+	public function index(Request $request)
+	{ 
+		$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
+		$output = $this->renderHtml($formsDatas);
 		$damageScores = Config::get('constants.auditDamageScores');;
 		$refurbBlacklist = Config::get('constants.auditRefurbBlacklist');;
-    	return view('admin.audit.index' ,  compact('output', 'damageScores', 'refurbBlacklist') );    
-    }
-  
-    public function get_form_text($fld) 
-    {
+		return view('admin.audit.index' ,  compact('output', 'damageScores', 'refurbBlacklist') );    
+	}
+
+	public function get_form_text($fld) 
+	{
 		$output = "";
 		if ($fld["qtype"]=="text") 
 		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
-				<div class='form-group'>
-  					<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-  					<input type='text' value='".$fld["default_val"]."' class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
-				</div>";
+			<div class='form-group'>
+			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
+			<input type='text' value='".$fld["default_val"]."' class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+			</div>";
 		}
 		return $output;
 	}
 
-	public function get_form_number($fld) 
+	public function get_form_number($fld)
 	{
 		$output = "";
-		if ($fld["qtype"]=="number") 
+		if ($fld["qtype"]=="number")
 		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
-				<div class='form-group'>
-  					<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-  					<input type='number' value='".$fld["default_val"]."' class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
-				</div>";
+			<div class='form-group'>
+			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
+			<input type='number' value='".$fld["default_val"]."' class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+			</div>";
 		}
 		return $output;
 	}
 	
-	public function get_form_area($fld) 
+	public function get_form_area($fld)
 	{
 		$output = "";
-		if ($fld["qtype"]=="area") 
+		if ($fld["qtype"]=="area")
 		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
-				<div class='form-group' style='width:100%'>
-  					<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label>
-  					<textarea class='form-control' rows='5' style='width:100%' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">".$fld["default_val"]."</textarea>
-				</div>";
+			<div class='form-group' style='width:100%'>
+			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label>
+			<textarea class='form-control' rows='5' style='width:100%' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">".$fld["default_val"]."</textarea>
+			</div>";
 		}
 		return $output;
 	}
@@ -165,18 +161,18 @@ class AuditController extends Controller
 		{
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
-				<div class='btn-group btn-group-horizontal' data-toggle='buttons'>
-				    <label class='btn' for='$itemid'><input type='checkbox' value='1' id='$itemid' name='$itemid' ".$fld["config"]."/>".
-				    "<i class='fa fa-square-o fa-2x'></i><i class='fa fa-check-square-o fa-2x'></i> <span>" . $fld["question"] . "</span></label>
-				</div>";
+			<div class='btn-group btn-group-horizontal' data-toggle='buttons'>
+			<label class='btn' for='$itemid'><input type='checkbox' value='1' id='$itemid' name='$itemid' ".$fld["config"]."/>".
+			"<i class='fa fa-square-o fa-2x'></i><i class='fa fa-check-square-o fa-2x'></i> <span>" . $fld["question"] . "</span></label>
+			</div>";
 		}
 		return $output;
 	}
 	
-	public function get_form_mult($fld) 
+	public function get_form_mult($fld)
 	{
 		$output = "";
-		if ($fld["qtype"]=="mult") 
+		if ($fld["qtype"]=="mult")
 		{
 			$options = explode(";",$fld["options"]);
 			$grades = explode(";",$fld["grades"]);
@@ -186,16 +182,16 @@ class AuditController extends Controller
 			$itemname = $fld["qtype"] . "_" . $fld["id"] . "[]";
 			foreach($options as $oid=>$oname)
 			{
-				foreach($grades as $key => $grade) 
+				foreach($grades as $key => $grade)
 				{
-						if($oid == $key) 
-						{
+					if($oid == $key)
+					{
 
-							$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
-							$output .= "<div class='cb-cnt'><label class='btn' for='$itemid'><input class='calculate_grade' data-grade='$grade' type='checkbox' value='".htmlentities($oname, ENT_QUOTES).
-								"' id='$itemid' name='$itemname' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
-								<span>" . $oname . "</span></label></div>";
-						}
+						$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
+						$output .= "<div class='cb-cnt'><label class='btn' for='$itemid'><input class='calculate_grade' data-grade='$grade' type='checkbox' value='".htmlentities($oname, ENT_QUOTES).
+						"' id='$itemid' name='$itemname' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+						<span>" . $oname . "</span></label></div>";
+					}
 				}
 			}
 			if ($fld["allow_new"]) 
@@ -208,16 +204,16 @@ class AuditController extends Controller
 					if(count($itm)==2 && trim($itm[0])=="data-customlabel") $olbl = trim(str_replace('"','',$itm[1]));
 				}
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_new";
-				$output .= "<div class='form-inline'><label for='$itemid'>$olbl</label> <input type='text' class='form-control' id='$itemid' name='$itemid'/></div>";
+				$output .= "<div class='form-group'><label for='$itemid'>$olbl</label> <input type='text' class='form-control' id='$itemid' name='$itemid'/></div>";
 			}
 		}
 		return $output;
 	} 
 	
-	public function get_form_radio($fld) 
+	public function get_form_radio($fld)
 	{
 		$output = "";
-		if ($fld["qtype"]=="radio") 
+		if ($fld["qtype"]=="radio")
 		{
 			$output .= "<div class='form-group'>";
 			$options = explode(";",$fld["options"]);
@@ -229,9 +225,9 @@ class AuditController extends Controller
 			{
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
 				$output .= "
-					<label class='btn' for='$itemid'><input type='radio' id='$itemid'  value='".htmlentities($oname, ENT_QUOTES)."' name='$itemname' "
-					.$fld["config"].($fld["required"]?" required='true'":"").($fld["default_val"]==$oname?" checked='checked'":"")."/>
-					<span>" . $oname . "</span></label>";
+				<label class='btn' for='$itemid'><input type='radio' id='$itemid'  value='".htmlentities($oname, ENT_QUOTES)."' name='$itemname' "
+				.$fld["config"].($fld["required"]?" required='true'":"").($fld["default_val"]==$oname?" checked='checked'":"")."/>
+				<span>" . $oname . "</span></label>";
 			}
 			if ($fld["allow_new"]) 
 			{
@@ -246,10 +242,10 @@ class AuditController extends Controller
 				}
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_newitm";
 				$dataid = $fld["qtype"] . "_" . $fld["id"] . "_new";
-				$output .= "<div class='form-inline'>
-					<label for='$itemid'><input type='radio' id='$itemid'  value='Other:' name='$itemname' ".$fld["config"] . ($fld["required"]?" required='true'":"") ."/>
-					<span>$olbl</span> <input type='text' class='form-control' id='$dataid' name='$dataid' $addopts onClick='$(\"#$itemid\").prop( \"checked\", true )'/>
-					</label></div>";
+				$output .= "<div class='form-group'>
+				<label for='$itemid'><input type='radio' id='$itemid'  value='Other:' name='$itemname' ".$fld["config"] . ($fld["required"]?" required='true'":"") ."/>
+				<span>$olbl</span> <input type='text' class='form-control' id='$dataid' name='$dataid' $addopts onClick='$(\"#$itemid\").prop( \"checked\", true )'/>
+				</label></div>";
 			}
 			$output .= "</div>";
 			
@@ -275,7 +271,7 @@ class AuditController extends Controller
 		return $res;
 	}
 	
-	public function get_form_dropdown($fld) 
+	public function get_form_dropdown($fld)
 	{
 		$output = "";
 		if ($fld["qtype"]=="dropdown")
@@ -286,11 +282,11 @@ class AuditController extends Controller
 			if ($fld["allow_new"]) array_push($options,"Other:");
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
-				<div class='form-group'>
-  					<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-  					<select class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
-  					self::getOptions($options,$fld["default_val"]).  
-  					"</select></div>";
+			<div class='form-group'>
+			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
+			<select class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
+			self::getOptions($options,$fld["default_val"]).  
+			"</select></div>";
 			if ($fld["allow_new"]) 
 			{
 				$selid = $itemid;
@@ -314,20 +310,20 @@ class AuditController extends Controller
 
 	public static function getBetween($string, $start, $end)
 	{
-	    $string = ' ' . $string;
-	    $ini = strpos($string, $start);
-	    if ($ini == 0) return '';
-	    $ini += strlen($start);
-	    $len = strpos($string, $end, $ini) - $ini;
-	    if ($len<=0) return '';
-	    return substr($string, $ini, $len);
+		$string = ' ' . $string;
+		$ini = strpos($string, $start);
+		if ($ini == 0) return '';
+		$ini += strlen($start);
+		$len = strpos($string, $end, $ini) - $ini;
+		if ($len<=0) return '';
+		return substr($string, $ini, $len);
 	}
 
 	public function checkTravelerId(Request $request)
 	{
 		if($request->ajax())
-    	{
-    		$travelerId = $request->get("trid");
+		{
+			$travelerId = $request->get("trid");
 			$fname =  $this->formData.'/'.$travelerId .'.json';
 			$fname2 = $this->checkFile($this->basePath.'/wipe-data/*',$travelerId);
 			$fname3 = $this->checkFile($this->basePath.'/wipe-data/bios-data/*',$travelerId);
@@ -419,7 +415,7 @@ class AuditController extends Controller
 						}
 						catch (Exception $e)
 						{
-						    return $resp;
+							return $resp;
 						}
 					}
 				}
@@ -455,18 +451,18 @@ class AuditController extends Controller
 							}
 							catch (Exception $e)
 							{
-							    return $resp;
+								return $resp;
 							}
 						}
 					}
 				}
 			}
 			return $resp;
-    	}
-    	else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function getTab(Request $request)
@@ -489,7 +485,6 @@ class AuditController extends Controller
 		$checkAssetidInAdditionalXmldatafolder = $this->checkFile($this->basePath.'/blancco/xml_data/*', $travelerId );
 		$checkAssetidInExecutedXmldatafolder = $this->checkFile($this->basePath.'/makor-processed-data/additional-mobile-executed/*', $travelerId );
 		$checkAssetidInExecutedAdditionlXmldatafolder = $this->checkFile($this->basePath.'/makor-processed-data/blancco-mobile-executed/*', $travelerId );
-
 		if( $checkAssetidInXmldatafolder )
 		{
 			$response = 'OK';
@@ -516,7 +511,7 @@ class AuditController extends Controller
 	public function getModels(Request $request)
 	{
 		if($request->ajax())
-    	{
+		{
 			$res = "";
 			$fields = ["id","model","technology"];
 			if($request->get("tab") && $request->get("tech"))
@@ -533,17 +528,17 @@ class AuditController extends Controller
 				$res.="<p style=\"cursor:pointer\" id=\"model".$f['id']."\" onclick=\"getModelData(".$f['id'].",'".$request->get("tgt")."')\">" . $f['model'] . " (". $f['technology'] . ")</p>";
 			}
 			return $res;
-    	}
-    	else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function loadModel(Request $request)
 	{
 		if($request->ajax())
-    	{
+		{
 			$mid = $request->get("m");
 			$res = FormData::getFormDataRecord($type='model', $mid);
 			if (!$res)
@@ -563,18 +558,18 @@ class AuditController extends Controller
 				$res = json_encode($data);
 			}
 			return $res;
-    	}
-    	else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function savePartNumber(Request $request)
 	{
 		if($request->ajax())
-    	{
-    		$model = strtoupper($request->get('m'));
+		{
+			$model = strtoupper($request->get('m'));
 			$pn    = strtoupper($request->get('p'));
 			$lenovoModelEx = LenovoModelData::CheckIfPartNumberExists($pn);
 			if(!$lenovoModelEx)
@@ -586,17 +581,17 @@ class AuditController extends Controller
 			{
 				return "Part Number already exists";
 			}
-    	}
-    	else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function getFiles(Request $request)
 	{
 		if($request->ajax())
-    	{
+		{
 			$res = "";
 			$part = $request->get("part");
 			$dst = $request->get("tgt");
@@ -610,14 +605,14 @@ class AuditController extends Controller
 		}
 		else
 		{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
 		}
 	}
 
 	public function loadXML(Request $request)
 	{
 		if($request->ajax())
-    	{
+		{
 			$fname = $request->get("trid");
 			$itm = json_decode(file_get_contents($this->formData."/".$fname.".json"),true);
 			if(!empty($itm["model"]))
@@ -634,16 +629,16 @@ class AuditController extends Controller
 		}
 		else
 		{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
 		}
 	}
 
 	public function loadLast(Request $request)
 	{
 		if($request->ajax())
-    	{
-    		$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
-    		$data = FormData::getLastRecordByAuthUser($authUserName, $type='data');
+		{
+			$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
+			$data = FormData::getLastRecordByAuthUser($authUserName, $type='data');
 			if (count($data)==1)
 			{
 				$itm = json_decode($data[0]["data"],true);
@@ -660,18 +655,18 @@ class AuditController extends Controller
 			}
 			else $res = "false";
 			return $res;
-    	}
-    	else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function getRefNotification(Request $request)
 	{
 		if($request->ajax())
-    	{
-    		$asset = $request->get("a");
+		{
+			$asset = $request->get("a");
 			$model = $request->get("m");
 			$data = [
 				"models"  => [],
@@ -718,7 +713,7 @@ class AuditController extends Controller
 						}
 						catch (Exception $e)
 						{
-						    $data["cpuname"] = "";
+							$data["cpuname"] = "";
 						}
 					}
 				}
@@ -750,18 +745,18 @@ class AuditController extends Controller
 							}
 							catch (Exception $e)
 							{
-							    $data["cpuname"] = "";
+								$data["cpuname"] = "";
 							}
 						}
 					}
 				}
 			}
 			return json_encode($data);
-    	}
-    	else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function getPreview(Request $request)
@@ -862,9 +857,9 @@ class AuditController extends Controller
 			return $output;
 		}	
 		else
-    	{
-    		return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
-    	}
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 
 	public function storeAuditRecord(Request $request)
@@ -872,323 +867,344 @@ class AuditController extends Controller
 		$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
 		$functionGroups = FormsConfig::getFormConfigFields($request->get('radio_2'), $group = 'Description');
 		$descrTypes = array();
+		
 		foreach ($functionGroups as $functionGroup)
 		{
-		    $xmlGroups = explode(';', $functionGroup['xml_grp']);
-		    $options = explode(';', $functionGroup['options']);
-		    foreach ($options as $key => $option)
-		    {
-		        if (isset($xmlGroups[$key]))
-		        {
-		            $descrTypes[$option] = trim($xmlGroups[$key]);
-		        }
-		    }
+			$xmlGroups = explode(';', $functionGroup['xml_grp']);
+			$options = explode(';', $functionGroup['options']);
+			foreach ($options as $key => $option)
+			{
+				if (isset($xmlGroups[$key]))
+				{
+					$descrTypes[$option] = trim($xmlGroups[$key]);
+				}
+			}
 		}
 
 		$data["items"] = array();
 		if ($asin = $request->get('asinid'))
 		{
-		    $data["asin"] = $asin;
-		    $refurb = $request->get('refurb');
-		    $sess = Session::getOpenStatucRecord($request, $status='open');
-		    if(count($sess) > 0) $sess = $sess[0];
-		    if ($sess && $refurb)
-		    {
-		    	SessionData::deleteSeesionDataRecorde($sess, $request->get("text_1"));
-		    	$sessionRecorde = [
-		            "sid" => $sess,
-		            "aid" => $asin,
-		            "asset" => $request->get("text_1"),
-		            "added_by" => $authUserName,
-		            "added_on" => $this->current
-		        ];
-		    	SessionData::addSessionDataRecord((object) $sessionRecorde ,$this->current);
-		    }
+			$data["asin"] = $asin;
+			$refurb = $request->get('refurb');
+			$sess = Session::getOpenStatucRecord($request, $status='open');
+			if(count($sess) > 0) $sess = $sess[0];
+			if ($sess && $refurb)
+			{
+				SessionData::deleteSeesionDataRecorde($sess, $request->get("text_1"));
+				$sessionRecorde = [
+					"sid" => $sess,
+					"aid" => $asin,
+					"asset" => $request->get("text_1"),
+					"added_by" => $authUserName,
+					"added_on" => $this->current
+				];
+				SessionData::addSessionDataRecord((object) $sessionRecorde ,$this->current);
+			}
 		}
 		else
 		{
-		    $data["asin"] = 0;
+			$data["asin"] = 0;
 		}
+
 		if ($model = $request->get('modelid'))
 		{
-		    $data["model"] = $model;
-		    $grade = $request->get('grade');
-		    if ($grade == "A" || $grade == "A+")
-		    {
-		    	ListData::deleteListDataRecorde($model, $request->get("text_1"));
-		        $tech = FormModel::getFormModelTab($model);
-		        if ($tech == "Laptop" || $tech == "Computer" || $tech == "All In One")
-		        {
+			$data["model"] = $model;
+			$grade = $request->get('grade');
+			if ($grade == "A" || $grade == "A+")
+			{
+				ListData::deleteListDataRecorde($model, $request->get("text_1"));
+				$tech = FormModel::getFormModelTab($model);
+				if ($tech == "Laptop" || $tech == "Computer" || $tech == "All In One")
+				{
 					$listData = [
-					    "mid" => $model,
-					    "cpu" => $request->get("cpuname"),
-					    "grade" => $grade,
-					    "asset" => $request->get("text_1"),
-					    "added_by" => $authUserName,
-					    "added_on" => $this->current
+						"mid" => $model,
+						"cpu" => $request->get("cpuname"),
+						"grade" => $grade,
+						"asset" => $request->get("text_1"),
+						"added_by" => $authUserName,
+						"added_on" => $this->current
 					];
-		    		ListData::addListDataRecord((object) $listData);
-		        }
-		    }
+					ListData::addListDataRecord((object) $listData);
+				}
+			}
 		}
 		else
 		{
-		    $data["model"] = 0;
+			$data["model"] = 0;
 		}
 		$outxml = array("user" => $authUserName, "processed" => $this->current);
 		$config = FormsConfig::getAllRecord();
+		// print_r($config->toArray());
 		$travelerId = "";
 		foreach ($config as $fld)
 		{
-		    $item = array();
-		    $itmid = $fld["qtype"] . "_" . $fld["id"];
-		    $itmidnew = $fld["qtype"] . "_" . $fld["id"] . "_new";
-		    $qtype = $fld["qtype"];
-		    $grp = str_replace(array(" ", "-", ":", ".", "/"), "_", $fld["grp"]);
-		    $key = str_replace(array(" ", "-", ":", ".", "/"), "_", $fld["question"]);
-		    $vals = explode(";", $fld["options"]);
-		    if (stripos($fld["config"], "filltemplate") > 0)
-		    {
-		        $item["template"] = 1;
-		    }
-		    else
-		    {
-		        $item["template"] = 0;
-		    }
-		    if (stripos($fld["config"], "fillmodel") > 0)
-		    {
-		        $item["fillmodel"] = 1;
-		    }
-		    else
-		    {
-		        $item["fillmodel"] = 0;
-		    }
-		    $item["id"] = $itmid;
-		    $item["type"] = $qtype;
-		    $item["key"] = $key;
-		    $item["options"] = $vals;
-		    $item["new"] = "";
-		    $itmval = $request->get($itmid);
-		    $itmvalnew = $request->get($itmidnew);
-		    if (($itmval !== false && $itmval !== "") || ($itmvalnew !== false && $itmvalnew !== ""))
-		    {
-		        if ($key == "Asset_Number")
-		        {
-		            $traveler_id = $request->get($itmid);
-		            $data["text_1"] = $request->get($itmid);
-		        }
-		        if ($key == "Product_Name")
-		        {
-		            $data["radio_2"] = $request->get($itmid);
-		            $product = $request->get($itmid);
-		        }
-		        if ($key == "Technology")
-		        {
-		            $technology = $request->get($itmid);
-		        }
-		        if ($key == "Model")
-		        {
-		            $model = $request->get($itmid);
-		        }
-		        if ($qtype == "mult")
-		        {
-		            $resp = $request->get($itmid);
-		            if (!empty($itmvalnew))
-		            {
-		                $resp[] = $request->get($itmidnew);
-		                $item["new"] = $request->get($itmidnew);
-		            }
-		            $item["value"] = $resp;
-		            $response = array("mult" => $resp);
-		        }
-		        elseif ($qtype == "radio")
-		        {
-		            if (!empty($itmvalnew))
-		            {
-		                $response = $request->get($itmidnew);
-		                $item["new"] = $request->get($itmidnew);
-		            }
-		            else
-		            {
-	                	$response = $request->get($itmid);
-	                }
-	            	$item["value"] = array($response);
-		        }
-		        elseif ($qtype == "dropdown")
-		        {
-		            if (!empty($itmvalnew))
-		            {
-		                $response = $request->get($itmidnew);
-		                $item["new"] = $request->get($itmidnew);
-		            }
-		            else{
-		                $response = $request->get($itmid);
-		            }
-	            	$item["value"] = array($response);
-		        }
-		        else
-		        {
-		            $response = $request->get($itmid);
-		            $item["value"] = array($response);
-		        }
-		        $data["items"][] = $item;
-		        if ($key == "HDD_Size" || $key == "Original_HDD_Size")
-		        {
-		            if ($response > 50)
-		            {
-		                $response .= "GB";
-		            }
-		            else
-		            {
-		                $response .= "TB";
-		            }
-		        }
-		        if ($key == "RAM_Size" || $key == "Original_RAM_Size")
-		        {
-		            $response .= "GB";
-		        }
-		        if (!empty($grp))
-		        {
-		            if ($grp == "Description" && is_array($response))
-		            {
-		                foreach ($response["mult"] as $itm)
-		                {
-		                    if (isset($descr_types[$itm]))
-		                    {
-		                        $descr = $descr_types[$itm];
-		                    }
-		                    else
-		                    {
-		                        $descr = "Additional";
-		                    }
-	                    	$outxml[$grp][$descr]["mult"][] = $itm;
-		                    if ($descr !== $key)
-		                    {
-		                        $outxml[$grp][$key]["mult"][] = $itm;
-		                    }
-		                }
-		            }
-		            else
-		            {
-		                $outxml[$grp][$key] = $response;
-		            }
-		        }
-		        else
-		        {
-		            if (!empty($outxml[$key]))
-		            {
-		                $outxml[$key] .= ";" . $response;
-		            }
-		            else
-		            {
-		                $outxml[$key] = $response;
-		            }
-		        }
-		        $adminEmails = Config::get('constants.adminEmail');
-		        $subject = "New item addition request";
-		        if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
-		        {
-		            $body = $authUserName . " requested to add the value '" . $request->get($itmidnew) . "'" .
-		                    "to the set of options for question '" . $fld["question"] . "' in '" . $fld["tab"] . "' tab (ID:" . $fld["id"] . ").\n" ."Please verify and make corresponding change in form configuration.";
-			        Mail::raw($body, function ($m) use ($subject, $adminEmails) {
-			            $m->to($adminEmails)->subject($subject);
-			        });
-		        }
-		    }
+			$item = array();
+			$itmid = $fld["qtype"] . "_" . $fld["id"];
+			$itmidnew = $fld["qtype"] . "_" . $fld["id"] . "_new";
+			$qtype = $fld["qtype"];
+			$grp = str_replace(array(" ", "-", ":", ".", "/"), "_", $fld["grp"]);
+			$key = str_replace(array(" ", "-", ":", ".", "/"), "_", $fld["question"]);
+			$vals = explode(";", $fld["options"]);
+			if (stripos($fld["config"], "filltemplate") > 0)
+			{
+				$item["template"] = 1;
+			}
+			else
+			{
+				$item["template"] = 0;
+			}
+			if (stripos($fld["config"], "fillmodel") > 0)
+			{
+				$item["fillmodel"] = 1;
+			}
+			else
+			{
+				$item["fillmodel"] = 0;
+			}
+			$item["id"] = $itmid;
+			$item["type"] = $qtype;
+			$item["key"] = $key;
+			$item["options"] = $vals;
+			$item["new"] = "";
+			$itmval = $request->get($itmid);
+			$itmvalnew = $request->get($itmidnew);
+			if (($itmval !== false && $itmval !== "") || ($itmvalnew !== false && $itmvalnew !== ""))
+			{
+				if ($key == "Asset_Number")
+				{
+					$traveler_id = $request->get($itmid);
+					$data["text_1"] = $request->get($itmid);
+				}
+				if ($key == "Product_Name")
+				{
+					$data["radio_2"] = $request->get($itmid);
+					$product = $request->get($itmid);
+				}
+				if ($key == "Technology")
+				{
+					$technology = $request->get($itmid);
+				}
+				if ($key == "Model")
+				{
+					$model = $request->get($itmid);
+				}
+				if ($qtype == "mult")
+				{
+					$resp = $request->get($itmid);
+					if (!empty($itmvalnew))
+					{
+						$resp[] = $request->get($itmidnew);
+						$item["new"] = $request->get($itmidnew);
+					}
+					$item["value"] = $resp;
+					$response = array("mult" => $resp);
+				}
+				elseif ($qtype == "radio")
+				{
+					if (!empty($itmvalnew))
+					{
+						$response = $request->get($itmidnew);
+						$item["new"] = $request->get($itmidnew);
+					}
+					else
+					{
+						$response = $request->get($itmid);
+					}
+					$item["value"] = array($response);
+				}
+				elseif ($qtype == "dropdown")
+				{
+					if (!empty($itmvalnew))
+					{
+						$response = $request->get($itmidnew);
+						$item["new"] = $request->get($itmidnew);
+					}
+					else{
+						$response = $request->get($itmid);
+					}
+					$item["value"] = array($response);
+				}
+				else
+				{
+					$response = $request->get($itmid);
+					$item["value"] = array($response);
+				}
+				$data["items"][] = $item;
+				if ($key == "HDD_Size" || $key == "Original_HDD_Size")
+				{
+					if ($response > 50)
+					{
+						$response .= "GB";
+					}
+					else
+					{
+						$response .= "TB";
+					}
+				}
+				if ($key == "RAM_Size" || $key == "Original_RAM_Size")
+				{
+					$response .= "GB";
+				}
+				if (!empty($grp))
+				{
+					if ($grp == "Description" && is_array($response))
+					{
+						if(is_array($response["mult"]))
+						{
+							foreach ($response["mult"] as $itm)
+							{
+								if (isset($descr_types[$itm]))
+								{
+									$descr = $descr_types[$itm];
+								}
+								else
+								{
+									$descr = "Additional";
+								}
+								$outxml[$grp][$descr]["mult"][] = $itm;
+								if ($descr !== $key)
+								{
+									$outxml[$grp][$key]["mult"][] = $itm;
+								}
+							}
+						}
+					}
+					else
+					{
+						$outxml[$grp][$key] = $response;
+					}
+				}
+				else
+				{
+					if (!empty($outxml[$key]))
+					{
+						$outxml[$key] .= ";" . $response;
+					}
+					else
+					{
+						$outxml[$key] = $response;
+					}
+				}
+				$adminEmails = Config::get('constants.adminEmail');
+				$subject = "New item addition request";
+				if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
+				{
+					$body = $authUserName . " requested to add the value '" . $request->get($itmidnew) . "'" .
+					"to the set of options for question '" . $fld["question"] . "' in '" . $fld["tab"] . "' tab (ID:" . $fld["id"] . ").\n" ."Please verify and make corresponding change in form configuration.";
+					Mail::raw($body, function ($m) use ($subject, $adminEmails) {
+						$m->to($adminEmails)->subject($subject);
+					});
+				}
+			}
 		}
-		$xmlData = new SimpleXMLElement('<?xml version="1.0"?><data/>');
-		$this->arrayToXML($outxml, $xmlData);
+		$xmlData = new \SimpleXMLElement('<?xml version="1.0"?><data/>');
+		$this->array_to_xml($outxml, $xmlData);
 		if ($travelerId != "")
 		{
-		    if ($product == "Mobile_Device")
-		    {
-		        $fname = $this->wipeDataMobile.'/'.$travelerId.'.xml';
-		    }
-		    else
-		    {
-		        $fname = $this->wipeDataAdditional.'/'.$travelerId.'.xml';
-		    }
-		    $result = $xmlData->asXML($fname);
+			if ($product == "Mobile_Device")
+			{
+				$fname = $this->wipeDataMobile.'/'.$travelerId.'.xml';
+			}
+			else
+			{
+				$fname = $this->wipeDataAdditional.'/'.$travelerId.'.xml';
+			}
+			$result = $xmlData->asXML($fname);
 		}
 		else
 		{
-		    $result = false;
+			$result = false;
 		}
 
 		if ($travelerId != "")
 		{
-		    $fname = $this->formData.'/'.$travelerId.'.json';
-		    file_put_contents($fname, json_encode($data));
-		    FormData::deleteFormDataRecorde($type = "data", $authUserName);
-		    $formData = array(
-					"type" => "data",
-					"user" => $authUserName,
-					"trid" => $travelerId,
-					"product" => $product,
-					"data" => json_encode($data)
-				);
-		    FormData::saveFormDataRecorde((object) $formData);
+			$fname = $this->formData.'/'.$travelerId.'.json';
+			file_put_contents($fname, json_encode($data));
+			FormData::deleteFormDataRecorde($type = "data", $authUserName);
+			$formData = array(
+				"type" => "data",
+				"user" => $authUserName,
+				"trid" => $travelerId,
+				"product" => $product,
+				"data" => json_encode($data)
+			);
+			FormData::saveFormDataRecorde((object) $formData);
 		}
 
 		if (!empty($product) && !empty($technology) && !empty($model))
 		{
-		    $add = $request->get("addModel");
-		    if ($add)
-		    {
-		        if (!FormModel::getFormAllRecordExist($product, $technology, $model))
-		        {
-		        	$formModelData = [
-		        		"tab" => $product,
-		        		"technology" => $technology,
-		        		"model" => $model
-		        	];
-		        	FormModel::saveFormRecord((object) $formModelData);
-		        }
-		    }
-		    $modelid = FormModel::getFormAllRecordExist($product, $technology, $model);
-		    if($modelid)
-		    {
-		    	FormData::deleteFormDataRecordeByID($type='model', $modelid->id);
-		    	$formData = [
-		    		"type" => "model",
-		            "user" => $authUserName,
-		            "trid" => $modelid->id,
-		            "product" => $product,
-		            "data" => json_encode($data)
-		    	];
-		    	FormData::saveFormDataRecorde((object) $formData);
-		    }
-		}		
+			$add = $request->get("addModel");
+			if ($add)
+			{
+				if (!FormModel::getFormAllRecordExist($product, $technology, $model))
+				{
+					$formModelData = [
+						"tab" => $product,
+						"technology" => $technology,
+						"model" => $model
+					];
+					FormModel::saveFormRecord((object) $formModelData);
+				}
+			}
+			$modelid = FormModel::getFormAllRecordExist($product, $technology, $model);
+			if($modelid)
+			{
+				FormData::deleteFormDataRecordeByID($type='model', $modelid->id);
+				$formData = [
+					"type" => "model",
+					"user" => $authUserName,
+					"trid" => $modelid->id,
+					"product" => $product,
+					"data" => json_encode($data)
+				];
+				FormData::saveFormDataRecorde((object) $formData);
+			}
+		}
+
+		if($result)
+		{
+			return redirect()->route('audit', ["redirect" => "true"])->with('success', "Your data has been saved");
+		}
+		else
+		{
+			return redirect()->route('audit', ["redirect" => "true"])->with('error', "Unable to save the file");
+		}
+
 	}
 
-	public function arrayToXML($data, &$xmlData)
+	public function array_to_xml($data, &$xmlData)
 	{	
 		foreach ($data as $key => $value)
 		{
-	        if (is_numeric($key))
-	        {
-	            $key = 'item' . $key; //dealing with <0/>..<n/> issues
-	        }
-	        if (is_array($value))
-	        {
-	            if (!empty($value["mult"]))
-	            {
-	                foreach ($value["mult"] as $val)
-	                {
-	                    if(!empty($key))
-	                    $xmlData->addChild("$key", htmlspecialchars("$val"));
-	                }
-	            }
-	            else
-	            {
-	                $subnode = $xmlData->addChild($key);
-	                arrayToXML($value, $subnode);
-	            }
-	        }
-	        else
-	        {
-	            $xmlData->addChild("$key", htmlspecialchars("$value"));
-	        }
-	    }
+			if (is_numeric($key))
+			{
+				$key = 'item' . $key; //dealing with <0/>..<n/> issues
+			}
+			if (is_array($value))
+			{
+				if (!empty($value["mult"]))
+				{
+					foreach ($value["mult"] as $val)
+					{
+						if(!empty($key))
+						{
+							$xmlData->addChild($key, htmlspecialchars($val));
+						}
+					}
+				}
+				else
+				{
+					$subnode = $xmlData->addChild($key);
+					$this->array_to_xml($value, $subnode);
+				}
+			}
+			else
+			{
+				if($key)
+				{
+					$xmlData->addChild($key, htmlspecialchars($value));
+				}
+			}
+		}
 	}
 }

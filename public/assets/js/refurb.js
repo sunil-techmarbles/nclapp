@@ -6,15 +6,6 @@ var forceWS = false;
 var old_coa = "";
 var new_coa = "";
 var win8 = 0;
-var _token = $('meta[name="csrf-token"]').attr('content');
-
-const swalWithBootstrapButtons = Swal.mixin({
-  customClass: {
-    confirmButton: 'btn btn-success',
-    cancelButton: 'btn btn-danger'
-  },
-  buttonsStyling: false
-})
 
 $(document).ready(function()
 {
@@ -78,7 +69,7 @@ function saveCoa()
 	}
 	else
 	{
-		$.post("/"+urlPrefix+"/savecoa", 
+		$.post("/"+prefix+"/savecoa", 
 			{_token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id},
 			function(ressponse){
 				var icon = (response.status) ? 'success' : 'error';
@@ -97,7 +88,7 @@ function getAssetData(fId)
 	var data = encodeURIComponent($("#asset_num").val());
 	if (data.length > 3)
 	{
-		$.get("/"+urlPrefix+"/getasset?asset="+data+"&t="+Math.random(), function(response)
+		$.get("/"+prefix+"/getasset?asset="+data+"&t="+Math.random(), function(response)
 		{
 			if(response.status) {
 				forceWS = false;
@@ -384,7 +375,7 @@ function setAsin(aId)
 	$("#asinModal").modal("hide");
 	$("#btnSetAsin").show();
 
-	$.post("/"+urlPrefix+"/saveasin", {_token:_token, aid: a.id, asset: assetNumber}, function(response){
+	$.post("/"+prefix+"/saveasin", {_token:_token, aid: a.id, asset: assetNumber}, function(response){
 		var icon = (response.status) ? 'success' : 'error';
 		swalWithBootstrapButtons.fire( 
 					response.type,
@@ -432,7 +423,7 @@ function setDescriptions()
 	if(ri !='')
 	{
 		$.post(
-			"/"+urlPrefix+"/saveissue",
+			"/"+prefix+"/saveissue",
 			{_token:_token, asset:assetNumber, sn:adata.Serial, issue:ri},
 			function(response)
 			{
@@ -460,7 +451,7 @@ function setDescriptions()
 function setWholesale()
 {
 	var a = $('#ws_list').val();
-	$.post("/"+urlPrefix+"/setwholesale", {a: a, _token:_token,}, function(response)
+	$.post("/"+prefix+"/setwholesale", {a: a, _token:_token,}, function(response)
 	{
 	    var icon = (response.status) ? 'success' : 'error';
 	    swalWithBootstrapButtons.fire(  
@@ -475,7 +466,7 @@ function setWholesale()
 
 function setWS()
 {
-	$.get("/"+urlPrefix+"/setwholesale?a="+assetNumber+"&t="+Math.random(), function(response)
+	$.get("/"+prefix+"/setwholesale?a="+assetNumber+"&t="+Math.random(), function(response)
 	{
 		var icon = (response.status) ? 'success' : 'error';
 		swalWithBootstrapButtons.fire( 
@@ -587,7 +578,7 @@ function setNextProcess()
 
 function checkWin8()
 {
-	$.post("/"+urlPrefix+"/checkcoa", { _token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id}, function(response){
+	$.post("/"+prefix+"/checkcoa", { _token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id}, function(response){
 		// console.log(response);
 		if(response.status)
 		{
@@ -663,7 +654,7 @@ function printLabel()
 function savePrint()
 {
 	var data = $("#asset_form").html();
-	$.post("/"+urlPrefix+"/saveprint", { _token:_token, print: data, asset: assetNumber}, function(response){
+	$.post("/"+prefix+"/saveprint", { _token:_token, print: data, asset: assetNumber}, function(response){
     	return false;
 	});
 }

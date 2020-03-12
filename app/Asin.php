@@ -38,11 +38,9 @@ class Asin extends Model
     public static function getAllAsins($request)
     {
         $query = self::select('*');
-
         if ($request->has('s') || $request->has('f')) {
             $query->where($request->get('f'), 'like', '%' .$request->get('s'). '%');
         }
-
         return $query->orderBy('id', 'DESC')
             ->get();
     }

@@ -191,6 +191,5 @@
 </div>
 <script type="text/javascript">
 	var process = '<?php echo json_encode($process); ?>';
-	var urlPrefix = '<?php echo 'admin'; ?>';
 </script>
 @endsection

@@ -13,7 +13,6 @@
 	var cpuspeed = 0;
 	var asinid = 0;
 	var asinmodels = [];
-	var prefix = 'admin';
 
 	$(window).on('resize', function(){
 	    setHeader();
@@ -243,15 +242,6 @@
 	    });
 	}
 
-	function showSweetAlertMessage(type, message, icon)
-	{
-		swalWithBootstrapButtons.fire(
-    		type,
-			message,
-			icon
-		) 
-	}
-	
 	var selTab;
 	function checkTravelerId( tabId )
 	{
@@ -680,6 +670,7 @@
 	
 	function fillData()
 	{
+		console.log(items)
 		for (i = 0; i < items.length; ++i)
 		{
 		    var itm = items[i];

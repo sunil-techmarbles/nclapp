@@ -21,23 +21,23 @@ class AsinController extends Controller
     public function __construct()
     {
         $this->searchItemsLists = array(
-			'id'          =>'ID',
-			'asin'        =>'ASIN',
-			'price'       =>'Price',
-			'manufacturer'=>'Manufacturer',
-			'model'       =>'Model',
-			'form_factor' =>'Form Factor',
-			'cpu_core'    =>'CPU Core',
-			'cpu_model'   =>'CPU Model',
-			'cpu_speed'   =>'CPU Speed',
-			'ram'         =>'RAM',
-			'hdd'         =>'HDD',
-			'os'          =>'OS',
-			'webcam'      =>'Webcam',
-			'notes'       =>'Notes',
-			'link'        =>'Link',
-			'notifications'=>'Notif.',
-		);
+         'id'          =>'ID',
+         'asin'        =>'ASIN',
+         'price'       =>'Price',
+         'manufacturer'=>'Manufacturer',
+         'model'       =>'Model',
+         'form_factor' =>'Form Factor',
+         'cpu_core'    =>'CPU Core',
+         'cpu_model'   =>'CPU Model',
+         'cpu_speed'   =>'CPU Speed',
+         'ram'         =>'RAM',
+         'hdd'         =>'HDD',
+         'os'          =>'OS',
+         'webcam'      =>'Webcam',
+         'notes'       =>'Notes',
+         'link'        =>'Link',
+         'notifications'=>'Notif.',
+     );
     }
 
     public function index(Request $request)
@@ -197,7 +197,7 @@ class AsinController extends Controller
                 }
             }
         }
-    
+
         $departments = Supplies::getSupplieDepartmentsByDistinct();
         $allParts = resultInReadableform(
             Supplies::getAllPartsSpecificFields($specificFields, $orderBy='item_name', $asinID)
@@ -227,9 +227,23 @@ class AsinController extends Controller
     {   
         $models = Asin::getAsinLookupFields();
         return view ('admin.partslook.list', compact('models'));
-
     }
 
-
-
+    public function getASINNumber(Request $request)
+    {
+        if($request->ajax())
+        {
+            $asin = $request->get("asin");
+            $id = Asin::getAsinsIdByAsin($asin)
+            if (!$id)
+            {
+                $id = 0;
+            }
+            return $id;
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
 }

@@ -48,8 +48,8 @@
         </div> 
 
         <div class="menu-item">
-            <a href="index.php?page=newlist"><span class="fa fa-shopping-cart"></span></a>
-            <a href="index.php?page=newlist">Inventory</a>
+            <a href="{{route('inventory')}}"><span class="fa fa-shopping-cart"></span></a>
+            <a href="{{route('inventory')}}">Inventory</a>
         </div>
 
         <div class="menu-item">

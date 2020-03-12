@@ -6,7 +6,6 @@
 		Audit Data Entry
 		<span class="fa fa-repeat" style="cursor: pointer" onclick="getLastInput()"></span>
 	</div>
-
 	<div class="row justify-content-center text-center">
 		<div class="col-12">
 			<form method="post" id="main-form" action="{{route('store.audit.record')}}">    

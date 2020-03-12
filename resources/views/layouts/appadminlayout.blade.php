@@ -23,7 +23,7 @@
 				@include('layouts.adminheader')
 				<div id="page-logo">
 					<a href="{{URL('/')}}">
-						<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">	
+						<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">
 					</a>
 				</div>
 				@include('admin.message')
@@ -39,11 +39,12 @@
 	<script type="text/javascript" src = "{{URL('assets/js/datepicker/daterangepicker.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" ></script> 
+	<script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script> 
 	<script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>  
-	<script type="text/javascript" src = "{{URL('assets/js/admin-custom.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/main.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/audit.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/inventory.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script>  
 </html>

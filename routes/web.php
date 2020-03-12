@@ -49,7 +49,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
 	    
-	    Route::get('/audit','AuditController@index')->name('audit');
+	    Route::any('/audit','AuditController@index')->name('audit');
 		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
 
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
@@ -84,7 +84,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/addnewpackage','PackageController@AddNewPackage')->name('add.package');
 		Route::get('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package');  
 
-
 		//Out bound
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
@@ -102,5 +101,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/getrefnotification', 'AuditController@getRefNotification')->name('load.last');
 		Route::get('/getpreview', 'AuditController@getPreview')->name('get.preview');
 		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
+
+		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
+		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
+		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
 	});
 });
