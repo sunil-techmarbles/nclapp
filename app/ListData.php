@@ -137,11 +137,16 @@ class ListData extends Model
 
 	public static function getDistinctRecordForCPU($mid)
 	{
-		return self::distinct('cpu')
-			->where(['asin,' => $mid,
-				'status' => 'active',
-				'run_status' => 'active'
-			])
+		return self::where(['asin' => $mid, 'status' => 'active', 'run_status' => 'active'])
+			->groupBy('cpu')
+			->count();
+	}
+
+	public static function getInventoryExportResult()
+	{ 
+		return self::select('asset','model','technology','cpu','added_on')
+			->where(['status' => 'active', 'run_status' => 'active'])
+			->where('asin', '!=', '')
 			->get();
 	}
 }

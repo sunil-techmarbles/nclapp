@@ -18,7 +18,7 @@
 				</div>
 			</div>
 			<div class="col-6">
-				<a class="btn btn-info ml-2 float-right" href="{{route('inventory',['csv' => '1'])}}">Export</a>
+				<a class="btn btn-info ml-2 float-right" href="{{route('inventory.csv',['csv' => '1'])}}">Export</a>
 				<button type="button" class="btn btn-warning ml-2 float-right" data-toggle="modal" data-target="#brModal">Bulk Remove</button>
 				<button type="button" class="btn btn-info ml-2 float-right" id="sync-all-to-shopify">Sync to Shopify</button>
 			</div>
@@ -46,11 +46,11 @@
 							<label for="mdl_all" style="display: block">
 								<input type="checkbox" checked="checked" onchange="toggleAll('mdl')" id="mdl_all" value="1"/> Toggle All
 							</label>
-							<?php foreach($mdlList as $itmid=>$itm): ?>
-								<label for="mdl<?=$itmid?>" style="display: block">
-									<input type="checkbox" checked="checked" onchange="tblFilter()" id="mdl<?=$itmid?>" class="mdl" value="<?=htmlentities($itm)?>"/> <?=htmlentities($itm)?>
+							@foreach($mdlList as $itmid=>$itm)
+								<label for="mdl{{$itmid}}" style="display: block">
+									<input type="checkbox" checked="checked" onchange="tblFilter()" id="mdl{{$itmid}}" class="mdl" value="{{htmlentities($itm)}}"/> {{htmlentities($itm)}}
 								</label>
-							<?php endforeach ?>
+							@endforeach 
 						</div>
 					</th>
 					<th style="white-space: nowrap">
@@ -59,11 +59,11 @@
 							<label for="ff_all" style="display: block">
 								<input type="checkbox" checked="checked" onchange="toggleAll('ff')" id="ff_all" value="1"/> Toggle All
 							</label>
-							<?php foreach($ffList as $itmid=>$itm): ?>
-								<label for="ff<?=$itmid?>" style="display: block">
-									<input type="checkbox" checked="checked" onchange="tblFilter()" id="ff<?=$itmid?>" class="ff" value="<?=htmlentities($itm)?>"/> <?=htmlentities($itm)?>
+							@foreach($ffList as $itmid=>$itm)
+								<label for="ff{{$itmid}}" style="display: block">
+									<input type="checkbox" checked="checked" onchange="tblFilter()" id="ff{{$itmid}}" class="ff" value="{{htmlentities($itm)}}"/> {{htmlentities($itm)}}
 								</label>
-							<?php endforeach ?>
+							@endforeach 
 						</div>
 					</th>
 					<th style="white-space: nowrap">
@@ -72,11 +72,11 @@
 							<label for="cpu_all" style="display: block">
 								<input type="checkbox" checked="checked" onchange="toggleAll('cpu')" id="cpu_all" value="1"/> Toggle All
 							</label>
-							<?php foreach($cpuList as $itmid=>$itm): ?>
-								<label for="cpu<?=$itmid?>" style="display: block">
-									<input type="checkbox" checked="checked" onchange="tblFilter()" id="cpu<?=$itmid?>" class="cpu" value="<?=htmlentities($itm)?>"/> <?=htmlentities($itm)?>
+							@foreach($cpuList as $itmid=>$itm)
+								<label for="cpu{{$itmid}}" style="display: block">
+									<input type="checkbox" checked="checked" onchange="tblFilter()" id="cpu{{$itmid}}" class="cpu" value="{{htmlentities($itm)}}"/> {{htmlentities($itm)}}
 								</label>
-							<?php endforeach ?>
+							@endforeach 
 						</div>
 
 					</th>
@@ -122,11 +122,11 @@
 						$price_display = $list_price ? 'Available' : 'N/A';
 						$images = checkImages($i);
 					@endphp
-					<tr style="font-weight: bold" class="nlrow" data-img="<?=$images?>" data-price="<?=$price_display?>" data-mdl="<?= $i["model"] ?>" 
-						data-ff="<?= $i["technology"] ?>" data-cpu="<?= $i["cpg"] ?>" data-synced="<?=empty($i["shopify_product_id"])?'no':'yes'?>">
+					<tr style="font-weight: bold" class="nlrow" data-img="{{$images}}" data-price="{{$price_display}}" data-mdl="{{$i["model"]}}" 
+						data-ff="{{ $i["technology"]}}" data-cpu="{{ $i["cpg"]}}" data-synced="{{empty($i["shopify_product_id"]) ? 'no' : 'yes'}}">
 						<td>
 							@if(empty($i["shopify_product_id"]) && !empty($i["mid"]))
-								<input id="cb-select-<?= $i["asin"] ?>" type="checkbox" name="sync-all-ids[]" value="<?= $i["asin"] ?>">
+								<input id="cb-select-{{ $i["asin"]}}" type="checkbox" name="sync-all-ids[]" value="{{ $i["asin"]}}">
 							@endif
 						</td>
 						<td>{{$i['asin']}}</td>
@@ -151,16 +151,23 @@
 						</td>
 						<td>{{$images}}</td>
 						<td style="text-align: center; {{ $price_display=='N/A' ? 'cursor:pointer' : '' }}" {{ $price_display=='N/A' ? 'onclick="setPrice(\''.$i["asin"].'\')"' : '' }}>{{ $price_display }}</td>
-						<td>{{ isset($i["shopify_product_id"]) ? '<a href="route("inventory", ["goto" => $i["shopify_product_id"]])">$i["shopify_product_id"]</a>' : ''}}</td>
+						<td>@if(isset($i["shopify_product_id"]))
+							<a href="{{route("inventory", ["goto" => $i["shopify_product_id"]])}}">{{$i["shopify_product_id"]}}</a>
+							@else
+							''
+							@endif
+						</td>
 						<td  class="s_price" style="display:none;text-align: center;">
 							@if ($i["shopify_product_id"])
-								$price_data = getShopifyRunlistPrice($db, $i);
-								@if ($price_data['diffrence'] != 0)
-									echo 'Shopify Price: $' . $price_data['shopify_price'] . '<br>';
-									echo 'Final Price: $' . $price_data['final_price'] . '<br>';
-									echo 'Diffrence: $' . $price_data['diffrence'] . '<br>';
-									echo '<button class="btn btn-link update-price-to-shopify" data-id="' . $i["asin"] . '">Update Price</button>';
-								@endif
+								@php
+									$price_data = getShopifyRunlistPrice($i);
+									if ($price_data['diffrence'] != 0){
+										echo 'Shopify Price: $' . $price_data['shopify_price'] . '<br>';
+										echo 'Final Price: $' . $price_data['final_price'] . '<br>';
+										echo 'Diffrence: $' . $price_data['diffrence'] . '<br>';
+										echo '<button class="btn btn-link update-price-to-shopify" data-id="' . $i["asin"] . '">Update Price</button>';
+									}
+								@endphp
 							@endif
 						</td>
 					</tr>

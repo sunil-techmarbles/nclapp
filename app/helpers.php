@@ -63,7 +63,7 @@ function resultInReadableform($result)
 function checkImages($data)
 {
     $asin = createImageAsinFromData($data);
-    $allImages = glob(IMAGE_PATH_NEW . $asin . '*');
+    $allImages = glob(public_path().'/'. config('constants.finalPriceConstants.imagePathNew') . $asin . '*');
     if (empty($allImages))
     {
         return 'N/A';
@@ -83,13 +83,13 @@ function createImageAsinFromData($data)
 
 function checkRunlistPrice($data)
 {
-    $searchDataArray['condition'] = CONDITION;
+    $searchDataArray['condition'] = config('constants.finalPriceConstants.condition');
     $searchDataArray['form_factor'] = $data['technology'];
     $searchDataArray['model'] = $data['model'];
     $searchDataArray['cpu_core'] = $data['cpu_core'];
     $searchDataArray['asin'] = $data['asin'];
-    $finalPrice = new ShopifyController($searchDataArray);
-    return $finalPrice;
+    $finalPrice = new App\Http\Controllers\ShopifyController($searchDataArray);
+    return $finalPrice->finalPrice;
 }
 
 function createFormFactorForNewRunlist($data)
@@ -179,4 +179,45 @@ function pr($data)
     echo "<pre>";
     print_r($data);
     echo "</pre>";
+}
+
+function getApiDataForPrice($url)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    //curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    $response = curl_exec($ch);
+    if (!$response)
+    {
+        return false;
+    }
+    $shopifyData = json_decode($response, 1);
+    if (isset($shopifyData['errors']))
+    {
+        $error = "Error: " . $url . "<br>" . $shopifyData['errors'];
+    }
+    else
+    {
+        return $shopifyData;
+    }
+}
+
+function getShopifyRunlistPrice($data)
+{
+    $productsurl = config('constants.finalPriceConstants.shopifyBaseUrl') . "/admin/api/2019-04/products/" . $data['shopify_product_id']. ".json";
+    $shopifyProductData = getApiDataForPrice($productsurl);
+    $shopifyPrice = $shopifyProductData['product']['variants'][0]['price'];
+    $searchDataArray['condition'] = config('constants.finalPriceConstants.condition');
+    $searchDataArray['form_factor'] = $data['technology'];
+    $searchDataArray['model'] = $data['model'];
+    $searchDataArray['cpu_core'] = $data['cpu_core'];
+    $searchDataArray['asin'] = $data['asin'];
+    $finalPrice = new App\Http\Controllers\ShopifyController($searchDataArray);
+    $price = array();
+    $price['shopify_price'] = $shopifyPrice;
+    $price['final_price'] = $finalPrice->finalPrice;
+    $diffrence = $shopifyPrice - $finalPrice->finalPrice;
+    $price['diffrence'] = $diffrence;
+    return $price;
 }

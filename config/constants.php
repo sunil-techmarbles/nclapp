@@ -3948,6 +3948,11 @@ return [
         'processingCost' => 35,
         'ramCost' => 14,
         'hdCost' => 14.4,
-        'osCost' => 30
+        'osCost' => 30,
+        'imagePath' => 'asin-images/',
+        'imagePathNew' => 'asin-images/dropbox/Shopify_Images/',
+        'condition' => 'A',
+        'shopifyBaseUrl' => 'https://14a2e3d9e7a3661419a88549b45aa63e:11305811ff0dcf66770d9a9e7e3d80ef@what-does-refurbished-mean.myshopify.com',
+        'productMainSiteUrl' => 'https://refurbconnection.com/products',
     ]
 ];

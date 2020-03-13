@@ -1,4 +1,3 @@
-
 function getModels(fId)
 {
 	var inp=$("#"+fId);

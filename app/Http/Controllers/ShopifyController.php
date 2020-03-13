@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -8,7 +7,9 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ShopifyBulkRemoveImport;
 use App\Imports\ShopifyBulkUploadImport;
+use App\Exports\InventoryExport;
 use Carbon\Carbon;
+use Redirect;
 use File;
 use Config;
 use App\Asin;
@@ -22,7 +23,7 @@ use App\ShopifyPricing;
 
 class ShopifyController extends Controller
 {
-	public $basePath, $current, $baseUrl, $productMainSiteUrl, $wipeData2, $methodData;
+	public $basePath, $current, $baseUrl, $productMainSiteUrl, $wipeData2, $methodData, $finalPrice;
 
 	/**
      * Instantiate a new ShopifyController instance.
@@ -35,15 +36,16 @@ class ShopifyController extends Controller
 
     	$this->basePath = base_path().'/public';
     	$this->current = Carbon::now();
-    	$this->baseUrl = "https://14a2e3d9e7a3661419a88549b45aa63e:11305811ff0dcf66770d9a9e7e3d80ef@what-does-refurbished-mean.myshopify.com";
-    	$this->productMainSiteUrl = "https://refurbconnection.com/products";
+    	$this->baseUrl = Config::get('constants.finalPriceConstants.shopifyBaseUrl');
+    	$this->productMainSiteUrl = Config::get('constants.finalPriceConstants.productMainSiteUrl');
     	$this->wipeData2 = $this->basePath.'/wipe-data2';
     	$this->methodData = $searchDataArray;
 
     	/**
      	* Calling a method productPriceCalculation for get final Price from ShopifyController instance.
      	*/
-    	$this->productPriceCalculation($this->methodData);
+    	$this->finalPrice = $this->productPriceCalculation($this->methodData);
+    	
     }
 
     /**
@@ -51,13 +53,14 @@ class ShopifyController extends Controller
  	*/
     public function redirectToShopifySite($productId)
     {
+    	$producturl = '';
 		$dataUrl = $this->baseUrl."/admin/api/2019-04/products/".$productId.".json?fields=id,handle";
 		$data = json_decode(file_get_contents($dataUrl),true);
 		if(!empty($data['product']['handle']))
 		{
 			$producturl = $this->productMainSiteUrl."/".$data['product']['handle'];
-			Redirect::away($producturl);
 		}
+		return $producturl;
     }
 
     /**
@@ -74,7 +77,7 @@ class ShopifyController extends Controller
     		ShopifyPricingCustom::deleteExistRecord($id);
     		ShopifyPricingCustom::addNewRecorde((object) $data);
 		}
-		redirect()->route('inventory');
+		return redirect()->route('inventory');
     }
 
     /**
@@ -107,11 +110,11 @@ class ShopifyController extends Controller
 		    }
 			if($error)
 			{
-				redirect()->route('inventory')->with('error', $error);
+				return redirect()->route('inventory')->with('error', $error);
 			}
 			else
 			{
-				redirect()->route('inventory')->with('success', 'Records remove successfully');
+				return redirect()->route('inventory')->with('success', 'Records remove successfully');
 			}
 		}
    	}
@@ -147,11 +150,11 @@ class ShopifyController extends Controller
 		    }
 			if($error)
 			{
-				redirect()->route('inventory')->with('error', $error);
+				return redirect()->route('inventory')->with('error', $error);
 			}
 			else
 			{
-				redirect()->route('inventory')->with('success', 'Records upload successfully');
+				return redirect()->route('inventory')->with('success', 'Records upload successfully');
 			}
 		}
    	}
@@ -166,9 +169,17 @@ class ShopifyController extends Controller
 			/**
 		 	* redirectToShopifySite call .
 		 	*/
-			$this->redirectToShopifySite($request->get('goto'));
+			$producturl = $this->redirectToShopifySite($request->get('goto'));
+			if($producturl != '')
+			{
+				return redirect($producturl);
+			}
+			else
+			{
+				return redirect()->route('inventory');
+			}
 		}
-		
+
 		if($request->get('set_price'))
 		{
 			$price = $request->get('setprice');
@@ -413,7 +424,7 @@ class ShopifyController extends Controller
     	if(!empty($runningList))
     	{
     		$priceDetail = ShopifyPricing::getShopifyPriceList($runningList);
-		    $totalRecord = count($priceDetail->count());
+		    $totalRecord = $priceDetail->count();
 		    $calculateSalePrice = 0;
 		    if (!empty($priceDetail))
 		    {
@@ -439,7 +450,14 @@ class ShopifyController extends Controller
 		            $totalCalulatePrice = $value['Price'] + $ramPrice + $hardDrivePrice;
 		            $calculateSalePrice += $totalCalulatePrice;
 		        }
-		        $averagePrice = $calculateSalePrice / $totalRecord;
+		        try
+		        {
+		        	$averagePrice = $calculateSalePrice / $totalRecord;
+				}
+				catch( \Exception $e )
+				{
+				    $averagePrice = 0;
+				}
 		        $salePrice = $averagePrice * Config::get('constants.finalPriceConstants.priceMargin');
 		        $finalPrice = $salePrice + Config::get('constants.finalPriceConstants.osCost') + Config::get('constants.finalPriceConstants.processingCost');
 		        $finalPrice = number_format((float) $finalPrice, 2, '.', '');
@@ -479,6 +497,14 @@ class ShopifyController extends Controller
 		else
 		{
 			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
+	}
+
+	public function inventoryCSV(Request $request)
+	{
+		if(!empty($request->get('csv')))
+		{
+			return Excel::download(new InventoryExport, 'inventory.csv');
 		}
 	}
 }

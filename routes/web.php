@@ -18,7 +18,6 @@ Route::get('/ResetPasswordForm/{token}', 'LoginController@resetPasswordForm')->n
 Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPassword');
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
-
 Route::middleware(['guest','revalidate'])->group(function () {
 	Route::get('/','LoginController@index')->name('login.view');
 	Route::get('/login','LoginController@index')->name('login.view');
@@ -30,21 +29,17 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	});
 });
 
-
 // Change header for reports, import and export
 Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () {
 	Route::prefix('admin')->group(function () {
-		
 		// refub Report
 		Route::get('/exportcoareport','RefurbController@ExportcoaReport')->name('get.coa.report');
 		Route::get('/exportissuereport','RefurbController@ExportIssueReport')->name('get.issue.report');
-		
 		// supplies Report 
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
-
 		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
-
+		Route::any('/inventorycsv', 'ShopifyController@inventoryCSV')->name('inventory.csv');
 	});
 });
 
@@ -58,7 +53,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
 
 		// Supplies Section
-
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
 		Route::get('/updateqtyreorder','SuppliesController@updateQtyReorder')->name('update.qty.reorder');
@@ -102,7 +96,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/wipereport','CommonController@index')->name('wipereport');
 		Route::post('/getwipereportfiles','CommonController@getWipeReportFiles')->name('getwipereportfiles');
 
-
 		// Audit Section
 		Route::get('/audit','AuditController@index')->name('audit');
 		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
@@ -120,6 +113,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
 
 		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
+		
 		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
 		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
 	});
