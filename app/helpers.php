@@ -1,5 +1,4 @@
 <?php
-
 function implodeSupplieEmails($array )
 {
     $r = array();
@@ -171,7 +170,13 @@ function createAsinFromData($data)
     {
         $cpuGen = '';
     }
-
     $asin = $modal . $formFactor . $cpuCore . $cpuGen;
     return trim($asin);
+}
+
+function pr($data)
+{
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
 }

@@ -234,7 +234,7 @@ class AsinController extends Controller
         if($request->ajax())
         {
             $asin = $request->get("asin");
-            $id = Asin::getAsinsIdByAsin($asin)
+            $id = Asin::getAsinsIdByAsin($asin);
             if (!$id)
             {
                 $id = 0;

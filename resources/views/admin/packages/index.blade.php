@@ -1,5 +1,5 @@
 @extends('layouts.appadminlayout')
-@section('title', 'Audit')
+@section('title', 'Packages')
 @section('content')
 
 <div class="container">
@@ -108,48 +108,49 @@
 	</form>
 	@if (!empty($searchedPackages))
 		<h3>Search Results</h3>
-		<table class="table table-striped table-condensed table-hover table-sm">
-			<tr>
-				<th>Order Date</th>
-				<th>Exp. Arrival</th>
-				<th>Description</th>
-				<th>Qty</th>
-				<th>Value</th>
-				<th>Request Name</th>
-				<th>Tracking #</th>
-				<th>Ref #</th>
-				<th>Carrier</th>
-				<th>F/G</th>
-				<th>Recipient</th>
-				<th>Recvd</th>
-				<th>Worker ID</th>
-				<th>location</th>
-			</tr>
-		@foreach($searchedPackages as $package)
-			@if (!empty($package->id))
-				<tr style="cursor: pointer" onclick="editPackage( this , {{$package->id}})">
-					<td>{{$package->order_date}}</td>
-					<td>{{$package->expected_arrival}}</td>
-					<td>{{$package->description}}</td>
-					<td>{{$package->qty}}</td>
-					<td>{{$package->value}}</td>
-					<td>{{$package->req_name}}</td>
-					<td>{{$package->tracking_number}}</td>
-					<td>{{$package->ref_number}}</td>
-					<td>{{$package->carrier}}</td>
-					<td>{{$package->freight_ground}}</td>
-					<td>{{$package->recipient}}</td>
-					<td>{{$package->received}}</td>
-					<td>{{$package->worker_id}}</td>
-					<td>{{$package->location}}</td>
+		<table class="table" id="package-table">
+			<thead>
+				<tr>
+					<th>Order Date</th>
+					<th>Exp. Arrival</th>
+					<th>Description</th>
+					<th>Qty</th>
+					<th>Value</th>
+					<th>Request Name</th>
+					<th>Tracking #</th>
+					<th>Ref #</th>
+					<th>Carrier</th>
+					<th>F/G</th>
+					<th>Recipient</th>
+					<th>Recvd</th>
+					<th>Worker ID</th>
+					<th>location</th>
 				</tr>
-			@endif
-				<!-- <tr>
-					<td>No Result Find</td>
-				</tr> -->
-		@endforeach
+			</thead>
+			<tbody>
+				@foreach($searchedPackages as $package)
+					@if (!empty($package->id))
+						<tr style="cursor: pointer" onclick="editPackage( this , {{$package->id}})">
+							<td>{{$package->order_date}}</td>
+							<td>{{$package->expected_arrival}}</td>
+							<td>{{$package->description}}</td>
+							<td>{{$package->qty}}</td>
+							<td>{{$package->value}}</td>
+							<td>{{$package->req_name}}</td>
+							<td>{{$package->tracking_number}}</td>
+							<td>{{$package->ref_number}}</td>
+							<td>{{$package->carrier}}</td>
+							<td>{{$package->freight_ground}}</td>
+							<td>{{$package->recipient}}</td>
+							<td>{{$package->received}}</td>
+							<td>{{$package->worker_id}}</td>
+							<td>{{$package->location}}</td>
+						</tr>
+					@endif
+				@endforeach
+			</tbody>
 		</table>
 	@endif
-	@include('admin.packages.modal')
 </div>
+@include('admin.packages.modal')
 @endsection  
