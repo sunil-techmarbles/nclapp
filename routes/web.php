@@ -114,7 +114,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
 
 		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
-		
+		Route::post('/syncalltoshopify', 'ShopifyController@syncAllToShopify')->name('sync.all.to.shopify');
 		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
 		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
 	});

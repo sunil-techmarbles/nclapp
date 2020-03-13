@@ -18,6 +18,7 @@ class CreateMessageLogsTable extends Migration
             $table->string('message')->nullable();
             $table->string('status')->nullable();
             $table->string('type')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

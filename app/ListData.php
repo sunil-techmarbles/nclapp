@@ -149,4 +149,19 @@ class ListData extends Model
 			->where('asin', '!=', '')
 			->get();
 	}
+
+	public static function getFormModelAndListData($id)
+	{
+		return self::select('list_data.*','a.tab','a.technology','a.id')
+			->selectSub('count(list_data.id)', 'cnt')
+			->selectSub('list_data.id', 'list_id')
+    		->join('form_models as a', function($join){
+                $join->on('list_data.mid', '=', 'a.id');
+                })
+    		->where(['list_data.status' => 'active','list_data.run_status' => 'active', 'list_data.asin' => $id])
+    		->where('list_data.model', '!=', 'none')
+    		->where('list_data.id', '>', 0)
+    		->groupBy('list_data.id')
+            ->first();
+		}
 }

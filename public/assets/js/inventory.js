@@ -124,24 +124,32 @@ $(document).ready(function ()
 		$.each($("input[name='sync-all-ids[]']:checked"), function () {
 			ids.push($(this).val());
 		});
-		$.ajax({
-			type: "POST",
-			dataType: "html",
-			url: "shopify_new_list/sync_all_to_shopify.php",
-			data: {
-                ids: ids, // < note use of 'this' here
-            },
-            beforeSend: function () {
-            	$("#sync-all-to-shopify").attr("disabled", "disabled");
-            },
-            complete: function () {
-            	$("#sync-all-to-shopify").removeAttr("disabled");
-            },
-            success: function (result) {
-            	alert(result);
-            	location.reload(true);
-            }
-        });
+		if(ids.length > 0)
+		{
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "/"+prefix+"/syncalltoshopify",
+				data: {
+	                ids: ids,// < note use of 'this' here
+	                _token: _token, 
+	            },
+	            beforeSend: function () {
+	            	$("#sync-all-to-shopify").attr("disabled", "disabled");
+	            },
+	            complete: function () {
+	            	$("#sync-all-to-shopify").removeAttr("disabled");
+	            },
+	            success: function (result) {
+	            	alert(result);
+	            	location.reload(true);
+	            }
+	        });
+		}
+		else
+		{
+			showSweetAlertMessage(type = 'error', message = 'Please select atleast one data' , icon= 'error');
+		}
 	});
 
 	$(".check-all-ids").click(function () {
