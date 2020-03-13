@@ -53,8 +53,8 @@
         </div>
 
         <div class="menu-item">
-            <a href="index.php?page=tracker"><span class="fa fa-hourglass"></span></a>
-            <a href="index.php?page=tracker">Time Tracker</a>
+            <a href=""><span class="fa fa-hourglass"></span></a>
+            <a href="">Time Tracker</a>
         </div>
 
         <div class="menu-item">
@@ -63,8 +63,8 @@
         </div>
 
         <div class="menu-item">
-            <a href="index.php?page=recycle"><span class="fa fa-refresh"></span></a>
-            <a href="index.php?page=recycle">Recycle Trailer</a>
+            <a href=""><span class="fa fa-refresh"></span></a>
+            <a href="">Recycle Trailer</a>
         </div>
 
          <div class="menu-item">
@@ -73,13 +73,13 @@
         </div>
 
         <div class="menu-item">
-            <a href="http://nclapp.com:8080/CustomerInventory/CustomerInventoryDetails.jsp" target="_blank"><span class="fa fa-user"></span>
+            <a href="" target="_blank"><span class="fa fa-user"></span>
             Customer Inventory</a>
         </div>
 
         <div class="menu-item">
-            <a href="index.php?page=wipereport"><span class="fa fa-file-excel-o"></span></a>
-            <a href="index.php?page=wipereport">Wipe Report</a>
+             <a href="{{route('wipereport')}}"><span class="fa fa-file-excel-o"></span></a>
+            <a href="{{route('wipereport')}}">Wipe Report</a>
         </div>
 
     </div>

@@ -1,5 +1,4 @@
 <?php
-
 function implodeSupplieEmails($array )
 {
     $r = array();
@@ -86,5 +85,11 @@ function checkRunlistPrice($db, $data)
     return $final_price;
 }
 
+function pr($data)
+{
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+}
 
 ?>

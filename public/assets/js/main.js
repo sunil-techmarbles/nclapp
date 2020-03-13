@@ -1,6 +1,10 @@
 var prefix = 'admin';
 var _token = $('meta[name="csrf-token"]').attr('content');
 
+// Array of inputs for package modal for per-populating values of package
+var packageModalInputs = ["order_date", "expected_arrival", "description", "qty", "value", "req_name", "tracking_number", "ref_number", "carrier", "freight_ground", "recipient", "received", "worker_id", "location" ];
+
+
 const swalWithBootstrapButtons = Swal.mixin({
 	customClass: {
 		confirmButton: 'btn btn-success',

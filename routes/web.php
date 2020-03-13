@@ -42,6 +42,9 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		// supplies Report 
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
+
+		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
+
 	});
 });
 
@@ -94,7 +97,12 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 		Route::any('/sessions','SessionController@index')->name('sessions');
-		
+
+		// Wipe Report Section 
+		Route::get('/wipereport','CommonController@index')->name('wipereport');
+		Route::post('/getwipereportfiles','CommonController@getWipeReportFiles')->name('getwipereportfiles');
+
+
 		// Audit Section
 		Route::get('/audit','AuditController@index')->name('audit');
 		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
