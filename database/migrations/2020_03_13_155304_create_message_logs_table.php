@@ -15,6 +15,9 @@ class CreateMessageLogsTable extends Migration
     {
         Schema::create('message_logs', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('message')->nullable();
+            $table->string('status')->nullable();
+            $table->string('type')->nullable();
             $table->timestamps();
         });
     }
