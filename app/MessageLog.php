@@ -19,4 +19,10 @@ class MessageLog extends Model
 	 	'status',
 		'type',
 	];
+	public static function AddBlanccoErrorLog($message)
+	{
+		
+
+
+	}
 }
