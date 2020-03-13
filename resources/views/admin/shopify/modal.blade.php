@@ -1,12 +1,12 @@
 <div class="modal fade" id="brModal" tabindex="-1" role="dialog" aria-labelledby="brModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
-            <form method="post" id="bulk-addform" enctype="multipart/form-data" action="index.php"> 
+            <form method="post" id="bulk-addform" enctype="multipart/form-data" action="{{route('inventory')}}">
+                @csrf
                 <div class="modal-header">
                     <h3 class="modal-title" id="brModalLabel">Bulk Remove Items</h3>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" name="page" value="newlist"/>
                     <input type="hidden" name="bulk_remove" value="1"/>
                     <div class="row">
                         <div class="col-sm-12">
@@ -27,13 +27,12 @@
 <div class="modal fade" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="priceModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
-            <form method="post" id="addform" enctype="multipart/form-data" action="index.php"> 
+            <form method="post" id="addform" enctype="multipart/form-data" action="{{route('inventory')}}"> 
+                @csrf
                 <div class="modal-header">
                     <h3 class="modal-title" id="priceModalLabel">Set Custom Price</h3>
                 </div>
                 <div class="modal-body">
-
-                    <input type="hidden" name="page" value="newlist"/>
                     <input type="hidden" name="set_price" id="set_price" value=""/>
                     <div class="row">
                         <div class="col-sm-12">

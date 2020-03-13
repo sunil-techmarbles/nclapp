@@ -19,4 +19,11 @@ class ShopifyBarCode extends Model
         'upc',
 		'asin',
     ];
+
+    public static function countEmptyAsinId($value)
+    {
+        return self::selectSub('COUNT(id)', 'count')
+            ->where(['asin' => $value])
+            ->get();
+    }
 }

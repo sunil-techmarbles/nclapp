@@ -67,4 +67,10 @@ class FormModel extends Model
         return self::where(["tab" => $product, "technology" => $technology, "model" => $model])
             ->first();
     }
+
+    public static function pluckCustomField($query, $field)
+    {
+        return self::where($query)
+            ->pluck($field);
+    }
 }

@@ -32,7 +32,7 @@ class ListData extends Model
 		'run_status',
 	   	'added_on',
 		'added_by',
-	]
+	];
 
 	public static function addListDataRecord($data)
     {
@@ -76,4 +76,72 @@ class ListData extends Model
     	return self::where(['asin' => $asin,'mid' => 0])
     		->update(['mid' => $mid]);
     }
+
+    public static function updateRunStatus($value, $status)
+    {
+    	return self::where(["asset" => $value])
+    		->update(["run_status" => $status]);
+    }
+
+    public static function checkRecordExist($value)
+    {
+    	return self::where(["asset" => $value])
+    		->first();
+	}
+
+	public static function updateShopifyProductId($productID, $asinId)
+	{
+		return self::where(["asin" => $asinId])
+			->update(["shopify_product_id" => $productID]);
+	}
+
+	public static function updateShopifyAsinId($asinValue, $model)
+	{
+		return self::where(['model' => $model])
+			->update(['asin' => $asinValue]);
+	}
+
+	public static function getSelectedFields($fields, $query)
+	{
+		return self::select($fields)
+			->where($query)
+			->get();
+	}
+
+	public static function updateSelectedFields($fields, $query)
+	{
+		return self::where($query)
+			->update($fields);
+	}
+
+	public static function getSelectedFieldsByGroupBy($fields)
+	{
+		return self::select($fields)
+			->where('shopify_product_id', '!=', '0')
+			->where('shopify_product_id', '!=', '')
+			->where('asin',  '!=', '')
+			->groupBy(['asin', 'shopify_product_id'])
+			->get();
+	}
+
+	public static function getrunningList()
+	{
+		return self::select('asin','technology','model','cpu_core','cpu_gen','shopify_product_id')
+			->selectSub('count(asin)', 'cnt')
+			->selectSub('max(mid)', 'mid')
+            ->where(['status' => 'active', 'run_status' => 'active'])
+            ->where('asin',  '!=', '')
+            ->groupBy(['asin','technology','model','cpu_core','cpu_gen','shopify_product_id'])
+            ->get();
+	}
+
+	public static function getDistinctRecordForCPU($mid)
+	{
+		return self::distinct('cpu')
+			->where(['asin,' => $mid,
+				'status' => 'active',
+				'run_status' => 'active'
+			])
+			->get();
+	}
 }

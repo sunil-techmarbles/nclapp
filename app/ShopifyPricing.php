@@ -34,4 +34,26 @@ class ShopifyPricing extends Model
 		'Price',
 		'Final_Price',
     ];
+
+    public static function getShopifyPriceList($request)
+    {
+    	return self::where([
+	    		'Condition' => $request['condition'],
+	    		'Form_Factor' => $request['form_factor'],
+	    		'Model' => $request['model']
+    		])
+    		->where('Processor', 'LIKE', '%'.$request['cpu_core'].'%')
+    		->get();
+    }
+
+    public static function updateShopifyPriceFinalPrice($request, $finalPrice)
+    {
+    	return self::where([
+	    		'Condition' => $request['condition'],
+	    		'Form_Factor' => $request['form_factor'],
+	    		'Model' => $request['model']
+    		])
+    		->where('Processor', 'LIKE', '%'.$request['cpu_core'].'%')
+    		->update(['Final_Price' => $finalPrice]);
+    }
 }

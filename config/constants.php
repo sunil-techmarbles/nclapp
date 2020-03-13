@@ -3942,5 +3942,12 @@ return [
     'adminEmail' =>[
         "rahuls.techmarbles@gmail.com",
         // "asovych@gmail.com"
+    ],
+    'finalPriceConstants' => [
+        'priceMargin' => 1.25,
+        'processingCost' => 35,
+        'ramCost' => 14,
+        'hdCost' => 14.4,
+        'osCost' => 30
     ]
 ];

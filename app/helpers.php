@@ -64,8 +64,8 @@ function resultInReadableform($result)
 function checkImages($data)
 {
     $asin = createImageAsinFromData($data);
-    $all_images = glob(IMAGE_PATH_NEW . $asin . '*');
-    if (empty($all_images))
+    $allImages = glob(IMAGE_PATH_NEW . $asin . '*');
+    if (empty($allImages))
     {
         return 'N/A';
     }
@@ -75,16 +75,103 @@ function checkImages($data)
     }
 }
 
-function checkRunlistPrice($db, $data)
+function createImageAsinFromData($data)
 {
-    $search_data_array['condition'] = CONDITION;
-    $search_data_array['form_factor'] = $data['technology'];
-    $search_data_array['model'] = $data['model'];
-    $search_data_array['cpu_core'] = $data['cpu_core'];
-    $search_data_array['asin'] = $data['asin'];
-    $final_price = productPriceCalculation($db, $search_data_array);
-    return $final_price;
+    $asin = createAsinFromData($data);
+    $asin = substr($asin, 0, strrpos($asin, '-'));
+    return $asin;
 }
 
+function checkRunlistPrice($data)
+{
+    $searchDataArray['condition'] = CONDITION;
+    $searchDataArray['form_factor'] = $data['technology'];
+    $searchDataArray['model'] = $data['model'];
+    $searchDataArray['cpu_core'] = $data['cpu_core'];
+    $searchDataArray['asin'] = $data['asin'];
+    $finalPrice = new ShopifyController($searchDataArray);
+    return $finalPrice;
+}
 
-?>
+function createFormFactorForNewRunlist($data)
+{
+    $formFactor = '';
+    switch ($data['technology']) 
+    {
+        case "Ultra Small Form Factor":
+            $formFactor = "USFF";
+            break;
+        case "Small Form Factor":
+            $formFactor = "SFF";
+            break;
+        case "Notebook":
+            $formFactor = "LAP";
+            break;
+        case "All_In_One":
+            $formFactor = "AIO";
+            break;
+        case "Mini Tower":
+            $formFactor = "MT";
+            break;
+        case "Desktop":
+            $formFactor = "DT";
+            break;
+        case "Tablet_Notebook":
+            $formFactor = "TAB";
+            break;
+        case "Tabet_Notebook":
+            $formFactor = "TAB";
+            break;
+        case "Tiny Desktop":
+            $formFactor = "TINY";
+            break;
+        default:
+            $formFactor = '';
+            break;
+    }
+    return $formFactor;
+}
+
+function createAsinFromData($data)
+{
+    if (!empty($data['model']))
+    {
+        $modal = trim(str_replace(array('(', ')'), '', $data['model']));
+        $modal = str_replace(" ", "_", ucwords($modal));
+    }
+    else
+    {
+        $modal = '';
+    }
+
+    $formFactor = createFormFactorForNewRunlist($data);
+    if (!empty($formFactor))
+    {
+        $formFactor = '-' . $formFactor;
+    }
+    else
+    {
+        $formFactor = '';
+    }
+
+    if (!empty($data['cpu_core']))
+    {
+        $cpuCore = '-' . $data['cpu_core'];
+    }
+    else
+    {
+        $cpuCore = '';
+    }
+
+    if (!empty($data['cpu_gen']))
+    {
+        $cpuGen = '-' . intval($data['cpu_gen']);
+    }
+    else
+    {
+        $cpuGen = '';
+    }
+
+    $asin = $modal . $formFactor . $cpuCore . $cpuGen;
+    return trim($asin);
+}
