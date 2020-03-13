@@ -56,7 +56,6 @@ class Package extends Model
 
 	public static function UpdatePackageDetails($packagedata)
 	{
-
 		return self::where(["id" => $packagedata->pkg_id])->update([
 				"worker_id" => $packagedata->worker_id ,
 				"value" => $packagedata->value ,
@@ -73,16 +72,13 @@ class Package extends Model
 				"received" => $packagedata->received ,
 				"recipient" => $packagedata->recipient ,
 		]); 
- 
 	}
 
 	public static function CheckIfPackageExist($package_id)
 	{
 		$package = self::where('tracking_number','=',$package_id)
 						->first();
-		
-		return ( isset($package) ) ? true : false ;
-	
+		return ( isset($package) ) ? true : false ;	
 	} 
 
 	public static function UpdatePackageRecived($package_details)

@@ -8,6 +8,11 @@ class CommonController extends Controller
 {
 	public $fileExtensions , $directories , $basePath ; 
 
+	/**
+     * Saving some important variables value.
+     *
+     * @return mixed
+     */
 	public function __construct()
 	{
 		$this->basePath  = base_path().'/public'; 
@@ -15,13 +20,21 @@ class CommonController extends Controller
 		$this->directories = ['wipe-data' => $this->basePath.'/wipe-data/*', 'blancco' => '' ];
 	}
 
-	// for wipe report section
+	/**
+     * for wipe report section.
+     *
+     * @return mixed
+     */
 	public function index()
 	{
 		return view( 'admin.wipereport.index');
 	}
 
-	// get wipe report files for a lot number
+	/**
+     * get wipe report files for a lot number.
+     *
+     * @return mixed
+     */
 	public function getWipeReportFiles(Request $request)
 	{
 		$response = [];
@@ -53,7 +66,11 @@ class CommonController extends Controller
 		return response()->json($response);
 	}
 
-	// for Exporting wipe data files
+	/**
+     * For Exporting wipe data files.
+     *
+     * @return mixed
+     */
 	public function ExportWipeReportFiles(Request $request)
 	{
 		$files = $request->wipefiles;

@@ -38,8 +38,9 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		// supplies Report 
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
-		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
 		Route::any('/inventorycsv', 'ShopifyController@inventoryCSV')->name('inventory.csv');
+		// export wipereport zip files 
+		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
 	});
 });
 
