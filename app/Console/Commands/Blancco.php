@@ -6,6 +6,7 @@ use Config;
 
 class Blancco extends Command
 {
+    public $basePath;
     /**
      * The name and signature of the console command.
      *
@@ -25,13 +26,9 @@ class Blancco extends Command
      *
      * @return void
      */
-
-    public $basePath ; 
-
     public function __construct()
     {
         parent::__construct();
-        $this->basePath  = base_path().'/public/blancco/'; 
     }
 
     /**
@@ -41,7 +38,7 @@ class Blancco extends Command
      */
     public function handle()
     {
-        // for getting data.xml of all blancco data 
+        $this->basePath  = base_path().'/public/blancco/'; 
         $this->GetAllDataFileBlancco();
     }
 
@@ -53,17 +50,9 @@ class Blancco extends Command
         $this->blancooCurlRequest($requestFilePath, $requestFileName, 'fulldata', $format, 'data', 'all');
     }
 
-    public function blancooCurlRequest($request_filePath , $request_file_name , $type , $format , $return_file_name , $reportUuid)
+    public function blancooCurlRequest($requestFilePath , $requestFileName , $type , $format , $returnFileName , $reportUuid)
     {
-    }
+
+    } 
+
 }
-
-
-
-
-
-
-
-
-
-
