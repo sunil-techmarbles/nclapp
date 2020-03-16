@@ -5,4 +5,4 @@
         <search path="report.uuid" value="{{id}}" operator="eq" datatype="string" conjunction="true" />
         <pdf-options pdfLanguage="en_US" embedBarcode="false" embedVerificationPercentage="false" type="albus_standard"/>
     </export-report>
-</request>  
+</request>
