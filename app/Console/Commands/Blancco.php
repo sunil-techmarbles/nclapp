@@ -5,6 +5,7 @@ use Illuminate\Console\Command;
 use App\MessageLog;
 use File;
 use Config;
+use Orchestra\Parser\Xml\Facade as XmlParser;
 
 class Blancco extends Command
 {
@@ -58,8 +59,7 @@ class Blancco extends Command
             $fileContent = file_get_contents($dataFile);
             try
             {
-                $ob = simplexml_load_string($fileContent);
-                pr($ob);die;
+           
             }
             catch (\Execption $e)
             {
@@ -103,7 +103,7 @@ class Blancco extends Command
         if(curl_errno($ch))
         {
             $errTxt = $reportUuid . ' --> ERROR -> ' . curl_errno($ch) . ': ' . curl_error($ch);
-            MessageLog::AddBlanccoErrorLog($errTxt);
+            MessageLog::addLogMessageRecord($errTxt, $type="blancco", $status="failure");
         }
         else
         {
@@ -115,7 +115,7 @@ class Blancco extends Command
             else
             {
                 $errTxt =  $reportUuid." --> ".curl_error($ch)." ".$httpcode;
-                MessageLog::AddBlanccoErrorLog($errTxt);
+                MessageLog::addLogMessageRecord($errTxt,$type="blancco", $status="failure");
             }
         }
         curl_close($ch);
@@ -146,7 +146,7 @@ class Blancco extends Command
             $this->WriteBlancoDataFile($xmlFile, $result);
             $successTxt =  $reportUuid . ' XML file created for this reportUuid';
         }
-        MessageLog::AddBlanccoSuccessLog($successTxt);
+        MessageLog::addLogMessageRecord($successTxt, $type="blancco", $status="success");
     }
 
    /**
