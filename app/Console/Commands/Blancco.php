@@ -5,11 +5,16 @@ use Illuminate\Console\Command;
 use App\MessageLog;
 use File;
 use Config;
-use Orchestra\Parser\Xml\Facade as XmlParser;
+use App\Traits\TMXmlToArrayTraits;
 
 class Blancco extends Command
 {
+    use TMXmlToArrayTraits;
+
     public $basePath;
+
+    public $report_allowed_states = ['Successful', 'Failed'];
+
     /**
      * The name and signature of the console command.
      *
@@ -42,7 +47,7 @@ class Blancco extends Command
     public function handle()
     {
         $this->basePath  = base_path().'/public/blancco/';
-        // $this->GetAllDataFileBlancco();
+        $this->GetAllDataFileBlancco();
         $this->GetSingleXmlAndPdfFIlesBlancco();
     }
 
@@ -53,19 +58,85 @@ class Blancco extends Command
      */
     public function GetSingleXmlAndPdfFIlesBlancco()
     {
-        $dataFile = $this->basePath . 'xml-data/data.xml';
-        if(File::exists($dataFile))
+        $dataFileBlancco = $this->basePath . 'xml-data/data.xml';
+        if(File::exists($dataFileBlancco))
         {
-            $fileContent = file_get_contents($dataFile);
+            $blanccoFileContent = file_get_contents($dataFileBlancco);
             try
             {
-           
+                // createArray in TMXmlToArrayTraits for parsing xml data
+                $blanccoFullData = $this->createArray($blanccoFileContent);
+                $i = 0;
+                foreach ($blanccoFullData['root']['report'] as $blanccoData)
+                {
+                    $reportUuid = $state = $serial = $lotNumber = $assetId = '';
+                    if( isset($blanccoData['blancco_data']['description']['document_id']) && !empty($blanccoData['blancco_data']['description']['document_id']))
+                    {
+                        $reportUuid = $blanccoData['blancco_data']['description']['document_id'];
+
+                        // for getting state form blancco_erasure_report
+                        $blanccoErasureReportData = $blanccoData['blancco_data']['blancco_erasure_report']['entries']['entries']['entry'];
+                        $state = $this->GetBlanccoVariable($blanccoErasureReportData, $variableToGet='state', $reportUuid);
+                      
+                        // for getting serial form blancco_hardware_report
+                        $blanccoHardwareReportData = $blanccoData['blancco_data']['blancco_hardware_report']['entries'][0]['entry'];
+                        $serial = $this->GetBlanccoVariable($blanccoHardwareReportData, $variableToGet='serial', $reportUuid);
+
+                        // for getting lot number and asset id
+                        $blanccoUserReportData = $blanccoData['user_data']['entries']['entry'];
+                        $lotNumber = $this->GetBlanccoVariable($blanccoUserReportData, $variableToGet='Lot Number', $reportUuid);
+                        $assetId = $this->GetBlanccoVariable($blanccoUserReportData, $variableToGet='Asset ID', $reportUuid);
+
+                        if (in_array($state, $this->report_allowed_states) && !empty($serial) && !empty($lotNumber) && !empty($assetId))
+                        {
+                        }
+                        else
+                        {
+                            if(!in_array($state, $this->report_allowed_states))
+                            {
+                                 $message = $reportUuid . " --Invalid State value for this Uuid. State : " . $state;
+                                 MessageLog::addLogMessageRecord($message,$type="blancco", $status="failure");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageLog::addLogMessageRecord($message='reportUuid Not Exist',$type="blancco", $status="failure");
+                    }
+                }
+                echo $i; die;
             }
             catch (\Execption $e)
             {
                 echo $e->getMessage().' '. $e->getCode();
             }
         }
+    }
+
+    /**
+     *  Function for getting blancco Variable.
+     *
+     * @return mixed
+     */
+    public function GetBlanccoVariable($blanccoReportData, $variableToGet, $reportUuid)
+    {
+        $result = '';
+        if (is_array($blanccoReportData))
+        {
+            foreach ($blanccoReportData as $key => $data)
+            {
+                if ($data['@attributes']['name'] == $variableToGet)
+                {
+                        $result = $data['@value'];
+                }
+            }
+        }
+        if(empty($result))
+        {
+            $message = $variableToGet . ' Not found for '.$reportUuid.' this reportUuid';
+            MessageLog::addLogMessageRecord($message,$type="blancco", $status="failure");
+        }
+        return $result;
     }
 
     /**
