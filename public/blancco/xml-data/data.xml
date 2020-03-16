@@ -122,11 +122,13 @@
     <user_data>
         <entries name="fields">
             <entry name="Comments" type="string"></entry>
-            <entry name="Lot Number" type="string">17561</entry>
-            <entry name="Asset ID" type="string">535682</entry>
+            <entry name="Lot_Number" type="string">17561</entry>
+            <entry name="Asset_ID" type="string">535682</entry>
         </entries>
     </user_data>
-</report><report>
+</report>
+
+<report>
     <blancco_data>
         <description>
             <document_id>ea33daa9-7b03-4859-9d18-cf21abd8a0b4</document_id>
