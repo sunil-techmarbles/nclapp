@@ -18,22 +18,13 @@ class MessageLog extends Model
 	 	'status',
 		'type',
 	];
-
-	public static function AddBlanccoErrorLog($message)
+	
+	public static function addLogMessageRecord($message, $type, $status)
 	{
-        $MessageLog = new MessageLog();
-        $MessageLog->message = $message;
-        $MessageLog->status = 'error';
-        $MessageLog->type = 'blancco';
-        return ($MessageLog->save()) ? true : false;
-	}
-
-	public static function AddBlanccoSuccessLog($message)
-	{
-        $MessageLog = new MessageLog();
-        $MessageLog->message = $message;
-        $MessageLog->status = 'success';
-        $MessageLog->type = 'blancco';
-        return ($MessageLog->save()) ? true : false;
+        $messageLog = new MessageLog();
+        $messageLog->message = $message;
+        $messageLog->status = $status;
+        $messageLog->type = $type;
+        return ($messageLog->save()) ? true : false;
 	}
 }

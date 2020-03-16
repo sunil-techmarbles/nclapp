@@ -22,9 +22,12 @@ use App\ShopifyPricingCustom;
 use App\ShopifyBarCode;
 use App\ShopifyImages;
 use App\ShopifyPricing;
+use App\Traits\CommenShopifyTraits;
 
 class ShopifyController extends Controller
 {
+	use CommenShopifyTraits;
+
 	public $basePath, $current, $baseUrl, $productMainSiteUrl, $wipeData2, $methodData, $finalPrice;
 
 	/**
@@ -523,74 +526,88 @@ class ShopifyController extends Controller
 	    $insertDataArray['Max_Memory_Capacity'] = '';
 	    $config = $config->toArray();
 	    $additionalDataArray = json_decode($config['data']);
-	    print_r($additionalDataArray);
-	    die;
 	    if (!empty($additionalDataArray))
 	    {
 	        foreach ($additionalDataArray->items as $key => $additionalData)
 	        {
-	            if ($additionalData->key == 'Weight') {
+	            if ($additionalData->key == 'Weight')
+	            {
 	                $insertDataArray['weight'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Height') {
+	            if ($additionalData->key == 'Height')
+	            {
 	                $insertDataArray['height'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Width') {
+	            if ($additionalData->key == 'Width')
+	            {
 	                $insertDataArray['width'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Length') {
+	            if ($additionalData->key == 'Length')
+	            {
 	                $insertDataArray['length'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Graphics_Processor') {
+	            if ($additionalData->key == 'Graphics_Processor')
+	            {
 	                $insertDataArray['graphics_processor'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Model') {
+	            if ($additionalData->key == 'Model')
+	            {
 	                $insertDataArray['model'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Product_Name') {
+	            if ($additionalData->key == 'Product_Name')
+	            {
 	                $insertDataArray['product_class'] = $additionalData->value[0];
 	            }
-
-	            if ($additionalData->key == 'Asset_Number') {
+	            if ($additionalData->key == 'Asset_Number') 
+	            {
 	                $insertDataArray['asset_number'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Size') {
+	            if ($additionalData->key == 'Size')
+	            {
 	                $insertDataArray['screen_size'] = $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'Color') {
+	            if ($additionalData->key == 'Color')
+	            {
 	                $insertDataArray['color'] = $additionalData->value[0];
 	            }
-
-	            if ($additionalData->key == 'Memory_Slots') {
+	            if ($additionalData->key == 'Memory_Slots')
+	            {
 	                $insertDataArray['Memory_Slots'] = $additionalData->value[0];
 	            }
-
-	            if ($additionalData->key == 'Max_Memory_Capacity') {
+	            if ($additionalData->key == 'Max_Memory_Capacity')
+	            {
 	                $insertDataArray['Max_Memory_Capacity'] = $additionalData->value[0];
 	            }
-
-	      	   	if ($additionalData->key == 'RJ_45' && $additionalData->value[0] == 'Yes') {
+	      	   	if ($additionalData->key == 'RJ_45' && $additionalData->value[0] == 'Yes')
+	      	   	{
 	                $availablePort[] = str_replace("_", " ", $additionalData->key);
 	            }
-	            if ($additionalData->key == 'USB_2_0_Ports' && $additionalData->value[0] != '0') {
+	            if ($additionalData->key == 'USB_2_0_Ports' && $additionalData->value[0] != '0')
+	            {
 	                $availablePort[] = str_replace("_", " ", $additionalData->key) . '*' . $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'USB_3_0_Ports' && $additionalData->value[0] != '0') {
+	            if ($additionalData->key == 'USB_3_0_Ports' && $additionalData->value[0] != '0')
+	            {
 	                $availablePort[] = str_replace("_", " ", $additionalData->key) . '*' . $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'USB_C_Ports' && $additionalData->value[0] != '0') {
+	            if ($additionalData->key == 'USB_C_Ports' && $additionalData->value[0] != '0')
+	            {
 	                $availablePort[] = str_replace("_", " ", $additionalData->key) . '*' . $additionalData->value[0];
 	            }
-	            if ($additionalData->key == 'SD_Card_Reader' && $additionalData->value[0] == 'Yes') {
+	            if ($additionalData->key == 'SD_Card_Reader' && $additionalData->value[0] == 'Yes')
+	            {
 	                $availablePort[] = str_replace("_", " ", $additionalData->key);
 	         	}
-	            if ($additionalData->key == 'Headphone_Jack' && $additionalData->value[0] == 'Yes') {
+	            if ($additionalData->key == 'Headphone_Jack' && $additionalData->value[0] == 'Yes')
+	            {
 	                $availablePort[] = str_replace("_", " ", $additionalData->key);
 	            }
-	            if ($additionalData->key == 'Microphone_Jack' && $additionalData->value[0] == 'Yes') {
+	            if ($additionalData->key == 'Microphone_Jack' && $additionalData->value[0] == 'Yes')
+	            {
 	                $availablePort[] = str_replace("_", " ", $additionalData->key);
 	            }
-	            if ($additionalData->key == 'Available_Video_Ports' && !empty($additionalData->value[0])) {
+	            if ($additionalData->key == 'Available_Video_Ports' && !empty($additionalData->value[0]))
+	            {
 	                $availableVedioPort = implode(",", $additionalData->value);
 	            }
 	        }
@@ -657,6 +674,137 @@ class ShopifyController extends Controller
  		}
  	}
 
+ 	public function getBarCode($asin)
+ 	{
+ 		$upc = ShopifyBarCode::getUPS($asin, $orderby = '');
+	    if (empty($upc))
+	    {
+	    	$upc = ShopifyBarCode::getUPS($asin='', $orderby = 'id');
+	        $barCode = $upc[0]['upc'];
+	        ShopifyBarCode::updateQueryFields(['asin' => $asin], ['upc' => $barCode]);
+	    }
+	    else
+	    {
+	        $barCode = $upc[0]['upc'];
+	    }
+	    return $barCode;
+	}
+
+	public function insertShopifyNewRunlistImages($asin, $shopifyProductId, $imageName)
+	{
+	    $correctedAsin = correctAsinForImages($asin);
+	    $allImages = glob('../'.config('constants.finalPriceConstants.imagePathNew').$correctedAsin . '*');
+	    foreach ($allImages as $key => $singleImage)
+	    {
+	        $singleImage = str_replace('../', '', $singleImage);
+	        $imgUrl = __DIR__ . "/" . $singleImage;
+	        $image = explode("_", $singleImage);
+	        foreach ($image as $key => $checkImage)
+	        {
+	            if (strpos($checkImage, '.') !== FALSE)
+	            {
+	                $image = $checkImage;
+	                break;
+	            }
+	        }
+
+	        $image = explode(".", $image);
+	        $position = $image[0];
+	        $data['image'] = [
+	            "position" => $position,
+	            "attachment" => base64_encode(file_get_contents($imgUrl)),
+	            "filename" => $image_name . "-" . $position . "." . $image[1]
+	        ];
+	        $imageData = ShopifyImages::getImageId($asin,$singleImage);
+	        if (empty($imageData))
+	        {
+	            $url = $this->baseUrl."/admin/api/2019-04/products/".$shopifyProductId."/images.json";
+	            $shopifyImageData = postApiData($url, $data);
+	            if (isset($shopifyImageData['errors']))
+			    {
+			    	$message = "Error: " . $productsurl . "<br>" . $shopifyImageData['errors'];
+			    	$type = 'Shopify product image';
+			    	$status = 'failure';
+			    	MessageLog::addLogMessageRecord($message, $type, $status);
+			    }
+			    $data = [
+			    	'asin' => $asin,
+			    	'image' => $singleImage,
+			    	'shopify_image_id' => $shopifyImageData['image']['id']
+			    ];
+			    ShopifyImages::addimagerecord((object) $data);
+	        }
+	        else
+	        {
+	            $url = $this->baseUrl."/admin/api/2019-04/products/".$shopifyProductId."/images/".$imageData[0]['shopify_image_id'].".json";
+	            $shopifyImageData = putApiData($url, $data);
+	        }
+	    }
+	}
+
+	public function createShopifyNewRunlistProduct($data, $runningList, $variantData)
+	{
+	    $productsurl = $this->baseUrl."/admin/api/2019-04/products.json";
+	    $shopifyData = postApiData($productsurl, $data);
+	    if (isset($shopifyData['errors']))
+	    {
+	    	$message = "Error: " . $productsurl . "<br>" . $shopifyData['errors'];
+	    	$type = 'Shopify product';
+	    	$status = 'failure';
+	    	MessageLog::addLogMessageRecord($message, $type, $status);
+	    }
+	    else
+	    {
+		    if ($shopifyData)
+		    {
+		        $allRunningList = ListData::updateSelectedFields($fields=['shopify_product_id' => $shopifyData['product']['id']], $query=['id' => $runningList['list_id']]);
+		        $variantData['variant']['id'] = $shopifyData['product']['variants'][0]['id'];
+		        $variantData['variant']['product_id'] = $shopifyData['product']['id'];
+		        $productsurl = $this->baseUrl."/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
+		        $shopifyVariantData = putApiData($productsurl, $variantData);
+		        if (isset($shopifyVariantData['errors']))
+		        {
+			        $message = "Error: " . $productsurl . "<br>" . $shopifyVariantData['errors'];
+			    	$type = 'Shopify variant data';
+			    	$status = 'failure';
+			    	MessageLog::addLogMessageRecord($message, $type, $status);
+			    }
+		        $imageName = createImageName($data['product']['title']);
+		        $this->insertShopifyNewRunlistImages($runningList['asin'], $shopifyData['product']['id'], $imageName);
+		        $returnError = 'Created asin: ' . $runningList['model'] . ' => Shopify product id:' . $shopifyData['product']['id'];
+		        $message = "Hi,
+
+				The following product(s) have been created:
+				" . $runningList['model'] . " " . $runningList['form_factor'] . " " . $runningList['cpu_core'] . " " .
+				                getProcessorGenration($runningList['cpu_model']) . " " . $shopifyData['product']['id'] . $this->productMainSiteUrl."
+
+				/" . $shopifyData['product']['handle'] . "
+				Please review the listing and ensure the following:
+				The product is created
+				Pricing is correct
+				SKU and UPC are assigned
+				Product Type and Vendor is correct
+				Tags are applied
+				-
+				Images are correct and accetable size
+				Page layout is good
+				Product options are assigned
+				Reviews are added
+				Google shopping feed settings are correct ";
+
+		        $mail = new Email();
+		        $mid = $mail->queue("randy@itamg.com;richy@refurbconnect.com;ayaz_akhtar21@hotmail.com", 'New Product Created', $message);
+		        $mail->release($mid);
+		        return $returnError;
+		    }
+		    else
+		    {
+		        $returnError = 'Not created for asin:' . $runningList['asin'];
+		        return $returnError;
+		    }
+	    }
+	}
+
  	public function syncAllToShopify(Request $request)
  	{
  		if($request->ajax())
@@ -689,37 +837,35 @@ class ShopifyController extends Controller
 	 						$insertDataArray['product_class'] = 'Apple';
 	 						$runningList['manufacturer'] = $appleData['Manufacturer'];
 	 					}
-	 					print_r($insertDataArray->toArray());
-	 					die;
 	 					switch ($insertDataArray['product_class'])
 	 					{
 	 						case 'Computer':
-	 							$dataObject = new Shopify_Computer($runningList, $insertDataArray, $insertDataArray['product_class']);
-	 						break;
+	 							$dataObject = $this->init($runningList, $insertDataArray, $insertDataArray['product_class'], 'computer');
+	 							break;
 	 						case 'Laptop':
-	 							$dataObject = new Shopify_Laptop($runningList, $insertDataArray, $insertDataArray['product_class']);
-	 						break;
+	 							$dataObject = $this->init($runningList, $insertDataArray, $insertDataArray['product_class'], 'laptop');
+	 							break;
 	 						case 'All_In_One':
-	 							$dataObject = new Shopify_Laptop($runningList, $insertDataArray, $insertDataArray['product_class']);
-	 						break;
+	 							$dataObject = $this->init($runningList, $insertDataArray, $insertDataArray['product_class'], 'aLl_in_one');
+	 							break;
 	 						case 'Printer':
 	 						case 'Apple':
-	 							$dataObject = new Shopify_Apple_Laptop($runningList, $insertDataArray, $appleData, $insertDataArray['product_class']);
-	 						break;
+	 							$dataObject = $this->init($runningList, $insertDataArray, $appleData, $insertDataArray['product_class'], 'apple');
+	 							break;
 	 						default:
 		 						$error = "Can't sync product. Reason: Class " . $insertDataArray['product_class'] . " not found for asin " . $asin . ". Valid classes are Computer & Laptop";
 		 						$return_error[] = $error;
 		 						$logger->lwrite($error);
-	 						continue;
-	 						break;
+	 							continue;
+	 							break;
 	 					}
-	 					$data = $dataObject->data;
-	 					$bar_code = getBarCode($asin, $db);
+	 					$data = $dataObject;
+	 					$barCode = $this->getBarCode($asin);
 	 					if ($price == 0 || $price == 0.00)
 	 					{
 	 						$price = 299.99;
 	 					}
-	 					$variant_data['variant'] = [
+	 					$variantData['variant'] = [
 	 						"price" => $price,
 	 						"sku" => strtolower($asin),
 	 						"inventory_management" => "shopify",
@@ -727,22 +873,22 @@ class ShopifyController extends Controller
 	 						"weight" => $insertDataArray['weight'],
 	 					];
 	 					if (empty($runningList['shopify_product_id']) || $runningList['shopify_product_id'] == 0) {
-	 						$return_error[] = createShopifyNewRunlistProduct($db, $data, $runningList, $variant_data);
+	 						$return_error[] = $this->createShopifyNewRunlistProduct($data, $runningList, $variantData);
 	 					}
 	 					else
 	 					{
 	 						$data['product']['id'] = $runningList['shopify_product_id'];
-	 						$productsurl = SHOPIFY_BASE_URL . "/admin/api/2019-04/products/" . $runningList['shopify_product_id'] . ".json";
-	 						$shopify_get_product = getApiData($productsurl);
-	 						if (isset($shopify_get_product['errors']) && strtolower($shopify_get_product['errors']) == "not found")
+	 						$productsurl = $this->baseUrl."/admin/api/2019-04/products/".$runningList['shopify_product_id'] . ".json";
+	 						$shopifyGetProduct = getApiData($productsurl);
+	 						if (isset($shopifyGetProduct['errors']) && strtolower($shopifyGetProduct['errors']) == "not found")
 	 						{
-	 							$return_error[] = createShopifyNewRunlistProduct($db, $data, $runningList, $variant_data);
+	 							$return_error[] = $this->createShopifyNewRunlistProduct($data, $runningList, $variantData);
 	 						}
 	 						else
 	 						{
 	 							if (isset($_REQUEST['asin']) && !empty($_REQUEST['asin']))
 	 							{
-	 								$return_error[] = updateShopifyNewRunlistProduct($db, $data, $runningList, $variant_data);
+	 								$return_error[] = updateShopifyNewRunlistProduct($data, $runningList, $variantData);
 	 							}
 	 						}
 	 					}

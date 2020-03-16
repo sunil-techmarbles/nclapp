@@ -26,4 +26,21 @@ class ShopifyBarCode extends Model
             ->where(['asin' => $value])
             ->get();
     }
+
+    public static function getUPS($value, $orderBy)
+    {
+        $query = self::where(['asin' => $value]);
+        if($orderBy != '')
+        {
+            $query->orderBy($orderBy);
+        }
+        return $query->pluck('upc')
+            ->first();
+    }
+
+    public static function updateQueryFields($query, $fields)
+    {
+        return self::where($fields)
+            ->update($query);
+    }
 }

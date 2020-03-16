@@ -192,15 +192,7 @@ function getApiDataForPrice($url)
     {
         return false;
     }
-    $shopifyData = json_decode($response, 1);
-    if (isset($shopifyData['errors']))
-    {
-        $error = "Error: " . $url . "<br>" . $shopifyData['errors'];
-    }
-    else
-    {
-        return $shopifyData;
-    }
+    return $shopifyData = json_decode($response, 1);
 }
 
 function getShopifyRunlistPrice($data)
@@ -261,4 +253,46 @@ function getManufacturerForNewRunlistdata($series)
     {
         return '';
     }
+}
+
+function postApiData($url, $data)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    if (!$response)
+    {
+        return false;
+    }
+    return $shopifyData = json_decode($response, 1);
+}
+
+function putApiData($url, $data)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+    $response = curl_exec($ch);
+    if (!$response) {
+        return false;
+    }
+    return $shopifyData = json_decode($response, 1);
+}
+
+function createImageName($name)
+{
+    $name = trim(strtolower($name));
+    $name = str_replace(" ", "-", $name);
+    return $name;
+}
+
+function correctAsinForImages($asin)
+{
+    $asin = substr($asin, 0, strrpos($asin, '-'));
+    return $asin;
 }
