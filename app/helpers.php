@@ -221,3 +221,44 @@ function getShopifyRunlistPrice($data)
     $price['diffrence'] = $diffrence;
     return $price;
 }
+
+function getProcessorGenration($cpuModel)
+{
+    $processerGen = substr($cpuModel, 0, 1);
+    switch ($processerGen) {
+        case 1:
+           $processerGen = "1st Gen";
+            break;
+        case 2:
+           $processerGen = "2nd Gen";
+            break;
+        case 3:
+           $processerGen = "3rd Gen";
+            break;
+        default:
+            $processerGen = $processerGen . "th Gen";
+            break;
+    }
+    return $processerGen;
+}
+
+function getProcessorModel($model)
+{
+    $modelArray = explode(',', $model);
+    $model = min($modelArray);
+    return $model;
+}
+
+function getManufacturerForNewRunlistdata($series)
+{
+    $series = strtolower($series);
+    $manuFacturer = config('constants.finalPriceConstants.manuFacturer');
+    if (isset($manuFacturer[$series]))
+    {
+        return $manuFacturer[$series];
+    }
+    else
+    {
+        return '';
+    }
+}

@@ -141,8 +141,9 @@ $(document).ready(function ()
 	            	$("#sync-all-to-shopify").removeAttr("disabled");
 	            },
 	            success: function (result) {
-	            	alert(result);
-	            	location.reload(true);
+	            	console.log(result);
+	            	// alert(result);
+	            	// location.reload(true);
 	            }
 	        });
 		}

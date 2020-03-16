@@ -70,4 +70,10 @@ class FormData extends Model
             $recorde->delete();
         }
     }
+
+    public static function getAllRecord($id)
+    {
+        return self::where(['trid' =>$id])
+            ->first();
+    }
 }
