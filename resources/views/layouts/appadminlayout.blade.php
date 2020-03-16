@@ -16,8 +16,25 @@
 
 		<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
 	</head>   
-
-	<body> 
+	<style type="text/css">
+		.loader {
+			display: none;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			z-index: 9999;
+		}
+		body.loader-opacity{
+			opacity: 0.5;
+		}
+	</style>
+	<body>
+		<div class="loader">
+			<img src="{{URL('assets/images/loader.gif')}}">
+		</div>
 		<div id="main_content">
 			<div class="container">
 				@include('layouts.adminheader')

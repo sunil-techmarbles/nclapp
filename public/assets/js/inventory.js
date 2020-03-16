@@ -135,16 +135,28 @@ $(document).ready(function ()
 	                _token: _token, 
 	            },
 	            beforeSend: function () {
+	            	$('body').addClass('loader-opacity')
+	            	$('.loader').show();
 	            	$("#sync-all-to-shopify").attr("disabled", "disabled");
 	            },
 	            complete: function () {
+	            	$('body').removeClass('loader-opacity')
+	            	$('.loader').hide();
 	            	$("#sync-all-to-shopify").removeAttr("disabled");
 	            },
 	            success: function (result) {
-	            	console.log(result);
-	            	// alert(result);
-	            	// location.reload(true);
-	            }
+	            	$('body').removeClass('loader-opacity')
+	            	$('.loader').hide();
+	            	// let icon = (result.status) ? 'success' : 'error';
+	            	// showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
+	            	location.reload(true);
+	            },
+	            error: function(xhr, status, error){
+					if(xhr.status)
+					{
+						showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
+					}
+				}
 	        });
 		}
 		else

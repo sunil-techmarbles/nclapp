@@ -296,3 +296,16 @@ function correctAsinForImages($asin)
     $asin = substr($asin, 0, strrpos($asin, '-'));
     return $asin;
 }
+
+function getApiData($url)
+{
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    $response = curl_exec($ch);
+    if (!$response)
+    {
+        return false;
+    }
+    return $shopifyData = json_decode($response, 1);
+}

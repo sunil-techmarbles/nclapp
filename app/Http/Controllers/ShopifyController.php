@@ -744,6 +744,7 @@ class ShopifyController extends Controller
 
 	public function createShopifyNewRunlistProduct($data, $runningList, $variantData)
 	{
+		$response = [];
 	    $productsurl = $this->baseUrl."/admin/api/2019-04/products.json";
 	    $shopifyData = postApiData($productsurl, $data);
 	    if (isset($shopifyData['errors']))
@@ -753,62 +754,92 @@ class ShopifyController extends Controller
 	    	$status = 'failure';
 	    	MessageLog::addLogMessageRecord($message, $type, $status);
 	    }
+
+	    if ($shopifyData)
+	    {
+	        $allRunningList = ListData::updateSelectedFields($fields=['shopify_product_id' => $shopifyData['product']['id']], $query=['id' => $runningList['list_id']]);
+	        $variantData['variant']['id'] = $shopifyData['product']['variants'][0]['id'];
+	        $variantData['variant']['product_id'] = $shopifyData['product']['id'];
+	        $productsurl = $this->baseUrl."/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
+	        $shopifyVariantData = putApiData($productsurl, $variantData);
+	        if (isset($shopifyVariantData['errors']))
+	        {
+		        $message = "Error: " . $productsurl . "<br>" . $shopifyVariantData['errors'];
+		    	$type = 'Shopify variant data';
+		    	$status = 'failure';
+		    	MessageLog::addLogMessageRecord($message, $type, $status);
+		    }
+	        $imageName = createImageName($data['product']['title']);
+	        $this->insertShopifyNewRunlistImages($runningList['asin'], $shopifyData['product']['id'], $imageName);
+	        $meassge = 'Created asin: ' . $runningList['model'] . ' => Shopify product id:' . $shopifyData['product']['id'];
+	        $body = "Hi,
+
+			The following product(s) have been created:
+			".$runningList['model']." ".$runningList['form_factor']." ".$runningList['cpu_core']." " .
+			                getProcessorGenration($runningList['cpu_model'])." ".$shopifyData['product']['id'].$this->productMainSiteUrl."
+
+			/".$shopifyData['product']['handle'] . "
+			Please review the listing and ensure the following:
+			The product is created
+			Pricing is correct
+			SKU and UPC are assigned
+			Product Type and Vendor is correct
+			Tags are applied
+			-
+			Images are correct and accetable size
+			Page layout is good
+			Product options are assigned
+			Reviews are added
+			Google shopping feed settings are correct ";
+			$user = config('constants.finalPriceConstants.syncProductAddedMailUser');
+			$subject = "New Product Created";
+			Mail::raw($body, function ($m) use ($subject,$user) {
+                $m->to($user)
+                ->subject($subject);
+            });
+            $status = true;
+	    }
 	    else
 	    {
-		    if ($shopifyData)
-		    {
-		        $allRunningList = ListData::updateSelectedFields($fields=['shopify_product_id' => $shopifyData['product']['id']], $query=['id' => $runningList['list_id']]);
-		        $variantData['variant']['id'] = $shopifyData['product']['variants'][0]['id'];
-		        $variantData['variant']['product_id'] = $shopifyData['product']['id'];
-		        $productsurl = $this->baseUrl."/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
-		        $shopifyVariantData = putApiData($productsurl, $variantData);
-		        if (isset($shopifyVariantData['errors']))
-		        {
-			        $message = "Error: " . $productsurl . "<br>" . $shopifyVariantData['errors'];
-			    	$type = 'Shopify variant data';
-			    	$status = 'failure';
-			    	MessageLog::addLogMessageRecord($message, $type, $status);
-			    }
-		        $imageName = createImageName($data['product']['title']);
-		        $this->insertShopifyNewRunlistImages($runningList['asin'], $shopifyData['product']['id'], $imageName);
-		        $returnError = 'Created asin: ' . $runningList['model'] . ' => Shopify product id:' . $shopifyData['product']['id'];
-		        $message = "Hi,
-
-				The following product(s) have been created:
-				" . $runningList['model'] . " " . $runningList['form_factor'] . " " . $runningList['cpu_core'] . " " .
-				                getProcessorGenration($runningList['cpu_model']) . " " . $shopifyData['product']['id'] . $this->productMainSiteUrl."
-
-				/" . $shopifyData['product']['handle'] . "
-				Please review the listing and ensure the following:
-				The product is created
-				Pricing is correct
-				SKU and UPC are assigned
-				Product Type and Vendor is correct
-				Tags are applied
-				-
-				Images are correct and accetable size
-				Page layout is good
-				Product options are assigned
-				Reviews are added
-				Google shopping feed settings are correct ";
-
-		        $mail = new Email();
-		        $mid = $mail->queue("randy@itamg.com;richy@refurbconnect.com;ayaz_akhtar21@hotmail.com", 'New Product Created', $message);
-		        $mail->release($mid);
-		        return $returnError;
-		    }
-		    else
-		    {
-		        $returnError = 'Not created for asin:' . $runningList['asin'];
-		        return $returnError;
-		    }
+	        $meassge = 'Not created for asin:' . $runningList['asin'];
+	        $status = false;
 	    }
+	    $response = ['message' => $meassge,
+			'status' => $status];
+		return $response;
+	}
+
+	public function updateShopifyNewRunlistProduct($data, $runningList, $variantData)
+	{
+		$response = [];
+	    $productsurl = $this->baseUrl."/admin/api/2019-04/products/" . $runningList['shopify_product_id'] . ".json";
+	    $shopifyData = putApiData($productsurl, $data);
+	    if ($shopifyData)
+	    {
+	        $variantData['variant']['id'] = $shopifyData['product']['variants'][0]['id'];
+	        $variantData['variant']['product_id'] = $shopifyData['product']['id'];
+	        $productsurl = $this->baseUrl."/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
+	        $shopifyVariantData = putApiData($productsurl, $variantData);
+	        $imageName = createImageName($data['product']['title']);
+	        $this->insertShopifyNewRunlistImages($runningList['asin'], $shopifyData['product']['id'], $imageName);
+	        $message = 'Updated Model: ' . $runningList['model'] . ' Shopify product id:' . $shopifyData['product']['id'];
+	    	$status = true;
+	    }
+	    else
+	    {
+	        $message = 'Not updated for Model:' . $runningList['model'];
+	        $status = false;
+	    }
+	    $response = ['message' => $meassge,
+			'status' => $status];
+	    return $response;
 	}
 
  	public function syncAllToShopify(Request $request)
  	{
  		if($request->ajax())
-		{
+		{	$output = '';
+			$status = true;
 			if (isset($request->ids) && !empty($request->ids))
 	 		{
 	 			foreach ($request->ids as $key => $id)
@@ -817,6 +848,7 @@ class ShopifyController extends Controller
 	 				if (!empty($allRunningList))
 	 				{
 	 					$runningList = $allRunningList->toArray();
+
 	 					$asin = createAsinFromData($runningList);
 	 					$imageAsin = createImageAsinFromData($runningList);
 	 					$allImages = glob($this->basePath.'/'.config('constants.finalPriceConstants.imagePathNew').$imageAsin.'*');
@@ -840,13 +872,13 @@ class ShopifyController extends Controller
 	 					switch ($insertDataArray['product_class'])
 	 					{
 	 						case 'Computer':
-	 							$dataObject = $this->init($runningList, $insertDataArray, $insertDataArray['product_class'], 'computer');
+	 							$dataObject = $this->init($runningList, $insertDataArray, $appleData='', $insertDataArray['product_class'], 'computer');
 	 							break;
 	 						case 'Laptop':
-	 							$dataObject = $this->init($runningList, $insertDataArray, $insertDataArray['product_class'], 'laptop');
+	 							$dataObject = $this->init($runningList, $insertDataArray, $appleData='', $insertDataArray['product_class'], 'laptop');
 	 							break;
 	 						case 'All_In_One':
-	 							$dataObject = $this->init($runningList, $insertDataArray, $insertDataArray['product_class'], 'aLl_in_one');
+	 							$dataObject = $this->init($runningList, $insertDataArray, $appleData='', $insertDataArray['product_class'], 'laptop');
 	 							break;
 	 						case 'Printer':
 	 						case 'Apple':
@@ -854,8 +886,10 @@ class ShopifyController extends Controller
 	 							break;
 	 						default:
 		 						$error = "Can't sync product. Reason: Class " . $insertDataArray['product_class'] . " not found for asin " . $asin . ". Valid classes are Computer & Laptop";
-		 						$return_error[] = $error;
-		 						$logger->lwrite($error);
+		 						$output = $error;
+						    	$type = 'Shopify sync product';
+						    	$status = 'failure';
+						    	MessageLog::addLogMessageRecord($error, $type, $status);
 	 							continue;
 	 							break;
 	 					}
@@ -869,11 +903,12 @@ class ShopifyController extends Controller
 	 						"price" => $price,
 	 						"sku" => strtolower($asin),
 	 						"inventory_management" => "shopify",
-	 						"barcode" => $bar_code,
+	 						"barcode" => $barCode,
 	 						"weight" => $insertDataArray['weight'],
 	 					];
-	 					if (empty($runningList['shopify_product_id']) || $runningList['shopify_product_id'] == 0) {
-	 						$return_error[] = $this->createShopifyNewRunlistProduct($data, $runningList, $variantData);
+	 					if (empty($runningList['shopify_product_id']) || $runningList['shopify_product_id'] == 0)
+	 					{
+	 						$output = $this->createShopifyNewRunlistProduct($data, $runningList, $variantData);
 	 					}
 	 					else
 	 					{
@@ -882,22 +917,25 @@ class ShopifyController extends Controller
 	 						$shopifyGetProduct = getApiData($productsurl);
 	 						if (isset($shopifyGetProduct['errors']) && strtolower($shopifyGetProduct['errors']) == "not found")
 	 						{
-	 							$return_error[] = $this->createShopifyNewRunlistProduct($data, $runningList, $variantData);
+	 							$output = $this->createShopifyNewRunlistProduct($data, $runningList, $variantData);
 	 						}
 	 						else
 	 						{
-	 							if (isset($_REQUEST['asin']) && !empty($_REQUEST['asin']))
+	 							if (isset($request->asin) && !empty($request->asin))
 	 							{
-	 								$return_error[] = updateShopifyNewRunlistProduct($data, $runningList, $variantData);
+	 								$output = $this->updateShopifyNewRunlistProduct($data, $runningList, $variantData);
 	 							}
 	 						}
 	 					}
+						return response()->json($output);
 	 				}
 	 				else
 	 				{
+	 					$output = "Nothing found.";
+						$status = false;
+	 					return response()->json(['message' => $output, 'status' => $status]);
 	 				}
 	 			}
-	 			print_r($return_error);
 	 		}
 	 		else
 	 		{

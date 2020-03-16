@@ -3984,5 +3984,11 @@ return [
         'macbook' => 'Apple',
         'imac' => 'Apple',
         'macpro' => 'Apple',
+    ],
+    'syncProductAddedMailUser' => [
+        'rahuls.techmarbles@gmail.com',
+        // 'randy@itamg.com',
+        // 'richy@refurbconnect.com',
+        // 'ayaz_akhtar21@hotmail.com'
     ]
 ];
