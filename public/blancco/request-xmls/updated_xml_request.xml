@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<request>
-    <export-report>
-        <report mode="original"/>
-        <search path="report.uuid" value="e0ef7e0d-a5c0-42b1-98a7-6ead3dff7993" operator="eq" datatype="string" conjunction="true"/>
-        <pdf-options pdfLanguage="en_US" embedBarcode="false" embedVerificationPercentage="false" type="albus_standard"/>
-    </export-report>
-</request>

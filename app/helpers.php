@@ -309,3 +309,17 @@ function getApiData($url)
     }
     return $shopifyData = json_decode($response, 1);
 }
+
+function getDirectoryFiles($directory)
+{
+    $scanned_directory = array();
+
+    foreach (new DirectoryIterator($directory) as $file) {
+        if ($file->isFile()) {
+            if (strpos($file->getFilename(), ".xml")) {
+                $scanned_directory[] = $file->getFilename();
+            }
+        }
+    }
+    return $scanned_directory;
+}
