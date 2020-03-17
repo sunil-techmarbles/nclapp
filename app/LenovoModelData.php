@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -18,21 +17,20 @@ class LenovoModelData extends Model
 
     public static function InsertNewPartNumber($model, $partNumber)
     {
-        $result = false; 
+        $result = false;
         $LenovoModelData = new LenovoModelData();
-        $LenovoModelData->model = $model;   
+        $LenovoModelData->model = $model;
         $LenovoModelData->part_number = $partNumber;
         if($LenovoModelData->save())
         {
             $result = $LenovoModelData->id;
-        }  
-        return $result; 
+        }
+        return $result;
     }
 
     public static function CheckIfPartNumberExists($partNumber)
     {
-        $exits = self::where([ 'part_number' => $partNumber ])->first(); 
+        $exits = self::where([ 'part_number' => $partNumber ])->first();
         return ( $exits  ) ? true : false ;
     }
-
 }

@@ -1,5 +1,5 @@
 @extends('layouts.appmainlayout')
-@section('title' , 'login')
+@section('title' , 'Forget Password')
 @section('content')
 
 @if (Session('error'))

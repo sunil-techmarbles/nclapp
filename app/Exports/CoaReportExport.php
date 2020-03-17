@@ -12,8 +12,7 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize;
 class CoaReportExport implements FromCollection, WithHeadings, ShouldAutoSize
 { 
     use Exportable;
- 
-    public $refurbAssetDataPath , $basePath; 
+    public $refurbAssetDataPath , $basePath;
 
     public function __construct()
     {
@@ -21,55 +20,43 @@ class CoaReportExport implements FromCollection, WithHeadings, ShouldAutoSize
     	$this->refurbAssetDataPath = $this->basePath.'/refurb-asset-data';
     }  
 
-    public function collection() 
-    { 
+    public function collection()
+    {
         $allcoadata = CoaReport::getCoaReportFields();
-       
-        foreach ( $allcoadata as $key => $coadata )
+        foreach ($allcoadata as $key => $coadata)
         {
-        	if($coadata->old_coa == 'WIN8 Activated') {
+        	if($coadata->old_coa == 'WIN8 Activated')
+            {
 				$allcoadata[$key]->old_coa = '';
 				$allcoadata[$key]->win8 = 'Activated';
-			} else {
+			}
+            else
+            {
 				$allcoadata[$key]->win8 = '';
 			}
- 		
 			$allcoadata[$key]->manufacture = '';
-			if( is_readable( $this->refurbAssetDataPath .'/'.$coadata['asset'].'.json') ) { 
-
-				$adata = json_decode( file_get_contents($this->refurbAssetDataPath .'/'.$coadata['asset'].'.json') );
-
+			if(is_readable( $this->refurbAssetDataPath .'/'.$coadata['asset'].'.json'))
+            {
+				$adata = json_decode(file_get_contents($this->refurbAssetDataPath .'/'.$coadata['asset'].'.json'));
 				$allcoadata[$key]->cpu = empty($adata->CPU)?'':$adata->CPU;
 				$allcoadata[$key]->model = empty($adata->Model)?'':$adata->Model;
-				
-				if(!empty( $adata->asin_id )) { 
-					$asin_data = Asin::getAsinById( $adata->asin_id ); 
+				if(!empty($adata->asin_id))
+                {
+					$asin_data = Asin::getAsinById($adata->asin_id);
 					$allcoadata[$key]->manufacture = $asin_data->manufacturer;
-				} 
-
-			} else { 
+				}
+			}
+            else
+            {
 				$allcoadata[$key]->cpu = '';
 				$allcoadata[$key]->model = '';
 			}
-
-        }   
-        return $allcoadata ;  
-    } 
-
-
-    public function headings(): array
-    { 
-        return [
-            "Asset",
-            "S/N",
-            "Old COA",
-            "New COA",
-            "WIN8",
-            "Manufacturer",
-            "CPU",
-            "Model",
-            "Added",
-        ];
+        }
+        return $allcoadata;
     }
 
+    public function headings(): array
+    {
+        return ["Asset", "S/N", "Old COA", "New COA", "WIN8", "Manufacturer", "CPU", "Model", "Added" ];
+    }
 }
