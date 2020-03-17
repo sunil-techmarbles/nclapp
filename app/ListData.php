@@ -163,5 +163,21 @@ class ListData extends Model
     		->where('list_data.id', '>', 0)
     		->groupBy('list_data.id')
             ->first();
-		}
+	}
+
+	public static function getListDataForPriceUpdate($id)
+	{
+		return self::select('list_data.*')
+			->selectSub('count(list_data.asin)', 'cnt')
+			->selectSub('max(list_data.mid)', 'mid')
+			->where(['list_data.status' => 'active','list_data.run_status' => 'active', 'list_data.asin' => $id])
+			->where('list_data.shopify_product_id', '!=', '')
+			->groupBy('list_data.asin')
+			->groupBy('list_data.technology')
+			->groupBy('list_data.model')
+			->groupBy('list_data.cpu_core')
+			->groupBy('list_data.cpu_gen')
+			->groupBy('list_data.shopify_product_id')
+			->first();
+	}
 }

@@ -18,11 +18,13 @@ use App\MessageLog;
 use App\ListData;
 use App\FormModel;
 use App\FormData;
+use App\FormsConfig;
 use App\ShopifyPricingCustom;
 use App\ShopifyBarCode;
 use App\ShopifyImages;
 use App\ShopifyPricing;
 use App\Traits\CommenShopifyTraits;
+use App\Http\Controllers\AuditController;
 
 class ShopifyController extends Controller
 {
@@ -848,7 +850,6 @@ class ShopifyController extends Controller
 	 				if (!empty($allRunningList))
 	 				{
 	 					$runningList = $allRunningList->toArray();
-
 	 					$asin = createAsinFromData($runningList);
 	 					$imageAsin = createImageAsinFromData($runningList);
 	 					$allImages = glob($this->basePath.'/'.config('constants.finalPriceConstants.imagePathNew').$imageAsin.'*');
@@ -946,5 +947,129 @@ class ShopifyController extends Controller
 		{
 			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
 		}
+  	}
+
+  	public function updateShopifyProductNewRunListPrice($baseurl, $runningList, $variantData)
+  	{
+  		$message = [];
+	    $productsurl = $baseurl . "/admin/api/2019-04/products/" . $runningList['shopify_product_id'] . ".json";
+	    $shopifyData = getApiData($productsurl);
+	    if ($shopifyData)
+	    {
+	        $variantData['variant']['id'] = $shopifyData['product']['variants'][0]['id'];
+	        $variantData['variant']['product_id'] = $shopifyData['product']['id'];
+	        $productsurl = $baseurl . "/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
+	        $shopifyVariantData = putApiData($productsurl, $variantData);
+	        $returnMessage = 'Updated asin: ' . $runningList['model'] . ' Shopify product id:' . $shopifyData['product']['id'];
+	        $status = true;
+	    }
+	    else
+	    {
+	        $returnMessage = 'Not updated for Model:' . $runningList['model'];
+	        $status = false;
+	    }
+	    $message = ['message' => $returnMessage, 'status' => $status];
+	    return $message;
+	}
+
+  	public function updateProductPriceToShopify(Request $request)
+  	{
+  		if($request->ajax())
+  		{
+  			if (isset($request->id) && !empty($request->id))
+	 		{
+	 			$allRunningList = ListData::getListDataForPriceUpdate($request->id);
+			  	if (!empty($allRunningList))
+			  	{
+				    $baseurl = $this->basePath;
+				    $meassge = '';
+				    $runninglist = $allRunningList[0];
+   				    $runninglist['condition'] =  config('constants.finalPriceConstants.condition');
+				    $runninglist['form_factor'] = $runninglist['technology'];
+				    $price = $this->productPriceCalculation($runninglist);
+				    if ($price == 0 || $price == 0.00)
+				    {
+				        $price = 299.99;
+				    }
+				    $variantData['variant'] = [
+				        "price" => $price,
+				    ];
+
+				    $meassge = updateShopifyProductNewRunListPrice($this->basePath, $runninglist, $variantData);
+				    return response()->json($meassge);
+				}
+				else
+				{
+					return response()->json(['message' => 'No Data Found for this ASIN', 'status' => false]);
+				}
+			}
+  		}
+  		else
+  		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+  		}
+  	}
+
+  	public function modelDataTemplate(Request $request)
+  	{
+		$tplid = intval($request->get("tplid"));
+		$data = FormData::getFormDataRecordForTemplate($tplid);
+		if (!$data)
+		{
+			$data = array("items" => array());
+		}
+		else 
+		{
+			$data = json_decode($data,true);
+		}
+		$output = "";
+		$items = array();
+		$tab = FormModel::getFormModelTab($tplid);
+		$modelname = FormModel::getFormModelByID($tplid);
+		$config = FormsConfig::getFormConfigDataByCommenQuery($query = ['tab' => $tab]);
+		foreach ($config as $fld)
+		{
+			$itmid = $fld["qtype"] . "_" . $fld["id"];
+			$itmidnew = $fld["qtype"] . "_" . $fld["id"]. "_new";
+			$qtype = $fld["qtype"];
+			if ($fld["question"] == "Model")
+			{
+				$modelitm = array(
+					"template" => 1,
+					"fillmodel" => 1,
+					"id" => $itmid,
+					"type" => "text",
+					"key" => "Model",
+					"options" => array(""),
+					"new" => "",
+					"value" => array($modelname)
+				);
+			}
+			$formObjects = new AuditController();
+			if (stripos($fld["config"],"fillmodel"))
+			{
+				if (method_exists($formObjects, "get_form_$qtype"))
+				{
+					$mtd = "get_form_$qtype";
+					$output .= "<div class='formitem'>" . $formObjects->$mtd($fld) . "</div>";
+				}
+			}
+		}	
+		if(count($data["items"])>0)
+		{
+			foreach ($data["items"] as $itm)
+			{
+				if ($itm["fillmodel"]==1)
+				{
+					$items[] = $itm;
+				}
+			}
+		}
+		else
+		{
+			$items[] = $modelitm;
+		}
+  		return view('admin.shopify.template', compact('output', 'items'));
+  		abort('404');
   	}
 }

@@ -45,6 +45,13 @@ class FormData extends Model
 	    	->first();
     }
 
+    public static function getFormDataRecordForTemplate($value)
+    {
+        return self::where(["trid"=> $value])
+            ->pluck('data')
+            ->first();
+    }
+
     public static function getLastRecordByAuthUser($authUserName, $type)
     {
         return self::where(['type' => $type, 'user' => $authUserName])

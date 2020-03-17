@@ -82,4 +82,11 @@ class FormsConfig extends Model
 			->where(['tab' => $key, 'grp' =>  $group])
 			->get();
 	}
+
+	public static function getFormConfigDataByCommenQuery($query)
+	{
+		return self::select('*')
+			->where($query)
+			->get();
+	}
 }

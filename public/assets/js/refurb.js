@@ -1,11 +1,3 @@
-var device="";
-var asins=[];
-var adata;
-var assetNumber;
-var forceWS = false;
-var old_coa = "";
-var new_coa = "";
-var win8 = 0;
 
 $(document).ready(function()
 {

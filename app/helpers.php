@@ -278,7 +278,8 @@ function putApiData($url, $data)
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
     $response = curl_exec($ch);
-    if (!$response) {
+    if (!$response)
+    {
         return false;
     }
     return $shopifyData = json_decode($response, 1);

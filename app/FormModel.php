@@ -62,6 +62,13 @@ class FormModel extends Model
             ->first();
     }
 
+     public static function getFormModelByID($value)
+    {
+        return self::where(["id" => $value])
+            ->pluck("model")
+            ->first();
+    }
+
     public static function getFormAllRecordExist($product, $technology, $model)
     {
         return self::where(["tab" => $product, "technology" => $technology, "model" => $model])

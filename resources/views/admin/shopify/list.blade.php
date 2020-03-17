@@ -136,7 +136,7 @@
 						<td>{{ $i["cnt"] }}</td>
 						<td>
 							@if($i["mid"])
-								<a href="index.php?page=template&tplid=<?= $i["mid"] ?>" target="_blank">Model Data</a> 
+								<a href="{{route('model.data.template',['tplid' => $i["mid"]])}}" target="_blank">Model Data</a> 
 							@else
 								<span style="cursor:pointer" onclick="$('#mid{{$i['asin']}}').toggle()">Specify Model</span>
 								<div style="display: none;position:absolute" id="mid{{$i['asin']}}">

@@ -115,6 +115,9 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 
 		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
 		Route::post('/syncalltoshopify', 'ShopifyController@syncAllToShopify')->name('sync.all.to.shopify');
+		Route::post('/updatetoshopify', 'ShopifyController@syncAllToShopify')->name('update.to.shopify');
+		Route::post('/updatepricetoshopify', 'ShopifyController@updateProductPriceToShopify')->name('update.price.to.shopify');
+		Route::any('/modeltemplate', 'ShopifyController@modelDataTemplate')->name('model.data.template');
 		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
 		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
 	});

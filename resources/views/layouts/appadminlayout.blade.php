@@ -12,10 +12,9 @@
 		<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
 		<link href="{{URL('assets/css/dataTables/jquery.dataTables.min.css')}}" rel="stylesheet">
 		<link href="{{URL('assets/css/datepicker/datepicker.min.css')}}" rel="stylesheet">
-		<link href="{{URL('assets/css/datepicker/daterangepicker.css')}}" rel="stylesheet"> 
-
+		<link href="{{URL('assets/css/datepicker/daterangepicker.css')}}" rel="stylesheet">
 		<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
-	</head>   
+	</head>
 	<style type="text/css">
 		.loader {
 			display: none;
@@ -46,9 +45,9 @@
 				@include('admin.message')
 				@yield('content')
 			</div>
-			@include('layouts.adminfooter') 
+			@include('layouts.adminfooter')
 		</div>
-	</body>     
+	</body>
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.min.js')}}" ></script> 
 	<script type="text/javascript" src = "{{URL('assets/js/datepicker/moment.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/datepicker/datepicker.min.js')}}" ></script>
@@ -57,11 +56,18 @@
 	<script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script> 
-	<script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>  
+	<script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script>
+	<script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>
 	<script type="text/javascript" src = "{{URL('assets/js/main.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
 	<script type="text/javascript" src = "{{URL('assets/js/audit.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/inventory.js')}}" ></script>
-	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script>  
+	<script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script>
+	@if(request()->segment(count(request()->segments())) == 'refurb')
+		<script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
+	@endif
+	@if(request()->segment(count(request()->segments())) == 'inventory')
+		<script type="text/javascript" src = "{{URL('assets/js/inventory.js')}}" ></script>
+	@endif
+	@if(request()->segment(count(request()->segments())) == 'modeltemplate')
+		<script type="text/javascript" src = "{{URL('assets/js/template.js')}}" ></script>
+	@endif
 </html>

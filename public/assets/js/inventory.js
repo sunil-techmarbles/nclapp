@@ -1,24 +1,27 @@
 function getModels(fId)
 {
-	var inp=$("#"+fId);
-	var out=$("#uhint");
-	var data=encodeURIComponent(inp.val());
+	console.log("i am here");
+	var inp = $("#"+fId);
+	var out = $("#uhint");
+	var data = encodeURIComponent(inp.val());
 	var position = inp.position();
 	if (data.length>1)
 	{
 		out.insertAfter(inp);
 		$.get("/"+prefix+"/getmodels?tgt="+fId+"&part="+data+"&tab=&tech=&t="+Math.random(), function(data)
 		{
-			if(data)
-			{
-				$("#hints").html(data);
-				modelSet = false;
-				out.show()
-			}
-			else
-			{
-				out.hide();
-			}
+			console.log(data);
+
+			// if(data)
+			// {
+			// 	$("#hints").html(data);
+			// 	modelSet = false;
+			// 	out.show()
+			// }
+			// else
+			// {
+			// 	out.hide();
+			// }
 		});
 	}
 	else
@@ -38,7 +41,7 @@ function getModelData(mid,asin)
 		}
 		else
 		{
-			alert(data);
+			showSweetAlertMessage('error', data, 'error');
 		}
 	});
 }
@@ -116,7 +119,7 @@ function tblFilter()
 		}
 	});
 }
-
+	
 $(document).ready(function ()
 {
 	$("#sync-all-to-shopify").click(function () {
@@ -135,23 +138,21 @@ $(document).ready(function ()
 	                _token: _token, 
 	            },
 	            beforeSend: function () {
-	            	$('body').addClass('loader-opacity')
-	            	$('.loader').show();
+	            	showLoader();
 	            	$("#sync-all-to-shopify").attr("disabled", "disabled");
 	            },
 	            complete: function () {
-	            	$('body').removeClass('loader-opacity')
-	            	$('.loader').hide();
+	            	hideLoader();
 	            	$("#sync-all-to-shopify").removeAttr("disabled");
 	            },
 	            success: function (result) {
-	            	$('body').removeClass('loader-opacity')
-	            	$('.loader').hide();
-	            	// let icon = (result.status) ? 'success' : 'error';
-	            	// showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
+	            	hideLoader();
+	            	let icon = (result.status) ? 'success' : 'error';
+	            	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
 	            	location.reload(true);
 	            },
 	            error: function(xhr, status, error){
+	            	hideLoader();
 					if(xhr.status)
 					{
 						showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
@@ -165,31 +166,45 @@ $(document).ready(function ()
 		}
 	});
 
-	$(".check-all-ids").click(function () {
+	$(".check-all-ids").click(function ()
+	{
 		$("input[type=checkbox]").prop('checked', $(this).prop('checked'));
 	});
 
 	$(".sync-to-shopify").click(function (e) {
 		e.preventDefault();
-		var id = $(this).data('id');
+		var ids = [];
 		var that = $(this);
+		ids.push(that.data('id'));
 		$.ajax({
 			type: "POST",
-			dataType: "html",
-			url: "shopify_new_list/shopify_product.php",
+			dataType: "json",
+			url: "/"+prefix+"/updatetoshopify",
 			data: {
-                id: id, // < note use of 'this' here
+                ids: ids, // < note use of 'this' here
+                _token: _token,
             },
             beforeSend: function () {
+            	showLoader();
             	that.attr("disabled", "disabled");
             },
             complete: function () {
+            	hideLoader();
             	that.removeAttr("disabled");
             },
-            success: function (result) {
-            	alert(result);
+            success: function (result){
+            	hideLoader();
+            	let icon = (result.status) ? 'success' : 'error';
+            	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
             	location.reload(true);
-            }
+            },
+            error: function(xhr, status, error){
+            	hideLoader();
+				if(xhr.status)
+				{
+					showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
+				}
+			}
         });
 	});
 	$(".update-price-to-shopify").click(function (e) {
@@ -198,21 +213,33 @@ $(document).ready(function ()
 		var that = $(this);
 		$.ajax({
 			type: "POST",
-			dataType: "html",
-			url: "shopify_new_list/shopify_price_update.php",
+			dataType: "json",
+			url: "/"+prefix+"/updatepricetoshopify",
 			data: {
                 id: id, // < note use of 'this' here
+                _token: _token,
             },
             beforeSend: function () {
+            	showLoader();
             	that.attr("disabled", "disabled");
             },
             complete: function () {
+            	hideLoader();
             	that.removeAttr("disabled");
             },
             success: function (result) {
-            	alert(result);
+            	hideLoader();
+            	let icon = (result.status) ? 'success' : 'error';
+            	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
             	location.reload(true);
-            }
+            },
+            error: function(xhr, status, error){
+            	hideLoader();
+				if(xhr.status)
+				{
+					showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
+				}
+			}
         });
 	});
 	tblFilter();
