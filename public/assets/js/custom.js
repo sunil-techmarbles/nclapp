@@ -65,7 +65,7 @@ $(window).keydown(function (event)
 			if( lotNum == '')
 			{
 				sweetAlertAfterResponse(status = 'error' , title = 'lot number empty', message = 'Please Enter a lot number to search files' , showbutton = true );
-				return false; 
+				return false;
 			}
 			$.ajaxSetup({
 				headers: {
@@ -76,7 +76,7 @@ $(window).keydown(function (event)
 				url: 'getwipereportfiles',
 				type: 'POST', 
 				data: {'lotNum':lotNum},
-				dataType: 'json' 
+				dataType: 'json'
 			})
 			.done(function(response)
 			{
@@ -110,7 +110,7 @@ $(window).keydown(function (event)
 			});
 		}
 	}
-}); 
+});
 
 // wipe report section for bulk select or unselect files to download js 
 $(document).on('click', '#selectAllFiles', function ()
@@ -118,7 +118,7 @@ $(document).on('click', '#selectAllFiles', function ()
 	if ($(this).is(":checked"))
 	{
 		$(".selectSingleFile").prop("checked", true);
-	} 
+	}
 	else
 	{
 		$(".selectSingleFile").prop("checked", false);
@@ -140,17 +140,17 @@ function savePN(url)
 {
 	var modal = $('#pnModel').val();
 	var partnumber = $('#pnPn').val();
-	if(!modal || !partnumber) 
+	if(!modal || !partnumber)
 	{
 		sweetAlertAfterResponse( status = 'error' , title = 'Oops...', message = 'Please enter Model and Part Number !' , showbutton = true );
 		return false;
-	} 
+	}
 	$.ajax({
 		url: url + '/',
-		type: 'GET', 
+		type: 'GET',
 		data: {'modal':modal, 'partnumber':partnumber},
-		dataType: 'json' 
-	}) 
+		dataType: 'json'
+	})
 	.done(function(response)
 	{
 		sweetAlertAfterResponse(response.status, response.title, response.message , showbutton = true );
@@ -227,12 +227,12 @@ function addUpdatePackage(event , url)
 			$.each( response.messages , function( key, value )
 			{
 				$( "input[name='"+key+"']" ).siblings('.text-danger').text( value[0] );
-				$( "select[name='"+key+"']" ).siblings('.text-danger').text( value[0] ); 
+				$( "select[name='"+key+"']" ).siblings('.text-danger').text( value[0] );
 			});
 		}
 		else
 		{
-			sweetAlertAfterResponse(response.status, response.title, response.message, showbutton = false ); 
+			sweetAlertAfterResponse(response.status, response.title, response.message, showbutton = false );
 			if( response.status == 'success')
 			{
 				location.reload();

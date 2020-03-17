@@ -17,7 +17,7 @@ class CommonController extends Controller
 	{
 		$this->basePath  = base_path().'/public'; 
 		$this->fileExtensions = ["csv", "pdf", "txt"];
-		$this->directories = ['wipe-data' => $this->basePath.'/wipe-data/*', 'blancco' => '' ];
+		$this->directories = ['wipe-data' => $this->basePath.'/wipe-data/*', 'blancco/pdf-data' => $this->basePath.'/blancco/pdf-data/*'];
 	}
 
 	/**
@@ -83,7 +83,7 @@ class CommonController extends Controller
 			$relativePath = 'wipereport/' . substr($file, strlen($path) + 1);
 			$zip->addFile($file, $relativePath);
 		}
-		$zip->close(); 
+		$zip->close();
 		return response()->download($zip_file);
 	}
 }

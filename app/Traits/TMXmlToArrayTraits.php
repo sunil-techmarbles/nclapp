@@ -4,16 +4,12 @@ use DOMDocument;
 
 trait TMXmlToArrayTraits
 {
-
 	public static $xml = null;
-    public static $encoding = 'UTF-8';
-    public static $test = 'working';
 
 	public static function init($version = '1.0', $encoding = 'UTF-8', $format_output = true)
 	{
         self::$xml = new DOMDocument($version, $encoding);
         self::$xml->formatOutput = $format_output;
-        self::$encoding = $encoding;
     }
 
     public static function &createArray($input_xml)
