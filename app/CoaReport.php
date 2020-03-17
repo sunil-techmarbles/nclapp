@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -42,7 +41,6 @@ class CoaReport extends Model
         {
             $result = $coaReport->id;
         }
-        
         return $result;
     }
 
@@ -55,10 +53,8 @@ class CoaReport extends Model
     	]);
     }
 
-
-    public static function getCoaReportFields() 
-    { 
+    public static function getCoaReportFields()
+    {
         return self::select('asset','sn','old_coa','new_coa','added_on')->get();
     }
-
 }

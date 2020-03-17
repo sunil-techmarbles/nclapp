@@ -6,7 +6,7 @@ use ZipArchive;
 
 class CommonController extends Controller
 {
-	public $fileExtensions , $directories , $basePath ; 
+	public $fileExtensions, $directories, $basePath;
 
 	/**
      * Saving some important variables value.
@@ -15,7 +15,7 @@ class CommonController extends Controller
      */
 	public function __construct()
 	{
-		$this->basePath  = base_path().'/public'; 
+		$this->basePath  = base_path().'/public';
 		$this->fileExtensions = ["csv", "pdf", "txt"];
 		$this->directories = ['wipe-data' => $this->basePath.'/wipe-data/*', 'blancco/pdf-data' => $this->basePath.'/blancco/pdf-data/*'];
 	}
@@ -84,6 +84,6 @@ class CommonController extends Controller
 			$zip->addFile($file, $relativePath);
 		}
 		$zip->close();
-		return response()->download($zip_file);
+		return response()->download($zip_file)->deleteFileAfterSend(true);
 	}
 }

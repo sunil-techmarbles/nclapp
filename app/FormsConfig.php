@@ -1,5 +1,4 @@
 <?php
-
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
@@ -11,7 +10,6 @@ class FormsConfig extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable = [
-
     	'tab',
 		'tab_order',
 		'grp',
@@ -45,13 +43,7 @@ class FormsConfig extends Model
 		$formsConfig->options = $request['options'];
 		$formsConfig->grades = $request['grades'];
 		$formsConfig->xml_grp = $request['xml_grp'];
-
-		if($formsConfig->save())
-		{
-			return $formsConfig->id;
-		}
-
-		return false;
+		return ($formsConfig->save()) ? true : false;
     }
 
     public static function getAllRecord()
