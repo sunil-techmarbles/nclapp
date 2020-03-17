@@ -482,7 +482,7 @@ class AuditController extends Controller
 		$response = '';
 		$travelerId = $request->get( "trid" );
 		$checkAssetidInXmldatafolder = $this->checkFile($this->basePath.'/wipe-data-mobile/*', $travelerId );
-		$checkAssetidInAdditionalXmldatafolder = $this->checkFile($this->basePath.'/blancco/xml_data/*', $travelerId );
+		$checkAssetidInAdditionalXmldatafolder = $this->checkFile($this->basePath.'/blancco/xml-data/*', $travelerId );
 		$checkAssetidInExecutedXmldatafolder = $this->checkFile($this->basePath.'/makor-processed-data/additional-mobile-executed/*', $travelerId );
 		$checkAssetidInExecutedAdditionlXmldatafolder = $this->checkFile($this->basePath.'/makor-processed-data/blancco-mobile-executed/*', $travelerId );
 		if( $checkAssetidInXmldatafolder )

@@ -10,7 +10,7 @@
 |
 */
 
-Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate'); 
+Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');
 Route::get('/logout', 'LoginController@logout')->name('logout');
 Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');
 Route::post('/SendPasswordResetEmail', 'LoginController@sendPasswordResetEmail')->name('sendPasswordResetEmail');
@@ -23,13 +23,12 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	Route::get('/login','LoginController@index')->name('login.view');
 	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');
 	Route::get('/register', 'RegisterController@index')->name('user.register');
-	
 	Route::prefix('admin')->group(function () {
 		Route::get('/dashboard','DashboardController@index')->name('dashboard');
 	});
 });
 
-// Change header for reports, import and export
+// Header Change for reports, import and export
 Route::middleware(['changereportheader', 'checkadminpermissions'])->group(function () {
 	Route::prefix('admin')->group(function () {
 		// refub Report
@@ -41,18 +40,18 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		Route::any('/inventorycsv', 'ShopifyController@inventoryCSV')->name('inventory.csv');
 		// export wipereport zip files 
 		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
+		// Import section request 
+		Route::any('/importrecord', 'ShopifyController@importRecord')->name('import.record');
 	});
 });
 
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
-
 	    // Users Section
 	    Route::get('/users', 'UsersController@index')->name('users');
 	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
-
 		// Supplies Section
 		Route::get('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
@@ -61,7 +60,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/editsupplie/{supplieid}','SuppliesController@editSupplies')->name('edit.supplies');
 		Route::post('/updatesupplie','SuppliesController@updateSupplies')->name('update.supplies');
 		Route::get('/deletesupplie/{supplieid}','SuppliesController@deleteSupplie')->name('delete.supplies');
-     
 		// Asin Section
 		Route::get('/asin','AsinController@index')->name('asin');
 		Route::get('/addasin','AsinController@addAsins')->name('add.asins');
@@ -71,7 +69,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/asinparts/{asinid}','AsinController@partsAsin')->name('parts.asin');
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
 		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup');
-
 		// Refurb Section
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');
@@ -82,21 +79,17 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
 		Route::post('/checkcoa','RefurbController@checkCOA')->name('check.coa');
 		Route::post('/saveprint','RefurbController@savePrint')->name('save.print');
-		
 		//In bound Section
 		Route::any('/packages','PackageController@index')->name('packages');  
 		Route::post('/addupdatepackage','PackageController@AddUpdatePackage')->name('addUpdate.package');
-		Route::get('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package');  
-
+		Route::get('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package');
 		//Out bound Section
 		Route::get('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 		Route::any('/sessions','SessionController@index')->name('sessions');
-
 		// Wipe Report Section 
 		Route::get('/wipereport','CommonController@index')->name('wipereport');
 		Route::post('/getwipereportfiles','CommonController@getWipeReportFiles')->name('getwipereportfiles');
-
 		// Audit Section
 		Route::get('/audit','AuditController@index')->name('audit');
 		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');
@@ -112,13 +105,17 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/getrefnotification', 'AuditController@getRefNotification')->name('load.last');
 		Route::get('/getpreview', 'AuditController@getPreview')->name('get.preview');
 		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
-
+		// Inventory  and Ajax Request
 		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
 		Route::post('/syncalltoshopify', 'ShopifyController@syncAllToShopify')->name('sync.all.to.shopify');
 		Route::post('/updatetoshopify', 'ShopifyController@syncAllToShopify')->name('update.to.shopify');
 		Route::post('/updatepricetoshopify', 'ShopifyController@updateProductPriceToShopify')->name('update.price.to.shopify');
 		Route::any('/modeltemplate', 'ShopifyController@modelDataTemplate')->name('model.data.template');
+		Route::post('/savemodeltemplate', 'ShopifyController@saveModelTemplateRecord')->name('save.model.template');
 		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
 		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
+		// Recycle Request
+		Route::any('/recyclesecond', 'RecycleController@recycleSecondIndex')->name('recycle.second');
+		Route::any('/recycle', 'RecycleController@recycleFirstIndex')->name('recycle.first');
 	});
 });

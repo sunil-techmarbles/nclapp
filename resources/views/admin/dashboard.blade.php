@@ -58,22 +58,22 @@
         </div>
 
         <div class="menu-item">
-            <a href="import"><span class="fa fa-download"></span></a>
-            <a href="import">Import</a>
+            <a href="{{route('import.record')}}"><span class="fa fa-download"></span></a>
+            <a href="{{route('import.record')}}">Import</a>
         </div>
 
         <div class="menu-item">
-            <a href=""><span class="fa fa-refresh"></span></a>
-            <a href="">Recycle Trailer</a>
+            <a href="{{route('recycle.first')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('recycle.first')}}">Recycle Trailer</a>
         </div>
 
          <div class="menu-item">
-            <a href="Recycle2"><span class="fa fa-refresh"></span></a>
-            <a href="Recycle2">Recycle2 Trailer</a>
+            <a href="{{route('recycle.second')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('recycle.second')}}">Recycle2 Trailer</a>
         </div>
 
         <div class="menu-item">
-            <a href="" target="_blank"><span class="fa fa-user"></span>
+            <a href="http://nclapp.com:8080/CustomerInventory/CustomerInventoryDetails.jsp" target="_blank"><span class="fa fa-user"></span>
             Customer Inventory</a>
         </div>
 

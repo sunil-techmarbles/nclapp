@@ -14,15 +14,18 @@ $(document).ready(function()
 	}
 	$('input[data-modelname="1"]').prop("readonly",true);
 });
-	
+
 function calcGrade()
 {
 	damageScore = 0;
-	$('input[type=checkbox]').each(function () {
-	    if (this.checked){
+	$('input[type=checkbox]').each(function () 
+	{
+	    if(this.checked)
+	    {
 			var dKey = $(this).val()
 			dKey = dKey.replace('"', '');
-			if (dKey in dScores){
+			if (dKey in dScores)
+			{
 				damageScore += dScores[dKey];
 			}
 		}
@@ -67,7 +70,7 @@ function showTab(tabId)
 				$('input[data-modelname="1"]').closest(".formitem").append('<div class="form-group"><label class="ttl">&nbsp;</label><br/><button class="btn btn-default" onclick="showModelFields()">Toggle common data</button></div>');
 			}
 		}
-	});  
+	});
 }
 
 function frmPreview()
@@ -101,7 +104,7 @@ function checkTravelerId(trId)
 		        	$('#text_1').focus();
 				}
 			}
-	    });
+		});
     }
 }
 
@@ -116,7 +119,7 @@ function addTrId(trid,dst)
 		$(":input[name='radio_2'][value='" + prodName + "']").prop('checked', true);
 		items = fCnt['items'];
 		showTab(prodName);
-	});		
+	});
 }
 
 function getLastInput()
@@ -140,9 +143,9 @@ function getLastInput()
 				}
 			}
 			lastload=true;
-			showTab(prodName);	
+			showTab(prodName);
 		}
-	});		
+	});
 }
  
 function getModelData(modelId,tId)
@@ -165,12 +168,12 @@ function getModelData(modelId,tId)
 					items.push(fCnt['items'][i]);
 				}
 			}
-			fillData();	
+			fillData();
 			$(":input[data-fillmodel]").closest(".formitem").hide();
 			$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").show();
 			$('input[data-modelname="1"]').closest(".formitem").append('<div class="form-group"><label class="ttl">&nbsp;</label><br/><button class="btn btn-default" onclick="showModelFields()">Toggle common data</button></div>');
 		}
-	});	
+	});
 }
 
 function fillData()
@@ -183,19 +186,19 @@ function fillData()
 	    {
 			$("#"+itm["id"]+"_new").val(itm["new"]);
 			$("#"+itm["id"]).val("Other:");
-			$("#"+itm["id"]+"_newitm").prop('checked', true);	
+			$("#"+itm["id"]+"_newitm").prop('checked', true);
 		}
 	    if (itm["type"] == "mult" || itm["type"] == "radio")
 	    {
 			for (j = 0; j < vals.length; ++j)
 			{
 				$(":input[name='"+itm["id"]+"'][value='" + vals[j] + "']").prop('checked', true);
-				$(":input[name='"+itm["id"]+"[]'][value='" + vals[j] + "']").prop('checked', true);		
-			}	
+				$(":input[name='"+itm["id"]+"[]'][value='" + vals[j] + "']").prop('checked', true);
+			}
 		} 
 		else
 		{
 			$("#"+itm["id"]).val(vals[0]);
-		}	
+		}
 	}
 }

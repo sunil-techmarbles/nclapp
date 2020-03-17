@@ -162,13 +162,12 @@ function assign_grades(grades_array)
 }
 
 function showTab( tabId )
-{	
+{
 	$.get("/"+prefix+"/gettab?tab="+tabId+"&t="+Math.random(), function (data)
 	{
     	$("#var_tab").html(data);
     	$("#reviewBtn").show();
     	setHeader();
-    	// $("body").css('background-image', 'none');
     	$('#page-bottom').removeClass("bottom-url");
     	alignCB();
     	$(":input[data-display]").closest(".formitem").hide();
@@ -188,7 +187,7 @@ function showTab( tabId )
 				$('input[data-modelname="1"]').closest(".formitem").append('<div class="form-group"><label class="ttl">&nbsp;</label><br/><button type="button" class="btn btn-default" onclick="showModelFields()">Toggle common data</button></div>');
 			}
 		}
-	});  
+	});
 }
 
 function frmPreview()
@@ -207,7 +206,7 @@ function frmPreview()
 var selTab;
 function checkTravelerId( tabId )
 {
-    selTab = tabId; 
+    selTab = tabId;
     var trId = $('#text_1').val();
     if(trId.length < 3 )
     {	
@@ -253,23 +252,23 @@ function checkTravelerId( tabId )
 					{
 						$("input[data-hddcapacity='1']").val(hddc);
 						$("input[data-ramcapacity='1']").val(ramc);
-					}  
+					}
 					cpuname  = da[3];
 					if(!isNaN(da[4])) cpuspeed = parseFloat(da[4]);
 				}
-				if ( !isErr ) showTab(selTab); 
+				if ( !isErr ) showTab(selTab);
 			} 
 	    });
     }
     else if(isMob)
     { 
-		CheckTravelerIdForMobile( trId , selTab );  
+		CheckTravelerIdForMobile( trId , selTab );
     }
 }
 
 function CheckTravelerIdForMobile ( trId , selTab )
 {  
-		var isErr = false;      
+		var isErr = false;
 		$.get("/"+prefix+"/checktraveleridformobile?trid=" + trId +"&t=" + Math.random(), function ( data ) { 
 			
 			if ( data == "Missing" )
@@ -283,15 +282,15 @@ function CheckTravelerIdForMobile ( trId , selTab )
 		    $("#reviewBtn").hide();
 		}
 		else
-		{	
+		{
 			showTab( selTab );
 		} 
 
-		}); 	
-} 
+		});
+}
 
 function noDisable( iId )
-{ 
+{
 	$("#"+iId).removeAttr("data-disable");
 }
 
@@ -311,7 +310,7 @@ function addTrId(trid,dst)
 		$(":input[name='radio_2'][value='" + prodName + "']").prop('checked', true);
 		items = fCnt['items'];
 		checkTravelerId(prodName);
-	});		
+	});
 }
 
 function getLastInput()
@@ -348,7 +347,7 @@ function getLastInput()
 			lastload=true;
 			checkTravelerId(prodName);
 		}
-	});		
+	});
 }
  
 function getModelData(modelId,tId)
@@ -373,7 +372,7 @@ function getModelData(modelId,tId)
 					items.push(fCnt['items'][i]);
 				}
 			}
-			fillData();	
+			fillData();
 			$(":input[data-fillmodel]").closest(".formitem").hide();
 			$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").show();
 			$('input[data-modelname="1"]').closest(".formitem").append('<div class="form-group"><label class="ttl">&nbsp;</label><br/><button type="button" class="btn btn-secondary" onclick="showModelFields()">Toggle common data</button></div>');
@@ -382,7 +381,7 @@ function getModelData(modelId,tId)
 				asinmodels = fCnt['models'];
 			}
 		}
-	});	
+	});
 }
 
 function refurbNotification()
@@ -469,7 +468,7 @@ function fillData()
 			{
 				$(":input[name='"+itm["id"]+"'][value='" + vals[j] + "']").prop('checked', true);
 				$(":input[name='"+itm["id"]+"[]'][value='" + vals[j] + "']").prop('checked', true);
-			}	
+			}
 		}
 		else
 		{

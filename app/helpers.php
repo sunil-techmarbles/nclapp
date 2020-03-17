@@ -199,7 +199,7 @@ function getShopifyRunlistPrice($data)
 {
     $productsurl = config('constants.finalPriceConstants.shopifyBaseUrl') . "/admin/api/2019-04/products/" . $data['shopify_product_id']. ".json";
     $shopifyProductData = getApiDataForPrice($productsurl);
-    $shopifyPrice = $shopifyProductData['product']['variants'][0]['price'];
+    $shopifyPrice = (isset($shopifyProductData['product'])) ?  $shopifyProductData['product']['variants'][0]['price'] : 0 ;
     $searchDataArray['condition'] = config('constants.finalPriceConstants.condition');
     $searchDataArray['form_factor'] = $data['technology'];
     $searchDataArray['model'] = $data['model'];

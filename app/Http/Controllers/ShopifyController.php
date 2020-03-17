@@ -29,9 +29,7 @@ use App\Http\Controllers\AuditController;
 class ShopifyController extends Controller
 {
 	use CommenShopifyTraits;
-
 	public $basePath, $current, $baseUrl, $productMainSiteUrl, $wipeData2, $methodData, $finalPrice;
-
 	/**
      * Instantiate a new ShopifyController instance.
      */
@@ -40,20 +38,17 @@ class ShopifyController extends Controller
     	/**
      	* Set value for common uses in the ShopifyController instance.
      	*/
-
      	$this->basePath = base_path().'/public';
      	$this->current = Carbon::now();
      	$this->baseUrl = Config::get('constants.finalPriceConstants.shopifyBaseUrl');
      	$this->productMainSiteUrl = Config::get('constants.finalPriceConstants.productMainSiteUrl');
      	$this->wipeData2 = $this->basePath.'/wipe-data2';
      	$this->methodData = $searchDataArray;
-
     	/**
      	* Calling a method productPriceCalculation for get final Price from ShopifyController instance.
      	*/
      	$this->finalPrice = $this->productPriceCalculation($this->methodData);
-
-     }
+    }
 
     /**
  	* method use to redirect to shopify site for given product.
@@ -1070,6 +1065,79 @@ class ShopifyController extends Controller
 			$items[] = $modelitm;
 		}
   		return view('admin.shopify.template', compact('output', 'items'));
+  		abort('404');
+  	}
+
+  	public function saveModelTemplateRecord(Request $request)
+  	{
+  		$tplid = $request->get("tplid");
+		$data = array("items" => array());
+		$result = false;
+		$config = FormsConfig::getAllRecord();
+		$c = 0;
+		foreach ($config as $fld)
+		{
+			$itmid = $fld["qtype"] . "_" . $fld["id"];
+			$itmidnew = $fld["qtype"] . "_" . $fld["id"]. "_new";
+			$qtype = $fld["qtype"];
+			$vals = explode(";",$fld["options"]);
+			$itmval = $request->get($itmid);
+			if(($itmval !== false && $itmval !== ""))
+			{
+				$response = $request->get($itmid);
+				$ft = (stripos($fld["config"],"filltemplate")) ? 1 : 0 ;
+				$fm = (stripos($fld["config"],"fillmodel")) ? 1 : 0 ;
+				if (!is_array($response))
+				{
+					$response = array($response);
+				}
+				$data["items"][] = array(
+					"template" => $ft,
+					"fillmodel" => $fm,
+					"id" => $itmid,
+					"type" => $qtype,
+					"key" => str_replace(array(" ","-",":",".","/"),"_",$fld["question"]),
+					"options" => $vals,
+					"new" => "",
+					"value" => $response
+				);
+				$c++;
+			}
+		}
+		if(FormData::getAllRecord($tplid))
+		{
+			$result = FormData::upadateFormDataByQuery($fields=["data" => json_encode($data)], $query = ["trid" => $tplid]);
+			$result = ($result) ? true : false ;
+		}
+		else
+		{
+			$tab = FormModel::getFormModelTab($tplid);
+			$data = [
+				"type"	=> "model",
+				"user"	=> Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name,
+				"trid"	=> $tplid,
+				"product"	=> $tab,
+				"data"	=> json_encode($data)
+			];
+			$result = FormData::saveFormDataRecorde((object) $data);
+			if ($result)
+			{
+				$result = true;
+			}
+		}
+		if($result)
+		{
+			return redirect()->back()->with(['success' => 'Record added successfully']);
+		}
+		else
+		{
+			return redirect()->back()->with(['error' => 'Something went wrong']);
+		}
+  		abort('404');
+  	}
+
+  	public function importRecord(Request $request)
+  	{
   		abort('404');
   	}
 }

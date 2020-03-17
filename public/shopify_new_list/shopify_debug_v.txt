@@ -1,1 +1,0 @@
-{"variant":{"price":"299.99","sku":"optiplex_9020-aio-i5-4","inventory_management":"shopify","barcode":"728891565674","weight":"25.","id":14648739692599,"product_id":1697712635959}}

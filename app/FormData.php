@@ -80,7 +80,13 @@ class FormData extends Model
 
     public static function getAllRecord($id)
     {
-        return self::where(['trid' =>$id])
+        return self::where(['trid' => $id])
             ->first();
+    }
+
+    public function upadateFormDataByQuery($fields, $query)
+    {
+        return self::where(["trid" => $tplid])
+            ->update($fields);
     }
 }

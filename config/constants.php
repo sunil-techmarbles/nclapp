@@ -3990,5 +3990,9 @@ return [
         // 'randy@itamg.com',
         // 'richy@refurbconnect.com',
         // 'ayaz_akhtar21@hotmail.com'
+    ],
+    'adminUsers' => [
+        'admin',
+        'randy'
     ]
 ];
