@@ -26,6 +26,9 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('blancco:api')
             ->daily();
+
+        $schedule->command('BlanccoMakorApi:api')
+            ->daily();
     }
 
     /**
