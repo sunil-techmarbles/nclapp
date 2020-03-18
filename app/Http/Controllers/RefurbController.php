@@ -106,14 +106,16 @@ class RefurbController extends Controller
 				{
 					$data["print"] = file_get_contents($refurbLabels);
 				}
-				// if(is_readable("completed-refurb-labels/$asset.pdf"))
-				// {
-				// 	$data["pdf"] = '<a class="btn btn-primary" style="float: right;margin-right: 5px;margin-left: 5px;" href="completed-refurb-labels/'.$asset.'.pdf" target="_blank">View Completed Label</a>';
-				// }
+				if (File::exists($this->basePath.'/completed-refurb-labels/'.$asset.'.pdf'))
+				{
+					$data["pdf"] = '<a class="btn btn-primary" style="float: right;margin-right: 5px;margin-left: 5px;" href="'.url('/completed-refurb-labels/').'/'.$asset.'.pdf" target="_blank">View Completed Label</a>';
+				}
 				$xml = false;
 				if ($wipeDataTwo) $xml= simplexml_load_file($wipeDataTwo);
-				// if (!$xml && is_readable("wipe-data2/bios-data/$asset.xml")) $xml=simplexml_load_file("wipe-data2/bios-data/$asset.xml");
-				
+				if (!$xml && File::exists($this->basePath.'/wipe-data2/bios-data/'.$asset.".xml"))
+				{
+					$xml = simplexml_load_file($this->basePath.'/wipe-data2/bios-data/'.$asset.".xml");
+				}
 				if ($xml)
 				{
 					$xmldata=[];

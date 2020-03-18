@@ -82,7 +82,12 @@ function getAssetData(fId)
 	{
 		$.get("/"+prefix+"/getasset?asset="+data+"&t="+Math.random(), function(response)
 		{
-			if(response.status) {
+			alert(response);
+			console.log(response);
+			if(response.status)
+			{
+				console.log("i am here at top");
+				console.log(response.status);
 				forceWS = false;
 				adata = response.result;
 				device = adata["radio_2"];
@@ -134,7 +139,9 @@ function getAssetData(fId)
 				}
 				for (var i in adata["items"])
 				{
+					console.log("i am here");
 					var itm = adata["items"][i];
+					console.log(itm);
 					if(itm.key=="Asset_Number")
 					{
 						if(adata["Serial"]=="") adata["Serial"] = '000000';
@@ -194,10 +201,10 @@ function getAssetData(fId)
 					}
 					else if(itm.type=="mult")
 					{
-                       	$("#f_"+itm.key+"").text(itm.value.join("; "));
-						$(".c_"+itm.key+"").show();
-						adata.descr[itm.key]=itm.value; 
-						$(".frmrow").show();
+      //                  	$("#f_"+itm.key+"").text(itm.value.join("; "));
+						// $(".c_"+itm.key+"").show();
+						// adata.descr[itm.key]=itm.value; 
+						// $(".frmrow").show();
 				 	}
 				}
 				adata.descr["swap"]=[];
@@ -281,7 +288,7 @@ function getAssetData(fId)
 				setChange(); 
 				if(adata.asins.length == 0)
 				{
-					alert("No ASIN found!");
+					showSweetAlertMessage('error', 'No ASIN found!', 'error');
 				} 
 				else if(adata.asin_match == 'partial')
 				{
