@@ -208,9 +208,10 @@ class Asin extends Model
 
     public static function getAsinLookupFields() 
     {
-        return self::select('id','asin','price','model','form_factor','cpu_core','cpu_model','cpu_speed','ram','hdd')
-                        ->where('asin', '!=' , '0' )
-                        ->get();  
+        return self::select('id','asin','price','model','form_factor','cpu_core','cpu_model',
+            'cpu_speed','ram','hdd')
+            ->where('asin', '!=' , '0' )
+            ->get();  
     }
 
     public static function getModelFromAsin($asin, $notifications)
@@ -218,6 +219,29 @@ class Asin extends Model
         return self::select("id","cpu_core","cpu_model","cpu_speed")
             ->whereIn("id" , $asin)
             ->where(["notifications" => $notifications])
+            ->get();
+    }
+
+    public static function getAssestModelAsinResult($data, $parts2, $parts1)
+    {
+        return self::select(["id","model","cpu_core","cpu_model","cpu_speed"])
+            ->where(function($q) use ($data, $parts2, $parts1){
+                $q->orWhere(["model" => $data["Model", "notifications" => 1, "cpu_core" => $parts2[0],
+                "cpu_speed"=>$parts1[1]]);
+                $q->orWhere('cpu_model', 'LIKE', $parts2[1]);
+                $q->orWhere("model_alias", 'LIKE', $data["Model"]);
+            })
+            ->get();
+    }
+
+    public static function getAssestModelAsinOtherResult($data, $parts2)
+    {
+        return self::select(["id","model","cpu_core","cpu_model","cpu_speed"])
+            ->where(function($q) use ($data, $parts2, $parts1){
+                $q->orWhere(["model" => $data["Model", "notifications" => 1, "cpu_core" => $parts2[0],
+                "cpu_speed"=>$parts1[1]]);
+                $q->orWhere("model_alias", 'LIKE', $data["Model"]);
+            })
             ->get();
     }
 }

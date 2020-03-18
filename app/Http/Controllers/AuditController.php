@@ -662,6 +662,56 @@ class AuditController extends Controller
 		}
 	}
 
+	public function getAssetModels(Request $request)
+	{
+		$asset = $request->get("a");
+		$asins = [];
+		if (File::exists($this->formData.'/'.$asset.'.json'))
+		{
+			$data = [];
+			$data["Model"] = "N/A";
+			$data["CPU"] = "N/A";
+			$xml = false;
+			if (File::exists($this->basePath.'/wipe-data2/'.$asset.'.xml'))
+			{
+				$xml = simplexml_load_file($this->basePath.'/wipe-data2/'.$asset.'.xml');
+			}
+			if (!$xml && File::exists($this->basePath.'/wipe-data2/bios-data/'.$asset.".xml"))
+			{
+				$xml = simplexml_load_file($this->basePath.'/wipe-data2/bios-data/'.$asset.".xml");
+			}
+			if ($xml)
+			{
+				$xmldata=[];
+				$i = 0;
+				foreach ($xml->component as $c)
+				{
+				    $i++;
+				    $key = strval($c["name"]);
+				    if(!isset($xmldata[$key])) $xmldata[$key]=[];
+				    if(!in_array(strval($c),$xmldata[$key])) $xmldata[$key][] = strval($c);
+				}
+				$data["Model"] = $xmldata["Model"][0];
+				$data["CPU"] = $xmldata["ProcessorModel_Speed"][0];
+			}
+
+			if(!empty($data["CPU"]))
+			{
+				$parts1 = explode("_",$data["CPU"]);
+				$parts2 = explode("-",$parts1[0]);
+				if(!empty($parts1[1]) && !empty($parts2[1]))
+				{
+					$asins = Asin::getAssestModelAsinResult($data["Model"], $parts2, $parts1);
+					if(!$asins)
+					{
+						$asins = Asin::getAssestModelAsinOtherResult($data["Model"], $parts2);
+					}
+				}
+			}
+		}
+		return $asins;
+	}
+
 	public function getRefNotification(Request $request)
 	{
 		if($request->ajax())
@@ -683,7 +733,7 @@ class AuditController extends Controller
 			}
 			else
 			{
-				$data["models"] = $this->getAssetModels();
+				$data["models"] = $this->getAssetModels($request);
 			}
 			$travelerId = $asset;
 			$fname =  $this->formData.'/'.$travelerId .'.json';
