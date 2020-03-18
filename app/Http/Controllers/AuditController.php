@@ -1022,7 +1022,7 @@ class AuditController extends Controller
 			{
 				if ($key == "Asset_Number")
 				{
-					$traveler_id = $request->get($itmid);
+					$travelerId = $request->get($itmid);
 					$data["text_1"] = $request->get($itmid);
 				}
 				if ($key == "Product_Name")
@@ -1219,7 +1219,6 @@ class AuditController extends Controller
 		{
 			return redirect()->route('audit', ["redirect" => "true"])->with('error', "Unable to save the file");
 		}
-
 	}
 
 	public function array_to_xml($data, &$xmlData)
