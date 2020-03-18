@@ -61,7 +61,7 @@ trait TMXmlToArrayTraits
                             $output[$t] = array();
                         }
                         $output[$t][] = $v;
-                    } 
+                    }
                     else
                     {
                         if($v !== '')
@@ -107,7 +107,8 @@ trait TMXmlToArrayTraits
 
     public static function getXMLRoot()
     {
-    	if(empty(self::$xml)) {
+    	if(empty(self::$xml))
+        {
             self::init();
         }
         return self::$xml;
