@@ -226,8 +226,11 @@ class Asin extends Model
     {
         return self::select(["id","model","cpu_core","cpu_model","cpu_speed"])
             ->where(function($q) use ($data, $parts2, $parts1){
-                $q->orWhere(["model" => $data["Model", "notifications" => 1, "cpu_core" => $parts2[0],
-                "cpu_speed"=>$parts1[1]]);
+                $q->orWhere(["model" => $data["Model"],
+                    "notifications" => 1,
+                    "cpu_core" => $parts2[0],
+                    "cpu_speed"=>$parts1[1]]
+                );
                 $q->orWhere('cpu_model', 'LIKE', $parts2[1]);
                 $q->orWhere("model_alias", 'LIKE', $data["Model"]);
             })
@@ -238,8 +241,12 @@ class Asin extends Model
     {
         return self::select(["id","model","cpu_core","cpu_model","cpu_speed"])
             ->where(function($q) use ($data, $parts2, $parts1){
-                $q->orWhere(["model" => $data["Model", "notifications" => 1, "cpu_core" => $parts2[0],
-                "cpu_speed"=>$parts1[1]]);
+                $q->orWhere([
+                    "model" => $data["Model"],
+                    "notifications" => 1,
+                    "cpu_core" => $parts2[0],
+                    "cpu_speed"=>$parts1[1]
+                ]);
                 $q->orWhere("model_alias", 'LIKE', $data["Model"]);
             })
             ->get();

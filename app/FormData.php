@@ -63,18 +63,24 @@ class FormData extends Model
     public static function deleteFormDataRecorde($type, $authUserName )
     {
         $recorde = self::where(["type" => $type, "user" => $authUserName])->first();
-        if(!$recorde->isEmpty())
+        if($recorde)
         {
-            $recorde->delete();
+            if(!$recorde->isEmpty())
+            {
+                $recorde->delete();
+            }
         }
     }
 
     public static function deleteFormDataRecordeByID($type, $id )
     {
         $recorde = self::where(["type" => $type, "trid" => $id])->first();
-        if(!$recorde->isEmpty())
+        if($recorde)
         {
-            $recorde->delete();
+            if(!$recorde->isEmpty())
+            {
+                $recorde->delete();
+            }
         }
     }
 

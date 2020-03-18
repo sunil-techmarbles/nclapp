@@ -117,8 +117,8 @@ class AuditController extends Controller
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 			<div class='form-group'>
-			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-			<input type='text' value='".$fld["default_val"]."' class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
+			<input type='text' value='".$fld["default_val"]."' class='form-control' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
 			</div>";
 		}
 		return $output;
@@ -132,8 +132,8 @@ class AuditController extends Controller
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 			<div class='form-group'>
-			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-			<input type='number' value='".$fld["default_val"]."' class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
+			<input type='number' value='".$fld["default_val"]."' class='form-control' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
 			</div>";
 		}
 		return $output;
@@ -147,8 +147,8 @@ class AuditController extends Controller
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 			<div class='form-group' style='width:100%'>
-			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label>
-			<textarea class='form-control' rows='5' style='width:100%' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">".$fld["default_val"]."</textarea>
+			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label>
+			<textarea class='form-control' rows='5' style='width:100%' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") .">".$fld["default_val"]."</textarea>
 			</div>";
 		}
 		return $output;
@@ -162,7 +162,7 @@ class AuditController extends Controller
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 			<div class='btn-group btn-group-horizontal' data-toggle='buttons'>
-			<label class='btn' for='$itemid'><input type='checkbox' value='1' id='$itemid' name='$itemid' ".$fld["config"]."/>".
+			<label class='btn' for='".$itemid."'><input type='checkbox' value='1' id='".$itemid."' name='".$itemid."' ".$fld["config"]."/>".
 			"<i class='fa fa-square-o fa-2x'></i><i class='fa fa-check-square-o fa-2x'></i> <span>" . $fld["question"] . "</span></label>
 			</div>";
 		}
@@ -188,8 +188,8 @@ class AuditController extends Controller
 					{
 
 						$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
-						$output .= "<div class='cb-cnt'><label class='btn' for='$itemid'><input class='calculate_grade' data-grade='$grade' type='checkbox' value='".htmlentities($oname, ENT_QUOTES).
-						"' id='$itemid' name='$itemname' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+						$output .= "<div class='cb-cnt'><label class='btn' for='".$itemid."'><input class='calculate_grade' data-grade='".$grade."' type='checkbox' value='".htmlentities($oname, ENT_QUOTES).
+						"' id='".$itemid."' name='".$itemname."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
 						<span>" . $oname . "</span></label></div>";
 					}
 				}
@@ -204,7 +204,7 @@ class AuditController extends Controller
 					if(count($itm)==2 && trim($itm[0])=="data-customlabel") $olbl = trim(str_replace('"','',$itm[1]));
 				}
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_new";
-				$output .= "<div class='form-group'><label for='$itemid'>$olbl</label> <input type='text' class='form-control' id='$itemid' name='$itemid'/></div>";
+				$output .= "<div class='form-group'><label for='".$itemid."'>$olbl</label> <input type='text' class='form-control' id='".$itemid."' name='".$itemid."'/></div>";
 			}
 		}
 		return $output;
@@ -225,7 +225,7 @@ class AuditController extends Controller
 			{
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_" . $oid;
 				$output .= "
-				<label class='btn' for='$itemid'><input type='radio' id='$itemid'  value='".htmlentities($oname, ENT_QUOTES)."' name='$itemname' "
+				<label class='btn' for='$itemid'><input type='radio' id='".$itemid."'  value='".htmlentities($oname, ENT_QUOTES)."' name='".$itemname."' "
 				.$fld["config"].($fld["required"]?" required='true'":"").($fld["default_val"]==$oname?" checked='checked'":"")."/>
 				<span>" . $oname . "</span></label>";
 			}
@@ -243,8 +243,8 @@ class AuditController extends Controller
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_newitm";
 				$dataid = $fld["qtype"] . "_" . $fld["id"] . "_new";
 				$output .= "<div class='form-group'>
-				<label for='$itemid'><input type='radio' id='$itemid'  value='Other:' name='$itemname' ".$fld["config"] . ($fld["required"]?" required='true'":"") ."/>
-				<span>$olbl</span> <input type='text' class='form-control' id='$dataid' name='$dataid' $addopts onClick='$(\"#$itemid\").prop( \"checked\", true )'/>
+				<label for='".$itemid."'><input type='radio' id='".$itemid."'  value='Other:' name='".$itemname."' ".$fld["config"] . ($fld["required"]?" required='true'":"") ."/>
+				<span>".$olbl."</span> <input type='text' class='form-control' id='".$dataid."' name='".$dataid."' ".$addopts." onClick='$(\"#".$itemid."\").prop( \"checked\", true )'/>
 				</label></div>";
 			}
 			$output .= "</div>";
@@ -283,16 +283,16 @@ class AuditController extends Controller
 			$itemid = $fld["qtype"] . "_" . $fld["id"];
 			$output = "
 			<div class='form-group'>
-			<label class='ttl' for='$itemid'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-			<select class='form-control' id='$itemid' name='$itemid' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
+			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
+			<select class='form-control' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
 			self::getOptions($options,$fld["default_val"]).  
 			"</select></div>";
 			if ($fld["allow_new"]) 
 			{
 				$selid = $itemid;
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_new";
-				$output .= " <div class='form-group' style='vertical-align:bottom;'><label for='$itemid'>Other:</label> <input type='text' class='form-control' 
-				id='$itemid' name='$itemid' onClick='$(\"#$selid\").val($(\"#$selid option:last-child\").val())' /></div>";
+				$output .= " <div class='form-group' style='vertical-align:bottom;'><label for='".$itemid."'>Other:</label> <input type='text' class='form-control' 
+				id='".$itemid."' name='".$itemid."' onClick='$(\"#".$selid."\").val($(\"#".$selid." option:last-child\").val())' /></div>";
 			}
 		}
 		return $output;
