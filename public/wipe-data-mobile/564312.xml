@@ -1,2 +1,38 @@
 <?xml version="1.0"?>
-<data><user/><processed>01-17-20 08:02:51</processed><Asset_Number>564312</Asset_Number><Product_Name>Mobile_Device</Product_Name><Technology>Cell_Phone_Other</Technology><Model>a</Model><Weight>1</Weight><Part_Number>c</Part_Number><Serial_Number>d</Serial_Number><Color>Aluminum</Color><Customer_Asset_Tag>2</Customer_Asset_Tag><Screen><Size>3.5"</Size><Resolution>1024 x 768</Resolution><Touchscreen>Yes</Touchscreen></Screen><Data_Security>Factory_Reset</Data_Security><Capacity>8Gb</Capacity><Battery>Battery_Yes</Battery><Charging_Port>Dock_Connector</Charging_Port><Carrier>T-Mobile</Carrier><Lock_Status>Locked</Lock_Status><Dimensions><Height>1</Height><Width>2</Width><Length>3</Length></Dimensions><Description><Functional>Admin_Lock</Functional><Missing>Faceplate</Missing><Notes>Computrace_Pending</Notes><Other>Computrace_Pending</Other><Cosmetic>Broken_Hinge</Cosmetic></Description><Grade>C</Grade></data>
+<data>
+	<user/>
+	<processed>01-17-20 08:02:51</processed>
+	<Asset_Number>564312</Asset_Number>
+	<Product_Name>Mobile_Device</Product_Name>
+	<Technology>Cell_Phone_Other</Technology>
+	<Model>a</Model>
+	<Weight>1</Weight>
+	<Part_Number>c</Part_Number>
+	<Serial_Number>d</Serial_Number>
+	<Color>Aluminum</Color>
+	<Customer_Asset_Tag>2</Customer_Asset_Tag>
+	<Screen>
+		<Size>3.5"</Size>
+		<Resolution>1024 x 768</Resolution>
+		<Touchscreen>Yes</Touchscreen>
+	</Screen>
+	<Data_Security>Factory_Reset</Data_Security>
+	<Capacity>8Gb</Capacity>
+	<Battery>Battery_Yes</Battery>
+	<Charging_Port>Dock_Connector</Charging_Port>
+	<Carrier>T-Mobile</Carrier>
+	<Lock_Status>Locked</Lock_Status>
+	<Dimensions>
+		<Height>1</Height>
+		<Width>2</Width>
+		<Length>3</Length>
+	</Dimensions>
+	<Description>
+		<Functional>Admin_Lock</Functional>
+		<Missing>Faceplate</Missing>
+		<Notes>Computrace_Pending</Notes>
+		<Other>Computrace_Pending</Other>
+		<Cosmetic>Broken_Hinge</Cosmetic>
+	</Description>
+	<Grade>C</Grade>
+</data>

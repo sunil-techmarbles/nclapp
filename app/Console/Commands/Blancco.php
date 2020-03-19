@@ -13,6 +13,7 @@ class Blancco extends Command
 
     public $basePath, $AllDatarequestFilePath, $singleReportRequestFilePath, $singleReportRequestFilePathUpdated;
     public $reportAllowedStates = ['Successful', 'Failed'];
+    
     /**
      * The name and signature of the console command.
      *
@@ -54,6 +55,7 @@ class Blancco extends Command
 
         // parse data form data.xml and create single single xml and pdf form all data
         $this->GetSingleXmlAndPdfFIlesBlancco();
+
         die("all files created successfully");
     }
 
@@ -113,7 +115,6 @@ class Blancco extends Command
                     {
                         MessageLog::addLogMessageRecord($message='reportUuid Not Exist',$type="blancco", $status="failure");
                     }
-
                 }
             }
             catch (\Execption $e)

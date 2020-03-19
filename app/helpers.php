@@ -324,3 +324,13 @@ function getDirectoryFiles($directory)
     }
     return $scanned_directory;
 }
+
+function convert_bytes_to_specified($bytes, $to, $decimal_places = 0) 
+{ 
+    $formulas = array(
+        'K' => number_format( $bytes / 1000, $decimal_places ), 
+        'M' => number_format( $bytes / 1000000, $decimal_places ),
+        'G' => number_format( $bytes / 1000000000, $decimal_places )
+    );
+    return isset($formulas[$to]) ? $formulas[$to] : 0;
+}
