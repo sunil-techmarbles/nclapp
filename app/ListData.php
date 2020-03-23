@@ -65,10 +65,13 @@ class ListData extends Model
     public static function deleteListDataRecorde($mid, $text1)
     {
         $recorde = self::where(["mid" => $mid, "asset" => $text1])->first();
-        if($recorde->isEmpty())
+        if($recorde)
         {
-            $recorde->delete();
-        }
+	        if($recorde->isEmpty())
+	        {
+	            $recorde->delete();
+	        }
+    	}
     }
 
     public static function updateModelID($mid, $asin)

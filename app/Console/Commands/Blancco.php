@@ -188,7 +188,7 @@ class Blancco extends Command
      */
     public function blancooCurlRequest($requestFilePath , $requestFileName , $type , $format , $returnFileName , $reportUuid)
     {
-        $url = "https://cloud.blancco.com:443/rest-service/report/export/". $format;
+        $url = Config::get('blancco.blanccoApiCredential.apiUrl') ."/". $format;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERPWD, Config::get('blancco.blanccoApiCredential.apiUsername').':'.Config::get('blancco.blanccoApiCredential.apiPassword'));

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
@@ -7,10 +6,12 @@ use App\MessageLog;
 use File;
 use Config;
 use App\Traits\TMXmlToArrayTraits;
+use App\Traits\BlanccoMakorMobileTraits; 
 
 class BlanccoMakorApi extends Command
 {
     use TMXmlToArrayTraits;
+    use BlanccoMakorMobileTraits;
 
     public $basePath, $blanccoXmlDataDir, $blanccoAdditionMobileDataDir;
     
@@ -67,6 +68,7 @@ class BlanccoMakorApi extends Command
         {
             foreach ($blanccoXmlFiles as $key => $blanccoXmlFile)
             {
+                $apiDataSendToMakor = [];
                 if (substr($blanccoXmlFile, 0, 4) != "data")
                 {
                     $blanccoXmlFilePath = $this->blanccoXmlDataDir . $blanccoXmlFile;
@@ -81,7 +83,7 @@ class BlanccoMakorApi extends Command
                             $lotNumber = $assetId = $serial = '';
                             $lotNumber_assetId_serial = pathinfo($blanccoXmlFile, PATHINFO_FILENAME);
                             @list($lotNumber, $assetId, $serial) = explode("-", $lotNumber_assetId_serial);
-                            
+
                             $additionalMobileDataFile = $this->blanccoAdditionMobileDataDir .'/' . $assetId . ".xml";
                             if(!File::exists($additionalMobileDataFile))
                             {
@@ -89,6 +91,9 @@ class BlanccoMakorApi extends Command
                                 // MessageLog::addLogMessageRecord($message,$type="blanccoMakor", $status="failure");
                                 continue;
                             }
+
+                            $apiDataSendToMakor['assetId'] = $assetId;
+                            $apiDataSendToMakor['serial'] = $serial;
 
                             // variables form blancco report data
                             $manufacturer = $itemModel = $modelNumber = $model = $modelOne = $internalModelRegion = $internalModel = $color = $battery = $hdSerial = '';
@@ -101,88 +106,87 @@ class BlanccoMakorApi extends Command
                             $cosmetic = $missing = $functional = $screen = $case = $inputOutput = '';
 
                             // variables that are fixed
-                            $pallet = '1-DefaultPallet-I'; $nextProcess = 'Resale';
-                            $complianceLabel = 'Tested for Key Functions,  R2/Ready for Resale';
-                            $condition = 'Tested Working'; $hdManufacturer = 'Apple';
-                            $hdModel = 'N/A'; $hdPartNumber = 'N/A';
-                            $hdInterface = 'Properitary'; $hdPowerOnHours = 'N/A';
-                            $hdType = 'Onboard'; $carrier = 'N/A';
+                            $apiDataSendToMakor['pallet'] = '1-DefaultPallet-I'; 
+                            $apiDataSendToMakor['nextProcess'] = 'Resale';
+                            $apiDataSendToMakor['complianceLabel'] = 'Tested for Key Functions,  R2/Ready for Resale';
+                            $apiDataSendToMakor['condition'] = 'Tested Working'; 
+                            $apiDataSendToMakor['hdManufacturer'] = 'Apple';
+                            $apiDataSendToMakor['hdModel'] = 'N/A'; 
+                            $apiDataSendToMakor['hdPartNumber'] = 'N/A';
+                            $apiDataSendToMakor['hdInterface'] = 'Properitary'; 
+                            $apiDataSendToMakor['hdPowerOnHours'] = 'N/A';
+                            $apiDataSendToMakor['hdType'] = 'Onboard'; 
+                            $carrierValue = 'N/A';
 
                             // data get form Hardware data.
                             $blanccoHardwareReportData = $blanccoData['root']['report']['blancco_data']['blancco_hardware_report'];
                             $allBlanccoHardwareReportData = $this->getAllBlanccoHardwareDataArray($blanccoHardwareReportData);
                             
                             $manufacturer = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='manufacturer', $reportUuid);
-                            
                             $itemModel = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='name', $reportUuid);
-                            $itemModel = (!strpos($itemModel, "GSM")) ? $itemModel : substr($itemModel, 0, strpos($itemModel, "GSM"));
+                            $itemModel = (!strpos($itemModel, "GSM")) ? $itemModel : trim(substr($itemModel, 0, strpos($itemModel, "GSM")));
                             $modelNumber = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='a_model_number', $reportUuid);
-
                             $internalModel = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='internal_model', $reportUuid);
                             $internalModelRegion = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='region', $reportUuid);
-
                             $hdCapacityInBytes = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='capacity', $reportUuid);
-
-                            $manufacturer = substr($manufacturer, 0, strpos($manufacturer, ","));
-                            $model = $itemModel.' (' .$modelNumber. ')';
-                            $modelOne = $internalModel . $internalModelRegion;
-                            $color = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='device_color', $reportUuid);
-                            $battery = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='battery_serial', $reportUuid);
-                            $hdSerial = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='imei', $reportUuid);
                             $carrier = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='initial_carrier', $reportUuid);
-                            $simStatus = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='prolog_simlock', $reportUuid);
-                            $MDMStatus = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='mdm_status', $reportUuid);
-                            $FMIPStatus = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='find_my_iphone', $reportUuid);
-                            $blacklistStatus = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='prolog_blacklisted', $reportUuid);
-                            $graylistStatus = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='prolog_graylisted', $reportUuid);
-                            $releaseYear = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='manufacturing_date', $reportUuid);
-                            $hdCapacity = convert_bytes_to_specified($hdCapacityInBytes, 'G');
+
+                            $apiDataSendToMakor['manufacturer'] = substr($manufacturer, 0, strpos($manufacturer, ","));
+                            $apiDataSendToMakor['model'] = $itemModel.' (' .$modelNumber. ')';
+                            $apiDataSendToMakor['modelNumber'] = $internalModel . $internalModelRegion;
+                            $apiDataSendToMakor['color'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='device_color', $reportUuid);
+                            $apiDataSendToMakor['battery'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='battery_serial', $reportUuid);
+                            $apiDataSendToMakor['hdSerial'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='imei', $reportUuid);
+                            $apiDataSendToMakor['carrier'] = ( !empty($carrier) ) ? $carrier : $carrierValue;
+                            $apiDataSendToMakor['simStatus'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='prolog_simlock', $reportUuid);
+                            $apiDataSendToMakor['MDMStatus'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='mdm_status', $reportUuid);
+                            $apiDataSendToMakor['FMIPStatus'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='find_my_iphone', $reportUuid);
+                            $apiDataSendToMakor['blacklistStatus'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='prolog_blacklisted', $reportUuid);
+                            $apiDataSendToMakor['graylistStatus'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='prolog_graylisted', $reportUuid);
+                            $apiDataSendToMakor['releaseYear'] = $this->getBlanccoVariable($allBlanccoHardwareReportData, $variableToGet='manufacturing_date', $reportUuid);
+                            $apiDataSendToMakor['hdCapacity'] = convert_bytes_to_specified($hdCapacityInBytes, 'G') .'GB';
 
                             // data get form Erasure data.
                             $blanccoErasureReportData = $blanccoData['root']['report']['blancco_data']['blancco_erasure_report']['entries']['entries']['entry'];
-                            $hdServicesPerformed = $this->getBlanccoVariable($blanccoErasureReportData, $variableToGet='erasure_standard_name', $reportUuid);
-                            $serviceQueueStatus = $this->getBlanccoVariable($blanccoErasureReportData, $variableToGet='state', $reportUuid);
-                            $hdRemoved = ($serviceQueueStatus == 'Successful') ? 'No' : 'Yes';
+                            $apiDataSendToMakor['hdServicesPerformed'] = $this->getBlanccoVariable($blanccoErasureReportData, $variableToGet='erasure_standard_name', $reportUuid);
+                            $apiDataSendToMakor['serviceQueueStatus'] = $this->getBlanccoVariable($blanccoErasureReportData, $variableToGet='state', $reportUuid);
+                            $apiDataSendToMakor['hdRemoved'] = ($serviceQueueStatus == 'Successful') ? 'No' : 'Yes';
 
                             // data get form Software data.
                             $blanccoSoftWareReportData = $blanccoData['root']['report']['blancco_data']['blancco_software_report']['entries']['entry'];
-                            $osType = $this->getBlanccoVariable($blanccoSoftWareReportData, $variableToGet='name', $reportUuid);
-                            $osVersion = $this->getBlanccoVariable($blanccoSoftWareReportData, $variableToGet='version', $reportUuid);
+                            $apiDataSendToMakor['osType'] = $this->getBlanccoVariable($blanccoSoftWareReportData, $variableToGet='name', $reportUuid);
+                            $apiDataSendToMakor['osVersion'] = $this->getBlanccoVariable($blanccoSoftWareReportData, $variableToGet='version', $reportUuid);
 
-                            // data get form additional blancco data file 
+                            // data get form addit ional blancco data file
                             $blanccoAdditionalFileContent = file_get_contents($additionalMobileDataFile);
                             $blanccoAdditionalData = $this->createArray($blanccoAdditionalFileContent);
                             
-                            $customerAssetTag = (isset($blanccoAdditionalData['data']['Customer_Asset_Tag'])) ? $blanccoAdditionalData['data']['Customer_Asset_Tag'] : '';
-                            $itemNetWeight = (isset($blanccoAdditionalData['data']['Weight'])) ? $blanccoAdditionalData['data']['Weight'] : '';
-                            $grade = (isset($blanccoAdditionalData['data']['Grade'])) ? $blanccoAdditionalData['data']['Grade'] : '';
-                            $type = (isset($blanccoAdditionalData['data']['Technology'])) ? $blanccoAdditionalData['data']['Technology'] : '';
-                            $chargingPort = (isset($blanccoAdditionalData['data']['Charging_Port'])) ? $blanccoAdditionalData['data']['Charging_Port'] : '';
-                            $displaySize = (isset($blanccoAdditionalData['data']['Screen']['Size'])) ? $blanccoAdditionalData['data']['Screen']['Size'] : '';
-                            $displayResolution = (isset($blanccoAdditionalData['data']['Screen']['Resolution'])) ? $blanccoAdditionalData['data']['Screen']['Resolution'] : '';
-                            $displayTouchScreen = (isset($blanccoAdditionalData['data']['Screen']['Touchscreen'])) ? $blanccoAdditionalData['data']['Screen']['Touchscreen'] : '';
+                            $apiDataSendToMakor['customerAssetTag'] = (isset($blanccoAdditionalData['data']['Customer_Asset_Tag'])) ? $blanccoAdditionalData['data']['Customer_Asset_Tag'] : '';
+                            $apiDataSendToMakor['weight'] = (isset($blanccoAdditionalData['data']['Weight'])) ? $blanccoAdditionalData['data']['Weight'] : '';
+                            $apiDataSendToMakor['grade'] = (isset($blanccoAdditionalData['data']['Grade'])) ? $blanccoAdditionalData['data']['Grade'] : '';
+                            $apiDataSendToMakor['type'] = (isset($blanccoAdditionalData['data']['Technology'])) ? str_replace('_', ' ', $blanccoAdditionalData['data']['Technology']) : '';
+                            $apiDataSendToMakor['chargingPort'] = (isset($blanccoAdditionalData['data']['Charging_Port'])) ? $blanccoAdditionalData['data']['Charging_Port'] : '';
+                            $apiDataSendToMakor['displaySize'] = (isset($blanccoAdditionalData['data']['Screen']['Size'])) ? $blanccoAdditionalData['data']['Screen']['Size'] : '';
+                            $apiDataSendToMakor['displayResolution'] = (isset($blanccoAdditionalData['data']['Screen']['Resolution'])) ? $blanccoAdditionalData['data']['Screen']['Resolution'] : '';
+                            $apiDataSendToMakor['displayTouchScreen'] = (isset($blanccoAdditionalData['data']['Screen']['Touchscreen'])) ? $blanccoAdditionalData['data']['Screen']['Touchscreen'] : '';
+                            $apiDataSendToMakor['notes'] = (isset($blanccoAdditionalData['data']['Description']['Notes'])) ? $blanccoAdditionalData['data']['Description']['Notes'] : '';
+                            $apiDataSendToMakor['other'] = (isset($blanccoAdditionalData['data']['Description']['Other'])) ? $blanccoAdditionalData['data']['Description']['Other'] : '';
+                            $apiDataSendToMakor['cosmetic'] = (isset($blanccoAdditionalData['data']['Description']['Cosmetic'])) ? $blanccoAdditionalData['data']['Description']['Cosmetic'] : '';
+                            $apiDataSendToMakor['missing'] = (isset($blanccoAdditionalData['data']['Description']['Missing'])) ? $blanccoAdditionalData['data']['Description']['Missing'] : '';
+                            $apiDataSendToMakor['functional'] = (isset($blanccoAdditionalData['data']['Description']['Functional'])) ? $blanccoAdditionalData['data']['Description']['Functional'] : '';
+                            $apiDataSendToMakor['screen'] = (isset($blanccoAdditionalData['data']['Description']['Screen'])) ? $blanccoAdditionalData['data']['Description']['Screen'] : '';
+                            $apiDataSendToMakor['case'] = (isset($blanccoAdditionalData['data']['Description']['Case'])) ? $blanccoAdditionalData['data']['Description']['Case'] : '';
+                            $apiDataSendToMakor['inputOutput'] = (isset($blanccoAdditionalData['data']['Description']['Input_Output'])) ? $blanccoAdditionalData['data']['Description']['Input_Output'] : '';
 
-                            $notes = (isset($blanccoAdditionalData['data']['Description']['Notes'])) ? $blanccoAdditionalData['data']['Description']['Notes'] : ''; 
-                            $other = (isset($blanccoAdditionalData['data']['Description']['Other'])) ? $blanccoAdditionalData['data']['Description']['Other'] : '';
-                            $cosmetic = (isset($blanccoAdditionalData['data']['Description']['Cosmetic'])) ? $blanccoAdditionalData['data']['Description']['Cosmetic'] : ''; 
-                            $missing = (isset($blanccoAdditionalData['data']['Description']['Missing'])) ? $blanccoAdditionalData['data']['Description']['Missing'] : '';
-                            $functional = (isset($blanccoAdditionalData['data']['Description']['Functional'])) ? $blanccoAdditionalData['data']['Description']['Functional'] : '';
-                            $screen = (isset($blanccoAdditionalData['data']['Description']['Screen'])) ? $blanccoAdditionalData['data']['Description']['Screen'] : '';
-                            $case = (isset($blanccoAdditionalData['data']['Description']['Case'])) ? $blanccoAdditionalData['data']['Description']['Case'] : '';
-                            $inputOutput = (isset($blanccoAdditionalData['data']['Description']['Input_Output'])) ? $blanccoAdditionalData['data']['Description']['Input_Output'] : '';
+                            $MakorMobileApiRequestDataXml = $this->createMakorMobileXmlData($apiDataSendToMakor);
 
-                            pr( $blanccoAdditionalData );
+                            pr($MakorMobileApiRequestDataXml);  die;
+
+                            $MakorResponse = $this->blanccoMakorAPIRequest($MakorMobileApiRequestDataXml, $assetId);
+
+ 
                             
-                            pr( $notes );
-                            pr( $other );
-                            pr( $cosmetic );
-                            pr( $missing );
-                            pr( $functional );
-                            pr( $screen );
-                            pr( $case );
-                            pr( $inputOutput );
-                            die;
-                            
+
                         }
                         else
                         {
@@ -199,6 +203,32 @@ class BlanccoMakorApi extends Command
                 }
             }
         }
+    }
+
+    /**
+     *  Function for API request to Makor of blancco data. 
+     *
+     * @return mixed
+     */
+    public function blanccoMakorAPIRequest($MakorMobileApiRequestDataXml, $assetId)
+    {
+        $MakorRequestjson = array();
+        $MakorRequestjson['asset_id'] = $assetId;
+        $MakorRequestjson['asset_report']['report'] = base64_encode($MakorMobileApiRequestDataXml);
+        $MakorRequestApiData = json_encode($MakorRequestjson);
+
+        //setting the curl parameters.
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_URL, Config::get('makor.makorApiCredential.apiUrl'));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $MakorRequestApiData);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERPWD, Config::get('makor.makorApiCredential.apiUsername').":".Config::get('makor.makorApiCredential.apiPassword'));
+        $response = curl_exec( $ch );
+        $responseCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+        curl_close( $ch );
+        return $responseCode;
     }
 
     /**

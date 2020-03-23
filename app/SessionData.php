@@ -89,9 +89,12 @@ class SessionData extends Model
     public static function deleteSeesionDataRecorde($sess, $text1 )
     {
         $recorde = self::where(["sid" => $sess, "asset" => $text1])->first();
-        if($recorde->isEmpty())
+        if($recorde)
         {
-            $recorde->delete();
+            if($recorde->isEmpty())
+            {
+                $recorde->delete();
+            }
         }
     }
 
