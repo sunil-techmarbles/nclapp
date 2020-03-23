@@ -65,10 +65,7 @@ class FormData extends Model
         $recorde = self::where(["type" => $type, "user" => $authUserName])->first();
         if($recorde)
         {
-            if(!$recorde->isEmpty())
-            {
-                $recorde->delete();
-            }
+            $recorde->delete();
         }
     }
 
@@ -77,10 +74,7 @@ class FormData extends Model
         $recorde = self::where(["type" => $type, "trid" => $id])->first();
         if($recorde)
         {
-            if(!$recorde->isEmpty())
-            {
-                $recorde->delete();
-            }
+            $recorde->delete();
         }
     }
 

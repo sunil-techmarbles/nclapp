@@ -27,6 +27,11 @@ var win8 = 0;
 // Array of inputs for package modal for per-populating values of package
 var packageModalInputs = ["order_date", "expected_arrival", "description", "qty", "value", "req_name", "tracking_number", "ref_number", "carrier", "freight_ground", "recipient", "received", "worker_id", "location" ];
 
+$.ajaxSetup({
+	headers: {
+		'X-CSRF-TOKEN': _token
+	}
+});
 
 const swalWithBootstrapButtons = Swal.mixin({
 	customClass: {
@@ -586,6 +591,101 @@ $(document).ready(function()
 			});
 			$('input[name=email]').val(earr.join(','));
 		});
+	}
+
+	if($(".recycle-record-edit").length > 0)
+	{
+		$(".recycle-record-edit").click(function (e) {
+            e.preventDefault();
+            var record_id = $(this).data('record_id');
+            $('.modal-form .record_id').val(record_id);
+            var parentTr = $(this).parents('tr');
+            $('.modal-form .category').val(parentTr.find('td.category').text());
+            $('.modal-form .gross-weight').val(parentTr.find('td.lgross').text());
+            $('input[name=tare][value="' + parentTr.find('td.pgi').text() + '"]').prop('checked', true);
+            jQuery('#edit-record-model').modal('show');
+        });
+	}
+
+	if($("#edit-record-form").length > 0)
+	{
+		$("#edit-record-form").submit(function (e) {
+	        e.preventDefault();
+	        var form = $(this);
+	        var that = $(this);
+	        $.ajax({
+	            type: "POST",
+	            dataType: "json",
+	            url: "/"+prefix+"/updaterecyclerecord",
+	            data: form.serialize(), // serializes the form's elements.
+	            beforeSend: function ()
+	            {
+	            	showLoader();
+	                that.attr("disabled", "disabled");
+	            },
+	            complete: function ()
+	            {
+	            	hideLoader();
+	                that.removeAttr("disabled");
+	                $('#edit-record-model').modal('hide');
+	            },
+	            success: function (result)
+	            {
+	            	hideLoader();
+	            	var icon = (result.status) ? 'success' : 'error';
+	            	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+	                window.location.reload();
+	            }
+	        }).fail(function (jqXHR, textStatus, error){
+            	hideLoader();
+            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+            });
+	    });
+	}
+
+	if($(".recycle-download").length > 0)
+	{
+		$(".recycle-download").click(function (e) {
+	        e.preventDefault();
+	        var file_name = $(this).data('file_name_download');
+	        var file_id = $(this).data('file_id');
+	        var that = $(this);
+	        $.ajax({
+	            type: "POST",
+	            dataType: "json",
+	            url: "/"+prefix+"/recycledownload",
+	            data: {
+	                file_name: file_name, // < note use of 'this' here
+	                id: file_id,
+	                action: 'download',
+	            },
+	            beforeSend: function ()
+	            {
+	            	showLoader();
+	                that.attr("disabled", "disabled");
+	            },
+	            complete: function ()
+	            {
+	            	hideLoader();
+	                that.removeAttr("disabled");
+	            },
+	            success: function (result)
+	            {
+	            	hideLoader();
+	            	if(result.status)
+	            	{
+	                	window.open(result.url, '_blank');
+	            	}
+	            	else
+	            	{
+	            		showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	            	}
+	            }
+	        }).fail(function (jqXHR, textStatus, error){
+            	hideLoader();
+            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+            });
+	    });
 	}
 })
 

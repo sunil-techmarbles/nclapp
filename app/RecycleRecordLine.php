@@ -20,4 +20,47 @@ class RecycleRecordLine extends Model
 		'total_price',
 		'pgi'
 	];
+
+	public static function addRecord($data)
+	{
+		$result = false;
+        $recycleRecordLine = new RecycleRecordLine();
+        $recycleRecordLine->record_id = $data->record_id;
+        $recycleRecordLine->category = $data->category;
+        $recycleRecordLine->lgross = $data->lgross;
+        $recycleRecordLine->ltare = $data->ltare;
+        $recycleRecordLine->price = $data->price;
+        $recycleRecordLine->pgi = $data->pgi;
+        $recycleRecordLine->total_price = $data->total_price;
+        if($recycleRecordLine->save())
+        {
+            $result = $recycleRecordLine->id;
+        }
+        
+        return $result;
+	}
+
+	public static function getAllRecycleRecordLineByRecordId($value)
+	{
+		return self::where([ 'record_id' => $value])
+			->orderBy('pallet', 'ASC')
+			->get();
+	}
+
+	public static function updateRecord($query, $fields)
+	{
+		return self::where($query)
+			->update($fields);
+	}
+
+	public static function deleteRecord($value)
+	{
+		$recycleRecordLine = self::find($value);
+		if($recycleRecordLine)
+		{
+			$recycleRecordLine ->delete();
+			return true;
+		}
+		return false;
+	}
 }

@@ -19,15 +19,53 @@ class RecycleRecord extends Model
 		'closed',
 	];
 
-	public static function getJoinRecod($value='')
+	public static function addRecord($data)
 	{
-		return self::select('recycle_records.*')
+		$result = false;
+        $recycleRecord = new RecycleRecord();
+        $recycleRecord->name = $data->name;
+        $recycleRecord->started = $data->started;
+        $recycleRecord->closed = $data->closed;
+        $recycleRecord->status = $data->status;
+        if($recycleRecord->save())
+        {
+            $result = $recycleRecord->id;
+        }
+        
+        return $result;
+	}
+
+	public static function updateRecord($query, $fields)
+	{
+		return self::where($query)
+			->update($fields);
+	}
+
+	public static function getRecord($value)
+	{
+		$query = self::select('recycle_records.*')
 			->selectSub('COUNT(rrl.id)', 'total')
     		->join('recycle_record_lines as rrl', function($join){
-                $join->on('recycle_records.id', '=', 'rrl.record_id');
-                })
-    		->groupBy('recycle_records.id')
+                	$join->on('recycle_records.id', '=', 'rrl.record_id');
+                });
+    	if($value)
+    	{
+    		$query = $query->where(['recycle_records.status' => '1']);
+    	}
+    	return $query->groupBy('recycle_records.id')
     		->orderBy('recycle_records.id', 'DESC')
             ->get();
+	}
+
+	public static function getRecordByName($value)
+	{
+		return self::where(['name' => $value])
+			->pluck('id');
+	}
+
+	public static function getRecordById($request)
+	{
+		return self::where(['id' => intval($request->id)])
+			->get();
 	}
 }

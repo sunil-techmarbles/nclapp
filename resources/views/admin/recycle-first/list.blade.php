@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
 	<div id="page-head">Recycle</div>
-    <form action="recycle/recycle.php" class="form-inline mb-3" method="POST">
+    <form action="{{route('recycle.record')}}" class="form-inline mb-3" method="POST">
+        @csrf
     	<div class="col-5">
 	    	<div class="form-group">
 		        <lable for="gross-weight"><strong>Category:</strong></lable>
@@ -69,7 +70,9 @@
                         <strong>{{$p['name'] }}</strong>
                         <button class="btn btn-sm btn-link recycle-download" data-file_id="{{$p['id']}}" data-file_name_download="{{$p['name']}}"><strong>View</strong></button>
                         @if($p["status"] == 1)
-                            <button class="btn-link recycle-record-edit" data-file_id="{{$p['id']}}"><strong>Edit</strong></button>
+                            <a class="btn btn-sm btn-link" target="__blank" data-file_id="{{$p['id']}}" href="{{route('edit.recycle.record', ["record_id" => $p["id"]])}}" title="Edit">
+                                Edit
+                            </a>
                         @endif
                     </td>
                     <td>{{$p["started"] }}</td>
@@ -78,7 +81,7 @@
                     <td>{{$p["total"] }}</td>
                     <td>
                         @if($p["status"] == 1)
-                            <button class="btn-link recycle-submit" data-file_id="{{$p['id']}}" data-file_name="{{$p['name']}}"><strong>Submit</strong></button>
+                            <button class="btn btn-sm btn-link recycle-submit" data-file_id="{{$p['id']}}" data-file_name="{{$p['name']}}"><strong>Submit</strong></button>
                         @endif
                     </td>
                 </tr>
@@ -133,5 +136,5 @@
         @endif
     @endif
 </div>
-@include('admin.recycle-first.modal')
+@include('admin.recycle-first.modal', ['categories' => (object)[]])
 @endsection

@@ -28,4 +28,16 @@ class Recycle extends Model
 		return self::orderBy($query['field'], $query['order'])
 			->get();
 	}
+
+	public static function getTypeOfScrap($request)
+	{
+		return self::where(['Type_of_Scrap' => $request->category])
+			->get();
+	}
+
+	public static function getAllTypeOfScrap($query)
+	{
+		return self::where($query)
+			->pluck('Type_of_Scrap');
+	}
 }
