@@ -13,8 +13,8 @@ class BlanccoMakorApi extends Command
     use TMXmlToArrayTraits;
     use BlanccoMakorMobileTraits;
 
-    public $basePath, $blanccoXmlDataDir, $blanccoAdditionMobileDataDir;
-    
+    public $basePath, $blanccoXmlDataDir, $blanccoAdditionMobileDataDir, $blanccoMakorRequestFileDir;
+    public $blanccoMakorProcessedDataDir;
     /**
      * The name and signature of the console command.
      *
@@ -49,7 +49,9 @@ class BlanccoMakorApi extends Command
         $this->basePath  = base_path().'/public';
         $this->blanccoXmlDataDir = $this->basePath . "/blancco/xml-data/";
         $this->blanccoAdditionMobileDataDir = $this->basePath . "/wipe-data-mobile";
-
+        $this->blanccoMakorRequestFileDir = $this->basePath . "/blancco/makor-requests/";
+        $this->blanccoMakorProcessedDataDir = $this->basePath . "/makor-processed-data";
+ 
         // read all the xml files form blancco and create makor request.
         $this->createMakorRequestFromBlanccoData();
 
@@ -87,8 +89,8 @@ class BlanccoMakorApi extends Command
                             $additionalMobileDataFile = $this->blanccoAdditionMobileDataDir .'/' . $assetId . ".xml";
                             if(!File::exists($additionalMobileDataFile))
                             {
-                                // $message = $reportUuid . ' --> No Additional xml data file found for this Asset Id : ' . $assetId;
-                                // MessageLog::addLogMessageRecord($message,$type="blanccoMakor", $status="failure");
+                                $message = $reportUuid . ' --> No Additional xml data file found for this Asset Id : ' . $assetId;
+                                MessageLog::addLogMessageRecord($message,$type="blanccoMakor", $status="failure");
                                 continue;
                             }
 
@@ -179,14 +181,19 @@ class BlanccoMakorApi extends Command
                             $apiDataSendToMakor['inputOutput'] = (isset($blanccoAdditionalData['data']['Description']['Input_Output'])) ? $blanccoAdditionalData['data']['Description']['Input_Output'] : '';
 
                             $MakorMobileApiRequestDataXml = $this->createMakorMobileXmlData($apiDataSendToMakor);
-
-                            pr($MakorMobileApiRequestDataXml);  die;
-
                             $MakorResponse = $this->blanccoMakorAPIRequest($MakorMobileApiRequestDataXml, $assetId);
 
- 
-                            
+                            if($MakorResponse == 200)
+                            {
+                                $RequestFile = $this->blanccoMakorRequestFileDir . $assetId . ".xml";
+                                WriteDataFile($RequestFile, $MakorMobileApiRequestDataXml);
 
+                                $destinationBlanccoMobileExecutedFile = $this->blanccoMakorProcessedDataDir . '/blancco-mobile-executed/' . $blanccoXmlFile;
+                                rename($blanccoXmlFilePath, $destinationBlanccoMobileExecutedFile);
+
+                                $destinationAdditionalMobileExecutedFile = $this->blanccoMakorProcessedDataDir . '/additional-mobile-executed/' . $assetId . ".xml";
+                                rename($additionalMobileDataFile, $destinationAdditionalMobileExecutedFile);
+                            }
                         }
                         else
                         {

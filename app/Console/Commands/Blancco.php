@@ -231,33 +231,21 @@ class Blancco extends Command
         if($type == 'fulldata')
         {
             $xmlFile = $this->basePath . "/blancco/xml-data/".$returnFileName .'.xml';
-            $this->WriteBlancoDataFile($xmlFile, $result); 
+            WriteDataFile($xmlFile, $result); 
             $successTxt =  'All data file Created';
         }
         else if ($type == "singlepdf")
         {
             $pdfFile = $this->basePath . "/blancco/pdf-data/".$returnFileName .'.pdf';
-            $this->WriteBlancoDataFile($pdfFile, $result);
+            WriteDataFile($pdfFile, $result);
             $successTxt =  $reportUuid . ' PDF file created for this reportUuid';
         }
         else if ($type == "singlexml")
         {
             $xmlFile = $this->basePath . "/blancco/xml-data/".$returnFileName .'.xml';
-            $this->WriteBlancoDataFile($xmlFile, $result);
+            WriteDataFile($xmlFile, $result);
             $successTxt =  $reportUuid . ' XML file created for this reportUuid';
         }
         MessageLog::addLogMessageRecord($successTxt, $type="blancco", $status="success");
-    }
-
-   /**
-     *  Function for getting all data from blancco.
-     *
-     * @return mixed
-     */
-   public function WriteBlancoDataFile($file, $result)
-   {
-        $dataFile = fopen ($file,'w');
-        fwrite ($dataFile, $result);
-        fclose ($dataFile);
     }
 }

@@ -98,35 +98,35 @@ function createFormFactorForNewRunlist($data)
     switch ($data['technology']) 
     {
         case "Ultra Small Form Factor":
-            $formFactor = "USFF";
-            break;
+        $formFactor = "USFF";
+        break;
         case "Small Form Factor":
-            $formFactor = "SFF";
-            break;
+        $formFactor = "SFF";
+        break;
         case "Notebook":
-            $formFactor = "LAP";
-            break;
+        $formFactor = "LAP";
+        break;
         case "All_In_One":
-            $formFactor = "AIO";
-            break;
+        $formFactor = "AIO";
+        break;
         case "Mini Tower":
-            $formFactor = "MT";
-            break;
+        $formFactor = "MT";
+        break;
         case "Desktop":
-            $formFactor = "DT";
-            break;
+        $formFactor = "DT";
+        break;
         case "Tablet_Notebook":
-            $formFactor = "TAB";
-            break;
+        $formFactor = "TAB";
+        break;
         case "Tabet_Notebook":
-            $formFactor = "TAB";
-            break;
+        $formFactor = "TAB";
+        break;
         case "Tiny Desktop":
-            $formFactor = "TINY";
-            break;
+        $formFactor = "TINY";
+        break;
         default:
-            $formFactor = '';
-            break;
+        $formFactor = '';
+        break;
     }
     return $formFactor;
 }
@@ -219,17 +219,17 @@ function getProcessorGenration($cpuModel)
     $processerGen = substr($cpuModel, 0, 1);
     switch ($processerGen) {
         case 1:
-           $processerGen = "1st Gen";
-            break;
+        $processerGen = "1st Gen";
+        break;
         case 2:
-           $processerGen = "2nd Gen";
-            break;
+        $processerGen = "2nd Gen";
+        break;
         case 3:
-           $processerGen = "3rd Gen";
-            break;
+        $processerGen = "3rd Gen";
+        break;
         default:
-            $processerGen = $processerGen . "th Gen";
-            break;
+        $processerGen = $processerGen . "th Gen";
+        break;
     }
     return $processerGen;
 }
@@ -331,6 +331,13 @@ function convert_bytes_to_specified($bytes, $to, $decimal_places = 0)
         'K' => number_format( $bytes / 1000, $decimal_places ), 
         'M' => number_format( $bytes / 1000000, $decimal_places ),
         'G' => number_format( $bytes / 1000000000, $decimal_places )
-    );
+        );
     return isset($formulas[$to]) ? $formulas[$to] : 0;
+}
+
+function WriteDataFile($file, $result)
+{
+    $dataFile = fopen ($file,'w');
+    fwrite ($dataFile, $result);
+    fclose ($dataFile);
 }
