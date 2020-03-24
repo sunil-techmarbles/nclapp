@@ -341,3 +341,30 @@ function WriteDataFile($file, $result)
     fwrite ($dataFile, $result);
     fclose ($dataFile);
 }
+
+function getXMLContent($xml_file_path)
+{
+    //file content
+    $file_content = iconv('UTF-8', 'UTF-8//IGNORE', utf8_encode(file_get_contents($xml_file_path)));
+    //load xml
+    $file_content_object = simplexml_load_string($file_content, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
+    //check if XML is valid
+    if (false === $file_content_object) {
+        return false;
+    }
+    //converting to array
+    $file_content_array = json_decode(json_encode($file_content_object), 1);
+    return $file_content_array;
+}
+
+
+function getJobUserData($job_user_fields, $attribute_index)
+{
+    foreach ($job_user_fields as $key => $job_user_field)
+    {
+        if (isset($job_user_field['@attributes']['index']) && $job_user_field['@attributes']['index'] == $attribute_index)
+        {
+            return trim($job_user_field['Value']);
+        }
+    }
+}
