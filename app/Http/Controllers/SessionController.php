@@ -111,7 +111,7 @@ class SessionController extends Controller
 			$sessionItems = SessionData::sessionItems($currentSession);
 			$sessionParts = SessionData::sessionParts($currentSession);
 			if (!empty($sessionItems))
-			{		
+			{
 				$fp = fopen($this->sessionReports.'/session'.$currentSession.'.csv', "w");
 				fputcsv($fp, ["ASIN","Asset","Model","Form Factor","CPU","Price","Added"]);
 				foreach ($sessionItems as $i)
@@ -227,7 +227,10 @@ class SessionController extends Controller
 		}
 		if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
 		{
-			$this->sendSessionPdfReport($request);						
+			$this->sendSessionPdfReport($request);
+			$status = 'success';
+            $message = 'Session create successfully';
+            \Session::flash($status, $message);					
 		}
 		$sessions = Session::getSessionRecord($request);
 		foreach($sessions as &$s)

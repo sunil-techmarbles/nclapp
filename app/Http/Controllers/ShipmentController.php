@@ -187,7 +187,6 @@ class ShipmentController extends Controller
 				{
 					$this->createShipmentReport($request, $sessionItems, $currentSession, $sessionSummary);
 				}
-
 				return redirect()->route('shipments')->with([
 					'success', 'Shipment added successfully.'
 				]);
@@ -247,7 +246,7 @@ class ShipmentController extends Controller
 				$i["added_on"]
 		    ];
 		    fputcsv($fp, $fields);
-		    ShipmentsData::updateShipmentRunStatus($i["asset"], $status='shipped');
+		    SessionData::updateShipmentRunStatus($i["asset"], $status='shipped');
 		}
 		fclose($fp);
 		$shipmentEmails = Config::get('constants.shipmentEmails');

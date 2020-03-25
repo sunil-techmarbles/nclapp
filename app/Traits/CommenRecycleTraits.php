@@ -106,6 +106,5 @@ trait CommenRecycleTraits
         $pdf->WriteHTML($html);
         //save the file put which location you need folder/filname
         $pdf->Output($saveFilePath, 'F');
-        return;
 	}
 }

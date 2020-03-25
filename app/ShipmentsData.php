@@ -74,12 +74,6 @@ class ShipmentsData extends Model
     		->update(["status"=> $status]);
     }
 
-    public static function updateShipmentRunStatus($r, $status)
-    {
-        return self::where(["asset"=> $r])
-            ->update(["run_status"=> $status]);
-    }
-
     public static function getResultAsinsAndShipmentData($status, $shipmentName)
     {
     	return self::select('shipments_data.aid', 'shipments_data.sid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
