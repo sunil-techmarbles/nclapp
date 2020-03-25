@@ -111,7 +111,7 @@ class SessionController extends Controller
 			$sessionItems = SessionData::sessionItems($currentSession);
 			$sessionParts = SessionData::sessionParts($currentSession);
 			if (!empty($sessionItems))
-			{		
+			{
 				$fp = fopen($this->sessionReports.'/session'.$currentSession.'.csv', "w");
 				fputcsv($fp, ["ASIN","Asset","Model","Form Factor","CPU","Price","Added"]);
 				foreach ($sessionItems as $i)
@@ -156,7 +156,7 @@ class SessionController extends Controller
 					'name' => $name2,
 					'extension' => substr($name2, strpos($name2, ".") + 1)
 				];
-				Mail::send('admin.emails.sessemail', $data, function ($m) use ($subject, $sessionEmails, $files, $name) {
+				Mail::send('admin.emails.sessemail', $data, function ($m) use ($subject, $sessionEmails, $files) {
 		            $m->to($sessionEmails)->subject($subject);
 		            foreach($files as $file)
 		            {
@@ -227,7 +227,10 @@ class SessionController extends Controller
 		}
 		if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
 		{
-			$this->sendSessionPdfReport($request);						
+			$this->sendSessionPdfReport($request);
+			$status = 'success';
+            $message = 'Session create successfully';
+            \Session::flash($status, $message);					
 		}
 		$sessions = Session::getSessionRecord($request);
 		foreach($sessions as &$s)
@@ -235,7 +238,7 @@ class SessionController extends Controller
 			$s['count'] = SessionData::getSessionDataCount($s['id']);
 		}
 		if($session = $request->get('s'))
-		{	
+		{
 			$sessionName = Session::getCurrentSessionName($session);
 			$output = $this->sessionSearchAndWithdrawAndReorder($request, $session);
 			if($output['status'])
@@ -270,7 +273,6 @@ class SessionController extends Controller
 	                    \Session::flash($status, $message);
 	                }
 	            }
-
 	            if($p["missing"] > 0)
 	            {
 	                $p["reorder_qty"] = max($p["missing"] + $p["low_stock"],$p["reorder_qty"]);

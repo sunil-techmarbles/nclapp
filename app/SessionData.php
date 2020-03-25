@@ -65,6 +65,12 @@ class SessionData extends Model
         return self::where(["asset" => $request['asset']])->update(['aid' => $request['aid']]);
     }
 
+    public static function updateShipmentRunStatus($r, $status)
+    {
+        return self::where(["asset"=> $r])
+            ->update(["run_status"=> $status]);
+    }
+
     public static function updateRecordRunStatus($ids, $text)
     {
         $rowCount = self::WhereIn("asset" ,$ids)->count();

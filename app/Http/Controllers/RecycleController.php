@@ -347,13 +347,8 @@ class RecycleController extends Controller
                 $pdfFileData = (!$pdfFileData->isEmpty()) ? $pdfFileData->toArray() : [];
                 $closed = ($pdfFileData[0]['status']) ? '' : Carbon::createFromFormat('l F jS,Y', $pdfFileData[0]['closed']);
                 $pdfData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($request->id));
-                // $pdfData = $pdfData->chunk(5);
                 $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->render();
-                // echo $html;
-                $pdf = PDF::loadHTML($html)->setPaper('a4', 'landscape');
-                // $pdf = PDF::loadView('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'));
-                // die;
-                $pdf->save($filePath);
+                $this->createPDF($html, $request->file_name, $filePath);
                 return response()->json(['url' => $filePath, 'status' => true]);
             }
         }

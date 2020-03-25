@@ -2,6 +2,7 @@
 namespace App\Traits;
 
 use Carbon\Carbon;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 trait CommenRecycleTraits
@@ -98,4 +99,12 @@ trait CommenRecycleTraits
 		}
 		return $message;
     }
+
+    public function createPDF($html, $fileName, $saveFilePath)
+	{
+		$pdf = new \Mpdf\Mpdf();
+        $pdf->WriteHTML($html);
+        //save the file put which location you need folder/filname
+        $pdf->Output($saveFilePath, 'F');
+	}
 }
