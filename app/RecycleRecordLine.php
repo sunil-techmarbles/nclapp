@@ -63,4 +63,15 @@ class RecycleRecordLine extends Model
 		}
 		return false;
 	}
+
+	public static function getRecordGroupByCat($recordId)
+	{
+		return self::select('category')
+			->selectSub('SUM(lgross)', 'total_lbs_gross')
+			->selectSub('SUM(ltare)', 'total_lbs_tare')
+			->selectSub('SUM(total_price)', 'total_price')
+			->where(['record_id' => $recordId])
+			->groupBy('category')
+			->get();
+	}
 }

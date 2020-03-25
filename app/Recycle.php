@@ -16,7 +16,19 @@ class Recycle extends Model
 		'TYPE',
 		'status'
 	];
-
+	public static function addRecord($data)
+	{
+		$result = false;
+        $recycle = new Recycle();
+        $recycle->Type_of_Scrap = $data->Type_of_Scrap;
+        $recycle->status = $data->status;
+        if($recycle->save())
+        {
+            $result = $recycle->id;
+        }
+        
+        return $result;
+	}
 	public static function getAllRecord($field, $query)
 	{
 		return self::where($query)
@@ -39,5 +51,22 @@ class Recycle extends Model
 	{
 		return self::where($query)
 			->pluck('Type_of_Scrap');
+	}
+
+	public static function deleteRecord($value)
+	{
+		$recycle = self::where(['Type_of_Scrap' => $value]);
+		if($recycle)
+		{
+			$recycle ->delete();
+			return true;
+		}
+		return false;
+	}
+
+	public static function approveCategoryRecord($value)
+	{
+		return self::where(['Type_of_Scrap' => $value])
+			->update(['status' => '0']);
 	}
 }

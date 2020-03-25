@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
-use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Mail;
+use App\Traits\CommenRecycleTraits;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Redirect;
@@ -17,7 +17,9 @@ use App\RecycleRecordLine;
 
 class RecycleController extends Controller
 {
-	public $basePath, $current, $wipeData2, $filePath, $logo, $returlPath;
+    use CommenRecycleTraits;
+	public $basePath, $current, $wipeData2, $filePath, $logo, $returlPath, $rootPath;
+
 	/**
      * Instantiate a new RecycleController instance.
      */
@@ -26,9 +28,10 @@ class RecycleController extends Controller
     	/**
      	* Set value for common uses in the RecycleController instance.
      	*/
-     	$this->basePath = base_path().'/public';
-     	$this->current = Carbon::now();
-     	$this->wipeData2 = $this->basePath.'/wipe-data2';
+        $this->basePath = base_path().'/public';
+        $this->current = Carbon::now();
+        $this->rootPath = $this->basePath.'/recycle/files';
+        $this->wipeData2 = $this->basePath.'/wipe-data2';
         $this->filePath = $this->basePath.'/recycle/files/pdf';
         $this->returlPath = '/recycle/files/pdf';
         $this->logo = $this->basePath.'/recycle/logo.jpg';
@@ -227,6 +230,107 @@ class RecycleController extends Controller
             return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
         }
     }
+
+    public function deleteRecycleCategoryRecord(Request $request, $categoryName)
+    {
+        if($request->ajax())
+        {
+            $result = Recycle::deleteRecord(trim($categoryName));
+            if($result)
+            {
+                return response()->json(['message' => 'Category deleted successfully.', 'status' => true]);
+            }
+            return response()->json(['message' => 'something went wrong.', 'status' => false]);
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
+
+    /**
+    * Ajax Request to approve category when approved by admin
+    */
+    public function approveRecycleCategoryRecord(Request $request)
+    {
+        if($request->ajax())
+        {
+            $result = Recycle::approveCategoryRecord(trim($request->approve_cat_name));
+            if($result)
+            {
+                return response()->json(['message' => 'Category Approved successfully.', 'status' => true]);
+            }
+            return response()->json(['message' => 'something went wrong.', 'status' => false]);
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
+
+    public function submitRecycleCategoryRecord(Request $request)
+    {
+        if($request->ajax())
+        {
+            if (isset($request->action) && $request->action == 'submit')
+            {
+
+                $sampleFile = $this->rootPath."/sample.xlsx";
+                $sampleCategoryFile = $this->rootPath."/sample_category.xlsx";
+                $recycleDate = Carbon::now()->format('l F jS,Y');
+                $fileClosedDate = Carbon::now()->format('m-d-Y');
+                $recycleFilePath = $this->rootPath."/processed/Recycle_BOL".$fileClosedDate.'.xlsx';
+                $categoriesFilePath = $this->rootPath."/categories/Recycle_Invoice_".$fileClosedDate.".xlsx";
+                $recordId = $request->id;
+                $xlsxData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($recordId));
+                if (!empty($xlsxData))
+                {
+                    $this->init($xlsxData, $type='first', $sampleFile, $recycleFilePath);
+                }
+                $recordData = RecycleRecordLine::getRecordGroupByCat($recordId);
+                if (!empty($recordData))
+                {
+                    $this->init($recordData, $type='secound', $sampleCategoryFile, $categoriesFilePath);
+                }
+                $rename = "Recycle_BOL".$this->current. '.xlsx';
+                $dbDate = $this->current;
+                $query = [
+                    'id' => $recordId,
+                ];
+
+                $fields = [
+                    'name' => $rename,
+                    'closed' => $dbDate,
+                    'status' => '0'
+                ];
+                RecycleRecord::updateRecord($query, $fields);
+                $emails = config('constants.recycleReportMailAddress');
+                $message = "Hi,
+                            The Recycle shipment have been created.
+                            Please find the attachment. ";
+                $subject = 'Recycle Shipment Detail';
+                
+                $files[] = ['url' => $recycleFilePath, 'name' => "Recycle_BOL".$fileClosedDate.'.xlsx'];
+                $files[] = ['url' => $categoriesFilePath, 'name'=> "Recycle_Invoice_".$fileClosedDate.".xlsx"];
+                Mail::raw($message, function ($m) use ($subject, $emails, $files) {
+                    $m->to($emails)->subject($subject);
+                    foreach($files as $file) {
+                        $m->attach($file['url'], array(
+                            'as' => $file['name'],
+                            'mime' => 'xlsx')
+                        );
+                    }
+                });
+                return response()->json(['message' => 'Submitted successfully.', 'status' => true]);
+            }
+            return response()->json(['message' => 'something went wrong.', 'status' => false]);
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
+
     public function recycleDownloadPdf(Request $request)
     {
         if($request->ajax())
@@ -242,11 +346,13 @@ class RecycleController extends Controller
                 $pdfFileData = RecycleRecord::getRecordById($request);
                 $pdfFileData = (!$pdfFileData->isEmpty()) ? $pdfFileData->toArray() : [];
                 $closed = ($pdfFileData[0]['status']) ? '' : Carbon::createFromFormat('l F jS,Y', $pdfFileData[0]['closed']);
-                $orientation = 'landscape';
-                $customPaper = array(0,0,950,950);
                 $pdfData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($request->id));
                 $pdfData = $pdfData->chunk(5);
-                $pdf = PDF::loadView('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->setPaper($customPaper, $orientation)->stream();
+                $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->render();
+                echo $html;
+                die;
+                $pdf = PDF::loadHTML($html)->setPaper('a4', 'landscape');
+                // $pdf = PDF::loadView('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->setPaper('a4', 'landscape')->stream();
                 $pdf->save($filePath);
                 return response()->json(['url' => $returnPath, 'status' => true]);
             }
@@ -256,4 +362,63 @@ class RecycleController extends Controller
             return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
         }
     }
+
+    public function addNewCategoryRecord(Request $request)
+    {
+        if($request->ajax())
+        {
+            if (isset($request->action) && $request->action == 'new_cat')
+            {
+                if (empty($request->category_name) || empty(trim($request->category_name)))
+                {
+                    return response()->json(['message' => 'Category name required.', 'status' => false]);
+                }
+                else
+                {
+                    $data = ['Type_of_Scrap' => trim($request->category_name), 'status' => '1'];
+                    $checkIfExist = Recycle::getAllTypeOfScrap($query= ['Type_of_Scrap' => trim($request->category_name)]);
+                    if (count($checkIfExist->toArray()) > 0)
+                    {
+                        return response()->json(['message' => 'Category already exists.', 'status' => false]);
+                    }
+                    else
+                    {
+                        $result = Recycle::addRecord((object) $data);
+                        if($result)
+                        {
+                            return response()->json(['message' => 'Your category is successfully added. Wait for admin approval.', 'status' => true]);
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
+
+    public function editCategoryRecord(Request $request)
+    {
+    }
+
+    public function updateCategoryRecord(Request $request)
+    {
+        if (isset($_POST['action']) && $_POST['action'] == 'update_category')
+        {
+            if (empty($_POST['Type_of_Scrap']) || empty(trim($_POST['Type_of_Scrap']))) {
+                header("Location: recycle/category.php?status=1&cat_name=" . $_POST['old_name']);
+            }
+            $sql = "SELECT * FROM recycle WHERE `Type_of_Scrap` = '" . trim($_POST['Type_of_Scrap']) . "' AND `id` != '" . $_POST['cat_id'] . "'";
+            $result = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+            if (empty($result)) {
+                $sql = "UPDATE recycle SET `PRICE` = '" . $_POST['PRICE'] . "',`TYPE` = '" . $_POST['TYPE'] . "',`status` = '" . $_POST['status'] . "',`Type_of_Scrap` = '" . trim($_POST['Type_of_Scrap']) . "' WHERE `id` = '" . $_POST['cat_id'] . "'";
+                $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                $msg = '<strong>Success!</strong> Category updated successfully.';
+            } else {
+                header("Location: recycle/category.php?status=0&cat_name=" . $_POST['old_name']);
+            }
+        }
+    }
+
 }

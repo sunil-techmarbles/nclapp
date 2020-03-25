@@ -120,14 +120,14 @@
                                 @endif
                             </td>
                             <td>
-                            	<button class="btn btn-link recycle-reject" data-reject_name="{{$unapporovedCategory['Type_of_Scrap']}}">
-                            		<strong>Delete</strong>
-                            	</button>
+                                <a href="{{route('edit.category.record', ["cat_name" => $unapporovedCategory['Type_of_Scrap']])}}">
+                                    <img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
+                                </a>
                             </td>
                             <td>
-                            	<a class="btn btn-default border border-secondary" href="recycle/ category.php?cat_name={{$unapporovedCategory['Type_of_Scrap']}}">
-                            		<strong>Edit</strong>
-                            	</a>
+                                <a href="javascript:void(0)" onclick="del_confirm({{$unapporovedCategory['Type_of_Scrap']}},'deleterecyclecategoryrecord','Category')" data-reject_name="{{$unapporovedCategory['Type_of_Scrap']}}" class=" recycle-reject">
+                                    <img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
+                                </a>
                             </td>
                         </tr>
                     @endforeach

@@ -845,5 +845,13 @@ return [
     'adminUsers' => [
         'admin',
         'randy'
+    ],
+    'recycleReportMailAddress' => [
+        "rahuls.techmarbles@gmail.com",
+        // "randy@itamg.com",
+        // "julio@itamg.com",
+        // "richy@itamg.com",
+        // "kamal@itamg.com",
+        // "matthew@itamg.com",
     ]
 ];

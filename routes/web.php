@@ -121,7 +121,12 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/recyclnewrecord', 'RecycleController@recyclRecord')->name('recycle.record');
 		Route::any('/editrecyclerecord', 'RecycleController@editRecycleRecord')->name('edit.recycle.record');
 		Route::post('/updaterecyclerecord', 'RecycleController@updateRecycleRecord')->name('update.recycle.record');
-		Route::get('/deleterecyclerecord/{recordId}', 'RecycleController@deleteRecycleRecord')->name('delete.recycle.record');
+		Route::get('/deleterecyclerecord/{recordId}', 'RecycleController@deleteRecycleRecord');
+		Route::get('/deleterecyclecategoryrecord/{catname}', 'RecycleController@deleteRecycleCategoryRecord');
+		Route::post('/approverecyclecategoryrecord', 'RecycleController@approveRecycleCategoryRecord');
+		Route::post('/submitcyclecategoryrecord', 'RecycleController@submitRecycleCategoryRecord');
+		Route::post('/addnewcategoryrecord', 'RecycleController@addNewCategoryRecord');
 		Route::any('/recycle', 'RecycleController@recycleFirstIndex')->name('recycle.first');
+		Route::any('/editcategoryrecord', 'RecycleController@editCategoryRecord')->name('edit.category.record');
 	});
 });
