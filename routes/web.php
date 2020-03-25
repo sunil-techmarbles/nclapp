@@ -128,5 +128,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/addnewcategoryrecord', 'RecycleController@addNewCategoryRecord');
 		Route::any('/recycle', 'RecycleController@recycleFirstIndex')->name('recycle.first');
 		Route::any('/editcategoryrecord', 'RecycleController@editCategoryRecord')->name('edit.category.record');
+		Route::any('/updateCategoryRecord', 'RecycleController@updateCategoryRecord')->name('update.category.record');
 	});
 });

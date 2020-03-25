@@ -672,9 +672,10 @@ $(document).ready(function()
 	            success: function (result)
 	            {
 	            	hideLoader();
+	            	console.log(result);
 	            	if(result.status)
 	            	{
-	                	window.open(result.url, '_blank');
+	                	// window.open(result.url, '_blank');
 	            	}
 	            	else
 	            	{
