@@ -33,4 +33,12 @@ class LenovoModelData extends Model
         $exits = self::where([ 'part_number' => $partNumber ])->first();
         return ( $exits  ) ? true : false ;
     }
+
+    public static function getLenovoManufacturerModel($serialNumber)
+    {
+        $PartNumber = self::select('model')
+            ->where(["part_number"=> $serialNumber])
+            ->first();
+        return $PartNumber->model;
+    }
 }
