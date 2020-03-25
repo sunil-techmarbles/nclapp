@@ -10,7 +10,6 @@ trait CommonWipeMakorApiTraits
 	public function init($wipeFileContent, $additionalFileContent, $productName, $type)
 	{
         $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName);
-
 	}
 
 	public function AddCommomData($wipeFileContent, $additionalFileContent, $productName)
@@ -40,7 +39,6 @@ trait CommonWipeMakorApiTraits
         }
 
         $this->SetCommonData();
-        
         // $this->_setAppleData();
         // $this->_setProcessorData();
         // $this->_setHardDriveData();
@@ -140,6 +138,5 @@ trait CommonWipeMakorApiTraits
         $this->apiData['chassistype'] = $this->hardwareData['ChassisType'];
 
         pr( $this->apiData ); die("test");
-
 	}
 }
