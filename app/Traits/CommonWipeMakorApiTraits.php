@@ -2,6 +2,8 @@
 namespace App\Traits;
 use App\LenovoModelData;
 use App\IbmModel;
+use App\AppleDataNew;
+
 
 trait CommonWipeMakorApiTraits
 {
@@ -14,7 +16,9 @@ trait CommonWipeMakorApiTraits
         $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName);
 
         pr( $this->apiData ); die("***");
+
 	}
+
 
 	public function AddCommomData($wipeFileContent, $additionalFileContent, $productName)
 	{
@@ -44,7 +48,7 @@ trait CommonWipeMakorApiTraits
 
         $this->SetCommonData();
         $this->SetAppleData();
-        // $this->_setProcessorData();
+        $this->SetProcessorData();
         // $this->_setHardDriveData();
         // $this->_setOpticleData();
         // $this->_setVideoOutput();
@@ -56,6 +60,7 @@ trait CommonWipeMakorApiTraits
         // $this->_save_data_array();
         // $this->_create_xml();
 	}
+
 
 	public function SetCommonData()
 	{
@@ -257,18 +262,146 @@ trait CommonWipeMakorApiTraits
         }
 	}
 
+
 	public function SetAppleData()
 	{
 		//Apple data array
         $this->appleData = array();
         unset($this->appleDataError );
         $appleModelModified = '';
+        
+        $appleProcessorModel = 'sd';
+        $appleDataResp = AppleDataNew::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
+
         if (strpos(strtolower($this->hardwareData['ComputerVendor']), "apple") !== false)
         {
-        	
+        	$appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor']['Name']);
+        	if (isset($this->hardwareData['Processors']['Processor'][0]))
+        	{
+                $appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor'][0]['Name']);
+                $appleProcessorModel = $appleProcessor[2];
+            }
+            else
+            {
+                $appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor']['Name']);
+                $appleProcessorModel = $appleProcessor[2];
+            }
+
+           	$appleDataResp = AppleDataNew::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
+
+           	if ($appleDataResp !== FALSE && !is_array($appleDataResp) && $appleDataResp == 'DUPLICATES')
+           	{
+                $this->appleDataError = "Multiple Models Manually Check";
+            }
+            else
+            {
+                $this->appleData = $appleDataResp;
+            }
+
+            $appleModelModified = trim(preg_replace('/[0-9,]/', "", $this->hardwareData['ComputerModel']));
+
+            if (!empty($this->appleData) && is_array($this->appleData))
+            {
+                $modelString = trim($this->appleData['Model']);
+                $modelString = str_replace($this->apiData['manufacturer'], "", $modelString);
+                $this->apiData['model'] = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $modelString)));
+            }
+            else
+            {
+                $this->apiData['model'] = $this->apiData['model'];
+            }
+
+            if (!empty($this->appleData['Model#']))
+            {
+                $this->apiData['model#'] = $this->appleData['Model#'];
+            }
         }
-
-
+        $this->SetTechnologyData($appleModelModified);
 	}
+
+
+	public function SetTechnologyData($appleModelModified)
+	{
+        if (isset($this->additionalData['Technology']))
+        {
+            $this->apiData['form_factor'] = $this->additionalData['Technology'];
+        }
+        elseif (isset($appleModelModified))
+        {
+            if ($appleModelModified == 'MacBookPro')
+            {
+                $this->apiData['form_factor'] = "Notebook";
+            }
+            elseif ($appleModelModified == 'PowerMac')
+            {
+                $this->apiData['form_factor'] = "Tower";
+            }
+            elseif ($appleModelModified == 'MacBook')
+            {
+                $this->apiData['form_factor'] = "Notebook";
+            }
+            elseif ($appleModelModified == 'MacPro')
+            {
+                $this->apiData['form_factor'] = "Tower";
+            }
+            elseif ($appleModelModified == 'MacBookAir')
+            {
+                $this->apiData['form_factor'] = "Notebook";
+            }
+            elseif ($appleModelModified == 'PowerBook')
+            {
+                $this->apiData['form_factor'] = "Notebook";
+            }
+            elseif ($appleModelModified == 'iMac')
+            {
+                $this->apiData['form_factor'] = "All In One";
+            }
+            elseif ($appleModelModified == 'Macmini')
+            {
+                $this->apiData['form_factor'] = "Ultra Small Form Factor";
+            }
+            else {
+                $this->apiData['form_factor'] = "";
+            }
+        }
+        else
+        {
+            $this->apiData['form_factor'] = "";
+        }
+    }
+
+    public function SetProcessorData()
+    {
+    	if (!empty($this->appleData))
+    	{
+    		$this->apiData['processors'][0]['processor_manufacturer'] = $this->appleData['Processor_Manufacturer'];
+            $this->apiData['processors'][0]['processor_type'] = $this->appleData['Processor_Type'];
+            $this->apiData['processors'][0]['processor_model'] = $this->appleData['Processor_Model'];
+            $this->apiData['processors'][0]['processor_core'] = $this->appleData['Processor_Core'];
+            $this->apiData['processors'][0]['processor_generation'] = $this->appleData['Processor_Generation'];
+            $this->apiData['processors'][0]['processor_codename'] = $this->appleData['Processor_Codename'];
+            $this->apiData['processors'][0]['processor_socket'] = $this->appleData['Processor_Socket'];
+            if (!empty($this->appleData['Processor_Socket']))
+            {
+                $speed = MHzToGHz($this->appleData['Processor_Socket']);
+                $speed = '';
+            }
+            else
+            {
+                $speed = "";
+            }
+            $this->apiData['processors'][0]['processor_speed'] = $speed;
+            $this->apiData['processors'][0]['processor_qty'] = $this->appleData['Processor_Qty'];
+    	}
+    	else
+    	{
+            $processor_data = getCustomizeData($this->hardwareData['Processors']['Processor']);
+
+            pr($processor_data );die("***");
+
+
+    	}
+    	die("***********");
+    }
 
 }

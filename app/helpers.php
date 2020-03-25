@@ -368,3 +368,48 @@ function getJobUserData($job_user_fields, $attribute_index)
         }
     }
 }
+
+function MHzToGHz($speed)
+{
+    //check if in MHz
+    $get_ex = explode(" ", html_entity_decode($speed));
+    if (isset($get_ex[1]) && $get_ex[1] == 'MHz')
+    {
+        $convrt_GHz = $get_ex[0] / 1000;
+        $speed = round($convrt_GHz, 1);
+        $speed = $speed + 0;
+        $speed = $speed . " GHz";
+    }
+    elseif (strpos($speed, 'MHz'))
+    {
+        $spd = chop($speed, 'MHz');
+        $convrt_GHz = $spd / 1000;
+        $speed = round($convrt_GHz, 1);
+        $speed = $speed + 0;
+        $speed = $speed . " GHz";
+    }
+    else
+    {
+        $speed = $speed;
+    }
+    return $speed;
+}
+
+//Coustomise  data
+function getCustomizeData($data)
+{
+    $i = 0;
+    if (isset($data[0]))
+    {
+        foreach ($data as $key => $value)
+        {
+            $custom_data[$i] = $value;
+            $i++;
+        }
+    }
+    else
+    {
+        $custom_data[$i] = $data;
+    }
+    return $custom_data;
+}
