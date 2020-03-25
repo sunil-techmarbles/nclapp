@@ -2,8 +2,8 @@
 namespace App\Traits;
 use App\LenovoModelData;
 use App\IbmModel;
-use App\AppleDataNew;
-
+use App\NewAppleData;
+use App\NewProcessors;
 
 trait CommonWipeMakorApiTraits
 {
@@ -60,7 +60,6 @@ trait CommonWipeMakorApiTraits
         // $this->_save_data_array();
         // $this->_create_xml();
 	}
-
 
 	public function SetCommonData()
 	{
@@ -270,9 +269,6 @@ trait CommonWipeMakorApiTraits
         unset($this->appleDataError );
         $appleModelModified = '';
         
-        $appleProcessorModel = 'sd';
-        $appleDataResp = AppleDataNew::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
-
         if (strpos(strtolower($this->hardwareData['ComputerVendor']), "apple") !== false)
         {
         	$appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor']['Name']);
@@ -287,7 +283,7 @@ trait CommonWipeMakorApiTraits
                 $appleProcessorModel = $appleProcessor[2];
             }
 
-           	$appleDataResp = AppleDataNew::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
+           	$appleDataResp = NewAppleData::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
 
            	if ($appleDataResp !== FALSE && !is_array($appleDataResp) && $appleDataResp == 'DUPLICATES')
            	{
@@ -370,6 +366,7 @@ trait CommonWipeMakorApiTraits
         }
     }
 
+    
     public function SetProcessorData()
     {
     	if (!empty($this->appleData))
@@ -395,13 +392,161 @@ trait CommonWipeMakorApiTraits
     	}
     	else
     	{
-            $processor_data = getCustomizeData($this->hardwareData['Processors']['Processor']);
+            $processorData = getCustomizeData($this->hardwareData['Processors']['Processor']);
+            $key = 0;
 
-            pr($processor_data );die("***");
+            if (strpos($processorData[0]['Vendor'], 'Intel') !== false) {
+                $processorData[0]['Vendor'] = "Intel";
+            }
 
+            $processorName = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $processorData[0]['Name'])));
+            $model = explode(" ", $processorName);
+            $sqlData = $this->getProcessorSqlData($model, $processorName);
 
+            if (isset($sqlData['Manufacturer']) && $sqlData['Manufacturer'] != "NULL")
+            {
+                $this->apiData['processors'][$key]['processor_manufacturer'] = $sqlData['Manufacturer'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_manufacturer'] = $processorData[0]['Vendor'];
+            }
+
+            if (isset($sqlData['Type']) && $sqlData['Type'] != "NULL")
+            {
+                $this->apiData['processors'][$key]['processor_type'] = $sqlData['Type'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_type'] = 'N/A';
+            }
+
+            if ($this->productName == "Server")
+            {
+                if (isset($sqlData['Model']) && !empty($sqlData['Model']))
+                {
+                    $this->apiData['processors'][$key]['processor_model'] = $sqlData['Model'];
+                }
+                else
+                {
+                    $this->apiData['processors'][$key]['processor_model'] = $model[3];
+                }
+            }
+            elseif (isset($sqlData['Model']) && !empty($sqlData['Model']))
+            {
+                $this->apiData['processors'][$key]['processor_model'] = $sqlData['Model'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_model'] = $model[2];
+            }
+
+            if (isset($sqlData['Cores']) && $sqlData['Cores'] != "NULL")
+            {
+                $this->apiData['processors'][$key]['processor_core'] = $sqlData['Cores'];
+            }
+            else
+            {
+                NewProcessors::updateProcessor($model[2], $processorData[0]['NumCores']);
+                $this->apiData['processors'][$key]['processor_core'] = $processorData[0]['NumCores'];
+            }
+
+            if (isset($sqlData['Generation']) && $sqlData['Generation'] != "NULL")
+            {
+                $this->apiData['processors'][$key]['processor_generation'] = $sqlData['Generation'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_generation'] = "";
+            }
+
+            if (isset($sqlData['Codename']) && $sqlData['Codename'] != "NULL")
+            {
+                $this->apiData['processors'][$key]['processor_codename'] = $sqlData['Codename'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_codename'] = "";
+            }
+
+            if (isset($sqlData['Socket']) && $sqlData['Socket'] != "NULL")
+            {
+                $this->apiData['processors'][$key]['processor_socket'] = $sqlData['Socket'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_socket'] = "";
+            }
+
+            if (isset($sqlData['Clock']) && $sqlData['Clock'] != "NULL")
+            {
+                $speed = MHzToGHz($sqlData['Clock']);
+            }
+            else
+            {
+                $speed = MHzToGHz($processorData[0]['Speed']);
+            }
+            
+            $this->apiData['processors'][$key]['processor_speed'] = $speed;
+
+            if (isset($this->additionalData['Components']['CPU_Count']) && !empty($this->additionalData['Components']['CPU_Count']))
+            {
+                $this->apiData['processors'][$key]['processor_qty'] = $this->additionalData['Components']['CPU_Count'];
+            }
+            else
+            {
+                $this->apiData['processors'][$key]['processor_qty'] = count($this->hardwareData['Processors']);
+            }
     	}
-    	die("***********");
     }
 
+    public function getProcessorSqlData($model, $processorName)
+    {
+        $sqlData = '';
+        if ($this->productName == "Server")
+        {
+            $modelStr = $model[4];
+            if ($modelStr[0] == 'v' && is_numeric($modelStr[1]))
+            {
+                $searchModel = $model[3] . $model[4];
+            }
+            else
+            {
+                $searchModel = $model[3];
+            }
+            $sqlData = NewProcessors::getProcessorData($searchModel);
+        }
+        else
+        {
+            $modelStr = $model[2];
+            if ($modelStr[0] == 'v' && is_numeric($modelStr[1]))
+            {
+                $searchModel = $model[2] . $model[3];
+            }
+            else
+            {
+                $searchModel = $model[2];
+            }
+            $sqlData = NewProcessors::getProcessorData($searchModel);
+        }
+        if (empty($sqlData))
+        {
+            $sqlData = NewProcessors::getMissedProcessorData($model[2], $model[5]);
+        }
+        if (empty($sqlData) && strpos($processorName, 'Atom') !== false)
+        {
+            $modelStr = $model[4];
+            
+            if ($modelStr[0] == 'v' && is_numeric($modelStr[1]))
+            {
+                $searchModel = $model[3] . $model[4];
+            }
+            else
+            {
+                $searchModel = $model[3];
+            }
+            $sqlData = NewProcessors::getProcessorData($searchModel);
+        }
+        return $sqlData;
+    }
 }

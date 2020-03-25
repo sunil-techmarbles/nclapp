@@ -134,7 +134,6 @@ class WipeMakor extends Command
                         $productName = $additionalFileContent['Product_Name'];
                     }
 
-
                     if (empty($productName))
                     {
                         // $error = "WIPE DATA FILE > " . $wipeDataFile . " > ProductName is empty so skipping this file.";

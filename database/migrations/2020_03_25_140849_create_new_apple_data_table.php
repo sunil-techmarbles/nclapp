@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAppleDataNewsTable extends Migration
+class CreateNewAppleDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAppleDataNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('apple_data_news', function (Blueprint $table) {
+        Schema::create('new_apple_data', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Case_Type',255)->nullable();
             $table->string('Model',255)->nullable();
@@ -48,6 +48,6 @@ class CreateAppleDataNewsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('apple_data_news');
+        Schema::dropIfExists('new_apple_data');
     }
 }
