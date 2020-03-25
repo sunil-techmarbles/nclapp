@@ -88,7 +88,6 @@
                 @endforeach
         </table>
     @endif
-    @if(in_array($currentUser, config('constants.adminUsers')))
         @if(!empty($unapporovedCategories))
             <div class="heading">
                 <h2>Categories</h2>
@@ -125,7 +124,7 @@
                                 </a>
                             </td>
                             <td>
-                                <a href="javascript:void(0)" onclick="del_confirm({{$unapporovedCategory['Type_of_Scrap']}},'deleterecyclecategoryrecord','Category')" data-reject_name="{{$unapporovedCategory['Type_of_Scrap']}}" class=" recycle-reject">
+                                <a href="javascript:void(0)" onclick="del_confirm('{{$unapporovedCategory['Type_of_Scrap']}}','deleterecyclecategoryrecord','Category')" data-reject_name="{{$unapporovedCategory['Type_of_Scrap']}}" class=" recycle-reject">
                                     <img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
                                 </a>
                             </td>
@@ -134,7 +133,6 @@
                 </table>
             </div>
         @endif
-    @endif
 </div>
 @include('admin.recycle-first.modal', ['categories' => (object)[]])
 @endsection

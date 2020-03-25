@@ -69,4 +69,10 @@ class Recycle extends Model
 		return self::where(['Type_of_Scrap' => $value])
 			->update(['status' => '0']);
 	}
+
+	public static function updateRecord($data, $query)
+	{
+		return self::where($query)
+			->update($data);
+	}
 }

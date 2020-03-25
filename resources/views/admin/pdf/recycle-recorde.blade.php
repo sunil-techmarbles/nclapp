@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<style>
 			.page-break
 			{
@@ -21,9 +22,7 @@
 							<td style="font-size:16px;border: 1px solid #ccc; width:200px; padding: 5px;">Invoice #</td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0;">
-							<td style="font-size:16px;border: 1px solid #ccc; width:200px; padding: 5px;">
-								Date: {{$closed}}
-							</td>
+							<td style="font-size:16px;border: 1px solid #ccc; width:200px; padding: 5px;">Date: {{$closed}}</td>
 						</tr>
 					</table>
 				</td>
@@ -77,7 +76,6 @@
 			</tr>
 		</table>
 		<table class="page-break" width="700" style="margin: 0px auto; border: 1px solid #ccc;">
-			@foreach ($pdfData as $key => $datas)
 				<tr style="background: #f00; display: block; width: 100%;">
 					<th style="font-size:16px;padding:5px; text-align: left; width: 100px;">Pallet</th>
 					<th style="font-size:16px;padding:5px; text-align: left; width: 200px;">Scrap Category</th>
@@ -87,9 +85,9 @@
 					<th style="font-size:16px;padding:5px; text-align: left; width: 80px;">Total Price</th>
 					<th style="font-size:16px;padding:5px; text-align: left; width: 80px;">P/G/I</th>
 				</tr>
-			    	@foreach ($datas as $key => $data)
+			    	@foreach ($pdfData as $k => $data)
 				        <tr style="display: block; width: 100%;">
-							<td style="font-size:16px;padding: 5px;border: 1px solid #ccc; width: 100px;">{{ $key+1 }}</td>
+							<td style="font-size:16px;padding: 5px;border: 1px solid #ccc; width: 100px;">{{ $k+1 }}</td>
 							<td style="font-size:16px;padding: 5px;border: 1px solid #ccc; width: 200px;">{{ $data->category }}</td>
 							<td style="font-size:16px;padding: 5px;border: 1px solid #ccc; width: 80px;">{{ $data->lgross }}</td>
 							<td style="font-size:16px;padding: 5px;border: 1px solid #ccc; width: 80px;">{{ $data->ltare }}</td>
@@ -98,7 +96,6 @@
 							<td style="font-size:16px;padding: 5px;border: 1px solid #ccc; width: 80px;">{{ $data->pgi }}</td>
 						</tr>
 					@endforeach
-			@endforeach
 		</table>
 		<table width="250" style="margin: 10px 0 0; border: 1px solid #ccc;">
 			<tr style="border-bottom: 1px solid #ccc; display: block; width: 100%;">

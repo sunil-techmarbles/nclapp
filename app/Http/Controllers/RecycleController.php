@@ -34,7 +34,7 @@ class RecycleController extends Controller
         $this->wipeData2 = $this->basePath.'/wipe-data2';
         $this->filePath = $this->basePath.'/recycle/files/pdf';
         $this->returlPath = '/recycle/files/pdf';
-        $this->logo = $this->basePath.'/recycle/logo.jpg';
+        $this->logo = url('/').'/recycle/logo.jpg';
     }
     /**
  	* Method recycleSecondIndex use for Recycle 2 
@@ -340,21 +340,21 @@ class RecycleController extends Controller
             {
                 $fileName = $request->file_name;
                 $fileName = str_replace('xlsx', 'pdf', $fileName);
-                $filePath =$this->filePath.'/'.$fileName;
+                $filePath = $this->filePath.'/'.$fileName;
                 $returnPath = $this->returlPath.'/'.$fileName;
                 $logo = $this->logo;
                 $pdfFileData = RecycleRecord::getRecordById($request);
                 $pdfFileData = (!$pdfFileData->isEmpty()) ? $pdfFileData->toArray() : [];
                 $closed = ($pdfFileData[0]['status']) ? '' : Carbon::createFromFormat('l F jS,Y', $pdfFileData[0]['closed']);
                 $pdfData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($request->id));
-                $pdfData = $pdfData->chunk(5);
+                // $pdfData = $pdfData->chunk(5);
                 $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->render();
-                echo $html;
-                die;
+                // echo $html;
                 $pdf = PDF::loadHTML($html)->setPaper('a4', 'landscape');
-                // $pdf = PDF::loadView('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->setPaper('a4', 'landscape')->stream();
+                // $pdf = PDF::loadView('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'));
+                // die;
                 $pdf->save($filePath);
-                return response()->json(['url' => $returnPath, 'status' => true]);
+                return response()->json(['url' => $filePath, 'status' => true]);
             }
         }
         else
@@ -375,8 +375,13 @@ class RecycleController extends Controller
                 }
                 else
                 {
-                    $data = ['Type_of_Scrap' => trim($request->category_name), 'status' => '1'];
-                    $checkIfExist = Recycle::getAllTypeOfScrap($query= ['Type_of_Scrap' => trim($request->category_name)]);
+                    $query = [
+                        'Type_of_Scrap' => trim($request->category_name)
+                    ];
+                    $data = [
+                        'Type_of_Scrap' => trim($request->category_name), 'status' => '1'
+                    ];
+                    $checkIfExist = Recycle::getAllTypeOfScrap($query);
                     if (count($checkIfExist->toArray()) > 0)
                     {
                         return response()->json(['message' => 'Category already exists.', 'status' => false]);
@@ -400,25 +405,50 @@ class RecycleController extends Controller
 
     public function editCategoryRecord(Request $request)
     {
+        if (isset($request->cat_name) && !empty($request->cat_name))
+        {
+            $data = ['category' => $request->cat_name];
+            $categoryData = Recycle::getTypeOfScrap((object) $data);
+            $categoryData = (!$categoryData->isEmpty()) ? $categoryData->toArray() : [];
+            return view('admin.recycle-first.category-edit', compact('categoryData'));
+        }
+        abort('404');
     }
 
     public function updateCategoryRecord(Request $request)
     {
-        if (isset($_POST['action']) && $_POST['action'] == 'update_category')
+
+        if (isset($request->action) && $request->action == 'update_category')
         {
-            if (empty($_POST['Type_of_Scrap']) || empty(trim($_POST['Type_of_Scrap']))) {
-                header("Location: recycle/category.php?status=1&cat_name=" . $_POST['old_name']);
+            if (empty($request->Type_of_Scrap) || empty(trim($request->Type_of_Scrap)))
+            {
+                return redirect()->back()->with('error', 'category name required');
             }
-            $sql = "SELECT * FROM recycle WHERE `Type_of_Scrap` = '" . trim($_POST['Type_of_Scrap']) . "' AND `id` != '" . $_POST['cat_id'] . "'";
-            $result = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-            if (empty($result)) {
-                $sql = "UPDATE recycle SET `PRICE` = '" . $_POST['PRICE'] . "',`TYPE` = '" . $_POST['TYPE'] . "',`status` = '" . $_POST['status'] . "',`Type_of_Scrap` = '" . trim($_POST['Type_of_Scrap']) . "' WHERE `id` = '" . $_POST['cat_id'] . "'";
-                $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-                $msg = '<strong>Success!</strong> Category updated successfully.';
-            } else {
-                header("Location: recycle/category.php?status=0&cat_name=" . $_POST['old_name']);
+            $query = [
+                'id' => $request->cat_id
+            ];
+            $checkIfExist = Recycle::getAllTypeOfScrap($query);
+            if (count($checkIfExist->toArray()) > 0)
+            {
+                $data = [
+                    'PRICE' => $request->PRICE,
+                    'TYPE' => $request->TYPE,
+                    'Type_of_Scrap' => trim($request->Type_of_Scrap),
+                    'status' => $request->status
+                ];
+                $query = [
+                    'id' => $request->cat_id
+                ];
+                $result = Recycle::updateRecord($data, $query);
+                if($result)
+                {
+                    return redirect()->back()->with('success', 'Category updated successfully');
+                }
+            }
+            else
+            {
+                return redirect()->back()->with('error', 'Something went wrong');
             }
         }
     }
-
 }
