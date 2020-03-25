@@ -25,7 +25,7 @@ class CreateSuppliesTable extends Migration
             $table->string('vendor', 200);
             $table->integer('low_stock');
             $table->integer('reorder_qty');
-            $table->string('dlv_time', 500);
+            $table->string('dlv_time', 500)->nullable();
             $table->longText('bulk_options')->nullable();
             $table->string('email_subj', 500);
             $table->longText('email_tpl');

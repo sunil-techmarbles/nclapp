@@ -42,8 +42,6 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
 		// Import section request 
 		Route::any('/importrecord', 'ShopifyController@importRecord')->name('import.record');
-		// Recycle download PDF
-		Route::any('/recycledownload', 'RecycleController@recycleDownloadPdf')->name('recycle.download');
 	});
 });
 
@@ -129,5 +127,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/recycle', 'RecycleController@recycleFirstIndex')->name('recycle.first');
 		Route::any('/editcategoryrecord', 'RecycleController@editCategoryRecord')->name('edit.category.record');
 		Route::any('/updateCategoryRecord', 'RecycleController@updateCategoryRecord')->name('update.category.record');
+		// Recycle download PDF
+		Route::any('/recycledownload', 'RecycleController@recycleDownloadPdf');
 	});
 });

@@ -514,7 +514,7 @@ return [
         // "richard@itamg.com",
         // "julio@itamg.com",
     ],
-    'sessionEmailsgit ' => [
+    'sessionEmails ' => [
         "rahuls.techmarbles@gmail.com",
         // "randy@itamg.com",
         // "richy@itamg.com",
