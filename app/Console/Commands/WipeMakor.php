@@ -7,6 +7,7 @@ use File;
 use Config;
 use App\Traits\CommonWipeMakorApiTraits;
 
+ 
 class WipeMakor extends Command
 {
     use CommonWipeMakorApiTraits;
@@ -81,13 +82,14 @@ class WipeMakor extends Command
 
                 if (isset($wipeFileContent['Report']) && !empty($wipeFileContent['Report']))
                 {
+
                     // get job data 
                     if (isset($wipeFileContent['Report']['Jobs']['Job'][0]))
                     {
                         $jobData = $wipeFileContent['Report']['Jobs']['Job'][0];
                     }
                     else
-                    {
+                    { 
                         $jobData = $wipeFileContent['Report']['Jobs']['Job'];
                     }
                     
