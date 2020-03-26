@@ -1,11 +1,19 @@
 <?php
-
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class IbmModel extends Model
 {
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
+
+    protected $fillable = [
+        'model',
+        'part_number',
+    ];
+    
 	public static function getIBMManufacturerModel($serialNumber)
     {
     	if (!empty($serialNumber)) 
@@ -20,6 +28,6 @@ class IbmModel extends Model
         $PartNumber = self::select('model')
             ->where(["part_number"=> $serialNumber])
             ->first();
-        return $PartNumber->model;
+        return (!empty($PartNumber->model)) ? $PartNumber->model : '';
     }
 }

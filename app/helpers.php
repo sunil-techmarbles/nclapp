@@ -325,12 +325,12 @@ function getDirectoryFiles($directory)
     return $scanned_directory;
 }
 
-function convert_bytes_to_specified($bytes, $to, $decimal_places = 0) 
+function convert_bytes_to_specified($bytes, $to, $decimalPlaces = 0) 
 { 
     $formulas = array(
-        'K' => number_format( $bytes / 1000, $decimal_places ), 
-        'M' => number_format( $bytes / 1000000, $decimal_places ),
-        'G' => number_format( $bytes / 1000000000, $decimal_places )
+        'K' => number_format( $bytes / 1000, $decimalPlaces ), 
+        'M' => number_format( $bytes / 1000000, $decimalPlaces ),
+        'G' => number_format( $bytes / 1000000000, $decimalPlaces )
         );
     return isset($formulas[$to]) ? $formulas[$to] : 0;
 }
@@ -342,29 +342,74 @@ function WriteDataFile($file, $result)
     fclose ($dataFile);
 }
 
-function getXMLContent($xml_file_path)
+function getXMLContent($xmlFilePath)
 {
     //file content
-    $file_content = iconv('UTF-8', 'UTF-8//IGNORE', utf8_encode(file_get_contents($xml_file_path)));
+    $fileContent = iconv('UTF-8', 'UTF-8//IGNORE', utf8_encode(file_get_contents($xmlFilePath)));
     //load xml
-    $file_content_object = simplexml_load_string($file_content, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
+    $fileContentObject = simplexml_load_string($fileContent, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
     //check if XML is valid
-    if (false === $file_content_object) {
+    if (false === $fileContentObject) {
         return false;
     }
     //converting to array
-    $file_content_array = json_decode(json_encode($file_content_object), 1);
-    return $file_content_array;
+    $fileContentArray = json_decode(json_encode($fileContentObject), 1);
+    return $fileContentArray;
 }
 
 
-function getJobUserData($job_user_fields, $attribute_index)
+function getJobUserData($jobUserFields, $attributeIndex)
 {
-    foreach ($job_user_fields as $key => $job_user_field)
+    foreach ($jobUserFields as $key => $jobUserField)
     {
-        if (isset($job_user_field['@attributes']['index']) && $job_user_field['@attributes']['index'] == $attribute_index)
+        if (isset($jobUserField['@attributes']['index']) && $jobUserField['@attributes']['index'] == $attributeIndex)
         {
-            return trim($job_user_field['Value']);
+            return trim($jobUserField['Value']);
         }
     }
+}
+
+function MHzToGHz($speed)
+{
+    //check if in MHz
+    $get_ex = explode(" ", html_entity_decode($speed));
+    if (isset($get_ex[1]) && $get_ex[1] == 'MHz')
+    {
+        $convrt_GHz = $get_ex[0] / 1000;
+        $speed = round($convrt_GHz, 1);
+        $speed = $speed + 0;
+        $speed = $speed . " GHz";
+    }
+    elseif (strpos($speed, 'MHz'))
+    {
+        $spd = chop($speed, 'MHz');
+        $convrt_GHz = $spd / 1000;
+        $speed = round($convrt_GHz, 1);
+        $speed = $speed + 0;
+        $speed = $speed . " GHz";
+    }
+    else
+    {
+        $speed = $speed;
+    }
+    return $speed;
+}
+
+//Coustomise  data
+function getCustomizeData($data)
+{
+    $i = 0;
+    if (isset($data[0]))
+    {
+        foreach ($data as $key => $value)
+        {
+            $customData[$i] = $value;
+            $i++;
+        }
+    }
+    else
+    {
+        $customData[$i] = $data;
+    }
+    return $customData;
 }

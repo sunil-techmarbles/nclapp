@@ -7,7 +7,6 @@ use File;
 use Config;
 use App\Traits\CommonWipeMakorApiTraits;
 
-
 class WipeMakor extends Command
 {
     use CommonWipeMakorApiTraits;
@@ -134,7 +133,6 @@ class WipeMakor extends Command
                     {
                         $productName = $additionalFileContent['Product_Name'];
                     }
-
 
                     if (empty($productName))
                     {
