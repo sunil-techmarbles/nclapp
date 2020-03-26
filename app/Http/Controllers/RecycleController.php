@@ -52,6 +52,7 @@ class RecycleController extends Controller
     public function recycleSecondSearch(Request $request)
     {
         return view('admin.recycle-second.search');
+        abort('404');
     }
     
   	/**

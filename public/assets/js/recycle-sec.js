@@ -183,3 +183,128 @@ $(document).ready(function(){
         }
     });
 });
+
+function checkVariable() 
+{
+    var variableLoaded;
+    if (variableLoaded == true)
+    {
+    }
+}
+
+$( "#search" ).click(function() {
+    $.ajax({
+        type: "POST",
+        url: "data1.php",
+        data: {
+            search: $("#searchtext").val()
+        },
+        success: function(result) {
+
+            if(result == "Y")
+            {
+                $('#searchModal').modal('show');
+                $.ajax({
+                    type: "POST",
+                    url: "data.php",
+                    data: {
+                        search: $("#searchtext").val()
+                    },
+                    success: function(result) {
+                        if(result == "We didn't find this Part-no or Model in database")
+                        {
+                            $('#add_entry').modal('show');
+                        }
+                        else
+                        {
+                            $(".searchresult").html(result);
+                        }
+                    },
+                    error: function(result) {
+                        alert('error');
+                    }
+                });
+            }
+            else
+            {
+                $.ajax({
+                    type: "POST",
+                    url: "data.php",
+                    data: {
+                        search: $("#searchtext").val()
+                    },
+                    success: function(result) {
+                        if(result == "We didn't find this Part-no or Model in database")
+                        {
+                            $('#add_entry').modal('show');
+                        }
+                        else
+                        {
+                            $(".searchresult").html(result);
+                            $(".searchresult").css("display", "block");
+                        }
+                    },
+                    error: function(result) {
+                        alert('error');
+                    }
+                });
+            }
+        },
+        error: function(result) {
+            alert('error');
+        }
+    });
+});
+
+$("#add_entry_form").validate({
+    submitHandler: function(form) {
+        $.ajax({
+            url: "./ajax/form_save1.php",
+            type: "POST",
+            data: $("#add_entry_form").serialize(),
+            success: function(response) {
+                if(response)
+                {
+                    $('#add_entry').modal('hide');
+                    swal({
+                        title: "Added!",
+                        text: "Record added successfully.",
+                        type: "success",
+                        timer: 2000
+                    });
+                    loadtabledata();
+                }
+                else
+                {
+                    swal({
+                        title: "Error!",
+                        text: "There is some error , try again",
+                        type: "failed",
+                        timer: 2000
+                    });
+                }
+            }            
+        });
+    }
+});
+
+$("#search_form").validate({
+    submitHandler: function(form) {
+        $.ajax({
+            type: "POST",
+            url: "data2.php",
+            data: {
+                search: $("#searchtext").val(),
+                search1: $("#model1").val()
+            },
+            success: function(result) {
+                $(".searchresult").html(result);
+                $(".searchresult").css("display", "block");
+                $('#searchModal').modal('hide');
+            },
+            error: function(result) {
+                alert('error');
+            }
+        });
+    }
+});
