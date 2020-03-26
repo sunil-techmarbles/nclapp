@@ -14,6 +14,7 @@ use PDF;
 use App\Recycle;
 use App\RecycleRecord;
 use App\RecycleRecordLine;
+use App\ItamgRecycleInventory;
 
 class RecycleController extends Controller
 {
@@ -41,8 +42,18 @@ class RecycleController extends Controller
  	*/
     public function recycleSecondIndex(Request $request)
   	{
-  		return view('admin.recycle-second.list');
+        $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
+  		return view('admin.recycle-second.list', compact('itamgRecycleInventors'));
   	}
+    /**
+    * Method recycleSecondSearch use for Recycle 2 search
+    */
+
+    public function recycleSecondSearch(Request $request)
+    {
+        return view('admin.recycle-second.search');
+    }
+    
   	/**
  	* Method recycleSecondIndex use for Recycle 
  	*/

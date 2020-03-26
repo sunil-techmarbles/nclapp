@@ -1,5 +1,5 @@
 @extends('layouts.appadminlayout')
-@section('title', 'Edit Supplie')
+@section('title', 'Edit Supply')
 @section('content')
 <div class="mte_content">
 	<div style="width: 100%">
@@ -13,7 +13,7 @@
 							<a class="btn btn-default btn-sm border" href="{{route('supplies')}}">Back</a>
 						</td>
 						<td class="float-left">
-							<h3>Edit Supplie</h3>
+							<h3>Edit Supply</h3>
 						</td>
 					</tr>
 				</tbody>

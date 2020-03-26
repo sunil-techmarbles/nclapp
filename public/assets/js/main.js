@@ -35,7 +35,7 @@ $.ajaxSetup({
 
 const swalWithBootstrapButtons = Swal.mixin({
 	customClass: {
-		confirmButton: 'btn btn-success',
+		confirmButton: 'btn btn-success ml-3',
 		cancelButton: 'btn btn-danger'
 	},
 	buttonsStyling: false
@@ -59,7 +59,7 @@ function showSweetAlertMessage(type, message, icon)
 		type,
 		message,
 		icon
-	) 
+		) 
 }
 
 function setHeader()
@@ -88,8 +88,8 @@ function alignCB()
 {
 	$('.cb-cnt').each(function (index, value)
 	{
-	  	var w = $(this).width();
-	  	if (w > cbWidth) cbWidth = w; 
+		var w = $(this).width();
+		if (w > cbWidth) cbWidth = w; 
 	});
 	$('.cb-cnt').width(cbWidth);
 }
@@ -279,19 +279,19 @@ function setRTS(rId)
 
 function getUrlParameter(sParam)
 {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
+	var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+	sURLVariables = sPageURL.split('&'),
+	sParameterName,
+	i;
 
-    for (i = 0; i < sURLVariables.length; i++)
-    {
-        sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] === sParam)
-        {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
+	for (i = 0; i < sURLVariables.length; i++)
+	{
+		sParameterName = sURLVariables[i].split('=');
+		if (sParameterName[0] === sParam)
+		{
+			return sParameterName[1] === undefined ? true : sParameterName[1];
+		}
+	}
 }
 
 function setAside(itmId)
@@ -414,11 +414,11 @@ function showHint(fId)
 
 function CheckRequired()
 {
-    $("input[data-disable=1]").prop("disabled",true);
-    reqFld = [];
-    var formValid = true;
-    $(':input').each(function()
-    { 
+	$("input[data-disable=1]").prop("disabled",true);
+	reqFld = [];
+	var formValid = true;
+	$(':input').each(function()
+	{ 
 		var inpVal = "";
 		var inpValNew = "";
 		var inpType = $(this).attr('type');
@@ -453,16 +453,16 @@ function CheckRequired()
 			}
 		} 
 	});
-    if (formValid)
-    {
-        frmPreview();
+	if (formValid)
+	{
+		frmPreview();
 		return true;
-    }
-    else
-    {
+	}
+	else
+	{
 		$(':input[required]').closest(".formitem").show();
 		$("#submitBtn").click();
-        return false;
+		return false;
 	}
 }
 
@@ -471,7 +471,7 @@ function hidePreview()
 	$("#preview").hide();
 	$("#main-form").show();
 	$("#page-logo").show();
-    $("#page-head").show();
+	$("#page-head").show();
 }
 
 function getAssetData(fId)
@@ -596,65 +596,65 @@ $(document).ready(function()
 	if($(".recycle-record-edit").length > 0)
 	{
 		$(".recycle-record-edit").click(function (e) {
-            e.preventDefault();
-            var record_id = $(this).data('record_id');
-            $('.modal-form .record_id').val(record_id);
-            var parentTr = $(this).parents('tr');
-            $('.modal-form .category').val(parentTr.find('td.category').text());
-            $('.modal-form .gross-weight').val(parentTr.find('td.lgross').text());
-            $('input[name=tare][value="' + parentTr.find('td.pgi').text() + '"]').prop('checked', true);
-            jQuery('#edit-record-model').modal('show');
-        });
+			e.preventDefault();
+			var record_id = $(this).data('record_id');
+			$('.modal-form .record_id').val(record_id);
+			var parentTr = $(this).parents('tr');
+			$('.modal-form .category').val(parentTr.find('td.category').text());
+			$('.modal-form .gross-weight').val(parentTr.find('td.lgross').text());
+			$('input[name=tare][value="' + parentTr.find('td.pgi').text() + '"]').prop('checked', true);
+			jQuery('#edit-record-model').modal('show');
+		});
 	}
 
 	if($("#edit-record-form").length > 0)
 	{
 		$("#edit-record-form").submit(function (e) {
-	        e.preventDefault();
-	        var form = $(this);
-	        var that = $(this);
-	        $.ajax({
-	            type: "POST",
-	            dataType: "json",
-	            url: "/"+prefix+"/updaterecyclerecord",
+			e.preventDefault();
+			var form = $(this);
+			var that = $(this);
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "/"+prefix+"/updaterecyclerecord",
 	            data: form.serialize(), // serializes the form's elements.
 	            beforeSend: function ()
 	            {
 	            	showLoader();
-	                that.attr("disabled", "disabled");
+	            	that.attr("disabled", "disabled");
 	            },
 	            complete: function ()
 	            {
 	            	hideLoader();
-	                that.removeAttr("disabled");
-	                $('#edit-record-model').modal('hide');
+	            	that.removeAttr("disabled");
+	            	$('#edit-record-model').modal('hide');
 	            },
 	            success: function (result)
 	            {
 	            	hideLoader();
 	            	var icon = (result.status) ? 'success' : 'error';
 	            	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
-	                window.location.reload();
+	            	window.location.reload();
 	            }
 	        }).fail(function (jqXHR, textStatus, error){
-            	hideLoader();
-            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
-            });
+	        	hideLoader();
+	        	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	        });
 	    });
 	}
 
 	if($(".recycle-download").length > 0)
 	{
 		$(".recycle-download").click(function (e) {
-	        e.preventDefault();
-	        var file_name = $(this).data('file_name_download');
-	        var file_id = $(this).data('file_id');
-	        var that = $(this);
-	        $.ajax({
-	            type: "POST",
-	            dataType: "json",
-	            url: "/"+prefix+"/recycledownload",
-	            data: {
+			e.preventDefault();
+			var file_name = $(this).data('file_name_download');
+			var file_id = $(this).data('file_id');
+			var that = $(this);
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "/"+prefix+"/recycledownload",
+				data: {
 	                file_name: file_name, // < note use of 'this' here
 	                id: file_id,
 	                action: 'download',
@@ -662,83 +662,82 @@ $(document).ready(function()
 	            beforeSend: function ()
 	            {
 	            	showLoader();
-	                that.attr("disabled", "disabled");
+	            	that.attr("disabled", "disabled");
 	            },
 	            complete: function ()
 	            {
 	            	hideLoader();
-	                that.removeAttr("disabled");
+	            	that.removeAttr("disabled");
 	            },
 	            success: function (result)
 	            {
 	            	hideLoader();
-	            	console.log(result);
 	            	if(result.status)
 	            	{
-	                	// window.open(result.url, '_blank');
-	            	}
-	            	else
-	            	{
-	            		showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
-	            	}
+	                	window.open(result.url, '_blank');
+	                }
+	                else
+	                {
+	                	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	                }
 	            }
 	        }).fail(function (jqXHR, textStatus, error){
-            	hideLoader();
-            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
-            });
+	        	hideLoader();
+	        	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	        });
 	    });
 	}
 
 	if($(".recycle-approve").length > 0)
 	{
 		$(".recycle-approve").click(function (e) {
-            e.preventDefault();
-            if (confirm('Approve category?'))
-            {
-                var cat_name = $(this).data('approve_name');
-                var that = $(this);
-                $.ajax({
-                    type: "POST",
-                    dataType: "json",
-                    url: "/"+prefix+"/approverecyclecategoryrecord",
-                    data: {
+			e.preventDefault();
+			if (confirm('Approve category?'))
+			{
+				var cat_name = $(this).data('approve_name');
+				var that = $(this);
+				$.ajax({
+					type: "POST",
+					dataType: "json",
+					url: "/"+prefix+"/approverecyclecategoryrecord",
+					data: {
                         approve_cat_name: cat_name, // < note use of 'this' here
                         action: 'cat_approve',
                     },
                     beforeSend: function ()
                     {
                     	showLoader();
-                        that.attr("disabled", "disabled");
+                    	that.attr("disabled", "disabled");
                     },
                     complete: function ()
                     {
                     	hideLoader();
-                        that.removeAttr("disabled");
+                    	that.removeAttr("disabled");
                     },
                     success: function (result)
                     {
                     	hideLoader();
                     	var icon = (result.status) ? 'success' : 'error';
-		            	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
-                        window.location.reload(true);
+                    	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+                    	window.location.reload(true);
                     }
                 }).fail(function (jqXHR, textStatus, error){
-	            	hideLoader();
-	            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
-	            });
+                	hideLoader();
+                	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+                });
             }
-	    });
+        });
 	}
 
 	if($('#category').length > 0)
 	{
-	    $('#category').on('change', function (){
+		$('#category').on('change', function (){
 			var selected_cat = $('select[name=category]').val();
 			console.log(selected_cat);
 			if (selected_cat == 'custom-cat')
 			{
-			    $("#catModal").modal();
-			    $("#category").val($("#category option:first").val());
+				$("#catModal").modal();
+				$("#category").val($("#category option:first").val());
 			}
 		});
 	}
@@ -746,37 +745,37 @@ $(document).ready(function()
 	if($(".add_new_category").length > 0)
 	{
 		$(".add_new_category").click(function (e) {
-            e.preventDefault();
-            var category_name = $('.category_name').val();
-            var that = $(this);
-            $.ajax({
-                type: "POST",
-                dataType: "json",
-                url: "/"+prefix+"/addnewcategoryrecord",
-                data: {
+			e.preventDefault();
+			var category_name = $('.category_name').val();
+			var that = $(this);
+			$.ajax({
+				type: "POST",
+				dataType: "json",
+				url: "/"+prefix+"/addnewcategoryrecord",
+				data: {
                     category_name: category_name, // < note use of 'this' here
                     action: 'new_cat',
                 },
                 beforeSend: function ()
                 {
                 	showLoader();
-                    that.attr("disabled", "disabled");
+                	that.attr("disabled", "disabled");
                 },
                 complete: function ()
                 {
                 	hideLoader();
-                    that.removeAttr("disabled");
+                	that.removeAttr("disabled");
                 },
                 success: function (result)
                 {
                 	hideLoader();
-                    $("#catModal").modal('hide');
+                	$("#catModal").modal('hide');
                 	var icon = (result.status) ? 'success' : 'error';
-	            	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
-                    if (result.status)
-                    {
-                    	window.location.reload(true);
-                    }
+                	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+                	if (result.status)
+                	{
+                		window.location.reload(true);
+                	}
                 }
             }).fail(function (jqXHR, textStatus, error){
             	hideLoader();
@@ -788,37 +787,37 @@ $(document).ready(function()
 	if($(".recycle-submit").length > 0)
 	{
 		$(".recycle-submit").click(function (e) {
-	        e.preventDefault();
-	        if (confirm('Are you sure to submit this file?'))
-	        {
-	            var id = $(this).data('file_id');
-	            var file_name = $(this).data('file_name');
-	            var that = $(this);
-	            $.ajax({
-	                type: "POST",
-	                dataType: "json",
-	                url: "/"+prefix+"/submitcyclecategoryrecord",
-	                data: {
-	                    file_name: file_name,
+			e.preventDefault();
+			if (confirm('Are you sure to submit this file?'))
+			{
+				var id = $(this).data('file_id');
+				var file_name = $(this).data('file_name');
+				var that = $(this);
+				$.ajax({
+					type: "POST",
+					dataType: "json",
+					url: "/"+prefix+"/submitcyclecategoryrecord",
+					data: {
+						file_name: file_name,
 	                    id: id, // < note use of 'this' here
 	                    action: 'submit',
 	                },
 	                beforeSend: function ()
 	                {
 	                	showLoader();
-	                    that.attr("disabled", "disabled");
+	                	that.attr("disabled", "disabled");
 	                },
 	                complete: function ()
 	                {
 	                	hideLoader();
-	                    that.removeAttr("disabled");
+	                	that.removeAttr("disabled");
 	                },
 	                success: function (result)
 	                {
 	                	hideLoader();
-	                    var icon = (result.status) ? 'success' : 'error';
-		            	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
-                        window.location.reload(true);
+	                	var icon = (result.status) ? 'success' : 'error';
+	                	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+	                	window.location.reload(true);
 	                }
 	            }).fail(function (jqXHR, textStatus, error){
 	            	hideLoader();
@@ -852,7 +851,7 @@ function reorderItem(iid, dqty, url)
 				'Deleted!',
 				response.message ,
 				response.status
-			) 
+				) 
 		}) 
 		.fail(function()
 		{
@@ -919,14 +918,14 @@ function del_confirm(id,url,text)
 					'Deleted!',
 					response.message ,
 					response.status
-				) 
+					) 
 			})
 			.fail(function()
 			{
 				Swal.fire({
-					  icon: 'error',
-					  title: 'Oops...',
-					  text: 'Something went wrong with ajax !',
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Something went wrong with ajax !',
 				})
 
 			});
@@ -938,7 +937,7 @@ function del_confirm(id,url,text)
 				'Cancelled',
 				'Your record is safe :)',
 				'error'
-			)
+				)
 		} 
 		
 	})
