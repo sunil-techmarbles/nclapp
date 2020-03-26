@@ -115,7 +115,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
 		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
 		// Recycle Request
-		Route::any('/recyclesecond', 'RecycleController@recycleSecondIndex')->name('recycle.second');
 		Route::post('/recyclnewrecord', 'RecycleController@recyclRecord')->name('recycle.record');
 		Route::any('/editrecyclerecord', 'RecycleController@editRecycleRecord')->name('edit.recycle.record');
 		Route::post('/updaterecyclerecord', 'RecycleController@updateRecycleRecord')->name('update.recycle.record');
@@ -129,5 +128,13 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/updateCategoryRecord', 'RecycleController@updateCategoryRecord')->name('update.category.record');
 		// Recycle download PDF
 		Route::any('/recycledownload', 'RecycleController@recycleDownloadPdf');
+
+		Route::any('/recyclesecond', 'RecycleController@recycleSecondIndex')->name('recycle.second');
+		Route::prefix('recyclesecond')->group(function () {
+			Route::any('/search', 'RecycleController@recycleSecondSearch')->name('search');
+			Route::any('/failedsearch', 'RecycleController@recycleSecondIndex')->name('failedsearch');
+			Route::any('/category', 'RecycleController@recycleSecondIndex')->name('category');
+			Route::any('/email', 'RecycleController@recycleSecondIndex')->name('email');
+		});
 	});
 });
