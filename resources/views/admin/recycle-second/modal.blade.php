@@ -74,7 +74,7 @@
 				</div>
 				<div class="modal-footer">
 					<input type="hidden" name="user_id" id="user_id">
-					<input type="hidden" name="operation" id="operation">
+					<input type="hidden" name="operation" id="operation" value="add_entry">
 					<input type="submit" name="action" id="action" class="btn btn-success" value="Save">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
@@ -84,7 +84,7 @@
 </div>
 <div id="upload_files" class="modal fade">
 	<div class="modal-dialog">
-		<form method="post" id="add_entry_form" action="readdatafromfiles.php" enctype="multipart/form-data">
+		<form method="post" id="upload_entry_form" action="readdatafromfiles.php" enctype="multipart/form-data">
 			<div class="modal-content">
 				<div class="modal-body">
 					<label>Choose CSV or Excel <a target="_blank" href="./sample/file.csv">Sample</a></label>
@@ -153,9 +153,8 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<input type="hidden" name="user_id" id="user_id">
-					<input type="hidden" name="operation" id="operation">
-					<input type="submit" name="action" id="action" class="btn btn-success" value="Save">
+					<input type="hidden" name="failed_search" id="fail_search" value="true">
+					<input type="submit" name="action" class="btn btn-success" value="Save">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>

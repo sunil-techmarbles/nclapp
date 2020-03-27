@@ -10,7 +10,7 @@
 	<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/dataTables/jquery.dataTables.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/datepicker/datepicker.min.css')}}" rel="stylesheet">
-	@if(request()->segment(count(request()->segments())) == 'recyclesecond')
+	@if(request()->segment(count(request()->segments())) == 'recyclesecond' || request()->segment(count(request()->segments())) == 'failedsearch')
 	@include('layouts.datatableexportstyle')
 	@endif
 	<link href="{{URL('assets/css/datepicker/daterangepicker.css')}}" rel="stylesheet">
@@ -43,7 +43,7 @@
 					<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">
 				</a>
 			</div>
-			@if(request()->segment(count(request()->segments())) == 'recyclesecond')
+			@if(request()->segment(count(request()->segments())) == 'recyclesecond' || request()->segment(count(request()->segments())) == 'failedsearch')
 			@include('admin.recycle-second.navbar')
 			@endif
 			@include('admin.message')
@@ -71,8 +71,10 @@
 @if(request()->segment(count(request()->segments())) == 'inventory')
 <script type="text/javascript" src = "{{URL('assets/js/inventory.js')}}" ></script>
 @endif
-@if(request()->segment(count(request()->segments())) == 'recyclesecond')
-@include('layouts.datatableexportscripts')
+@if(request()->segment(count(request()->segments())) == 'recyclesecond' || request()->segment(count(request()->segments())) == 'search' || request()->segment(count(request()->segments())) == 'failedsearch')
+	@if(request()->segment(count(request()->segments())) == 'recyclesecond')
+		@include('layouts.datatableexportscripts')
+	@endif
 <script type="text/javascript" src = "{{URL('assets/js/recycle-sec.js')}}" ></script>
 @endif
 @if(request()->segment(count(request()->segments())) == 'modeltemplate')

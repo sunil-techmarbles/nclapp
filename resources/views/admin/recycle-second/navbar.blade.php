@@ -11,12 +11,6 @@
 				<a class="btn btn-info mx-1" href="{{route('category')}}">Category</a>
 			</li>
 			<li>
-				<a class="btn btn-info mx-1 add_new_entry" href="javascript:void(0)">Add New Entry</a>
-			</li>
-			<li>
-				<a class="btn btn-info mx-1 upload_data_from_files" href="javascript:void(0)">Upload CSV or XLS</a>
-			</li>
-			<li>
 				<a class="btn btn-info mx-1" href="{{route('email')}}">Report Email</a>
 			</li>
 		</ul>

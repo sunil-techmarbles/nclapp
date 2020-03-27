@@ -1,11 +1,13 @@
-$(document).ready(function(){
+$(window).on('load', function (){
     setTimeout(function(){
-        var ele = '<a class="btn btn-default border border-primary dt-button delete_button"><span>Delete Selected</span></a>';
+        var ele = '<a class="btn btn-default border mr-1 border-primary add_new_entry" href="javascript:void(0)">Add</a><a class="btn btn-default border mr-1 border-primary upload_data_from_files" href="javascript:void(0)">Upload CSV or XLS</a><a href="javascript:void(0)" class="btn btn-default border border-primary dt-button delete_button"><span>Delete Selected</span></a>';
         $('.dt-buttons').append(ele);
         $('#itamg_inventory_value_processing').after('<br><br>');
         $('.first_heading').removeClass('sorting_asc');
-    },1000)
+    },300)
+});
 
+$(document).ready(function(){
     $(document).on("click",".select_all_to_delete", function(e){
         if(this.checked){
             $('.select_to_delete').each(function () {
@@ -51,22 +53,28 @@ $(document).ready(function(){
         },1000);
     }
 
-    $('.upload_data_from_files').on('click', function(data){
-        $('#upload_files').modal('show');
+    $(document).on('click', '.upload_data_from_files', function(data){
+        $('#upload_files').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
     });
 
-    $('.add_new_entry').on('click', function(e){
-        e.preventDefault();
-        $('#add_entry').modal('show');
+    $(document).on('click', '.add_new_entry', function(e){
+        // e.preventDefault();
+        $('#add_entry').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
     })  
     var ClassName = 'btn btn-default border border-primary';
     $('#itamg_inventory_value').DataTable({
         dom: 'Bfrtip',
         buttons: [
-            { extend: 'excel', className: ClassName },
-            { extend: 'csv', className: ClassName },
-            { extend: 'pdf', className: ClassName },
-            { extend: 'copy', className: ClassName },
+        { extend: 'excel', className: ClassName },
+        { extend: 'csv', className: ClassName },
+        { extend: 'pdf', className: ClassName },
+        { extend: 'copy', className: ClassName },
         ]
     });     
 
@@ -151,160 +159,250 @@ $(document).ready(function(){
         }
     });
 
-    $("#add_entry_form").validate({
-        submitHandler: function(form) {
-            $.ajax({
-                url: "./ajax/form_save.php",
-                type: "POST",
-                data: $("#add_entry_form").serialize(),
-                success: function(response) {
-                    if(response){
-                        $('#add_entry').modal('hide');
+    // $("#add_entry_form").validate({
+    //     submitHandler: function(form) {
+    //         $.ajax({
+    //             url: "./ajax/form_save.php",
+    //             type: "POST",
+    //             data: $("#add_entry_form").serialize(),
+    //             success: function(response) {
+    //                 if(response){
+    //                     $('#add_entry').modal('hide');
 
-                        swal({
-                            title: "Added!",
-                            text: "Record added successfully.",
-                            type: "success",
-                            timer: 2000
-                        });
+    //                     swal({
+    //                         title: "Added!",
+    //                         text: "Record added successfully.",
+    //                         type: "success",
+    //                         timer: 2000
+    //                     });
 
-                        loadtabledata();
+    //                     loadtabledata();
 
-                    }else{
-                        swal({
-                            title: "Error!",
-                            text: "There is some error , try again",
-                            type: "failed",
-                            timer: 2000
-                        });
-                    }
-                }            
-            });
-        }
-    });
+    //                 }else{
+    //                     swal({
+    //                         title: "Error!",
+    //                         text: "There is some error , try again",
+    //                         type: "failed",
+    //                         timer: 2000
+    //                     });
+    //                 }
+    //             }            
+    //         });
+    //     }
+    // });
 });
 
-function checkVariable() 
-{
-    var variableLoaded;
-    if (variableLoaded == true)
-    {
-    }
-}
-
-$( "#search" ).click(function() {
+function commenAjaxOnSearchResponse(argument){
     $.ajax({
         type: "POST",
-        url: "data1.php",
+        url: "/"+recyclePrefix+"/search",
         data: {
-            search: $("#searchtext").val()
+            search: $("#searchtext").val(),
+            type: 'second',
         },
-        success: function(result) {
-
-            if(result == "Y")
+        beforeSend: function (){
+            showLoader();
+        },
+        success: function(result){
+            hideLoader();
+            if(result.value == "We didn't find this Part-no or Model in database")
             {
-                $('#searchModal').modal('show');
-                $.ajax({
-                    type: "POST",
-                    url: "data.php",
-                    data: {
-                        search: $("#searchtext").val()
-                    },
-                    success: function(result) {
-                        if(result == "We didn't find this Part-no or Model in database")
-                        {
-                            $('#add_entry').modal('show');
-                        }
-                        else
-                        {
-                            $(".searchresult").html(result);
-                        }
-                    },
-                    error: function(result) {
-                        alert('error');
-                    }
+                $('#add_search_entry').modal({
+                    backdrop: 'static',
+                    keyboard: false
                 });
             }
             else
             {
-                $.ajax({
-                    type: "POST",
-                    url: "data.php",
-                    data: {
-                        search: $("#searchtext").val()
-                    },
-                    success: function(result) {
-                        if(result == "We didn't find this Part-no or Model in database")
-                        {
-                            $('#add_entry').modal('show');
-                        }
-                        else
-                        {
-                            $(".searchresult").html(result);
-                            $(".searchresult").css("display", "block");
-                        }
-                    },
-                    error: function(result) {
-                        alert('error');
-                    }
-                });
+                $(".searchresult").html(result.value);
+                if(argument != '')
+                {
+                    $(".searchresult").css("display", argument);
+                }
             }
         },
-        error: function(result) {
-            alert('error');
+        error: function(result){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
         }
+    }).fail(function (jqXHR, textStatus, error){
+        hideLoader();
+        showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+    });
+}
+
+$( "#search" ).click(function(){
+    $.ajax({
+        type: "POST",
+        url: "/"+recyclePrefix+"/search",
+        data: {
+            search: $("#searchtext").val(),
+            type: "first",
+        },
+        beforeSend: function (){
+            showLoader();
+        },
+        success: function(result){
+            hideLoader();
+            console.log(result);
+            if(result.value == "Y")
+            {
+                $('#searchModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+                commenAjaxOnSearchResponse(q1='');
+            }
+            else
+            {
+                commenAjaxOnSearchResponse(q1="block");
+            }
+        },
+        error: function(result){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+        }
+    }).fail(function (jqXHR, textStatus, error){
+        hideLoader();
+        showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
     });
 });
 
-$("#add_entry_form").validate({
-    submitHandler: function(form) {
+$("#add_search_entry_form").validate({
+    submitHandler: function(form){
         $.ajax({
-            url: "./ajax/form_save1.php",
+            url: "/"+recyclePrefix+"/search",
             type: "POST",
-            data: $("#add_entry_form").serialize(),
-            success: function(response) {
-                if(response)
-                {
-                    $('#add_entry').modal('hide');
-                    swal({
-                        title: "Added!",
-                        text: "Record added successfully.",
-                        type: "success",
-                        timer: 2000
-                    });
-                    loadtabledata();
-                }
-                else
-                {
-                    swal({
-                        title: "Error!",
-                        text: "There is some error , try again",
-                        type: "failed",
-                        timer: 2000
-                    });
-                }
+            data: $("#add_search_entry_form").serialize(),
+            beforeSend: function (){
+                showLoader();
+            },
+            success: function(result){
+                hideLoader();
+                $('#add_search_entry').modal('hide');
+                var status = (result.status) ? 'success' : 'error';
+                showSweetAlertMessage(type = status, message = result.message , icon = status);
             }            
+        }).fail(function (jqXHR, textStatus, error){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
         });
     }
 });
 
 $("#search_form").validate({
-    submitHandler: function(form) {
+    submitHandler: function(form){
         $.ajax({
             type: "POST",
-            url: "data2.php",
+            url: "/"+recyclePrefix+"/search",
             data: {
                 search: $("#searchtext").val(),
-                search1: $("#model1").val()
+                search1: $("#model1").val(),
+                type: "third",
             },
-            success: function(result) {
-                $(".searchresult").html(result);
+            beforeSend: function (){
+                showLoader();
+            },
+            success: function(result){
+                hideLoader();
+                $(".searchresult").html(result.value);
                 $(".searchresult").css("display", "block");
                 $('#searchModal').modal('hide');
             },
-            error: function(result) {
-                alert('error');
+            error: function(result){
+                hideLoader();
+                showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
             }
+        }).fail(function (jqXHR, textStatus, error){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+        });
+    }
+});
+
+$(document).on('click', '.update', function(){
+    var id = $(this).data("table_id");
+    $.ajax({
+        method:"POST",
+        url: "/"+recyclePrefix+"/failedsearch",
+        data:{id:id},
+        dataType:"json",
+        beforeSend: function (){
+            showLoader();
+        },
+        success:function(result)
+        {
+            hideLoader();
+            if(result.status)
+            {
+                $('#add_entry').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+                $('#add_entry #user_id').val(id);
+                $('#add_entry #model').val(result.data.model);
+                $('#add_entry .modal-title').text("Add Itamg inventory");
+                $('#add_entry #part').val(result.data.part);
+                $('#add_entry #brand').val(result.data.brand);
+                $('#add_entry #category').val(result.data.category);
+                $('#add_entry #require_pn').val(result.data.require_pn);
+                $('#add_entry #action').val("Add");
+                $('#add_entry #operation').val("Edit");
+            }
+            else
+            {
+                showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+            }
+        },
+        error: function(result){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+        }
+    }).fail(function (jqXHR, textStatus, error){
+        hideLoader();
+        showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+    });
+});
+
+$(document).on('submit', '#add_entry_form', function(event){
+    event.preventDefault();
+    var errorFlag = true;
+    if($(this).find('#model').val() = '')
+    {
+        alert('Model field required');
+        errorFlag = false;
+    }
+    
+    if($(this).find('#part').val() = '')
+    {
+        alert('Part number field required');
+        errorFlag = false;
+    }
+    
+    if(errorFlag)
+    {
+        $.ajax({
+            url: "/"+recyclePrefix+"/addinventory",
+            method:'POST',
+            data: new FormData(this),
+            dataType:"json",
+            beforeSend: function (){
+                showLoader();
+            },
+            success:function(data)
+            {
+                hideLoader();
+                $('#user_form')[0].reset();
+                $('#userModal').modal('hide');
+                location.reload();
+            },
+            error: function(result){
+                hideLoader();
+                showSweetAlertMessage(type = 'error', message = 'something went wrong' , icon= 'error');
+            }
+        }).fail(function (jqXHR, textStatus, error){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
         });
     }
 });
