@@ -11,17 +11,17 @@ trait CommonWipeMakorApiTraits
 	public $data, $additionalData, $hardwareData, $jobData, $productName, $appleData, $appleDataError;
     public $isError = false;
     public $apiData, $audit, $mainComponents, $saveDataArray;
-    public $appleTableData, $apple_audit;
+    public $appleTableData, $appleAudit;
 
 	public function init($wipeFileContent, $additionalFileContent, $productName, $type)
 	{
         $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName);
 
-   
         if($type == 'Computer')
         {
             $this->SetGraphic();
             $this->CreateComputerXml();
+            $this->apiData['xml_data'] = $this->audit->asXML();
         }
         elseif ($type == 'Server')
         {
@@ -29,43 +29,42 @@ trait CommonWipeMakorApiTraits
             $this->SetRaidController();
             $this->SetBatterystatus();
             $this->CreateServerXml();
+            $this->apiData['xml_data'] = $this->audit->asXML();
         }
         elseif ($type == 'Laptop')
         {
             $this->SetBatteryStatusLaptop();
             $this->SetResolution();
             $this->CreateLaptopXml();
+            $this->apiData['xml_data'] = $this->audit->asXML();
         }
         elseif ($type == 'All_In_One')
         {
             $this->SetAllInOneData();
             $this->CreateAllInOneXml();
-
+            $this->apiData['xml_data'] = $this->audit->asXML();
         }
         elseif ($type == 'Makor_Apple')
         {
             // $this->appleTableData = getMakorAppleDataFromTable($this->hardware_data);
             $this->appleTableData = [];
-
-            $this->SaveAppleData_array();
+            $this->SaveAppleDataArray();
             $this->SetMakorAppleProcessorData();
-            $this->_setHardDriveData();
-            $this->_setResolution();
-            $this->_setMemoryData();
-            $this->_setDimensionsData();
-            $this->_setBatterystatus();
-            $this->_setNewAppledata();
-            $this->_create_xml();
-            // $this->CreateMakorAppleXml();
+            $this->SetMakorAppleHardDriveData();
+            $this->SetMakorAppleResolution();
+            $this->SetMakorAppleMemoryData();
+            $this->SetMakorAppleDimensionsData();
+            $this->SetMakorAppleBatterystatus();
+            $this->SetNewAppledata();
+            $this->CreateMakorAppleXml();
+            $this->apiData['xml_data'] = $this->appleAudit->asXML();
         }
-
-        $this->apiData['xml_data'] = $this->audit->asXML();
-
-        return $this->apiData['xml_data'];
+        return $this->apiData; 
 	}
 
 
-    public function Save_apple_data_array()
+    // Functions for Makor Apple XML data . 
+    public function SaveAppleDataArray()
     {
         $this->saveDataArray['Motherboard_RAM'] = (isset($this->appleTableData['Motherboard_RAM'])) ? $this->appleTableData['Motherboard_RAM'] : '';
         $this->saveDataArray['RAM_Slots'] = (isset($this->appleTableData['RAM_Slots'])) ? $this->appleTableData['RAM_Slots'] : '';
@@ -78,20 +77,992 @@ trait CommonWipeMakorApiTraits
     {
         $this->apiData['processors'] = array();
         //check processor name
-        $this->apiData['processors'][0]['processor_manufacturer'] = $this->apple_table_data['Processor_Manufacturer'];
-        $this->apiData['processors'][0]['processor_type'] = $this->apple_table_data['Processor_Type'];
-        $this->apiData['processors'][0]['processor_model'] = $this->apple_table_data['Processor_Model'];
-        $this->apiData['processors'][0]['processor_core'] = $this->apple_table_data['Processor_Core'];
-        $this->apiData['processors'][0]['processor_generation'] = $this->apple_table_data['Processor_Generation'];
-        $this->apiData['processors'][0]['processor_speed'] = $this->apple_table_data['Processor_Speed'];
-        $this->apiData['processors'][0]['processor_qty'] = $this->apple_table_data['Processor_Quantity'];
+        $this->apiData['processors'][0]['processor_manufacturer'] = (isset($this->appleTableData['Processor_Manufacturer'])) ? $this->appleTableData['Processor_Manufacturer'] : '';
+        $this->apiData['processors'][0]['processor_type'] = (isset($this->appleTableData['Processor_Type'])) ? $this->appleTableData['Processor_Type'] : '';
+        $this->apiData['processors'][0]['processor_model'] =  (isset($this->appleTableData['Processor_Model'])) ? $this->appleTableData['Processor_Model'] : '';
+        $this->apiData['processors'][0]['processor_core'] = (isset($this->appleTableData['Processor_Core'])) ? $this->appleTableData['Processor_Core'] : '';
+        $this->apiData['processors'][0]['processor_generation'] =  (isset($this->appleTableData['Processor_Generation'])) ? $this->appleTableData['Processor_Generation'] : '';
+        $this->apiData['processors'][0]['processor_speed'] = (isset($this->appleTableData['Processor_Speed'])) ? $this->appleTableData['Processor_Speed'] : '';
+        $this->apiData['processors'][0]['processor_qty'] = (isset($this->appleTableData['Processor_Quantity'])) ? $this->appleTableData['Processor_Quantity'] : '';
         $this->apiData['processors'][0]['processor_codename'] = 'N/A';
         $this->apiData['processors'][0]['processor_socket'] = 'N/A';
 
     }
 
+    public function SetMakorAppleHardDriveData()
+    {
+        $this->apiData['hard_drive'] = array();
+        $hardDrives = getCustomizeData($this->hardwareData['Devices']['Device']);
+        
+        $hdInterfaceSataArray = array(
+            "SATA/SAS",
+            "Serial ATA (1.5 Gb/s)",
+            "Mini SATA (6 Gb/s)",
+            "Serial ATA (3 Gb/s)",
+            "Serial ATA (6 Gb/s)/PCIe",
+            "Serial ATA (6 Gb/s)",
+            "Ultra ATA",
+            "Ultra ATA/33 (ATA-4)",
+            "Ultra ATA/66",
+            "Ultra ATA/66 (ATA-5)",
+            "Ultra ATA/100",
+            "Ultra ATA/133",
+            "Serial ATA (6 Gb/s) x2",
+            "Serial ATA",
+            "Serial ATA (3 Gb/s) x2"
+        );
+
+        $hdInterfaceOtherArray = array(
+            "Proprietary (6 Gb/s)",
+            "Proprietary (PCIe 2.0 x2)",
+            "Proprietary (PCIe 2.0 x4)",
+            "Onboard",
+            "Onboard (PCIe)",
+            "Onboard (PCIe 2.0 x4)",
+            "Onboard (PCIe 3.0 x2)",
+            "Proprietary (PCIe 3.0)" .
+            "Onboard (PCIe 3.0)"
+        );
+        
+        $hdTypeArray = array(
+            "1.8' (5.2 mm)",
+            "3.5' (25.4 mm)",
+            "Proprietary (2.2 mm)",
+            "Proprietary",
+            "Proprietary (7 mm)",
+            "Soldered",
+            "2.5' (9.5 mm)/Proprietary",
+            "2.5' (7 mm)",
+            "2.5' (9.5 mm)",
+            "2.5' (12.5 mm)",
+            "2.5' (17 mm)",
+            "3.5' (26.10 mm)",
+            "3.5' (26.10 mm)/2.5' (7 mm)",
+            "2.5' (9.5 mm) x2",
+            "3.5' (26.10 mm)/Proprietary",
+            "3.5' (7 mm)"
+        );
+        
+        foreach ($hardDrives as $key => $hardDriveData)
+        {
+            $this->apiData['hard_drive'][$key]['manufacturer'] = $hardDriveData['Vendor'];
+            $this->apiData['hard_drive'][$key]['model'] = $hardDriveData['Product'];
+            $this->apiData['hard_drive'][$key]['part_number'] = "N/A";
+            $this->apiData['hard_drive'][$key]['serial'] = $hardDriveData['Serial'];
+            
+            //set hard drive capacity
+            if (isset($hardDriveData['Gigabytes']) && $hardDriveData['Gigabytes'] > 999)
+            {
+                $Gigabytes = round($hardDriveData['Gigabytes'] / 1000, 0);
+                $this->apiData['hard_drive'][$key]['capacity'] = $Gigabytes . "TB";
+            }
+            else
+            {
+                $Gigabytes = round($hardDriveData['Gigabytes'], 0);
+                $this->apiData['hard_drive'][$key]['capacity'] = $Gigabytes . "GB";
+            }
+           
+            $interface = '';
+            if (in_array($this->appleTableData['Storage_Interface'], $hdInterfaceSataArray))
+            {
+                $interface = "SATA";
+            }
+            elseif (in_array($this->appleTableData['Storage_Interface'], $hdInterfaceOtherArray))
+            {
+                $interface = trim(preg_replace("/\([^)]+\)/", "", $this->appleTableData['Storage_Interface']));
+            }
+
+            $this->apiData['hard_drive'][$key]['interface'] = $interface;
+
+            $this->apiData['hard_drive'][$key]['power_hours'] = getMakorSmartAttribute($this->jobData['Operation']);
+            $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation']['Method'];
+            $this->apiData['hard_drive'][$key]['removed'] = "No";
+
+            $type = '';
+            if (in_array($this->appleTableData['Storage_Dimensions'], $hdTypeArray))
+            {
+                $type = trim(preg_replace("/\([^)]+\)/", "", $this->appleTableData['Storage_Dimensions']));
+            }
+            $this->apiData['hard_drive'][$key]['type'] = $type;
+
+            //set hard drive service queue status
+            $this->apiData['hard_drive'][$key]['service_queue_status'] = getMakorServiecsQueueStatus($this->jobData['Operation'], $this->productName);
+        }
+    }
+
+    public function SetMakorAppleResolution()
+    {
+        if (isset($this->appleTableData['Built_in_Display'])) {
+            $this->apiData['Size'] = $this->appleTableData['Built_in_Display'];
+        } else {
+            $this->apiData['Size'] = "N/A";
+        }
+
+        if (isset($this->appleTableData['Native_Resolution'])) {
+            $this->apiData['Resolution'] = $this->appleTableData['Native_Resolution'];
+        } else {
+            $this->apiData['Resolution'] = "N/A";
+        }
+
+        if (isset($this->additionalData['Screen']['Touchscreen'])) {
+            $this->apiData['Touchscreen'] = $this->additionalData['Screen']['Touchscreen'];
+        } else {
+            $this->apiData['Touchscreen'] = "N/A";
+        }
+    }
+
+    
+    public function SetMakorAppleMemoryData()
+    {
+        if (isset($this->hardwareData['RAM']['Stick']))
+        {
+            $ramsData = getCustomizeData($this->hardwareData['RAM']['Stick']);
+        }
+        else
+        {
+            $ramsData = getCustomizeData($this->hardwareData['RAM']);
+        }
+
+        foreach ($ramsData as $key => $ramData)
+        {
+            if (isset($ramData['Capacity']))
+            {
+                $capacity = MBToGB($ramData['Capacity']);
+            }
+            else
+            {
+                $capacity = getRAMString($this->hardwareData['RAM']);
+            }
+
+            $this->apiData['memory'][$key]['capacity'] = $capacity;
+            $this->apiData['memory'][$key]['type'] = $this->appleTableData['RAM_Type'];
+            $this->apiData['memory'][$key]['speed'] = $this->appleTableData['RAM_Speed'];
+
+            if (isset($this->additionalData['RAM_P_N']))
+            {
+                $this->apiData['memory'][$key]['partnumber'] = $this->additionalData['RAM_P_N'];
+            }
+            elseif (isset($ramData['PartNumber']))
+            {
+                $this->apiData['memory'][$key]['partnumber'] = $ramData['PartNumber'];
+            }
+            else
+            {
+                $this->apiData['memory'][$key]['partnumber'] = "N/A";
+            }
+
+            $this->apiData['memory'][$key]['slots'] = $this->appleTableData['RAM_Slots'];
+
+            $this->apiData['memory'][$key]['max_memory'] = $this->appleTableData['MaximumRAM'];
+        }
+    }
+
+    public function SetMakorAppleDimensionsData()
+    {
+        if (!empty($this->appleTableData['Dimensions']))
+        {
+            $dimensions = explode('x', $this->appleTableData['Dimensions']);
+            
+            if (is_array($dimensions))
+            {
+                if (isset($dimensions[0]))
+                {
+                    $this->api_data['length'] = trim($dimensions[0]);
+                }
+                else
+                {
+                    $this->api_data['length'] = "N/A";
+                }
+                if (isset($dimensions[1]))
+                {
+                    $this->api_data['width'] = trim($dimensions[1]);
+                }
+                else
+                {
+                    $this->api_data['width'] = "N/A";
+                }
+                if (isset($dimensions[2]))
+                {
+                    $this->api_data['height'] = trim($dimensions[2]);
+                }
+                else
+                {
+                    $this->api_data['height'] = "N/A";
+                }
+            }
+        }
+        else
+        {
+            $this->api_data['length'] = "N/A";
+            $this->api_data['height'] = "N/A";
+            $this->api_data['width'] = "N/A";
+        }
+    }
+
+    public function SetMakorAppleBatterystatus()
+    {
+        if (isset($this->additionalData['Peripherials']['Webcam']))
+        {
+            $this->apiData['Webcam'] = $this->additionalData['Peripherials']['Webcam'];
+        }
+        else
+        {
+            $this->apiData['Webcam'] = "N/A";
+        }
+    }
+
+    public function SetNewAppledata()
+    {
+        $this->apiData['Class'] = $this->additionalData['Product_Name'];
+
+        $assetData = getJobUserData($this->jobData['UserFields']['UserField'], 2);
+        
+        if (!empty($assetData))
+        {
+            $assetTag = explode("-", $assetData);
+            if (isset($assetTag[1]))
+            {
+                $this->apiData['asset_tag'] = $assetTag[1];
+            }
+            else
+            {
+                $this->apiData['asset_tag'] = $assetTag[0];
+            }
+        }
+        else
+        {
+            $this->apiData['asset_tag'] = '';
+        }
+
+        $this->apiData['serial'] = $this->hardwareData['ComputerSerial'];
+
+        if (isset($this->appleTableData['Manufacturer']))
+        {
+            $this->apiData['manufacturer'] = $this->appleTableData['Manufacturer'];
+        }
+        else
+        {
+            $this->apiData['manufacturer'] = '';
+        }
+
+        if (isset($this->appleTableData['Apple_Model_Combined']))
+        {
+            $this->apiData['model'] = $this->appleTableData['Apple_Model_Combined'];
+        }
+        else
+        {
+            $this->apiData['model'] = '';
+        }
+
+        if (isset($this->appleTableData['Apple_Order_No']))
+        {
+            $this->apiData['model#'] = $this->appleTableData['Apple_Order_No'];
+        }
+        else
+        {
+            $this->apiData['model#'] = '';
+        }
+
+        if (isset($this->appleTableData['Avg_Weight']))
+        {
+            $AvgWeight = explode('lbs', $this->appleTableData['Avg_Weight']);
+            $this->apiData['weight'] = trim($AvgWeight[0]);
+            $this->apiData['weight_base'] = "LB";
+        }
+        else
+        {
+            $this->apiData['weight'] = "N/A";
+            $this->apiData['weight_base'] = "N/A";
+        }
+
+        if (isset($this->additionalData['Ports']['Available_Video_Ports']))
+        {
+            if (is_array($this->additionalData['Ports']['Available_Video_Ports']))
+            {
+                $this->apiData['Video_Outputs'][0]['Ports'] = implode(", ", $this->additionalData['Ports']['Available_Video_Ports']);
+            }
+            else
+            {
+                $this->apiData['Video_Outputs'][0]['Ports'] = $this->additionalData['Ports']['Available_Video_Ports'];
+            }
+        }
+        else
+        {
+            $this->apiData['Video_Outputs'][0]['Ports'] = "N/A";
+        }
+
+        $this->apiData['Video_Outputs'][0]['Processor'] = $this->appleTableData['Video_Card'];
+
+        if (isset($this->additionalData['Notes']))
+        {
+            $this->apiData['notes'] = $this->additionalData['Notes'];
+        }
+        else
+        {
+            $this->apiData['notes'] = "N/A";
+        }
+
+        if (isset($this->appleTableData['Other_Data']))
+        {
+            $this->apiData['Other'] = $this->appleTableData['Other_Data'];
+        }
+        else
+        {
+            $this->apiData['Other'] = "N/A";
+        }
+
+        if (isset($this->additionalData['Components']['Optical_Drive']) && strtolower($this->additionalData['Components']['Optical_Drive']) == "yes") {
+            $opticalDrive = $this->appleTableData['Standard_Optical'];
+        }
+        else
+        {
+            $opticalDrive = "No_Optical";
+        }
+
+        if (!empty($opticalDrive))
+        {
+            $this->apiData['optical_drive'] = $opticalDrive;
+        }
+        else
+        {
+            $this->apiData['optical_drive'] = "";
+        }
+    }
+
+    public function CreateMakorAppleXml()
+    {
+         // creating object of AuditXMLElement
+        $this->appleAudit = new SimpleXMLElement('<audit></audit>');
 
 
+        // component System
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'System');
+
+        //Set AssetTag
+        $component = $components->addChild('component', "1-DefaultPallet-I");
+        $component->addAttribute('name', 'Pallet');
+        $component->addAttribute('type', 'string');
+
+        //Set AssetTag
+        if (is_array($this->apiData['asset_tag'])) {
+            $this->apiData['asset_tag'] = $this->apiData['asset_tag'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['asset_tag']);
+        $component->addAttribute('name', 'Asset');
+        $component->addAttribute('type', 'string');
+
+        //Set Class
+        if (is_array($this->apiData['Class'])) {
+            $this->apiData['Class'] = $this->apiData['Class'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['Class']);
+        $component->addAttribute('name', 'Class');
+        $component->addAttribute('type', 'string');
+
+        //Set Serial
+        if (is_array($this->apiData['serial'])) {
+            $this->apiData['serial'] = $this->apiData['serial'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['serial']);
+        $component->addAttribute('name', 'Serial');
+        $component->addAttribute('type', 'string');
+
+        //Set manufacturer
+        if (is_array($this->apiData['manufacturer'])) {
+            $this->apiData['manufacturer'] = $this->apiData['manufacturer'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['manufacturer']);
+        $component->addAttribute('name', 'Manufacturer');
+        $component->addAttribute('type', 'string');
+
+        //Set Model
+        if (is_array($this->apiData['model'])) {
+            $this->apiData['model'] = $this->apiData['model'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['model']);
+        $component->addAttribute('name', 'Model');
+        $component->addAttribute('type', 'string');
+
+        //Set Model#
+        if (is_array($this->apiData['model#'])) {
+            $this->apiData['model#'] = $this->apiData['model#'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['model#']);
+        $component->addAttribute('name', 'Model#');
+        $component->addAttribute('type', 'string');
+
+        //Set Customer Asset
+        if (is_array($this->apiData['customer_asset_tag'])) {
+            $this->apiData['customer_asset_tag'] = $this->apiData['customer_asset_tag'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['customer_asset_tag']);
+        $component->addAttribute('name', 'CustomerAsset#');
+        $component->addAttribute('type', 'string');
+
+        //Set Weight
+        if (is_array($this->apiData['weight'])) {
+            $this->apiData['weight'] = $this->apiData['weight'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['weight']);
+        $component->addAttribute('name', 'ItemNetWeight');
+        $component->addAttribute('type', 'string');
+
+        //Set Grade
+        if (is_array($this->apiData['grade'])) {
+            $this->apiData['grade'] = $this->apiData['grade'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['grade']);
+        $component->addAttribute('name', 'Grade');
+        $component->addAttribute('type', 'string');
+
+        //set ComplianceLabel
+        if (is_array($this->apiData['compliance_label'])) {
+            $this->apiData['compliance_label'] = $this->apiData['compliance_label'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['compliance_label']);
+        $component->addAttribute('name', 'ComplianceLabel');
+        $component->addAttribute('type', 'string');
+
+        //Set Condition
+        if (is_array($this->apiData['condition'])) {
+            $this->apiData['condition'] = $this->apiData['condition'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['condition']);
+        $component->addAttribute('name', 'Condition');
+        $component->addAttribute('type', 'string');
+
+        //Set Color
+        if (is_array($this->apiData['color'])) {
+            $this->apiData['color'] = $this->apiData['color'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['color']);
+        $component->addAttribute('name', 'Color');
+        $component->addAttribute('type', 'string');
+
+        //Set Optical Drive
+        if (is_array($this->apiData['optical_drive'])) {
+            $this->apiData['optical_drive'] = $this->apiData['optical_drive'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['optical_drive']);
+        $component->addAttribute('name', 'OpticalDrive');
+        $component->addAttribute('type', 'string');
+
+        //Set RJ-45
+        if (is_array($this->apiData['RJ-45'])) {
+            $this->apiData['RJ-45'] = $this->apiData['RJ-45'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['RJ-45']);
+        $component->addAttribute('name', 'RJ-45');
+        $component->addAttribute('type', 'string');
+
+        //Set USB 2.0
+        if (is_array($this->apiData['USB2.0'])) {
+            $this->apiData['USB2.0'] = $this->apiData['USB2.0'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['USB2.0']);
+        $component->addAttribute('name', 'USB2.0');
+        $component->addAttribute('type', 'string');
+
+        //Set USB 3.0
+        if (is_array($this->apiData['USB3.0'])) {
+            $this->apiData['USB3.0'] = $this->apiData['USB3.0'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['USB3.0']);
+        $component->addAttribute('name', 'USB3.0');
+        $component->addAttribute('type', 'string');
+
+        //Set USB-C
+        if (is_array($this->apiData['USB-C'])) {
+            $this->apiData['USB-C'] = $this->apiData['USB-C'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['USB-C']);
+        $component->addAttribute('name', 'USB-C');
+        $component->addAttribute('type', 'string');
+
+        //Set SD Card Reader
+        if (is_array($this->apiData['SD_card_reader'])) {
+            $this->apiData['SD_card_reader'] = $this->apiData['SD_card_reader'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['SD_card_reader']);
+        $component->addAttribute('name', 'SDCardReader');
+        $component->addAttribute('type', 'string');
+
+        //Set Headphone Jack
+        if (is_array($this->apiData['Headphone_Jack'])) {
+            $this->apiData['Headphone_Jack'] = $this->apiData['Headphone_Jack'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['Headphone_Jack']);
+        $component->addAttribute('name', 'HeadphoneJack');
+        $component->addAttribute('type', 'string');
+
+        //Set Microphone Jack
+        if (is_array($this->apiData['Microphone_Jack'])) {
+            $this->apiData['Microphone_Jack'] = $this->apiData['Microphone_Jack'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['Microphone_Jack']);
+        $component->addAttribute('name', 'MicrophoneJack');
+        $component->addAttribute('type', 'string');
+
+        //Set Height
+        if (is_array($this->apiData['height'])) {
+            $this->apiData['height'] = $this->apiData['height'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['height']);
+        $component->addAttribute('name', 'Height');
+        $component->addAttribute('type', 'string');
+
+        //Set Width
+        if (is_array($this->apiData['width'])) {
+            $this->apiData['width'] = $this->apiData['width'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['width']);
+        $component->addAttribute('name', 'Width');
+        $component->addAttribute('type', 'string');
+
+        //Set Length
+        if (is_array($this->apiData['length'])) {
+            $this->apiData['length'] = $this->apiData['length'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['length']);
+        $component->addAttribute('name', 'Length');
+        $component->addAttribute('type', 'string');
+
+        //Set CombinedHD
+        if (is_array($this->apiData['CombinedHD'])) {
+            $this->apiData['CombinedHD'] = $this->apiData['CombinedHD'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['CombinedHD']);
+        $component->addAttribute('name', 'CombinedHD');
+        $component->addAttribute('type', 'string');
+
+        //Set CombinedHDP/N
+        if (is_array($this->apiData['CombinedHDP/N'])) {
+            $this->apiData['CombinedHDP/N'] = $this->apiData['CombinedHDP/N'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['CombinedHDP/N']);
+        $component->addAttribute('name', 'CombinedHDP/N');
+        $component->addAttribute('type', 'string');
+
+        //Set CombinedRAM
+        if (is_array($this->apiData['CombinedRAM'])) {
+            $this->apiData['CombinedRAM'] = $this->apiData['CombinedRAM'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['CombinedRAM']);
+        $component->addAttribute('name', 'CombinedRAM');
+        $component->addAttribute('type', 'string');
+
+        //Set CombinedRAMP/N
+        if (is_array($this->apiData['CombinedRAMP/N'])) {
+            $this->apiData['CombinedRAMP/N'] = $this->apiData['CombinedRAMP/N'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['CombinedRAMP/N']);
+        $component->addAttribute('name', 'CombinedRAMP/N');
+        $component->addAttribute('type', 'string');
+
+        //Set CombinedRAMP/N
+        if (is_array($this->apiData['UpdatedHardDrive'])) {
+            $this->apiData['UpdatedHardDrive'] = $this->apiData['UpdatedHardDrive'][0];
+        }
+        $component = $components->addChild('component', $this->apiData['UpdatedHardDrive']);
+        $component->addAttribute('name', 'UpdatedHardDrive');
+        $component->addAttribute('type', 'string');
+
+        //Set COA Label
+        $component = $components->addChild('component', 'Mac OS X');
+        $component->addAttribute('name', 'COALabel');
+        $component->addAttribute('type', 'string');
+
+
+        // component Processors
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Processors');
+
+        foreach ($this->apiData['processors'] as $processorData) {
+            // child component Processor
+            $component = $components->addChild('components');
+            $component->addAttribute('name', 'Processor');
+
+            //Set Manufacturer
+            if (is_array($processorData['processor_manufacturer'])) {
+                $processorData['processor_manufacturer'] = $processorData['processor_manufacturer'][0];
+            }
+            $component1 = $component->addChild('component', $processorData['processor_manufacturer']);
+            $component1->addAttribute('name', 'Manufacturer');
+            $component1->addAttribute('type', 'string');
+
+            //Set ProcessorName
+            if (is_array($processorData['processor_model'])) {
+                $processorData['processor_model'] = $processorData['processor_model'][0];
+            }
+            $component2 = $component->addChild('component', $processorData['processor_model']);
+            $component2->addAttribute('name', 'Model');
+            $component2->addAttribute('type', 'string');
+
+            //Set ProcessorType
+            if (is_array($processorData['processor_type'])) {
+                $processorData['processor_type'] = $processorData['processor_type'][0];
+            }
+            $component3 = $component->addChild('component', $processorData['processor_type']);
+            $component3->addAttribute('name', 'Type');
+            $component3->addAttribute('type', 'string');
+
+            //Set ProcessorCore
+            if (is_array($processorData['processor_core'])) {
+                $processorData['processor_core'] = $processorData['processor_core'][0];
+            }
+            $component4 = $component->addChild('component', $processorData['processor_core']);
+            $component4->addAttribute('name', 'Core');
+            $component4->addAttribute('type', 'string');
+
+            //Set ProcessorSpeed
+            if (is_array($processorData['processor_speed'])) {
+                $processorData['processor_speed'] = $processorData['processor_speed'][0];
+            }
+            $component5 = $component->addChild('component', $processorData['processor_speed']);
+            $component5->addAttribute('name', 'Speed');
+            $component5->addAttribute('type', 'string');
+
+            //Set ProcessorGeneration
+            if (is_array($processorData['processor_generation'])) {
+                $processorData['processor_generation'] = $processorData['processor_generation'][0];
+            }
+            $component6 = $component->addChild('component', $processorData['processor_generation']);
+            $component6->addAttribute('name', 'Generation');
+            $component6->addAttribute('type', 'string');
+
+            //Set ProcessorCodename
+            if (is_array($processorData['processor_codename'])) {
+                $processorData['processor_codename'] = $processorData['processor_codename'][0];
+            }
+            $component7 = $component->addChild('component', $processorData['processor_codename']);
+            $component7->addAttribute('name', 'Codename');
+            $component7->addAttribute('type', 'string');
+
+            //Set ProcessorSocket
+            if (is_array($processorData['processor_socket'])) {
+                $processorData['processor_socket'] = $processorData['processor_socket'][0];
+            }
+            $component8 = $component->addChild('component', $processorData['processor_socket']);
+            $component8->addAttribute('name', 'Socket');
+            $component8->addAttribute('type', 'string');
+
+            //Set ProcessorCount
+            if (is_array($processorData['processor_qty'])) {
+                $processorData['processor_qty'] = $processorData['processor_qty'][0];
+            }
+            $component9 = $component->addChild('component', $processorData['processor_qty']);
+            $component9->addAttribute('name', 'Quantity');
+            $component9->addAttribute('type', 'string');
+        }
+
+        // component Hard Drive
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Hard_Drives');
+
+        foreach ($this->apiData['hard_drive'] as $hardDriveData) {
+
+            // child component Hard Drive
+            $component = $components->addChild('components');
+            $component->addAttribute('name', 'Hard_Drive');
+
+            //Set Vendor
+            if (is_array($hardDriveData['manufacturer'])) {
+                $hardDriveData['manufacturer'] = $hardDriveData['manufacturer'][0];
+            }
+            $component1 = $component->addChild('component', $hardDriveData['manufacturer']);
+            $component1->addAttribute('name', 'Manufacturer');
+            $component1->addAttribute('type', 'string');
+
+            //Set Model
+            if (is_array($hardDriveData['model'])) {
+                $hardDriveData['model'] = $hardDriveData['model'][0];
+            }
+            $component2 = $component->addChild('component', $hardDriveData['model']);
+            $component2->addAttribute('name', 'Model');
+            $component2->addAttribute('type', 'string');
+
+
+            if (is_array($hardDriveData['part_number'])) {
+                $hardDriveData['part_number'] = $hardDriveData['part_number'][0];
+            }
+            $component3 = $component->addChild('component', $hardDriveData['part_number']);
+            $component3->addAttribute('name', 'PartNumber');
+            $component3->addAttribute('type', 'string');
+
+            //Set Serial
+            if (is_array($hardDriveData['serial'])) {
+                $hardDriveData['serial'] = $hardDriveData['serial'][0];
+            }
+            $component4 = $component->addChild('component', $hardDriveData['serial']);
+            $component4->addAttribute('name', 'Serial#');
+            $component4->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($hardDriveData['capacity'])) {
+                $hardDriveData['capacity'] = $hardDriveData['capacity'][0];
+            }
+            $component5 = $component->addChild('component', $hardDriveData['capacity']);
+            $component5->addAttribute('name', 'Capacity');
+            $component5->addAttribute('type', 'string');
+
+            //Set Interface
+            if (is_array($hardDriveData['interface'])) {
+                $hardDriveData['interface'] = $hardDriveData['interface'][0];
+            }
+            $component6 = $component->addChild('component', $hardDriveData['interface']);
+            $component6->addAttribute('name', 'Interface');
+            $component6->addAttribute('type', 'string');
+
+            //Set Interface
+            if (is_array($hardDriveData['power_hours'])) {
+                $hardDriveData['power_hours'] = $hardDriveData['power_hours'][0];
+            }
+            $component7 = $component->addChild('component', $hardDriveData['power_hours']);
+            $component7->addAttribute('name', 'PoweronHours');
+            $component7->addAttribute('type', 'string');
+
+            //Set Vendor
+            if (is_array($hardDriveData['service_parfrmed'])) {
+                $hardDriveData['service_parfrmed'] = $hardDriveData['service_parfrmed'][0];
+            }
+            $component8 = $component->addChild('component', $hardDriveData['service_parfrmed']);
+            $component8->addAttribute('name', 'HDServicesPerformed');
+            $component8->addAttribute('type', 'string');
+
+            //Set Vendor
+            if (is_array($hardDriveData['removed'])) {
+                $hardDriveData['removed'] = $hardDriveData['removed'][0];
+            }
+            $component9 = $component->addChild('component', $hardDriveData['removed']);
+            $component9->addAttribute('name', 'Removed');
+            $component9->addAttribute('type', 'string');
+
+            //Set Interface
+            if (is_array($hardDriveData['size'])) {
+                $hardDriveData['size'] = $hardDriveData['size'][0];
+            }
+            $component10 = $component->addChild('component', $hardDriveData['size']);
+            $component10->addAttribute('name', 'Size');
+            $component10->addAttribute('type', 'string');
+
+            //Set Interface
+            if (is_array($hardDriveData['service_queue_status'])) {
+                $hardDriveData['service_queue_status'] = $hardDriveData['service_queue_status'][0];
+            }
+            $component11 = $component->addChild('component', $hardDriveData['service_queue_status']);
+            $component11->addAttribute('name', 'ServiceQueueStatus');
+            $component11->addAttribute('type', 'string');
+        }
+
+        // component Memorys
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Memorys');
+
+        foreach ($this->apiData['memory'] as $memoryData) {
+            // child component Memory
+            $component = $components->addChild('components');
+            $component->addAttribute('name', 'Memory');
+
+            //Set Capacity
+            if (is_array($memoryData['capacity'])) {
+                $memoryData['capacity'] = $memoryData['capacity'][0];
+            }
+            $component1 = $component->addChild('component', $memoryData['capacity']);
+            $component1->addAttribute('name', 'Capacity');
+            $component1->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($memoryData['type'])) {
+                $memoryData['type'] = $memoryData['type'][0];
+            }
+            $component2 = $component->addChild('component', $memoryData['type']);
+            $component2->addAttribute('name', 'Type');
+            $component2->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($memoryData['partnumber'])) {
+                $memoryData['partnumber'] = $memoryData['partnumber'][0];
+            }
+            $component3 = $component->addChild('component', $memoryData['partnumber']);
+            $component3->addAttribute('name', 'PartNumber');
+            $component3->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($memoryData['slots'])) {
+                $memoryData['slots'] = $memoryData['slots'][0];
+            }
+            $component4 = $component->addChild('component', $memoryData['slots']);
+            $component4->addAttribute('name', 'Slots');
+            $component4->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($memoryData['max_memory'])) {
+                $memoryData['max_memory'] = $memoryData['max_memory'][0];
+            }
+            $component5 = $component->addChild('component', $memoryData['max_memory']);
+            $component5->addAttribute('name', 'MaximumMemoryCapacity');
+            $component5->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($memoryData['speed'])) {
+                $memoryData['speed'] = $memoryData['speed'][0];
+            }
+            $component6 = $component->addChild('component', $memoryData['speed']);
+            $component6->addAttribute('name', 'Speed');
+            $component6->addAttribute('type', 'string');
+        }
+
+        // component  Miscellaneous
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Miscellaneous');
+
+        // child component  Miscellaneous
+        $component = $components->addChild('components');
+        $component->addAttribute('name', 'Miscellaneous');
+
+        //Set Case
+        if (is_array($this->apiData['Case'])) {
+            $this->apiData['Case'] = $this->apiData['Case'][0];
+        }
+        $component1 = $component->addChild('component', $this->apiData['Case']);
+        $component1->addAttribute('name', 'Case');
+        $component1->addAttribute('type', 'string');
+
+        //Set Screen
+        if (is_array($this->apiData['Screen'])) {
+            $this->apiData['Screen'] = $this->apiData['Screen'][0];
+        }
+        $component2 = $component->addChild('component', $this->apiData['Screen']);
+        $component2->addAttribute('name', 'Screen');
+        $component2->addAttribute('type', 'string');
+
+        //set Missing
+        if (is_array($this->apiData['Missing'])) {
+            $this->apiData['Missing'] = $this->apiData['Missing'][0];
+        }
+        $component3 = $component->addChild('component', $this->apiData['Missing']);
+        $component3->addAttribute('name', 'Missing');
+        $component3->addAttribute('type', 'string');
+
+        //Set Cosemtic
+        if (is_array($this->apiData['Cosemtic'])) {
+            $this->apiData['Cosemtic'] = $this->apiData['Cosemtic'][0];
+        }
+        $component4 = $component->addChild('component', $this->apiData['Cosemtic']);
+        $component4->addAttribute('name', 'Cosemtic');
+        $component4->addAttribute('type', 'string');
+
+        //Set Input/Output
+        if (is_array($this->apiData['Input/Output'])) {
+            $this->apiData['Input/Output'] = $this->apiData['Input/Output'][0];
+        }
+        $component5 = $component->addChild('component', $this->apiData['Input/Output']);
+        $component5->addAttribute('name', 'Input/Output');
+        $component5->addAttribute('type', 'string');
+
+        //Set Other
+        if (is_array($this->apiData['Other'])) {
+            $this->apiData['Other'] = $this->apiData['Other'][0];
+        }
+        $component6 = $component->addChild('component', $this->apiData['Other']);
+        $component6->addAttribute('name', 'Other');
+        $component6->addAttribute('type', 'string');
+
+        //Set note
+        if (is_array($this->apiData['notes'])) {
+            $this->apiData['notes'] = $this->apiData['notes'][0];
+        }
+        $component7 = $component->addChild('component', $this->apiData['notes']);
+        $component7->addAttribute('name', 'Notes');
+        $component7->addAttribute('type', 'string');
+
+        //Set CombinedRAMP/N
+        if (is_array($this->apiData['functional'])) {
+            $this->apiData['asset_tag'] = $this->apiData['functional'][0];
+        }
+        $component8 = $component->addChild('component', $this->apiData['functional']);
+        $component8->addAttribute('name', 'Functional');
+        $component8->addAttribute('type', 'string');
+
+        // component Screen/Resolution
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Screen/Resolution');
+
+        // child component Screen/Resolution
+        $component = $components->addChild('components');
+        $component->addAttribute('name', 'Screen/Resolution');
+
+        //Set Type
+        if (is_array($this->apiData['Size'])) {
+            $this->apiData['Size'] = $this->apiData['Size'][0];
+        }
+        $component1 = $component->addChild('component', $this->apiData['Size']);
+        $component1->addAttribute('name', 'Size');
+        $component1->addAttribute('type', 'string');
+
+        //Set BatteriesStatus
+        if (is_array($this->apiData['Resolution'])) {
+            $this->apiData['Resolution'] = $this->apiData['Resolution'][0];
+        }
+        $component2 = $component->addChild('component', $this->apiData['Resolution']);
+        $component2->addAttribute('name', 'Resolution');
+        $component2->addAttribute('type', 'string');
+
+        //Set BatteriesStatus
+        if (is_array($this->apiData['Touchscreen'])) {
+            $this->apiData['Touchscreen'] = $this->apiData['Touchscreen'][0];
+        }
+        $component3 = $component->addChild('component', $this->apiData['Touchscreen']);
+        $component3->addAttribute('name', 'Touchscreen');
+        $component3->addAttribute('type', 'string');
+
+        // component  Video Outputs
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Video Outputs');
+
+        foreach ($this->apiData['Video_Outputs'] as $videoOutput) {
+            // child component  Video Outputs
+            $component = $components->addChild('components');
+            $component->addAttribute('name', 'Video Output');
+
+            //Set Capacity
+            if (is_array($videoOutput['Processor'])) {
+                $videoOutput['Processor'] = $videoOutput['Processor'][0];
+            }
+            $component1 = $component->addChild('component', $videoOutput['Processor']);
+            $component1->addAttribute('name', 'GraphicsProcessor');
+            $component1->addAttribute('type', 'string');
+
+            //Set Capacity
+            if (is_array($videoOutput['Ports'])) {
+                $videoOutput['Ports'] = $videoOutput['Ports'][0];
+            }
+            $component2 = $component->addChild('component', $videoOutput['Ports']);
+            $component2->addAttribute('name', 'AvailablePorts');
+            $component2->addAttribute('type', 'string');
+        }
+
+
+        // component Batteries
+        $components = $this->appleAudit->addChild('components');
+        $components->addAttribute('name', 'Peripherals');
+        // child component Battery
+        $component = $components->addChild('components');
+        $component->addAttribute('name', 'Peripherals');
+
+        //Set BatteriesStatus
+        if (is_array($this->apiData['Webcam'])) {
+            $this->apiData['Webcam'] = $this->apiData['Webcam'][0];
+        }
+        $component2 = $component->addChild('component', $this->apiData['Webcam']);
+        $component2->addAttribute('name', 'Webcam');
+        $component2->addAttribute('type', 'string');         
+
+    }
+
+
+    // Functions for All In One Asset 
     public function CreateAllInOneXml()
     {
          //Set Webcam
@@ -142,6 +1113,8 @@ trait CommonWipeMakorApiTraits
         }
     }
 
+    
+    // Functions for LapTop Asset 
     public function CreateLaptopXml()
     {
         // component Screen/Resolution
@@ -328,6 +1301,8 @@ trait CommonWipeMakorApiTraits
         }
     }
 
+
+    // Functions for Server Asset 
     public function CreateServerXml()
     {
          //Set HardDriveDimension
@@ -537,6 +1512,7 @@ trait CommonWipeMakorApiTraits
 
     }
 
+    // Functions for Computer Asset 
     public function SetGraphic()
     {
         if (isset($this->additionalData['Ports']['Has_Video_Card']) && strtolower($this->additionalData['Ports']['Has_Video_Card']) == "yes")
@@ -586,6 +1562,8 @@ trait CommonWipeMakorApiTraits
     }
 
 
+
+    // FUnctions for adding all common the asset 
 	public function AddCommomData($wipeFileContent, $additionalFileContent, $productName)
 	{
 		$this->data = $wipeFileContent;

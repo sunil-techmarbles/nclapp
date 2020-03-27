@@ -162,6 +162,8 @@ class WipeMakor extends Command
                     }
 
                     pr( $productName );
+                    pr( $wipeDataFilePath );
+                    pr( $additionalDataFile );
 
                     switch ($productName)
                     {
@@ -188,6 +190,7 @@ class WipeMakor extends Command
                     }
 
                     pr( $ApidataObject ); 
+                    die("**");
 
                 }
             }
