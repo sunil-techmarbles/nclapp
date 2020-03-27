@@ -376,7 +376,7 @@ function checkModel()
 				$(':input[data-fillmodel="1"]').closest(".formitem");
 				// $('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").css("background-color","none");
 				$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem");
-				showSweetAlertMessage(type = 'error', message = 'Template created. Please carefully fill highlighted fields and submit the form' , icon= 'error');
+				showSweetAlertMessage(type = 'success', message = 'Template created. Please carefully fill highlighted fields and submit the form' , icon= 'success');
 			}
 		}
 	}

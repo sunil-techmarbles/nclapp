@@ -100,7 +100,7 @@ class RecycleController extends Controller
                         'Model' => $request->model,
                         'PartNo' => $request->part,
                         'Brand' => $request->brand,
-                        'Category'  => $request->category,
+                        'Category' => $request->category,
                         'Notes' => $request->notes,
                         'Value' => $request->value1,
                         'Status' => $request->status,
@@ -116,6 +116,10 @@ class RecycleController extends Controller
                     {
                         return response()->json(['status' => false, 'message' => 'Something went wrong']);
                     }
+                }
+                else
+                {
+                    return response()->json(['status' => false, 'message' => 'Something went wrong']);
                 }
             }
         }

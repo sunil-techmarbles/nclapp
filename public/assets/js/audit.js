@@ -1,22 +1,6 @@
 $(window).on('resize', function(){
-    setHeader();
+	setHeader();
 });
-
-function savePN()
-{
-	// var m = $('#pnModel').val();
-	// var p = $('#pnPn').val();
-	// if(!m || !p)
-	// {
-	// 	showSweetAlertMessage(type = 'error', message = 'Please enter Model and Part Number' , icon= 'error');
-	// 	return false;
-	// }
-	// $.get("/"+prefix+"/savepartnumber?m=" + m + "&p=" + p + "&t=" + Math.random(), function (data)
-	// {
-	// 	alert(data);
-	// 	$('#pnModal').modal('hide');
- 	//  });
-}
 
 function editCapacity(cType)
 {
@@ -90,31 +74,31 @@ $( document ).ready(function()
 	setHeader();
 	$(window).keydown(function(event)
 	{
-	    if(event.keyCode == 13)
-	    {
-	      	event.preventDefault();
-	      	return false;
-	    }
+		if(event.keyCode == 13)
+		{
+			event.preventDefault();
+			return false;
+		}
 	});
 	$(':input[data-cb="1"]').addClass("combobox");
 	$('.combobox').combobox({appendId:"_cb"});
 	$('.quantity-right-plus').click(function(e)
 	{  
-        e.preventDefault();
-        var rownum = $(this).data("row");
-        var quantity = $('#qty' + rownum).val();
-        if (quantity === "") quantity=0;
-        $('#qty' + rownum).val(parseInt(quantity) + 1);
-    });
+		e.preventDefault();
+		var rownum = $(this).data("row");
+		var quantity = $('#qty' + rownum).val();
+		if (quantity === "") quantity=0;
+		$('#qty' + rownum).val(parseInt(quantity) + 1);
+	});
 
-    $('.quantity-left-minus').click(function(e)
-    {
-        e.preventDefault();
-        var rownum = $(this).data("row");
-        var quantity = $('#qty' + rownum).val();
-        if (quantity === "") quantity=0;
-        if (quantity>0) $('#qty' + rownum).val(parseInt(quantity) -1);
-    });
+	$('.quantity-left-minus').click(function(e)
+	{
+		e.preventDefault();
+		var rownum = $(this).data("row");
+		var quantity = $('#qty' + rownum).val();
+		if (quantity === "") quantity=0;
+		if (quantity>0) $('#qty' + rownum).val(parseInt(quantity) -1);
+	});
 });
 
 function calcGrade(setVal)
@@ -143,7 +127,7 @@ function assign_grades(grades_array)
 	}
 	else if(B >= 0)
 	{
-		 result = 'B';
+		result = 'B';
 	}
 	else if (A >= 0)
 	{ 
@@ -165,20 +149,20 @@ function showTab( tabId )
 {
 	$.get("/"+prefix+"/gettab?tab="+tabId+"&t="+Math.random(), function (data)
 	{
-    	$("#var_tab").html(data);
-    	$("#reviewBtn").show();
-    	setHeader();
-    	$('#page-bottom').removeClass("bottom-url");
-    	alignCB();
-    	$(":input[data-display]").closest(".formitem").hide();
-    	$(':input[data-cb="1"]').addClass("combobox");
+		$("#var_tab").html(data);
+		$("#reviewBtn").show();
+		setHeader();
+		$('#page-bottom').removeClass("bottom-url");
+		alignCB();
+		$(":input[data-display]").closest(".formitem").hide();
+		$(':input[data-cb="1"]').addClass("combobox");
 		$('.combobox').combobox({appendId:"_cb"});
 		$("input[data-hddcapacity='1']").val(hddc);
 		$("input[data-ramcapacity='1']").val(ramc);
 		$('input[data-ramcapacity="1"]').parent().append('<span style="font-size:20px;cursor:pointer" onclick="editCapacity(\'ram\')" class="fa fa-edit"></span>');
 		$('input[data-hddcapacity="1"]').parent().append('<span style="font-size:20px;cursor:pointer" onclick="editCapacity(\'hdd\')" class="fa fa-edit"></span>');
-    	if (items.length > 0)
-    	{
+		if (items.length > 0)
+		{
 			fillData();
 			if (lastload)
 			{
@@ -192,44 +176,48 @@ function showTab( tabId )
 
 function frmPreview()
 {
-    $("input[data-disable=1]").prop("disabled",true);
-    $.get("/"+prefix+"/getpreview?" + $("#main-form").serialize() + "&t=" + Math.random(), function (data) {
+	showLoader();
+	$("input[data-disable=1]").prop("disabled",true);
+	$.get("/"+prefix+"/getpreview?" + $("#main-form").serialize() + "&t=" + Math.random(), function (data) {
+		hideLoader();
 		$("#preview-content").html(data);
 		$("#main-form").hide();
 		$("#page-logo").hide();
 		$("#page-head").hide();
 		$("#preview").show();
 		setTimeout(refurbNotification,1000);
-    });
+	});
 }
 
 var selTab;
 function checkTravelerId( tabId )
 {
-    selTab = tabId;
-    var trId = $('#text_1').val();
-    if(trId.length < 3 )
-    {	
-    	showSweetAlertMessage(type = 'error', message = 'Please enter Asset ID' , icon= 'error');
+	showLoader();
+	selTab = tabId;
+	var trId = $('#text_1').val();
+	if(trId.length < 3 )
+	{	
+		showSweetAlertMessage(type = 'error', message = 'Please enter Asset ID' , icon= 'error');
 		$('input[name=radio_2]').prop('checked',false);
-    	$("#var_tab").html('');
-    	$("#reviewBtn").hide();
-    	return false;
+		$("#var_tab").html('');
+		$("#reviewBtn").hide();
+		return false;
 	}      
-    var isMob = $('#radio_2_4').prop('checked');
-    if(trId.length > 0 && !isMob)
-    {
+	var isMob = $('#radio_2_4').prop('checked');
+	if(trId.length > 0 && !isMob)
+	{
 		$.get("/"+prefix+"/checktravelerid?trid=" + trId +"&t=" + Math.random(), function ( data ) { 
-	        var isErr = false;
-	        if ( !edit && data == "Duplicate" )
-	        {
-	        	showSweetAlertMessage(type = 'warning', message = 'Duplicate Entry' , icon= 'warning');
+			hideLoader();
+			var isErr = false;
+			if ( !edit && data == "Duplicate" )
+			{
+				showSweetAlertMessage(type = 'warning', message = 'Duplicate Entry' , icon= 'warning');
 				$('#text_1').val("");
-	        	$('#text_1').focus();
-	        	isErr = true;
-	        	$('input[name=radio_2]').prop('checked',false);
-	        	$("#var_tab").html('');
-	        	$("#reviewBtn").hide();
+				$('#text_1').focus();
+				isErr = true;
+				$('input[name=radio_2]').prop('checked',false);
+				$("#var_tab").html('');
+				$("#reviewBtn").hide();
 			}
 			else
 			{
@@ -237,11 +225,11 @@ function checkTravelerId( tabId )
 				{
 					showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');
 					$('#text_1').val("");
-		        	$('#text_1').focus();
-		        	isErr = true;
-		        	$('input[name=radio_2]').prop('checked',false);
-		        	$("#var_tab").html('');
-		        	$("#reviewBtn").hide();
+					$('#text_1').focus();
+					isErr = true;
+					$('input[name=radio_2]').prop('checked',false);
+					$("#var_tab").html('');
+					$("#reviewBtn").hide();
 				}
 				if (data.substring(0,4)=="Data")
 				{
@@ -258,35 +246,35 @@ function checkTravelerId( tabId )
 				}
 				if ( !isErr ) showTab(selTab);
 			} 
-	    });
-    }
-    else if(isMob)
-    { 
+		});
+	}
+	else if(isMob)
+	{ 
 		CheckTravelerIdForMobile( trId , selTab );
-    }
+	}
 }
 
 function CheckTravelerIdForMobile ( trId , selTab )
 {  
-		var isErr = false;
-		$.get("/"+prefix+"/checktraveleridformobile?trid=" + trId +"&t=" + Math.random(), function ( data ) { 
-			
-			if ( data == "Missing" )
-			{
-				showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');		
+	var isErr = false;
+	$.get("/"+prefix+"/checktraveleridformobile?trid=" + trId +"&t=" + Math.random(), function ( data ) { 
+
+		if ( data == "Missing" )
+		{
+			showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');		
 			$('#text_1').val("");
-		    $('#text_1').focus();
-		    isErr = true;   
-		    $('input[name=radio_2]').prop('checked',false);
-		    $("#var_tab").html('');
-		    $("#reviewBtn").hide();
+			$('#text_1').focus();
+			isErr = true;   
+			$('input[name=radio_2]').prop('checked',false);
+			$("#var_tab").html('');
+			$("#reviewBtn").hide();
 		}
 		else
 		{
 			showTab( selTab );
 		} 
 
-		});
+	});
 }
 
 function noDisable( iId )
@@ -316,16 +304,16 @@ function addTrId(trid,dst)
 function getLastInput()
 {
 	var trId = $('#text_1').val();
-    if (trId.length < 3)
-    {
-    	showSweetAlertMessage(type = 'warning', message = 'Please enter Asset ID' , icon= 'warning');
+	if (trId.length < 3)
+	{
+		showSweetAlertMessage(type = 'warning', message = 'Please enter Asset ID' , icon= 'warning');
 		return false;
 	}
 	$.get("/"+prefix+"/loadlast?t="+Math.random(), function(data)
 	{
 		if (data=="false")
 		{
-    		showSweetAlertMessage(type = 'error', message = 'Data not found' , icon= 'error');
+			showSweetAlertMessage(type = 'error', message = 'Data not found' , icon= 'error');
 		}
 		else
 		{
@@ -349,7 +337,7 @@ function getLastInput()
 		}
 	});
 }
- 
+
 function getModelData(modelId,tId)
 {
 	modelSet = true;
@@ -386,6 +374,7 @@ function getModelData(modelId,tId)
 
 function refurbNotification()
 {
+	showLoader();
 	var trId = $('#text_1').val();
 	var modelId = $('#modelid').val();
 	forRefurb = false;
@@ -395,6 +384,7 @@ function refurbNotification()
 	calcGrade(false);
 	$.get("/"+prefix+"/getrefnotification?m="+modelId+"&a="+trId+"&t="+Math.random(), function(data)
 	{
+		hideLoader();
 		var rData = JSON.parse(data);
 		cpuname = rData["cpuname"];
 		$('#cpuname').val(cpuname);
@@ -454,16 +444,16 @@ function fillData()
 	console.log(items)
 	for (i = 0; i < items.length; ++i)
 	{
-	    var itm = items[i];
-	    var vals = itm["value"];
-	    if (itm["new"] != "")
-	    {
+		var itm = items[i];
+		var vals = itm["value"];
+		if (itm["new"] != "")
+		{
 			$("#"+itm["id"]+"_new").val(itm["new"]);
 			$("#"+itm["id"]).val("Other:");
 			$("#"+itm["id"]+"_newitm").prop('checked', true);
 		}
-	    if (itm["type"] == "mult" || itm["type"] == "radio")
-	    {
+		if (itm["type"] == "mult" || itm["type"] == "radio")
+		{
 			for (j = 0; j < vals.length; ++j)
 			{
 				$(":input[name='"+itm["id"]+"'][value='" + vals[j] + "']").prop('checked', true);

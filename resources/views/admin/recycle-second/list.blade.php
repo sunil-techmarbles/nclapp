@@ -21,6 +21,7 @@
 			</thead>
 			<tbody>
 				@foreach($itamgRecycleInventors as $key => $itamgRecycleInventor)
+				<tr>
 					<td><input type="checkbox" class="select_to_delete" name="select_to_delete" value="{{$itamgRecycleInventor->id}}"></td>
 					<td>{{$itamgRecycleInventor->Brand}}</td>
 					<td>{{$itamgRecycleInventor->Model}}</td>
@@ -39,6 +40,7 @@
                             <img src="{{URL('/assets/images/del.png')}}" class="icons"  title="Delete">
                         </a>
 					</td>
+				</tr>
 				@endforeach
 			</tbody>
 		</table>

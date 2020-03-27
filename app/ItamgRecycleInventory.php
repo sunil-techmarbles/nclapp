@@ -31,7 +31,7 @@ class ItamgRecycleInventory extends Model
         $itamgRecycleInventory->Value = $data['Value'];
         $itamgRecycleInventory->Status = $data['Status'];
         $itamgRecycleInventory->require_pn = $data['require_pn'];
-        riturn ($ItamgRecycleInventory->save()) ? true : false;
+        return ($itamgRecycleInventory->save()) ? true : false;
     }
 
     public static function getAllRecord($value='')
