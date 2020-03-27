@@ -12,6 +12,8 @@ use Config;
 use File;
 use PDF;
 use App\Recycle;
+use App\Category;
+use App\FailedSearch;
 use App\RecycleRecord;
 use App\RecycleRecordLine;
 use App\ItamgRecycleInventory;
@@ -37,22 +39,189 @@ class RecycleController extends Controller
         $this->returlPath = '/recycle/files/pdf';
         $this->logo = url('/').'/recycle/logo.jpg';
     }
-    /**
- 	* Method recycleSecondIndex use for Recycle 2 
- 	*/
-    public function recycleSecondIndex(Request $request)
-  	{
-        $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
-  		return view('admin.recycle-second.list', compact('itamgRecycleInventors'));
-  	}
-    /**
-    * Method recycleSecondSearch use for Recycle 2 search
-    */
 
-    public function recycleSecondSearch(Request $request)
+    /**
+ 	* Method recycleTwoIndex use for Recycle 2
+ 	*/
+    public function recycleTwoIndex(Request $request)
+  	{
+        $result = Category::getAllRecord();
+        $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
+  		return view('admin.recycle-second.list', compact('itamgRecycleInventors', 'result'));
+  	}
+
+    /**
+    * Method recycleTwoFailedSearch use for Recycle 2 failed search results
+    */
+    public function recycleTwoFailedSearch(Request $request)
     {
-        return view('admin.recycle-second.search');
-        abort('404');
+        if($request->ajax())
+        {
+            if ($request->isMethod('post'))
+            {
+                if(isset($request->id))
+                {
+                    $results = FailedSearch::getRecordForEdit(intval($request->id));
+                    $output = [];
+                    if($results)
+                    {
+                        $output["model"] = $results["model_or_part"];
+                        $output["part"] = $results["partNo"];
+                        $output["brand"] = $results["Brand"];
+                        $output["category"] = $results["Category"];
+                        $output["notes"] = $results["Notes"];
+                        $output["require_pn"] = $results["require_pn"];
+                        return response()->json(['status' => true, 'data' => $output]);
+                    }
+                    else
+                    {
+                        return response()->json(['status' => false, 'data' => $output]);
+                    }
+                }
+            }
+        }
+        else
+        {
+            $result = Category::getAllRecord();
+            $failedSearches = FailedSearch::getAllRecord();
+            return view('admin.recycle-second.failed-search-list', compact('failedSearches', 'result'));
+        }
+    }
+
+    public function recycleTwoInventory(Request $request)
+    {
+        if($request->ajax())
+        {
+            if ($request->isMethod('post'))
+            {
+                if(isset($request->operation))
+                {
+                    $data = [
+                        'Model' => $request->model,
+                        'PartNo' => $request->part,
+                        'Brand' => $request->brand,
+                        'Category'  => $request->category,
+                        'Notes' => $request->notes,
+                        'Value' => $request->value1,
+                        'Status' => $request->status,
+                        'require_pn'=> $request->require_pn
+                    ];
+                    $result = ItamgRecycleInventory::addRecord($data);
+                    if($result)
+                    {
+                        FailedSearch::deleteRecord(intval($request->user_id));
+                        return response()->json(['status' => true, 'message' => 'Record added successfully']);
+                    }
+                    else
+                    {
+                        return response()->json(['status' => false, 'message' => 'Something went wrong']);
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+    * Method recycleTwoSearch use for Recycle 2 search
+    */
+    public function recycleTwoSearch(Request $request)
+    {
+        $result = Category::getAllRecord();
+        if($request->ajax())
+        {
+            if ($request->isMethod('post'))
+            {
+                if(isset($request->search) && $request->type == 'first')
+                {
+                    $query = [
+                        'Model' => $request->search,
+                        'require_pn' => "Y",
+                    ];
+                    $fields = [
+                        'require_pn',
+                    ];
+                    $result = ItamgRecycleInventory::getResult($query, $fields);
+                    $output = 'N';
+                    if(!$result->isEmpty())
+                    {
+                        $value = '';
+                        foreach($result as $row)
+                        {
+                            $value = $row['require_pn'];
+                        }
+                        $output = $value;
+                    }
+                    return response()->json(['value' => $output]);
+                }
+
+                if(isset($request->search) && $request->type == 'second')
+                {
+                    $fields = [
+                        'Status',
+                    ];
+                    $result = ItamgRecycleInventory::getStatusByModelAndPartNumber($request, $fields);
+                    $output = "We didn't find this Part-no or Model in database";
+                    if(!$result->isEmpty())
+                    {
+                        $value = '';
+                        foreach($result as $row)
+                        {
+                            $value = $row['Status'];
+                        }
+                        $output = $value;
+                    }
+                    return response()->json(['value' => $output]);
+                }
+
+                if(isset($request->search) && $request->type == 'third')
+                {
+                    $query = [
+                        'Model' => $request->search,
+                        'PartNo' => $request->search1,
+                    ];
+                    $fields = [
+                        'Status',
+                    ];
+                    $result = ItamgRecycleInventory::getResult($query, $fields);
+                    $output = "We didn't find this Part-no with this model no in database";
+                    if(!$result->isEmpty())
+                    {
+                        $value = '';
+                        foreach($result as $row)
+                        {
+                            $value = $row['Status'];
+                        }
+                        $output = $value;
+                    }
+                    return response()->json(['value' => $output]);
+                }
+
+                if($request->failed_search)
+                {
+                    $data = [
+                        'model_or_part' => $request->model,
+                        'partNo' => $request->part,
+                        'Brand' => $request->brand,
+                        'Category' => $request->category,
+                        'on_datetime' => $this->current
+                    ];
+                    $result = FailedSearch::addRecord($data);
+                    if($result)
+                    {
+                        return response()->json(['status' => true, 'message' => 'Record added successfully']);
+                    }
+                    else
+                    {
+                        return response()->json(['status' => false, 'message' => 'Something went wrong']);
+                    }
+                }
+            }
+        }
+        else
+        {
+            return view('admin.recycle-second.search', compact('result'));
+            abort('404');
+        }
     }
     
   	/**
@@ -361,7 +530,7 @@ class RecycleController extends Controller
                 $pdfData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($request->id));
                 $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->render();
                 $this->createPDF($html, $request->file_name, $filePath);
-                return response()->json(['url' => $filePath, 'status' => true]);
+                return response()->json(['url' => $returnPath, 'status' => true]);
             }
         }
         else

@@ -44,5 +44,5 @@
 		</table>
 	</div>
 </div>
-@include('admin.recycle-second.modal',['result' => []]);
+@include('admin.recycle-second.modal',['result' => $result]);
 @endsection

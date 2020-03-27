@@ -19,5 +19,5 @@
 		<p class="searchresult" style="display: none;"></p>
 	</h3>
 </div>
-@include('admin.recycle-second.modal',['result' => []]);
+@include('admin.recycle-second.modal',['result' => $result]);
 @endsection
