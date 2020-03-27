@@ -161,30 +161,36 @@ class WipeMakor extends Command
                         $productName = 'Makor_Apple';
                     }
 
-                    switch ($productName)
+                    if( $productName == 'Laptop' )
                     {
-                        case 'Computer':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Computer');
-                        break;
-                        case 'Server':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Server');
-                        break;
-                        case 'Laptop':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Laptop');
-                        break;
-                        case 'All_In_One':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'All_In_One');
-                        break;
-                        case 'Makor_Apple':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Makor_Apple');
-                        break;
-                        default:
-                        $error = 'No Class Found for file ' . $wipeDataFile . ". Valid Classes are Computer, Server, Laptop & All_In_One";
-                        MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
-                        continue;
-                        break;
+                        // pr( $wipeDataFilePath );
+                        // pr( $additionalDataFile );
+                        // pr($productName  ); die;
+                        switch ($productName)
+                        {
+                            case 'Computer':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Computer');
+                            break;
+                            case 'Server':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Server');
+                            break;
+                            case 'Laptop':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Laptop');
+                            break;
+                            case 'All_In_One':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'All_In_One');
+                            break;
+                            case 'Makor_Apple':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Makor_Apple');
+                            break;
+                            default:
+                            $error = 'No Class Found for file ' . $wipeDataFile . ". Valid Classes are Computer, Server, Laptop & All_In_One";
+                            MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                            continue;
+                            break;
+                        }
+                        pr( $ApidataObject );die;
                     }
-                    die("*");
                 }
             }
         }
