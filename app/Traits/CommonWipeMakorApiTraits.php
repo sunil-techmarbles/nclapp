@@ -11,6 +11,7 @@ trait CommonWipeMakorApiTraits
 	public $data, $additionalData, $hardwareData, $jobData, $productName, $appleData, $appleDataError;
     public $isError = false;
     public $apiData, $audit, $mainComponents, $saveDataArray;
+    public $appleTableData, $apple_audit;
 
 	public function init($wipeFileContent, $additionalFileContent, $productName, $type)
 	{
@@ -43,10 +44,11 @@ trait CommonWipeMakorApiTraits
         }
         elseif ($type == 'Makor_Apple')
         {
-            die("((");
-            $this->apple_table_data = getMakorAppleDataFromTable($this->hardware_data);
-            $this->_save_apple_data_array();
-            $this->_setProcessorData();
+            // $this->appleTableData = getMakorAppleDataFromTable($this->hardware_data);
+            $this->appleTableData = [];
+
+            $this->SaveAppleData_array();
+            $this->SetMakorAppleProcessorData();
             $this->_setHardDriveData();
             $this->_setResolution();
             $this->_setMemoryData();
@@ -56,12 +58,38 @@ trait CommonWipeMakorApiTraits
             $this->_create_xml();
             // $this->CreateMakorAppleXml();
         }
-   
 
         $this->apiData['xml_data'] = $this->audit->asXML();
 
         return $this->apiData['xml_data'];
 	}
+
+
+    public function Save_apple_data_array()
+    {
+        $this->saveDataArray['Motherboard_RAM'] = (isset($this->appleTableData['Motherboard_RAM'])) ? $this->appleTableData['Motherboard_RAM'] : '';
+        $this->saveDataArray['RAM_Slots'] = (isset($this->appleTableData['RAM_Slots'])) ? $this->appleTableData['RAM_Slots'] : '';
+        $this->saveDataArray['Storage_Dimensions'] = (isset($this->appleTableData['Storage_Dimensions'])) ? $this->appleTableData['Storage_Dimensions'] : '';
+        $this->saveDataArray['Storage_Interface'] = (isset($this->appleTableData['Storage_Interface'])) ? $this->appleTableData['Storage_Interface'] : '';
+        $this->saveDataArray['EMC'] = (isset($this->appleTableData['EMC'])) ? $this->appleTableData['EMC'] : '';
+    }
+
+    public function SetMakorAppleProcessorData()
+    {
+        $this->apiData['processors'] = array();
+        //check processor name
+        $this->apiData['processors'][0]['processor_manufacturer'] = $this->apple_table_data['Processor_Manufacturer'];
+        $this->apiData['processors'][0]['processor_type'] = $this->apple_table_data['Processor_Type'];
+        $this->apiData['processors'][0]['processor_model'] = $this->apple_table_data['Processor_Model'];
+        $this->apiData['processors'][0]['processor_core'] = $this->apple_table_data['Processor_Core'];
+        $this->apiData['processors'][0]['processor_generation'] = $this->apple_table_data['Processor_Generation'];
+        $this->apiData['processors'][0]['processor_speed'] = $this->apple_table_data['Processor_Speed'];
+        $this->apiData['processors'][0]['processor_qty'] = $this->apple_table_data['Processor_Quantity'];
+        $this->apiData['processors'][0]['processor_codename'] = 'N/A';
+        $this->apiData['processors'][0]['processor_socket'] = 'N/A';
+
+    }
+
 
 
     public function CreateAllInOneXml()
@@ -1314,11 +1342,9 @@ trait CommonWipeMakorApiTraits
             }
         }
 
-        pr( $this->additionalData['Components']  ); 
-
         if (isset($this->additionalData['Components']['Graphics_Processor']))
         {
-            if (is_array($this->additionalData['Components']['Graphics_Processor']) && isset( $this->additionalData['Components']['Graphics_Processor'][0] ))
+            if (is_array($this->additionalData['Components']['Graphics_Processor']) )
             {
                 $this->apiData['Video_Outputs'][0]['Processor'] = implode(", ", $this->additionalData['Components']['Graphics_Processor']);
 
@@ -1333,11 +1359,9 @@ trait CommonWipeMakorApiTraits
             $this->apiData['Video_Outputs'][0]['Processor'] = $videoOutput;
         }
 
-          pr( $this->additionalData['Ports']  );  die;
-
-        if (isset($this->additionalData['Ports']['Available_Video_Ports']))
+        if (isset($this->additionalData['Ports']['Available_Video_Ports']) )
         {
-            if (is_array($this->additionalData['Ports']['Available_Video_Ports']) && isset( $this->additionalData['Ports']['Available_Video_Ports'][0] ) && !empty( $this->additionalData['Ports']['Available_Video_Ports'][0] ) )
+            if (is_array($this->additionalData['Ports']['Available_Video_Ports']) )
             {
                 $this->apiData['Video_Outputs'][0]['Ports'] = implode(", ", $this->additionalData['Ports']['Available_Video_Ports']);
             }
@@ -1350,7 +1374,6 @@ trait CommonWipeMakorApiTraits
         {
             $this->apiData['Video_Outputs'][0]['Ports'] = "N/A";
         }
-
 
     }
 
