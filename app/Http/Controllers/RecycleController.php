@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Facades\Mail;
 use App\Traits\CommenRecycleTraits;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\RecycleTwoFileImport;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Redirect;
@@ -85,6 +87,81 @@ class RecycleController extends Controller
             $result = Category::getAllRecord();
             $failedSearches = FailedSearch::getAllRecord();
             return view('admin.recycle-second.failed-search-list', compact('failedSearches', 'result'));
+        }
+    }
+
+    public function readDataFromFile(Request $request)
+    {
+        if($request->has('file'))
+        {
+            if($request->hasFile('file'))
+            {
+                try
+                {   
+                    $import = new RecycleTwoFileImport();
+                    Excel::import($import,request()->file('file'));
+                }
+                catch (\Maatwebsite\Excel\Validators\ValidationException $e)
+                {
+                    return redirect()->back()->with('error', $e->getMessage());
+                }
+
+                return redirect()->back()->with('success', "File upload successfully");
+            }
+        }
+    }
+
+    /**
+    * Ajax Request to delete the recycle two inventory record
+    */
+    public function deleteRecycleTwo(Request $request, $recordId)
+    {
+        if($request->ajax())
+        {
+            $result = ItamgRecycleInventory::deleteRecycleTwo(intval($recordId));
+            if($result)
+            {
+                return response()->json(['message' => 'Record deleted successfully.', 'status' => true]);
+            }
+            return response()->json(['message' => 'something went wrong.', 'status' => false]);
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
+
+    /**
+    * Ajax Request to multiple delete the recycle two inventory record
+    */
+    public function multRecycleInvtDelete(Request $request)
+    {
+        if($request->ajax())
+        {
+            $recordIds = $request->ids;
+            $successMessage = [];
+            $errorMessage = [];
+            foreach ($recordIds as $key => $recordId)
+            {
+                $result = ItamgRecycleInventory::deleteRecycleTwo(intval($recordId));
+                if($result)
+                {
+                    array_push($successMessage, true);
+                }
+                else
+                {
+                    array_push($errorMessage, false);
+                }
+            }
+            if($successMessage && !$errorMessage)
+            {
+                return response()->json(['message' => 'All Record deleted successfully.', 'status' => true]);
+            }
+            return response()->json(['message' => 'something went wrong.', 'status' => false]);
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
         }
     }
 

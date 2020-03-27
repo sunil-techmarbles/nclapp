@@ -84,10 +84,11 @@
 </div>
 <div id="upload_files" class="modal fade">
 	<div class="modal-dialog">
-		<form method="post" id="upload_entry_form" action="readdatafromfiles.php" enctype="multipart/form-data">
+		<form method="post" id="upload_entry_form" action="{{route('read.data.from.files')}}" enctype="multipart/form-data">
+			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
-					<label>Choose CSV or Excel <a target="_blank" href="./sample/file.csv">Sample</a></label>
+					<label>Choose CSV or Excel <a target="_blank" href="{{URL('')}}/sample-files/file.csv">Sample</a></label>
 					<input accept=".csv, .xls,.xlsx" type="file" name="file" id="model" required="" class="form-control">
 				</div>
 				<div class="modal-footer">

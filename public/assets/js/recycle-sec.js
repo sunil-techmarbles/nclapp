@@ -29,22 +29,50 @@ $(document).ready(function(){
                 sList.push($(this).val());
             }
         });
-
-        if(sList.length > 0){
-            if(confirm('are you sure?')){
-                $.post('./ajax/delete_entries_multiple.php',{list:sList}, function(response){
-
-                    swal({
-                        title: "Deleted!",
-                        text: "Entries deleted successfully.",
-                        type: "success",
-                        timer: 2000
+        if(sList.length > 0)
+        {
+            swalWithBootstrapButtons.fire
+            ({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, delete it!',
+                cancelButtonText: 'No, cancel!',
+                reverseButtons: true
+            })
+            .then((result) => { 
+                
+                if (result.value) 
+                {  
+                    $.ajax({
+                        url:"/"+prefix+"/multrecycleinvtdelete",
+                        type: 'POST',
+                        data: {ids:sList},
+                        dataType: 'json'
+                    })
+                    .done(function(response)
+                    {
+                        var status = (response.status) ? 'success' : 'error';
+                        showSweetAlertMessage(type = status, message = response.message , icon= status);
+                    })
+                    .fail(function()
+                    {
+                        showSweetAlertMessage(type = 'error', message = 'Something went wrong with ajax !' , icon= 'error');
                     });
-
-                    loadtabledata();             
-                });
-            }
-        }      
+                    setTimeout(function(){location.reload();}, 2000);
+                }
+                else if (result.dismiss === Swal.DismissReason.cancel ) 
+                {
+                    showSweetAlertMessage(type = 'warning', message = 'Your record is safe :)' , icon= 'warning');
+                } 
+            })
+        }
+        else
+        {
+            showSweetAlertMessage(type = 'warning', message = 'Please select record to delete' , icon= 'warning');
+        }
+           
     });  
 
     function loadtabledata(){
@@ -61,7 +89,6 @@ $(document).ready(function(){
     });
 
     $(document).on('click', '.add_new_entry', function(e){
-        // e.preventDefault();
         $('#add_entry').modal({
             backdrop: 'static',
             keyboard: false
@@ -76,36 +103,7 @@ $(document).ready(function(){
         { extend: 'pdf', className: ClassName },
         { extend: 'copy', className: ClassName },
         ]
-    });     
-
-    $(document).on("click",".glyphicon-trash", function(e){
-        e.preventDefault();
-        var table_id = $(this).attr('data-table_id');
-        $('#user_id').val(table_id);
-
-        if(confirm('Are you sure you want to delete?')) {
-            $.post('./ajax/delete_entry.php',{table_id:table_id}, function(response){
-                if(response){
-                    swal({
-                        title: "Deleted!",
-                        text: "Entry deleted successfully.",
-                        type: "success",
-                        timer: 2000
-                    });
-
-                    loadtabledata();
-
-                }else{
-                    swal({
-                        title: "Error!",
-                        text: "There is some error , try again",
-                        type: "failed",
-                        timer: 2000
-                    });
-                }
-            });
-        }
-    });  
+    });
 
     $(document).on("click",".glyphicon-edit", function(e){
         e.preventDefault();
@@ -158,38 +156,6 @@ $(document).ready(function(){
             });
         }
     });
-
-    // $("#add_entry_form").validate({
-    //     submitHandler: function(form) {
-    //         $.ajax({
-    //             url: "./ajax/form_save.php",
-    //             type: "POST",
-    //             data: $("#add_entry_form").serialize(),
-    //             success: function(response) {
-    //                 if(response){
-    //                     $('#add_entry').modal('hide');
-
-    //                     swal({
-    //                         title: "Added!",
-    //                         text: "Record added successfully.",
-    //                         type: "success",
-    //                         timer: 2000
-    //                     });
-
-    //                     loadtabledata();
-
-    //                 }else{
-    //                     swal({
-    //                         title: "Error!",
-    //                         text: "There is some error , try again",
-    //                         type: "failed",
-    //                         timer: 2000
-    //                     });
-    //                 }
-    //             }            
-    //         });
-    //     }
-    // });
 });
 
 function commenAjaxOnSearchResponse(argument){
