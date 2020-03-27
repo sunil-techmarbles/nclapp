@@ -7,7 +7,6 @@ use File;
 use Config;
 use App\Traits\CommonWipeMakorApiTraits;
 
-
 class WipeMakor extends Command
 {
     use CommonWipeMakorApiTraits;
@@ -67,133 +66,171 @@ class WipeMakor extends Command
             {
                 $wipeDataFilePath = $this->wipeDataDir . "/" . $wipeDataFile;
                 
-                //read XML file
-                $wipeFileContent = getXMLContent($wipeDataFilePath);
-                
-                //check if XML is valid
-                if (false === $wipeFileContent)
+                try
                 {
-                    // $error = 'Invalid XML file > ' . $wipeDataFilePath;
-                    // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
-                    continue; //skip file on error
+                    //read XML file
+                    $wipeFileContent = getXMLContent($wipeDataFilePath);
+                    
+                    //check if XML is valid
+                    if (false === $wipeFileContent)
+                    {
+                        // $error = 'Invalid XML file > ' . $wipeDataFilePath;
+                        // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                        continue; //skip file on error
+                    }
+
+                    @list($orderTid, $travelerId, $serialNumber) = explode("-", pathinfo($wipeDataFile, PATHINFO_FILENAME));
+
+                    if (isset($wipeFileContent['Report']) && !empty($wipeFileContent['Report']))
+                    {
+                        // get job data 
+                        if (isset($wipeFileContent['Report']['Jobs']['Job'][0]))
+                        {
+                            $jobData = $wipeFileContent['Report']['Jobs']['Job'][0];
+                        }
+                        else
+                        { 
+                            $jobData = $wipeFileContent['Report']['Jobs']['Job'];
+                        }
+                        
+                        // get hardware data 
+                        if (isset($wipeFileContent['Report']['Hardware']))
+                        {
+                            $hardwareData = $wipeFileContent['Report']['Hardware'];
+                        } 
+                        else
+                        {
+                            $hardwareData = $wipeFileContent['Report'];
+                        }
+                        
+                        $assetTag = getJobUserData($jobData['UserFields']['UserField'], 2);
+                        
+                        $additionalDataFile = $this->wipeAdditionalDataDir . "/" . $assetTag . ".xml";
+                        if(!File::exists($additionalDataFile))
+                        {
+                            // $error = 'No Additional data file found for' . $wipeDataFile . ".";
+                            // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                            continue;
+                        }
+                        
+                        $additionalFileContent = getXMLContent($additionalDataFile);
+
+                        if (!isset($jobData['UserFields']['UserField']))
+                        {
+                            // $error = "WIPE DATA FILE > " . $wipeDataFile . " > ProductName at UserField Index 5 not found so aborting this record.";
+                            // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                            continue;
+                        }
+
+                        if (strpos(strtolower($hardwareData['ComputerVendor']), "apple") !== false)
+                        {
+                            $productName = getJobUserData($jobData['UserFields']['UserField'], 4);
+                        }
+                        else
+                        {
+                            $productName = getJobUserData($jobData['UserFields']['UserField'], 5);
+                        }
+
+                        if (isset($additionalFileContent['Product_Name']) && !empty($additionalFileContent['Product_Name']))
+                        {
+                            $productName = $additionalFileContent['Product_Name'];
+                        }
+
+                        if (empty($productName))
+                        {
+                            // $error = "WIPE DATA FILE > " . $wipeDataFile . " > ProductName is empty so skipping this file.";
+                            // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                            continue;
+                        }
+
+                        if (strtolower($productName) == strtolower('Apple - Laptop'))
+                        {
+                            $productName = 'Laptop';
+                        } 
+                        elseif (strtolower($productName) == strtolower('Apple - Tower'))
+                        {
+                            $productName = 'Computer';
+                        } 
+                        elseif (strtolower($productName) == strtolower('Apple - All In One'))
+                        {
+                            $productName = 'All_In_One';
+                        }
+                        
+                        if (strpos(strtolower($hardwareData['ComputerVendor']), "apple") !== false)
+                        {
+                            $productName = 'Makor_Apple';
+                        }
+
+                        switch ($productName)
+                        {
+                            case 'Computer':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Computer');
+                            break;
+                            case 'Server':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Server');
+                            break;
+                            case 'Laptop':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Laptop');
+                            break;
+                            case 'All_In_One':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'All_In_One');
+                            break;
+                            case 'Makor_Apple':
+                            $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Makor_Apple');
+                            break;
+                            default:
+                            $error = 'No Class Found for file ' . $wipeDataFile . ". Valid Classes are Computer, Server, Laptop & All_In_One";
+                            MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                            continue;
+                            break;
+                        }
+
+                        $WipeMakorResponse = $this->WipeMakorAPIRequest($ApidataObject, $assetTag);
+                        if ($WipeMakorResponse == 200)
+                        {
+                            
+
+                        }
+                    }
                 }
-
-                @list($orderTid, $travelerId, $serialNumber) = explode("-", pathinfo($wipeDataFile, PATHINFO_FILENAME));
-
-                if (isset($wipeFileContent['Report']) && !empty($wipeFileContent['Report']))
+                catch (\Execption $e)
                 {
-
-                    // get job data 
-                    if (isset($wipeFileContent['Report']['Jobs']['Job'][0]))
-                    {
-                        $jobData = $wipeFileContent['Report']['Jobs']['Job'][0];
-                    }
-                    else
-                    { 
-                        $jobData = $wipeFileContent['Report']['Jobs']['Job'];
-                    }
-                    
-                    // get hardware data 
-                    if (isset($wipeFileContent['Report']['Hardware']))
-                    {
-                        $hardwareData = $wipeFileContent['Report']['Hardware'];
-                    } 
-                    else
-                    {
-                        $hardwareData = $wipeFileContent['Report'];
-                    }
-                    
-                    $assetTag = getJobUserData($jobData['UserFields']['UserField'], 2);
-                    
-                    $additionalDataFile = $this->wipeAdditionalDataDir . "/" . $assetTag . ".xml";
-                    if(!File::exists($additionalDataFile))
-                    {
-                        // $error = 'No Additional data file found for' . $wipeDataFile . ".";
-                        // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
-                        continue;
-                    }
-                    
-                    $additionalFileContent = getXMLContent($additionalDataFile);
-
-                    if (!isset($jobData['UserFields']['UserField']))
-                    {
-                        // $error = "WIPE DATA FILE > " . $wipeDataFile . " > ProductName at UserField Index 5 not found so aborting this record.";
-                        // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
-                        continue;
-                    }
-
-                    if (strpos(strtolower($hardwareData['ComputerVendor']), "apple") !== false)
-                    {
-                        $productName = getJobUserData($jobData['UserFields']['UserField'], 4);
-                    }
-                    else
-                    {
-                        $productName = getJobUserData($jobData['UserFields']['UserField'], 5);
-                    }
-
-                    if (isset($additionalFileContent['Product_Name']) && !empty($additionalFileContent['Product_Name']))
-                    {
-                        $productName = $additionalFileContent['Product_Name'];
-                    }
-
-                    if (empty($productName))
-                    {
-                        // $error = "WIPE DATA FILE > " . $wipeDataFile . " > ProductName is empty so skipping this file.";
-                        // MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
-                        continue;
-                    }
-
-                    if (strtolower($productName) == strtolower('Apple - Laptop'))
-                    {
-                        $productName = 'Laptop';
-                    } 
-                    elseif (strtolower($productName) == strtolower('Apple - Tower'))
-                    {
-                        $productName = 'Computer';
-                    } 
-                    elseif (strtolower($productName) == strtolower('Apple - All In One'))
-                    {
-                        $productName = 'All_In_One';
-                    }
-                    
-                    if (strpos(strtolower($hardwareData['ComputerVendor']), "apple") !== false)
-                    {
-                        $productName = 'Makor_Apple';
-                    }
-
-                    pr( $productName );
-                    pr( $wipeDataFilePath );
-                    pr( $additionalDataFile );
-
-                    switch ($productName)
-                    {
-                        case 'Computer':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Computer');
-                        break;
-                        case 'Server':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Server');
-                        break;
-                        case 'Laptop':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Laptop');
-                        break;
-                        case 'All_In_One':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'All_In_One');
-                        break;
-                        case 'Makor_Apple':
-                        $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Makor_Apple');
-                        break;
-                        default:
-                        $error = 'No Class Found for file ' . $wipeDataFile . ". Valid Classes are Computer, Server, Laptop & All_In_One";
-                        MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
-                        continue;
-                        break;
-                    }
-
-                    pr( $ApidataObject ); 
-                    die("**");
-
+                    $message = $e->getMessage().' '. $e->getCode() . " " . $wipeDataFile;
+                    MessageLog::addLogMessageRecord($message,$type="WipeMakor", $status="failure");
+                    continue;
                 }
             }
         }
+        else
+        {
+            $error = $this->wipeDataDir . " doesn't contain any files.";
+            MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+        }
+    }
+
+     /**
+     *  Function for API request to Makor of Wipe data.
+     *
+     * @return mixed
+     */
+    public function WipeMakorAPIRequest($WipeMakorApiRequestDataXml, $assetId)
+    {
+        $MakorRequestjson = array();
+        $MakorRequestjson['asset_id'] = $assetId;
+        $MakorRequestjson['asset_report']['report'] = base64_encode($WipeMakorApiRequestDataXml['xml_data']);
+        $MakorRequestApiData = json_encode($MakorRequestjson);
+
+        //setting the curl parameters.
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_URL, Config::get('makor.makorApiCredential.apiUrl'));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $MakorRequestApiData);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERPWD, Config::get('makor.makorApiCredential.apiUsername').":".Config::get('makor.makorApiCredential.apiPassword'));
+        $response = curl_exec( $ch );
+        $responseCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+        curl_close( $ch );
+        return $responseCode;
     }
 }

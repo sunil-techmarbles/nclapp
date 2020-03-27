@@ -8,15 +8,15 @@ use App\NewProcessors;
 
 trait CommonWipeMakorApiTraits
 {
-	public $data, $additionalData, $hardwareData, $jobData, $productName, $appleData, $appleDataError;
+    public $data, $additionalData, $hardwareData, $jobData, $productName, $appleData, $appleDataError;
     public $isError = false;
     public $apiData, $audit, $mainComponents, $saveDataArray;
     public $appleTableData, $appleAudit;
 
-	public function init($wipeFileContent, $additionalFileContent, $productName, $type)
-	{
-        $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName);
-
+    public function init($wipeFileContent, $additionalFileContent, $productName, $type)
+    {
+        $this->apiData = [];
+        $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName, $type);
         if($type == 'Computer')
         {
             $this->SetGraphic();
@@ -59,8 +59,8 @@ trait CommonWipeMakorApiTraits
             $this->CreateMakorAppleXml();
             $this->apiData['xml_data'] = $this->appleAudit->asXML();
         }
-        return $this->apiData; 
-	}
+        return $this->apiData;
+    }
 
 
     // Functions for Makor Apple XML data . 
@@ -110,7 +110,7 @@ trait CommonWipeMakorApiTraits
             "Serial ATA (6 Gb/s) x2",
             "Serial ATA",
             "Serial ATA (3 Gb/s) x2"
-        );
+            );
 
         $hdInterfaceOtherArray = array(
             "Proprietary (6 Gb/s)",
@@ -122,7 +122,7 @@ trait CommonWipeMakorApiTraits
             "Onboard (PCIe 3.0 x2)",
             "Proprietary (PCIe 3.0)" .
             "Onboard (PCIe 3.0)"
-        );
+            );
         
         $hdTypeArray = array(
             "1.8' (5.2 mm)",
@@ -141,7 +141,7 @@ trait CommonWipeMakorApiTraits
             "2.5' (9.5 mm) x2",
             "3.5' (26.10 mm)/Proprietary",
             "3.5' (7 mm)"
-        );
+            );
         
         foreach ($hardDrives as $key => $hardDriveData)
         {
@@ -161,13 +161,13 @@ trait CommonWipeMakorApiTraits
                 $Gigabytes = round($hardDriveData['Gigabytes'], 0);
                 $this->apiData['hard_drive'][$key]['capacity'] = $Gigabytes . "GB";
             }
-           
+
             $interface = '';
-            if (in_array($this->appleTableData['Storage_Interface'], $hdInterfaceSataArray))
+            if ( isset($this->appleTableData['Storage_Interface']) && in_array($this->appleTableData['Storage_Interface'], $hdInterfaceSataArray))
             {
                 $interface = "SATA";
             }
-            elseif (in_array($this->appleTableData['Storage_Interface'], $hdInterfaceOtherArray))
+            elseif (isset($this->appleTableData['Storage_Interface']) && in_array($this->appleTableData['Storage_Interface'], $hdInterfaceOtherArray))
             {
                 $interface = trim(preg_replace("/\([^)]+\)/", "", $this->appleTableData['Storage_Interface']));
             }
@@ -179,7 +179,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['hard_drive'][$key]['removed'] = "No";
 
             $type = '';
-            if (in_array($this->appleTableData['Storage_Dimensions'], $hdTypeArray))
+            if (isset($this->appleTableData['Storage_Dimensions']) && in_array($this->appleTableData['Storage_Dimensions'], $hdTypeArray))
             {
                 $type = trim(preg_replace("/\([^)]+\)/", "", $this->appleTableData['Storage_Dimensions']));
             }
@@ -187,6 +187,21 @@ trait CommonWipeMakorApiTraits
 
             //set hard drive service queue status
             $this->apiData['hard_drive'][$key]['service_queue_status'] = getMakorServiecsQueueStatus($this->jobData['Operation'], $this->productName);
+
+            
+            //set hard drive size
+            if (isset($this->additionalData['Components']['HD_Size']))
+            {
+                $this->apiData['hard_drive'][$key]['size'] = $this->additionalData['Components']['HD_Size'];
+            }
+            elseif (isset($this->additionalData['Components']['Hard_Drive_Dimension']))
+            {
+                $this->apiData['hard_drive'][$key]['size'] = $this->additionalData['Components']['Hard_Drive_Dimension'];
+            }
+            else
+            {
+                $this->apiData['hard_drive'][$key]['size'] = 'N/A';
+            }
         }
     }
 
@@ -235,8 +250,8 @@ trait CommonWipeMakorApiTraits
             }
 
             $this->apiData['memory'][$key]['capacity'] = $capacity;
-            $this->apiData['memory'][$key]['type'] = $this->appleTableData['RAM_Type'];
-            $this->apiData['memory'][$key]['speed'] = $this->appleTableData['RAM_Speed'];
+            $this->apiData['memory'][$key]['type'] = (isset($this->appleTableData['RAM_Type'])) ? $this->appleTableData['RAM_Type'] : '';
+            $this->apiData['memory'][$key]['speed'] = (isset($this->appleTableData['RAM_Speed'])) ? $this->appleTableData['RAM_Speed'] : '';
 
             if (isset($this->additionalData['RAM_P_N']))
             {
@@ -251,9 +266,9 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['memory'][$key]['partnumber'] = "N/A";
             }
 
-            $this->apiData['memory'][$key]['slots'] = $this->appleTableData['RAM_Slots'];
+            $this->apiData['memory'][$key]['slots'] = (isset($this->appleTableData['RAM_Slots'])) ? $this->appleTableData['RAM_Slots'] : '';
 
-            $this->apiData['memory'][$key]['max_memory'] = $this->appleTableData['MaximumRAM'];
+            $this->apiData['memory'][$key]['max_memory'] = (isset($this->appleTableData['MaximumRAM'])) ? $this->appleTableData['MaximumRAM'] : '';
         }
     }
 
@@ -267,35 +282,35 @@ trait CommonWipeMakorApiTraits
             {
                 if (isset($dimensions[0]))
                 {
-                    $this->api_data['length'] = trim($dimensions[0]);
+                    $this->apiData['length'] = trim($dimensions[0]);
                 }
                 else
                 {
-                    $this->api_data['length'] = "N/A";
+                    $this->apiData['length'] = "N/A";
                 }
                 if (isset($dimensions[1]))
                 {
-                    $this->api_data['width'] = trim($dimensions[1]);
+                    $this->apiData['width'] = trim($dimensions[1]);
                 }
                 else
                 {
-                    $this->api_data['width'] = "N/A";
+                    $this->apiData['width'] = "N/A";
                 }
                 if (isset($dimensions[2]))
                 {
-                    $this->api_data['height'] = trim($dimensions[2]);
+                    $this->apiData['height'] = trim($dimensions[2]);
                 }
                 else
                 {
-                    $this->api_data['height'] = "N/A";
+                    $this->apiData['height'] = "N/A";
                 }
             }
         }
         else
         {
-            $this->api_data['length'] = "N/A";
-            $this->api_data['height'] = "N/A";
-            $this->api_data['width'] = "N/A";
+            $this->apiData['length'] = "N/A";
+            $this->apiData['height'] = "N/A";
+            $this->apiData['width'] = "N/A";
         }
     }
 
@@ -391,7 +406,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['Video_Outputs'][0]['Ports'] = "N/A";
         }
 
-        $this->apiData['Video_Outputs'][0]['Processor'] = $this->appleTableData['Video_Card'];
+        $this->apiData['Video_Outputs'][0]['Processor'] = (isset($this->appleTableData['Video_Card'])) ? $this->appleTableData['Video_Card'] : '';
 
         if (isset($this->additionalData['Notes']))
         {
@@ -1065,7 +1080,7 @@ trait CommonWipeMakorApiTraits
     // Functions for All In One Asset 
     public function CreateAllInOneXml()
     {
-         //Set Webcam
+         // Set Webcam
         if (is_array($this->apiData['webcam']))
         {
             $this->apiData['webcam'] = $this->apiData['webcam'][0];
@@ -1509,7 +1524,6 @@ trait CommonWipeMakorApiTraits
         {
             $this->apiData['hard_drive_dimension'] = "N/A";
         }
-
     }
 
     // Functions for Computer Asset 
@@ -1562,13 +1576,12 @@ trait CommonWipeMakorApiTraits
     }
 
 
-
     // FUnctions for adding all common the asset 
-	public function AddCommomData($wipeFileContent, $additionalFileContent, $productName)
-	{
-		$this->data = $wipeFileContent;
-        $this->additionalData = $additionalFileContent;
-        $this->productName = $productName;
+    public function AddCommomData($wipeFileContent, $additionalFileContent, $productName, $type)
+    {
+      $this->data = $wipeFileContent;
+      $this->additionalData = $additionalFileContent;
+      $this->productName = $productName;
 
         //hardware data
         if (isset($this->data['Report']['Hardware']))
@@ -1589,7 +1602,6 @@ trait CommonWipeMakorApiTraits
         {
             $this->jobData = $this->data['Report']['Jobs']['Job'];
         }
-
         $this->SetCommonData();
         $this->SetAppleData();
         $this->SetProcessorData();
@@ -1602,12 +1614,15 @@ trait CommonWipeMakorApiTraits
         $this->SetMiscellaneousData();
         $this->CheckModel();
         $this->SaveDataArray();
-        $this->CreateCommonXml();
-	}
+        if( $type != 'Makor_Apple')
+        {
+            $this->CreateCommonXml();
+        }
+    }
 
-	public function SetCommonData()
-	{
-		//Asset Tag
+    public function SetCommonData()
+    {
+    		//Asset Tag
         if (strpos(strtolower($this->hardwareData['ComputerVendor']), "apple") !== false)
         {
             $assetData = getJobUserData($this->jobData['UserFields']['UserField'], 1);
@@ -1640,15 +1655,15 @@ trait CommonWipeMakorApiTraits
             $this->apiData['customer_asset_tag'] = "N/A";
         }
 
-        //Product Serial
+            //Product Serial
         $this->apiData['serial'] = $this->hardwareData['ComputerSerial'];
 
-        //product class
+            //product class
         $this->apiData['Class'] = $this->productName;
 
-        //Product Manufacturer
+            //Product Manufacturer
         $this->apiData['manufacturer'] = $this->hardwareData['ComputerVendor'];
-        
+
         if (strpos(strtolower($this->hardwareData['ComputerVendor']), "apple") !== false)
         {
             $this->apiData['manufacturer'] = "Apple";
@@ -1686,10 +1701,10 @@ trait CommonWipeMakorApiTraits
             $this->apiData['manufacturer'] = "Intel";
         }
 
-        //product ChassisType
+            //product ChassisType
         $this->apiData['chassistype'] = $this->hardwareData['ChassisType'];
 
-         //model
+             //model
         if (strtolower(trim($this->hardwareData['ComputerVendor'])) == "lenovo")
         {
             $modelString = LenovoModelData::getLenovoManufacturerModel($this->hardwareData['ComputerModel']);
@@ -1707,11 +1722,11 @@ trait CommonWipeMakorApiTraits
             $modelString = trim($this->hardwareData['ComputerModel']);
         }
 
-        //get model from string HP
+            //get model from string HP
         $modelString = str_replace($this->apiData['manufacturer'], "", $modelString);
         $this->apiData['model'] = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", $modelString)));
 
-        //set weight
+            //set weight
         if (isset($this->additionalData['Weight']))
         {
             $this->apiData['weight'] = $this->additionalData['Weight'];
@@ -1723,7 +1738,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['weight_base'] = "N/A";
         }
 
-        //grade
+            //grade
         if (isset($this->additionalData['Grade']))
         {
             $this->apiData['grade'] = $this->additionalData['Grade'];
@@ -1733,16 +1748,16 @@ trait CommonWipeMakorApiTraits
             $this->apiData['grade'] = "N/A";
         }
 
-        // Next process 
+            // Next process 
         $this->apiData['next_process'] = "Resale";
 
-        //Compliance Label
+            //Compliance Label
         $this->apiData['compliance_label'] = "Tested for Key Functions,  R2/Ready for Resale";
 
-        //condition
+            //condition
         $this->apiData['condition'] = "Tested Working";
 
-        // part number
+            // part number
         if (strtolower(trim($this->hardwareData['ComputerVendor'])) == "lenovo")
         {
             $this->apiData['model#'] = $this->hardwareData['ComputerModel'];
@@ -1770,7 +1785,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['model#'] = "";
         }
 
-        // color
+            // color
         if (isset($this->additionalData['Color']))
         {
             $this->apiData['color'] = $this->additionalData['Color'];
@@ -1780,7 +1795,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['color'] = "N/A";
         }
 
-         //OS Level
+             //OS Level
         if ($this->productName == "Server")
         {
             $this->apiData['oprating_system'] = "N/A";
@@ -1794,7 +1809,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['oprating_system'] = "N/A";
         }
 
-        // form factor
+            // form factor
         if (isset($this->additionalData['Technology']))
         {
             $this->apiData['form_factor'] = $this->additionalData['Technology'];
@@ -1804,22 +1819,22 @@ trait CommonWipeMakorApiTraits
             $this->apiData['form_factor'] = "N/A";
         }
 
-	}
+    }
 
-	public function SetAppleData()
-	{
-		//Apple data array
+    public function SetAppleData()
+    {
+    	//Apple data array
         $this->appleData = array();
         unset($this->appleDataError );
         $appleModelModified = '';
-        
+
         if (strpos(strtolower($this->hardwareData['ComputerVendor']), "apple") !== false)
         {
-        	$appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor']['Name']);
-        	if (isset($this->hardwareData['Processors']['Processor'][0]))
-        	{
-                $appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor'][0]['Name']);
-                $appleProcessorModel = $appleProcessor[2];
+           $appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor']['Name']);
+           if (isset($this->hardwareData['Processors']['Processor'][0]))
+           {
+            $appleProcessor = explode(" ", $this->hardwareData['Processors']['Processor'][0]['Name']);
+            $appleProcessorModel = $appleProcessor[2];
             }
             else
             {
@@ -1827,10 +1842,10 @@ trait CommonWipeMakorApiTraits
                 $appleProcessorModel = $appleProcessor[2];
             }
 
-           	$appleDataResp = NewAppleData::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
+            $appleDataResp = NewAppleData::getMakorAppleManufacturerModel($this->hardwareData['ComputerModel'], $appleProcessorModel);
 
-           	if ($appleDataResp !== FALSE && !is_array($appleDataResp) && $appleDataResp == 'DUPLICATES')
-           	{
+            if ($appleDataResp !== FALSE && !is_array($appleDataResp) && $appleDataResp == 'DUPLICATES')
+            {
                 $this->appleDataError = "Multiple Models Manually Check";
             }
             else
@@ -1857,11 +1872,11 @@ trait CommonWipeMakorApiTraits
             }
         }
         $this->SetTechnologyData($appleModelModified);
-	}
+    }
 
 
-	public function SetTechnologyData($appleModelModified)
-	{
+    public function SetTechnologyData($appleModelModified)
+    {
         if (isset($this->additionalData['Technology']))
         {
             $this->apiData['form_factor'] = $this->additionalData['Technology'];
@@ -1910,18 +1925,18 @@ trait CommonWipeMakorApiTraits
         }
     }
 
-    
+
     public function SetProcessorData()
     {
-    	if (!empty($this->appleData))
-    	{
-    		$this->apiData['processors'][0]['processor_manufacturer'] = $this->appleData['Processor_Manufacturer'];
-            $this->apiData['processors'][0]['processor_type'] = $this->appleData['Processor_Type'];
-            $this->apiData['processors'][0]['processor_model'] = $this->appleData['Processor_Model'];
-            $this->apiData['processors'][0]['processor_core'] = $this->appleData['Processor_Core'];
-            $this->apiData['processors'][0]['processor_generation'] = $this->appleData['Processor_Generation'];
-            $this->apiData['processors'][0]['processor_codename'] = $this->appleData['Processor_Codename'];
-            $this->apiData['processors'][0]['processor_socket'] = $this->appleData['Processor_Socket'];
+       if (!empty($this->appleData))
+       {
+          $this->apiData['processors'][0]['processor_manufacturer'] = $this->appleData['Processor_Manufacturer'];
+          $this->apiData['processors'][0]['processor_type'] = $this->appleData['Processor_Type'];
+          $this->apiData['processors'][0]['processor_model'] = $this->appleData['Processor_Model'];
+          $this->apiData['processors'][0]['processor_core'] = $this->appleData['Processor_Core'];
+          $this->apiData['processors'][0]['processor_generation'] = $this->appleData['Processor_Generation'];
+          $this->apiData['processors'][0]['processor_codename'] = $this->appleData['Processor_Codename'];
+          $this->apiData['processors'][0]['processor_socket'] = $this->appleData['Processor_Socket'];
             if (!empty($this->appleData['Processor_Socket']))
             {
                 $speed = MHzToGHz($this->appleData['Processor_Socket']);
@@ -1931,11 +1946,11 @@ trait CommonWipeMakorApiTraits
             {
                 $speed = "";
             }
-            $this->apiData['processors'][0]['processor_speed'] = $speed;
-            $this->apiData['processors'][0]['processor_qty'] = $this->appleData['Processor_Qty'];
-    	}
-    	else
-    	{
+                $this->apiData['processors'][0]['processor_speed'] = $speed;
+                $this->apiData['processors'][0]['processor_qty'] = $this->appleData['Processor_Qty'];
+        }
+        else
+        {
             $processorData = getCustomizeData($this->hardwareData['Processors']['Processor']);
             $key = 0;
 
@@ -2030,7 +2045,7 @@ trait CommonWipeMakorApiTraits
             {
                 $speed = MHzToGHz($processorData[0]['Speed']);
             }
-            
+
             $this->apiData['processors'][$key]['processor_speed'] = $speed;
 
             if (isset($this->additionalData['Components']['CPU_Count']) && !empty($this->additionalData['Components']['CPU_Count']))
@@ -2041,7 +2056,7 @@ trait CommonWipeMakorApiTraits
             {
                 $this->apiData['processors'][$key]['processor_qty'] = count($this->hardwareData['Processors']);
             }
-    	}
+        }
     }
 
 
@@ -2081,7 +2096,7 @@ trait CommonWipeMakorApiTraits
         if (empty($sqlData) && strpos($processorName, 'Atom') !== false)
         {
             $modelStr = $model[4];
-            
+
             if ($modelStr[0] == 'v' && is_numeric($modelStr[1]))
             {
                 $searchModel = $model[3] . $model[4];
@@ -2099,8 +2114,8 @@ trait CommonWipeMakorApiTraits
     public function SetHardDriveData()
     {
         $this->apiData['hard_drive'] = array();
-        
-        //coustomise hard drive data
+
+            //coustomise hard drive data
         $hardDrives = getCustomizeData($this->hardwareData['Devices']['Device']);
 
         foreach ($hardDrives as $key => $hardDriveData)
@@ -2130,10 +2145,10 @@ trait CommonWipeMakorApiTraits
                 $hardDriveData['Product'] = $hardDriveData['Product'];
             }
 
-            //set hard drive model
+                //set hard drive model
             $this->apiData['hard_drive'][$key]['model'] = $hardDriveData['Product'];
 
-            //set hard drive part number
+                //set hard drive part number
             if ($this->productName == "Computer" || $this->productName == "Laptop")
             {
                 $this->apiData['hard_drive'][$key]['part_number'] = "N/A";
@@ -2147,10 +2162,10 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['part_number'] = "N/A";
             }
 
-            //set hard drive serial
+                //set hard drive serial
             $this->apiData['hard_drive'][$key]['serial'] = $hardDriveData['Serial'];
 
-             //set hard drive capacity
+                 //set hard drive capacity
             if (isset($hardDriveData['Gigabytes']) && $hardDriveData['Gigabytes'] > 999)
             {
                 $Gigabytes = round($hardDriveData['Gigabytes'] / 1000, 0);
@@ -2162,7 +2177,7 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['capacity'] = $Gigabytes . "GB";
             }
 
-            //set hard drive interface
+                //set hard drive interface
             if (isset($this->additionalData['Updated_HDD']) && strtolower($this->additionalData['Updated_HDD']) == 'yes' && isset($this->additionalData['Updated_HDD_Type']))
             {
                 $this->apiData['hard_drive'][$key]['interface'] = $this->additionalData['Updated_HDD_Type'];
@@ -2183,10 +2198,10 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['interface'] = "SAS";
             }
 
-            //set hard drive power hours
+                //set hard drive power hours
             $this->apiData['hard_drive'][$key]['power_hours'] = getMakorSmartAttribute($this->jobData['Operation']);
 
-             //set hard drive service performed
+                 //set hard drive service performed
             $serviceParfrmedData = getJobOprationServiceParfrmed($this->jobData['Operation'], 1);
 
             if (!empty($serviceParfrmedData))
@@ -2198,10 +2213,10 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation']['Method'];
             }
 
-             //set hard drive removed
+                 //set hard drive removed
             $this->apiData['hard_drive'][$key]['removed'] = "No";
 
-            //set hard drive size
+                //set hard drive size
             if (isset($this->additionalData['Components']['HD_Size']))
             {
                 $this->apiData['hard_drive'][$key]['size'] = $this->additionalData['Components']['HD_Size'];
@@ -2215,7 +2230,7 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['size'] = 'N/A';
             }
 
-            //set hard drive service queue status
+                //set hard drive service queue status
             $this->apiData['hard_drive'][$key]['service_queue_status'] = getMakorServiecsQueueStatus($this->jobData['Operation'], $this->productName);
         }
     }
@@ -2227,7 +2242,7 @@ trait CommonWipeMakorApiTraits
         {
             $this->apiData['optical_drive'] = "";
 
-            //optical manufacturer
+                //optical manufacturer
             if (isset($this->hardwareData['OpticalDrives']['OpticalDrive'][0]['Product']))
             {
                 $opticalDrive = $this->hardwareData['OpticalDrives']['OpticalDrive'][0]['Product'];
@@ -2286,11 +2301,12 @@ trait CommonWipeMakorApiTraits
         }
     }
 
+
     public function SetVideoOutput()
     {
         $videoOutput = "";
 
-        // adaptor
+            // adaptor
         if ($this->productName == "Computer" || $this->productName == "Server")
         {
             $videoOutput = "Integrated Onboard Video";
@@ -2299,7 +2315,7 @@ trait CommonWipeMakorApiTraits
         {
             if (isset($this->hardwareData['DisplayAdapters']['DisplayAdapter'][0]))
             {
-                //select first adaptor
+                    //select first adaptor
                 $videoOutput = str_replace(" ", "_", $this->hardwareData['DisplayAdapters']['DisplayAdapter'][0]['Product']);
             }
             else
@@ -2355,6 +2371,7 @@ trait CommonWipeMakorApiTraits
 
     }
 
+
     public function SetMemoryData()
     {
         if (isset($this->hardwareData['RAM']['Stick']))
@@ -2376,7 +2393,7 @@ trait CommonWipeMakorApiTraits
             {
                 $capacity = getRAMString($this->hardwareData['RAM']);
             }
-            
+
             $this->apiData['memory'][$key]['capacity'] = $capacity;
 
             $this->apiData['memory'][$key]['type'] = getMakorRAMType($ramData);
@@ -2626,7 +2643,7 @@ trait CommonWipeMakorApiTraits
             $this->apiData['CombinedRAMP/N'] = "N/A";
         }
 
-        // RAM Details
+            // RAM Details
         if ($this->productName == "Storage_Array")
         {
             $this->apiData['CombinedRAM'] = "N/A";
@@ -2666,7 +2683,7 @@ trait CommonWipeMakorApiTraits
         }
         else
         {
-            //HARD DISK details
+                //HARD DISK details
             $this->apiData['CombinedHD'] = getHDDString($this->hardwareData['Devices']);
         }
 
@@ -2718,6 +2735,7 @@ trait CommonWipeMakorApiTraits
         $this->saveDataArray['Serial'] = $this->apiData['serial'];
         $this->saveDataArray['Combined_RAM'] = $this->apiData['CombinedRAM'];
         $this->saveDataArray['Combined_HD'] = $this->apiData['CombinedHD'];
+
         if (isset($this->apiData['memory'])) {
             foreach ($this->apiData['memory'] as $key => $memoryValue) {
                 $this->saveDataArray['MemoryType_Speed'][$key] = $memoryValue['type'] . '_' . $memoryValue['speed'];
@@ -2741,20 +2759,20 @@ trait CommonWipeMakorApiTraits
 
     public function CreateCommonXml()
     {
-        // creating object of AuditXMLElement
+            // creating object of AuditXMLElement
         $this->audit = new SimpleXMLElement('<audit></audit>');
 
-        // component System
+            // component System
         $this->mainComponents = $this->audit->addChild('components');
         $this->mainComponents->addAttribute('name', 'System');
         $components = $this->mainComponents;
 
-        //Set AssetTag
+            //Set AssetTag
         $component = $components->addChild('component', "1-DefaultPallet-I");
         $component->addAttribute('name', 'Pallet');
         $component->addAttribute('type', 'string');
 
-        //Set AssetTag
+            //Set AssetTag
         if (is_array($this->apiData['asset_tag'])) {
             $this->apiData['asset_tag'] = $this->apiData['asset_tag'][0];
         }
@@ -2762,7 +2780,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Asset');
         $component->addAttribute('type', 'string');
 
-        //Set Class
+            //Set Class
         if (is_array($this->apiData['Class'])) {
             $this->apiData['Class'] = $this->apiData['Class'][0];
         }
@@ -2770,7 +2788,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Class');
         $component->addAttribute('type', 'string');
 
-        //Set Serial
+            //Set Serial
         if (is_array($this->apiData['serial'])) {
             $this->apiData['serial'] = $this->apiData['serial'][0];
         }
@@ -2778,7 +2796,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Serial');
         $component->addAttribute('type', 'string');
 
-        //Set manufacturer
+            //Set manufacturer
         if (is_array($this->apiData['manufacturer'])) {
             $this->apiData['manufacturer'] = $this->apiData['manufacturer'][0];
         }
@@ -2786,7 +2804,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Manufacturer');
         $component->addAttribute('type', 'string');
 
-        //Set Model
+            //Set Model
         if (is_array($this->apiData['model'])) {
             $this->apiData['model'] = $this->apiData['model'][0];
         }
@@ -2794,7 +2812,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Model');
         $component->addAttribute('type', 'string');
 
-        //Set Model#
+            //Set Model#
         if (is_array($this->apiData['model#'])) {
             $this->apiData['model#'] = $this->apiData['model#'][0];
         }
@@ -2802,7 +2820,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Model#');
         $component->addAttribute('type', 'string');
 
-        //Set Customer Asset
+            //Set Customer Asset
         if (is_array($this->apiData['customer_asset_tag'])) {
             $this->apiData['customer_asset_tag'] = $this->apiData['customer_asset_tag'][0];
         }
@@ -2810,7 +2828,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'CustomerAsset#');
         $component->addAttribute('type', 'string');
 
-        //Set Weight
+            //Set Weight
         if (is_array($this->apiData['weight'])) {
             $this->apiData['weight'] = $this->apiData['weight'][0];
         }
@@ -2818,7 +2836,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'ItemNetWeight');
         $component->addAttribute('type', 'string');
 
-        //Set Grade
+            //Set Grade
         if (is_array($this->apiData['grade'])) {
             $this->apiData['grade'] = $this->apiData['grade'][0];
         }
@@ -2826,7 +2844,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Grade');
         $component->addAttribute('type', 'string');
 
-        //set NextProcess
+            //set NextProcess
         if (is_array($this->apiData['next_process'])) {
             $this->apiData['next_process'] = $this->apiData['next_process'][0];
         }
@@ -2834,7 +2852,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'NextProcess');
         $component->addAttribute('type', 'string');
 
-        //set ComplianceLabel
+            //set ComplianceLabel
         if (is_array($this->apiData['compliance_label'])) {
             $this->apiData['compliance_label'] = $this->apiData['compliance_label'][0];
         }
@@ -2842,7 +2860,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'ComplianceLabel');
         $component->addAttribute('type', 'string');
 
-        //Set Condition
+            //Set Condition
         if (is_array($this->apiData['condition'])) {
             $this->apiData['condition'] = $this->apiData['condition'][0];
         }
@@ -2851,7 +2869,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('type', 'string');
 
 
-        //Set FormFactor
+            //Set FormFactor
         if (is_array($this->apiData['form_factor'])) {
             $this->apiData['form_factor'] = $this->apiData['form_factor'][0];
         }
@@ -2859,7 +2877,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'FormFactor');
         $component->addAttribute('type', 'string');
 
-        //Set Color
+            //Set Color
         if (is_array($this->apiData['color'])) {
             $this->apiData['color'] = $this->apiData['color'][0];
         }
@@ -2867,7 +2885,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Color');
         $component->addAttribute('type', 'string');
 
-        //set OperatingSystem
+            //set OperatingSystem
         if (is_array($this->apiData['oprating_system'])) {
             $this->apiData['oprating_system'] = $this->apiData['oprating_system'][0];
         }
@@ -2875,7 +2893,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'OperatingSystem');
         $component->addAttribute('type', 'string');
 
-        //Set Optical Drive
+            //Set Optical Drive
         if (is_array($this->apiData['optical_drive'])) {
             $this->apiData['optical_drive'] = $this->apiData['optical_drive'][0];
         }
@@ -2883,7 +2901,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'OpticalDrive');
         $component->addAttribute('type', 'string');
 
-        //Set RJ-45
+            //Set RJ-45
         if (is_array($this->apiData['RJ-45'])) {
             $this->apiData['RJ-45'] = $this->apiData['RJ-45'][0];
         }
@@ -2891,7 +2909,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'RJ-45');
         $component->addAttribute('type', 'string');
 
-        //Set USB 2.0
+            //Set USB 2.0
         if (is_array($this->apiData['USB2.0'])) {
             $this->apiData['USB2.0'] = $this->apiData['USB2.0'][0];
         }
@@ -2899,7 +2917,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'USB2.0');
         $component->addAttribute('type', 'string');
 
-        //Set USB 3.0
+            //Set USB 3.0
         if (is_array($this->apiData['USB3.0'])) {
             $this->apiData['USB3.0'] = $this->apiData['USB3.0'][0];
         }
@@ -2907,7 +2925,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'USB3.0');
         $component->addAttribute('type', 'string');
 
-        //Set USB-C
+            //Set USB-C
         if (is_array($this->apiData['USB-C'])) {
             $this->apiData['USB-C'] = $this->apiData['USB-C'][0];
         }
@@ -2915,7 +2933,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'USB-C');
         $component->addAttribute('type', 'string');
 
-        //Set SD Card Reader
+            //Set SD Card Reader
         if (is_array($this->apiData['SD_card_reader'])) {
             $this->apiData['SD_card_reader'] = $this->apiData['SD_card_reader'][0];
         }
@@ -2923,7 +2941,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'SDCardReader');
         $component->addAttribute('type', 'string');
 
-        //Set Headphone Jack
+            //Set Headphone Jack
         if (is_array($this->apiData['Headphone_Jack'])) {
             $this->apiData['Headphone_Jack'] = $this->apiData['Headphone_Jack'][0];
         }
@@ -2931,7 +2949,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'HeadphoneJack');
         $component->addAttribute('type', 'string');
 
-        //Set Microphone Jack
+            //Set Microphone Jack
         if (is_array($this->apiData['Microphone_Jack'])) {
             $this->apiData['Microphone_Jack'] = $this->apiData['Microphone_Jack'][0];
         }
@@ -2939,7 +2957,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'MicrophoneJack');
         $component->addAttribute('type', 'string');
 
-        //Set Height
+            //Set Height
         if (is_array($this->apiData['height'])) {
             $this->apiData['height'] = $this->apiData['height'][0];
         }
@@ -2947,7 +2965,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Height');
         $component->addAttribute('type', 'string');
 
-        //Set Width
+            //Set Width
         if (is_array($this->apiData['width'])) {
             $this->apiData['width'] = $this->apiData['width'][0];
         }
@@ -2955,7 +2973,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Width');
         $component->addAttribute('type', 'string');
 
-        //Set Length
+            //Set Length
         if (is_array($this->apiData['length'])) {
             $this->apiData['length'] = $this->apiData['length'][0];
         }
@@ -2963,7 +2981,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'Length');
         $component->addAttribute('type', 'string');
 
-        //Set CombinedHD
+            //Set CombinedHD
         if (is_array($this->apiData['CombinedHD'])) {
             $this->apiData['CombinedHD'] = $this->apiData['CombinedHD'][0];
         }
@@ -2971,7 +2989,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'CombinedHD');
         $component->addAttribute('type', 'string');
 
-        //Set CombinedHDP/N
+            //Set CombinedHDP/N
         if (is_array($this->apiData['CombinedHDP/N'])) {
             $this->apiData['CombinedHDP/N'] = $this->apiData['CombinedHDP/N'][0];
         }
@@ -2979,7 +2997,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'CombinedHDP/N');
         $component->addAttribute('type', 'string');
 
-        //Set CombinedRAM
+            //Set CombinedRAM
         if (is_array($this->apiData['CombinedRAM'])) {
             $this->apiData['CombinedRAM'] = $this->apiData['CombinedRAM'][0];
         }
@@ -2987,7 +3005,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'CombinedRAM');
         $component->addAttribute('type', 'string');
 
-        //Set CombinedRAMP/N
+            //Set CombinedRAMP/N
         if (is_array($this->apiData['CombinedRAMP/N'])) {
             $this->apiData['CombinedRAMP/N'] = $this->apiData['CombinedRAMP/N'][0];
         }
@@ -2995,7 +3013,7 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'CombinedRAMP/N');
         $component->addAttribute('type', 'string');
 
-        //Set CombinedRAMP/N
+            //Set CombinedRAMP/N
         if (is_array($this->apiData['UpdatedHardDrive'])) {
             $this->apiData['UpdatedHardDrive'] = $this->apiData['UpdatedHardDrive'][0];
         }
@@ -3003,38 +3021,38 @@ trait CommonWipeMakorApiTraits
         $component->addAttribute('name', 'UpdatedHardDrive');
         $component->addAttribute('type', 'string');
 
-        //Set Motherboard
+            //Set Motherboard
         $component = $components->addChild('component', 'Passed');
         $component->addAttribute('name', 'Motherboard');
         $component->addAttribute('type', 'string');
 
-        //Set Processor
+            //Set Processor
         $component = $components->addChild('component', 'Passed');
         $component->addAttribute('name', 'Processor');
         $component->addAttribute('type', 'string');
 
-        //Set Memory
+            //Set Memory
         $component = $components->addChild('component', 'Passed');
         $component->addAttribute('name', 'Memory');
         $component->addAttribute('type', 'string');
 
-        //Set Power
+            //Set Power
         $component = $components->addChild('component', 'Passed');
         $component->addAttribute('name', 'Power');
         $component->addAttribute('type', 'string');
 
-        
-        // component Processors
+
+            // component Processors
         $components = $this->audit->addChild('components');
         $components->addAttribute('name', 'Processors');
 
         foreach ($this->apiData['processors'] as $processorData)
         {
-            // child component Processor
+                // child component Processor
             $component = $components->addChild('components');
             $component->addAttribute('name', 'Processor');
 
-            //Set Manufacturer
+                //Set Manufacturer
             if (is_array($processorData['processor_manufacturer']))
             {
                 $processorData['processor_manufacturer'] = $processorData['processor_manufacturer'][0];
@@ -3043,7 +3061,7 @@ trait CommonWipeMakorApiTraits
             $component1->addAttribute('name', 'Manufacturer');
             $component1->addAttribute('type', 'string');
 
-            //Set ProcessorName
+                //Set ProcessorName
             if (is_array($processorData['processor_model']))
             {
                 $processorData['processor_model'] = $processorData['processor_model'][0];
@@ -3052,7 +3070,7 @@ trait CommonWipeMakorApiTraits
             $component2->addAttribute('name', 'Model');
             $component2->addAttribute('type', 'string');
 
-            //Set ProcessorType
+                //Set ProcessorType
             if (is_array($processorData['processor_type']))
             {
                 $processorData['processor_type'] = $processorData['processor_type'][0];
@@ -3061,7 +3079,7 @@ trait CommonWipeMakorApiTraits
             $component3->addAttribute('name', 'Type');
             $component3->addAttribute('type', 'string');
 
-            //Set ProcessorCore
+                //Set ProcessorCore
             if (is_array($processorData['processor_core']))
             {
                 $processorData['processor_core'] = $processorData['processor_core'][0];
@@ -3070,7 +3088,7 @@ trait CommonWipeMakorApiTraits
             $component4->addAttribute('name', 'Core');
             $component4->addAttribute('type', 'string');
 
-            //Set ProcessorSpeed
+                //Set ProcessorSpeed
             if (is_array($processorData['processor_speed']))
             {
                 $processorData['processor_speed'] = $processorData['processor_speed'][0];
@@ -3079,7 +3097,7 @@ trait CommonWipeMakorApiTraits
             $component5->addAttribute('name', 'Speed');
             $component5->addAttribute('type', 'string');
 
-            //Set ProcessorGeneration
+                //Set ProcessorGeneration
             if (is_array($processorData['processor_generation']))
             {
                 $processorData['processor_generation'] = $processorData['processor_generation'][0];
@@ -3088,7 +3106,7 @@ trait CommonWipeMakorApiTraits
             $component6->addAttribute('name', 'Generation');
             $component6->addAttribute('type', 'string');
 
-            //Set ProcessorCodename
+                //Set ProcessorCodename
             if (is_array($processorData['processor_codename']))
             {
                 $processorData['processor_codename'] = $processorData['processor_codename'][0];
@@ -3097,7 +3115,7 @@ trait CommonWipeMakorApiTraits
             $component7->addAttribute('name', 'Codename');
             $component7->addAttribute('type', 'string');
 
-            //Set ProcessorSocket
+                //Set ProcessorSocket
             if (is_array($processorData['processor_socket'])) {
                 $processorData['processor_socket'] = $processorData['processor_socket'][0];
             }
@@ -3105,7 +3123,7 @@ trait CommonWipeMakorApiTraits
             $component8->addAttribute('name', 'Socket');
             $component8->addAttribute('type', 'string');
 
-            //Set ProcessorCount
+                //Set ProcessorCount
             if (is_array($processorData['processor_qty'])) 
             {
                 $processorData['processor_qty'] = $processorData['processor_qty'][0];
@@ -3115,17 +3133,17 @@ trait CommonWipeMakorApiTraits
             $component9->addAttribute('type', 'string');
         }
 
-        // component Hard Drive
+            // component Hard Drive
         $components = $this->audit->addChild('components');
         $components->addAttribute('name', 'Hard_Drives');
 
         foreach ($this->apiData['hard_drive'] as $hardDriveData)
         {
-            // child component Hard Drive
+                // child component Hard Drive
             $component = $components->addChild('components');
             $component->addAttribute('name', 'Hard_Drive');
 
-            //Set Vendor
+                //Set Vendor
             if (is_array($hardDriveData['manufacturer'])) {
                 $hardDriveData['manufacturer'] = $hardDriveData['manufacturer'][0];
             }
@@ -3133,7 +3151,7 @@ trait CommonWipeMakorApiTraits
             $component1->addAttribute('name', 'Manufacturer');
             $component1->addAttribute('type', 'string');
 
-            //Set Model
+                //Set Model
             if (is_array($hardDriveData['model'])) {
                 $hardDriveData['model'] = $hardDriveData['model'][0];
             }
@@ -3149,7 +3167,7 @@ trait CommonWipeMakorApiTraits
             $component3->addAttribute('name', 'PartNumber');
             $component3->addAttribute('type', 'string');
 
-            //Set Serial
+                //Set Serial
             if (is_array($hardDriveData['serial'])) {
                 $hardDriveData['serial'] = $hardDriveData['serial'][0];
             }
@@ -3157,7 +3175,7 @@ trait CommonWipeMakorApiTraits
             $component4->addAttribute('name', 'Serial#');
             $component4->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($hardDriveData['capacity'])) {
                 $hardDriveData['capacity'] = $hardDriveData['capacity'][0];
             }
@@ -3165,7 +3183,7 @@ trait CommonWipeMakorApiTraits
             $component5->addAttribute('name', 'Capacity');
             $component5->addAttribute('type', 'string');
 
-            //Set Interface
+                //Set Interface
             if (is_array($hardDriveData['interface'])) {
                 $hardDriveData['interface'] = $hardDriveData['interface'][0];
             }
@@ -3173,7 +3191,7 @@ trait CommonWipeMakorApiTraits
             $component6->addAttribute('name', 'Interface');
             $component6->addAttribute('type', 'string');
 
-            //Set Interface
+                //Set Interface
             if (is_array($hardDriveData['power_hours'])) {
                 $hardDriveData['power_hours'] = $hardDriveData['power_hours'][0];
             }
@@ -3181,7 +3199,7 @@ trait CommonWipeMakorApiTraits
             $component7->addAttribute('name', 'PoweronHours');
             $component7->addAttribute('type', 'string');
 
-            //Set Vendor
+                //Set Vendor
             if (is_array($hardDriveData['service_parfrmed'])) {
                 $hardDriveData['service_parfrmed'] = $hardDriveData['service_parfrmed'][0];
             }
@@ -3189,7 +3207,7 @@ trait CommonWipeMakorApiTraits
             $component8->addAttribute('name', 'HDServicesPerformed');
             $component8->addAttribute('type', 'string');
 
-            //Set Vendor
+                //Set Vendor
             if (is_array($hardDriveData['removed'])) {
                 $hardDriveData['removed'] = $hardDriveData['removed'][0];
             }
@@ -3197,7 +3215,7 @@ trait CommonWipeMakorApiTraits
             $component9->addAttribute('name', 'Removed');
             $component9->addAttribute('type', 'string');
 
-            //Set Interface
+                //Set Interface
             if (is_array($hardDriveData['size'])) {
                 $hardDriveData['size'] = $hardDriveData['size'][0];
             }
@@ -3205,7 +3223,7 @@ trait CommonWipeMakorApiTraits
             $component10->addAttribute('name', 'Size');
             $component10->addAttribute('type', 'string');
 
-            //Set Interface
+                //Set Interface
             if (is_array($hardDriveData['service_queue_status'])) {
                 $hardDriveData['service_queue_status'] = $hardDriveData['service_queue_status'][0];
             }
@@ -3214,17 +3232,17 @@ trait CommonWipeMakorApiTraits
             $component11->addAttribute('type', 'string');
         }
 
-        // component Memorys
+            // component Memorys
         $components = $this->audit->addChild('components');
         $components->addAttribute('name', 'Memorys');
 
         foreach ($this->apiData['memory'] as $memoryData)
         {
-            // child component Memory
+                // child component Memory
             $component = $components->addChild('components');
             $component->addAttribute('name', 'Memory');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($memoryData['capacity'])) {
                 $memoryData['capacity'] = $memoryData['capacity'][0];
             }
@@ -3232,7 +3250,7 @@ trait CommonWipeMakorApiTraits
             $component1->addAttribute('name', 'Capacity');
             $component1->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($memoryData['type'])) {
                 $memoryData['type'] = $memoryData['type'][0];
             }
@@ -3240,7 +3258,7 @@ trait CommonWipeMakorApiTraits
             $component2->addAttribute('name', 'Type');
             $component2->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($memoryData['partnumber'])) {
                 $memoryData['partnumber'] = $memoryData['partnumber'][0];
             }
@@ -3248,7 +3266,7 @@ trait CommonWipeMakorApiTraits
             $component3->addAttribute('name', 'PartNumber');
             $component3->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($memoryData['slots'])) {
                 $memoryData['slots'] = $memoryData['slots'][0];
             }
@@ -3256,7 +3274,7 @@ trait CommonWipeMakorApiTraits
             $component4->addAttribute('name', 'Slots');
             $component4->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($memoryData['max_memory'])) {
                 $memoryData['max_memory'] = $memoryData['max_memory'][0];
             }
@@ -3264,7 +3282,7 @@ trait CommonWipeMakorApiTraits
             $component5->addAttribute('name', 'MaximumMemoryCapacity');
             $component5->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($memoryData['speed'])) {
                 $memoryData['speed'] = $memoryData['speed'][0];
             }
@@ -3273,17 +3291,17 @@ trait CommonWipeMakorApiTraits
             $component6->addAttribute('type', 'string');
         }
 
-        // component  Video Outputs
+            // component  Video Outputs
         $components = $this->audit->addChild('components');
         $components->addAttribute('name', 'Video Outputs');
 
         foreach ($this->apiData['Video_Outputs'] as $videoOutput)
         {
-            // child component  Video Outputs
+                // child component  Video Outputs
             $component = $components->addChild('components');
             $component->addAttribute('name', 'Video Output');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($videoOutput['Processor'])) {
                 $videoOutput['Processor'] = $videoOutput['Processor'][0];
             }
@@ -3291,7 +3309,7 @@ trait CommonWipeMakorApiTraits
             $component1->addAttribute('name', 'GraphicsProcessor');
             $component1->addAttribute('type', 'string');
 
-            //Set Capacity
+                //Set Capacity
             if (is_array($videoOutput['Ports'])) {
                 $videoOutput['Ports'] = $videoOutput['Ports'][0];
             }
@@ -3301,15 +3319,15 @@ trait CommonWipeMakorApiTraits
 
         }
 
-        // component  Miscellaneous
+            // component  Miscellaneous
         $components = $this->audit->addChild('components');
         $components->addAttribute('name', 'Miscellaneous');
 
-        // child component  Miscellaneous
+            // child component  Miscellaneous
         $component = $components->addChild('components');
         $component->addAttribute('name', 'Miscellaneous');
 
-        //Set Case
+            //Set Case
         if (is_array($this->apiData['Case'])) {
             $this->apiData['Case'] = $this->apiData['Case'][0];
         }
@@ -3317,7 +3335,7 @@ trait CommonWipeMakorApiTraits
         $component1->addAttribute('name', 'Case');
         $component1->addAttribute('type', 'string');
 
-        //Set Screen
+            //Set Screen
         if (is_array($this->apiData['Screen'])) {
             $this->apiData['Screen'] = $this->apiData['Screen'][0];
         }
@@ -3325,7 +3343,7 @@ trait CommonWipeMakorApiTraits
         $component2->addAttribute('name', 'Screen');
         $component2->addAttribute('type', 'string');
 
-        //set Missing
+            //set Missing
         if (is_array($this->apiData['Missing'])) {
             $this->apiData['Missing'] = $this->apiData['Missing'][0];
         }
@@ -3333,7 +3351,7 @@ trait CommonWipeMakorApiTraits
         $component3->addAttribute('name', 'Missing');
         $component3->addAttribute('type', 'string');
 
-        //Set Cosemtic
+            //Set Cosemtic
         if (is_array($this->apiData['Cosemtic'])) {
             $this->apiData['Cosemtic'] = $this->apiData['Cosemtic'][0];
         }
@@ -3341,7 +3359,7 @@ trait CommonWipeMakorApiTraits
         $component4->addAttribute('name', 'Cosemtic');
         $component4->addAttribute('type', 'string');
 
-        //Set Input/Output
+            //Set Input/Output
         if (is_array($this->apiData['Input/Output'])) {
             $this->apiData['Input/Output'] = $this->apiData['Input/Output'][0];
         }
@@ -3349,7 +3367,7 @@ trait CommonWipeMakorApiTraits
         $component5->addAttribute('name', 'Input/Output');
         $component5->addAttribute('type', 'string');
 
-        //Set Other
+            //Set Other
         if (is_array($this->apiData['Other'])) {
             $this->apiData['Other'] = $this->apiData['Other'][0];
         }
@@ -3357,7 +3375,7 @@ trait CommonWipeMakorApiTraits
         $component6->addAttribute('name', 'Other');
         $component6->addAttribute('type', 'string');
 
-        //Set note
+            //Set note
         if (is_array($this->apiData['notes'])) {
             $this->apiData['notes'] = $this->apiData['notes'][0];
         }
@@ -3365,7 +3383,7 @@ trait CommonWipeMakorApiTraits
         $component7->addAttribute('name', 'Notes');
         $component7->addAttribute('type', 'string');
 
-        //Set CombinedRAMP/N
+            //Set CombinedRAMP/N
         if (is_array($this->apiData['functional'])) {
             $this->apiData['asset_tag'] = $this->apiData['functional'][0];
         }
