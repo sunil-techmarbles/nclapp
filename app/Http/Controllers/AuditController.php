@@ -540,10 +540,10 @@ class AuditController extends Controller
 		if($request->ajax())
 		{
 			$mid = $request->get("m");
-			$res = FormData::getFormDataRecord($type='model', $mid);
-			if (!$res)
+			$response = FormData::getFormDataRecord($type='model', $mid);
+			if (!$response)
 			{
-				$res = "false";
+				$response = "false";
 			} 
 			else
 			{
@@ -555,9 +555,9 @@ class AuditController extends Controller
 					$data["models"] = Asin::getModelFromAsin($asin, $notifications=1);
 					if(!$data["models"]) $data['asin'] = 0;
 				}
-				$res = json_encode($data);
+				$response = json_encode($data);
 			}
-			return $res;
+			return $response;
 		}
 		else
 		{
@@ -914,7 +914,7 @@ class AuditController extends Controller
 
 	public function storeAuditRecord(Request $request)
 	{
-		$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
+		$authUserName = Sentinel::getUser()->first_name;
 		$functionGroups = FormsConfig::getFormConfigFields($request->get('radio_2'), $group = 'Description');
 		$descrTypes = array();
 		
@@ -984,9 +984,8 @@ class AuditController extends Controller
 		}
 		$outxml = array("user" => $authUserName, "processed" => $this->current);
 		$config = FormsConfig::getAllRecord();
-		// print_r($config->toArray());
 		$travelerId = "";
-		foreach ($config as $fld)
+		foreach ($config as $i => $fld)
 		{
 			$item = array();
 			$itmid = $fld["qtype"] . "_" . $fld["id"];
@@ -1041,13 +1040,20 @@ class AuditController extends Controller
 				if ($qtype == "mult")
 				{
 					$resp = $request->get($itmid);
-					if (!empty($itmvalnew))
+					if($resp)
 					{
-						$resp[] = $request->get($itmidnew);
-						$item["new"] = $request->get($itmidnew);
+						if (!empty($itmvalnew))
+						{
+							$resp[] = $request->get($itmidnew);
+							$item["new"] = $request->get($itmidnew);
+						}
+						$item["value"] = $resp;
+						$response = array("mult" => $resp);
 					}
-					$item["value"] = $resp;
-					$response = array("mult" => $resp);
+					else
+					{
+						continue;
+					}
 				}
 				elseif ($qtype == "radio")
 				{
@@ -1069,7 +1075,8 @@ class AuditController extends Controller
 						$response = $request->get($itmidnew);
 						$item["new"] = $request->get($itmidnew);
 					}
-					else{
+					else
+					{
 						$response = $request->get($itmid);
 					}
 					$item["value"] = array($response);
@@ -1095,6 +1102,7 @@ class AuditController extends Controller
 				{
 					$response .= "GB";
 				}
+				// echo "> ".$i.' > '.$grp." > ".$qtype. "\n";
 				if (!empty($grp))
 				{
 					if ($grp == "Description" && is_array($response))
@@ -1121,32 +1129,56 @@ class AuditController extends Controller
 					}
 					else
 					{
-						$outxml[$grp][$key] = $response;
+						if($response)
+						{
+							$outxml[$grp][$key] = $response;
+						}
+						else
+						{
+							continue;
+						}
 					}
 				}
 				else
 				{
 					if (!empty($outxml[$key]))
 					{
-						$outxml[$key] .= ";" . $response;
+						if($response)
+						{
+							$outxml[$key] .= ";" . $response;
+						}
+						else
+						{
+							continue;
+						}
 					}
 					else
 					{
-						$outxml[$key] = $response;
+						if($response)
+						{
+							$outxml[$key] = $response;
+						}
+						else
+						{
+							continue;
+						}
 					}
 				}
+				// echo $i. "\n";
 				$adminEmails = Config::get('constants.adminEmail');
 				$subject = "New item addition request";
 				if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
 				{
 					$body = $authUserName . " requested to add the value '" . $request->get($itmidnew) . "'" .
 					"to the set of options for question '" . $fld["question"] . "' in '" . $fld["tab"] . "' tab (ID:" . $fld["id"] . ").\n" ."Please verify and make corresponding change in form configuration.";
-					Mail::raw($body, function ($m) use ($subject, $adminEmails) {
-						$m->to($adminEmails)->subject($subject);
-					});
+					// Mail::raw($body, function ($m) use ($subject, $adminEmails) {
+					// 	$m->to($adminEmails)->subject($subject);
+					// });
 				}
 			}
+			// break;
 		}
+		// print_r($outxml);
 		$xmlData = new \SimpleXMLElement('<?xml version="1.0"?><data/>');
 		$this->array_to_xml($outxml, $xmlData);
 		if ($travelerId != "")
@@ -1168,6 +1200,7 @@ class AuditController extends Controller
 
 		if ($travelerId != "")
 		{
+			// echo $travelerId;
 			$fname = $this->formData.'/'.$travelerId.'.json';
 			file_put_contents($fname, json_encode($data));
 			FormData::deleteFormDataRecorde($type = "data", $authUserName);
@@ -1181,6 +1214,9 @@ class AuditController extends Controller
 			FormData::saveFormDataRecorde((object) $formData);
 		}
 
+		// echo $product;
+		// echo $technology;
+		// echo $model;
 		if (!empty($product) && !empty($technology) && !empty($model))
 		{
 			$add = $request->get("addModel");
@@ -1210,6 +1246,7 @@ class AuditController extends Controller
 				FormData::saveFormDataRecorde((object) $formData);
 			}
 		}
+		// die;
 
 		if($result)
 		{
@@ -1222,7 +1259,7 @@ class AuditController extends Controller
 	}
 
 	public function array_to_xml($data, &$xmlData)
-	{	
+	{
 		foreach ($data as $key => $value)
 		{
 			if (is_numeric($key))

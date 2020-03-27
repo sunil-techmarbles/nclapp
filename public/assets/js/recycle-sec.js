@@ -367,13 +367,13 @@ $(document).on('click', '.update', function(){
 $(document).on('submit', '#add_entry_form', function(event){
     event.preventDefault();
     var errorFlag = true;
-    if($(this).find('#model').val() = '')
+    if($(this).find('#model').val() == '')
     {
         alert('Model field required');
         errorFlag = false;
     }
     
-    if($(this).find('#part').val() = '')
+    if($(this).find('#part').val() == '')
     {
         alert('Part number field required');
         errorFlag = false;
@@ -383,17 +383,19 @@ $(document).on('submit', '#add_entry_form', function(event){
     {
         $.ajax({
             url: "/"+recyclePrefix+"/addinventory",
-            method:'POST',
-            data: new FormData(this),
-            dataType:"json",
+            method: 'POST',
+            data: $(this).serialize(),
+            dataType: "json",
             beforeSend: function (){
                 showLoader();
             },
-            success:function(data)
+            success: function(result)
             {
                 hideLoader();
-                $('#user_form')[0].reset();
-                $('#userModal').modal('hide');
+                // $('#user_form')[0].reset();
+                // $('#userModal').modal('hide');
+                var status = (result.status) ? 'success' : 'error';
+                showSweetAlertMessage(type  = status, message = result.message , icon = status);
                 location.reload();
             },
             error: function(result){
