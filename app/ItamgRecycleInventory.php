@@ -53,4 +53,16 @@ class ItamgRecycleInventory extends Model
     		->orWhere(['PartNo' => $request->search])
     		->get();
     }
+
+    public static function deleteRecycleTwo($recordId)
+    {
+        $output = false;
+        $result = self::find($recordId);
+        if($result)
+        {
+            $result->delete();
+            $output = true;
+        }
+        return $output;
+    }
 }

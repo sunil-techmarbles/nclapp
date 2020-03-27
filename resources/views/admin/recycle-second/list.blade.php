@@ -36,7 +36,7 @@
                         <a href="javascript:void(0)" class="edit_entry_link" data-table_id="{{$itamgRecycleInventor->id}}">
                             <img src="{{URL('/assets/images/edit.png')}}" class="icons"  title="Edit">
                         </a>
-                        <a href="javascript:void(0)" class="delete_entry_link" onclick="del_confirm({{$itamgRecycleInventor->id}},'deleterecyclecategoryrecord','Category')" data-table_id="{{$itamgRecycleInventor->id}}">
+                        <a href="javascript:void(0)" class="delete_entry_link" onclick="del_confirm({{$itamgRecycleInventor->id}},'deleterecycletwo','Recycle Inventory')" data-table_id="{{$itamgRecycleInventor->id}}">
                             <img src="{{URL('/assets/images/del.png')}}" class="icons"  title="Delete">
                         </a>
 					</td>

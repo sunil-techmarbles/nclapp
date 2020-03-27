@@ -44,6 +44,8 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		Route::any('/importrecord', 'ShopifyController@importRecord')->name('import.record');
 		// Recycle download PDF
 		Route::any('/recycledownload', 'RecycleController@recycleDownloadPdf');
+		Route::post('/readdatafromfiles', 'RecycleController@readDataFromFile')->name('read.data.from.files');
+
 	});
 });
 
@@ -122,6 +124,8 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/updaterecyclerecord', 'RecycleController@updateRecycleRecord')->name('update.recycle.record');
 		Route::get('/deleterecyclerecord/{recordId}', 'RecycleController@deleteRecycleRecord');
 		Route::get('/deleterecyclecategoryrecord/{catname}', 'RecycleController@deleteRecycleCategoryRecord');
+		Route::get('/deleterecycletwo/{recycleId}', 'RecycleController@deleteRecycleTwo');
+		Route::post('/multrecycleinvtdelete', 'RecycleController@multRecycleInvtDelete');
 		Route::post('/approverecyclecategoryrecord', 'RecycleController@approveRecycleCategoryRecord');
 		Route::post('/submitcyclecategoryrecord', 'RecycleController@submitRecycleCategoryRecord');
 		Route::post('/addnewcategoryrecord', 'RecycleController@addNewCategoryRecord');
