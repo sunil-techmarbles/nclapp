@@ -14,6 +14,7 @@
 	@include('layouts.datatableexportstyle')
 	@endif
 	<link href="{{URL('assets/css/datepicker/daterangepicker.css')}}" rel="stylesheet">
+	<link href="{{URL('assets/css/additional-style.css')}}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
 </head>
 <style type="text/css">

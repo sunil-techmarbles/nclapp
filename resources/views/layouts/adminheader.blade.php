@@ -9,6 +9,9 @@
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
 						<a class="nav-link" href="{{route('users')}}">Users</a>
 					</li>
+					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
+						<a class="nav-link" href="{{route('running.list')}}">Running List</a>
+					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'runninglist')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
