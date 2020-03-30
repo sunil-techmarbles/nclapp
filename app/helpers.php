@@ -873,17 +873,25 @@ function getMakorRAMSpeed($RAM)
 function getMakorActionResult($jobOperationDataArray, $productName)
 {
     $smartData = "";
-    if ($productName == "Server") {
-        foreach ($jobOperationDataArray as $key => $jobOperationData) {
-            if (isset($jobOperationData['@attributes'])) {
-                if (isset($jobOperationData['@attributes']) && $jobOperationData['@attributes']['DeviceIndex'] == 1) {
+    if ($productName == "Server")
+    {
+        foreach ($jobOperationDataArray as $key => $jobOperationData)
+        {
+            if (isset($jobOperationData['@attributes']))
+            {
+                if (isset($jobOperationData['@attributes']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
+                {
                     $smartData = $jobOperationData['ActionResult'];
                 }
             }
         }
-    } else {
-        if (isset($jobOperationDataArray['@attributes'])) {
-            if (isset($jobOperationDataArray['@attributes']) && $jobOperationDataArray['@attributes']['DeviceIndex'] == 1) {
+    }
+    else
+    {
+        if (isset($jobOperationDataArray['@attributes']))
+        {
+            if (isset($jobOperationDataArray['@attributes']) && $jobOperationDataArray['@attributes']['DeviceIndex'] == 1)
+            {
                 $smartData = $jobOperationDataArray['ActionResult'];
             }
         }
@@ -894,21 +902,31 @@ function getMakorActionResult($jobOperationDataArray, $productName)
 function getHDDString($devices)
 {
     $devicesBySizes = array();
-    if (isset($devices['Device'][0])) {
-        foreach ($devices['Device'] as $key => $device) {
-            if ($device['Gigabytes'] > 999) {
+    if (isset($devices['Device'][0])) 
+    {
+        foreach ($devices['Device'] as $key => $device)
+        {
+            if ($device['Gigabytes'] > 999)
+            {
                 $device['Gigabytes'] = round($device['Gigabytes'] / 1000, 0);
                 $devicesBySizes[$device['Gigabytes'] . "TB"][] = $key;
-            } else {
+            }
+            else
+            {
                 $device['Gigabytes'] = round($device['Gigabytes'], 0);
                 $devicesBySizes[$device['Gigabytes'] . "GB"][] = $key;
             }
         }
-    } else {
-        if ($devices['Device']['Gigabytes'] > 999) {
+    }
+    else
+    {
+        if ($devices['Device']['Gigabytes'] > 999)
+        {
             $devices['Device']['Gigabytes'] = round($devices['Device']['Gigabytes'] / 1000, 0);
             $devicesBySizes[$devices['Device']['Gigabytes'] . "TB"][] = 1;
-        } else {
+        }
+        else
+        {
             $devices['Device']['Gigabytes'] = round($devices['Device']['Gigabytes'], 0);
             $devicesBySizes[$devices['Device']['Gigabytes'] . "GB"][] = 1;
         }
@@ -916,9 +934,11 @@ function getHDDString($devices)
     $hddString = "";
     $count = 1;
     $totalDevicesBySizes = count($devicesBySizes);
-    foreach ($devicesBySizes as $key => $deviceSize) {
+    foreach ($devicesBySizes as $key => $deviceSize)
+    {
         $hddString .= $key . "_x_" . count($deviceSize);
-        if ($count < $totalDevicesBySizes) {
+        if ($count < $totalDevicesBySizes)
+        {
             $hddString .= ";";
         }
         $count++;

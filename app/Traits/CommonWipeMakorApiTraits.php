@@ -59,6 +59,7 @@ trait CommonWipeMakorApiTraits
             $this->CreateMakorAppleXml();
             $this->apiData['xml_data'] = $this->appleAudit->asXML();
         }
+        $this->apiData['saveDataArray'] = $this->saveDataArray;
         return $this->apiData;
     }
 
