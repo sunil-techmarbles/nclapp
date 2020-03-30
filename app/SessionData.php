@@ -54,9 +54,7 @@ class SessionData extends Model
 
     public static function updateSessionStatus($session,$r,$satus)
     {
-    	return self::where(["sid"=> $session,
-                "asset"=>$r
-            ])
+    	return self::where(["sid"=> $session,"asset" => $r])
             ->update(["status"=> $satus]);
     }
 
@@ -68,6 +66,12 @@ class SessionData extends Model
     public static function updateShipmentRunStatus($r, $status)
     {
         return self::where(["asset"=> $r])
+            ->update(["run_status"=> $status]);
+    }
+
+    public static function updateSessionRunStatus($asset, $status)
+    {
+        return self::where(["asset"=> $asset])
             ->update(["run_status"=> $status]);
     }
 
@@ -168,6 +172,47 @@ class SessionData extends Model
                     ->where('d.status','=', 'active');
             })
             ->groupBy('i.id')
+            ->get();
+    }
+
+    public static function getrunningListFromSessionData()
+    {
+        return self::select('session_data.aid', 'a.shopify_product_id', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+            ->selectSub('count(session_data.aid)', 'cnt')
+            ->join('asins as a', function($join){
+                $join->on('session_data.aid', '=', 'a.id')
+                        ->where('session_data.sid','>=', '9')
+                        ->where('session_data.status','=', 'active')
+                        ->where('session_data.run_status','=', 'active');
+                })
+            ->groupBy('session_data.aid')
+            ->get();
+    }
+
+    public static function getrunningListItemsFromSessionData($id)
+    {
+        return self::select('session_data.aid', 'session_data.sid', 'session_data.asset', 'session_data.added_on', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+            ->selectSub('count(session_data.aid)', 'cnt')
+            ->join('asins as a', function($join) use ($id) {
+                $join->on('session_data.aid', '=', 'a.id')
+                        ->where('session_data.sid','>=', '9')
+                        ->where('session_data.aid','=', $id)
+                        ->where('session_data.status','=', 'active')
+                        ->where('session_data.run_status','=', 'active');
+                })
+            ->get();
+    }
+
+    public static function getRunningListExport()
+    {
+        return self::select('session_data.asset', 'a.model', 'a.form_factor', 'a.price', 'a.asin', 'session_data.added_on')
+            ->selectSub("concat(a.cpu_core, ' ', a.cpu_model, '@', a.cpu_speed)", 'CPU')
+            ->join('asins as a', function($join) {
+                $join->on('session_data.aid', '=', 'a.id')
+                    ->where('session_data.sid','>=', '9')
+                    ->where('session_data.status','=', 'active')
+                    ->where('session_data.run_status','=', 'active');
+                })
             ->get();
     }
 }

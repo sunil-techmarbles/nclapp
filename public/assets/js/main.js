@@ -917,7 +917,7 @@ function del_confirm(id,url,text)
 				console.log(response)
 				swalWithBootstrapButtons.fire( 
 					'Deleted!',
-					response.message ,
+					response.message,
 					response.status
 					) 
 			})

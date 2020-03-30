@@ -39,6 +39,12 @@ class ItamgRecycleInventory extends Model
     	return self::get();
     }
 
+    public static function getRecordById($value)
+    {
+        return self::where(['id' => $value])
+            ->first();
+    }
+
     public static function getResult($query, $fields)
     {
     	return self::select($fields)

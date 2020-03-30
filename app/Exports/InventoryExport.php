@@ -27,5 +27,4 @@ class InventoryExport implements FromCollection, WithHeadings, ShouldAutoSize
             "Added"
         ];
     }
-
 }

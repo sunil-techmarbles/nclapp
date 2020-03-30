@@ -73,13 +73,7 @@ $(document).ready(function(){
             showSweetAlertMessage(type = 'warning', message = 'Please select record to delete' , icon= 'warning');
         }
            
-    });  
-
-    function loadtabledata(){
-        setTimeout(function(){
-            location.reload();
-        },1000);
-    }
+    });
 
     $(document).on('click', '.upload_data_from_files', function(data){
         $('#upload_files').modal({
@@ -105,25 +99,39 @@ $(document).ready(function(){
         ]
     });
 
-    $(document).on("click",".glyphicon-edit", function(e){
+    $(document).on("click",".edit_entry_link", function(e){
+        showLoader();
         e.preventDefault();
-        var table_id = $(this).attr('data-table_id');
-        $('#user_id').val(table_id);
-
-        $.post('./ajax/get_entry.php',{table_id:table_id}, function(data){
-            var myArray = jQuery.parseJSON(data);
-
-            $('#model').val(myArray.entry.Model);
-            $('#part').val(myArray.entry.PartNo);
-            $('#brand').val(myArray.entry.Brand);
-            $('#category').val(myArray.entry.Category);
-            $('#notes').val(myArray.entry.Notes);
-            $('#value').val(myArray.entry.Value);
-            $('#status').val(myArray.entry.Status);
-            $('#require_pn').val(myArray.entry.require_pn);
+        var id = $(this).attr('data-table_id');
+        $.get("/"+recyclePrefix+"/getrecordeedit?inventoryid="+id, function(response){
+            hideLoader();
+            console.log(response);
+            if(response.status)
+            {
+                $('#user_id').val(id);
+                $('#modal-title b').text('Edit Itamg inventory')
+                $('#model').val(response.data.Model);
+                $('#part').val(response.data.PartNo);
+                $('#brand').val(response.data.Brand);
+                $('#category').val(response.data.Category);
+                $('#notes').val(response.data.Notes);
+                $('#value').val(response.data.Value);
+                $('#status').val(response.data.Status);
+                $('#require_pn').val(response.data.require_pn);
+                $('#operation').val("Edit");
+                $('#add_entry').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            }
+            else
+            {
+                showSweetAlertMessage(type = 'error', message = 'something went wrong', icon = 'error');   
+            }
+        }).fail(function (jqXHR, textStatus, error){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
         });
-
-        $('#edit_entry').modal('show');
     })
 
     $("#edit_entry_form").validate({
@@ -305,15 +313,13 @@ $(document).on('click', '.update', function(){
                     backdrop: 'static',
                     keyboard: false
                 });
-                $('#add_entry #user_id').val(id);
-                $('#add_entry #model').val(result.data.model);
-                $('#add_entry .modal-title').text("Add Itamg inventory");
-                $('#add_entry #part').val(result.data.part);
-                $('#add_entry #brand').val(result.data.brand);
-                $('#add_entry #category').val(result.data.category);
-                $('#add_entry #require_pn').val(result.data.require_pn);
-                $('#add_entry #action').val("Add");
-                $('#add_entry #operation').val("Edit");
+                $('#user_id').val(id);
+                $('#model').val(result.data.model);
+                $('#part').val(result.data.part);
+                $('#brand').val(result.data.brand);
+                $('#category').val(result.data.category);
+                $('#require_pn').val(result.data.require_pn);
+                $('#action').val("Add");
             }
             else
             {
@@ -358,8 +364,6 @@ $(document).on('submit', '#add_entry_form', function(event){
             success: function(result)
             {
                 hideLoader();
-                // $('#user_form')[0].reset();
-                // $('#userModal').modal('hide');
                 var status = (result.status) ? 'success' : 'error';
                 showSweetAlertMessage(type  = status, message = result.message , icon = status);
                 location.reload();

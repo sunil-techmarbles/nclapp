@@ -223,7 +223,7 @@ function checkTravelerId( tabId )
 			{
 				if (data=="Missing")
 				{
-					showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');
+					showSweetAlertMessage(type = 'error', message = 'Data files not found for entered Asset Number' , icon= 'error');
 					$('#text_1').val("");
 					$('#text_1').focus();
 					isErr = true;
