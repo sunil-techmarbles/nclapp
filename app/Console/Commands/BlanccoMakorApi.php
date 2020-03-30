@@ -204,8 +204,9 @@ class BlanccoMakorApi extends Command
                     }
                     catch (\Execption $e)
                     {
-                        $message = $e->getMessage().' '. $e->getCode();
+                        $message = $e->getMessage().' '. $e->getCode() . " " . $blanccoXmlFile;
                         MessageLog::addLogMessageRecord($message,$type="blanccoMakor", $status="failure");
+                        continue;
                     }
                 }
             }
