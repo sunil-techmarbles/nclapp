@@ -27,4 +27,11 @@ class MessageLog extends Model
         $messageLog->type = $type;
         return ($messageLog->save()) ? true : false;
 	}
+
+	public static function getLatestRecord()
+	{
+		return self::orderBy('id', 'desc')
+			->limit(50)
+			->get();
+	}
 }

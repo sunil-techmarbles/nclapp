@@ -122,6 +122,7 @@ function tblFilter()
 	
 $(document).ready(function ()
 {
+	var newRunList = ($("input[name='reunlistsyns']").length > 0) ? true : false;
 	$("#sync-all-to-shopify").click(function () {
 		var ids = [];
 		$.each($("input[name='sync-all-ids[]']:checked"), function () {
@@ -135,7 +136,8 @@ $(document).ready(function ()
 				url: "/"+prefix+"/syncalltoshopify",
 				data: {
 	                ids: ids,// < note use of 'this' here
-	                _token: _token, 
+	                _token: _token,
+	                newRunList: newRunList
 	            },
 	            beforeSend: function () {
 	            	showLoader();
@@ -153,10 +155,7 @@ $(document).ready(function ()
 	            },
 	            error: function(xhr, status, error){
 	            	hideLoader();
-					if(xhr.status)
-					{
-						showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
-					}
+					showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
 				}
 	        });
 		}
@@ -183,6 +182,7 @@ $(document).ready(function ()
 			data: {
                 ids: ids, // < note use of 'this' here
                 _token: _token,
+                newRunList:newRunList,
             },
             beforeSend: function () {
             	showLoader();
@@ -200,10 +200,7 @@ $(document).ready(function ()
             },
             error: function(xhr, status, error){
             	hideLoader();
-				if(xhr.status)
-				{
-					showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
-				}
+				showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
 			}
         });
 	});
@@ -218,6 +215,7 @@ $(document).ready(function ()
 			data: {
                 id: id, // < note use of 'this' here
                 _token: _token,
+                newRunList:newRunList,
             },
             beforeSend: function () {
             	showLoader();
@@ -235,10 +233,7 @@ $(document).ready(function ()
             },
             error: function(xhr, status, error){
             	hideLoader();
-				if(xhr.status)
-				{
-					showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
-				}
+				showSweetAlertMessage(type = 'error', message = 'something went wrong with your request' , icon = 'error');
 			}
         });
 	});

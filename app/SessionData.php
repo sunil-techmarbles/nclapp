@@ -215,4 +215,18 @@ class SessionData extends Model
                 })
             ->get();
     }
+
+    public static function getRunListForSyncProcess($asinId)
+    {
+        return self::select('session_data.asset', 'a.*')
+            ->join('asins as a', function($join) use ($asinId) {
+                $join->on('session_data.aid', '=', 'a.id')
+                    ->where('session_data.sid','>=', '9')
+                    ->where('session_data.status','=', 'active')
+                    ->where('session_data.run_status','=', 'active')
+                    ->where('a.asin','=', $asinId);;
+                })
+            ->groupBy('session_data.aid')
+            ->get();
+    }
 }

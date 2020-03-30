@@ -132,6 +132,12 @@ class Asin extends Model
         return $result;
     }
 
+    public static function updateShopifyProductId($productId, $asinId)
+    {
+        return self::where(['asin' => $asinId])
+            ->update(['shopify_product_id' => $productId]);
+    }
+
     public static function getSpecificFirstRecord($fields, $model, $part1, $part2, $part3)
     {
         return self::select($fields)
