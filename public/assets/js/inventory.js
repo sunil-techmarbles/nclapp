@@ -123,6 +123,7 @@ function tblFilter()
 $(document).ready(function ()
 {
 	$("#sync-all-to-shopify").click(function () {
+		var newRunList = ($("input[name='reunlistsyns']").length > 0) ? true : false;
 		var ids = [];
 		$.each($("input[name='sync-all-ids[]']:checked"), function () {
 			ids.push($(this).val());
@@ -135,7 +136,8 @@ $(document).ready(function ()
 				url: "/"+prefix+"/syncalltoshopify",
 				data: {
 	                ids: ids,// < note use of 'this' here
-	                _token: _token, 
+	                _token: _token,
+	                newRunList: newRunList
 	            },
 	            beforeSend: function () {
 	            	showLoader();
@@ -149,7 +151,7 @@ $(document).ready(function ()
 	            	hideLoader();
 	            	let icon = (result.status) ? 'success' : 'error';
 	            	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
-	            	location.reload(true);
+	            	// location.reload(true);
 	            },
 	            error: function(xhr, status, error){
 	            	hideLoader();

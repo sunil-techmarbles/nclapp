@@ -12,6 +12,7 @@
 	<div class="row mx-0">
 		<a class="btn btn-info ml-2 float-right" href="{{route('runninglist.csv',['csv' => '1'])}}">Export</a>
 		<button type="button" class="btn btn-info ml-2 float-right" id="sync-all-to-shopify">Sync to Shopify</button>
+		<input type="hidden" name="reunlistsyns" value="true">
 	</div>
         <table class="table table-striped table-condensed table-hover">
             <tr>
