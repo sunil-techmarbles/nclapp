@@ -16,7 +16,7 @@
 	</div>
         <table class="table table-striped table-condensed table-hover">
             <tr>
-                <th><input type="checkbox" class="all_asin_sync" name="all_asin_sync"></th>
+                <th><input type="checkbox" class="check-all-ids" name="all_asin_sync"></th>
                 <th>ASIN</th>
                 <th>Model</th>
                 <th>Form Factor</th>
@@ -46,7 +46,7 @@
                     <td>{{$i["cnt"]}}</td>
                     <td>
                         @if ($i["shopify_product_id"])
-                            <button class="btn btn-link sync-to-shopify" data-asin="{{$i["asin"]}}">Update</button>
+                            <button class="btn btn-link sync-to-shopify" data-id="{{$i["asin"]}}">Update</button>
                         @endif
                     </td>
                     <td>
@@ -65,7 +65,7 @@
                                 Shopify Price: $ {{$i["priceData"]['shopify_price']}} <br>
                                 Final Price: $  {{$i["priceData"]['final_price']}} <br>
                                 Diffrence: $  {{$i["priceData"]['diffrence']}} <br>
-                                <button class="btn btn-link update-price-to-shopify" data-asin="{{$i["asin"]}}">Update Price</button>
+                                <button class="btn btn-link update-price-to-shopify" data-id="{{$i["asin"]}}">Update Price</button>
                             @endif
                         @endif
                     </td>
@@ -79,7 +79,7 @@
                         <td>{{ number_format($a["price"], 2) }}</td>
                         <td>{{ $a["asset"] }}</td>
                         <td>{{ $a["added_on"] }}</td>
-                        <td><a href="index.php?page=runlist&remove=$a["asset"] &t=time() "><span class="fa fa-trash"></span></a></td>
+                        <td><a onclick="return confirm('Are you sure want to delete this?');" href="{{route('running.list',['remove' => $a["asset"], 't' => time()])}}"><span class="fa fa-trash"></span></a></td>
                     </tr>
                 @endforeach
             @endforeach

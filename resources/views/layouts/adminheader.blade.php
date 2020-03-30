@@ -10,12 +10,12 @@
 						<a class="nav-link" href="{{route('users')}}">Users</a>
 					</li>
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-						<a class="nav-link" href="{{route('running.list')}}">Running List</a>
+						<a class="nav-link" href="{{route('message.log')}}">Message Logs</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'runninglist')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-						<a class="nav-link" href="{{route('running.list')}}">New List</a>
+						<a class="nav-link" href="{{route('inventory')}}">New List</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'inventory')

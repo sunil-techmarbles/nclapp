@@ -1026,8 +1026,6 @@ class ShopifyController extends Controller
 				$errorModelId = [];
 				foreach ($request->ids as $key => $id)
 				{
-					// print_r($id);
-					// echo is_string($request->newRunList);
 					if($request->newRunList == 'true')
 					{
 						$allRunningList = SessionData::getRunListForSyncProcess($id);
@@ -1176,7 +1174,7 @@ class ShopifyController extends Controller
 		}
 	}
 
-	public function updateShopifyProductNewRunListPrice($baseurl, $runningList, $variantData)
+	public function updateShopifyProductNewRunListPrice($baseurl, $runningList, $variantData, $type)
 	{
 		$message = [];
 		$productsurl = $baseurl . "/admin/api/2019-04/products/" . $runningList['shopify_product_id'] . ".json";
@@ -1188,11 +1186,19 @@ class ShopifyController extends Controller
 			$productsurl = $baseurl . "/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
 			$shopifyVariantData = putApiData($productsurl, $variantData);
 			$returnMessage = 'Updated asin: ' . $runningList['model'] . ' Shopify product id:' . $shopifyData['product']['id'];
+			if($type != '')
+			{
+				$return_error = 'Updated asin: ' . $runningList['asin'] . ' Shopify product id:' . $shopifyData['product']['id'];
+			}
 			$status = true;
 		}
 		else
 		{
-			$returnMessage = 'Not updated for Model:' . $runningList['model'];
+			$returnMessage = 'Not updated for Model: ' . $runningList['model'];
+			if($type != '')
+			{
+				$returnMessage = 'Not updated for asin: ' . $runningList['asin'];
+			}
 			$status = false;
 		}
 		$message = ['message' => $returnMessage, 'status' => $status];
@@ -1205,29 +1211,58 @@ class ShopifyController extends Controller
 		{
 			if (isset($request->id) && !empty($request->id))
 			{
-				$allRunningList = ListData::getListDataForPriceUpdate($request->id);
-				if (!empty($allRunningList))
+				if($request->newRunList == 'true')
 				{
-					$baseurl = $this->basePath;
-					$meassge = '';
-					$runninglist = $allRunningList[0];
-					$runninglist['condition'] =  config('constants.finalPriceConstants.condition');
-					$runninglist['form_factor'] = $runninglist['technology'];
-					$price = $this->productPriceCalculation($runninglist);
-					if ($price == 0 || $price == 0.00)
-					{
-						$price = 299.99;
-					}
-					$variantData['variant'] = [
-						"price" => $price,
-					];
+					$allRunningList = SessionData::getRunListForSyncProcess($request->id);
+					if (!empty($allRunningList)) {
+					    foreach ($allRunningList as $key => $runningList)
+					    {
+					        $insertDataArray = $this->getAdditionalDataForNewRunlist($runningList->id, $type="runlist");
+					        $runningList['condition'] = $insertDataArray['condition'];
+					        $price =  $this->productPriceCalculation($runningList);
 
-					$meassge = updateShopifyProductNewRunListPrice($this->basePath, $runninglist, $variantData);
-					return response()->json($meassge);
+					        if ($price == 0 || $price == 0.00)
+					        {
+					            $price = 299.99;
+					        }
+					        $variantData['variant'] = [
+					            "price" => $price,
+					        ];
+
+					       $meassge = $this->updateShopifyProductNewRunListPrice($this->basePath, $runningList, $variantData, $type='runlist');
+					    }
+					    return response()->json($meassge);
+					}else
+					{
+						return response()->json(['message' => 'No Data Found for this ASIN', 'status' => false]);
+					}
 				}
-				else
+				if($request->newRunList == 'false')
 				{
-					return response()->json(['message' => 'No Data Found for this ASIN', 'status' => false]);
+					$allRunningList = ListData::getListDataForPriceUpdate($request->id);
+					if (!empty($allRunningList))
+					{
+						$baseurl = $this->basePath;
+						$meassge = '';
+						$runninglist = $allRunningList[0];
+						$runninglist['condition'] =  config('constants.finalPriceConstants.condition');
+						$runninglist['form_factor'] = $runninglist['technology'];
+						$price = $this->productPriceCalculation($runninglist);
+						if ($price == 0 || $price == 0.00)
+						{
+							$price = 299.99;
+						}
+						$variantData['variant'] = [
+							"price" => $price,
+						];
+
+						$meassge = $this->updateShopifyProductNewRunListPrice($this->basePath, $runninglist, $variantData, $type='');
+						return response()->json($meassge);
+					}
+					else
+					{
+						return response()->json(['message' => 'No Data Found for this ASIN', 'status' => false]);
+					}
 				}
 			}
 		}
@@ -1432,7 +1467,15 @@ class ShopifyController extends Controller
 		$asinImages = $this->asinImages;
 		if ($request->get('remove'))
 		{
-			SessionData::updateSessionRunStatus($rem, $status="removed");
+			$status = SessionData::updateSessionRunStatus(intval($request->get('remove')), $status="removed");
+			if($status)
+			{
+				\Session::flash('success','Asin removed successfully');
+			}
+			else
+			{
+				\Session::flash('error','Somethimg went wrong ! please try after some time');
+			}
 		}
 		$runningList = SessionData::getrunningListFromSessionData();
 		$upcCount = ShopifyBarCode::countEmptyAsinId($value='');
