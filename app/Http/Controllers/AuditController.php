@@ -987,6 +987,7 @@ class AuditController extends Controller
 		$travelerId = "";
 		foreach ($config as $i => $fld)
 		{
+			// print_r($request->toArray());
 			$item = array();
 			$itmid = $fld["qtype"] . "_" . $fld["id"];
 			$itmidnew = $fld["qtype"] . "_" . $fld["id"] . "_new";
@@ -1031,6 +1032,7 @@ class AuditController extends Controller
 				}
 				if ($key == "Technology")
 				{
+					// echo $itmid;
 					$technology = $request->get($itmid);
 				}
 				if ($key == "Model")
@@ -1165,20 +1167,21 @@ class AuditController extends Controller
 					}
 				}
 				// echo $i. "\n";
+				// print_r()
 				$adminEmails = Config::get('constants.adminEmail');
 				$subject = "New item addition request";
 				if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
 				{
 					$body = $authUserName . " requested to add the value '" . $request->get($itmidnew) . "'" .
 					"to the set of options for question '" . $fld["question"] . "' in '" . $fld["tab"] . "' tab (ID:" . $fld["id"] . ").\n" ."Please verify and make corresponding change in form configuration.";
-					// Mail::raw($body, function ($m) use ($subject, $adminEmails) {
-					// 	$m->to($adminEmails)->subject($subject);
-					// });
+					Mail::raw($body, function ($m) use ($subject, $adminEmails) {
+						$m->to($adminEmails)->subject($subject);
+					});
 				}
 			}
-			// break;
 		}
 		// print_r($outxml);
+		// die;
 		$xmlData = new \SimpleXMLElement('<?xml version="1.0"?><data/>');
 		$this->array_to_xml($outxml, $xmlData);
 		if ($travelerId != "")
@@ -1214,9 +1217,24 @@ class AuditController extends Controller
 			FormData::saveFormDataRecorde((object) $formData);
 		}
 
-		// echo $product;
-		// echo $technology;
-		// echo $model;
+
+		$product = $outxml['Product_Name'];
+		$technology = $outxml['Technology'];
+		// echo $model = $outxml['Model'];
+		// echo strpos($model, "("). "\n";
+		if(strpos($model, "("))
+		{	
+			$model = substr($model, 0, strpos($model, "("));
+			$model = trim($model);
+		}
+		else
+		{
+			$model = $outxml['Model'];
+		}
+		// echo 'product >'.$product."\n";
+		// echo 'technology > '.$technology."\n";
+		// echo 'model > '.$model."\n";
+		// die;
 		if (!empty($product) && !empty($technology) && !empty($model))
 		{
 			$add = $request->get("addModel");
@@ -1293,4 +1311,4 @@ class AuditController extends Controller
 			}
 		}
 	}
-}
+}     

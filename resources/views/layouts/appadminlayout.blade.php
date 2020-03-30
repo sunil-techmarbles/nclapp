@@ -68,7 +68,7 @@
 @if(request()->segment(count(request()->segments())) == 'refurb')
 <script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
 @endif
-@if(request()->segment(count(request()->segments())) == 'inventory')
+@if(request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'runninglist')
 <script type="text/javascript" src = "{{URL('assets/js/inventory.js')}}" ></script>
 @endif
 @if(request()->segment(count(request()->segments())) == 'recyclesecond' || request()->segment(count(request()->segments())) == 'search' || request()->segment(count(request()->segments())) == 'failedsearch')

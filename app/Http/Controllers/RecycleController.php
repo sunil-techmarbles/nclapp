@@ -165,6 +165,30 @@ class RecycleController extends Controller
         }
     }
 
+    public function recycleTwoInventoryEdit(Request $request)
+    {
+        if($request->ajax())
+        {
+            if ($request->isMethod('get'))
+            {
+                $itamgRecycleInventory = ItamgRecycleInventory::getRecordById(intval($request->inventoryid));
+                if($itamgRecycleInventory)
+                {
+                    $data = $itamgRecycleInventory->toArray();
+                    return response()->json(['status' => true, 'data' => $data]);
+                }
+                else
+                {
+                    return response()->json(['status' => false, 'data' => 'Something went wrong']);
+                }
+            }
+            else
+            {
+                return response()->json(['status' => false, 'message' => 'something went wrong with ajax request']);
+            }
+        }
+    }
+
     public function recycleTwoInventory(Request $request)
     {
         if($request->ajax())
@@ -196,7 +220,7 @@ class RecycleController extends Controller
                 }
                 else
                 {
-                    return response()->json(['status' => false, 'message' => 'Something went wrong']);
+                    return response()->json(['status' => false, 'message' => 'something went wrong with ajax request']);
                 }
             }
         }

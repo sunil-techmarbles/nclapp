@@ -38,6 +38,7 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		Route::get('/exportsupplies','SuppliesController@exportSupplies')->name('export.supplies');
 		Route::post('/importsupplies','SuppliesController@importSupplies')->name('import.supplies');
 		Route::any('/inventorycsv', 'ShopifyController@inventoryCSV')->name('inventory.csv');
+		Route::any('/runninglistcsv', 'ShopifyController@runninglistCSV')->name('runninglist.csv');
 		// export wipereport zip files 
 		Route::post('/exportwipereportfiles','CommonController@ExportWipeReportFiles')->name('exportwipereportfiles');
 		// Import section request 
@@ -109,7 +110,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/getrefnotification', 'AuditController@getRefNotification')->name('load.last');
 		Route::get('/getpreview', 'AuditController@getPreview')->name('get.preview');
 		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
-		// Inventory  and Ajax Request
+		// Inventory and Ajax Request
 		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
 		Route::post('/syncalltoshopify', 'ShopifyController@syncAllToShopify')->name('sync.all.to.shopify');
 		Route::post('/updatetoshopify', 'ShopifyController@syncAllToShopify')->name('update.to.shopify');
@@ -118,6 +119,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/savemodeltemplate', 'ShopifyController@saveModelTemplateRecord')->name('save.model.template');
 		Route::get('/getasin', 'AsinController@getASINNumber')->name('getasin');
 		Route::get('/setmodelid', 'ShopifyController@setModelId')->name('setmodelid');
+		Route::any('/runninglist', 'ShopifyController@runningList')->name('running.list');
 		// Recycle Request
 		Route::post('/recyclnewrecord', 'RecycleController@recyclRecord')->name('recycle.record');
 		Route::any('/editrecyclerecord', 'RecycleController@editRecycleRecord')->name('edit.recycle.record');
@@ -135,6 +137,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/recyclesecond', 'RecycleController@recycleTwoIndex')->name('recycle.second');
 		Route::prefix('recyclesecond')->group(function () {
 			Route::any('/search', 'RecycleController@recycleTwoSearch')->name('search');
+			Route::any('/getrecordeedit', 'RecycleController@recycleTwoInventoryEdit');
 			Route::any('/addinventory', 'RecycleController@recycleTwoInventory');
 			Route::any('/failedsearch', 'RecycleController@recycleTwoFailedSearch')->name('failedsearch');
 			Route::any('/category', 'RecycleController@recycleTwoIndex')->name('category');

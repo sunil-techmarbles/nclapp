@@ -5,9 +5,21 @@
 				<a  class="nav-link" href="{{route('dashboard')}}">Home</a>
 			</li>
 			@if($user_role == 'admin')
-				<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-					<a class="nav-link" href="{{route('users')}}">Users</a>
-				</li>
+				@if(request()->segment(count(request()->segments())) == 'dashboard')
+					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
+						<a class="nav-link" href="{{route('users')}}">Users</a>
+					</li>
+				@endif
+				@if(request()->segment(count(request()->segments())) == 'runninglist')
+					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
+						<a class="nav-link" href="{{route('running.list')}}">New List</a>
+					</li>
+				@endif
+				@if(request()->segment(count(request()->segments())) == 'inventory')
+					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
+						<a class="nav-link" href="{{route('running.list')}}">Running List</a>
+					</li>
+				@endif
 				@if(request()->segment(count(request()->segments())) == 'refurb')
 					<li class="nav-item">
 						<a class="nav-link" href="{{route('get.coa.report')}}">COA Report</a>
@@ -33,13 +45,8 @@
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'asin' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' )
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('supplies')}}">Supplies</a>
+						<a class="nav-link" href="{{route('supplies')}}">Supply</a>
 					</li>
-				@endif
-				@if(request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'wipereport')
-					<li class="nav-item">
-						<a class="nav-link" href="{{route('packages')}}">Inbound</a>
-					</li> 
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'audit')
 					<li class="nav-item">

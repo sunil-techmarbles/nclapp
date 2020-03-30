@@ -55,6 +55,13 @@ class FormModel extends Model
             ->pluck("asin_model");
     }
 
+    public static function getAsinModel($id)
+    {
+        return self::select('id','tab')
+            ->where('asin_model','LIKE', '%'. $id .'%')
+            ->get();
+    }
+
     public static function getFormModelTab($value)
     {
         return self::where(["id" => $value])
