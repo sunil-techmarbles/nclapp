@@ -945,3 +945,297 @@ function getHDDString($devices)
     }
     return $hddString;
 }
+
+function getBiosData($data)
+{
+    $apiDataArray = [];
+    if (isset($data['node']['node']))
+    {
+        $data = $data['node']['node'];
+        foreach ($data as $key => $value)
+        {
+            $apiDataArray[$value['@attributes']['class']][] = $value;
+        }
+    }
+    elseif (isset($data['node'][0]['node']))
+    {
+        $data = $data['node'][0]['node'];
+        foreach ($data as $key => $value)
+        {
+            $apiDataArray[$value['@attributes']['class']][] = $value;
+        }
+    }
+    else
+    {
+        $data = $data['node'];
+        foreach ($data as $key => $value)
+        {
+            $apiDataArray[$value['@attributes']['class']][] = $value;
+        }
+    }
+    return $apiDataArray;
+}
+
+function BToGB($speed)
+{
+    $convrt_GB = $speed * 0.000000001;
+    $speed = round($convrt_GB, 0);
+    return $speed;
+}
+
+function HzToMHz($speed)
+{
+    //check if in MHz
+    $convrt_GHz = $speed * 0.000001;
+    $speed = round($convrt_GHz, 0) . "MHz";
+    return $speed;
+}
+
+function getBiosRAMSpeed($ramType, $ramSpeed)
+{
+    if (isset($ramType) && !empty($ramType) && isset($ramSpeed) && !empty($ramSpeed))
+    {
+        $ramSpeed = preg_replace("/[^0-9]/", "", $ramSpeed);
+        $ramSpeed = trim($ramSpeed);
+        if ($ramType == 'DDR')
+        {
+            if ($ramSpeed >= 200 && $ramSpeed <= 250)
+            {
+                return '1600';
+            }
+            elseif ($ramSpeed >= 266 && $ramSpeed <= 290)
+            {
+                return '2100';
+            }
+            elseif ($ramSpeed >= 300 && $ramSpeed <= 325)
+            {
+                return '2400';
+            }
+            elseif ($ramSpeed >= 333 && $ramSpeed <= 350)
+            {
+                return '2700';
+            }
+            elseif ($ramSpeed >= 400 && $ramSpeed <= 450)
+            {
+                return '3200';
+            }
+            elseif ($ramSpeed == 667)
+            {
+                return '5300';
+            }
+            elseif ($ramSpeed == 533)
+            {
+                return '4200';
+            }
+        }
+        elseif ($ramType == 'DDR2')
+        {
+            if ($ramSpeed >= 400 && $ramSpeed <= 500)
+            {
+                return '3200';
+            }
+            elseif ($ramSpeed >= 533 && $ramSpeed <= 600)
+            {
+                return '4200';
+            }
+            elseif ($ramSpeed >= 667 && $ramSpeed <= 700)
+            {
+                return '5300';
+            }
+            elseif ($ramSpeed >= 800 && $ramSpeed <= 900)
+            {
+                return '6400';
+            }
+            elseif ($ramSpeed >= 1066 && $ramSpeed <= 1100)
+            {
+                return '8500';
+            }
+        }
+        elseif ($ramType == 'DDR3')
+        {
+            if ($ramSpeed >= 800 && $ramSpeed <= 900)
+            {
+                return '6400';
+            }
+            elseif ($ramSpeed >= 1066 && $ramSpeed <= 1300)
+            {
+                return '8500';
+            }
+            elseif ($ramSpeed >= 1333 && $ramSpeed <= 1500)
+            {
+                return '10600';
+            }
+            elseif ($ramSpeed >= 1600 && $ramSpeed <= 1800)
+            {
+                return '12800';
+            }
+            elseif ($ramSpeed >= 1866 && $ramSpeed <= 2000)
+            {
+                return '14900';
+            }
+            elseif ($ramSpeed >= 2133 && $ramSpeed <= 2200)
+            {
+                return '17000';
+            }
+            elseif ($ramSpeed == 1067)
+            {
+                return '8500';
+            }
+            elseif ($ramSpeed == 1333)
+            {
+                return '10600';
+            }
+        }
+        elseif ($ramType == 'DDR4')
+        {
+            if ($ramSpeed >= 2133 && $ramSpeed <= 2300)
+            {
+                return '17000';
+            }
+            elseif ($ramSpeed >= 2400 && $ramSpeed <= 2500)
+            {
+                return '19200';
+            }
+            elseif ($ramSpeed >= 2666 && $ramSpeed <= 2700)
+            {
+                return '20800';
+            }
+            elseif ($ramSpeed >= 2800 && $ramSpeed <= 2900)
+            {
+                return '22400';
+            }
+            elseif ($ramSpeed >= 3000 && $ramSpeed <= 3100)
+            {
+                return '24000';
+            }
+            elseif ($ramSpeed >= 3200 && $ramSpeed <= 3300)
+            {
+                return '25600';
+            }
+        }
+        elseif ($ramType == 'LPDDR3')
+        {
+            if ($ramSpeed >= 800 && $ramSpeed <= 900)
+            {
+                return 'PC3-6400';
+            }
+            elseif ($ramSpeed >= 1066 && $ramSpeed <= 1300)
+            {
+                return 'PC3-8500';
+            }
+            elseif ($ramSpeed >= 1333 && $ramSpeed <= 1500)
+            {
+                return 'PC3-10600';
+            }
+            elseif ($ramSpeed >= 1600 && $ramSpeed <= 1800)
+            {
+                return 'PC3-12800';
+            }
+            elseif ($ramSpeed >= 1867 && $ramSpeed <= 2000)
+            {
+                return 'PC3-14900';
+            }
+            elseif ($ramSpeed >= 2133 && $ramSpeed <= 2200)
+            {
+                return 'PC3-17000';
+            }
+            elseif ($ramSpeed == 1067)
+            {
+                return 'PC3-8500';
+            }
+            elseif ($ramSpeed == 1333)
+            {
+                return 'PC3-10600';
+            }
+        }
+    }
+    return '';
+}
+
+function getCore($data)
+{
+    foreach ($data as $key => $value)
+    {
+        if ($value['@attributes']['id'] == 'cores')
+        {
+            $cores = $value['@attributes']['value'];
+            break;
+        }
+    }
+    return $cores;
+}
+
+function getOpticle($data)
+{
+    foreach ($data as $value)
+    {
+        if (($value['@attributes']['id'] == 'scsi:1' && $value['@attributes']['class'] == 'storage') || ($value['@attributes']['id'] == 'scsi' && $value['@attributes']['class'] == 'storage'))
+        {
+            if ($value['node']['@attributes']['id'] == "cdrom" && $value['node']['@attributes']['class'] == "disk")
+            {
+                $opticle = $value['node']['product'];
+                break;
+            }
+        }
+    }
+    return $opticle;
+}
+
+function getMakorRAMString($ram)
+{
+    $ramString = "";
+    foreach ($ram as $key => $value)
+    {
+        $stickCapacity = (int) $value;
+        $stickCapacityGB = $stickCapacity . "GB";
+        $ramSizes[$stickCapacityGB][] = $key;
+        $ramString += (int) $value;
+    }
+    $ramString .= "GB:";
+    $count = 1;
+    $totalRamSizes = count($ramSizes);
+    foreach ($ramSizes as $key => $ramSize)
+    {
+        if ($count == 1)
+        {
+            $ramString .= "_";
+        }
+        $ramString .= $key . "_x_" . count($ramSize);
+        if ($count < $totalRamSizes)
+        {
+            $ramString .= ";";
+        }
+        $count++;
+    }
+    return $ramString;
+}
+
+function getBiosLaptopData($data)
+{
+    $apiDataArray = [];
+    if (isset($data['node']['node']))
+    {
+        $data = $data['node']['node'];
+        foreach ($data as $key => $value)
+        {
+            $apiDataArray[$value['@attributes']['class']][] = $value;
+        }
+        return $apiDataArray;
+    }
+    else
+    {
+        $data = $data['node'];
+        foreach ($data as $key => $value)
+        {
+            $apiDataArray1[$value['@attributes']['class']][] = $value;
+        }
+    }
+    foreach ($apiDataArray1['bus'] as $key => $value)
+    {
+        foreach ($value['node'] as $key => $value)
+        {
+            $apiDataArray[$value['@attributes']['class']][] = $value;
+        }
+    }
+    return $apiDataArray;
+}

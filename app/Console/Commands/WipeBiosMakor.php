@@ -5,6 +5,7 @@ use Illuminate\Console\Command;
 use App\MessageLog;
 use File;
 use App\Traits\CommonWipeBiosMakorApiTraits;
+use Config;
 
 class WipeBiosMakor extends Command
 {
@@ -72,8 +73,8 @@ class WipeBiosMakor extends Command
                     //check if XML is valid
                     if (false === $wipeBiosFileContent)
                     {
-                        $error = 'Invalid XML file > ' . $wipeBiosDataFile;
-                        MessageLog::addLogMessageRecord($error, $type="WipeBiosMakor", $status="failure");
+                        // $error = 'Invalid XML file > ' . $wipeBiosDataFile;
+                        // MessageLog::addLogMessageRecord($error, $type="WipeBiosMakor", $status="failure");
                         continue; //skip file on error
                     }
 
@@ -94,8 +95,8 @@ class WipeBiosMakor extends Command
                     }
                     else
                     {
-                        $error = "WIPE DATA FILE > " . $wipeBiosDataFile . " > ProductName is empty so skipping this file.";
-                        MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
+                        // $error = "WIPE DATA FILE > " . $wipeBiosDataFile . " > ProductName is empty so skipping this file.";
+                        // MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
                         continue;
                     }
 
@@ -113,7 +114,7 @@ class WipeBiosMakor extends Command
                     }
 
                     $allDataArray = $wipeBiosFileContent['node'];
-
+                
                     switch ($productName) {
                         case 'Computer':
                             $apiDataObject = $this->init($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber);
@@ -128,7 +129,14 @@ class WipeBiosMakor extends Command
                             break;
                     }
 
-                    pr($apiDataObject );
+                    if (!isset($apiDataObject['xml_data']) && !empty($apiDataObject['xml_data']))
+                    {
+                        $error = 'Invalid XML file for Wipe Bios Makor Api , enable to convert > ' . $wipeBiosDataFile;
+                        MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
+                        continue;
+                    }
+
+                    pr($apiDataObject ); 
                     die;
 
                 }
@@ -145,5 +153,31 @@ class WipeBiosMakor extends Command
             $error = $this->wipeBiosDataDir . " doesn't contain any files.";
             MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
         }
+    }
+
+     /**
+     *  Function for API request to Makor of Wipe bios data.
+     *
+     * @return mixed
+     */
+    public function BiosWipeMakorAPIRequest($WipeMakorApiRequestDataXml, $assetId)
+    {
+        $MakorRequestjson = array();
+        $MakorRequestjson['asset_id'] = $assetId;
+        $MakorRequestjson['asset_report']['report'] = base64_encode($WipeMakorApiRequestDataXml['xml_data']);
+        $MakorRequestApiData = json_encode($MakorRequestjson);
+
+        //setting the curl parameters.
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, true);
+        curl_setopt($ch, CURLOPT_URL, Config::get('makor.makorApiCredential.apiUrl'));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $MakorRequestApiData);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_USERPWD, Config::get('makor.makorApiCredential.apiUsername').":".Config::get('makor.makorApiCredential.apiPassword'));
+        $response = curl_exec( $ch );
+        $responseCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+        curl_close( $ch );
+        return $responseCode;
     }
 }

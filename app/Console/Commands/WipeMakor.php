@@ -187,6 +187,13 @@ class WipeMakor extends Command
                             break;
                         }
 
+                        if (!isset($ApidataObject['xml_data']) && !empty($ApidataObject['xml_data']))
+                        {
+                            $error = 'Invalid XML file for Wipe Makor Api , enable to convert > ' . $wipeDataFile;
+                            MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
+                            continue;
+                        }
+
                         $WipeMakorResponse = $this->WipeMakorAPIRequest($ApidataObject, $assetTag);
                         
                         if ($WipeMakorResponse == 200)
@@ -200,7 +207,7 @@ class WipeMakor extends Command
                             $wipeResponseFile = $this->wipeResponseFileDIr .'/' . $assetTag . '.xml';
                             $this->CreateWipeReportXmlResponseFIle($wipeResponseFile, $ApidataObject);
 
-                            $success = 'Wipe Makor API Successfull for  ' . $wipeDataFile;
+                            $success = 'Wipe Makor API Successfull for wipe data  ' . $wipeDataFile;
                             MessageLog::addLogMessageRecord($success,$type="WipeMakor", $status="success");
                         }
                         elseif ($WipeMakorResponse == 400)
