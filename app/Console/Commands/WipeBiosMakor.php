@@ -4,10 +4,11 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\MessageLog;
 use File;
-
+use App\Traits\CommonWipeBiosMakorApiTraits;
 
 class WipeBiosMakor extends Command
 {
+    use CommonWipeBiosMakorApiTraits;
     public $basePath, $wipeBiosDataDir, $wipeBiosAdditionalDataDir;
 
     /**
@@ -86,13 +87,49 @@ class WipeBiosMakor extends Command
                         continue;
                     }
                         
-                  
                     $BiosAdditionalFileContent = getXMLContent($BiosAdditionalDataFile);
-                      pr( $BiosAdditionalFileContent );die;
 
+                    if (isset($BiosAdditionalFileContent['Product_Name']) && !empty($BiosAdditionalFileContent['Product_Name'])) {
+                        $productName = $BiosAdditionalFileContent['Product_Name'];
+                    }
+                    else
+                    {
+                        $error = "WIPE DATA FILE > " . $wipeBiosDataFile . " > ProductName is empty so skipping this file.";
+                        MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
+                        continue;
+                    }
 
+                    if (strtolower($productName) == strtolower('Apple - Laptop'))
+                    {
+                        $productName = 'Laptop';
+                    }
+                    elseif (strtolower($productName) == strtolower('Apple - Tower'))
+                    {
+                        $productName = 'Computer';
+                    }
+                    elseif (strtolower($productName) == strtolower('Apple - All In One'))
+                    {
+                        $productName = 'All_In_One';
+                    }
 
+                    $allDataArray = $wipeBiosFileContent['node'];
 
+                    switch ($productName) {
+                        case 'Computer':
+                            $apiDataObject = $this->init($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber);
+                            break;
+                        case 'Laptop':
+                            $apiDataObject = $this->init($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber);
+                            break;
+                        default:
+                            $error = 'No Class Found for file ' . $wipe_data_file . ". Valid Classes are Computer, Server, Laptop & All_In_One";
+                            MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
+                            continue;
+                            break;
+                    }
+
+                    pr($apiDataObject );
+                    die;
 
                 }
                 catch (\Execption $e)
