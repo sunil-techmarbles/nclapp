@@ -138,12 +138,17 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/updateCategoryRecord', 'RecycleController@updateCategoryRecord')->name('update.category.record');
 		Route::any('/recyclesecond', 'RecycleController@recycleTwoIndex')->name('recycle.second');
 		Route::prefix('recyclesecond')->group(function () {
+			Route::get('/deleterecycletwocategory/{recycleId}', 'RecycleController@deleteRecycleTwoCategory');
 			Route::any('/search', 'RecycleController@recycleTwoSearch')->name('search');
 			Route::any('/getrecordeedit', 'RecycleController@recycleTwoInventoryEdit');
+			Route::any('/getfaildsearchemails', 'RecycleController@getFaildSearchEmails');
+			Route::any('/getcatrecordeedit', 'RecycleController@recycleTwoCategoryEdit');
 			Route::any('/addinventory', 'RecycleController@recycleTwoInventory');
 			Route::any('/failedsearch', 'RecycleController@recycleTwoFailedSearch')->name('failedsearch');
-			Route::any('/category', 'RecycleController@recycleTwoIndex')->name('category');
-			Route::any('/email', 'RecycleController@recycleTwoIndex')->name('email');
+			Route::post('/addrecyclecategory', 'RecycleController@addRecycleCategory');
+			Route::any('/category', 'RecycleController@recycleTwoCategory')->name('category');
+			Route::any('/email', 'RecycleController@recycleTwoFailedSearchEmails')->name('email');
 		});
+		Route::any('/tracker', 'TrackerController@index')->name('tracker');
 	});
 });

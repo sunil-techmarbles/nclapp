@@ -34,6 +34,12 @@ class ItamgRecycleInventory extends Model
         return ($itamgRecycleInventory->save()) ? true : false;
     }
 
+    public static function updateRecord($fields, $query)
+    {
+        return self::where($query)
+            ->update($fields);
+    }
+
     public static function getAllRecord($value='')
     {
     	return self::get();

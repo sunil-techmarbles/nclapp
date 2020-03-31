@@ -1239,3 +1239,13 @@ function getBiosLaptopData($data)
     }
     return $apiDataArray;
 }
+
+function recycleTwocategoryName($id)
+{
+    $value = 'N/A';
+    if($id)
+    {
+        $value = App\Category::getCategoryName(intval($id));
+    }
+    return $value;
+}

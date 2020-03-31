@@ -26,7 +26,7 @@
 					<td>{{$itamgRecycleInventor->Brand}}</td>
 					<td>{{$itamgRecycleInventor->Model}}</td>
 					<td>{{$itamgRecycleInventor->PartNo}}</td>
-					<td>{{$itamgRecycleInventor->Category}}</td>
+					<td>{{recycleTwocategoryName($itamgRecycleInventor->Category)}}</td>
 					<td>{{$itamgRecycleInventor->Notes}}</td>
 					<td>{{$itamgRecycleInventor->Value}}</td>
 					<td>{{$itamgRecycleInventor->Status}}</td>

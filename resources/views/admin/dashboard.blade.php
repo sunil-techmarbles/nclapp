@@ -43,8 +43,8 @@
             <a href="{{route('inventory')}}">Inventory</a>
         </div>
         <div class="menu-item">
-            <a href=""><span class="fa fa-hourglass"></span></a>
-            <a href="">Time Tracker</a>
+            <a href="{{route('tracker')}}"><span class="fa fa-hourglass"></span></a>
+            <a href="{{route('tracker')}}">Time Tracker</a>
         </div>
         <div class="menu-item">
             <a href="{{route('import.record')}}"><span class="fa fa-download"></span></a>
