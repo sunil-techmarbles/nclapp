@@ -96,6 +96,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		// Wipe Report Section 
 		Route::get('/wipereport','CommonController@index')->name('wipereport');
 		Route::post('/getwipereportfiles','CommonController@getWipeReportFiles')->name('getwipereportfiles');
+		Route::any('/wipereportfilescount','CommonController@getWipeReportFilesCount')->name('getwipereportfilescount');
 		// Audit Section
 		Route::get('/audit','AuditController@index')->name('audit');
 		Route::get('/addpartnumber','AuditController@AddPartNumber')->name('audit.add.part.number');

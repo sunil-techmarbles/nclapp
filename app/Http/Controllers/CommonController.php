@@ -86,4 +86,14 @@ class CommonController extends Controller
 		$zip->close();
 		return response()->download($zip_file)->deleteFileAfterSend(true);
 	}
+
+	/**
+     * For PDF files count.
+     *
+     * @return mixed
+     */
+	public function getWipeReportFilesCount(Request $request)
+	{
+		return view( 'admin.wipereport.wipereportcount');
+	}
 }

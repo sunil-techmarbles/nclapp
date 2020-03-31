@@ -61,6 +61,11 @@
 						<a class="nav-link" href="{{route('shipments')}}">Outbound</a>
 					</li>
 				@endif
+				@if ( request()->segment(count(request()->segments())) == 'wipereportfilescount' )
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('wipereport')}}">Wipe Report</a>
+					</li>
+				@endif
 			@endif
 		</ul>
 		<a class="nav-link" href="{{route('logout')}}">Logout</a>
