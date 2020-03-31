@@ -9,7 +9,7 @@
  <product>HP Compaq Pro 4300 AiO PC (D3K20UT#ABA)</product>
  <vendor>Hewlett-Packard</vendor>
  <version>1.00</version>
- <serial>MXL3422141</serial>
+ <serial>MXL3422141</serial> 
  <width units="bits">32</width>
  <configuration>
   <setting id="boot" value="normal" />
