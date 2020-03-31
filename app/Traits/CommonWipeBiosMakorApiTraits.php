@@ -227,6 +227,7 @@ trait CommonWipeBiosMakorApiTraits
 
     public function SaveBiosDataArrayLaptop()
     {
+        $this->saveDataArray['Model'] = $this->apiData['model'];
     	$this->saveDataArray['Serial'] = $this->apiData['serial'];
         $this->saveDataArray['Combined_RAM'] = $this->apiData['CombinedRAM'];
         $this->saveDataArray['Combined_HD'] = $this->apiData['CombinedHD'];
@@ -1682,7 +1683,4 @@ trait CommonWipeBiosMakorApiTraits
             $component2->addAttribute('type', 'string');
         }
     }
-
-
-
 }
