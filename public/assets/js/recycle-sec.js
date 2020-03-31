@@ -1,6 +1,11 @@
 $(window).on('load', function (){
+    
     setTimeout(function(){
         var ele = '<a class="btn btn-default border mr-1 border-primary add_new_entry" href="javascript:void(0)">Add</a><a class="btn btn-default border mr-1 border-primary upload_data_from_files" href="javascript:void(0)">Upload CSV or XLS</a><a href="javascript:void(0)" class="btn btn-default border border-primary dt-button delete_button"><span>Delete Selected</span></a>';
+        if($("input[name='recycletwopage']").val() == 'category')
+        {
+            var ele = '<a class="btn btn-default border mr-1 border-primary add_new_entry" href="javascript:void(0)">Add</a><a href="javascript:void(0)" class="btn btn-default border border-primary dt-button delete_button"><span>Delete Selected</span></a>';
+        }
         $('.dt-buttons').append(ele);
         $('#itamg_inventory_value_processing').after('<br><br>');
         $('.first_heading').removeClass('sorting_asc');
@@ -8,6 +13,7 @@ $(window).on('load', function (){
 });
 
 $(document).ready(function(){
+    var categoryDelete = ($("input[name='recycletwopage']").val() == 'category') ? 'true' : 'false';
     $(document).on("click",".select_all_to_delete", function(e){
         if(this.checked){
             $('.select_to_delete').each(function () {
@@ -19,7 +25,7 @@ $(document).ready(function(){
                 $(this).prop('checked', false);
             });  
         }
-    });  
+    });
 
     $(document).on("click",".delete_button", function(e){
         e.preventDefault();
@@ -44,20 +50,21 @@ $(document).ready(function(){
             .then((result) => { 
                 
                 if (result.value) 
-                {  
+                {
+                    showLoader();
                     $.ajax({
                         url:"/"+prefix+"/multrecycleinvtdelete",
                         type: 'POST',
-                        data: {ids:sList},
+                        data: {ids:sList, type: categoryDelete},
                         dataType: 'json'
                     })
                     .done(function(response)
                     {
+                        hideLoader();
                         var status = (response.status) ? 'success' : 'error';
                         showSweetAlertMessage(type = status, message = response.message , icon= status);
-                    })
-                    .fail(function()
-                    {
+                    }).fail(function(){
+                        hideLoader();
                         showSweetAlertMessage(type = 'error', message = 'Something went wrong with ajax !' , icon= 'error');
                     });
                     setTimeout(function(){location.reload();}, 2000);
@@ -83,20 +90,99 @@ $(document).ready(function(){
     });
 
     $(document).on('click', '.add_new_entry', function(e){
-        $('#add_entry').modal({
-            backdrop: 'static',
-            keyboard: false
-        });
-    })  
+        if($("input[name='recycletwopage']").val() != 'category')
+        {
+            $('#add_entry_form input[type="text"]').val('');
+            $('#add_entry_form input[name="operation"]').val('add_entry');
+            $('#action').val("Save");
+            $('#add_entry').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        else
+        {
+            $('#cat_entry input[type="text"]').val('');
+            $('#cat_entry input[name="operation"]').val('add_cat_entry');
+            $('#cataction').val("Save");
+            $('#cat_entry').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        } 
+    })
+
+    $(document).on('click', '.cat_entry', function(e){
+      
+    })
+
     var ClassName = 'btn btn-default border border-primary';
     $('#itamg_inventory_value').DataTable({
         dom: 'Bfrtip',
         buttons: [
-        { extend: 'excel', className: ClassName },
-        { extend: 'csv', className: ClassName },
-        { extend: 'pdf', className: ClassName },
-        { extend: 'copy', className: ClassName },
+            { extend: 'excel', className: ClassName },
+            { extend: 'csv', className: ClassName },
+            { extend: 'pdf', className: ClassName },
+            { extend: 'copy', className: ClassName },
         ]
+    });
+
+    $(document).on("click",".edit_faildsearch_address", function(e){
+        showLoader();
+        e.preventDefault();
+        var table_type = $(this).attr('data-table_type');
+        $('#user_id').val(table_type);
+        $.get("/"+recyclePrefix+"/getfaildsearchemails?type="+table_type, function(result){
+            hideLoader();
+            if(result.status)
+            {
+                $('#faildsearchemail').val(result.data.email);
+                $('#faildsearchemailsid').val(result.data.type);
+                $('#faildsearchemailsoperation').val("update_entry");
+                $('#faildsearchemailsaction').val("Update");
+                $('#faildsearchemailsidentry').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            }
+            else
+            {
+                showSweetAlertMessage(type = 'error', message = 'something went wrong', icon = 'error');
+            }
+        }).fail(function (jqXHR, textStatus, error){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+        });
+    })
+
+    $("#faildsearchemailsidentry_form").validate({
+        submitHandler: function(form) {
+            $.ajax({
+                url: "/"+recyclePrefix+"/getfaildsearchemails",
+                type: "POST",
+                data: $("#faildsearchemailsidentry_form").serialize(),
+                 beforeSend: function (){
+                showLoader();
+                },
+                success: function(result){
+                    hideLoader();
+                    console.log(result)
+                    var status = (result.status) ? 'success' : 'error';
+                    showSweetAlertMessage(type = status, message = result.message , icon = status);
+                    if(result.status)
+                    {
+                        location.reload();
+                    }
+                },
+                error: function(result){
+                    hideLoader();
+                    showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+                }
+            }).fail(function (jqXHR, textStatus, error){
+                hideLoader();
+                showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+            });
+        }
     });
 
     $(document).on("click",".edit_entry_link", function(e){
@@ -118,7 +204,8 @@ $(document).ready(function(){
                 $('#value').val(response.data.Value);
                 $('#status').val(response.data.Status);
                 $('#require_pn').val(response.data.require_pn);
-                $('#operation').val("Edit");
+                $('#operation').val("update_entry");
+                $('#action').val("Update");
                 $('#add_entry').modal({
                     backdrop: 'static',
                     keyboard: false
@@ -133,37 +220,6 @@ $(document).ready(function(){
             showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
         });
     })
-
-    $("#edit_entry_form").validate({
-        submitHandler: function(form) {
-            $.ajax({
-                url: "./ajax/form_edit.php",
-                type: "POST",
-                data: $("#edit_entry_form").serialize(),
-                success: function(response) {
-                    if(response){
-                        $('#edit_entry').modal('hide');
-                        swal({
-                            title: "Updated!",
-                            text: "Record update successfully.",
-                            type: "success",
-                            timer: 2000
-                        });
-
-                        loadtabledata();
-
-                    }else{
-                        swal({
-                            title: "Error!",
-                            text: "There is some error , try again",
-                            type: "failed",
-                            timer: 2000
-                        });
-                    }
-                }            
-            });
-        }
-    });
 });
 
 function commenAjaxOnSearchResponse(argument){
@@ -366,7 +422,10 @@ $(document).on('submit', '#add_entry_form', function(event){
                 hideLoader();
                 var status = (result.status) ? 'success' : 'error';
                 showSweetAlertMessage(type  = status, message = result.message , icon = status);
-                location.reload();
+                if(result.status)
+                {
+                    location.reload();
+                }
             },
             error: function(result){
                 hideLoader();
@@ -377,4 +436,62 @@ $(document).on('submit', '#add_entry_form', function(event){
             showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
         });
     }
+});
+$("#cat_entry_form").validate({
+    submitHandler: function(form) {
+        $.ajax({
+            url: "/"+recyclePrefix+"/addrecyclecategory",
+            type: "POST",
+            data: $("#cat_entry_form").serialize(),
+            beforeSend: function (){
+                showLoader();
+            },
+            success: function(result)
+            {
+                hideLoader();
+                var status = (result.status) ? 'success' : 'error';
+                showSweetAlertMessage(type  = status, message = result.message , icon = status);
+                if(result.status)
+                {
+                    location.reload();
+                }
+            },
+            error: function(result){
+                hideLoader();
+                showSweetAlertMessage(type = 'error', message = 'something went wrong' , icon= 'error');
+            }
+        }).fail(function (jqXHR, textStatus, error){
+            hideLoader();
+            showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+        });
+    }
+});
+
+$(document).on('click', '.edit_cat_link', function(e){
+    showLoader();
+    e.preventDefault();
+    var id = $(this).attr('data-table_id');
+    $.get("/"+recyclePrefix+"/getcatrecordeedit?categoryid="+id, function(response){
+        hideLoader();
+        console.log(response);
+        if(response.status)
+        {
+            $('#catId').val(id);
+            $('#categoryname').val(response.data.category_name);
+            $('#categoryvalue').val(response.data.value);
+            $('#catoperation').val("update_cat_entry");
+            $('#cataction').val("Update");
+            $('#cat_entry').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+        else
+        {
+            showSweetAlertMessage(type = 'error', message = 'something went wrong', icon = 'error');   
+        }
+    }).fail(function (jqXHR, textStatus, error){
+        hideLoader();
+        showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+    });
 });

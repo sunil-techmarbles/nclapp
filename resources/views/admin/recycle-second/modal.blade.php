@@ -1,6 +1,7 @@
 <div id="add_entry" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="add_entry_form" enctype="multipart/form-data">
+			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
 					<div id="modal-title" style="text-align: center;font-size: 20px;">
@@ -63,6 +64,7 @@
 <div id="searchModal" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="search_form" enctype="multipart/form-data">
+			@csrf
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -86,6 +88,7 @@
 <div id="add_search_entry" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="add_search_entry_form" enctype="multipart/form-data">
+			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
 					<div style="text-align: center;font-size: 20px;">
@@ -115,6 +118,46 @@
 				<div class="modal-footer">
 					<input type="hidden" name="failed_search" id="fail_search" value="true">
 					<input type="submit" name="failed_action" class="btn btn-success" value="Save">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div id="cat_entry" class="modal fade">
+	<div class="modal-dialog">
+		<form method="post" id="cat_entry_form" enctype="multipart/form-data">
+			@csrf
+			<div class="modal-content">
+				<div class="modal-body">
+					<label>Category Name</label>
+					<input type="text" name="categoryname" required id="categoryname" class="form-control">
+					<label>Value</label>
+					<input type="text" name="categoryvalue" required id="categoryvalue" class="form-control">
+				</div>
+				<div class="modal-footer">
+					<input type="hidden" name="catId" id="catId">
+					<input type="hidden" name="operation" id="catoperation" value="add_cat_entry">
+					<input type="submit" name="action" id="cataction" class="btn btn-success" value="Save">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<div id="faildsearchemailsidentry" class="modal fade">
+	<div class="modal-dialog">
+		<form method="post" id="faildsearchemailsidentry_form" enctype="multipart/form-data">
+			@csrf
+			<div class="modal-content">
+				<div class="modal-body">
+					<label>Email Ids</label>
+					<input type="text" name="email" id="faildsearchemail"  class="form-control">
+				</div>
+				<div class="modal-footer">
+					<input type="hidden" name="faildsearchemailsid" id="faildsearchemailsid">
+					<input type="hidden" name="faildsearchemailsoperation" id="faildsearchemailsoperation">
+					<input type="submit" name="action" id="faildsearchemailsaction" class="btn btn-success" value="Save">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
 			</div>

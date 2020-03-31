@@ -853,5 +853,9 @@ return [
         // "richy@itamg.com",
         // "kamal@itamg.com",
         // "matthew@itamg.com",
+    ],
+    'recycleTwoReportMailType' => [
+        'Daily',
+        'Weekly'
     ]
 ];

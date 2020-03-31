@@ -906,14 +906,16 @@ function del_confirm(id,url,text)
 	.then((result) => { 
 		
 		if (result.value) 
-		{  
+		{
+			showLoader();
 			$.ajax({
 				url: url+'/'+id,
 				type: 'GET',
 				dataType: 'json'
 			})
 			.done(function(response)
-			{ 
+			{
+				hideLoader();
 				console.log(response)
 				swalWithBootstrapButtons.fire( 
 					'Deleted!',
@@ -923,12 +925,12 @@ function del_confirm(id,url,text)
 			})
 			.fail(function()
 			{
+				hideLoader();
 				Swal.fire({
 					icon: 'error',
 					title: 'Oops...',
 					text: 'Something went wrong with ajax !',
 				})
-
 			});
 			setTimeout(function(){location.reload();}, 2000);
 		}
@@ -940,6 +942,5 @@ function del_confirm(id,url,text)
 				'error'
 				)
 		} 
-		
 	})
 }

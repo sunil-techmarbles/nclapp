@@ -14,6 +14,7 @@ use Config;
 use File;
 use PDF;
 use App\Recycle;
+use App\ReportEmail;
 use App\Category;
 use App\FailedSearch;
 use App\RecycleRecord;
@@ -51,6 +52,115 @@ class RecycleController extends Controller
         $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
   		return view('admin.recycle-second.list', compact('itamgRecycleInventors', 'result'));
   	}
+
+    public function recycleTwoCategory(Request $request)
+    {
+        $categories = Category::getAllRecord();
+        return view('admin.recycle-second.category-list', compact('categories'));
+    }
+
+    public function recycleTwoFailedSearchEmails(Request $request)
+    {
+        $emails = [];
+        $reportEmails = ReportEmail::getAllRecord();
+        $a = [];
+        if($reportEmails)
+        {
+            $type = config('constants.recycleTwoReportMailType');
+            foreach ($reportEmails as $key => $reportEmail)
+            {
+                if(in_array($reportEmail->type, $type))
+                {
+                    $a[$reportEmail->type][$reportEmail->id] = $reportEmail->email;
+                }
+            }
+        }
+        foreach ($a as $key => $b)
+        {
+            $emails[] = (object) array('email' => implode(',', $a[$key]), 'type' => $key);
+        }
+        return view('admin.recycle-second.failed-search-email-list', compact('emails'));
+    }
+
+    public function getFaildSearchEmails(Request $request)
+    {
+        if($request->ajax())
+        {
+            $output = [];
+            if(isset($request->faildsearchemailsoperation))
+            {
+                if(isset($request->email))
+                {
+                    $emails = explode(',', $request->email);
+                    $emails = array_filter($emails);
+                    $type = $request->faildsearchemailsid;
+                    $result = ReportEmail::deleteRecordByType($emails, $type);
+                    foreach ($emails as $key => $email)
+                    {
+                        ReportEmail::addRecord($email, $type);
+                    }
+                    return response()->json(['status' => true, 'message' => 'Record updated successfully.']);
+                }
+                else
+                {
+                    return response()->json(['status' => false, 'message' => 'Something went wrong']);
+                }
+            }
+
+            if(isset($request->type))
+            {
+                $results = ReportEmail::getRecordForEdit($request->type);
+                if($results)
+                {
+                    $results = $results->toArray();
+                    $output["email"] = implode(',', $results);
+                    $output["type"] = $request->type;
+                    return response()->json(['status' => true, 'data' => $output]);
+                }
+                else
+                {
+                    return response()->json(['status' => false, 'data' => $output]);
+                }
+            }
+        }
+    }
+
+    public function addRecycleCategory(Request $request)
+    {
+        if($request->ajax())
+        {
+            if ($request->isMethod('post'))
+            {
+                if($request->operation == 'update_cat_entry')
+                {
+                    $results = Category::updateRecord($request);
+                    if($results)
+                    {
+                        return response()->json(['message' => 'Record updated successfully.', 'status' => true]);
+                    }
+                    return response()->json(['message' => 'something went wrong.', 'status' => false]);
+
+                }
+                else
+                {
+                    $checkCategoryValueExist = Category::getCategoryName(intval($request->categoryvalue));
+                    if($checkCategoryValueExist)
+                    {
+                        return response()->json(['message' => 'Category value must be unique', 'status' => false]);
+                    }
+                    else
+                    {
+                        $results = Category::addRecord($request);
+                        if($results)
+                        {
+                            return response()->json(['message' => 'Record added successfully.', 'status' => true]);
+                        }
+                        return response()->json(['message' => 'something went wrong.', 'status' => false]);
+                    }
+                }
+            }
+        }
+    }
 
     /**
     * Method recycleTwoFailedSearch use for Recycle 2 failed search results
@@ -131,6 +241,23 @@ class RecycleController extends Controller
         }
     }
 
+    public function deleteRecycleTwoCategory(Request $request, $recordId)
+    {
+        if($request->ajax())
+        {
+            $result = Category::deleteRecycleTwoCategory(intval($recordId));
+            if($result)
+            {
+                return response()->json(['message' => 'Record deleted successfully.', 'status' => true]);
+            }
+            return response()->json(['message' => 'something went wrong.', 'status' => false]);
+        }
+        else
+        {
+            return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+        }
+    }
+
     /**
     * Ajax Request to multiple delete the recycle two inventory record
     */
@@ -143,7 +270,16 @@ class RecycleController extends Controller
             $errorMessage = [];
             foreach ($recordIds as $key => $recordId)
             {
-                $result = ItamgRecycleInventory::deleteRecycleTwo(intval($recordId));
+                switch ($request->type)
+                {
+                    case 'false':
+                        $result = ItamgRecycleInventory::deleteRecycleTwo(intval($recordId));
+                        break;
+                    case 'true':
+                        $result = Category::deleteRecycleTwoCategory(intval($recordId));
+                        break;
+                }
+                
                 if($result)
                 {
                     array_push($successMessage, true);
@@ -189,24 +325,48 @@ class RecycleController extends Controller
         }
     }
 
+    public function recycleTwoCategoryEdit(Request $request)
+    {
+        if($request->ajax())
+        {
+            if ($request->isMethod('get'))
+            {
+                $itamgRecycleCategory = Category::getRecordById(intval($request->categoryid));
+                if($itamgRecycleCategory)
+                {
+                    $data = $itamgRecycleCategory->toArray();
+                    return response()->json(['status' => true, 'data' => $data]);
+                }
+                else
+                {
+                    return response()->json(['status' => false, 'data' => 'Something went wrong']);
+                }
+            }
+            else
+            {
+                return response()->json(['status' => false, 'message' => 'something went wrong with ajax request']);
+            }
+        }
+    }
+
     public function recycleTwoInventory(Request $request)
     {
         if($request->ajax())
         {
             if ($request->isMethod('post'))
             {
-                if(isset($request->operation))
+                $data = [
+                    'Model' => $request->model,
+                    'PartNo' => $request->part,
+                    'Brand' => $request->brand,
+                    'Category' => $request->category,
+                    'Notes' => $request->notes,
+                    'Value' => $request->value1,
+                    'Status' => $request->status,
+                    'require_pn'=> $request->require_pn
+                ];
+                if(isset($request->operation) && $request->operation == 'add_entry')
                 {
-                    $data = [
-                        'Model' => $request->model,
-                        'PartNo' => $request->part,
-                        'Brand' => $request->brand,
-                        'Category' => $request->category,
-                        'Notes' => $request->notes,
-                        'Value' => $request->value1,
-                        'Status' => $request->status,
-                        'require_pn'=> $request->require_pn
-                    ];
                     $result = ItamgRecycleInventory::addRecord($data);
                     if($result)
                     {
@@ -218,10 +378,22 @@ class RecycleController extends Controller
                         return response()->json(['status' => false, 'message' => 'Something went wrong']);
                     }
                 }
-                else
+                if(isset($request->operation) && $request->operation == 'update_entry')
                 {
-                    return response()->json(['status' => false, 'message' => 'something went wrong with ajax request']);
+                    $result = ItamgRecycleInventory::updateRecord($data, $query=['id' => intval($request->user_id)]);
+                    if($result)
+                    {
+                        return response()->json(['status' => true, 'message' => 'Record update successfully']);
+                    }
+                    else
+                    {
+                        return response()->json(['status' => false, 'message' => 'Something went wrong']);
+                    }
                 }
+            }
+            else
+            {
+                return response()->json(['status' => false, 'message' => 'something went wrong with request']);
             }
         }
     }
