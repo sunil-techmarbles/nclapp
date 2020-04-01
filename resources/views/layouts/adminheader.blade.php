@@ -76,6 +76,7 @@
 							<a class="nav-link" href="javascript: void(0)" onclick="$('#listModal').modal('show')">Actions</a>
 						</li>
 					@endif
+				@endif
 				@if ( request()->segment(count(request()->segments())) == 'wipereportfilescount' )
 					<li class="nav-item">
 						<a class="nav-link" href="{{route('wipereport')}}">Wipe Report</a>

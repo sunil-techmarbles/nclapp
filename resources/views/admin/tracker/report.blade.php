@@ -3,9 +3,7 @@
 @section('content')
 <div class="container reporttracker">
 	<input type="hidden" name="reporttracker" value="report_tracker"/>
-	<div id="page-head" class="noprint">
-		Time Tracker Report
-	</div>
+	<div id="page-head" class="noprint">Time Tracker Report</div>
 	<div class="row">
 		<div class="col-sm-12" style="text-align: right">
 			<form method="get" class="form-inline" id="statsform" action="{{route('tracker')}}">
