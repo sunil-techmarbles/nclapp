@@ -5,6 +5,9 @@
     <div id="page-head" class="noprint">
         Wipe Report
     </div>
+    <ul class="top_nav">
+      <li> <a href="{{route('getwipereportfilescount')}}" class="btn btn-info">Reporting</a></li>
+   </ul>
     <form method="post" id="search-wipe-form" autocomplete="off" action="{{route('exportwipereportfiles')}}">
         @csrf
         <div class="noprint text-center">

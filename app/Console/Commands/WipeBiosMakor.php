@@ -94,7 +94,8 @@ class WipeBiosMakor extends Command
                         
                     $BiosAdditionalFileContent = getXMLContent($BiosAdditionalDataFile);
 
-                    if (isset($BiosAdditionalFileContent['Product_Name']) && !empty($BiosAdditionalFileContent['Product_Name'])) {
+                    if (isset($BiosAdditionalFileContent['Product_Name']) && !empty($BiosAdditionalFileContent['Product_Name']))
+                    {
                         $productName = $BiosAdditionalFileContent['Product_Name'];
                     }
                     else
