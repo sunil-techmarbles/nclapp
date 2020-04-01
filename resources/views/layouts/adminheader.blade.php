@@ -61,8 +61,24 @@
 						<a class="nav-link" href="{{route('shipments')}}">Outbound</a>
 					</li>
 				@endif
+				@if ( request()->segment(count(request()->segments())) == 'tracker' )
+					<!-- @if(in_array($currentUser, config('constants.adminUsers'))) -->
+					<!-- @endif -->
+					@if ( request()->get('p') == 'report' )
+						<li class="nav-item">
+							<a class="nav-link" href="{{route('tracker')}}">Tracker</a>
+						</li>
+					@else
+						<li class="nav-item">
+							<a class="nav-link" href="{{route('tracker',['p' => 'report'])}}">Report</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="javascript: void(0)" onclick="$('#listModal').modal('show')">Actions</a>
+						</li>
+					@endif
+				@endif
 			@endif
 		</ul>
-		<a class="nav-link" href="{{route('logout')}}">Logout</a>
+		<strong>{{$currentUser}}</strong>|<a class="nav-link" href="{{route('logout')}}">Logout</a>
 	</div>
 </nav>
