@@ -857,5 +857,22 @@ return [
     'recycleTwoReportMailType' => [
         'Daily',
         'Weekly'
+    ],
+    'trackerAction' => [
+        'Boxing',
+        'Cleaning Accessories',
+        'Computer Cleaning',
+        'Configuration',
+        'Gathering Accessories',
+        'Making Airfill',
+        'Making Boxes',
+        'Making Keyboard Boxes',
+        'Organizing',
+        'RUI',
+        'Shrink Wrap',
+        'Skinning - Computer',
+        'Skinning - Laptop',
+        'Testing Accessories',
+        'Testing/Imaging',
     ]
 ];

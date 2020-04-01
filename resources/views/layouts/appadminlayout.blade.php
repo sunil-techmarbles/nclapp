@@ -71,8 +71,10 @@
 <script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>
 <script type="text/javascript" src = "{{URL('assets/js/main.js')}}" ></script>
+@if(request()->segment(count(request()->segments())) != 'tracker')
 <script type="text/javascript" src = "{{URL('assets/js/audit.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/custom.js')}}" ></script>
+@endif
 @if(request()->segment(count(request()->segments())) == 'refurb')
 <script type="text/javascript" src = "{{URL('assets/js/refurb.js')}}" ></script>
 @endif
@@ -92,5 +94,10 @@
 @endif
 @if(request()->segment(count(request()->segments())) == 'modeltemplate')
 <script type="text/javascript" src = "{{URL('assets/js/template.js')}}" ></script>
+@endif
+@if(request()->segment(count(request()->segments())) == 'tracker' ||
+request()->segment(count(request()->segments())) == 'report')
+<script type="text/javascript" src = "{{URL('assets/js/chart.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/tracker.js')}}" ></script>
 @endif
 </html>

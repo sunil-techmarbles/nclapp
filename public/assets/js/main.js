@@ -24,6 +24,15 @@ var forceWS = false;
 var old_coa = "";
 var new_coa = "";
 var win8 = 0;
+var isRunning = false;
+var startTime;
+var pstartTime;
+var intTime;
+var runTime = 0;
+var pauseTime = 0;
+var action = "";
+var prevAction = "";
+var isPause=false;
 
 // Array of inputs for package modal for per-populating values of package
 var packageModalInputs = ["order_date", "expected_arrival", "description", "qty", "value", "req_name", "tracking_number", "ref_number", "carrier", "freight_ground", "recipient", "received", "worker_id", "location" ];

@@ -150,5 +150,6 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 			Route::any('/email', 'RecycleController@recycleTwoFailedSearchEmails')->name('email');
 		});
 		Route::any('/tracker', 'TrackerController@index')->name('tracker');
+		Route::any('/timetracker', 'TrackerController@timeTracker');
 	});
 });

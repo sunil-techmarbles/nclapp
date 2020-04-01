@@ -13,9 +13,11 @@ class HeadServiceProvider extends ServiceProvider {
         View::composer('layouts.adminheader', function ($view)
         {
         	$uid = Sentinel::getUser()->id;
-        	$user_details = User::getUserDetail($uid);
-        	$role = Sentinel::findRoleById($user_details->role_id);
+        	$userDetails = User::getUserDetail($uid);
+            $currentUser = Sentinel::getUser()->first_name.' '.Sentinel::getUser()->last_name;
+        	$role = Sentinel::findRoleById($userDetails->role_id);
             $view->with('user_role', $role->slug);
+            $view->with('currentUser', $currentUser);
         });
     }
 }
