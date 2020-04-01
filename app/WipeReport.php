@@ -16,7 +16,4 @@ class WipeReport extends Model
     ];
 
     
-
-
-
 }

@@ -29,6 +29,18 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('BlanccoMakorApi:api')
             ->daily();
+
+        $schedule->command('WipeMakor:api')
+            ->daily();
+
+        $schedule->command('WipeBiosMakor:api')
+            ->daily();
+
+        $schedule->command('failedSearch:daily')
+            ->daily();
+
+        $schedule->command('faildSearch:weekly')
+            ->weekly();
     }
 
     /**
