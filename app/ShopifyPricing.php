@@ -56,4 +56,16 @@ class ShopifyPricing extends Model
     		->where('Processor', 'LIKE', '%'.$request['cpu_core'].'%')
     		->update(['Final_Price' => $finalPrice]);
     }
+
+    public static function getRecordForImport($request)
+    {
+    	return self::select('*')
+    		->where([
+    			'Form_Factor' => $request->form_factor,
+    			'Condition' => $request->condition,
+    			'Model' => $request->model,
+			])
+    		->where('Processor', 'LIKE' ,'%'.$request->processor.'%')
+            ->get();
+    }
 }

@@ -47,8 +47,8 @@
             <a href="{{route('tracker')}}">Time Tracker</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('import.record')}}"><span class="fa fa-download"></span></a>
-            <a href="{{route('import.record')}}">Import</a>
+            <a href="{{route('import')}}"><span class="fa fa-download"></span></a>
+            <a href="{{route('import')}}">Import</a>
         </div>
         <div class="menu-item">
             <a href="{{route('recycle.first')}}"><span class="fa fa-refresh"></span></a>

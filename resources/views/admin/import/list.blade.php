@@ -1,29 +1,46 @@
 @extends('layouts.appadminlayout')
-@section('title', 'Tracker Report')
+@section('title', 'Import')
 @section('content')
 <div class="container shopify-product-table">
-    <div id="page-head" class="noprint">Time Tracker Report</div>
-    <form action="" method="POST" class="search-table" enctype="multipart/form-data">
-        <?php
-        if (isset($_POST['model']) && empty($shopify_price_data)) {
+    <div id="page-head" class="noprint">Import</div>
+    <form action="{{route('import')}}" method="GET" class="search-table" enctype="multipart/form-data">
+        @if (request()->get('model') && empty($shopify_priceData))
             echo '<p class="message"> No Data Found.</p><br>';
-        }
-        ?>
-        <lable for="model"><b>Model: </b></lable>
-        <input type="text" name="model" placeholder="Model" value="<?php echo $model; ?>" required/>
-        <lable for="form_factor"><b>Form Factor: </b></lable>
-        <input type="text" name="form_factor" placeholder="Form Factor" value="<?php echo $form_factor; ?>" required/>
-        <lable for="processor"><b>Processor: </b></lable>
-        <input type="text" name="processor" placeholder="Processor" value="<?php echo $processor; ?>" required/>
-        <lable for="processor"><b>Condition: </b></lable>
-        <input type="text" name="condition" placeholder="Condition" value="<?php echo $condition; ?>" required/>
-        <input type="submit"/>
-        <?php
-        if (!empty($shopify_price_data)) {
-            echo '<br><br><h2>Final Price : $<span class="show_final_price">' . $shopify_price_data[0]['Final_Price'] . '</span></h2>';
-            echo '<input class="show_all" type="button" value="Show All Records"><br><br>';
-            ?>
-            <input type="hidden" class="final_price" value="<?php echo $shopify_price_data[0]['Final_Price']; ?>">
+        @endif
+        <div class="row" style="margin-bottom:5px">
+            <div class="col-sm-3">
+                <div class="form-group-sm">
+                    <input type="text" class="form-control" name="model" placeholder="Model" value="{{request()->get('model')}}" required/>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group-sm">
+                    <input type="text" class="form-control" name="form_factor" placeholder="Form Factor" value="{{request()->get('form_factor')}}" required/>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group-sm">
+                    <input type="text" class="form-control" name="processor" placeholder="Processor" value="{{request()->get('processor')}}" required/>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group-sm">
+                    <input type="text" class="form-control" name="condition" placeholder="Condition" value="{{request()->get('condition')}}" required/>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="w-100 float-right">
+                <div class="form-group-sm float-right mt-3">
+                    <a href="{{route('import')}}" class="btn btn-warning">Reset</a>
+                    <input class="btn btn-success" type="submit" value="Search"/>
+                </div>
+            </div> 
+        </div>
+        @if(!empty($shopifyPriceData))
+            <h2>Final Price : $<span class="show_final_price">{{$shopifyPriceData[0]['Final_Price']}}</span></h2>
+            <input class="show_all" type="button" value="Show All Records">
+            <input type="hidden" class="final_price" value="{{$shopifyPriceData[0]['Final_Price']}}">
             <select name="properties[Hard Drive]" class="hard_drive">
                 <option value="0">-- Choose Hard Drive --</option>
                 <option value="0" data-option_value_key="0">320GB SATA</option>
@@ -62,11 +79,9 @@
                 <option value="0" data-option_value_key="0">No Accessories Needed</option>
                 <option value="199.99" data-option_value_key="1">Refurbished HP Laserjet Desktop Printer [+$199.99]</option>
             </select>
-            <?php
-        }
-        ?>
+       @endif
     </form>
-    <?php if (!empty($shopify_price_data)) { ?>
+    @if (!empty($shopifyPriceData))
         <div class="show_all_record" style="display: none">
             <h2> Shopify product data </h2>
             <table id="example" class="display" style="width:100%">
@@ -92,41 +107,49 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($shopify_price_data as $key => $price_data) { ?>
+                    @foreach ($shopifyPriceData as $key => $priceData)
                         <tr>
-                            <td><?php echo $price_data['Asset_ID']; ?></td>
-                            <td><?php echo $price_data['Model']; ?></td>
-                            <td><?php echo $price_data['Form_Factor']; ?></td>
-                            <td><?php echo $price_data['Processor']; ?></td>
-                            <td><?php echo $price_data['Condition']; ?></td>
-                            <td><?php echo $price_data['SerialNumber']; ?></td>
-                            <td><?php echo $price_data['Class']; ?></td>
-                            <td><?php echo $price_data['Brand']; ?></td>
-                            <td><?php echo $price_data['Model_Number']; ?></td>
-                            <td><?php echo $price_data['RAM']; ?></td>
-                            <td><?php echo $price_data['Memory_Type']; ?></td>
-                            <td><?php echo $price_data['Memory_Speed']; ?></td>
-                            <td><?php echo $price_data['Hard_Drive']; ?></td>
-                            <td><?php echo $price_data['HD_Interface']; ?></td>
-                            <td><?php echo $price_data['HD_Type']; ?></td>
-                            <td>$<?php echo $price_data['Price']; ?></td>
-                            <td>$<?php echo $price_data['Final_Price']; ?></td>
+                            <td>{{$priceData['Asset_ID']}}</td>
+                            <td>{{$priceData['Model']}}</td>
+                            <td>{{$priceData['Form_Factor']}}</td>
+                            <td>{{$priceData['Processor']}}</td>
+                            <td>{{$priceData['Condition']}}</td>
+                            <td>{{$priceData['SerialNumber']}}</td>
+                            <td>{{$priceData['Class']}}</td>
+                            <td>{{$priceData['Brand']}}</td>
+                            <td>{{$priceData['Model_Number']}}</td>
+                            <td>{{$priceData['RAM']}}</td>
+                            <td>{{$priceData['Memory_Type']}}</td>
+                            <td>{{$priceData['Memory_Speed']}}</td>
+                            <td>{{$priceData['Hard_Drive']}}</td>
+                            <td>{{$priceData['HD_Interface']}}</td>
+                            <td>{{$priceData['HD_Type']}}</td>
+                            <td>${{$priceData['Price']}}</td>
+                            <td>${{$priceData['Final_Price']}}</td>
                         </tr>
-                    <?php } ?>
+                    @endforeach
                 </tbody>
             </table>
         </div>
-    <?php } ?>
+    @endif
     <h2>Upload file to update</h2>
+    <p>Note: Please upload .xlsx file to update Shopify Pricing Table</p>
     <form action="" method="POST" enctype="multipart/form-data">
-        <?php
-        if ($msg) {
-            echo '<p class="message">' . $msg . '</p>';
-        }
-        ?>
-        <input type="file" name="file" />
-        <input type="submit"/>
-        <p>Note: Please upload .xlsx file to update Shopify Pricing Table</p>
+        @if ($message)
+            <p class="message">{{$message}}</p>
+        @endif
+        <div class="row" style="margin-bottom:5px">
+            <div class="col-sm-10">
+                <div class="form-group-sm">
+                    <input placeholder="" class="form-control" type="file" name="file" />
+                </div>
+            </div>
+             <div class="col-sm-2">
+                <div class="form-group-sm">
+                    <input class="btn btn-success" type="submit"/>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
 @endsection
