@@ -53,4 +53,11 @@ class FailedSearch extends Model
     	}
     	return $status;
     }
+
+    public static function getRecordByDate($date)
+    {
+        return self::select('*')
+            ->where('on_datetime', '>=',  $date )
+            ->get();
+    }
 }
