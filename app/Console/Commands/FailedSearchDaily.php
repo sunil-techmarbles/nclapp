@@ -2,6 +2,7 @@
 namespace App\Console\Commands;
 use App\ReportEmail;
 use App\FailedSearch;
+use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Console\Command;
 
@@ -20,7 +21,7 @@ class FailedSearchDaily extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'This command is used to send Failed Search Daily Report';
 
     /**
      * Create a new command instance.
@@ -36,16 +37,71 @@ class FailedSearchDaily extends Command
      * Execute the console command.
      *
      * @return mixed
-     */
+     */ 
     public function handle()
     {
         $this->basePath  = base_path().'/public';
         $this->sessionReportDir = $this->basePath . "/session-reports";
+        $date = date('Y-m-d');
+        $fileName = 'failedsearch_'. $date .'.csv';
+        $filePath =  $this->sessionReportDir .'/'.$fileName;
+        $FailedSearchRecords = FailedSearch::getRecordByDate($date);
+        $this->CreateCSVFile($FailedSearchRecords, $filePath);
+        $this->SendFailedSearchReportDaily( $fileName, $filePath  );
 
-        $fileName = $this->sessionReportDir .'/failedsearch_'.date('Y-m-d').'.csv';
+        die('Failed Search Daily Report Sent');
+    }
 
-        pr($fileName);
-        die('Failed Search Daily');
-        
+
+    public function SendFailedSearchReportDaily( $fileName, $filePath )
+    {
+        $emails = ReportEmail::getRecordForEdit('Daily');
+        $emailsToSend =  explode(', ', $emails[0]);
+        $subject = "Daily Failed Search Report";
+        $body = "Please find the Failed Search report attached";
+        Mail::raw($body, function($m) use ( $subject, $emailsToSend, $filePath, $fileName )
+        {
+                $m->to( $emailsToSend )->subject($subject);
+                $m->attach( $filePath , array(
+                            'as' => $fileName,
+                            'mime' => 'csv')
+                        );
+        });
+    }
+
+
+    /**
+     * Create a CSV file.
+     *
+     * @return mixed
+     */
+    public function CreateCSVFile($FailedSearchRecords, $fileName)
+    {
+        $fp = fopen( $fileName, "w" );
+        fputcsv($fp, ["Model","partNo","Brand","Category","require_pn","Added"]);
+
+        if( !empty( $FailedSearchRecords ))
+        {
+            foreach ($FailedSearchRecords as $i)
+            {
+                $row = [
+                $i['model_or_part'],
+                $i['partNo'],
+                $i['Brand'],
+                $i['Category'],
+                $i['require_pn'],
+                $i['on_datetime']
+                ];
+                fputcsv($fp, $row);
+            }
+        }
+        else
+        {
+             $row = [
+                'No data found',
+                ];
+                fputcsv($fp, $row);
+        }
+        fclose($fp);
     }
 }

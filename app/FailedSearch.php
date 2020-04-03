@@ -40,7 +40,7 @@ class FailedSearch extends Model
     {
     	return self::where(['id' => $id])
     		->first();
-    }
+    } 
 
     public static function deleteRecord($id)
     {
@@ -51,6 +51,13 @@ class FailedSearch extends Model
     		$failedSearch->delete();
     		$status = true;
     	}
-    	return $status;
+    	return $status; 
+    }
+
+    public static function getRecordByDate($date)
+    {
+        return self::select('*')
+            ->where('on_datetime', '>=',  $date )
+            ->get();
     }
 }
