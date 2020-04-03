@@ -7,9 +7,9 @@
 	</div>
 	 <div class="row">
         <div class="col-sm-12" style="text-align: right">
-            <form method="post" class="form-inline" id="statsform" action="index.php">
+            <form method="post" class="form-inline" id="wipereportcountform" action="{{route('getwipereportfilescount')}}">
                 @csrf
-                <input type="text" style="display: inline-block;width:200px;margin-right: 15px;" class="daterange form-control" id="dates" name="dates" value="04/02/2020 - 04/02/2020">
+                <input type="text" style="display: inline-block;width:200px;margin-right: 15px;" class="daterange form-control" id="dates" name="dates" value="">
             </form>
         </div>
     </div>
