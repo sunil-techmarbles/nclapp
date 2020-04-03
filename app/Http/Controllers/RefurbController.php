@@ -274,7 +274,7 @@ class RefurbController extends Controller
 	public function saveCOA(Request $request)
 	{
 		if($request->ajax())
-		{	
+		{
 			$current = Carbon::now();
 			$asset = $request->get("asset");
 			$refurbAssetData = $this->refurbAssetData.'/'.$asset.'.json';
@@ -323,7 +323,7 @@ class RefurbController extends Controller
 		if($request->ajax())
 		{
 			$current = Carbon::now();
-			$asinIsuesID = AsinIssue::addRecord($request, $current);
+			$asinIsuesID = AsinIssue::storeRecord($request, $current);
 			if($asinIsuesID)
 			{
 				return response()->json(['message' => 'Added successfully', 'type' => 'success', 'status' => true]);

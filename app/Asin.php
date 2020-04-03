@@ -222,8 +222,8 @@ class Asin extends Model
 
     public static function getModelFromAsin($asin, $notifications)
     {
-        return self::select("id","cpu_core","cpu_model","cpu_speed")
-            ->whereIn("id" , $asin)
+        return self::select("id","model","cpu_core","cpu_model","cpu_speed")
+            ->whereIn("id", $asin)
             ->where(["notifications" => $notifications])
             ->get();
     }

@@ -216,7 +216,7 @@ class SuppliesController extends Controller
                 {
                     array_push($user, $value['email']);
                 }
-                $response['message'] = 'Quantity of supplie update successfully';
+                $response['message'] = 'Quantity of supply update successfully';
                 if(sizeof($user) > 0)
                 {   
                     $current = Carbon::now();
@@ -225,9 +225,8 @@ class SuppliesController extends Controller
                         $m->to($user)
                         ->subject($subject);
                     });
-                    $response['message'] = 'Quantity of supplie update & email send successfully';
+                    $response['message'] = 'Quantity of supply update & email send successfully';
                 }
-
                 $response['status']  = 'success';
             }
             else 
@@ -279,12 +278,12 @@ class SuppliesController extends Controller
         if ($result)
         {
             $response['status']  = 'success';
-            $response['message'] = 'Supplie deleted successfully';
+            $response['message'] = 'Supply deleted successfully';
         }
         else
         {
             $response['status']  = 'error';
-            $response['message'] = 'Unable to delete supplie';
+            $response['message'] = 'Unable to delete supply';
         }
         return response()->json($response);
     }

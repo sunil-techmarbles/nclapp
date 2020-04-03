@@ -52,7 +52,8 @@ class FormModel extends Model
     public static function getAsinModelRecord($mid)
     {
         return self::where(["id" => $mid])
-            ->pluck("asin_model");
+            ->pluck("asin_model")
+            ->first();
     }
 
     public static function getAsinModel($id)

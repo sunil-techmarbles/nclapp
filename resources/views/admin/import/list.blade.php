@@ -5,7 +5,7 @@
     <div id="page-head" class="noprint">Import</div>
     <form action="{{route('import')}}" method="GET" class="search-table" enctype="multipart/form-data">
         @if (request()->get('model') && empty($shopify_priceData))
-            echo '<p class="message"> No Data Found.</p><br>';
+            <p class="alert alert-danger"> No Data Found.</p>
         @endif
         <div class="row" style="margin-bottom:5px">
             <div class="col-sm-3">
@@ -84,7 +84,7 @@
     @if (!empty($shopifyPriceData))
         <div class="show_all_record" style="display: none">
             <h2> Shopify product data </h2>
-            <table id="example" class="display" style="width:100%">
+            <table id="itmag-import-lits" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th>Asset ID</th>
@@ -134,19 +134,22 @@
     @endif
     <h2>Upload file to update</h2>
     <p>Note: Please upload .xlsx file to update Shopify Pricing Table</p>
-    <form action="" method="POST" enctype="multipart/form-data">
-        @if ($message)
-            <p class="message">{{$message}}</p>
-        @endif
+    <form action="{{route('shopify.product.import')}}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="row" style="margin-bottom:5px">
-            <div class="col-sm-10">
+            <div class="col-sm-11">
                 <div class="form-group-sm">
                     <input placeholder="" class="form-control" type="file" name="file" />
                 </div>
+                @if ($errors->has('file'))
+                    <span class="invalid alert alert-danger"role="alert">
+                        <strong>{{ $errors->first('file') }}.</strong>
+                    </span>
+                @endif
             </div>
-             <div class="col-sm-2">
+             <div class="col-sm-1">
                 <div class="form-group-sm">
-                    <input class="btn btn-success" type="submit"/>
+                    <input class="btn btn-success float-right" type="submit"/>
                 </div>
             </div>
         </div>

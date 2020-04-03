@@ -61,16 +61,16 @@ function saveCoa()
 	}
 	else
 	{
-		$.post("/"+prefix+"/savecoa", 
-			{_token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id},
-			function(ressponse){
-				var icon = (response.status) ? 'success' : 'error';
-				swalWithBootstrapButtons.fire( 
-					response.type,
-					response.message ,
-					icon
-				) 
-		    	$('#detailModal').modal('hide');
+		$.post("/"+prefix+"/savecoa",
+				{_token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id}
+			).done(function( response ) {
+			var icon = (response.status) ? 'success' : 'error';
+			swalWithBootstrapButtons.fire( 
+				response.type,
+				response.message ,
+				icon
+			)
+	    	$('#detailModal').modal('hide');
 		});
 	}
 }
@@ -82,12 +82,8 @@ function getAssetData(fId)
 	{
 		$.get("/"+prefix+"/getasset?asset="+data+"&t="+Math.random(), function(response)
 		{
-			alert(response);
-			console.log(response);
 			if(response.status)
 			{
-				console.log("i am here at top");
-				console.log(response.status);
 				forceWS = false;
 				adata = response.result;
 				device = adata["radio_2"];
@@ -139,9 +135,7 @@ function getAssetData(fId)
 				}
 				for (var i in adata["items"])
 				{
-					console.log("i am here");
 					var itm = adata["items"][i];
-					console.log(itm);
 					if(itm.key=="Asset_Number")
 					{
 						if(adata["Serial"]=="") adata["Serial"] = '000000';
@@ -201,10 +195,10 @@ function getAssetData(fId)
 					}
 					else if(itm.type=="mult")
 					{
-      //                  	$("#f_"+itm.key+"").text(itm.value.join("; "));
-						// $(".c_"+itm.key+"").show();
-						// adata.descr[itm.key]=itm.value; 
-						// $(".frmrow").show();
+                       	$("#f_"+itm.key+"").text(itm.value.join("; "));
+						$(".c_"+itm.key+"").show();
+						adata.descr[itm.key]=itm.value; 
+						$(".frmrow").show();
 				 	}
 				}
 				adata.descr["swap"]=[];
@@ -261,7 +255,7 @@ function getAssetData(fId)
 						for (var j in itm.options)
 						{
 							var opt = itm.options[j];
-							var ck = (adata.descr[ka].indexOf(opt)>=0?' checked':'');
+							var ck = (adata.descr[ka] != undefined || adata.descr[ka] != null) ? (adata.descr[ka].indexOf(opt)>=0?' checked':'') : '';
 							var cb='<div class="cb-cnt noprint"><label class="btn" for="'+ka+'_'+j+'"><input class="edit_'+ka+'" type="checkbox" '+ck+' value="'+opt+'" id="'+ka+'_'+j+'"> <span>'+opt+'</span></label></div>';
 							$("#edit_"+ka).append(cb);
 						}

@@ -36,7 +36,7 @@ class CoaReport extends Model
         $coaReport->old_coa = $request->old_coa;
         $coaReport->asset = $asset;
         $coaReport->new_coa = $request->new_coa;
-        $asinAsset->added_on = $current;   
+        $coaReport->added_on = $current;   
         if($coaReport->save())
         {
             $result = $coaReport->id;

@@ -46,7 +46,7 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		// Recycle download PDF
 		Route::any('/recycledownload', 'RecycleController@recycleDownloadPdf');
 		Route::post('/readdatafromfiles', 'RecycleController@readDataFromFile')->name('read.data.from.files');
-
+		Route::post('/shopifyproductimport', 'MainController@shopifyProductImport')->name('shopify.product.import');
 	});
 });
 

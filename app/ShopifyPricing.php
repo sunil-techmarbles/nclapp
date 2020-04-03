@@ -35,6 +35,40 @@ class ShopifyPricing extends Model
 		'Final_Price',
     ];
 
+    public static function addRecord($Asset_ID, $record)
+    {
+    	$result = false;
+    	$shopifyPricing = new ShopifyPricing();
+    	$shopifyPricing->Asset_ID = $Asset_ID;
+		$shopifyPricing->SerialNumber = $record['SerialNumber'];
+		$shopifyPricing->Class = $record['Class'];
+		$shopifyPricing->Brand = $record['Brand'];
+		$shopifyPricing->Model = $record['Model'];
+		$shopifyPricing->Model_Number = $record['Model_Number'];
+		$shopifyPricing->Form_Factor = $record['Form_Factor'];
+		$shopifyPricing->Processor = $record['Processor'];
+		$shopifyPricing->RAM = $record['RAM'];
+		$shopifyPricing->Memory_Type = $record['Memory_Type'];
+		$shopifyPricing->Memory_Speed = $record['Memory_Speed'];
+		$shopifyPricing->Hard_Drive = $record['Hard_Drive'];
+		$shopifyPricing->HD_Interface = $record['HD_Interface'];
+		$shopifyPricing->HD_Type = $record['HD_Type'];
+		$shopifyPricing->Condition = $record['Condition'];
+		$shopifyPricing->Price = $record['Price'];
+		$shopifyPricing->Final_Price = $record['Final_Price'];
+		if($shopifyPricing->save())
+		{
+			$result = $shopifyPricing->id;
+		}
+		return $result;
+    }
+
+    public static function upadateRecord($Asset_ID, $record)
+    {
+    	return self::where(['Asset_ID' => $Asset_ID])
+    		->update($record);
+    }
+
     public static function getShopifyPriceList($request)
     {
     	return self::where([
@@ -67,5 +101,11 @@ class ShopifyPricing extends Model
 			])
     		->where('Processor', 'LIKE' ,'%'.$request->processor.'%')
             ->get();
+    }
+
+    public static function getRecordByAssetId($fileData)
+    {
+    	return self::where(['Asset_ID' => $fileData])
+    		->get();
     }
 }
