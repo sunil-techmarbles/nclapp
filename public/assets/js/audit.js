@@ -11,7 +11,6 @@ function editCapacity(cType)
 	if (str!="")
 	{
 		str = str.split("_").join("");
-		console.log(str);
 		if (cType=='ram')
 		{
 			var astr = str.split(":");
@@ -196,8 +195,9 @@ function checkTravelerId( tabId )
 	selTab = tabId;
 	var trId = $('#text_1').val();
 	if(trId.length < 3 )
-	{	
-		showSweetAlertMessage(type = 'error', message = 'Please enter Asset ID' , icon= 'error');
+	{
+		hideLoader();
+		showSweetAlertMessage(type = 'Error', message = 'Please enter Asset ID' , icon= 'error');
 		$('input[name=radio_2]').prop('checked',false);
 		$("#var_tab").html('');
 		$("#reviewBtn").hide();
@@ -211,7 +211,7 @@ function checkTravelerId( tabId )
 			var isErr = false;
 			if ( !edit && data == "Duplicate" )
 			{
-				showSweetAlertMessage(type = 'warning', message = 'Duplicate Entry' , icon= 'warning');
+				showSweetAlertMessage(type = 'Warning', message = 'Duplicate Entry' , icon= 'warning');
 				$('#text_1').val("");
 				$('#text_1').focus();
 				isErr = true;
@@ -223,7 +223,7 @@ function checkTravelerId( tabId )
 			{
 				if (data=="Missing")
 				{
-					showSweetAlertMessage(type = 'error', message = 'Data files not found for entered Asset Number' , icon= 'error');
+					showSweetAlertMessage(type = 'Error', message = 'Data files not found for entered Asset Number' , icon= 'error');
 					$('#text_1').val("");
 					$('#text_1').focus();
 					isErr = true;
@@ -261,7 +261,7 @@ function CheckTravelerIdForMobile ( trId , selTab )
 
 		if ( data == "Missing" )
 		{
-			showSweetAlertMessage(type = 'warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');		
+			showSweetAlertMessage(type = 'Warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');		
 			$('#text_1').val("");
 			$('#text_1').focus();
 			isErr = true;   
@@ -306,14 +306,14 @@ function getLastInput()
 	var trId = $('#text_1').val();
 	if (trId.length < 3)
 	{
-		showSweetAlertMessage(type = 'warning', message = 'Please enter Asset ID' , icon= 'warning');
+		showSweetAlertMessage(type = 'Error', message = 'Please enter Asset ID' , icon= 'error');
 		return false;
 	}
 	$.get("/"+prefix+"/loadlast?t="+Math.random(), function(data)
 	{
 		if (data=="false")
 		{
-			showSweetAlertMessage(type = 'error', message = 'Data not found' , icon= 'error');
+			showSweetAlertMessage(type = 'Error', message = 'Data not found' , icon= 'error');
 		}
 		else
 		{
@@ -345,7 +345,7 @@ function getModelData(modelId,tId)
 	$.get("/"+prefix+"/loadmodel?m="+modelId+"&t="+Math.random(), function(data)
 	{
 		if (data=="false")
-		{
+		{			
 			$("#"+tId).val($("#model"+modelId).text());
 			$('#modelid').val('0');
 		}
@@ -392,7 +392,7 @@ function refurbNotification()
 		checkRefurb();
 		if(forRefurb == true && damageScore <=3 && !isBlacklisted)
 		{
-			showSweetAlertMessage(type = 'error', message = 'This item is suitable for Refurb. Please put aside' , icon= 'error');
+			alert('This item is suitable for Refurb. Please put aside');
 			$('#refurb').val('1');
 		}
 		else
@@ -410,10 +410,10 @@ function checkRefurb()
 	for (var c in asinmodels)
 	{
 		var mdl = asinmodels[c];
-		var cName = mdl.model.toLowerCase();
-		var cCore = mdl.cpu_core.toLowerCase();
-		var cModels = mdl.cpu_model.toLowerCase().split(',');
-		var cSpeed = mdl.cpu_speed.replace('GHz','').trim();
+		var cName = (mdl.model != null || mdl.model != undefined) ? mdl.model.toLowerCase() : '';
+		var cCore = (mdl.cpu_core != null || mdl.cpu_core != undefined) ? mdl.cpu_core.toLowerCase() : '';
+		var cModels = (mdl.cpu_model != null || mdl.cpu_model != undefined) ? mdl.cpu_model.toLowerCase().split(',') : [];
+		var cSpeed = (mdl.cpu_speed != null || mdl.cpu_speed != undefined) ? mdl.cpu_speed.replace('GHz','').trim() : '';
 		var mdlId = mdl.id;
 		var speedMatch = true;
 		var isWhitelisted = false;
@@ -441,7 +441,6 @@ function checkRefurb()
 
 function fillData()
 {
-	console.log(items)
 	for (i = 0; i < items.length; ++i)
 	{
 		var itm = items[i];

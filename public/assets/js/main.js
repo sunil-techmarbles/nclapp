@@ -308,7 +308,7 @@ function setAside(itmId)
 {
 	if ($("#"+itmId).val().length > 0)
 	{
-		showSweetAlertMessage(type = 'error', message = 'Please set the machine aside to be manually audited' , icon= 'error');
+		showSweetAlertMessage(type = 'Error', message = 'Please set the machine aside to be manually audited' , icon= 'error');
 	}
 }
 
@@ -385,7 +385,7 @@ function checkModel()
 				$(':input[data-fillmodel="1"]').closest(".formitem");
 				// $('input[data-modelname="1"]').prop("readonly",true).closest(".formitem").css("background-color","none");
 				$('input[data-modelname="1"]').prop("readonly",true).closest(".formitem");
-				showSweetAlertMessage(type = 'success', message = 'Template created. Please carefully fill highlighted fields and submit the form' , icon= 'success');
+				showSweetAlertMessage(type = 'Success', message = 'Template created. Please carefully fill highlighted fields and submit the form' , icon= 'success');
 			}
 		}
 	}
@@ -492,7 +492,7 @@ function getAssetData(fId)
 		$.get("/"+prefix+"/getasin?asin=" + asin + "&t=" + Math.random(), function (data) {
 			if (data == '0')
 			{
-				showSweetAlertMessage(type = 'error', message = 'ASIN not found. Please check and try again' , icon= 'error');
+				showSweetAlertMessage(type = 'Error', message = 'ASIN not found. Please check and try again' , icon= 'error');
 			}
 			else
 			{
@@ -529,10 +529,7 @@ $(document).ready(function()
 			}
 		}
 	});
-}); 
 
-$(document).ready(function()
-{
 	$('#supplies, #asins, #users_table').DataTable();
 	
 	$('#shipment').DataTable
@@ -643,12 +640,13 @@ $(document).ready(function()
 	            {
 	            	hideLoader();
 	            	var icon = (result.status) ? 'success' : 'error';
-	            	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+	            	var type = (result.status) ? 'Success' : 'Error';
+	            	showSweetAlertMessage(type = type, message = result.message , icon= icon);
 	            	window.location.reload();
 	            }
 	        }).fail(function (jqXHR, textStatus, error){
 	        	hideLoader();
-	        	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	        	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
 	        });
 	    });
 	}
@@ -688,12 +686,12 @@ $(document).ready(function()
 	                }
 	                else
 	                {
-	                	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	                	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
 	                }
 	            }
 	        }).fail(function (jqXHR, textStatus, error){
 	        	hideLoader();
-	        	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	        	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
 	        });
 	    });
 	}
@@ -728,12 +726,13 @@ $(document).ready(function()
                     {
                     	hideLoader();
                     	var icon = (result.status) ? 'success' : 'error';
-                    	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+                    	var type = (result.status) ? 'Success' : 'Error';
+                    	showSweetAlertMessage(type = type, message = result.message , icon= icon);
                     	window.location.reload(true);
                     }
                 }).fail(function (jqXHR, textStatus, error){
                 	hideLoader();
-                	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+                	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
                 });
             }
         });
@@ -781,7 +780,8 @@ $(document).ready(function()
                 	hideLoader();
                 	$("#catModal").modal('hide');
                 	var icon = (result.status) ? 'success' : 'error';
-                	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+                	var type = (result.status) ? 'Success' : 'Error';
+                	showSweetAlertMessage(type = type, message = result.message , icon= icon);
                 	if (result.status)
                 	{
                 		window.location.reload(true);
@@ -789,7 +789,7 @@ $(document).ready(function()
                 }
             }).fail(function (jqXHR, textStatus, error){
             	hideLoader();
-            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+            	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
             });
         });
 	}
@@ -826,16 +826,48 @@ $(document).ready(function()
 	                {
 	                	hideLoader();
 	                	var icon = (result.status) ? 'success' : 'error';
-	                	showSweetAlertMessage(type = icon, message = result.message , icon= icon);
+	                	var type = (result.status) ? 'Success' : 'Error';
+	                	showSweetAlertMessage(type = type, message = result.message , icon= icon);
 	                	window.location.reload(true);
 	                }
 	            }).fail(function (jqXHR, textStatus, error){
 	            	hideLoader();
-	            	showSweetAlertMessage(type = 'error', message = 'something went wrong with ajax request' , icon= 'error');
+	            	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
 	            });
 	        }
 	    });
 	}
+
+    // DataTable
+    var table = $('#itmag-import-lits').DataTable();
+    // Apply the search
+    table.columns().every(function () {
+        var that = this;
+        $('input', this.footer()).on('keyup change', function () {
+            if (that.search() !== this.value)
+            {
+                that.search(this.value).draw();
+            }
+        });
+    });
+
+    $("#example_filter").css("display", "none");
+    $(".dataTable").wrap('<div class="shopify_pricing"></div>');
+
+    $(".show_all").click(function (e) {
+        $(".show_all_record").show();
+    });
+
+    $("select").bind("change", function (e) {
+        var price = parseFloat($(".final_price").val())
+            + parseFloat($(".hard_drive").val())
+            + parseFloat($(".memory").val())
+            + parseFloat($(".operating_system").val())
+            + parseFloat($(".software").val())
+            + parseFloat($(".warranty").val())
+            + parseFloat($(".accessories").val())
+        $(".show_final_price").text(price.toFixed(2));
+    });
 })
 
 function reorderItem(iid, dqty, url) 
@@ -858,7 +890,7 @@ function reorderItem(iid, dqty, url)
 		{
 			swalWithBootstrapButtons.fire
 			( 
-				'Deleted!',
+				response.status,
 				response.message ,
 				response.status
 				) 

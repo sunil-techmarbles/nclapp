@@ -28,13 +28,13 @@
 		</div>
 	</div>
 </div>
-@include('admin.audit.modal')
 <div id="uhint">
 	<div class="close-link">
 		<span style="cursor:pointer; font-weight: bold;" onclick="$('#uhint').hide()">[X]</span>
 	</div>
 	<div id="hints">&nbsp;</div>
 </div>
+@include('admin.audit.modal')
 <script type="text/javascript">
 	var dScores = '<?php echo json_encode($damageScores); ?>';
 	var ref_BL = '<?php echo json_encode($refurbBlacklist); ?>';

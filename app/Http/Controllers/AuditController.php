@@ -104,8 +104,8 @@ class AuditController extends Controller
 	{ 
 		$formsDatas = FormsConfig::getTab($tab = 'Notes', $isActive = 'Yes');
 		$output = $this->renderHtml($formsDatas);
-		$damageScores = Config::get('constants.auditDamageScores');;
-		$refurbBlacklist = Config::get('constants.auditRefurbBlacklist');;
+		$damageScores = Config::get('constants.auditDamageScores');
+		$refurbBlacklist = Config::get('constants.auditRefurbBlacklist');
 		return view('admin.audit.index' ,  compact('output', 'damageScores', 'refurbBlacklist') );    
 	}
 
@@ -548,10 +548,11 @@ class AuditController extends Controller
 			else
 			{
 				$asin = FormModel::getAsinModelRecord($mid);
-				$data = json_decode($res,true);
+				$data = json_decode($response,true);
 				$data["asin"] = $asin;
 				if($asin!='0')
 				{
+					$asin = explode(",",$asin);
 					$data["models"] = Asin::getModelFromAsin($asin, $notifications=1);
 					if(!$data["models"]) $data['asin'] = 0;
 				}
@@ -668,6 +669,8 @@ class AuditController extends Controller
 		$asins = [];
 		if (File::exists($this->formData.'/'.$asset.'.json'))
 		{
+			// echo "Here in Asset Model";
+			// echo $asset;
 			$data = [];
 			$data["Model"] = "N/A";
 			$data["CPU"] = "N/A";
@@ -725,10 +728,18 @@ class AuditController extends Controller
 
 			if(!empty($model))
 			{
-				$asin = FormModel::getAsinModelRecord($model);
-				if(count($asin) > 0)
+				$asin = FormModel::getAsinModelRecord(intval($model));
+				if(strpos(',', $asin))
 				{
-					$itm["models"] = Asin::getModelFromAsin($asin, $notifications=1);
+					$asins = explode(',',$asin);
+				}
+				else
+				{
+					$asins = explode(',',$asin);
+				}
+				if($asin!='0')
+				{
+					$data["models"] = Asin::getModelFromAsin($asins, $notifications=1);
 				}
 			}
 			else
@@ -987,7 +998,6 @@ class AuditController extends Controller
 		$travelerId = "";
 		foreach ($config as $i => $fld)
 		{
-			// print_r($request->toArray());
 			$item = array();
 			$itmid = $fld["qtype"] . "_" . $fld["id"];
 			$itmidnew = $fld["qtype"] . "_" . $fld["id"] . "_new";
@@ -1032,7 +1042,6 @@ class AuditController extends Controller
 				}
 				if ($key == "Technology")
 				{
-					// echo $itmid;
 					$technology = $request->get($itmid);
 				}
 				if ($key == "Model")
@@ -1086,7 +1095,22 @@ class AuditController extends Controller
 				else
 				{
 					$response = $request->get($itmid);
-					$item["value"] = array($response);
+					if($item["key"] == 'Model')
+					{
+						if(strpos($response, "("))
+						{	
+							$model = substr($response, 0, strpos($response, "("));
+							$item["value"] = array(trim($model));
+						}
+						else
+						{
+							$item["value"] = array($response);
+						}
+					}
+					else
+					{
+						$item["value"] = array($response);
+					}
 				}
 				$data["items"][] = $item;
 				if ($key == "HDD_Size" || $key == "Original_HDD_Size")
@@ -1104,7 +1128,6 @@ class AuditController extends Controller
 				{
 					$response .= "GB";
 				}
-				// echo "> ".$i.' > '.$grp." > ".$qtype. "\n";
 				if (!empty($grp))
 				{
 					if ($grp == "Description" && is_array($response))
@@ -1158,7 +1181,22 @@ class AuditController extends Controller
 					{
 						if($response)
 						{
-							$outxml[$key] = $response;
+							if($key == 'Model')
+							{
+								if(strpos($response, "("))
+								{	
+									$model = substr($response, 0, strpos($response, "("));
+									$outxml[$key] = trim($model);
+								}
+								else
+								{
+									$outxml[$key] = $response;
+								}
+							}
+							else
+							{
+								$outxml[$key] = $response;
+							}
 						}
 						else
 						{
@@ -1166,8 +1204,6 @@ class AuditController extends Controller
 						}
 					}
 				}
-				// echo $i. "\n";
-				// print_r()
 				$adminEmails = Config::get('constants.adminEmail');
 				$subject = "New item addition request";
 				if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
@@ -1180,8 +1216,6 @@ class AuditController extends Controller
 				}
 			}
 		}
-		// print_r($outxml);
-		// die;
 		$xmlData = new \SimpleXMLElement('<?xml version="1.0"?><data/>');
 		$this->array_to_xml($outxml, $xmlData);
 		if ($travelerId != "")
@@ -1200,10 +1234,16 @@ class AuditController extends Controller
 		{
 			$result = false;
 		}
-
+		// print_r($request->All());
+		// print_r($outxml);
+		// print_r($data);
+		// echo "product - ".$product ;
+		// echo "technology - ".$technology ;
+		// echo "model - ".$model ;
+		// echo $travelerId;
+		// die;
 		if ($travelerId != "")
 		{
-			// echo $travelerId;
 			$fname = $this->formData.'/'.$travelerId.'.json';
 			file_put_contents($fname, json_encode($data));
 			FormData::deleteFormDataRecorde($type = "data", $authUserName);
@@ -1217,11 +1257,9 @@ class AuditController extends Controller
 			FormData::saveFormDataRecorde((object) $formData);
 		}
 
-
+		$model = $outxml['Model'];
 		$product = $outxml['Product_Name'];
 		$technology = $outxml['Technology'];
-		// echo $model = $outxml['Model'];
-		// echo strpos($model, "("). "\n";
 		if(strpos($model, "("))
 		{	
 			$model = substr($model, 0, strpos($model, "("));
@@ -1231,10 +1269,6 @@ class AuditController extends Controller
 		{
 			$model = $outxml['Model'];
 		}
-		// echo 'product >'.$product."\n";
-		// echo 'technology > '.$technology."\n";
-		// echo 'model > '.$model."\n";
-		// die;
 		if (!empty($product) && !empty($technology) && !empty($model))
 		{
 			$add = $request->get("addModel");
@@ -1251,6 +1285,7 @@ class AuditController extends Controller
 				}
 			}
 			$modelid = FormModel::getFormAllRecordExist($product, $technology, $model);
+			
 			if($modelid)
 			{
 				FormData::deleteFormDataRecordeByID($type='model', $modelid->id);
@@ -1265,7 +1300,6 @@ class AuditController extends Controller
 			}
 		}
 		// die;
-
 		if($result)
 		{
 			return redirect()->route('audit', ["redirect" => "true"])->with('success', "Your data has been saved");

@@ -101,10 +101,7 @@ class SessionData extends Model
         $recorde = self::where(["sid" => $sess, "asset" => $text1])->first();
         if($recorde)
         {
-            if($recorde->isEmpty())
-            {
-                $recorde->delete();
-            }
+			$recorde->delete();
         }
     }
 

@@ -52,7 +52,8 @@ class ShipmentsData extends Model
 
     public static function updateRecord($request)
     {
-        return self::where(["asset" => $request['asset']])->update(
+        return self::where(["asset" => $request->asset])
+        ->update(
         	[
 				'new_coa'        => $request->new_coa,
 				'old_coa'        => $request->old_coa,
