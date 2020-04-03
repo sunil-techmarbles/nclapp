@@ -37,6 +37,7 @@ class CountWipeBiosBlancoFilesReport extends Command
      */
     public function handle()
     {
+        
         die("******");
     }
 }

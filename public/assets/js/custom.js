@@ -8,15 +8,23 @@ $(document).on('change ,keyup , load, blur' , "#newPackageForm input, #newPackag
 $(document).ready(function () 
 {
 	$('.datepicker').datepicker({format: "yyyy-mm-dd"}); 
-	$(".daterange").daterangepicker({
-		opens: 'left',
-		locale: {
-			format: 'YYYY-MM-DD'
-		},
-		autoUpdateInput: false
-	}).on('apply.daterangepicker', function(ev, picker){
-		picker.element.val(picker.startDate.format(picker.locale.format)+' - '+picker.endDate.format(picker.locale.format));
-	});
+	
+	// $(".daterange").daterangepicker({
+	// 	opens: 'left',
+	// 	locale: {
+	// 		format: 'YYYY-MM-DD'
+	// 	},
+	// 	autoUpdateInput: false
+	// }).on('apply.daterangepicker', function(ev, picker){
+	// 	picker.element.val(picker.startDate.format(picker.locale.format)+' - '+picker.endDate.format(picker.locale.format));
+	// });
+
+	  	$(".daterange").daterangepicker({
+            opens: 'left'
+        }, function (start, end, label) {
+            setTimeout(doFilter, 500);
+        });
+
 	$('#newPackageForm').validate({
 		rules: { 
 			expected_arrival: {
@@ -278,4 +286,9 @@ function sweetAlertAfterResponse(status, title, message, showbutton)
 function removeErrorMessage(el)
 {
 	$(el).siblings('.text-danger').text('');
+}
+
+function doFilter()
+{
+ 	$("#wipereportcountform").submit();
 }

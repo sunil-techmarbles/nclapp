@@ -94,6 +94,23 @@ class CommonController extends Controller
      */
 	public function getWipeReportFilesCount(Request $request)
 	{
+	
+		if( isset( $request->dates ))
+		{
+			dd( $request->dates );
+		}
+		else
+		{
+			dd('No dates');
+		}
+
 		return view( 'admin.wipereport.wipereportcount');
 	}
+
+
+
 }
+
+
+
+
