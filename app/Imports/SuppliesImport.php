@@ -3,6 +3,7 @@ namespace App\Imports;
   
 use App\Supplies;
 use App\SupplieEmail;
+use Carbon\Carbon;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithStartRow;
   
@@ -15,6 +16,8 @@ class SuppliesImport implements ToModel, WithStartRow
     */
     public function model(array $row)
     {
+        $currentDate = Carbon::now();
+        $supplieID = ifnull(intval($row[0]));
         $data = [
             "item_name"  => ifnull($row[1]),
             "item_url"   => ifnull($row[2]),
@@ -31,17 +34,32 @@ class SuppliesImport implements ToModel, WithStartRow
             "email_subj" => ifnull($row[14]),
             "email_tpl"  => ifnull($row[15]),
         ];
+        
+        $emailNew = false;
+        if(!empty($supplieID) && Supplies::getSupplieById($supplieID))
+        {
+            $data['id'] = $supplieID; 
+            Supplies::updateSupplieById((object) $data);
+            $emailNew = true;
+        }
+        else
+        {
+            $supplieID = Supplies::addSupplies((object)$data);
+        }
 
-        $supplieID = Supplies::addSupplies((object)$data);
-
-        if(ifnull($row[12]) != '')
-        {   
+        if(ifnull($row[13]) != '')
+        {
             $supplieEmails = array_filter(explode(',',$row[13]));
-            foreach ($supplieEmails as $key => $email) {
+            if($emailNew)
+            {
+                SupplieEmail::deleteBulkSupplieEmail($supplieID);
+            }
+            foreach ($supplieEmails as $key => $email)
+            {
                 SupplieEmail::addSupplieEmail($email, $supplieID);
             }
         }
-        
+        Supplies::deleteBulkSupplieBelowDate($currentDate);
         return;
     }
 

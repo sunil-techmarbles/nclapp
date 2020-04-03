@@ -884,26 +884,33 @@ function reorderItem(iid, dqty, url)
 			url: url,
 			type: 'GET',
 			data: {supplieid: iid, quantity: qty},
-			dataType: 'json'
-		})
-		.done(function(response)
-		{
-			swalWithBootstrapButtons.fire
-			( 
-				response.status,
-				response.message ,
-				response.status
-				) 
-		}) 
-		.fail(function()
-		{
-			Swal.fire
-			({
-				icon: 'error',
-				title: 'Oops...',
-				text: 'Something went wrong with ajax !',
-			})
-		});
+			dataType: 'json',
+			beforeSend: function ()
+			{
+				showLoader();
+			},
+			complete: function ()
+			{
+				hideLoader();
+			},
+			success: function (response)
+            {
+            	hideLoader();
+            	swalWithBootstrapButtons.fire
+				( 
+					response.status,
+					response.message,
+					response.status
+				)
+				if(response.status == 'success')
+				{
+					location.reload(true);
+				}
+            }
+        }).fail(function (jqXHR, textStatus, error){
+        	hideLoader();
+        	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
+        });
 	}
 }
 

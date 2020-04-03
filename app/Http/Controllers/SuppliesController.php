@@ -196,11 +196,50 @@ class SuppliesController extends Controller
     {   
         if($request->ajax())
         {
+            // $reorderRty = 0;
+            // $sid = intval($request->supplieid);
+            // $qty = intval($request->quantity);
+            // if(isset($request->supplieid))
+            // {
+            //     $itmid = addslashes($request->itemid);
+            //     $reorderRty = $request->qty;
+            //     $records = Supplies::getSupplieByID($sid);
+            // }
+            // else
+            // {
+            //     $dt = date("Y-m-d",strtotime("-7 days"));
+            //     $records = Supplies::getSupplieByLowQty($dt);
+            // }
+            // $cnt=0;
+            // $mail = new Email();
+            // foreach ($records as $r) {
+            //     $vars = array_keys($r);
+            //     if($reorderRty) $r["reorder_qty"] = $reorderRty;
+            //     $body = $r["email_tpl"];
+            //     foreach($vars as $v) {
+            //         $body = str_replace("[$v]",$r[$v],$body);
+            //     }
+            //     $emails = explode(",",$r["emails"]);
+            //     $mid = $mail->queue(implode(";",$emails),$r["email_subj"],$body); //implode(";",$emails)
+            //     $cnt++;
+            //     $db->update("tech_inventory",["email_sent"=>date("Y-m-d H:i:s")],["id"=>$r["id"]]);
+            // } 
+            // $mail->release();
+            // if(isset($_GET['itemid'])){
+            //     session_start();
+            //     $_SESSION['content_saved'] = "
+            //                 <div style='width: 100%'>
+            //                     <div style='padding: 10px; color:#fff; background: #67B915; font-weight: bold'>Reorder request has been sent</div>
+            //                 </div>
+            //                 ";
+            //     header('location: index.php');
+            //     die();
+            // }
             $sid = intval($request->supplieid);
             $qty = intval($request->quantity);
-            $result = Supplies::updateQuantityBySupplieID($sid,$qty);        
-            if ($result) 
-            {
+            // $result = Supplies::updateQuantityBySupplieID($sid,$qty);        
+            // if ($result) 
+            // {
                 $supplieEmails = Supplies::getSupplieDetailAndEmails($sid);
                 $var_keys = array_keys($supplieEmails->toArray());
                 $supplieEmails["reorder_qty"] = ($qty) ? $qty : 0 ;
@@ -216,19 +255,19 @@ class SuppliesController extends Controller
                 {
                     array_push($user, $value['email']);
                 }
-                $response['message'] = 'Quantity of supply update successfully';
+                // $response['message'] = 'Quantity of supply update successfully';
                 if(sizeof($user) > 0)
-                {   
+                {
                     $current = Carbon::now();
                     Supplies::updateMailSentTime($sid,$current);
                     Mail::raw($body, function ($m) use ($subject,$user) {
                         $m->to($user)
                         ->subject($subject);
                     });
-                    $response['message'] = 'Quantity of supply update & email send successfully';
+                    $response['message'] = 'Reorder request has been sent';
+                    $response['status']  = 'success';
                 }
-                $response['status']  = 'success';
-            }
+            // }
             else 
             {
                 $response['status']  = 'error';
