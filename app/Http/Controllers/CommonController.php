@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use File;
 use ZipArchive;
+use App\WipeReport;
 
 class CommonController extends Controller
 {
@@ -94,23 +95,29 @@ class CommonController extends Controller
      */
 	public function getWipeReportFilesCount(Request $request)
 	{
-	
-		if( isset( $request->dates ))
+		$wipePdf = $biosPdf = $blancooPdf = $totalFiles = 0;
+		if(isset($request->dates))
 		{
-			dd( $request->dates );
+			$dates = $request->dates ;
+			$datesArray = explode(" - ",$dates);
+			$dateFrom = date("Y-m-d",strtotime($datesArray[0]));
+			$dateTo = date("Y-m-d",strtotime($datesArray[1]))." 23:59:59";
 		}
 		else
 		{
-			dd('No dates');
+			$date1 = date("m/d/Y",strtotime("-1 days"))." 23:59:59";
+			$dateFrom = date("Y-m-d",strtotime("-1 days"));
+			$dateTo = date("Y-m-d",strtotime("-1 days"))." 23:59:59";
+			$dates = date("m/d/Y",strtotime("-1 days")) . " - " . $date1;
 		}
-
-		return view( 'admin.wipereport.wipereportcount');
+		$reports = WipeReport::getWipeReportsFilesCountData($dateFrom, $dateTo);
+		foreach ($reports as $key => $report)
+		{
+			$wipePdf += $report->wipe_data_pdf_count;
+			$biosPdf += $report->bios_data_file_count;
+			$blancooPdf += $report->blancco_pdf_data_count;
+		}
+		$totalFiles = $wipePdf+$biosPdf+$blancooPdf;
+		return view( 'admin.wipereport.wipereportcount', compact('dates', 'wipePdf', 'biosPdf', 'blancooPdf', 'totalFiles'));
 	}
-
-
-
 }
-
-
-
-

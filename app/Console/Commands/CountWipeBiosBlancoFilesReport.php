@@ -1,11 +1,11 @@
 <?php
-
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
 class CountWipeBiosBlancoFilesReport extends Command
 {
+    public $basePath;
     /**
      * The name and signature of the console command.
      *
@@ -18,7 +18,7 @@ class CountWipeBiosBlancoFilesReport extends Command
      *
      * @var string
      */
-    protected $description = 'This command adds data to blanco , wipe , bios table and wipe reports table to get the total file count in wipe report section.';
+    protected $description = 'This command adds data to blancco, wipe, bios and wipe reports table to get the total file count in wipe report section.';
 
     /**
      * Create a new command instance.
@@ -37,7 +37,8 @@ class CountWipeBiosBlancoFilesReport extends Command
      */
     public function handle()
     {
-        
+        $this->basePath  = base_path().'/public';
+
         die("******");
     }
 }

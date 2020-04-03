@@ -1,0 +1,18 @@
+.chart li{
+    background: rgb(19, 118, 166);
+    list-style-type: none;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 3px;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: Tahoma, Geneva, sans-serif;
+    background: rgb(19, 118, 166);
+    color: white;
+}
+
+.wipeReportNav {
+    list-style-type: none;
+    float: right;
+}
