@@ -79,10 +79,10 @@ class Supplies extends Model
     	$updateSupplie = self::where(['id' => $request->id])
     		->update([
 		    	'item_name' => $request->item_name,
-		    	'item_url' => $request->item_ur,
+		    	'item_url' => $request->item_url,
 		    	'qty' => $request->qty,
 		    	'part_num' => $request->part_num,
-		    	'description' => $request->descriptio,
+		    	'description' => $request->description,
 		    	'dept'	=> $request->dept,
 				'price' => $request->price,
 				'vendor' => $request->vendor,
@@ -104,17 +104,10 @@ class Supplies extends Model
 
     public static function updateQuantityBySupplieID($supplieId, $Qty)
     {
-        $result = false;
-        $updateSupplieQty = self::where(['id' => $supplieId])
+        return self::where(['id' => $supplieId])
             ->update([
                 'qty' => $Qty,
             ]);
-
-        if($updateSupplieQty)
-        {
-            $result = true;
-        }
-        return $result;
     }
 
     public static function getSupplieById($supplieId)
@@ -142,6 +135,25 @@ class Supplies extends Model
             ->get([
                 'dept'
             ]);
+    }
+
+    public static function deleteBulkSupplieBelowDate($updatedAt)
+    {
+        return false;
+        $bulkSupplyID = self::where('updated_at', '<' ,$updatedAt)->pluck('id');
+        if($bulkSupplyID)
+        {
+            self::whereIn('id',$bulkSupplyID)->delete();
+            return true;
+        }
+    }
+
+    public static function getSupplieByLowQty($dt)
+    {
+        return self::where('qty','<=', 'low_stock')
+            ->where('low_stock', '>', '0')
+            ->where('email_sent', '<', $dt)
+            ->get();
     }
 
     public static function deleteSupplieByID($sid)

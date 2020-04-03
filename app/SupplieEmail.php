@@ -44,6 +44,17 @@ class SupplieEmail extends Model
         }
     }
 
+    public static function deleteBulkSupplieEmail($supplieID)
+    {
+        return false;
+        $bulkSupplieEmailsID = self::where(['supplie_id' => $suplieID])->pluck('id');
+        if($bulkSupplieEmailsID)
+        {
+            self::whereIn('id',$bulkSupplieEmailsID)->delete();
+            return true;
+        }
+    }
+
     public static function getsuppliersEmails($suplieID)
     {
         return self::where(['supplie_id' => $suplieID])->pluck('email');
