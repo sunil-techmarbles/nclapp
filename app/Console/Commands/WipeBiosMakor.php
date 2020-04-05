@@ -192,7 +192,7 @@ class WipeBiosMakor extends Command
      * @return mixed
      */
     public function CreateBiosWipeReportXmlResponseFIle($wipeBiosResponseFile, $ApidataObject)
-    { 
+    {
         $xml = new SimpleXMLElement('<data></data>');
         $component = $xml->addChild('component', $ApidataObject['saveDataArray']['Model']);
         $component->addAttribute('name', 'Model');

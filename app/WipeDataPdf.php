@@ -18,6 +18,13 @@ class WipeDataPdf extends Model
 	    'added_date',
     ];
 
+    public static function getWipeFileData($date)
+    {
+        pr( $date ); die;
+        
+    }
+
+
 
     
 }

@@ -47,13 +47,12 @@ class FailedSearchDaily extends Command
         $filePath =  $this->sessionReportDir .'/'.$fileName;
         $FailedSearchRecords = FailedSearch::getRecordByDate($date);
         $this->CreateCSVFile($FailedSearchRecords, $filePath);
-        $this->SendFailedSearchReportDaily( $fileName, $filePath  );
-
+        $this->SendFailedSearchReportDaily($fileName, $filePath);
         die('Failed Search Daily Report Sent');
     }
 
 
-    public function SendFailedSearchReportDaily( $fileName, $filePath )
+    public function SendFailedSearchReportDaily($fileName, $filePath)
     {
         $emails = ReportEmail::getRecordForEdit('Daily');
         $emailsToSend =  explode(', ', $emails[0]);
