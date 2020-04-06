@@ -566,7 +566,7 @@ class RecycleController extends Controller
             $newData = [
                 'name' => $fileName,
                 'started' => $fileCreatedDate,
-                'closed' => '',
+                'closed' => null,
                 'status' => '1'
             ];
             if (empty($checkFile))

@@ -8,7 +8,7 @@
 	<form method="post" id="main-form" action="{{route('save.model.template')}}" autocomplete="off">
 		@csrf
 		<input type="hidden" name="page" value="tplproc"/>
-		<input type="hidden" name="tplid" value="{{@$tplid}}"/>
+		<input type="hidden" name="tplid" value="{{request()->get('tplid')}}"/>
 		<div id="var_tab">
 			{!! @$output !!}
 		</div>
