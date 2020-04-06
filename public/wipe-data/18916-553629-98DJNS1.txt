@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 790
+Computer Serial: 98DJNS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0J3C2F
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.10GH, Speed: 3100 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:9c:ab:67
+DVD-RAM writer: DVD+-RW GH70N
+Drive 1: Model: ST500DM002-1BD142, Serial: S2A55NK3, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 13F7D9CA-AFBA-4B16-9E2F-54021C821862
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 553629
+User3: EquiLend
+User4: 18916
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: S2A55NK3 Size: 500.11 GB
+
+UUID: 935778AC-DF48-4041-9120-125FA5F8EE1C
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 05 Mar 2020 at 17:13:46
+Date & time operation was completed: Thursday, 05 Mar 2020 at 18:44:36
+Total elapsed time (HH:MM:SS): 01:30:50
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

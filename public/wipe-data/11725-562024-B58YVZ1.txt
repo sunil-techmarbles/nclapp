@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7240
+Computer Serial: B58YVZ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0PRPKP
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: ec:f4:bb:0e:f0:da
+NIC: Vendor: Qualcomm Atheros, Model: AR9462 Wireless Network Adapter, MAC Address: Unavailable
+Drive 1: Model: KingFast, Serial: 05242219A0035, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 0
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 3CA2A3CF-7A34-484E-948A-C9ADF450C59C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 562024
+User3: ITAMG
+User4: 11725
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: KingFast
+             Serial: 05242219A0035 Size: 256.06 GB
+
+UUID: 0229B24D-24BA-4972-B8FF-E13B97229291
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 03 Mar 2020 at 11:35:52
+Date & time operation was completed: Tuesday, 03 Mar 2020 at 14:58:15
+Total elapsed time (HH:MM:SS): 03:22:23
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

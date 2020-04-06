@@ -1,0 +1,56 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP COMPAQ PRO 6300 SMALL FORM FACTOR PC
+Computer Serial: 2UA3430VTX
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 339A
+Processor: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 10:60:4b:8d:da:8f
+DVD-RAM writer: DVD-RAM GHA3N
+Drive 1: Model: WDC WD2500AAKX-60U6AA0, Serial: WD-WCC2EPP12012, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 0A6DFB79-8D14-4B10-ABBD-9F5F533046E2
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 579517
+User3: Avis Budget Group
+User4: 19134
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-60U6AA0
+             Serial: WD-WCC2EPP12012 Size: 250.06 GB
+
+UUID: FBEDC5DE-2976-4F2B-84D2-ECC39BCD0DB3
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 10 Mar 2020 at 10:37:16
+Date & time operation was completed: Tuesday, 10 Mar 2020 at 10:45:40
+Total elapsed time (HH:MM:SS): 00:08:24
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

@@ -1,0 +1,157 @@
+
+		<table class="table table-bordered">
+			<tbody><tr>
+				<td colspan="2">Printed by Monica<br>06/20/2019<input type="hidden" id="asin_id" value="15"></td>
+				<td align="center" colspan="2">Asset Number<br><svg id="product_id" width="99px" height="82px" x="0px" y="0px" viewBox="0 0 99 82" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px);"><rect x="0" y="0" width="99" height="82" style="fill:#ffffff;"></rect><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="2" height="50"></rect><rect x="3" y="0" width="1" height="50"></rect><rect x="6" y="0" width="3" height="50"></rect><rect x="11" y="0" width="1" height="50"></rect><rect x="13" y="0" width="1" height="50"></rect><rect x="15" y="0" width="4" height="50"></rect><rect x="22" y="0" width="1" height="50"></rect><rect x="27" y="0" width="2" height="50"></rect><rect x="30" y="0" width="1" height="50"></rect><rect x="33" y="0" width="3" height="50"></rect><rect x="37" y="0" width="1" height="50"></rect><rect x="39" y="0" width="4" height="50"></rect><rect x="44" y="0" width="2" height="50"></rect><rect x="48" y="0" width="3" height="50"></rect><rect x="53" y="0" width="1" height="50"></rect><rect x="55" y="0" width="1" height="50"></rect><rect x="57" y="0" width="4" height="50"></rect><rect x="62" y="0" width="3" height="50"></rect><rect x="66" y="0" width="2" height="50"></rect><rect x="71" y="0" width="3" height="50"></rect><rect x="75" y="0" width="1" height="50"></rect><rect x="77" y="0" width="2" height="50"></rect><text style="font: 10px monospace" text-anchor="middle" x="39.5" y="62">92732</text></g></svg></td>
+				<td align="center" colspan="2">Serial Number<br><svg id="product_sern" width="88px" height="82px" x="0px" y="0px" viewBox="0 0 88 82" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px);"><rect x="0" y="0" width="88" height="82" style="fill:#ffffff;"></rect><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="2" height="50"></rect><rect x="3" y="0" width="1" height="50"></rect><rect x="6" y="0" width="3" height="50"></rect><rect x="11" y="0" width="2" height="50"></rect><rect x="14" y="0" width="2" height="50"></rect><rect x="18" y="0" width="2" height="50"></rect><rect x="22" y="0" width="2" height="50"></rect><rect x="25" y="0" width="2" height="50"></rect><rect x="29" y="0" width="2" height="50"></rect><rect x="33" y="0" width="2" height="50"></rect><rect x="36" y="0" width="2" height="50"></rect><rect x="40" y="0" width="2" height="50"></rect><rect x="44" y="0" width="2" height="50"></rect><rect x="48" y="0" width="2" height="50"></rect><rect x="52" y="0" width="2" height="50"></rect><rect x="55" y="0" width="2" height="50"></rect><rect x="60" y="0" width="3" height="50"></rect><rect x="64" y="0" width="1" height="50"></rect><rect x="66" y="0" width="2" height="50"></rect><text style="font: 10px monospace" text-anchor="middle" x="34" y="62">000000</text></g></svg></td>
+				<td align="center" colspan="2">ASIN<br><svg id="product_asin" width="165px" height="82px" x="0px" y="0px" viewBox="0 0 165 82" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0px, 0px);"><rect x="0" y="0" width="165" height="82" style="fill:#ffffff;"></rect><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="2" height="50"></rect><rect x="3" y="0" width="1" height="50"></rect><rect x="6" y="0" width="1" height="50"></rect><rect x="11" y="0" width="1" height="50"></rect><rect x="15" y="0" width="1" height="50"></rect><rect x="17" y="0" width="2" height="50"></rect><rect x="22" y="0" width="1" height="50"></rect><rect x="25" y="0" width="3" height="50"></rect><rect x="29" y="0" width="2" height="50"></rect><rect x="33" y="0" width="1" height="50"></rect><rect x="36" y="0" width="3" height="50"></rect><rect x="41" y="0" width="2" height="50"></rect><rect x="44" y="0" width="1" height="50"></rect><rect x="46" y="0" width="3" height="50"></rect><rect x="50" y="0" width="2" height="50"></rect><rect x="55" y="0" width="2" height="50"></rect><rect x="59" y="0" width="3" height="50"></rect><rect x="64" y="0" width="1" height="50"></rect><rect x="66" y="0" width="3" height="50"></rect><rect x="71" y="0" width="1" height="50"></rect><rect x="73" y="0" width="2" height="50"></rect><rect x="77" y="0" width="2" height="50"></rect><rect x="81" y="0" width="1" height="50"></rect><rect x="83" y="0" width="3" height="50"></rect><rect x="88" y="0" width="1" height="50"></rect><rect x="92" y="0" width="3" height="50"></rect><rect x="96" y="0" width="2" height="50"></rect><rect x="99" y="0" width="2" height="50"></rect><rect x="102" y="0" width="3" height="50"></rect><rect x="107" y="0" width="1" height="50"></rect><rect x="110" y="0" width="3" height="50"></rect><rect x="114" y="0" width="3" height="50"></rect><rect x="118" y="0" width="2" height="50"></rect><rect x="121" y="0" width="1" height="50"></rect><rect x="126" y="0" width="1" height="50"></rect><rect x="129" y="0" width="2" height="50"></rect><rect x="132" y="0" width="2" height="50"></rect><rect x="137" y="0" width="3" height="50"></rect><rect x="141" y="0" width="1" height="50"></rect><rect x="143" y="0" width="2" height="50"></rect><text style="font: 10px monospace" text-anchor="middle" x="72.5" y="62">B01M293O5P</text></g></svg></td>
+			</tr>
+			<tr>
+				<td colspan="2">Model: <span id="f_model">Latitude E6430</span></td>
+				<td colspan="2"><span id="f_cpu">i5-3320M_2.6GHz</span></td>
+				<td colspan="2">RAM: <span id="f_ram">8GB</span></td>
+				<td colspan="2">HDD: <span id="f_hdd">128GB</span></td>
+			</tr>
+			<tr>
+				<td colspan="3">GRADE: <span style="font-size: 20px; line-height: 20px" id="product_grade">W</span></td>
+				<td colspan="2"><span id="f_technology">Notebook</span> <span class="cspecs c_webcam"><span class="f_opt" id="f_webcam">Webcam</span></span></td>
+				<td colspan="3"><span id="f_os_label">Windows 7 Professional</span></td>
+			</tr>
+		</tbody></table>
+		
+		<table class="table table-bordered">
+			<tbody><tr>
+				<th style="width: 15%">Initials</th>
+				<th colspan="7">Next Process</th>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Condition</td>
+				<td colspan="6">
+					<div class="frmrow c_screen" style="display: none;"><b>Screen:</b> <span class="f_opt" id="f_screen">N/A</span></div>
+					<div class="frmrow c_case" style="display: block;"><b>Case:</b> <span class="f_opt" id="f_case">Case_Scratch_Minor; Cracked_Case_Minor; Damaged_Bezel; Latch_Will_Not_Close (Laptop)</span></div>
+					<div class="frmrow c_io" style="display: none;"><b>Input/Output:</b> <span class="f_opt" id="f_io">N/A</span></div>
+					<div class="frmrow c_functional" style="display: none;"><b>Functional:</b> <span class="f_opt" id="f_functional">N/A</span></div>
+					<div class="frmrow c_missing" style="display: block;"><b>Missing:</b> <span class="f_opt" id="f_missing">Rubber_Feet</span></div>
+					<div class="frmrow c_other" style="display: none;"><b>Other:</b> <span class="f_opt" id="f_other">N/A</span></div>
+				</td>
+			</tr>
+			<tr class="c_swap" style="display: none;">
+				<td rowspan="2">&nbsp;</td>
+				<td rowspan="2">Replaceable parts</td>
+				<td align="center">Lid Cover</td>
+				<td align="center">LCD</td>
+				<td align="center">Rear Cover</td>
+				<td align="center">Keyboard</td>
+				<td align="center">Palm Rest</td>
+				<td align="center">Rubber Feet</td>
+			</tr>
+			<tr class="c_swap" style="display: none;">
+				<td class="replace_parts" align="center" data-cbref="Top Cover"></td>
+				<td class="replace_parts" align="center" data-cbref="Screen"></td>
+				<td class="replace_parts" align="center" data-cbref="Back Cover"></td>
+				<td class="replace_parts" align="center" data-cbref="Keyboard Cover"></td>
+				<td class="replace_parts" align="center"></td>
+				<td class="replace_parts" align="center"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Internal cleaning</td>
+				<td colspan="3">Thoroughly Clean and Dust Inside Of Machine</td>
+				<td colspan="3">Replace CMOS Battery</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Configure</td>
+				<td colspan="3"><span id="f_nram">RAM: ⇒ 8GB</span></td>
+				<td colspan="3"><span id="f_nhdd">HDD: ⇒ 128GB</span></td>
+			</tr>
+			
+			<tr>
+				<td rowspan="4">&nbsp;</td>
+				<td rowspan="4">Diagnostic / Testing</td>
+				<td align="center">BIOS Flash</td>
+				<td align="center">Drivers</td>
+				<td align="center">Programs</td>
+				<td align="center">TouchPad</td>
+				<td align="center">Keyboard</td>
+				<td align="center">Battery</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="center">Burn</td>
+				<td align="center">Screen</td>
+				<td align="center">WiFi</td>
+				<td align="center">Activation</td>
+				<td align="center">Recovery</td>
+				<td align="center">Cortana</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Exterior cleaning</td>
+				<td colspan="6">Thoroughly Clean Exterior or Machine and Remove All Labels and Stickers</td>
+			</tr>
+			<tr class="skin" style="display: table-row;">
+				<td>&nbsp;</td>
+				<td>Skin</td>
+				<td colspan="6">Requires Skin</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Scan &amp; COA</td>
+				<td colspan="3">______ Scan</td>
+				<td colspan="3">______ COA | WIN8 ______</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Final Check and Shrink/Wrap</td>
+				<td colspan="3">______ Final Check</td>
+				<td colspan="3">Shrink Wrap ______</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Accessories</td>
+				<td colspan="6">
+					
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>Box Description</td>
+				<td colspan="6">&nbsp;</td>
+			</tr>
+		</tbody></table>
+		<table class="table table-bordered">
+			<tbody><tr>
+				<td style="width: 70%">Approved By:</td>
+				<td>Box Date</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="font-weight: bold">
+					If the unit fails any of the steps above please note the reason in "Reported Issues" field and add it to the Wholesale Pallet.
+				</td>
+			</tr>
+		</tbody></table>
+		<table class="table table-bordered">
+			<tbody><tr>
+				<td style="width: 30%">Rejected By:</td>
+				<td id="f_rep_issues">Reported issues: </td>
+			</tr>
+		</tbody></table>
+
+	

@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7250
+Computer Serial: BJYHJ72
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0V8RX3
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: f8:ca:b8:56:cd:e6
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4352 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+Drive 1: Model: SAMSUNG SSD PM871 mSATA 256GB, Serial: S20ENXAGB29890, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: C844F768-C0C0-4D39-BFB1-10C06582693A
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 597405
+Lot Name: wunderman thompson
+Lot Number: 19370
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD PM871 mSATA 256GB
+             Serial: S20ENXAGB29890 Size: 256.06 GB
+
+UUID: B0ECC1B1-9393-4E0C-801D-03923D837301
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Monday, 16 Mar 2020 at 10:55:42
+Action End Time: Monday, 16 Mar 2020 at 11:04:03
+Action Duration: 00:08:21
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

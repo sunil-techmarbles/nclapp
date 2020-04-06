@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4286CTO
+Computer Serial: R9F8KVY
+Motherboard Vendor: LENOVO
+Motherboard Model: 4286CTO
+Processor: Intel(R) Core(TM) i5-2540M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:de:f1:78:9e:72
+Drive 1: Model: HITACHI HTS723232A7A364, Serial: E3834563JMHMGN, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 5911E395-B651-41C9-9AD3-CDB4C005D520
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568310
+User3: Epstein Becker user3 = Lot Name Green
+User4: 18808
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: HITACHI HTS723232A7A364
+             Serial: E3834563JMHMGN Size: 320.07 GB
+
+UUID: BEB19935-C8F3-4871-B9B0-065DCC2DA2E1
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 24 Feb 2020 at 10:34:05
+Date & time operation was completed: Monday, 24 Feb 2020 at 11:56:40
+Total elapsed time (HH:MM:SS): 01:22:35
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10A90014US
+Computer Serial: MJ01WXKU
+Motherboard Vendor: LENOVO
+Motherboard Model: SHARKBAY
+Processor: Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 44:39:c4:91:21:0b
+NIC: Vendor: Intel Corporation, Model: Centrino Wireless-N 105, MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVD-RAM GHC0N
+Drive 1: Model: WDC WD10EZEX-08M2NA0, Serial: WD-WCC3F6AV90S1, Size: 1000.20 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 15B50B71-29B1-4B11-84AA-D35C34257AA3
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 580642
+User3: Golub Capital Partners LLC
+User4: 19141
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD10EZEX-08M2NA0
+             Serial: WD-WCC3F6AV90S1 Size: 1000.20 GB
+
+UUID: 511E85D2-3CC0-4400-BFD0-D9F3BE903122
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 10 Mar 2020 at 11:09:31
+Date & time operation was completed: Tuesday, 10 Mar 2020 at 13:24:57
+Total elapsed time (HH:MM:SS): 02:15:26
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

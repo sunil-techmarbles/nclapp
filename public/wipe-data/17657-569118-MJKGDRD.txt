@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4518B84
+Computer Serial: MJKGDRD
+Motherboard Vendor: LENOVO
+Motherboard Model: Unavailable
+Processor: Intel(R) Core(TM) i7-2600 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: cc:52:af:41:92:07
+DVD-RAM writer: DVD RW AD-7250H
+Drive 1: Model: INTEL SSDSA2BW160G3L, Serial: BTPR152001XD160DGN, Size: 160.04 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cedar [Radeon HD 5000/6000/7350/8350 Series]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cedar HDMI Audio [Radeon HD 5400/6300/7300 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B503307E-88DF-43CE-845D-27B880E0B1EC
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 569118
+Lot Name: Goodwin Procter LLP
+Lot Number: 17657
+\"Product\": Computer
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: BTPR152001XD160DGN Size: 160.04 GB
+
+UUID: 88C0DD12-D5FE-4159-9CAE-8FBDC84D2709
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 312581808
+Sectors Not Overwritten: 0
+Sectors Verified: 312581808
+Action Start Time: Tuesday, 03 Mar 2020 at 06:31:57
+Action End Time: Tuesday, 03 Mar 2020 at 07:12:31
+Action Duration: 00:40:34
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

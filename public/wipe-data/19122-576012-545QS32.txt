@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7450
+Computer Serial: 545QS32
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 06HN6G
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 34:e6:d7:7d:7b:7c
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: Unavailable
+Drive 1: Model: SK hynix SC210 mSATA 256GB, Serial: EJ53N747712903H22, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+USB Ports: 2
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: BDE98183-8FB1-453D-ABA0-60F170D6CB1C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 576012
+User3: PRA Health Sciences
+User4: 19122
+User5: Laptop
+
+>> Drive #1  Vendor: None found Model: SK hynix SC210 mSATA 256GB
+             Serial: EJ53N747712903H22 Size: 256.06 GB
+
+UUID: C04614A1-2214-4D17-9600-E40BCF24BBFC
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 20 Mar 2020 at 13:28:22
+Date & time operation was completed: Friday, 20 Mar 2020 at 14:08:29
+Total elapsed time (HH:MM:SS): 00:40:07
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

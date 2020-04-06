@@ -27,7 +27,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('blancco:api')
             ->daily();
 
-        $schedule->command('BlanccoMakorApi:api')
+        $schedule->command('BlanccoMakor:api')
             ->daily();
 
         $schedule->command('WipeMakor:api')
@@ -41,6 +41,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('faildSearch:weekly')
             ->weekly();
+
+        $schedule->command('WipeBiosBlanccoFiles:count')
+            ->daily();
     }
 
     /**
@@ -51,7 +54,6 @@ class Kernel extends ConsoleKernel
     protected function commands()
     {
         $this->load(__DIR__.'/Commands');
-
         require base_path('routes/console.php');
     }
 }

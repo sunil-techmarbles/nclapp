@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac16,2
+Computer Serial: D25S70GPGG7D
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-FFE5EF870D7BA81A
+Processor: Intel(R) Core(TM) i5-5575R CPU @ 2.80GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: a8:60:b6:00:ef:71
+Drive 1: Model: APPLE HDD HTS541010A9E662, Serial: J88000D81DX9PB, Size: 1000.20 GB
+Display Adapter: Vendor: Intel Corporation, Model: Iris Pro Graphics 6200
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 9 Series Chipset Family HD Audio Controller
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 66C4A958-BA3E-489E-BE31-849A5240A98E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 549499
+User3: New York Athletic Club
+User4: 18917
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Apple Model: APPLE HDD HTS541010A9E662
+             Serial: J88000D81DX9PB Size: 1000.20 GB
+
+UUID: 83A1318A-5A2A-4352-B2A6-524AB2E40091
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 09 Mar 2020 at 19:14:35
+Date & time operation was completed: Monday, 09 Mar 2020 at 23:25:59
+Total elapsed time (HH:MM:SS): 04:11:24
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FMS1G400
+Computer Serial: PC0D0R9S
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FMS1G400
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: c8:5b:76:05:d1:53
+Drive 1: Model: WDC WD5000LPLX08ZNTT0, Serial: WD-WX61A26PA1S2, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: C064E786-3641-4570-A6EF-B5BB5E4D84DE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 598638
+User3: Northwell Health
+User4: 19397
+User5: Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000LPLX08ZNTT0
+             Serial: WD-WX61A26PA1S2 Size: 500.11 GB
+
+UUID: A612C1DC-30CA-470E-91DF-61579564D568
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 18 Mar 2020 at 13:24:52
+Date & time operation was completed: Wednesday, 18 Mar 2020 at 18:16:30
+Total elapsed time (HH:MM:SS): 04:51:38
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,57 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2349G4U
+Computer Serial: PBM08RX
+Motherboard Vendor: LENOVO
+Motherboard Model: 2349G4U
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 28:d2:44:1d:29:72
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+Drive 1: Model: HGST HTS725032A7E630, Serial: TF645AY110K3TJ, Size: 320.07 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF108M [NVS 5400M]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: E330CC2D-A83F-45A7-8B26-F6991254CD9C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578869
+User3: Avis Budget Group
+User4: 19134
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: HGST HTS725032A7E630
+             Serial: TF645AY110K3TJ Size: 320.07 GB
+
+UUID: F308EE38-E033-408C-A632-9E4F7D5F8873
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 18 Feb 2020 at 10:21:58
+Date & time operation was completed: Tuesday, 18 Feb 2020 at 10:27:09
+Total elapsed time (HH:MM:SS): 00:05:11
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: FAILED!
+Post-wipe SMART health status: FAILED!
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

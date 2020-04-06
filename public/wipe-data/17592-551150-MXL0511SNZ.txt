@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq 8100 Elite SFF PC
+Computer Serial: MXL0511SNZ
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 304Ah
+Processor: Intel(R) Core(TM) i5 CPU         650  @ 3.20GHz, Speed: 3200 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82578DM Gigabit Network Connection, MAC Address: 6c:62:6d:b2:44:a3
+DVD-RAM writer: DVD A DH16ABLH
+Drive 1: Model: ST3250318AS, Serial: 9VMVTQ03, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 393A71F6-AEF0-4249-BD43-936DA8BA88B3
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 551150
+User3: Conde Nast
+User4: 17592
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3250318AS
+             Serial: 9VMVTQ03 Size: 250.06 GB
+
+UUID: E94C10AD-F74E-4155-A14E-6DDF9E3D0B44
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Wednesday, 26 Feb 2020 at 15:48:38
+Date & time operation was completed: Wednesday, 26 Feb 2020 at 16:36:40
+Total elapsed time (HH:MM:SS): 00:48:02
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

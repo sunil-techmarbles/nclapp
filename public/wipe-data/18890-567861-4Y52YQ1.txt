@@ -1,0 +1,97 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R710
+Computer Serial: 4Y52YQ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 00NH4P
+Processor: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5630  @ 2.53GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 163840 MB, Memory banks: 10, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 78:2b:cb:27:94:92
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 78:2b:cb:27:94:94
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 78:2b:cb:27:94:96
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 78:2b:cb:27:94:98
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:b4:73:08
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:b4:73:09
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:b4:73:0c
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:b4:73:0d
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD reader: DVD-ROM DV-28SW
+Drive 1: Model: WDC WD5003ABYX-18WERA0, Serial: WD-WMAYP1032320, Size: 500.11 GB
+Drive 2: Model: WDC WD5003ABYX-18WERA0, Serial: WD-WMAYP1032980, Size: 500.11 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B0BA0447-A90C-48FC-952C-C2E8368D6C3F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 567861
+User3: CSM Sport user3 = Lot Name Entertainment
+User4: 18890
+\"Product\": Server
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5003ABYX-18WERA0
+             Serial: WD-WMAYP1032320 Size: 500.11 GB
+
+UUID: B8050253-3DEC-4B6B-95C9-1D6BC31E0C69
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 17:04:18
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 18:36:03
+Total elapsed time (HH:MM:SS): 01:31:45
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD5003ABYX-18WERA0
+             Serial: WD-WMAYP1032980 Size: 500.11 GB
+
+UUID: FFA0DBE8-1541-4595-93C0-6EEBDE66DEE5
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 17:04:18
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 18:35:54
+Total elapsed time (HH:MM:SS): 01:31:36
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

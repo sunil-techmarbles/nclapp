@@ -1,0 +1,132 @@
+
+		<div style="position: absolute;left: 180px;top: 0;text-align: center">GRADE<br><span id="product_grade" style="font-size: 45px; line-height: 45px">B</span></div>
+		<div style="position: absolute;right: 0;top: 0;"><svg xmlns="http://www.w3.org/2000/svg" id="product_id" style="transform: translate(0px, 0px);" viewBox="0 0 99 82" x="0px" y="0px" width="99px" height="82px" version="1.1"><rect style="fill:#ffffff;" x="0" y="0" width="99" height="82" /><g style="fill:#000000;" transform="translate(10 10)"><rect x="0" y="0" width="2" height="50" /><rect x="3" y="0" width="1" height="50" /><rect x="6" y="0" width="3" height="50" /><rect x="11" y="0" width="4" height="50" /><rect x="16" y="0" width="1" height="50" /><rect x="18" y="0" width="1" height="50" /><rect x="22" y="0" width="3" height="50" /><rect x="26" y="0" width="2" height="50" /><rect x="30" y="0" width="1" height="50" /><rect x="33" y="0" width="3" height="50" /><rect x="37" y="0" width="1" height="50" /><rect x="39" y="0" width="4" height="50" /><rect x="44" y="0" width="1" height="50" /><rect x="47" y="0" width="3" height="50" /><rect x="52" y="0" width="2" height="50" /><rect x="55" y="0" width="2" height="50" /><rect x="59" y="0" width="1" height="50" /><rect x="62" y="0" width="1" height="50" /><rect x="66" y="0" width="2" height="50" /><rect x="71" y="0" width="3" height="50" /><rect x="75" y="0" width="1" height="50" /><rect x="77" y="0" width="2" height="50" /><text style="font: 10px monospace" text-anchor="middle" x="39.5" y="62">97271</text></g></svg></div>
+		<div style="position: absolute;left: 0;top: 0;"><svg xmlns="http://www.w3.org/2000/svg" id="product_asin" style="transform: translate(0px, 0px);" viewBox="0 0 165 82" x="0px" y="0px" width="165px" height="82px" version="1.1"><rect style="fill:#ffffff;" x="0" y="0" width="165" height="82" /><g style="fill:#000000;" transform="translate(10 10)"><rect x="0" y="0" width="2" height="50" /><rect x="3" y="0" width="1" height="50" /><rect x="6" y="0" width="1" height="50" /><rect x="11" y="0" width="1" height="50" /><rect x="15" y="0" width="1" height="50" /><rect x="17" y="0" width="2" height="50" /><rect x="22" y="0" width="1" height="50" /><rect x="25" y="0" width="3" height="50" /><rect x="29" y="0" width="2" height="50" /><rect x="33" y="0" width="1" height="50" /><rect x="36" y="0" width="3" height="50" /><rect x="41" y="0" width="2" height="50" /><rect x="44" y="0" width="1" height="50" /><rect x="46" y="0" width="3" height="50" /><rect x="50" y="0" width="2" height="50" /><rect x="55" y="0" width="2" height="50" /><rect x="59" y="0" width="3" height="50" /><rect x="64" y="0" width="1" height="50" /><rect x="66" y="0" width="3" height="50" /><rect x="71" y="0" width="1" height="50" /><rect x="73" y="0" width="2" height="50" /><rect x="77" y="0" width="1" height="50" /><rect x="79" y="0" width="3" height="50" /><rect x="85" y="0" width="2" height="50" /><rect x="88" y="0" width="1" height="50" /><rect x="90" y="0" width="2" height="50" /><rect x="93" y="0" width="3" height="50" /><rect x="99" y="0" width="2" height="50" /><rect x="104" y="0" width="1" height="50" /><rect x="106" y="0" width="1" height="50" /><rect x="110" y="0" width="2" height="50" /><rect x="113" y="0" width="3" height="50" /><rect x="119" y="0" width="1" height="50" /><rect x="121" y="0" width="1" height="50" /><rect x="124" y="0" width="3" height="50" /><rect x="128" y="0" width="2" height="50" /><rect x="132" y="0" width="2" height="50" /><rect x="137" y="0" width="3" height="50" /><rect x="141" y="0" width="1" height="50" /><rect x="143" y="0" width="2" height="50" /><text style="font: 10px monospace" text-anchor="middle" x="72.5" y="62">B01M29NJHT</text></g></svg></div>
+		<table style="width: 100%">
+			<tbody><tr>
+				<td valign="top" style="width: 50%">
+					<b>Current Specs:</b>
+					<div class="cspecs c_model"><b>Model:</b> <span id="f_model">Surface Pro 3</span></div>
+					<div class="cspecs c_technology"><b>Technology:</b> <span id="f_technology">Tabet_Notebook</span></div>
+					<div class="cspecs c_cpu"><b>CPU:</b> <span id="f_cpu">i5-4300U_1.9GHz</span></div>
+					<div class="cspecs c_ram"><b>RAM:</b> <span id="f_ram">4GB</span></div>
+					<div class="cspecs c_hdd"><b>HDD:</b> <span id="f_hdd">128GB</span></div>
+					<div class="cspecs frmrow c_webcam" style="display: block;"><b>Webcam:</b> <span class="f_opt" id="f_webcam">Yes</span></div>
+					<div class="cspecs frmrow c_fingerprint" style="display: block;"><b>Fingerprint:</b> <span class="f_opt" id="f_fingerprint">No</span></div>
+					<div class="cspecs frmrow c_battery" style="display: block;"><b>Battery:</b> <span class="f_opt" id="f_battery">Battery_Yes</span></div>
+					<div class="cspecs frmrow c_battery_cond" style="display: block;"><b>Battery Condition:</b> <span class="f_opt" id="f_battery_cond">Moderate</span></div>
+					<div class="cspecs frmrow c_os_label" style="display: block;"><b>OS Label:</b> <span id="f_os_label">Windows 8 Pro</span></div>
+					
+					<div class="conf-only specs" style="display: block;">
+						<div style="margin-top: 5px"><b>Configure:</b></div>
+						<div class="cspecs specsram" style="display: none;"><b>RAM:</b> <span id="f_nram"></span></div>
+						<div class="cspecs specshdd" style="display: block;"><b>HDD:</b> <span id="f_nhdd">⇒ 256GB</span></div>
+						<div class="cspecs specsos" style="display: block;"><b>OS Label:</b> <span id="f_nos_label">⇒ Windows 10</span></div>
+					</div>
+					
+					<div style="margin-top: 5px"><b>Description:</b></div>
+					<div class="frmrow c_screen" style="display: block;"><b>Screen:</b> <span class="f_opt" id="f_screen">Cracked_Screen_Severe; Cracked_Screen</span></div>
+					<div class="frmrow c_case" style="display: block;"><b>Case:</b> <span class="f_opt" id="f_case">Case_Scratch_Minor; Case_Dent_Coner_Severe</span></div>
+					<div class="frmrow c_io" style="display: none;"><b>Input/Output:</b> <span class="f_opt" id="f_io">N/A</span></div>
+					<div class="frmrow c_functional" style="display: none;"><b>Functional:</b> <span class="f_opt" id="f_functional">N/A</span></div>
+					<div class="frmrow c_missing" style="display: none;"><b>Missing:</b> <span class="f_opt" id="f_missing">N/A</span></div>
+					<div class="frmrow c_other" style="display: none;"><b>Other:</b> <span class="f_opt" id="f_other">N/A</span></div>
+					<div style="margin-top: 5px;font-size: 10px;">Printed by Refurbishing</div>
+				</td>
+				<td valign="top" style="width: 50%">
+					<b>Next Process:</b>
+					<div class="tasklist taskgrp">Internal Dusting</div>
+					<div class="tasklist taskgrp">Clone HD</div>
+					<div class="taskgrp conf-only specs" style="display: block;">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">Configure<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist specsram" style="display: none;">RAM</div>
+									<div class="tasklist specshdd" style="display: block;">HDD</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<div class="tasklist taskgrp">BIOS Flash</div>
+					<div class="tasklist conf-only activate taskgrp" style="display: block;">Activate Windows</div>
+					<div class="tasklist laptop-only taskgrp" style="display: block;">KB/Screen/Battery Test</div>
+					<div class="bondo taskgrp" style="display: none;">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">Bondo<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist">Pre-Mask</div>
+									<div class="tasklist">Pre-Sand</div>
+									<div class="tasklist">Apply Bondo</div>
+									<div class="tasklist">Post Sand</div>
+									<div class="tasklist">Clean/Dust</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<div class="taskgrp paint" style="display: block;">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">Mask<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist bondo" style="display: none;">Check Bondo</div>
+									<div class="tasklist">Clean</div>
+									<div class="tasklist">Remove Bezel</div>
+									<div class="tasklist">Mask</div>
+									<div class="tasklist">Clean</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<div class="taskgrp paint" style="display: block;">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">Paint<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist">Check Mask</div>
+									<div class="tasklist">Plug Ports</div>
+									<div class="tasklist">Paint</div>
+									<div class="tasklist">Clear Coat</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<div class="taskgrp skin" style="display: block;">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">Skin<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist paint" style="display: block;">Check Paint</div>
+									<div class="tasklist bondo" style="display: none;">Check Bondo</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<div class="taskgrp">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">COA<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist">Apply COA</div>
+									<div class="tasklist">Scan to Sheets</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>
+					<div class="tasklist taskgrp">Cortana Check</div>
+					<div class="taskgrp">
+						<table style="width: 100%">
+							<tbody><tr>
+								<td class="grp-head">Final Check<br><span style="font-size: 14px; line-height: 14px">▢&nbsp;&nbsp;▢</span></td>
+								<td>
+									<div class="tasklist">Final Inspection</div>
+									<div class="tasklist">Scan to Sheets</div>
+								</td>
+							</tr>
+						</tbody></table>
+					</div>	
+				</td>
+			</tr>
+		</tbody></table>
+	

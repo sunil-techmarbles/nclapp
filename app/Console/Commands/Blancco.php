@@ -157,7 +157,7 @@ class Blancco extends Command
         {
             foreach ($blanccoReportData as $key => $data)
             {
-                if ($data['@attributes']['name'] == $variableToGet)
+                if (isset( $data['@attributes']['name'] ) && $data['@attributes']['name'] == $variableToGet)
                 {
                     $result = $data['@value'];
                 }

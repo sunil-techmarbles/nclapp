@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 9020
+Computer Serial: JNP59Z1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0PC5F7
+Processor: Intel(R) Core(TM) i5-4670 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: f8:b1:56:9a:e6:5e
+DVD-RAM writer: DVD+-RW GHA2N
+Drive 1: Model: ST500DM002-1BD142, Serial: Z3TS15DH, Size: 500.11 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Oland [Radeon HD 8570 / R7 240/340 OEM]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cape Verde/Pitcairn HDMI Audio [Radeon HD 7700/7800 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 09384870-C4D2-46CB-9BBB-BAA59F9E1270
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 584279
+Lot Name: The Heyman Enterprise
+Lot Number: 19196
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z3TS15DH Size: 500.11 GB
+
+UUID: F86CFE3D-738D-46F0-AC03-603B0D56B449
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Monday, 02 Mar 2020 at 17:00:44
+Action End Time: Monday, 02 Mar 2020 at 18:33:53
+Action Duration: 01:33:09
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

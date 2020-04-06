@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac11,3
+Computer Serial: QP1150K8DNP
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F2238BAE
+Processor: Intel(R) Core(TM) i5 CPU         680  @ 3.60GHz, Speed: 3600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: c8:2a:14:00:b5:47
+NIC: Vendor: Qualcomm Atheros, Model: AR928X Wireless Network Adapter (PCI-Express), MAC Address: Unavailable
+DVD writer: DVDRW GA32N
+Drive 1: Model: WDC WD1001FALS-40Y6A0, Serial: WD-WCATR5959195, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Madison [Mobility Radeon HD 5730 / 6570M]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Redwood HDMI Audio [Radeon HD 5000 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 74312305-2A22-4177-8704-CFFC641013E5
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 552925
+User3: Constituency Management Group
+User4: 18976
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD1001FALS-40Y6A0
+             Serial: WD-WCATR5959195 Size: 1000.20 GB
+
+UUID: 8BA9DDD1-968F-4F76-99E6-A0530AE97A6D
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 09 Mar 2020 at 17:47:45
+Date & time operation was completed: Monday, 09 Mar 2020 at 20:56:19
+Total elapsed time (HH:MM:SS): 03:08:34
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

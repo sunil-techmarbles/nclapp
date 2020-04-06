@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac14,2
+Computer Serial: D25MF0T0F8JC
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-27ADBB7B4CEE8E61
+Processor: Intel(R) Core(TM) i7-4771 CPU @ 3.50GHz, Speed: 3500 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 32768 MB, Memory banks: 4, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 68:5b:35:c0:de:04
+Drive 1: Model: APPLE HDD WD10EZES-40UFAA0, Serial: WD-WCC1S8366787, Size: 1000.20 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK104M [GeForce GTX 780M Mac Edition]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK104 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 230BFEA9-2D29-4FF1-AF78-D1EF8A4325A1
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 582977
+Lot Name: Geometry Global
+Lot Number: 19117
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Apple Model: APPLE HDD WD10EZES-40UFAA0
+             Serial: WD-WCC1S8366787 Size: 1000.20 GB
+
+UUID: D1335050-05FE-4C78-9E85-5DEAFE65BADD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195360016
+Action Start Time: Tuesday, 11 Feb 2020 at 19:23:58
+Action End Time: Tuesday, 11 Feb 2020 at 21:36:21
+Action Duration: 02:12:23
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

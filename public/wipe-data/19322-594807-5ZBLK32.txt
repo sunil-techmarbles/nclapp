@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7450
+Computer Serial: 5ZBLK32
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0D8H72
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 34:e6:d7:33:ce:cc
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 60:57:18:5d:36:58
+Drive 1: Model: SK hynix SC210 mSATA 128GB, Serial: EI4CN09951080CS39, Size: 128.04 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: FD58FFC6-BFBB-45A6-B4C1-720E224E38F2
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 594807
+Lot Name: Owens Corning
+Lot Number: 19322
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SK hynix Model: SK hynix SC210 mSATA 128GB
+             Serial: EI4CN09951080CS39 Size: 128.04 GB
+
+UUID: 597BEB01-7B8B-4B6E-9EF0-6692B9265301
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Friday, 20 Mar 2020 at 08:18:10
+Action End Time: Friday, 20 Mar 2020 at 08:26:05
+Action Duration: 00:07:55
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

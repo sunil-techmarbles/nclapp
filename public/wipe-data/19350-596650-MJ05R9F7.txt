@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10MQS1QF00
+Computer Serial: MJ05R9F7
+Motherboard Vendor: LENOVO
+Motherboard Model: 3111
+Processor: Intel(R) Core(TM) i3-6100T CPU @ 3.20GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: 6c:4b:90:0a:12:91
+Drive 1: Model: WDC WD5000LPLX08ZNTT0, Serial: WD-WXL1A673J83H, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: FDF76643-9375-4746-9FB3-F66151A01703
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 596650
+User3: Northwell Health
+User4: 19350
+User5: Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000LPLX08ZNTT0
+             Serial: WD-WXL1A673J83H Size: 500.11 GB
+
+UUID: 676590F4-18E1-4096-84F0-D2D0291AFE41
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO Locked: WARNING: This drive has DCO features but they were locked by the machine during startup.  In this state WipeDrive is not able to determine if the drive size has been altered.  As a result the drive might not have been completely wiped.
+Date & time operation was started: Tuesday, 17 Mar 2020 at 15:05:08
+Date & time operation was completed: Tuesday, 17 Mar 2020 at 19:48:58
+Total elapsed time (HH:MM:SS): 04:43:50
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

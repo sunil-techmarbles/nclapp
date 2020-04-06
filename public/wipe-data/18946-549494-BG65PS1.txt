@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 790
+Computer Serial: BG65PS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0D28YY
+Processor: Intel(R) Core(TM) i7-2600 CPU @ 3.40GH, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 18:03:73:1a:c6:31
+DVD-RAM writer: DVD+-RW DS-8A8SH
+Drive 1: Model: WDC WD2500AAKX-753CA1, Serial: WD-WMAYV2553183, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: E31E704F-3267-4989-8F3D-FB2BB8727BA8
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 549494
+User3: NYC user3 = Lot Name Company, Inc.
+User4: 18946
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-753CA1
+             Serial: WD-WMAYV2553183 Size: 250.06 GB
+
+UUID: EC8A6DC6-14F1-49DF-BDA9-1060B8C200B7
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 24 Sep 2013 at 04:42:10
+Date & time operation was completed: Tuesday, 24 Sep 2013 at 05:28:52
+Total elapsed time (HH:MM:SS): 00:46:42
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

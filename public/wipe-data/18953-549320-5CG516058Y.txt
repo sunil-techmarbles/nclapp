@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 840 G2
+Computer Serial: 5CG516058Y
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 2216
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 3c:a8:2a:86:49:70
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: Unavailable
+Drive 1: Model: ST500LM021-1KJ152, Serial: W624CPJJ, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 0952029E-3983-4090-8AC4-F6DFAD5BD0B4
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 549320
+User3: World Wrestling Entertainment
+User4: 18953
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W624CPJJ Size: 500.11 GB
+
+UUID: 31C1C1A9-50DC-42AF-8CEC-0373B850886E
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 10 Feb 2020 at 16:34:10
+Date & time operation was completed: Monday, 10 Feb 2020 at 17:49:20
+Total elapsed time (HH:MM:SS): 01:15:10
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -154,3 +154,17 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/import', 'MainController@importIndex')->name('import');
 	});
 });
+
+// all the api to run through a URL;
+Route::get('/blanccoapi', function () {
+    Artisan::queue('blancco:api', []);
+});
+Route::get('/blanccomakorapi', function () {
+    Artisan::queue('BlanccoMakor:api', []);
+});
+Route::get('/wipebiosmakorapi', function () {
+    Artisan::queue('WipeBiosMakor:api', []);
+});
+Route::get('/wipemakorapi', function () {
+    Artisan::queue('WipeMakor:api', []);
+});

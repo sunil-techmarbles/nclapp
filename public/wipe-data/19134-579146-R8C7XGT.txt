@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4236FM9
+Computer Serial: R8C7XGT
+Motherboard Vendor: LENOVO
+Motherboard Model: 4236FM9
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 00:21:cc:5e:98:5c
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD-RAM UJ8A0A
+Drive 1: Model: HITACHI HTS723232A7A364, Serial: E3834563HE16WN, Size: 320.07 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119M [Quadro NVS 4200M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 47578FFB-6BF9-430E-95B9-B0423C09986B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 579146
+User3: Avis Budget Group
+User4: 19134
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: HITACHI HTS723232A7A364
+             Serial: E3834563HE16WN Size: 320.07 GB
+
+UUID: CAC026C7-9AC2-4350-92D6-30223F8BBEFE
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 14 Feb 2020 at 16:13:34
+Date & time operation was completed: Friday, 14 Feb 2020 at 17:36:26
+Total elapsed time (HH:MM:SS): 01:22:52
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

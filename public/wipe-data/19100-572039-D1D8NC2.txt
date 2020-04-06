@@ -1,0 +1,57 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7470
+Computer Serial: D1D8NC2
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0T6HHJ
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 28:f1:0e:4b:1a:53
+Drive 1: Model: SK hynix SC308 SATA 256GB, Serial: FJ68N540710208P6S, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B59310D6-4FD3-4C91-8CFE-794B5487DAC5
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 572039
+User3: Camfil USA Inc
+User4: 19100
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: SK hynix SC308 SATA 256GB
+             Serial: FJ68N540710208P6S Size: 256.06 GB
+
+UUID: 0DA3D6E0-3888-4F0A-A758-30A073F95684
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 03 Mar 2020 at 17:12:27
+Date & time operation was completed: Tuesday, 03 Mar 2020 at 17:12:38
+Total elapsed time (HH:MM:SS): 00:00:11
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: UNKNOWN!
+Post-wipe SMART health status: UNKNOWN!
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

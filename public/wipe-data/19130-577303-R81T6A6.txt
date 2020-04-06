@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 25184JU
+Computer Serial: R81T6A6
+Motherboard Vendor: LENOVO
+Motherboard Model: 25184JU
+Processor: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LM Gigabit Network Connection, MAC Address: f0:de:f1:b6:e4:a6
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6200, MAC Address: Unavailable
+DVD-RAM writer: DVDRAM GU10N
+Drive 1: Model: ST9320423AS, Serial: 5VH2LBL2, Size: 320.07 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GT218M [NVS 3100M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: High Definition Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D9D1FC4F-2D24-480C-866F-3971185F5966
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 577303
+User3: Northwell Health
+User4: 19130
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9320423AS
+             Serial: 5VH2LBL2 Size: 320.07 GB
+
+UUID: 18C597CF-F178-4F3F-8F8D-7CEE43C6D3CC
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 12 Feb 2020 at 16:08:43
+Date & time operation was completed: Wednesday, 12 Feb 2020 at 20:44:00
+Total elapsed time (HH:MM:SS): 04:35:17
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
