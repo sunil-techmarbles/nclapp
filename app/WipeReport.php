@@ -21,4 +21,30 @@ class WipeReport extends Model
 		return self::whereBetween( 'date', [$dateFrom, $dateTo] )
 					->get() ;
     }
+
+    public static function getWipeReportsFilesData($date)
+    {
+        return self::select('*')
+                ->where('date', '>=', $date )
+                ->get();
+    }
+
+    public static function InsertWipeReportsFileData($wipePdfFilesCount, $wipeBiosFilesCount, $blanccoPdfFilesCount, $TodayDate)
+    {
+        $WipeReport = new WipeReport();
+        $WipeReport->wipe_data_pdf_count = $wipePdfFilesCount;
+        $WipeReport->bios_data_file_count = $wipeBiosFilesCount;
+        $WipeReport->blancco_pdf_data_count = $blanccoPdfFilesCount;
+        $WipeReport->date = $TodayDate;
+        return ( $WipeReport->save() ) ? true : false ;
+    }
+
+    public static function UpdateWipeReportsFileData($wipePdfFilesCount, $wipeBiosFilesCount, $blanccoPdfFilesCount, $TodayDate)
+    {
+        return self::where('date', '>=', $TodayDate )
+                    ->update(['wipe_data_pdf_count' => $wipePdfFilesCount,
+                              'bios_data_file_count' => $wipeBiosFilesCount,
+                              'blancco_pdf_data_count' => $blanccoPdfFilesCount
+                            ]);
+    }
 }

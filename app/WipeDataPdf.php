@@ -20,11 +20,16 @@ class WipeDataPdf extends Model
 
     public static function getWipeFileData($date)
     {
-        pr( $date ); die;
-        
+        return self::select('*')
+                ->where('added_date', '>=', $date )
+                ->get();
     }
 
-
-
-    
+    public static function InsertWipeFileData($fileName, $date)
+    {
+        $WipeDataPdf = new WipeDataPdf();
+        $WipeDataPdf->wipe_data_pdf_file = $fileName;
+        $WipeDataPdf->added_date = $date;
+        return ( $WipeDataPdf->save() ) ? true : false ;
+    }
 }

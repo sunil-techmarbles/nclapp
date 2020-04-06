@@ -17,4 +17,19 @@ class BlanccoPdf extends Model
 	    'blancco_pdf_file',
 	    'added_date',
     ];
+
+    public static function getBlanccoFileData($date)
+    {
+        return self::select('*')
+                ->where('added_date', '>=', $date )
+                ->get();
+    }
+
+    public static function InsertBlanccoFileData($fileName, $date)
+    {
+        $BlanccoPdf = new BlanccoPdf();
+        $BlanccoPdf->blancco_pdf_file = $fileName;
+        $BlanccoPdf->added_date = $date;
+        return ( $BlanccoPdf->save() ) ? true : false ;
+    }
 }

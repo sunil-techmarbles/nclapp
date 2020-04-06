@@ -1,0 +1,57 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7440
+Computer Serial: 2QF0VY1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 03HFCG
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: f0:1f:af:55:7c:42
+NIC: Vendor: Qualcomm Atheros, Model: AR9462 Wireless Network Adapter, MAC Address: Unavailable
+Drive 1: Model: KingFast, Serial: 05232219A0076, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 0
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 56B3401B-40AF-471F-BC8B-2586E052479B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561999
+User3: ITAMG
+User4: 11725
+\"Product\": Computer
+
+>> Drive #1  Vendor: None found Model: KingFast
+             Serial: 05232219A0076 Size: 256.06 GB
+
+UUID: F2E8B98C-10AB-4AA6-92F3-D3D3466F88D6
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 2
+Date & time operation was started: Tuesday, 03 Mar 2020 at 11:26:17
+Date & time operation was completed: Tuesday, 03 Mar 2020 at 11:35:47
+Total elapsed time (HH:MM:SS): 00:09:30
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Unknown

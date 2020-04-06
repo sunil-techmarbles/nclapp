@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Acer
+Computer Model: Aspire V5-122P
+Computer Serial: NXM91AA009323145246600
+Motherboard Vendor: Acer
+Motherboard Model: Aspire V5-122P
+Processor: AMD A6-1450 APU with Radeon(TM) HD Graphics, Speed: 1000 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 2048 kB
+RAM: 6144 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Qualcomm Atheros, Model: QCA9565 / AR9565 Wireless Network Adapter, MAC Address: bc:85:56:73:f0:8f
+Drive 1: Model: TOSHIBA MQ01ABF050, Serial: 434KS6LYS, Size: 500.11 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Temash [Radeon HD 8250/8280G]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Kabini HDMI/DP Audio
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD], Model: FCH Azalia Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 843372CE-F60E-40A2-B35E-C5A9F386D93A
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 568602
+Lot Name: Family Service League
+Lot Number: 18687
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MQ01ABF050
+             Serial: 434KS6LYS Size: 500.11 GB
+
+UUID: C4F89A04-0BAE-4EA4-BD89-1E43E8BC7D32
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Thursday, 10 Jan 2013 at 00:12:18
+Action End Time: Thursday, 10 Jan 2013 at 02:08:53
+Action Duration: 01:56:35
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

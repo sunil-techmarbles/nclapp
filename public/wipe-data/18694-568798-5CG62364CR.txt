@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 820 G3
+Computer Serial: 5CG62364CR
+Motherboard Vendor: HP
+Motherboard Model: 807C
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: a0:8c:fd:9d:03:e9
+Drive 1: Model: INTEL SSDSCKJF240A5H REF, Serial: CVTQ54550087240B, Size: 240.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B86573E7-CBC5-4752-A439-C5A56750E7D6
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568798
+User3: World Wrestling Entertainment
+User4: 18694
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSCKJF240A5H REF
+             Serial: CVTQ54550087240B Size: 240.06 GB
+
+UUID: 65957271-45C8-4A18-A3AD-0709D8F19410
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 24 Feb 2020 at 11:27:04
+Date & time operation was completed: Monday, 24 Feb 2020 at 11:32:55
+Total elapsed time (HH:MM:SS): 00:05:51
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

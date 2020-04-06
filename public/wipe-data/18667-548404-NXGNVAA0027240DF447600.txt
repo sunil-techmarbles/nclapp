@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Acer
+Computer Model: Aspire A315-21
+Computer Serial: NXGNVAA0027240DF447600
+Motherboard Vendor: SR
+Motherboard Model: Squirtle_SR
+Processor: AMD A9-9420 RADEON R5, 5 COMPUTE CORES 2C+3G, Speed: 3000 MHz, Cores: 2, L1 Cache: 160 kB, L2 Cache: 1024 kB
+RAM: 6144 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: a8:1e:84:44:43:c7
+NIC: Vendor: Qualcomm Atheros, Model: QCA9377 802.11ac Wireless Network Adapter, MAC Address: 3c:95:09:9f:c4:57
+Drive 1: Model: ST1000LM035-1RK172, Serial: WDE2NE7R, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Stoney [Radeon R2/R3/R4/R5 Graphics]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Advanced Micro Devices, Inc. [AMD/ATI]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD], Model: Family 15h (Models 60h-6fh) Audio Controller
+USB Ports: 2
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 51D5F7D4-21EF-4A5B-A465-76896C2A9CC6
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 548404
+Lot Name: Constituency Management Group
+Lot Number: 18667
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST1000LM035-1RK172
+             Serial: WDE2NE7R Size: 1000.20 GB
+
+UUID: 89D8FCE3-6C40-41F3-A526-679A88EA98F6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195360016
+Action Start Time: Sunday, 01 Jan 2017 at 00:16:42
+Action End Time: Sunday, 01 Jan 2017 at 03:56:41
+Action Duration: 03:39:59
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

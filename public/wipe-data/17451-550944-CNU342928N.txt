@@ -21,7 +21,7 @@ USB Ports: 2
 USB2 Ports: 2
 USB3 Ports: 1
 
-Job UUID: 9424BCD0-467A-4FAA-BC37-AAE737D5EF8B
+Job UUID: 0E68249D-404C-4AC2-B536-41225404434F
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -34,13 +34,13 @@ User4: 17451
 >> Drive #1  Vendor: None found Model: LITEONIT LMS-32L6M-HP
              Serial: 002337120726 Size: 32.02 GB
 
-UUID: 1F8C2E51-F39D-4B53-9BBA-6CD22AB03B17
+UUID: 411CF249-38E6-4808-8E01-66893DE02794
 Operation: Overwrite disk.
 Wipe Type: NIST 800-88r1, Number of wipes: 3
 DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
-Date & time operation was started: Tuesday, 04 Feb 2020 at 10:22:20
-Date & time operation was completed: Tuesday, 04 Feb 2020 at 10:59:08
-Total elapsed time (HH:MM:SS): 00:36:48
+Date & time operation was started: Friday, 07 Feb 2020 at 10:17:09
+Date & time operation was completed: Friday, 07 Feb 2020 at 11:57:36
+Total elapsed time (HH:MM:SS): 01:40:27
 
 Operation result: SUCCESS
 

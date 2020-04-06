@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac12,2
+Computer Serial: C02HL00YDHJQ
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-942B59F58194171B
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz, Speed: 3100 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: 40:6c:8f:26:42:60
+NIC: Vendor: Qualcomm Atheros, Model: AR93xx Wireless Network Adapter, MAC Address: Unavailable
+DVD writer: DVDRW GA32N
+Drive 1: Model: ST31000528AS, Serial: 5VPBFME5, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Blackcomb [Radeon HD 6970M/6990M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Barts HDMI Audio [Radeon HD 6790/6850/6870 / 7720 OEM]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: A2DFDDED-00BF-4F22-8533-F2DA3A823B57
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 550894
+User3: Metropolitan Museum of Art
+User4: 17594
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Seagate Model: ST31000528AS
+             Serial: 5VPBFME5 Size: 1000.20 GB
+
+UUID: 2378C366-2742-4B78-9AB4-6A6378D75EF4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 10 Mar 2020 at 19:35:49
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 06:58:35
+Total elapsed time (HH:MM:SS): 11:22:46
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 6
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

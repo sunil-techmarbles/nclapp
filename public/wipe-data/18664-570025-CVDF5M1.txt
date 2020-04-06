@@ -1,0 +1,107 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R510
+Computer Serial: CVDF5M1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0W844P
+Processor: Intel(R) Xeon(R) CPU           E5530  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5530  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5716 Gigabit Ethernet, MAC Address: 00:26:b9:62:8f:59
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5716 Gigabit Ethernet, MAC Address: 00:26:b9:62:8f:5a
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:54:3e:80
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:54:3e:81
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD reader: DVD-ROM DV-28SW
+Drive 1: Model: PERC 6/i, Serial: 00a88fc00a1198fb2500ecaa2db0ad4b, Size: 599.55 GB
+Drive 2: Model: PERC 6/i, Serial: 009f4a1e0c2898fb2500ecaa2db0ad4b, Size: 599.55 GB
+Drive 3: Model: PERC 6/i, Serial: 00b82bcf0c3498fb2500ecaa2db0ad4b, Size: 599.55 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 12
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 53EBAEBB-CD0B-4D4D-AF83-9B73711F59C0
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 570025
+User3: Tangoe US, Inc.
+User4: 18664
+\"Product\": Server
+
+>> Drive #1  Vendor: DELL Model: PERC 6/i
+             Serial: 00a88fc00a1198fb2500ecaa2db0ad4b Size: 599.55 GB
+
+UUID: C7467311-7AD9-4453-BEF6-A16C96B4F3C8
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 12:42:04
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 13:40:46
+Total elapsed time (HH:MM:SS): 00:58:42
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #2  Vendor: DELL Model: PERC 6/i
+             Serial: 009f4a1e0c2898fb2500ecaa2db0ad4b Size: 599.55 GB
+
+UUID: B20855E0-6F70-4D5A-992F-4DE70DE2661E
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 12:42:04
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 13:40:52
+Total elapsed time (HH:MM:SS): 00:58:48
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #3  Vendor: DELL Model: PERC 6/i
+             Serial: 00b82bcf0c3498fb2500ecaa2db0ad4b Size: 599.55 GB
+
+UUID: C2C29BF1-34BD-40D1-8F75-0838BD8A4486
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 12:42:04
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 13:45:50
+Total elapsed time (HH:MM:SS): 01:03:46
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

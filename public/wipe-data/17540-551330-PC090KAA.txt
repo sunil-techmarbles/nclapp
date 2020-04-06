@@ -22,7 +22,7 @@ USB Ports: 3
 USB2 Ports: 1
 USB3 Ports: 1
 
-Job UUID: DF10891D-C535-4B0F-B3B0-3F7229CEE4E5
+Job UUID: D1EB649F-0152-481A-8E30-91BDEB37E41E
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -35,12 +35,12 @@ User4: 17540
 >> Drive #1  Vendor: Toshiba Model: TOSHIBA THNSFJ256GCSU
              Serial: X5TS10I8T8LW Size: 256.06 GB
 
-UUID: A10FFC58-DFBB-4E2E-B4AE-7EE301F0F5E2
+UUID: 3E5AEF07-508E-4FC7-A7E9-2DA3BDADAEDE
 Operation: Overwrite disk.
 Wipe Type: NIST 800-88r1, Number of wipes: 1
-Date & time operation was started: Friday, 31 Jan 2020 at 13:37:32
-Date & time operation was completed: Friday, 31 Jan 2020 at 13:40:15
-Total elapsed time (HH:MM:SS): 00:02:43
+Date & time operation was started: Tuesday, 11 Feb 2020 at 12:38:57
+Date & time operation was completed: Tuesday, 11 Feb 2020 at 12:40:45
+Total elapsed time (HH:MM:SS): 00:01:48
 
 Operation result: SUCCESS
 
