@@ -42,8 +42,8 @@ class CoaReportExport implements FromCollection, WithHeadings, ShouldAutoSize
 				$allcoadata[$key]->model = empty($adata->Model)?'':$adata->Model;
 				if(!empty($adata->asin_id))
                 {
-					$asin_data = Asin::getAsinById($adata->asin_id);
-					$allcoadata[$key]->manufacture = $asin_data->manufacturer;
+					$asinData = Asin::getAsinById($adata->asin_id);
+					$allcoadata[$key]->manufacture = $asinData['manufacturer'];
 				}
 			}
             else

@@ -57,4 +57,11 @@ class CoaReport extends Model
     {
         return self::select('asset','sn','old_coa','new_coa','added_on')->get();
     }
+
+    public static function getIdOfCoaReport($v)
+    {
+        return self::where(["asset"=>$v])
+            ->pluck('id')
+            ->first();
+    }
 }

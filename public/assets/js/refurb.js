@@ -8,6 +8,7 @@ $(document).ready(function()
 	      	if($("#asset_num").is(":focus"))
 	      	{
 				event.preventDefault();
+				$("#asset_form").hide();
 				getAssetData('asset_num');
 				return true;
 			}
@@ -298,9 +299,9 @@ function getAssetData(fId)
 			else
 			{
 				Swal.fire({
-					  icon: 'error',
-					  title: 'Oops...',
-					  text: 'Nothing found!',
+					icon: 'error',
+					title: 'Oops...',
+					text: 'Nothing found!',
 				})
 			}
 		});
@@ -308,10 +309,10 @@ function getAssetData(fId)
 	else
 	{
 		Swal.fire({
-					  icon: 'warning',
-					  title: 'Oops...',
-					  text: 'Please add asset number!',
-				})
+			icon: 'warning',
+			title: 'Oops...',
+			text: 'Please add asset number!',
+		})
 		$("#asset_form").hide(); 
 		$("#tab-headers").html('');
 		$("#tab-content").html('');
@@ -448,10 +449,10 @@ function setWholesale()
 	{
 	    var icon = (response.status) ? 'success' : 'error';
 	    swalWithBootstrapButtons.fire(  
-					response.type,
-					response.message , 
-					icon
-				) 
+			response.type,
+			response.message , 
+			icon
+		)
 		$('#ws_list').val('');
 		$('#wsModal').modal('hide');
 	});
@@ -463,10 +464,10 @@ function setWS()
 	{
 		var icon = (response.status) ? 'success' : 'error';
 		swalWithBootstrapButtons.fire( 
-					response.type,
-					response.message ,
-					icon
-				) 
+			response.type,
+			response.message ,
+			icon
+		)
 	});
 	forceWS = true;
 	$(".tab-pane").removeClass("in active");
@@ -572,15 +573,19 @@ function setNextProcess()
 function checkWin8()
 {
 	$.post("/"+prefix+"/checkcoa", { _token:_token, asset: assetNumber, old_coa: old_coa, new_coa: new_coa, win8: win8, asin: adata.asin_id}, function(response){
-		// console.log(response);
 		if(response.status)
 		{
-			var icon = (response.status) ? 'success' : 'error';
-			swalWithBootstrapButtons.fire( 
-					response.type,
-					response.message ,
+			if(response.message == "OK")
+			{
+	            var message = "COA for this Asset Id is already saved in database";
+				var icon = (response.status) ? 'success' : 'error';
+				var type = (response.status) ? 'Success' : 'Error';
+				swalWithBootstrapButtons.fire( 
+					type,
+					message,
 					icon
 				) 
+			}
 		}
 	});
 }
