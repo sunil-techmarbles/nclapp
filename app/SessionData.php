@@ -63,10 +63,10 @@ class SessionData extends Model
         return self::where(["asset" => $request['asset']])->update(['aid' => $request['aid']]);
     }
 
-    public static function updateShipmentRunStatus($r, $status)
+    public static function updateSessiontStatus($r, $status)
     {
         return self::where(["asset"=> $r])
-            ->update(["run_status"=> $status]);
+            ->update(["status"=> $status]);
     }
 
     public static function updateSessionRunStatus($asset, $status)

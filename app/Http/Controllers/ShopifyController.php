@@ -241,7 +241,6 @@ class ShopifyController extends Controller
 		 foreach($data as $itm)
 		 {
 		 	$asset = $itm['asset'];
-			// $debug .= $asset.": Loaded \n";
 		 	$file = "";
 		 	$this->wipeData2 = $this->basePath.'/wipe-data2';
 		 	if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
@@ -254,11 +253,13 @@ class ShopifyController extends Controller
 		 	}
 		 	if($file)
 		 	{
-				// $debug .= $asset.": File readable ".$file. " \n";
-		 		$xml = simplexml_load_file($this->wipeData2.'/'.$asset.'.xml');
+		 		$xml = '';
+		 		if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
+			 	{
+		 			$xml = simplexml_load_file($this->wipeData2.'/'.$asset.'.xml');
+			 	}
 		 		if($xml)
 		 		{
-					// $debug .= $asset.": File loaded\n";
 		 			$xmlData = [];
 		 			$i = 0;
 		 			if(is_array($xml->component))
@@ -285,7 +286,7 @@ class ShopifyController extends Controller
 		 					' TWR',
 		 					' MT',
 		 					' AIO'], '' , $xmlData["Model"][0])
-		 			);
+			 			);
 		 				$fields = ['model' => $model];
 		 				$query = ["id" => $itm['id']];
 		 				ListData::updateSelectedFields($fields, $query);
@@ -1284,11 +1285,14 @@ class ShopifyController extends Controller
 		{
 			$data = json_decode($data,true);
 		}
+		// print_r($data);
 		$output = "";
 		$items = array();
 		$tab = FormModel::getFormModelTab($tplid);
 		$modelname = FormModel::getFormModelByID($tplid);
 		$config = FormsConfig::getFormConfigDataByCommenQuery($query = ['tab' => $tab]);
+		// print_r($config->toArray());
+		// die;
 		foreach ($config as $fld)
 		{
 			$itmid = $fld["qtype"] . "_" . $fld["id"];
@@ -1310,18 +1314,18 @@ class ShopifyController extends Controller
 			$formObjects = new AuditController();
 			if (stripos($fld["config"],"fillmodel"))
 			{
-				if (method_exists($formObjects, "get_form_$qtype"))
+				if (method_exists($formObjects, "get_form_".$qtype))
 				{
-					$mtd = "get_form_$qtype";
+					$mtd = "get_form_".$qtype;
 					$output .= "<div class='formitem'>" . $formObjects->$mtd($fld) . "</div>";
 				}
 			}
-		}	
+		}
 		if(count($data["items"])>0)
 		{
 			foreach ($data["items"] as $itm)
 			{
-				if ($itm["fillmodel"]==1)
+				if ($itm["fillmodel"] == 1)
 				{
 					$items[] = $itm;
 				}

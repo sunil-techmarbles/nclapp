@@ -513,7 +513,8 @@ $(document).ready(function()
 			,3000);
 	}
 	$('#asset').focus();
-	$(document).keydown(function(event)
+
+	$(window).keydown(function(event)
 	{
 		if(event.keyCode == 13) 
 		{
@@ -613,6 +614,52 @@ $(document).ready(function()
 			jQuery('#edit-record-model').modal('show');
 		});
 	}
+
+	if($(".session-update").length > 0)
+	{
+		$(document).on('click', '.session-update', function(){
+			var sid = $(this).attr("id");
+			$.ajax({
+				url:"/"+prefix+"/fetchparts",
+				method:"POST",
+				data:{sid:sid},
+				dataType:"json",
+				beforeSend: function ()
+	            {
+	            	showLoader();
+	            },
+	            complete: function ()
+	            {
+	            	hideLoader();
+	            },
+				success:function(data)
+				{
+					hideLoader();
+					var items = '';
+					$.each(data, function (i, item) {
+						var a = 0;
+						a = item.missing;
+						if(a > 0){
+							var ms = a;
+						}else{
+							ms = 0;
+						}
+						// build your html here and append it to your .modal-body
+						var label = "<tr class='col-md-12'><td class='col-md-10'>" + item.item_name+ "</td><td class='col-md-2'>" + ms+ "</td></tr>"
+						if(ms != 0)
+						{
+							$('.missinglist').append(label);
+						}
+					});
+					$('#userModal').modal('show');
+				}
+			}).fail(function (jqXHR, textStatus, error){
+	        	hideLoader();
+	        	showSweetAlertMessage(type = 'Error', message = 'something went wrong with ajax request' , icon= 'error');
+	        });
+		});
+	}
+
 
 	if($("#edit-record-form").length > 0)
 	{

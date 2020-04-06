@@ -2,7 +2,7 @@
 @section('title', 'Shopify Inventory')
 @section('content')
 <div class="container">
-	<div style="position: sticky;top:0;background:white;height: 75px;border-bottom: 2px solid #dddddd">
+	<div style="position: sticky;top:0; background:white; height:75px; border-bottom:2px solid #dddddd">
 		<div class="mb-3">
 			<h3>
 				<span class="float-left">New Running List</span>
@@ -17,7 +17,7 @@
 					<input type="submit" value="Bulk Upload" class="btn btn-warning" name="bulk_upload"/>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-6 float-right">
 				<a class="btn btn-info ml-2 float-right" href="{{route('inventory.csv',['csv' => '1'])}}">Export</a>
 				<button type="button" class="btn btn-warning ml-2 float-right" data-toggle="modal" data-target="#brModal">Bulk Remove</button>
 				<button type="button" class="btn btn-info ml-2 float-right" id="sync-all-to-shopify">Sync to Shopify</button>
@@ -111,7 +111,7 @@
 							</label>
 						</div>	
 					</th>
-					<th>Shopify Product ID <span class="glyphicon glyphicon-eye-close" onclick="$('.s_price').toggle()"></span></th>
+					<th>Shopify Product ID <span class="fa fa-eye-slash " onclick="$('.s_price').toggle()"></span></th>
 					<th class="s_price" style="display:none">Price Diff on Shopify </th>
 				</tr>
 			</thead>

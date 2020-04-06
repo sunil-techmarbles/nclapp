@@ -18,7 +18,7 @@
 	</form>
 </div>
 <script type="text/javascript">
-	var items = '<?php echo json_encode($items); ?>';
-	var dScores = JSON.parse('<?php echo json_encode(config('constants.damageScores')); ?>');
+	var templateItems = <?php echo json_encode($items); ?>;
+	var dScores = <?php echo json_encode(config('constants.damageScores'));?>;
 </script>
 @endsection

@@ -80,11 +80,11 @@ class SessionController extends Controller
 			        }
 			        elseif(!$asins)
 			        {
-			            $pageMessage[] = "The ASIN match for the Asset $asset (".$manuf.$model.','.$cpuModel.','.$cpuSpeed.") was not found";
+			            $pageMessage[] = "The ASIN match for the Asset". $asset."(".$manuf.$model.','.$cpuModel.','.$cpuSpeed.") was not found";
 			        }
 			        else
 			        {
-			            $out = "Please select matching ASIN for the Asset $asset (".$manuf.$model.','. $cpuModel.','.$cpuSpeed.','. $ram."):<br/>";
+			            $out = "Please select matching ASIN for the Asset". $asset."(".$manuf.$model.','. $cpuModel.','.$cpuSpeed.','. $ram."):<br/>";
 			            $out.= "<select id='asset'".$asset."' onchange='setBulkAsin(this.id)'><option value=''>Select</option>";
 			            foreach($asins as $a)
 			            {
@@ -229,7 +229,7 @@ class SessionController extends Controller
 		{
 			$this->sendSessionPdfReport($request);
 			$status = 'success';
-            $message = 'Session create successfully';
+            $message = 'Session created successfully';
             \Session::flash($status, $message);					
 		}
 		$sessions = Session::getSessionRecord($request);
@@ -305,5 +305,19 @@ class SessionController extends Controller
 	        }
 		}
 		return view('admin.sessions.list', compact('sessionName', 'sessions', 'pageMessage', 'assets', 'parts','items'));
+	}
+
+	public function fetchParts(Request $request)
+	{
+		if($request->ajax())
+		{
+			$sess = $request->sid;
+			$parts = Supplies::getSessionParts($sess, $satus='active');
+			return response()->json($parts);
+		}
+		else
+		{
+			return response()->json(['message' => 'something went wrong with ajax request', 'status' => false]);
+		}
 	}
 }
