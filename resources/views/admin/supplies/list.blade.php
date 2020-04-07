@@ -13,11 +13,11 @@
 					<form method="post" action="{{route('import.supplies')}}" enctype="multipart/form-data">
 						@csrf
 						<input type="file" name="impfile">
-						@if($errors->has('impfile'))
-							<div class="error">{{ $errors->first('impfile') }}</div>
-						@endif
 						<input type="submit" class="btn btn-secondary btn-sm border" value="Import">
 					</form>
+					@if($errors->has('impfile'))
+						<div class="alert alert-danger">{{ $errors->first('impfile') }}</div>
+					@endif
 				</td>
 				<td nowrap="" style="text-align: right">
 					<form method="get" action="{{route('supplies')}}">

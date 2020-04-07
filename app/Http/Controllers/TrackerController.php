@@ -38,7 +38,7 @@ class TrackerController extends Controller
             $trackerAction = file_get_contents($this->basePath.'/actions.txt');
             $actions = ($trackerAction) ? explode(PHP_EOL,$trackerAction) : config('constants.trackerAction');
         }
-        $currentUser = Sentinel::getUser()->first_name.' '.Sentinel::getUser()->last_name;
+        $currentUser = Sentinel::getUser()->first_name;
         if(isset($request->p))
         {
             $dates = $request->get('dates');
@@ -131,7 +131,7 @@ class TrackerController extends Controller
     {
         if($request->ajax())
         {
-            $currentUser = Sentinel::getUser()->first_name.' '.Sentinel::getUser()->last_name;
+            $currentUser = Sentinel::getUser()->first_name;
             date_default_timezone_set('US/Eastern');
             $start = date("Y-m-d H:i:s",strtotime($request->start));
             if(!empty($request->count)) $cnt = $request->count;

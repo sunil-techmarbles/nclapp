@@ -7,30 +7,26 @@
 	<div class="row">
 		<div class="col-sm-12" style="text-align: right">
 			<form method="get" class="form-inline" id="statsform" action="{{route('tracker')}}">
+				<div class="col-md-3 mx-0">
 				<input type="hidden" name="p" value="report"/>
-				<div class="row">
-					<div class="col-md-5">
-						<select name="user" class="form-control" id="user" onchange="doFilter()">
-							<option value="">User:</option>
-							@foreach($userList as $key => $user)
-								<option @if(request()->get('user') == htmlentities($user, ENT_QUOTES)) selected @endif value="{{htmlentities($user, ENT_QUOTES)}}">{{$user}}</option>
-							@endforeach
-						</select>
-					</div>
-					<div class="col-md-5">
-						<select name="activity" class="form-control" id="activity" onchange="doFilter()">
-							<option value="">Activity:</option>
-							@foreach($actionList as $key => $action)
-								<option @if(request()->get('activity') == htmlentities($action, ENT_QUOTES)) selected @endif value="{{htmlentities($action, ENT_QUOTES)}}">{{$action}}</option>
-							@endforeach
-						</select>
-					</div>
-					<div class="col-md-2">
-						<input type="text" style="display: inline-block;" class="form-control" id="dates" name="dates" value="{{request()->get('dates')}}" />
-					</div>
+					<select name="user" class="form-control" id="user" onchange="doFilter()">
+						<option value="">User:</option>
+						@foreach($userList as $key => $user)
+							<option @if(request()->get('user') == htmlentities($user, ENT_QUOTES)) selected @endif value="{{htmlentities($user, ENT_QUOTES)}}">{{$user}}</option>
+						@endforeach
+					</select>
 				</div>
-				
-				
+				<div class="col-md-6 mr-0">
+					<select name="activity" class="form-control" id="activity" onchange="doFilter()">
+						<option value="">Activity:</option>
+						@foreach($actionList as $key => $action)
+							<option @if(request()->get('activity') == htmlentities($action, ENT_QUOTES)) selected @endif value="{{htmlentities($action, ENT_QUOTES)}}">{{$action}}</option>
+						@endforeach
+					</select>
+				</div>
+				<div class="col-md-3 mr-0">
+					<input type="text" style="display: inline-block;" class="form-control" id="dates" name="dates" value="{{request()->get('dates')}}" />
+				</div>
 			</form>
 		</div>
 	</div>

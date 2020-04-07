@@ -65,13 +65,10 @@ class SuppliesController extends Controller
     public function addSupplies()
     {
         $models = Asin::getModelList();
-
         return view ('admin.supplies.add',compact('models'))->with([
             'adminEmails' => $this->adminEmails,
             'emailTemplate' => $this->emailTemplate
         ]);
-
-    	# code...
     }
 
     public function storeSupplies(Request $request)
@@ -88,10 +85,8 @@ class SuppliesController extends Controller
         ]);
 
         $supplieID = Supplies::addSupplies($request);
-
         if($supplieID)
         {
-
             if($request->get('email'))
             {   
                 $supplieEmails = array_filter(explode(',',$request->get('email')));
@@ -116,7 +111,6 @@ class SuppliesController extends Controller
         {
             return redirect()->route('supplies')->with('error','Something went wrong! Please try again');
         }
-        # code...
     }
 
     public function editSupplies(Request $request, $supplieID)
@@ -152,8 +146,8 @@ class SuppliesController extends Controller
         ]);
         $result = Supplies::updateSupplieById($request);
         $supplieID = $request->id;
-        if($result){
-
+        if($result)
+        {
             if($request->get('email'))
             {   
                 $supplieEmails = array_filter(explode(',',$request->get('email')));
@@ -299,7 +293,7 @@ class SuppliesController extends Controller
     public function importSupplies(Request $request)
     {
         $validatedData = $request->validate([
-            'impfile' => 'required|mimes:xlsx,csv',
+                'impfile' => 'required|mimes:xlsx,csv,txt',
             ],
             [
                 'impfile.required' => 'Please upload a file',
