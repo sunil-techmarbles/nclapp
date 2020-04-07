@@ -151,6 +151,7 @@ function showTab( tabId )
 		$("#var_tab").html(data);
 		$("#reviewBtn").show();
 		setHeader();
+		$("body").css('background-image', 'none');
 		$('#page-bottom').removeClass("bottom-url");
 		alignCB();
 		$(":input[data-display]").closest(".formitem").hide();
