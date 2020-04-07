@@ -111,7 +111,7 @@ class RefurbController extends Controller
 					$data["pdf"] = '<a class="btn btn-primary" style="float: right;margin-right: 5px;margin-left: 5px;" href="'.url('/completed-refurb-labels/').'/'.$asset.'.pdf" target="_blank">View Completed Label</a>';
 				}
 				$xml = false;
-				if ($wipeDataTwo) $xml= simplexml_load_file($wipeDataTwo);
+				if (File::exists($wipeDataTwo)) $xml= simplexml_load_file($wipeDataTwo);
 				if (!$xml && File::exists($this->basePath.'/wipe-data2/bios-data/'.$asset.".xml"))
 				{
 					$xml = simplexml_load_file($this->basePath.'/wipe-data2/bios-data/'.$asset.".xml");
