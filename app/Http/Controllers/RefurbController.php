@@ -298,7 +298,7 @@ class RefurbController extends Controller
 			ShipmentsData::updateRecord($request);
 			if($request->get("new_coa") || $request->get("win8"))
 			{
-				if($request->has("win8"))
+				if($request->get("win8"))
 				{
 					$request->merge(['old_coa' => 'WIN8 Activated']);
 				} 

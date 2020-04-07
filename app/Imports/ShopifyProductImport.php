@@ -31,6 +31,7 @@ class ShopifyProductImport implements ToCollection,  WithStartRow
     	foreach ($csvRows as $key => $fileData)
         {
         	$checkData = ShopifyPricing::getRecordByAssetId($fileData['Asset ID']);
+            // print_r($checkData);
             $finalPrice = 0.00;
             $excludeTextsFromModel = array(
             	' non-vPro ',
@@ -72,16 +73,19 @@ class ShopifyProductImport implements ToCollection,  WithStartRow
         		'Price' => $fileData['PRICE'],
         		'Final_Price' => $finalPrice,
         	];
-            if ($checkData)
+            if ($checkData->count() > 0)
             {
             	$record['Model'] = $fileData['Model'];
+                // echo "if".$fileData['Asset ID']."\n";
             	ShopifyPricing::upadateRecord($fileData['Asset ID'], $record);
             }
             else
             {
+                // echo "else".$fileData['Asset ID']."\n";
             	ShopifyPricing::addRecord($fileData['Asset ID'], $record);
             }
         }
+        // die;
     }
 
     /**
