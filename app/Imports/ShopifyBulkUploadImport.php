@@ -52,7 +52,7 @@ class ShopifyBulkUploadImport implements ToCollection,  WithStartRow
 						"cpu" => $this->cpuName,
 						"grade" => 'A',
 						"asset" => $asset,
-						"added_by" => Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name,
+						"added_by" => Sentinel::getUser()->first_name,
 						"added_on" => Carbon::now()
 					];
 					$result = ListData::checkRecordExist($asset);

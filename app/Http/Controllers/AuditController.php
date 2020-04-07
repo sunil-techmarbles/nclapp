@@ -638,7 +638,7 @@ class AuditController extends Controller
 	{
 		if($request->ajax())
 		{
-			$authUserName = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
+			$authUserName = Sentinel::getUser()->first_name;
 			$data = FormData::getLastRecordByAuthUser($authUserName, $type='data');
 			if (count($data)==1)
 			{
@@ -928,7 +928,6 @@ class AuditController extends Controller
 		$authUserName = Sentinel::getUser()->first_name;
 		$functionGroups = FormsConfig::getFormConfigFields($request->get('radio_2'), $group = 'Description');
 		$descrTypes = array();
-		
 		foreach ($functionGroups as $functionGroup)
 		{
 			$xmlGroups = explode(';', $functionGroup['xml_grp']);

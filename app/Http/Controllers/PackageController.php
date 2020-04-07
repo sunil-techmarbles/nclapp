@@ -16,7 +16,7 @@ class PackageController extends Controller
 		$searchedPackages = [];
 
 		$userDetails = User::getUserDetail( Sentinel::getUser()->id );
-		$userName = $userDetails->first_name . ' ' . $userDetails->last_name;
+		$userName = $userDetails->first_name;
 
 		if( isset($request->pkg_search) && $request->pkg_search == 'Search')
 		{

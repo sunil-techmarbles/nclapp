@@ -73,7 +73,7 @@ class SessionController extends Controller
 			                "sid" => $currentSession,
 			                "aid" => $aid,
 			                "asset" => $asset,
-			                "added_by" => Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name,
+			                "added_by" => Sentinel::getUser()->first_name,
 			                "added_on" => $this->current
 			            ];
 			            SessionData::addSessionDataRecord((object) $data, $current);
