@@ -579,14 +579,7 @@ function checkWin8()
 		{
 			if(response.message == "OK")
 			{
-	            var message = "COA for this Asset Id is already saved in database";
-				var icon = (response.status) ? 'success' : 'error';
-				var type = (response.status) ? 'Success' : 'Error';
-				swalWithBootstrapButtons.fire( 
-					type,
-					message,
-					icon
-				) 
+				$(".message").html("COA for this Asset Id is already saved in database");
 			}
 		}
 	});

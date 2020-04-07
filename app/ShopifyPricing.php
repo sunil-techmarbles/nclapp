@@ -65,28 +65,24 @@ class ShopifyPricing extends Model
 
     public static function upadateRecord($Asset_ID, $record)
     {
-    	return self::where(['Asset_ID' => $Asset_ID])
+    	return self::where('Asset_ID', '=', $Asset_ID)
     		->update($record);
     }
 
     public static function getShopifyPriceList($request)
     {
-    	return self::where([
-	    		'Condition' => $request['condition'],
-	    		'Form_Factor' => $request['form_factor'],
-	    		'Model' => $request['model']
-    		])
+    	return self::where('Form_Factor','=',$request['form_factor'])
+            ->where('Condition','=',$request['condition'])
+            ->where('Model','=',$request['model'])
     		->where('Processor', 'LIKE', '%'.$request['cpu_core'].'%')
     		->get();
     }
 
     public static function updateShopifyPriceFinalPrice($request, $finalPrice)
     {
-    	return self::where([
-	    		'Condition' => $request['condition'],
-	    		'Form_Factor' => $request['form_factor'],
-	    		'Model' => $request['model']
-    		])
+    	return self::where('Form_Factor','=',$request['form_factor'])
+            ->where('Condition','=',$request['condition'])
+            ->where('Model','=',$request['model'])
     		->where('Processor', 'LIKE', '%'.$request['cpu_core'].'%')
     		->update(['Final_Price' => $finalPrice]);
     }
@@ -103,7 +99,7 @@ class ShopifyPricing extends Model
 
     public static function getRecordByAssetId($fileData)
     {
-    	return self::where(['Asset_ID' => $fileData])
+    	return self::where('Asset_ID', '=' ,$fileData)
     		->get();
     }
 }

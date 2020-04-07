@@ -124,7 +124,7 @@ class Supplies extends Model
             ->selectSub('(p.qty * '.$qty.' - supplies.qty)', 'missing')
             ->join('supplie_asin_models as p', function($join) use($asinID){
                 $join->on('supplies.id', '=', 'p.supplie_id')
-                        ->where('p.asin_model_id','=',$asinID);
+                    ->where('p.asin_model_id','=',$asinID);
                 })
             ->get();
     }

@@ -315,8 +315,8 @@ function setAside(itmId)
 function showModelFields()
 {
 	$(":input[data-fillmodel]").closest(".formitem").toggle();
-	// $(':input[data-fillmodel="1"]').closest(".formitem").css("background-color","#F5F5DC");
-	$(':input[data-fillmodel="1"]').closest(".formitem");
+	$(':input[data-fillmodel="1"]').closest(".formitem").css("background-color","#F5F5DC");
+	// $(':input[data-fillmodel="1"]').closest(".formitem");
 	$('input[data-modelname="1"]').closest(".formitem").show();
 	return false;
 }
