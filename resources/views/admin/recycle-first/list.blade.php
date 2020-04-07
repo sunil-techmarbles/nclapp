@@ -11,11 +11,11 @@
 		        <select class="form-control" name="category" id="category">
 		            @foreach($categories as $key => $category)
 		                @if($selected == $category)
-		                    <option value="{{$category}}" selected>
+		                    <option value="{{trim($category)}}" selected>
 		                    	{{$category}}
 		                	</option>
 		                @else
-			                <option value="{{$category}}">
+			                <option value="{{trim($category)}}">
 			                	{{$category}}
 			            	</option>
 		                @endif

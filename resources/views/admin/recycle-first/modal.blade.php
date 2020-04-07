@@ -31,7 +31,7 @@
                         <lable><strong>Category</strong></lable>
                         <select name="category" class="category form-control">
                             @foreach ($categories as $key => $category)
-                                <option value="{{$category}}" selected>{{$category}}</option>
+                                <option value="{{trim($category)}}" selected>{{$category}}</option>
                             @endforeach 
                         </select>
                     </div>

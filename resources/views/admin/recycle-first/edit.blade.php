@@ -20,7 +20,7 @@
                 @foreach ($allRecords as $key => $record)
                     <tr>
                         <td class="id">{{ $key+1 }}</td>
-                        <td class="category">{{ $record['category'] }}</td>
+                        <td class="category">{{trim($record['category'])}}</td>
                         <td class="lgross">{{ $record['lgross'] }}</td>
                         <td class="ltare">{{ $record['ltare'] }}</td>
                         <td class="price">{{ $record['price'] }}</td>
