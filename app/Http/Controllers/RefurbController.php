@@ -51,7 +51,7 @@ class RefurbController extends Controller
 			$refurbLabels = $this->refurbLabels.'/'.$asset.'.dat';
 			$wipeDataTwo = $this->wipeDataTwo.'/'.$asset.'.xml';
 			if (File::exists($assetFile))
-			{	
+			{
 				$data = json_decode(file_get_contents($assetFile), true);
 				$tab = $data["radio_2"];
 				$config = FormsConfig::getConfigValueByTab($tab, $group='Description');
@@ -148,6 +148,8 @@ class RefurbController extends Controller
 					$data["Model"] = $asset.".xml not found";
 				}
 				$fields = ["id","model","asin","ram","hdd","os","cpu_core","cpu_model","cpu_speed","price"];
+				// print_r($data["CPU"]);
+				// die;
 				if(!empty($data["CPU"]))
 				{
 					$parts1 = explode("_",$data["CPU"]);
@@ -186,7 +188,10 @@ class RefurbController extends Controller
 						{
 							File::makeDirectory($this->refurbAssetData, 0777, true, true);
 						}
-						if (!$refurbAssetData) file_put_contents($refurbAssetData,json_encode($data));
+						if (!File::exists($refurbAssetData))
+						{
+							file_put_contents($refurbAssetData,json_encode($data));
+						}
 					}
 					if(!$data["asin_id"])
 					{
@@ -251,19 +256,16 @@ class RefurbController extends Controller
 			if($asset && $aid)
 			{
 				SessionData::updateRecord(["aid" => $aid, "asset" => $asset]);
-				if(File::exists($refurbAssetData))
-				{
-					$adata = json_decode(file_get_contents($refurbAssetData),true);
-					$adata['asin_id'] = $aid;
-					$adata['asin_match'] = 'saved';
-					file_put_contents($refurbAssetData,json_encode($adata));
-				}
-				return response()->json(['message' => 'Added successfully', 'type' => 'success', 'status' => true]);
-			} 
-			else
-			{
-				return response()->json(['message' => 'Something went wrong', 'type' => 'error', 'status' => false]);
+				
 			}
+			if(File::exists($refurbAssetData))
+			{
+				$adata = json_decode(file_get_contents($refurbAssetData),true);
+				$adata['asin_id'] = $aid;
+				$adata['asin_match'] = 'saved';
+				file_put_contents($refurbAssetData,json_encode($adata));
+			}
+			return response()->json(['message' => 'Added successfully', 'type' => 'success', 'status' => true]);
 		}
 		else
 		{
