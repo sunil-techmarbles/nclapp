@@ -38,7 +38,16 @@ class CoaWeekly extends Command
      */
     public function handle()
     {
+        $this->basePath  = base_path().'/public';
+        $this->sessionReportDir = $this->basePath . "/session-reports";
+        $date = date('Y-m-d');
+        $fileName = 'failedsearch_'. $date .'.csv';
+        $filePath =  $this->sessionReportDir .'/'.$fileName;
+        $findDate = date('Y-m-d',strtotime('-7 days'));
+
+        pr(        $filePath); die;
         
+        // $FailedSearchRecords = FailedSearch::getRecordByDate($date);
         die("***");
 
     }
