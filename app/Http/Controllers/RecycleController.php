@@ -753,7 +753,7 @@ class RecycleController extends Controller
                 {
                     $this->init($recordData, $type='secound', $sampleCategoryFile, $categoriesFilePath);
                 }
-                $rename = "Recycle_BOL".$this->current. '.xlsx';
+                $rename = "Recycle_BOL".date("m-d-Y_h:i:s"). '.xlsx';
                 $dbDate = $this->current;
                 $query = [
                     'id' => $recordId,
