@@ -154,7 +154,9 @@ function getAssetData(fId)
 							$(".specsos").show();
 						}
 						$(".c_os_label").show();
-						if(itm.value[0].indexOf('Windows 8')>-1) $(".activate").show();
+						if(itm.value[0] != undefined || itm.value[0] != null){
+							if(itm.value[0].indexOf('Windows 8')>-1) $(".activate").show();
+						}
 					}
 					else if (itm.key=="Technology")
 					{
@@ -283,7 +285,7 @@ function getAssetData(fId)
 				setChange(); 
 				if(adata.asins.length == 0)
 				{
-					showSweetAlertMessage('error', 'No ASIN found!', 'error');
+					showSweetAlertMessage('Error', 'No ASIN found!', 'error');
 				} 
 				else if(adata.asin_match == 'partial')
 				{
