@@ -62,9 +62,16 @@ class ShipmentsData extends Model
         );
     }
 
+    public static function updateShipmentData($asset, $status)
+    {
+        return self::where(["asset" => $asset])
+            ->update(["status" => $status]);
+    }
+
     public static function getShipmentCountByID($Id)
     {
-    	return self::where(['sid'=>$Id,
+    	return self::where([
+                'sid'=>$Id,
     			'status'=>'active'
     		])->count();
     }
@@ -97,8 +104,8 @@ class ShipmentsData extends Model
                         ->where('shipments_data.status','=',$status)
                         ->where('shipments_data.aid','=',$aid);
                 })
-    		->orderBy('shipments_data.aid', 'DESC')
-    		->orderBy('shipments_data.asset', 'DESC')
+    		->orderBy('shipments_data.aid')
+    		->orderBy('shipments_data.asset')
             ->get();
     }
 
@@ -108,7 +115,7 @@ class ShipmentsData extends Model
         $shipmentsData = self::where(["sid" => $sess,"asset" => $asset])->first();
         if($shipmentsData)
         {
-            if($shipmentData->delete())
+            if($shipmentsData->delete())
             {
                 $result = true;
             }
@@ -120,12 +127,12 @@ class ShipmentsData extends Model
     {
         return self::select('shipments_data.aid', 's.id', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
             ->selectSub('count(shipments_data.id)', 'cnt')
-            ->join('asins as a', function($join) use($currentSession, $status){
+            ->join('asins as a', function($join) use ($currentSession, $status){
                 $join->on('shipments_data.aid', '=', 'a.id')
                     ->where('shipments_data.sid','=', $currentSession)
                     ->where('shipments_data.status','=', $status);
             })
-            ->join('shipments as s', function($join) use($currentSession){
+            ->join('shipments as s', function($join) use ($currentSession){
                 $join->on('shipments_data.aid', '=', 's.id');
             })
             ->groupBy('shipments_data.aid')
@@ -135,12 +142,12 @@ class ShipmentsData extends Model
     public static function sessionItems($currentSession, $status)
     {
         return self::select('shipments_data.aid', 's.id', 'shipments_data.old_coa',  'shipments_data.new_coa', 'shipments_data.win8_activated', 'shipments_data.asset', 'shipments_data.sn', 'shipments_data.added_on', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
-            ->join('asins as a', function($join) use($currentSession, $status){
+            ->join('asins as a', function($join) use ($currentSession, $status){
                 $join->on('shipments_data.aid', '=', 'a.id')
                     ->where('shipments_data.sid','=', $currentSession)
                     ->where('shipments_data.status','=', $status);
             })
-            ->join('shipments as s', function($join) use($currentSession){
+            ->join('shipments as s', function($join) use ($currentSession){
                 $join->on('shipments_data.aid', '=', 's.id');
             })
             ->orderBy('shipments_data.aid', 'DESC')
@@ -153,13 +160,13 @@ class ShipmentsData extends Model
         return self::select('i.id', 'i.part_num', 'i.item_name', 'i.qty', 'i.vendor', 'i.dlv_time', 'i.low_stock', 'i.reorder_qty', 'i.email_tpl', 'i.email_subj')
             ->selectSub('sum(p.qty)', 'required_qty')
             ->selectSub('sum(p.qty) - i.qty', 'missing')
-            ->join('supplies as i', function($join) use($currentSession){
+            ->join('supplies as i', function($join) use ($currentSession){
                 $join->on('shipments_data.aid', '=', 'i.id');
             })
-            ->join('supplie_asin_models as p', function($join) use($currentSession){
+            ->join('supplie_asin_models as p', function($join) use ($currentSession){
                 $join->on('i.id', '=', 'p.supplie_id');
             })
-            ->join('shipments_data as d', function($join) use($currentSession, $status){
+            ->join('shipments_data as d', function($join) use ($currentSession, $status){
                 $join->on('d.aid', '=', 'p.asin_model_id')
                     ->where('d.sid','=', $currentSession)
                     ->where('d.status','=', $status);

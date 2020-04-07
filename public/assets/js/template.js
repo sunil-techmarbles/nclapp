@@ -1,3 +1,4 @@
+var items = []
 $(document).ready(function()
 {
 	$(window).keydown(function(event)
@@ -8,8 +9,10 @@ $(document).ready(function()
 			return false;
 		}
 	});
-	if (items.length > 0)
+	// console.log(templateItems);
+	if (templateItems.length > 0)
 	{
+		items = templateItems;
 		fillData();
 	}
 	$('input[data-modelname="1"]').prop("readonly",true);

@@ -6,21 +6,24 @@
 		<form method="post" class="form-inline" enctype="multipart/form-data" action="{{route('sessions')}}" style="max-height: 250px;overflow: auto;">
 			@csrf
 			<div class="w-100 row mb-3 mt-3">
-				<div class="col-md-6">
+				<div class="col-md-6 mr-0">
 					<div class="form-group">
 						<input class="form-control" type="file" name="bulk_data" id="bulk_data"/>
 						<input type="submit" value="Bulk Upload" class="btn btn-warning" name="bulk_upload"/>
 					</div>					
 				</div>
-				<div class="col-md-6">
-					<div class="form-group">
+				<div class="col-md-1">
+					<a target="_blank" class="btn btn-warning" href="{{URL('/sample-files/sample.xlsx')}}">Sample</a>
+				</div>
+				<div class="col-md-5">
+					<div class="form-group float-right">
 						<input class="form-control" placeholder="Session Name" type="text" name="session_name" id="session_name"/>
 						<button class="btn btn-warning" name="new_session" value="1" type="submit">New Session</button>
 					</div>
 				</div>
 			</div>
 		</form>
-		<table id="sessions" class="table">
+		<table id="sessions-list" class="table">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -29,6 +32,7 @@
 					<th>Closed On</th>
 					<th>Status</th>
 					<th>Items Count</th>
+					<th>Missing parts</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -40,13 +44,16 @@
 						<td>{{$p["status"] == 'open' ? '' : $p["updated_on"]}}</td>
 						<td>{{$p["status"]}}</td>
 						<td>{{$p["count"]}}</td>
+						<td>
+							<button type="button" name="update" id="{{$p["id"]}}" class="btn btn-warning btn-sm session-update">Missing Parts</button>
+						</td>
 					</tr>
 				@endforeach
 			</tbody>
 		</table>
-		@if(!empty($items))
+		@if(!empty($items) && $items->count() > 0)
 			<h3>Items for session {{$sessionName}}</h3>
-			<table id="sessions-asins" class="table">
+			<table id="sessions-asins-list" class="table">
 				<thead>
 					<tr>
 						<th>ASIN</th>
@@ -106,11 +113,11 @@
 			</table>
 		@endif
 		
-		@if(!empty($parts))
+		@if(!empty($parts) && $parts->count() > 0)
 			<h3>Required Parts</h3>
 			<form method="post" action="{{route('sessions')}}">
 				@csrf
-				<table id="sessions-asins-part" class="table">
+				<table id="sessions-asins-part-list" class="table">
 					<thead>
 						<tr>
 							<th>Part Num</th>
@@ -157,4 +164,5 @@
 		@endif
 	</div>
 </div>
+@include('admin.sessions.modal')
 @endsection

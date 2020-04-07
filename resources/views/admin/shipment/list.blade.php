@@ -4,7 +4,6 @@
 <div class="mte_content">
 	<div class="container">
 		<form method="get" id="main-form" autocomplete="off">
-			<input type="hidden" name="page" value="shipments"/>
 			<div class="noprint" style="text-align: center;">
 				<div class='formitem'>
 					<div class='form-group'>
@@ -27,7 +26,7 @@
 				@endif	
 			</div>
 		</form>
-		<table id="shipment" class="table">
+		<table id="shipment-list" class="table">
 			<thead> 
 				<tr>
 					<th>ID</th>
@@ -40,7 +39,7 @@
 				</tr>
 			</thead>
 			<tbody>
-			@foreach($shipments as $p)
+			@foreach($shipments as $key => $p)
 				<tr>
 					<td>{{$p["id"]}}</td>
 					<td>
@@ -66,7 +65,7 @@
 		
 		@if(!empty($asins))
 			<h3>Items for Shipment {{$shipmentName}}</h3>
-			<table id="shipment-asin" class="table">
+			<table id="shipment-asin-list" class="table">
 				<thead>
 					<tr>
 						<th>ASIN</th>
@@ -85,7 +84,9 @@
 				<tbody>
 					@foreach($asins as $i)
 						<tr style="font-weight: bold">
-							<td><a href="#" onclick="$('.asin{{$i["aid"]}}').toggle()">{{$i["asin"]}}</a></td>
+							<td>
+								<a href="javascript:void(0)" onclick="$('.asin{{$i["aid"]}}').toggle()">{{$i["asin"]}}</a>
+							</td>
 							<td>{{$i["model"]}}</td>
 							<td>{{$i["form_factor"]}}</td>
 							<td>{{$i["cpu_core"]}} {{$i["cpu_model"]}} CPU @ {{htmlspecialchars($i["cpu_speed"])}}</td>
@@ -94,7 +95,7 @@
 							<td colspan="5">&nbsp;</td>
 						</tr>
 						@foreach($i['items'] as $a)
-							<tr style="display: none;" class="asin<?=$i["aid"]?>">
+							<tr style="display: none;" class="asin{{$i["aid"]}}">
 								<td>{{$a["asin"]}}</td>
 								<td>{{$a["model"]}}</td>
 								<td>{{$a["form_factor"]}}</td>
@@ -106,9 +107,9 @@
 								<td>{{($a["win8_activated"] ? 'WIN8 Activated' : $a["new_coa"])}}</td>
 								<td>{{$a["added_on"]}}</td>
 								<td><a href="
-									{{route('shipments', ['s' => $sess, 'remove' => $a['asset']])}}
-									"><span class="glyphicon glyphicon-trash"></span></a></td>
-									}
+									{{route('shipments', ['s' => request()->get('s'), 'remove' => $a['asset']])}}
+									"><span class="fa fa-trash"></span></a>
+								</td>
 							</tr>
 						@endforeach
 					@endforeach

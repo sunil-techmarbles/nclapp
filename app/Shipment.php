@@ -25,8 +25,7 @@ class Shipment extends Model
     public static function getAllRecord($request)
     {
     	return self::select('id','name','started_on','updated_on','status')
-    		->orderBy('status', 'DESC')
-    		->orderBy('started_on', 'DESC')
+    		->orderBy('id', 'DESC')
     		->get();
     }
 

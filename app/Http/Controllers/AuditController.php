@@ -90,9 +90,9 @@ class AuditController extends Controller
 				$cgrp = $grp;
 			}
 			
-			if( method_exists( $this , "get_form_$qtype" ) ) 
+			if( method_exists($this , "get_form_".$qtype) ) 
 			{
-				$function = "get_form_$qtype"; 
+				$function = "get_form_".$qtype;
 				$output .= "<div class='formitem'>" . $this->$function($formdata) . "</div>";
 			}
 		}

@@ -202,6 +202,13 @@ class Asin extends Model
             ->get();
     }
 
+    public static function getSpecificTemplateRecord($fields)
+    {
+        return self::select($fields)
+            ->where('model', '!=', "Template")
+            ->get();
+    }
+
     public static function getSpecificSixthRecord($fields, $model)
     {
         return self::select($fields)
