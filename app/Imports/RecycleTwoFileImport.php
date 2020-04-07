@@ -15,14 +15,14 @@ class RecycleTwoFileImport implements ToModel, WithStartRow
     public function model(array $row)
     {
         $data = [
-            "Brand"  => ifnull($row[0]),
-            "Model"   => ifnull($row[1]),
-            "PartNo"   => ifnull($row[2]),
-            "Category" => ifnull($row[3]),
-            "Notes"    => ifnull($row[4]),
-            "Value"    => ifnull($row[5]),
-            "Status"   => ifnull($row[6]),
-            "require_pn" => ifnull($row[7]),
+            "Brand"  => ifnull(@$row[0]),
+            "Model"   => ifnull(@$row[1]),
+            "PartNo"   => ifnull(@intval($row[2])),
+            "Category" => ifnull(@$row[3]),
+            "Notes"    => ifnull(@$row[4]),
+            "Value"    => ifnull(@$row[5]),
+            "Status"   => ifnull(@$row[6]),
+            "require_pn" => ifnull(@$row[7]),
         ];
 
         $itamgRecycleInventory = ItamgRecycleInventory::addRecord($data);

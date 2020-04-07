@@ -1385,7 +1385,7 @@ class ShopifyController extends Controller
 			$tab = FormModel::getFormModelTab($tplid);
 			$data = [
 				"type"	=> "model",
-				"user"	=> Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name,
+				"user"	=> Sentinel::getUser()->first_name,
 				"trid"	=> $tplid,
 				"product"	=> $tab,
 				"data"	=> json_encode($data)

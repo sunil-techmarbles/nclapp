@@ -31,6 +31,9 @@ class RecycleController extends Controller
      */
 	public function __construct($searchDataArray=[])
 	{
+        // set_time_limit(0);
+        ini_set('max_execution_time', 300); //5 minutes
+
     	/**
      	* Set value for common uses in the RecycleController instance.
      	*/
@@ -566,7 +569,7 @@ class RecycleController extends Controller
             $newData = [
                 'name' => $fileName,
                 'started' => $fileCreatedDate,
-                'closed' => '',
+                'closed' => null,
                 'status' => '1'
             ];
             if (empty($checkFile))
@@ -793,7 +796,6 @@ class RecycleController extends Controller
     {
         if($request->ajax())
         {
-            // recycle-recorde.blade.php
             if (isset($request->file_name) && !empty($request->file_name))
             {
                 $fileName = $request->file_name;
@@ -803,7 +805,7 @@ class RecycleController extends Controller
                 $logo = $this->logo;
                 $pdfFileData = RecycleRecord::getRecordById($request);
                 $pdfFileData = (!$pdfFileData->isEmpty()) ? $pdfFileData->toArray() : [];
-                $closed = ($pdfFileData[0]['status']) ? '' : Carbon::createFromFormat('l F jS,Y', $pdfFileData[0]['closed']);
+                $closed = ($pdfFileData[0]['status']) ? '' : date('l F jS,Y', strtotime($pdfFileData[0]['closed']));
                 $pdfData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($request->id));
                 $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->render();
                 $this->createPDF($html, $request->file_name, $filePath);
@@ -863,7 +865,14 @@ class RecycleController extends Controller
             $data = ['category' => $request->cat_name];
             $categoryData = Recycle::getTypeOfScrap((object) $data);
             $categoryData = (!$categoryData->isEmpty()) ? $categoryData->toArray() : [];
-            return view('admin.recycle-first.category-edit', compact('categoryData'));
+            if($categoryData)
+            {
+                return view('admin.recycle-first.category-edit', compact('categoryData'));
+            }
+            else
+            {
+                abort('404');
+            }
         }
         abort('404');
     }

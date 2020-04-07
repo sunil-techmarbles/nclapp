@@ -401,11 +401,20 @@ class RefurbController extends Controller
 				$sn = $adata['Serial'];
 				if(!empty($request->get("asin"))) $adata['asin_id'] = $request->get("asin");
 				file_put_contents($refurbAssetData,json_encode($adata));
-				return response()->json(['message' => 'COA for this Asset Id is already saved in database', 'type' => 'success', 'status' => true]);
 			}
 			else
 			{
-				return response()->json(['message' => 'something went wrong with ajax request', 'type' => 'waring', 'status' => false]);
+				$sn="";
+			}
+			if($request->win8) $request->old_coa = 'WIN8 Activated';
+            $id = CoaReport::getIdOfCoaReport($asset);
+            if($id == "")
+            {
+            	return response()->json(['message' => 'OKi', 'type' => 'success', 'status' => true]);
+			}
+			else
+			{
+            	return response()->json(['message' => 'OK', 'type' => 'success', 'status' => true]);
 			}
 		}
 		else
