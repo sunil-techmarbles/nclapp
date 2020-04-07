@@ -94,11 +94,9 @@ class ShopifyPricing extends Model
     public static function getRecordForImport($request)
     {
     	return self::select('*')
-    		->where([
-    			'Form_Factor' => $request->form_factor,
-    			'Condition' => $request->condition,
-    			'Model' => $request->model,
-			])
+            ->where('Form_Factor','LIKE', '%' .$request->form_factor.'%')
+            ->where('Condition','LIKE', '%' .$request->condition.'%')
+            ->where('Model','LIKE', '%' .$request->model.'%')
     		->where('Processor', 'LIKE' ,'%'.$request->processor.'%')
             ->get();
     }

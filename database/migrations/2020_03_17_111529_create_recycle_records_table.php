@@ -18,7 +18,7 @@ class CreateRecycleRecordsTable extends Migration
             $table->string('name', 255)->nullable();
             $table->string('file_path', 255)->nullable();
             $table->tinyInteger('status')->default(1);
-            $table->integer('items');
+            $table->integer('items')->default(0);
             $table->timestamp('started')->nullable();
             $table->timestamp('closed')->nullable();
             $table->softDeletes();

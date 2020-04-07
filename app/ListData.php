@@ -82,7 +82,7 @@ class ListData extends Model
 
     public static function updateRunStatus($value, $status)
     {
-    	return self::where(["asset" => $value])
+    	return self::where("asset", '=', $value)
     		->update(["run_status" => $status]);
     }
 
