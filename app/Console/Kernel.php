@@ -44,6 +44,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('WipeBiosBlanccoFiles:count')
             ->daily();
+
+        $schedule->command('COA:weekly')
+            ->weekly();
     }
 
     /**
