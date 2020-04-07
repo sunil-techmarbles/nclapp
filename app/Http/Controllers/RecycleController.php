@@ -509,7 +509,7 @@ class RecycleController extends Controller
  	*/
   	public function recycleFirstIndex(Request $request)
   	{
-  		$currentUser = Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name;
+  		$currentUser = Sentinel::getUser()->first_name;
   		$selected = '';
   		//get all categories
   		$categories = Recycle::getAllRecord($single='Type_of_Scrap', $query=['status'=>0]);

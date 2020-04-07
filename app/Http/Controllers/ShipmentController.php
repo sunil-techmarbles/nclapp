@@ -286,7 +286,7 @@ class ShipmentController extends Controller
 						"new_coa" => $new_coa,
 						"win8_activated" => $win8,
 						"asset" => $asset,
-						"added_by" => Sentinel::getUser()->first_name.' - '.Sentinel::getUser()->last_name
+						"added_by" => Sentinel::getUser()->first_name
 					];
 					ShipmentsData::deleteOldShipmentData($sess,$asset);
 					ShipmentsData::addShipmentData((object) $data, $this->current);

@@ -110,7 +110,7 @@ function getAssetData(fId)
 				$("#printbtn").hide();
 				$("#printsaved").hide();
 				$("#comp_form").html('').hide();
-				// $("body").css('background-image', 'none');
+				$("body").css('background-image', 'none');
 				$(".f_opt").text('N/A');
 				$(".frmrow").hide();
 				old_coa = adata.old_coa;
@@ -381,10 +381,10 @@ function setAsin(aId)
 	$.post("/"+prefix+"/saveasin", {_token:_token, aid: a.id, asset: assetNumber}, function(response){
 		var icon = (response.status) ? 'success' : 'error';
 		swalWithBootstrapButtons.fire( 
-					response.type,
-					response.message ,
-					icon
-				) 
+			response.type,
+			response.message ,
+			icon
+		)
 	    return false;
 	});
 }
