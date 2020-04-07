@@ -35,6 +35,13 @@ class Asin extends Model
 		'shopify_product_id',	
     ];
 
+    public static function getAsinManufactureData($asinId)
+    {
+        return self::select('asins.manufacturer')
+                ->where(['id' => $asinId])
+                ->first();
+    }
+
     public static function getAllAsins($request)
     {
         $query = self::select('*');
