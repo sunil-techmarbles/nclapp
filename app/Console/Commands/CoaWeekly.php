@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 
 class CoaWeekly extends Command
 {
+    public $COAReportDir , $basePath;
     /**
      * The name and signature of the console command.
      *
