@@ -146,6 +146,7 @@ class RefurbController extends Controller
 				else
 				{
 					$data["Model"] = $asset.".xml not found";
+					$data["Model_Not_f"] = true;
 					$data["Serial"] = '000000';
 				}
 				$fields = ["id","model","asin","ram","hdd","os","cpu_core","cpu_model","cpu_speed","price"];

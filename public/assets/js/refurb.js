@@ -117,7 +117,14 @@ function getAssetData(fId)
 				new_coa = adata.new_coa;
 				win8 = adata.win8;
 				adata["descr"]={};
-				$("#mspecs").text(adata.Model+', '+adata.CPU+', '+adata.RAM+', '+adata.HDD);
+				var acpu = (adata.CPU == 'N/A') ? '' : adata.CPU;
+				var aRAM = (adata.RAM == 'N/A') ? '' : adata.RAM;
+				var aHDD = (adata.HDD == 'N/A') ? '' : adata.HDD;
+				var aModel = (adata.Model_Not_f) ? '' : adata.Model;
+				if(acpu && aRAM && aHDD && aModel)
+				{
+					$("#mspecs").text(aModel+', '+acpu+', '+aRAM+', '+aHDD);
+				}
 				$("#f_model").text(adata.Model);
 				$("#f_cpu").text(adata.CPU);
 				$("#f_ram").text(adata.upd_ram);
