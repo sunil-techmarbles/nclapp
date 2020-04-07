@@ -257,7 +257,6 @@ class ShipmentController extends Controller
 
 				if(!$aid)
 				{
-					$ajax = new Ajax();
 					$data = $this->getAsset($request);
 					if($data!='0')
 					{
