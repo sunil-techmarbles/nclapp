@@ -56,7 +56,7 @@
         </div>
          <div class="menu-item">
             <a href="{{route('recycle.second')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('recycle.second')}}">Recycle2 Trailer</a>
+            <a href="{{route('recycle.second')}}">Asset Lookup</a>
         </div>
         <!-- <div class="menu-item">
             <a href="http://nclapp.com:8080/CustomerInventory/CustomerInventoryDetails.jsp" target="_blank"><span class="fa fa-user"></span>
