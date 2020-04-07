@@ -11,7 +11,8 @@ use SimpleXMLElement;
 class WipeMakor extends Command
 {
     use CommonWipeMakorApiTraits;
-     public $basePath, $wipeDataDir , $wipeAdditionalDataDir, $wipeExecutedFileDir, $wipeAdditionalExecutedDir, $wipeResponseFileDIr;
+
+     public $basePath, $wipeDataDir , $wipeAdditionalDataDir, $wipeExecutedFileDir, $wipeAdditionalExecutedDir, $wipeResponseFileDIr, $WipeMakorRequestFileDir;
 
     /**
      * The name and signature of the console command.
@@ -50,6 +51,7 @@ class WipeMakor extends Command
         $this->wipeExecutedFileDir = $this->basePath . "/makor-processed-data/wipe-data";
         $this->wipeAdditionalExecutedDir = $this->basePath . "/makor-processed-data/additional";
         $this->wipeResponseFileDIr = $this->basePath . "/wipe-data2";
+        $this->WipeMakorRequestFileDir = $this->basePath . "/makor-request/wipe-makor-request";
 
         $this->createMakorRequestFromWipeData();
         die("Wipe Makor api done");
@@ -114,7 +116,7 @@ class WipeMakor extends Command
                             MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
                             continue;
                         }
-                        
+
                         $additionalFileContent = getXMLContent($additionalDataFile);
 
                         if (!isset($jobData['UserFields']['UserField']))
@@ -195,20 +197,24 @@ class WipeMakor extends Command
                         }
 
                         $WipeMakorResponse = $this->WipeMakorAPIRequest($ApidataObject, $assetTag);
-                        
+
                         if ($WipeMakorResponse == 200)
                         {
+                            $RequestFile = $this->WipeMakorRequestFileDir .'/' . $assetTag . ".xml";
+                            WriteDataFile($RequestFile, $ApidataObject['xml_data']);
+
                             $destinationWipeReportExecutedFile = $this->wipeExecutedFileDir . '/' . $wipeDataFile;
                             rename($wipeDataFilePath, $destinationWipeReportExecutedFile);
 
                             $destinationAdditionalWipeExecutedFile = $this->wipeAdditionalExecutedDir . '/' . $assetTag . ".xml";
-                            rename($additionalDataFile, $destinationAdditionalWipeExecutedFile); 
+                            rename($additionalDataFile, $destinationAdditionalWipeExecutedFile);
 
                             $wipeResponseFile = $this->wipeResponseFileDIr .'/' . $assetTag . '.xml';
                             $this->CreateWipeReportXmlResponseFIle($wipeResponseFile, $ApidataObject);
 
                             $success = 'Wipe Makor API Successfull for wipe data  ' . $wipeDataFile;
                             MessageLog::addLogMessageRecord($success,$type="WipeMakor", $status="success");
+                            
                         }
                         elseif ($WipeMakorResponse == 400)
                         {

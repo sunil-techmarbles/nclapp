@@ -11,7 +11,7 @@ use SimpleXMLElement;
 class WipeBiosMakor extends Command
 {
     use CommonWipeBiosMakorApiTraits;
-    public $basePath, $wipeBiosDataDir, $wipeBiosAdditionalDataDir, $wipeBiosExecutedFileDir, $wipeBiosAdditionalExecutedDir, $wipeBiosResponseFileDIr;
+    public $basePath, $wipeBiosDataDir, $wipeBiosAdditionalDataDir, $wipeBiosExecutedFileDir, $wipeBiosAdditionalExecutedDir, $wipeBiosResponseFileDIr, $WipeBiosMakorRequestFileDir;
 
     /**
      * The name and signature of the console command.
@@ -50,6 +50,8 @@ class WipeBiosMakor extends Command
         $this->wipeBiosExecutedFileDir = $this->basePath . "/makor-processed-data/bios-data";
         $this->wipeBiosAdditionalExecutedDir = $this->basePath . "/makor-processed-data/additional";
         $this->wipeBiosResponseFileDIr = $this->basePath . "/wipe-data2/bios-data";
+        $this->WipeBiosMakorRequestFileDir = $this->basePath . "/makor-request/bios-makor-request";
+
 
         $this->createMakorRequestFromWipeBiosData();
         die("Wipe Bios Makor api done");
@@ -151,12 +153,14 @@ class WipeBiosMakor extends Command
                         $destinationBiosAdditionalWipeExecutedFile = $this->wipeBiosAdditionalExecutedDir . '/' . $assetNumber . ".xml";
                         rename($BiosAdditionalDataFile, $destinationBiosAdditionalWipeExecutedFile);
 
+                        $RequestFile = $this->WipeBiosMakorRequestFileDir .'/' . $assetNumber . ".xml";
+                        WriteDataFile($RequestFile, $apiDataObject['xml_data']);
+
                         $wipeBiosResponseFile = $this->wipeBiosResponseFileDIr .'/' . $assetNumber . '.xml';
                         $this->CreateBiosWipeReportXmlResponseFIle($wipeBiosResponseFile, $apiDataObject);
 
                         $success = 'Wipe Bios Makor API Successfull for wipe data  ' . $wipeBiosDataFile;
                         MessageLog::addLogMessageRecord($success,$type="WipeBiosMakor", $status="success");
-
                     }
                     elseif ($WipeBiosMakorResponse == 400)
                     {
