@@ -54,20 +54,6 @@ class CountWipeBiosBlancoFilesReport extends Command
         $wipeBiosFilesCount = $this->CountWipeBiosDataFiles();
         $blanccoPdfFilesCount = $this->CountBlanccoPdfDataFiles();
         $this->InsertDataInWipeReportMainTable($wipePdfFilesCount, $wipeBiosFilesCount, $blanccoPdfFilesCount);
-        
-        $subject = "test";
-        $body = "test";
-        $email = "sunil.techmarbles@gmail.com";
-        Mail::raw($body, function($m) use ( $subject, $email )
-        {   
-                $m->to( $email )->subject($subject);
-        });
-
-        echo "Total files Count Wipe-data : ". $wipePdfFilesCount;
-        echo "<br>";
-        echo "Total files Count Bios-data : ". $wipeBiosFilesCount;
-        echo "<br>";
-        echo "Total files Count Blancco Pdf-data : ". $blanccoPdfFilesCount;
         die("******");
     }
 
