@@ -11,8 +11,64 @@
     background: rgb(19, 118, 166);
     color: white;
 }
-
 .wipeReportNav {
     list-style-type: none;
     float: right;
+}
+/*tech css*/
+#printbtn .btn.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.itmg-audit #var_tab {
+    text-align: left;
+}
+.itmg-audit #var_tab .form-control {
+    width: auto;
+}
+.itmg-audit #var_tab .form-control {
+    width: auto;
+    display: inline-block;
+}
+.itmg-audit #var_tab .form-group label.btn {
+    padding:0 12px 0 0;
+}
+.itmg-audit #var_tab .combobox-container {
+    display: inline-block;
+}
+.itmg-audit #main-form #reviewBtn {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    float: left;
+}
+.itmg-audit .formitem .cb-cnt {
+    display: inline-block;
+    width: 33.33% !important;
+}
+.itmg-audit .formitem .cb-cnt label {
+    padding: 0;
+}
+.itmg-audit label.btn span {
+    font-size: 1.5em;
+    font-size: 20px;
+}
+.itmg-audit .var_tab .formitem .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.itmg-audit .var_tab .formitem .form-group .btn.btn-secondary {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.itmg-audit #var_tab .formitem .form-group {
+    display: inline-block;
+}
+.itmg-audit #var_tab .formitem .form-group  button.btn.btn-secondary {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
 }

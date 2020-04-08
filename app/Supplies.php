@@ -47,7 +47,7 @@ class Supplies extends Model
     }
 
     public static function addSupplies($request)
-    {		
+    {
     	$result = false;
     	$supplies = new Supplies();
     	$supplies->item_name = $request->item_name ;
@@ -74,7 +74,7 @@ class Supplies extends Model
     }
 
     public static function updateSupplieById($request)
-    {		
+    {
     	$result = false;
     	$updateSupplie = self::where(['id' => $request->id])
     		->update([
@@ -117,9 +117,9 @@ class Supplies extends Model
     		->first();
     }
 
-    public static function getMissingParts($asinID='', $qty)
-    {   
-        return $parts = self::select('supplies.*')
+    public static function getMissingParts($asinID, $qty)
+    {
+		return self::select('supplies.*')
             ->selectSub('(p.qty * '.$qty.')', 'required_qty')
             ->selectSub('(p.qty * '.$qty.' - supplies.qty)', 'missing')
             ->join('supplie_asin_models as p', function($join) use($asinID){
