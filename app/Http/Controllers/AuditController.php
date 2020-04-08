@@ -118,7 +118,7 @@ class AuditController extends Controller
 			$output = "
 			<div class='form-group'>
 			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-			<input type='text' value='".$fld["default_val"]."'  id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+			<input type='text' value='".$fld["default_val"]."' class='form-control' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
 			</div>";
 		}
 		return $output;
@@ -133,7 +133,7 @@ class AuditController extends Controller
 			$output = "
 			<div class='form-group'>
 			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-			<input type='number' value='".$fld["default_val"]."'  id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
+			<input type='number' value='".$fld["default_val"]."' class='form-control' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") ."/>
 			</div>";
 		}
 		return $output;
@@ -148,7 +148,7 @@ class AuditController extends Controller
 			$output = "
 			<div class='form-group' style='width:100%'>
 			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label>
-			<textarea  rows='5' style='width:100%' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") .">".$fld["default_val"]."</textarea>
+			<textarea class='form-control' rows='5' style='width:100%' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") .">".$fld["default_val"]."</textarea>
 			</div>";
 		}
 		return $output;
@@ -204,7 +204,7 @@ class AuditController extends Controller
 					if(count($itm)==2 && trim($itm[0])=="data-customlabel") $olbl = trim(str_replace('"','',$itm[1]));
 				}
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_new";
-				$output .= "<div class='form-group'><label for='".$itemid."'>$olbl</label> <input type='text'  id='".$itemid."' name='".$itemid."'/></div>";
+				$output .= "<div class='form-group'><label for='".$itemid."'>$olbl</label> <input type='text' class='form-control' id='".$itemid."' name='".$itemid."'/></div>";
 			}
 		}
 		return $output;
@@ -244,7 +244,7 @@ class AuditController extends Controller
 				$dataid = $fld["qtype"] . "_" . $fld["id"] . "_new";
 				$output .= "<div class='form-group'>
 				<label for='".$itemid."'><input type='radio' id='".$itemid."'  value='Other:' name='".$itemname."' ".$fld["config"] . ($fld["required"]?" required='true'":"") ."/>
-				<span>".$olbl."</span> <input type='text'  id='".$dataid."' name='".$dataid."' ".$addopts." onClick='$(\"#".$itemid."\").prop( \"checked\", true )'/>
+				<span>".$olbl."</span> <input type='text' class='form-control' id='".$dataid."' name='".$dataid."' ".$addopts." onClick='$(\"#".$itemid."\").prop( \"checked\", true )'/>
 				</label></div>";
 			}
 			$output .= "</div>";
@@ -284,14 +284,14 @@ class AuditController extends Controller
 			$output = "
 			<div class='form-group'>
 			<label class='ttl' for='".$itemid."'>" . $fld["question"] . ($fld["required"]?" <span class='req'>*</span>":"") ."</label><br/>
-			<select  id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
+			<select class='form-control' id='".$itemid."' name='".$itemid."' ".$fld["config"].($fld["required"]?" required='true'":"") .">" .
 			self::getOptions($options,$fld["default_val"]).  
 			"</select></div>";
 			if ($fld["allow_new"]) 
 			{
 				$selid = $itemid;
 				$itemid = $fld["qtype"] . "_" . $fld["id"] . "_new";
-				$output .= " <div class='form-group' style='vertical-align:bottom;'><label for='".$itemid."'>Other:</label> <input type='text'  
+				$output .= " <div class='form-group' style='vertical-align:bottom;'><label for='".$itemid."'>Other:</label> <input type='text' class='form-control' 
 				id='".$itemid."' name='".$itemid."' onClick='$(\"#".$selid."\").val($(\"#".$selid." option:last-child\").val())' /></div>";
 			}
 		}
