@@ -1,7 +1,7 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Audit')
 @section('content')
-<div class="container">
+<div class="container itmg-audit">
 	<div id="page-head">
 		Audit Data Entry
 		<span class="fa fa-repeat" style="cursor: pointer" onclick="getLastInput()"></span>

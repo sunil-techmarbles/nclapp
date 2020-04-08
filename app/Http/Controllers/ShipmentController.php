@@ -319,7 +319,7 @@ class ShipmentController extends Controller
 		{
 			$r = $request->get('remove');
 			$status = 'removed';
-			SessionData::updateSessiontStatus($r, $status='active');
+			SessionData::updateSessiontStatus($r, $s='active');
 		}
 		if($request->has('restore'))
 		{

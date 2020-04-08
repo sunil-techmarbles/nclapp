@@ -235,7 +235,7 @@ function getAssetData(fId)
 				for (var i in adata["conf"])
 				{
 					var itm = adata["conf"][i];
-					var ka = akeys[itm.key];
+					var ka = (akeys[itm.key]) ? '' : akeys[itm.key];
                     if(akeys[itm.key] == undefined)
                     {
 	                    $("#tab-content").append('<div id="edit_'+itm.key+'" class="tab-pane '+(i==0?'in active':'')+'"><h3>'+itm.key+'</h3></div>'); 
