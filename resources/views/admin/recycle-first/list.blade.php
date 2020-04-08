@@ -3,55 +3,57 @@
 @section('content')
 <div class="container">
 	<div id="page-head">Recycle</div>
-    <form action="{{route('recycle.record')}}" class="form-inline mb-3" method="POST">
-        @csrf
-    	<div class="col-5">
-	    	<div class="form-group">
-		        <lable for="gross-weight"><strong>Category:</strong></lable>
-		        <select class="form-control" name="category" id="category">
-		            @foreach($categories as $key => $category)
-		                @if($selected == $category)
-		                    <option value="{{trim($category)}}" selected>
-		                    	{{$category}}
-		                	</option>
-		                @else
-			                <option value="{{trim($category)}}">
-			                	{{$category}}
-			            	</option>
-		                @endif
-		            @endforeach
-		            <option value="custom-cat" class="custom-cat">Custom</option>
-		        </select>
-	    	</div>
-    	</div>
-    	<div class="col-3 ml-2">
-	    	<div class="form-group">
-		        <lable for="gross-weight"><strong>Gross Weight</strong>:</lable>
-		        <input type="number" name="gross_weight" class="form-control gross-weight" required/>
-	    	</div>
-    	</div>
-    	<div class="col-2">
-	    	<div class="form-group">
-		        <lable for="tare"><strong>Tare(P/G/I):</strong></lable>
-		        <div class="form-check">
-			        <lable class="form-check-label" for="tare"><strong>P</strong></lable>
-			        <input type="radio" name="tare" value="P" class="form-check-input tare" checked/>
-		        </div>
-		        <div class="form-check">
-			        <lable class="form-check-label" for="tare"><strong>G</strong></lable>
-			        <input type="radio" name="tare" value="G" class="form-check-input tare"/>
-		        </div>
-		        <div class="form-check">
-			        <lable class="form-check-label" for="tare"><strong>I</strong></lable>
-			        <input type="radio" name="tare" value="I" class="form-check-input tare"/>
-		        </div>
-	    	</div>
-    	</div>
-    	<div class="col-1">
-	        <input type="hidden" name="action" value="new_record" class="tare"/>
-	        <input class="btn btn-primary" type="submit" value="Add" />
-    	</div>
-    </form>
+    <div class="row">
+        <form action="{{route('recycle.record')}}" class="form-inline mb-3" method="POST">
+            @csrf
+        	<div class="col-5">
+    	    	<div class="form-group">
+    		        <lable for="gross-weight"><strong>Category:</strong></lable>
+    		        <select class="form-control" name="category" id="category">
+    		            @foreach($categories as $key => $category)
+    		                @if($selected == $category)
+    		                    <option value="{{trim($category)}}" selected>
+    		                    	{{$category}}
+    		                	</option>
+    		                @else
+    			                <option value="{{trim($category)}}">
+    			                	{{$category}}
+    			            	</option>
+    		                @endif
+    		            @endforeach
+    		            <option value="custom-cat" class="custom-cat">Custom</option>
+    		        </select>
+    	    	</div>
+        	</div>
+        	<div class="col-3 ml-2">
+    	    	<div class="form-group">
+    		        <lable for="gross-weight"><strong>Gross Weight</strong>:</lable>
+    		        <input type="number" name="gross_weight" class="form-control gross-weight" required/>
+    	    	</div>
+        	</div>
+        	<div class="col-2">
+    	    	<div class="form-group">
+    		        <lable for="tare"><strong>Tare(P/G/I):</strong></lable>
+    		        <div class="form-check">
+    			        <lable class="form-check-label" for="tare"><strong>P</strong></lable>
+    			        <input type="radio" name="tare" value="P" class="form-check-input tare" checked/>
+    		        </div>
+    		        <div class="form-check">
+    			        <lable class="form-check-label" for="tare"><strong>G</strong></lable>
+    			        <input type="radio" name="tare" value="G" class="form-check-input tare"/>
+    		        </div>
+    		        <div class="form-check">
+    			        <lable class="form-check-label" for="tare"><strong>I</strong></lable>
+    			        <input type="radio" name="tare" value="I" class="form-check-input tare"/>
+    		        </div>
+    	    	</div>
+        	</div>
+        	<div class="col-1">
+    	        <input type="hidden" name="action" value="new_record" class="tare"/>
+    	        <input class="btn btn-primary" type="submit" value="Add" />
+        	</div>
+        </form>
+    </div>
     @if(!empty($recycleDataFiles))
         <table class="table table-striped recycle">
             <tr>

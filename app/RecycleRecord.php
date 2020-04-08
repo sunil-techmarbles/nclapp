@@ -43,11 +43,12 @@ class RecycleRecord extends Model
 
 	public static function getRecord($value)
 	{
-		$query = self::select('recycle_records.*')
+		$query = self::with('recycleRecordLines')
+			->select('recycle_records.*')
 			->selectSub('COUNT(rrl.id)', 'total')
     		->join('recycle_record_lines as rrl', function($join){
-                	$join->on('recycle_records.id', '=', 'rrl.record_id');
-                });
+            	$join->on('recycle_records.id', '=', 'rrl.record_id');
+            });
     	if($value)
     	{
     		$query = $query->where(['recycle_records.status' => '1']);
@@ -55,6 +56,11 @@ class RecycleRecord extends Model
     	return $query->groupBy('recycle_records.id')
     		->orderBy('recycle_records.id', 'DESC')
             ->get();
+	}
+
+	public function recycleRecordLines()
+	{
+		return $this->hasMany('App\RecycleRecordLine', 'record_id', 'id');
 	}
 
 	public static function getRecordByName($value)

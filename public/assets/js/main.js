@@ -496,7 +496,7 @@ function getAssetData(fId)
 			}
 			else
 			{
-				location.href = 'index.php?page=parts&model=' + data;
+				location.href = '/'+prefix+'/asinparts/'+data;
 			}
 		});
 	}

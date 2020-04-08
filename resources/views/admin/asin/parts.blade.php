@@ -1,8 +1,8 @@
 @extends('layouts.appadminlayout')
 @section('title', 'ASINs Parts')
 @section('content')
-<div class="mte_content">
-	<div class="container">
+<div class="mte_content itmg-asin">
+	<div class="container itmg-asin-parts">
 		<input type="hidden" name="page" value="refurb"/>
 		<div class="noprint" style="text-align: center;">
 			<div class='formitem'>
@@ -78,7 +78,6 @@
 				<td>{{$m['hdd']}}</td>
 			</tr>
 			@endforeach
-			
 		</table>
 		<div style="margin-bottom: 10px">
 			<button class="btn btn-default" onclick="$('#all_parts').toggle()">Show/Hide Parts ({{$asinsParts['model']}} ({{$asinsParts['asin']}})
