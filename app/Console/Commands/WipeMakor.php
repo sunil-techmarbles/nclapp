@@ -52,7 +52,6 @@ class WipeMakor extends Command
         $this->wipeAdditionalExecutedDir = $this->basePath . "/makor-processed-data/additional";
         $this->wipeResponseFileDIr = $this->basePath . "/wipe-data2";
         $this->WipeMakorRequestFileDir = $this->basePath . "/makor-request/wipe-makor-request";
-
         $this->createMakorRequestFromWipeData();
         die("Wipe Makor api done");
     }
