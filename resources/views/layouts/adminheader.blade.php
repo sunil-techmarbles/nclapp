@@ -13,7 +13,7 @@
 						<a class="nav-link" href="{{route('message.log')}}">Message Logs</a>
 					</li>
 				@endif
-				@if(request()->segment(count(request()->segments())) == 'runninglist')
+				@if(request()->segment(count(request()->segments())) == 'runninglist' || request()->segment(count(request()->segments())) == 'recycle')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
 						<a class="nav-link" href="{{route('inventory')}}">New List</a>
 					</li>
@@ -31,7 +31,7 @@
 						<a class="nav-link" href="{{route('get.issue.report')}}">Issues Report</a>
 					</li>
 				@endif
-				@if( request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' )
+				@if( request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'recycle' )
 					<li class="nav-item">
 						<a class="nav-link" href="{{route('asin')}}">ASIN Database</a>
 					</li>
@@ -41,12 +41,12 @@
 						<a class="nav-link" href="{{route('part.lookup')}}">Parts Lookup</a>
 					</li>
 				@endif
-				@if(request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'audit' || request()->segment(count(request()->segments())) == 'packages' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory')
+				@if(request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'audit' || request()->segment(count(request()->segments())) == 'packages' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'recycle')
 					<li class="nav-item">
 						<a class="nav-link" href="{{route('sessions')}}">Sessions</a>
 					</li>
 				@endif
-				@if(request()->segment(count(request()->segments())) == 'asin' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' )
+				@if(request()->segment(count(request()->segments())) == 'asin' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'recycle' )
 					<li class="nav-item">
 						<a class="nav-link" href="{{route('supplies')}}">Supply</a>
 					</li>
