@@ -515,7 +515,7 @@ $(document).ready(function()
 	$('#asset').focus();
 	$(window).keydown(function(event)
 	{
-		if(event.keyCode == 13) 
+		if(event.keyCode == 13 && $('#asset1').length != 1) 
 		{
 			if($("#asset").is(":focus"))
 			{

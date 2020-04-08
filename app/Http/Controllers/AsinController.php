@@ -96,8 +96,9 @@ class AsinController extends Controller
 
     public function updateAsins(Request $request)
     {
+        $id = $request->id;
         $validatedData = $request->validate([
-            'asin' => 'required|unique:asins,asin,'.$userId,
+            'asin' => 'required|unique:asins,asin,'.$id,
             'manufacturer' => 'required',
             'model' => 'required',
             'form_factor' => 'required',

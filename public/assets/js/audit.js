@@ -73,7 +73,7 @@ $( document ).ready(function()
 	setHeader();
 	$(window).keydown(function(event)
 	{
-		if(event.keyCode == 13)
+		if(event.keyCode == 13 && $('#asset1').length != 1)
 		{
 			event.preventDefault();
 			return false;
