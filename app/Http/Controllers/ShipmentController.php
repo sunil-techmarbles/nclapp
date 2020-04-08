@@ -348,7 +348,7 @@ class ShipmentController extends Controller
 		{
 			$assets = explode(PHP_EOL,$asset);
 		}
-		$assets = $this->getAssetsResult($request, $assets);
+		$assetResult = $this->getAssetsResult($request, $assets);
 		if($request->has('s'))
 		{
 			$shipmentId = $request->get('s');
@@ -361,15 +361,10 @@ class ShipmentController extends Controller
 			$s['count'] = ShipmentsData::getShipmentCountByID($s['id']);
 		}
 		unset($s);
-		if(!$assets['status'])
+		if($assetResult['status'])
 		{
-			$status = 'error';
-            \Session::flash($status, $assets['message']);
-		}
-		else
-		{
-			$status = 'success';
-            \Session::flash($status, $assets['message']);
+			$status = (!$assetResult['status']) ? 'error' : 'success';
+            \Session::flash($status, $assetResult['message']);
 		}
 		return view('admin.shipment.list', compact('shipments', 'asins', 'shipmentName', 'assets'));
 	}

@@ -90,7 +90,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/addupdatepackage','PackageController@AddUpdatePackage')->name('addUpdate.package');
 		Route::get('/checkinpackage','PackageController@CheckInPackage')->name('checkIn.package');
 		//Out bound Section
-		Route::get('/shipments','ShipmentController@index')->name('shipments');
+		Route::any('/shipments','ShipmentController@index')->name('shipments');
 		Route::post('/addshipment','ShipmentController@addShipment')->name('add.shipment');
 		Route::any('/sessions','SessionController@index')->name('sessions');
 		Route::post('/fetchparts','SessionController@fetchParts')->name('fetchparts');

@@ -58,7 +58,13 @@
 						<a href="{{route('parts.asin', $asin->id)}}" title="Parts List"><img src="{{URL('/assets/images/tools.png')}}" class="icons" title="Parts"></a>
 					</td>
 					<td>{{$asin->id}}</td>
-					<td>{{$asin->asin}}</td>
+					<td>
+						@if(!empty($asin->link))
+							<a href="{{$asin->link}}" target="_blank">{{$asin->asin}}</a>
+						@else
+							<a href="https://www.amazon.com/dp/{{$asin->asin}}?ref=myi_title_dp" target="_blank">{{$asin->asin}}</a>
+						@endif
+					</td>
 					<td>{{$asin->price}}</td>
 					<td>{{$asin->manufacturer}}</td>
 					<td>{{$asin->notifications}}</td>
