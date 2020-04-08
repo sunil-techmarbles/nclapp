@@ -64,4 +64,12 @@ class CoaReport extends Model
             ->pluck('id')
             ->first();
     }
+
+    public static function getRecordByDate($date)
+    {
+        return self::select('*')
+                ->where('added_on', '>=', $date )
+                ->get();
+    }
+
 }

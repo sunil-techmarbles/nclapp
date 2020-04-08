@@ -157,15 +157,26 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 });
 
 // all the api to run through a URL;
-Route::get('/blanccoapi', function () {
-    Artisan::queue('blancco:api', []);
-});
-Route::get('/blanccomakorapi', function () {
-    Artisan::queue('BlanccoMakor:api', []);
-});
-Route::get('/wipebiosmakorapi', function () {
-    Artisan::queue('WipeBiosMakor:api', []);
-});
-Route::get('/wipemakorapi', function () {
-    Artisan::queue('WipeMakor:api', []);
-});
+// Cron For getting data form blancco and pdf and xml files created
+Route::get('/blanccoapi', function () { Artisan::queue('blancco:api', []); });
+
+// Cron For making makor request for blancco xml data
+Route::get('/blanccomakorapi', function () { Artisan::queue('BlanccoMakor:api', []); });
+
+// Cron For making makor request for Wipe bios xml data
+Route::get('/wipebiosmakorapi', function () { Artisan::queue('WipeBiosMakor:api', []); });
+
+// Cron For making makor request for Wipe xml data
+Route::get('/wipemakorapi', function () { Artisan::queue('WipeMakor:api', []); });
+
+// Cron for sending mail to admins for COA weekly report data
+Route::get('/coaweekly', function () { Artisan::queue('COA:weekly', []); });
+
+// Cron for sending mail to admins for Failed search report  daily  data
+Route::get('/failedsearchdaily', function () { Artisan::queue('failedSearch:daily', []); });
+
+// Cron for sending mail to admins for Failed search report  weekly  data
+Route::get('/faildsearchweekly', function () { Artisan::queue('faildSearch:weekly', []); });
+
+// Cron for couniting file in the different dir and adding to database
+Route::get('/reportcount', function () { Artisan::queue('WipeBiosBlanccoFiles:count', []); });
