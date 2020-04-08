@@ -1,5 +1,5 @@
 @extends('layouts.appadminlayout')
-@section('title', 'Add ASINs')
+@section('title', 'Add ASIN')
 @section('content')
 <div class="mte_content">
 	<form id="asins-validation" method="post" action="{{route('store.asin')}}">   
@@ -13,7 +13,7 @@
 							<a class="btn btn-default btn-sm border" href="{{route('asin')}}">Back</a>
 						</td>
 						<td class="float-left">
-							<h3>Add ASINs</h3>
+							<h3>Add ASIN</h3>
 						</td>
 					</tr>
 				</tbody>

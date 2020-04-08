@@ -13,6 +13,7 @@ use App\FormsConfig;
 use App\ShipmentsData;
 use App\Asin;
 use App\SessionData;
+use App\Supplies;
 
 class ShipmentController extends Controller
 {
@@ -227,7 +228,7 @@ class ShipmentController extends Controller
 
     public function getAssetsResult(Request $request, $assets)
     {
-    	$result = ['status' => true, 'message' => ''];
+    	$result = ['status' => false, 'message' => ''];
     	$assetNumber = '';
 		if(!empty($assets))
 		{
@@ -262,7 +263,7 @@ class ShipmentController extends Controller
 					{
 						$res = json_decode($data,true);
 						if(!$aid) $aid = $res['asin_id'];
-						$sn = $res['Serial'];
+						$sn = (isset($res['Serial'])) ? $res['Serial'] : '';
 					}
 				}
 
@@ -278,6 +279,7 @@ class ShipmentController extends Controller
 				}
 				if($aid && strlen($asset)>3)
 				{
+					// echo 'i ma here';
 					$data = [
 						"sid" => $sess,
 						"aid" => $aid,
@@ -288,11 +290,13 @@ class ShipmentController extends Controller
 						"asset" => $asset,
 						"added_by" => Sentinel::getUser()->first_name
 					];
+					// print_r($data);
 					ShipmentsData::deleteOldShipmentData($sess,$asset);
 					ShipmentsData::addShipmentData((object) $data, $this->current);
-					ShipmentsData::updateShipmentData($asset, $status='removed');
-					// $assetNumber .= ",#" .$asset;
-					// $result = ['status' => true, 'message' => 'ASIN Record added for asset'.$assetNumber];
+					SessionData::updateSessiontStatus($asset, $status='removed');
+					// ShipmentsData::updateShipmentData($asset, );
+					$assetNumber .= ",#" .$asset;
+					$result = ['status' => true, 'message' => 'ASIN Record added for asset'.$assetNumber];
 				}
 				else
 				{
@@ -395,7 +399,7 @@ class ShipmentController extends Controller
 				foreach($parts as $p)
 				{
 					$nqty = max(0,$p["qty"]-$p["required_qty"]);
-					$db->update("tech_inventory",["qty"=>$nqty],["id"=>$p["id"]]);
+					Supplies::updateQuantityBySupplieID($p["id"], $nqty)
 				}
 
 				if (!empty($sessionItems))
