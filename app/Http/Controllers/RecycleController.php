@@ -521,6 +521,14 @@ class RecycleController extends Controller
 		$unapporovedCategories = Recycle::getAllRecordOrderBy($order);
 		//get recycle files
 		$recycleDataFiles = RecycleRecord::getRecord($value=0);
+        if($recycleDataFiles->count() > 0)
+        {
+            $recycleDatas = $recycleDataFiles->toArray();
+            foreach ($recycleDatas as $key => $value)
+            {
+                $recycleDataFiles[$key]['total'] = count($value['recycle_record_lines']);
+            }
+        }
   		return view('admin.recycle-first.list', compact('recycleDataFiles', 'unapporovedCategories', 'categories', 'currentUser', 'selected'));
   	}
 

@@ -197,7 +197,6 @@ class AsinController extends Controller
                 }
             }
         }
-
         $departments = Supplies::getSupplieDepartmentsByDistinct();
         $allParts = resultInReadableform(
             Supplies::getAllPartsSpecificFields($specificFields, $orderBy='item_name', $asinID)

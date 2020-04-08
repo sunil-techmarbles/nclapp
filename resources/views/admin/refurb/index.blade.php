@@ -23,7 +23,7 @@
 			<div id="comp_form" style="display: none;margin-right: 5px;margin-left: 5px"></div>
 			<div class="tab-content" id="tab-content"></div>
 			<div id="printbtn" style="display: none;">
-				<button class="btn btn-default" onclick="editProps()" type="button">Edit</button>
+				<button class="btn btn-default border border-primary" onclick="editProps()" type="button">Edit</button>
 				<button class="btn btn-primary" style="float: right" onclick="printLabel()" type="button">Print</button>
 			</div>
 		</div>
