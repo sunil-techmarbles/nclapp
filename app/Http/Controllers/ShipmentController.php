@@ -399,7 +399,7 @@ class ShipmentController extends Controller
 				foreach($parts as $p)
 				{
 					$nqty = max(0,$p["qty"]-$p["required_qty"]);
-					Supplies::updateQuantityBySupplieID($p["id"], $nqty)
+					Supplies::updateQuantityBySupplieID($p["id"], $nqty);
 				}
 
 				if (!empty($sessionItems))
