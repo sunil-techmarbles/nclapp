@@ -506,6 +506,7 @@ return [
     ],
     'shipmentEmails' => [
         "rahuls.techmarbles@gmail.com",
+        "anjali.techmarbles@gmail.com",
         // "randy@itamg.com",
         // "richy@itamg.com",
         // "support@refurbconnect.com",
@@ -516,6 +517,7 @@ return [
     ],
     'sessionEmails' => [
         "rahuls.techmarbles@gmail.com",
+        "anjali.techmarbles@gmail.com",
         // "randy@itamg.com",
         // "richy@itamg.com",
         // "support@refurbconnect.com",
@@ -792,6 +794,7 @@ return [
     ],
     'adminEmail' =>[
         "rahuls.techmarbles@gmail.com",
+        "anjali.techmarbles@gmail.com",
         // "asovych@gmail.com"
     ],
     'finalPriceConstants' => [
@@ -838,6 +841,7 @@ return [
     ],
     'syncProductAddedMailUser' => [
         'rahuls.techmarbles@gmail.com',
+        "anjali.techmarbles@gmail.com",
         // 'randy@itamg.com',
         // 'richy@refurbconnect.com',
         // 'ayaz_akhtar21@hotmail.com'
@@ -848,6 +852,7 @@ return [
     ],
     'recycleReportMailAddress' => [
         "rahuls.techmarbles@gmail.com",
+        "anjali.techmarbles@gmail.com",
         // "randy@itamg.com",
         // "julio@itamg.com",
         // "richy@itamg.com",
