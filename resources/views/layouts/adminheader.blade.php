@@ -5,6 +5,17 @@
 				<a  class="nav-link" href="{{route('dashboard')}}">Home</a>
 			</li>
 			@if($user_role == 'admin')
+				@if(request()->segment(count(request()->segments())) == 'audit')
+					@if(request()->get('edit'))
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('audit')}}">Main Form</a>
+					</li>
+					@else
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('audit',['edit' => 1])}}">Search & Edit</a>
+					</li>
+					@endif
+				@endif
 				@if(request()->segment(count(request()->segments())) == 'dashboard')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
 						<a class="nav-link" href="{{route('users')}}">Users</a>

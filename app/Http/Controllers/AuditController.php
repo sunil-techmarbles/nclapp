@@ -615,18 +615,28 @@ class AuditController extends Controller
 		if($request->ajax())
 		{
 			$fname = $request->get("trid");
-			$itm = json_decode(file_get_contents($this->formData."/".$fname.".json"),true);
-			if(!empty($itm["model"]))
+			if (File::exists($this->formData."/".$fname.".json"))
 			{
-				$asin = FormModel::getAsinModelRecord($itm["model"]);
-				$itm["models"] = Asin::getModelFromAsin($asin, $notifications='');
+				$itm = json_decode(file_get_contents($this->formData."/".$fname.".json"),true);
+				if(!empty($itm["model"]))
+				{
+					$asins = [];
+					$asin = FormModel::getAsinModelRecord(intval($itm["model"]));
+					if($asin)
+					{
+						$asin = array_push($asins, $asin);
+					}
+					$itm["models"] = Asin::getModelFromAsin($asins, $notifications='');
+				}
+				else
+				{
+					$itm["models"] = [];
+				}
+				$res = json_encode($itm);
+				print_r($res);
+				die;
+				return $res;
 			}
-			else
-			{
-				$itm["models"] = [];
-			}
-			$res = json_encode($itm);
-			return $res;
 		}
 		else
 		{

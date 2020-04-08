@@ -69,7 +69,7 @@ function saveDetails()
 
 $( document ).ready(function()
 {
-	if (getUrlParameter("edit")==1) edit=true;
+	if (getUrlParameter("edit") == 1) edit=true;
 	setHeader();
 	$(window).keydown(function(event)
 	{

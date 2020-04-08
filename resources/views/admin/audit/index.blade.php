@@ -5,6 +5,9 @@
 	<div id="page-head">
 		Audit Data Entry
 		<span class="fa fa-repeat" style="cursor: pointer" onclick="getLastInput()"></span>
+		@if(request()->get('edit'))
+			<h3>Search & Edit</h3>
+		@endif
 	</div>
 	<div class="row justify-content-center text-center">
 		<div class="col-12">

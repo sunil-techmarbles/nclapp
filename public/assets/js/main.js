@@ -397,6 +397,7 @@ function showHint(fId)
 	var out=$("#uhint");
 	var data=encodeURIComponent(inp.val());
 	var position = inp.position();
+	console.log(edit);
 	if (edit && data.length>2)
 	{
 		var h = inp.height();
