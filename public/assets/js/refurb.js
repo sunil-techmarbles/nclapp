@@ -227,16 +227,18 @@ function getAssetData(fId)
 					}
 				}
 				obj['Reported_Issues'] = 'Reported_Issues';
-				var akeys = akeysA[0];
+				var akeys = (akeysA == undefined) ? [] : akeysA[0];
 				adata["conf"].push({
 					key: "Reported_Issues",
 					options: []
 				});
+				
+				akeys = (akeys == undefined) ? [] : akeys;
 				for (var i in adata["conf"])
 				{
 					var itm = adata["conf"][i];
-					var ka = (akeys[itm.key]) ? '' : akeys[itm.key];
-                    if(akeys[itm.key] == undefined)
+					var ka = (akeys[itm.key] === undefined || akeys[itm.key] === null) ? '' : akeys[itm.key];
+                    if(akeys[itm.key] === undefined)
                     {
 	                    $("#tab-content").append('<div id="edit_'+itm.key+'" class="tab-pane '+(i==0?'in active':'')+'"><h3>'+itm.key+'</h3></div>'); 
 						for (var j in itm.options)
@@ -287,6 +289,7 @@ function getAssetData(fId)
 							$("#edit_"+ka).append('<div><button class="btn btn-primary" onclick="addCOA()" type="button">COA Info</button> <button class="btn btn-warning" onclick="setWS()" type="button">To Wholesale</button> <span style="float:right"><button class="btn btn-primary" onclick="prevTab('+i+')" type="button">Back</button>&nbsp;<button class="btn btn-primary" onclick="nextTab('+i+')" type="button">Next</button></span></div>');
 						}
 					}
+					
 				}		
 				alignCB();
 				setChange(); 
