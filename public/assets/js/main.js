@@ -513,7 +513,6 @@ $(document).ready(function()
 			,3000);
 	}
 	$('#asset').focus();
-
 	$(window).keydown(function(event)
 	{
 		if(event.keyCode == 13) 
