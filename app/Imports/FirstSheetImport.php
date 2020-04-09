@@ -21,7 +21,6 @@ class FirstSheetImport implements ToCollection,  WithStartRow
             {
                 $this->assetCol = $key;
             }
-        	# code...
         }
         $asset = [];
     	foreach ($data as $key => $value)

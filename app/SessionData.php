@@ -189,7 +189,6 @@ class SessionData extends Model
     public static function getrunningListItemsFromSessionData($id)
     {
         return self::select('session_data.aid', 'session_data.sid', 'session_data.asset', 'session_data.added_on', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
-            ->selectSub('count(session_data.aid)', 'cnt')
             ->join('asins as a', function($join) use ($id) {
                 $join->on('session_data.aid', '=', 'a.id')
                         ->where('session_data.sid','>=', '9')
@@ -221,7 +220,7 @@ class SessionData extends Model
                     ->where('session_data.sid','>=', '9')
                     ->where('session_data.status','=', 'active')
                     ->where('session_data.run_status','=', 'active')
-                    ->where('a.asin','=', $asinId);;
+                    ->where('a.asin','=', $asinId);
                 })
             ->groupBy('session_data.aid')
             ->get();

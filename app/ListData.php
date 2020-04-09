@@ -173,7 +173,12 @@ class ListData extends Model
 		return self::select('list_data.*')
 			->selectSub('count(list_data.asin)', 'cnt')
 			->selectSub('max(list_data.mid)', 'mid')
-			->where(['list_data.status' => 'active','list_data.run_status' => 'active', 'list_data.asin' => $id])
+			->where([
+				'list_data.status' => 'active',
+				'list_data.run_status' => 'active',
+			])
+			// ->where('list_data.asin','LIKE',"%".$id."%")
+			->where('list_data.asin','=',$id)
 			->where('list_data.shopify_product_id', '!=', '')
 			->groupBy('list_data.asin')
 			->groupBy('list_data.technology')

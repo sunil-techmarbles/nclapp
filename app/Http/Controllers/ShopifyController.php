@@ -221,7 +221,15 @@ class ShopifyController extends Controller
 		 $priceList = [];
 		 $productIds = [];
 		 $productsUrl = $this->baseUrl."/admin/api/2019-04/products.json?limit=250";
-		 $products = json_decode(file_get_contents($productsUrl),true);
+		 try
+		 {
+		 	$products = json_decode(file_get_contents($productsUrl),true);
+		 }
+		 catch (\Exception $e)
+		 {
+		 	$message = $e->getCode().' '.$e->getMessage();
+		 	\Session::flash('error', $message);
+		 }
 		 if(!empty($products['products']))
 		 {
 		 	foreach($products['products'] as $p)
@@ -1241,13 +1249,13 @@ class ShopifyController extends Controller
 				if($request->newRunList == 'false')
 				{
 					$allRunningList = ListData::getListDataForPriceUpdate($request->id);
-					if (!empty($allRunningList))
+					if ($allRunningList->count() > 0)
 					{
 						$baseurl = $this->basePath;
 						$meassge = '';
-						$runninglist = $allRunningList[0];
+						$runninglist = $allRunningList->toArray();
 						$runninglist['condition'] =  config('constants.finalPriceConstants.condition');
-						$runninglist['form_factor'] = $runninglist['technology'];
+						$runninglist['form_factor'] = (isset($runninglist['technology'])) ? $runninglist['technology'] : '' ;
 						$price = $this->productPriceCalculation($runninglist);
 						if ($price == 0 || $price == 0.00)
 						{
@@ -1487,13 +1495,16 @@ class ShopifyController extends Controller
 		$tcnt = 0;
 		foreach ($runningList as &$r)
 		{
+			$a = SessionData::getrunningListItemsFromSessionData(intval($r['aid']));
 			$tcnt += $r['cnt'];
-			$r['items'] = SessionData::getrunningListItemsFromSessionData($r['aid']);
+			$r['items'] = $a->toArray();
 			if($r["shopify_product_id"])
 			{
 				$r['priceData'] = $this->getShopifyPrice($r["asin"], $r["shopify_product_id"]);
 			}
 		}
+		// print_r($runningList->toArray());
+		// die;
 		unset($r);
 		return view('admin.shopify.running-list', compact('runningList', 'upcCount', 'tcnt', 'asinImages'));
 	}

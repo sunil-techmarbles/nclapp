@@ -600,7 +600,7 @@ class AuditController extends Controller
 			foreach($files as $f)
 			{
 				$f = str_replace(".json","",$f);
-				if (stristr($f,$part)) $res.="<a href='#' onclick=\"addTrId('".$f."','".$dst."')\">" . $f . "</a><br/>";
+				if (stristr($f,$part)) $res.="<a href='javascript:void(0)' onclick=\"addTrId('".$f."','".$dst."')\">" . $f . "</a><br/>";
 			}
 			return $res;
 		}
