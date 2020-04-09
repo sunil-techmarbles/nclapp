@@ -1,7 +1,6 @@
 @extends('layouts.appadminlayout')
 @section('title' , 'Users List')
-@section('content') 
-
+@section('content')
 <table  class="table table-hover">
 	<tbody>
 		<tr>
@@ -11,7 +10,6 @@
 		</tr>
 	</tbody>
 </table>
-
 <table id="users_table" class="table table-hover">
 	<thead>
 		<th></th>
@@ -24,11 +22,14 @@
 		@foreach($users as $user)
 		<tr>
 			<td nowrap="">
-					<a href="javascript:void(0)" onclick="del_confirm({{$user->id}} , 'DeleteUser' , 'User')">
+					<a href="javascript:void(0)" onclick="del_confirm({{$user->id}} ,'DeleteUser','User')">
 						<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
 					</a>
 					<a href="{{route('edit.user', $user->id )}}">
 						<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
+					</a>
+					<a href="{{route('change.passowrd',['u' => $user->id])}}" class="mt-1 " title="Change Passowrd">
+						<i class="fa fa-shield fa-2x" aria-hidden="true"></i>
 					</a>
 				</td>
 			<td>{{$user->id}}</td>

@@ -54,6 +54,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
 	    // Users Section
 	    Route::get('/users', 'UsersController@index')->name('users');
+		Route::any('/changepassowrd','UsersController@changePassowrd')->name('change.passowrd');
 	    Route::get('/messagelog', 'MainController@index')->name('message.log');
 	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');

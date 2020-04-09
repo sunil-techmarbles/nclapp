@@ -195,6 +195,12 @@ function checkTravelerId( tabId )
 	showLoader();
 	selTab = tabId;
 	var trId = $('#text_1').val();
+	if(!$.isNumeric(trId))
+	{
+		hideLoader();
+		showSweetAlertMessage(type = 'Error', message = 'Please add assest number' , icon= 'error');
+		return false;		
+	}
 	if(trId.length < 3 )
 	{
 		hideLoader();
@@ -258,11 +264,11 @@ function checkTravelerId( tabId )
 function CheckTravelerIdForMobile ( trId , selTab )
 {  
 	var isErr = false;
-	$.get("/"+prefix+"/checktraveleridformobile?trid=" + trId +"&t=" + Math.random(), function ( data ) { 
-
-		if ( data == "Missing" )
+	$.get("/"+prefix+"/checktraveleridformobile?trid=" + trId +"&t=" + Math.random(), function ( data ) {
+		hideLoader();
+		if (data == "Missing")
 		{
-			showSweetAlertMessage(type = 'Warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');		
+			showSweetAlertMessage(type = 'Warning', message = 'Data files not found for entered Asset Number' , icon= 'warning');
 			$('#text_1').val("");
 			$('#text_1').focus();
 			isErr = true;   
@@ -274,7 +280,6 @@ function CheckTravelerIdForMobile ( trId , selTab )
 		{
 			showTab( selTab );
 		} 
-
 	});
 }
 

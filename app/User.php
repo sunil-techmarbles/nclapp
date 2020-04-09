@@ -8,8 +8,20 @@ use Cartalyst\Sentinel\Users\EloquentUser;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends EloquentUser {
+
 	use SoftDeletes; 
 	protected $dates = ['deleted_at'];
+	
+	protected $fillable = [
+        'email',
+        'username',
+        'password',
+        'last_name',
+        'first_name',
+        'permissions',
+    ];
+
+    protected $loginNames = ['email', 'username'];
 
 	public static function checkEmailExits( $email='' )
 	{

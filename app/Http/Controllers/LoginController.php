@@ -26,9 +26,9 @@ class LoginController extends Controller
     public function loginAuthenticate(Request $request)
     { 
         $validator = $request->validate([
-                'email'    => 'required|email',
-                'password' => 'required|alphaNum'
-            ]);
+            'username' => 'required',
+            'password' => 'required|alphaNum'
+        ]);
         $rememberMe = ( $request->rememberMe == '1' ) ? true : false ;
         try
         {

@@ -9,8 +9,21 @@ class RegisterController extends Controller
 {
    	public function index()
    	{
-   		$roles = \DB::table('roles')->select( 'name' , 'id' )->get();
-   		return view('auth.register' , compact("roles"));
+   		$userPreDefinedRoles = config('userconstants.roles');
+   		foreach ($userPreDefinedRoles as $key => $value)
+   		{
+   			$data = [
+   				'slug' => $key,
+   				'name' => $value,
+   			];
+   			$checkRoleExist = \DB::table('roles')->where('slug',$key)->first();
+   			if(!$checkRoleExist)
+   			{
+   				\DB::table('roles')->insert($data);
+   			}
+   		}
+   		$roles = \DB::table('roles')->select('name', 'id')->get();
+   		return view('auth.register', compact("roles"));
    	}
 
    	public function registerAuthenticate(Request $request)
@@ -19,9 +32,10 @@ class RegisterController extends Controller
 	      	[
 	         	'fname' => 'required|min:2|max:50',
 	            'lname' => 'required|min:2|max:50',
-	            'email' => 'required|email|unique:users',
-	            'password' => 'required|min:6',
-	            'confirm_password' => 'required|min:6|max:20|same:password',
+	            'email' => 'required|email|max:255|unique:users',
+	            'username' => 'required|string|min:8|max:20|unique:users',
+	            'password' => 'required|alphaNum|min:6|max:14|',
+	            'confirm_password' => 'required|min:6|max:14|same:password',
 	    	],
 	    	[
 	            'fname.required' => 'First Name is required',
@@ -38,22 +52,23 @@ class RegisterController extends Controller
         {
             return redirect()->back()->with(['error' => 'That email address is already registered.']);
         }
-      	$user_data = [
+      	$userData = [
 		    'first_name' => $request->fname ,
 		    'last_name' => $request->lname ,
 		    'email'    => $request->email,
+		    'username'    => $request->username,
 		    'password' => $request->password,
      	];
-        $user = Sentinel::registerAndActivate( $user_data );
+        $user = Sentinel::registerAndActivate( $userData );
 		$role = Sentinel::findRoleById( $request->user_role );
 		$role->users()->attach( $user );
 		if($role->name != 'admin')
-		{ 
+		{
 			$user->permissions = [
     			'user.admin' => false,
 			];
 			$user->save();
 		}
         return redirect()->route('users')->with('success', 'User created successfully.');
-   }
+   	}
 }

@@ -1,9 +1,7 @@
 @extends('layouts.appadminlayout')
 @section('title' , 'Edit User')
 @section('content') 
-
 <div class="row justify-content-center text-center">
-
 	<table  class="table table-hover">
 		<tbody>
 			<tr> 
@@ -16,7 +14,6 @@
 			</tr>
 		</tbody>
 	</table>
-
 	<div class="col-6">
 		<form method="post" action="{{route('edit.edituserHandle' , $user->id )}}">   
 			@csrf  
@@ -27,7 +24,6 @@
 				<span class="text-danger">{{ $errors->first('fname') }}</span>
 				@endif
 			</div>
-
 			<div class="form-group text-left">
 				<label for="email">Last Name:</label>
 				<input type="text" class="form-control" placeholder="Enter Last Name" name="lname" value="{{ $user->first_name }}" > 
@@ -35,24 +31,28 @@
 				<span class="text-danger">{{ $errors->first('lname') }}</span>
 				@endif
 			</div>
-
 			<div class="form-group text-left"> 
 				<label for="email">Email:</label>
 				<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{ $user->email }}"> 
 				@if ($errors->has('email'))
 				<span class="text-danger">{{ $errors->first('email') }}</span>  
 				@endif
-			</div>   
-
+			</div>
+			<div class="form-group text-left"> 
+				<label for="username">User Name:</label>
+				<input type="text" class="form-control" id="username" placeholder="Enter username" name="email" value="{{ $user->username }}"> 
+				@if ($errors->has('username'))
+				<span class="text-danger">{{ $errors->first('username') }}</span>  
+				@endif
+			</div>
 			<div class="form-group text-left">
 				<label for="sel1">Role:</label>
 				<select class="form-control" name="user_role">  
 					@foreach($roles as $role)
 					<option {{ $user->role_id == $role->id ? 'selected="selected"' : '' }} value="{{$role->id}}"> {{$role->name}} </option> 
-					@endforeach 
-				</select>  
+					@endforeach
+				</select>
 			</div> 
-
 			<button type="submit" class="btn btn-primary"> Update </button>
 		</form>
 	</div> 
