@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 9030 AIO
+Computer Serial: FX5N942
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0VNGWR
+Processor: Intel(R) Core(TM) i5-4590S CPU @ 3.00GHz, Speed: 3000 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 74:e6:e2:d7:dd:dc
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW DU-8A5LH
+Drive 1: Model: WDC WD5000LPVX-75V0TT0, Serial: WXK1E840V1DA, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 91A4F3A4-0D0C-469A-807E-A3A2625439FA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 527771
+User3: Related Companies
+User4: 17605
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000LPVX-75V0TT0
+             Serial: WXK1E840V1DA Size: 500.11 GB
+
+UUID: FC64DDA8-FF69-4D84-98A3-C8D484BDEBD5
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 05 Nov 2019 at 13:54:00
+Date & time operation was completed: Tuesday, 05 Nov 2019 at 20:26:56
+Total elapsed time (HH:MM:SS): 06:32:56
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

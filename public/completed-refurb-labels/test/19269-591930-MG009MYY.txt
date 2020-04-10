@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10B7001RUS
+Computer Serial: MG009MYY
+Motherboard Vendor: LENOVO
+Motherboard Model: Unavailable
+Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 44:8a:5b:b4:af:e7
+DVD-RAM writer: DVD-RAM GHB0N
+Drive 1: Model: WDC WD5000AAKX-08U6AA0, Serial: WD-WCC2EPPL0KJY, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 4th Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 0407B2D2-0757-42D6-94EA-85E28706026A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 591930
+User3: Northwell Health
+User4: 19269
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-08U6AA0
+             Serial: WD-WCC2EPPL0KJY Size: 500.11 GB
+
+UUID: 18A9A407-71BE-4889-B546-8BA69014D0FE
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 03 Mar 2020 at 13:11:19
+Date & time operation was completed: Tuesday, 03 Mar 2020 at 19:05:52
+Total elapsed time (HH:MM:SS): 05:54:33
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

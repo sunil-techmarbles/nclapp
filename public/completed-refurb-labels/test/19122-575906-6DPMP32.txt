@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7450
+Computer Serial: 6DPMP32
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 06HN6G
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 34:e6:d7:5f:82:2b
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: Unavailable
+Drive 1: Model: SAMSUNG SSD PM851 mSATA 256GB, Serial: S1EVNSAG262050, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+USB Ports: 2
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 5F396E12-600E-484B-A8FF-5EA2483A3468
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 575906
+User3: PRA Health Sciences
+User4: 19122
+User5: Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD PM851 mSATA 256GB
+             Serial: S1EVNSAG262050 Size: 256.06 GB
+
+UUID: 1E0BF511-41AF-437E-91C8-A41CAB35525E
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 18 Mar 2020 at 12:40:45
+Date & time operation was completed: Wednesday, 18 Mar 2020 at 13:46:15
+Total elapsed time (HH:MM:SS): 01:05:30
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ProBook 6360b
+Computer Serial: 2CE1240G1K
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 1621
+Processor: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579V Gigabit Network Connection, MAC Address: b4:99:ba:56:2f:0a
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43224 802.11a/b/g/n, MAC Address: ac:81:12:60:2f:f7
+DVD-RAM writer: DVD RW AD-7711H
+Drive 1: Model: TOSHIBA MK3261GSYN, Serial: 51IWB3XZB, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D2AB3842-9A7B-49BF-A12B-CEC542F02966
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 582677
+Lot Name: Family Residences & Essential Enterprises, Inc
+Lot Number: 19172
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK3261GSYN
+             Serial: 51IWB3XZB Size: 320.07 GB
+
+UUID: 6486BE6A-49D9-43F0-AE13-4EBF84230524
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62514245
+Action Start Time: Tuesday, 01 Jan 1980 at 00:14:34
+Action End Time: Tuesday, 01 Jan 1980 at 01:16:49
+Action Duration: 01:02:15
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

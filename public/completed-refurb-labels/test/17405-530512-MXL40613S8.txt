@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq Elite 8300 Touch All-in-One PC
+Computer Serial: MXL40613S8
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 3399
+Processor: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: c8:cb:b8:28:a2:d3
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: e0:9d:31:5d:87:c4
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVDRAM GTA0N
+Drive 1: Model: ST500DM002-1BD142, Serial: Z3TWJ776, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 0A5E11AE-DAE2-45CF-9FE1-4894AB32007A
+Current user: ITAMG
+Computer ID: MXL40613S8
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 530512
+Lot Name: Conde Nast
+Lot Number: 17405
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z3TWJ776 Size: 500.11 GB
+
+UUID: 03DDAFC2-8DE6-48F4-93A8-56B79E7B0462
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Friday, 08 Nov 2019 at 11:02:46
+Date & time operation was completed: Friday, 08 Nov 2019 at 12:19:04
+Total elapsed time (HH:MM:SS): 01:16:18
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

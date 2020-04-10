@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 9020
+Computer Serial: 8DXP382
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0KC9NP
+Processor: Intel(R) Core(TM) i7-4790S CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 64:00:6a:83:39:b5
+DVD reader: DVD-ROM DS-8DBSH
+Drive 1: Model: ST500LT015-1DJ142, Serial: W3PNPCV4, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 09FF5375-6FF3-47AA-9E56-44985A60474A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561032
+User3: New York Athletic Club
+User4: 18917
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500LT015-1DJ142
+             Serial: W3PNPCV4 Size: 500.11 GB
+
+UUID: 786B680A-5004-4874-9F8C-144E0F149589
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 26 Dec 2019 at 15:31:40
+Date & time operation was completed: Thursday, 26 Dec 2019 at 15:50:32
+Total elapsed time (HH:MM:SS): 00:18:52
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

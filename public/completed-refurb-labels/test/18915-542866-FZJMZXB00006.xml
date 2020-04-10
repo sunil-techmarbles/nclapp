@@ -1,0 +1,901 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.1.3 64-bit">
+        <KernelVersion>4.14.65-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>Supermicro</ComputerVendor>
+            <ComputerModel>X9DR7/E-(J)LN4F</ComputerModel>
+            <ComputerSerial>FZJMZXB00006</ComputerSerial>
+            <MotherboardVendor>Supermicro</MotherboardVendor>
+            <MotherboardModel>X9DR7/E-(J)LN4F</MotherboardModel>
+            <AssetTag>To Be Filled By O.E.M.</AssetTag>
+            <ChassisType>Other</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz</Name>
+                    <Speed>2200 MHz</Speed>
+                    <ID>SOCKET 1</ID>
+                    <NumCores>10</NumCores>
+                    <NumThreads>20</NumThreads>
+                    <L1Cache>640 kB</L1Cache>
+                    <L2Cache>2560 kB</L2Cache>
+                    <L3Cache>25600 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz</Name>
+                    <Speed>2200 MHz</Speed>
+                    <ID>SOCKET 1</ID>
+                    <NumCores>10</NumCores>
+                    <NumThreads>20</NumThreads>
+                    <L1Cache>640 kB</L1Cache>
+                    <L2Cache>2560 kB</L2Cache>
+                    <L3Cache>25600 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13369C05</SerialNumber>
+                    <AssetTag>Dimm0_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13369C07</SerialNumber>
+                    <AssetTag>Dimm1_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13369C0A</SerialNumber>
+                    <AssetTag>Dimm3_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13369C06</SerialNumber>
+                    <AssetTag>Dimm4_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BED6</SerialNumber>
+                    <AssetTag>Dimm6_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BF60</SerialNumber>
+                    <AssetTag>Dimm7_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BEDE</SerialNumber>
+                    <AssetTag>Dimm9_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BED3</SerialNumber>
+                    <AssetTag>Dimm10_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-Y</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BEED</SerialNumber>
+                    <AssetTag>Dimm0_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BF3E</SerialNumber>
+                    <AssetTag>Dimm1_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1336BF29</SerialNumber>
+                    <AssetTag>Dimm3_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>14393AA1</SerialNumber>
+                    <AssetTag>Dimm4_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>143A2212</SerialNumber>
+                    <AssetTag>Dimm6_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>143A2218</SerialNumber>
+                    <AssetTag>Dimm7_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1439499A</SerialNumber>
+                    <AssetTag>Dimm9_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>14394999</SerialNumber>
+                    <AssetTag>Dimm10_AssetTag</AssetTag>
+                    <PartNumber>M393B2G70QH0-Y</PartNumber>
+                </Stick>
+                <MemoryBanks>16</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>262144 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>00:25:90:e9:5a:7c</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>00:25:90:e9:5a:7d</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>00:25:90:e9:5a:7e</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>00:25:90:e9:5a:7f</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Ethernet Controller 10-Gigabit X540-AT2</Product>
+                    <MACAddress>0c:c4:7a:1d:eb:ba</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>8086:1528</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Ethernet Controller 10-Gigabit X540-AT2</Product>
+                    <MACAddress>0c:c4:7a:1d:eb:bb</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>8086:1528</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device index="1">
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL4226039W480QGN</Serial>
+                    <Firmware>D2010370</Firmware>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 252:0 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>INTEL SSDSC2BB480G4</Product>
+                            <Serial>BTWL4226039W480QGN</Serial>
+                            <Firmware>D2010370</Firmware>
+                            <Gigabytes>446.102</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="2">
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL42350011480QGN</Serial>
+                    <Firmware>D2010370</Firmware>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 252:1 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>INTEL SSDSC2BB480G4</Product>
+                            <Serial>BTWL42350011480QGN</Serial>
+                            <Firmware>D2010370</Firmware>
+                            <Gigabytes>446.102</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="3">
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL422603PT480QGN</Serial>
+                    <Firmware>D2010370</Firmware>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 252:2 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>INTEL SSDSC2BB480G4</Product>
+                            <Serial>BTWL422603PT480QGN</Serial>
+                            <Firmware>D2010370</Firmware>
+                            <Gigabytes>446.102</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="4">
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL423408F5480QGN</Serial>
+                    <Firmware>D2010370</Firmware>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 252:3 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>INTEL SSDSC2BB480G4</Product>
+                            <Serial>BTWL423408F5480QGN</Serial>
+                            <Firmware>D2010370</Firmware>
+                            <Gigabytes>446.102</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="5">
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL423408YZ480QGN</Serial>
+                    <Firmware>D2010370</Firmware>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 252:4 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>INTEL SSDSC2BB480G4</Product>
+                            <Serial>BTWL423408YZ480QGN</Serial>
+                            <Firmware>D2010370</Firmware>
+                            <Gigabytes>446.102</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="6">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9146853SS</Product>
+                    <Serial>6XM3BRMT0000B418JNA5</Serial>
+                    <Firmware>03140004</Firmware>
+                    <Gigabytes>146.82</Gigabytes>
+                    <Bytes>146815737856</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="7">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9146853SS</Product>
+                    <Serial>6XM3BRTN0000B419AFVC</Serial>
+                    <Firmware>03140004</Firmware>
+                    <Gigabytes>146.82</Gigabytes>
+                    <Bytes>146815737856</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>MGA G200eW WPCM450</Product>
+                    <PciId>102B:532</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>LSI Logic / Symbios Logic</Vendor>
+                    <Product>SAS2308 PCI-Express Fusion-MPT SAS-2</Product>
+                    <Description>Serial Attached SCSI controller</Description>
+                    <PciId>1000:86</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>LSI Logic / Symbios Logic</Vendor>
+                    <Product>MegaRAID SAS 2208 [Thunderbolt]</Product>
+                    <Description>RAID bus controller</Description>
+                    <PciId>1000:5B</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>C602 chipset 4-Port SATA Storage Control Unit</Product>
+                    <Description>Serial Attached SCSI controller</Description>
+                    <PciId>8086:1D6B</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>C600/X79 series chipset 6-Port SATA AHCI Controller</Product>
+                    <Description>SATA controller</Description>
+                    <PciId>8086:1D02</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>4</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>AA5FF7FC-A648-4D36-B037-440C29048A87</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>To Be Filled By O.E.M.</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>542866</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Control V Symphony</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>18915</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Server</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="117120222368521123112072027620723677174203">
+                    <UUID>3FEBA838-3939-493A-9C24-EAE2742AB983</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:10</StartTime>
+                    <Duration>00:19:55</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>935544832</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>93554484</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL4226039W480QGN</Serial>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="2" SecurityCode="151522392221308022022613196661668619014419">
+                    <UUID>22ECFADA-EF74-477E-B19B-4B03F56F760B</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:10</StartTime>
+                    <Duration>00:19:57</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>935544832</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>93554484</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL42350011480QGN</Serial>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="3" SecurityCode="19724416491489161534143255188751574208">
+                    <UUID>5A55F18C-8918-4216-8663-7F610B2FE945</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:10</StartTime>
+                    <Duration>00:20:03</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>935544832</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>93554484</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL422603PT480QGN</Serial>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="4" SecurityCode="72591001725089712810618011424224216220168">
+                    <UUID>17CEAC39-6A88-4AEE-8C75-99BA5507759F</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:10</StartTime>
+                    <Duration>00:20:02</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>935544832</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>93554484</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL423408F5480QGN</Serial>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="5" SecurityCode="3314512736236135218229642547384114147113">
+                    <UUID>481790CA-C6AC-4CC6-934D-B7D2325BACE2</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:10</StartTime>
+                    <Duration>00:19:58</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>935544832</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>93554484</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SMC</Vendor>
+                    <Product>INTEL SSDSC2BB480G4</Product>
+                    <Serial>BTWL423408YZ480QGN</Serial>
+                    <Gigabytes>479.00</Gigabytes>
+                    <Bytes>478998953984</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="6" SecurityCode="17917017817915924845588894461517620105126">
+                    <UUID>79A7A321-3C82-42AD-8641-9590F85962F4</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:14</StartTime>
+                    <Duration>00:15:43</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>286749488</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>28674949</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9146853SS</Product>
+                    <Serial>6XM3BRMT0000B418JNA5</Serial>
+                    <Gigabytes>146.82</Gigabytes>
+                    <Bytes>146815737856</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>42735</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>490</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>42735</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>490</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="7" SecurityCode="10384238151321230180342019321492422135">
+                    <UUID>75B2D84A-EAE3-4A33-AB8C-4B58EE0AD914</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 26 Nov 2019 17:29:13</StartTime>
+                    <Duration>00:15:28</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>286749488</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>28674949</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9146853SS</Product>
+                    <Serial>6XM3BRTN0000B419AFVC</Serial>
+                    <Gigabytes>146.82</Gigabytes>
+                    <Bytes>146815737856</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>42735</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>106</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>42735</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>106</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

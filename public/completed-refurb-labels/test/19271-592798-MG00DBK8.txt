@@ -1,0 +1,57 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10AY001YUS
+Computer Serial: MG00DBK8
+Motherboard Vendor: LENOVO
+Motherboard Model: SHARKBAY
+Processor: Intel(R) Core(TM) i5-4570T CPU @ 2.90GHz, Speed: 2900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-V, MAC Address: d8:cb:8a:21:ee:4f
+NIC: Vendor: Intel Corporation, Model: Centrino Wireless-N 2230, MAC Address: Unavailable
+Drive 1: Model: ST500LM000-SSHD-8GB, Serial: W764A1BJ, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 94E6A1A1-53C0-4A30-9984-913A0465EE7B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 592798
+User3: Northwell Health
+User4: 19271
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500LM000-SSHD-8GB
+             Serial: W764A1BJ Size: 500.11 GB
+
+UUID: 3561AE71-6583-48C1-ADEE-D1BCF25AC912
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Friday, 06 Mar 2020 at 14:55:20
+Date & time operation was completed: Friday, 06 Mar 2020 at 16:33:08
+Total elapsed time (HH:MM:SS): 01:37:48
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10M8S17700
+Computer Serial: MJ06745K
+Motherboard Vendor: LENOVO
+Motherboard Model: 3102
+Processor: Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz, Speed: 3700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR4 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 6c:4b:90:23:a2:8f
+DVD writer: DVD-RW DA8AESH
+Drive 1: Model: WDC WD5000AZLX-08K2TA0, Serial: WD-WCC6Z6HPSC0J, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 530
+Multimedia Adapter: Vendor: Intel Corporation, Model: 200 Series PCH HD Audio
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: CFAA1E76-0727-4AC7-A486-36BB7A16338C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 555654
+User3: Northwell Health
+User4: 18982
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AZLX-08K2TA0
+             Serial: WD-WCC6Z6HPSC0J Size: 500.11 GB
+
+UUID: E16C3A2B-1A49-447B-BAC2-900C51CE9F1C
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 23 Jan 2020 at 16:03:56
+Date & time operation was completed: Thursday, 23 Jan 2020 at 19:46:08
+Total elapsed time (HH:MM:SS): 03:42:12
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

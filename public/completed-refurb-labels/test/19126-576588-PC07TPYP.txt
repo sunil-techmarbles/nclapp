@@ -1,0 +1,56 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BUS15G00
+Computer Serial: PC07TPYP
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BUS15G00
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 50:7b:9d:1c:51:f4
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: Unavailable
+Drive 1: Model: ST500LM021-1KJ152, Serial: W6289RC3, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 8611F4E8-EC9A-4720-8FED-C75C52B4C235
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 576588
+User3: National Grid
+User4: 19126
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W6289RC3 Size: 500.11 GB
+
+UUID: D445376A-666B-4666-9CC1-658BFFA675E2
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Friday, 06 Mar 2020 at 13:26:34
+Date & time operation was completed: Friday, 06 Mar 2020 at 13:28:33
+Total elapsed time (HH:MM:SS): 00:01:59
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

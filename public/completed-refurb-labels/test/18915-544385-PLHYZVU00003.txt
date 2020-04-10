@@ -1,0 +1,280 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: X9DR7/E-(J)LN4F
+Computer Serial: PLHYZVU00003
+Motherboard Vendor: Supermicro
+Motherboard Model: X9DR7/E-(J)LN4F
+Processor: Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz, Speed: 2200 MHz, Cores: 10, L1 Cache: 640 kB, L2 Cache: 2560 kB
+Processor: Intel(R) Xeon(R) CPU E5-2660 v2 @ 2.20GHz, Speed: 2200 MHz, Cores: 10, L1 Cache: 640 kB, L2 Cache: 2560 kB
+RAM: 262144 MB, Memory banks: 16, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:55:b5:b0
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:55:b5:b1
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:55:b5:b2
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:55:b5:b3
+NIC: Vendor: Intel Corporation, Model: 82599ES 10-Gigabit SFI/SFP+ Network Connection, MAC Address: 0c:c4:7a:bc:91:16
+NIC: Vendor: Intel Corporation, Model: 82599ES 10-Gigabit SFI/SFP+ Network Connection, MAC Address: 0c:c4:7a:bc:91:17
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:56:46
+Drive 1: Model: INTEL SSDSC2BB480G6, Serial: BTWA534403C0480FGN, Size: 479.00 GB
+Drive 2: Model: INTEL SSDSC2BB480G6, Serial: BTWA5345034J480FGN, Size: 479.00 GB
+Drive 3: Model: INTEL SSDSC2BB480G6, Serial: BTWA534301JM480FGN, Size: 479.00 GB
+Drive 4: Model: INTEL SSDSC2BB480G6, Serial: BTWA531304VS480FGN, Size: 479.00 GB
+Drive 5: Model: INTEL SSDSC2BB480G6, Serial: BTWA5345014H480FGN, Size: 479.00 GB
+Drive 6: Model: INTEL SSDSC2BB480G6, Serial: BTWA531300SR480FGN, Size: 479.00 GB
+Drive 7: Model: ST9146853SS, Serial: 6XM4NQA40000M551H2JJ, Size: 146.82 GB
+Drive 8: Model: ST9146853SS, Serial: 6XM4NQG20000M551E801, Size: 146.82 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 6009E185-1A90-44BA-8CE4-420B418E893F
+Current user: ITAMG
+Computer ID: To Be Filled By O.E.M.
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 544385
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: SMC Model: INTEL SSDSC2BB480G6
+             Serial: BTWA534403C0480FGN Size: 479.00 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB480G6
+             Serial: BTWA534403C0480FGN Size: 446.102 GB  [ 252:0 ]
+
+UUID: 0F8AE74E-1825-495C-8887-5C3A496BA90A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 935544832
+Sectors Not Overwritten: 0
+Sectors Verified: 93554484
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:12
+Action End Time: Wednesday, 27 Nov 2019 at 20:12:02
+Action Duration: 00:23:50
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: SMC Model: INTEL SSDSC2BB480G6
+             Serial: BTWA5345034J480FGN Size: 479.00 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB480G6
+             Serial: BTWA5345034J480FGN Size: 446.102 GB  [ 252:1 ]
+
+UUID: B8A8167E-AE40-450D-A3EE-86F0DA08E836
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 935544832
+Sectors Not Overwritten: 0
+Sectors Verified: 93554484
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:12
+Action End Time: Wednesday, 27 Nov 2019 at 20:11:59
+Action Duration: 00:23:47
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: SMC Model: INTEL SSDSC2BB480G6
+             Serial: BTWA534301JM480FGN Size: 479.00 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB480G6
+             Serial: BTWA534301JM480FGN Size: 446.102 GB  [ 252:2 ]
+
+UUID: B69B8256-FA5E-4059-AFED-A9E752598BD2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 935544832
+Sectors Not Overwritten: 0
+Sectors Verified: 93554484
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:12
+Action End Time: Wednesday, 27 Nov 2019 at 20:11:56
+Action Duration: 00:23:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: SMC Model: INTEL SSDSC2BB480G6
+             Serial: BTWA531304VS480FGN Size: 479.00 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB480G6
+             Serial: BTWA531304VS480FGN Size: 446.102 GB  [ 252:3 ]
+
+UUID: 70BB9939-5629-4791-9C9A-FDCF71D291E5
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 935544832
+Sectors Not Overwritten: 0
+Sectors Verified: 93554484
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:12
+Action End Time: Wednesday, 27 Nov 2019 at 20:12:04
+Action Duration: 00:23:52
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: SMC Model: INTEL SSDSC2BB480G6
+             Serial: BTWA5345014H480FGN Size: 479.00 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB480G6
+             Serial: BTWA5345014H480FGN Size: 446.102 GB  [ 252:4 ]
+
+UUID: 220B54DE-1939-4B69-AB0C-5A7F93CE8F58
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 935544832
+Sectors Not Overwritten: 0
+Sectors Verified: 93554484
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:12
+Action End Time: Wednesday, 27 Nov 2019 at 20:12:03
+Action Duration: 00:23:51
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: SMC Model: INTEL SSDSC2BB480G6
+             Serial: BTWA531300SR480FGN Size: 479.00 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB480G6
+             Serial: BTWA531300SR480FGN Size: 446.102 GB  [ 252:5 ]
+
+UUID: E5956A25-26AE-4C7D-B747-962C8C1710D6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 935544832
+Sectors Not Overwritten: 0
+Sectors Verified: 93554484
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:12
+Action End Time: Wednesday, 27 Nov 2019 at 20:12:05
+Action Duration: 00:23:53
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: SEAGATE Model: ST9146853SS
+             Serial: 6XM4NQA40000M551H2JJ Size: 146.82 GB
+
+UUID: 490FFC50-7CCC-48B2-986B-F347968BAA96
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286749488
+Sectors Not Overwritten: 0
+Sectors Verified: 28674949
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:16
+Action End Time: Wednesday, 27 Nov 2019 at 20:03:57
+Action Duration: 00:15:41
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: SEAGATE Model: ST9146853SS
+             Serial: 6XM4NQG20000M551E801 Size: 146.82 GB
+
+UUID: B588BCF7-A015-437F-B3BC-E508D54ED7A9
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286749488
+Sectors Not Overwritten: 0
+Sectors Verified: 28674949
+Action Start Time: Wednesday, 27 Nov 2019 at 19:48:16
+Action End Time: Wednesday, 27 Nov 2019 at 20:03:57
+Action Duration: 00:15:41
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

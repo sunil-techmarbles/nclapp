@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10EWS03R00
+Computer Serial: MJ03UARF
+Motherboard Vendor: LENOVO
+Motherboard Model: 30BB
+Processor: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 98:ee:cb:37:b8:4e
+NIC: Vendor: Intel Corporation, Model: Dual Band Wireless-AC 3165 Plus Bluetooth, MAC Address: Unavailable
+DVD-RAM writer: DVDRAM GUB0N
+Drive 1: Model: ST500LM021-1KJ152, Serial: W62BX6NR, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 530
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-H HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 6904023F-C70D-4DD5-9665-C5B4C3737309
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 536137
+User3: Northwell Health
+User4: 18872
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W62BX6NR Size: 500.11 GB
+
+UUID: E608C87D-6DA6-466D-B18B-3D9C8D0A0AF7
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 18 Dec 2019 at 15:46:12
+Date & time operation was completed: Wednesday, 18 Dec 2019 at 21:42:03
+Total elapsed time (HH:MM:SS): 05:55:51
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

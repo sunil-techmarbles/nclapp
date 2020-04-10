@@ -1,0 +1,225 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL380p Gen8
+Computer Serial: SGH234B2FH
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Broadcom Corporation, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: ac:16:2d:72:cd:80
+NIC: Vendor: Broadcom Corporation, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: ac:16:2d:72:cd:81
+NIC: Vendor: Broadcom Corporation, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: ac:16:2d:72:cd:82
+NIC: Vendor: Broadcom Corporation, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: ac:16:2d:72:cd:83
+Drive 1: Model: EG0600FBDSR, Serial: EA01PB30FW041109, Size: 600.09 GB
+Drive 2: Model: EG0600FBDBU, Serial: PZH81KUD, Size: 600.09 GB
+Drive 3: Model: EG0600FCVBK, Serial: S0M3KTQ00000K5115KYB, Size: 600.09 GB
+Drive 4: Model: EG0600FBDBU, Serial: PZHE9PGD, Size: 600.09 GB
+Drive 5: Model: EG0600FBDBU, Serial: PZHESHRD, Size: 600.09 GB
+Drive 6: Model: EG0600FBDBU, Serial: PZHEL0ED, Size: 600.09 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EH
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: DA25B286-BAAF-402B-A549-1CA1AD36976C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 575245
+User3: Mishcon de Reya New York LLP
+User4: 19118
+User5: Server
+
+>> Raid device #1  Vendor: HP Model: EG0600FBDSR
+             Serial: EA01PB30FW041109 Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDSR
+             Serial: EA01PB30FW041109 Size: 600  GB  [ 2:1 ]
+
+UUID: B6339947-50A2-4C0E-84AE-0D0ACF6ED28A
+Operation: Overwrite disk.
+Wipe Type: Standard overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 09 Apr 2020 at 13:43:15
+Date & time operation was completed: Thursday, 09 Apr 2020 at 14:58:08
+Total elapsed time (HH:MM:SS): 01:14:53
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EG0600FBDBU
+             Serial: PZH81KUD Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZH81KUD Size: 600  GB  [ 2:2 ]
+
+UUID: C4B9B771-BD4D-41C6-8CC2-023973BA6386
+Operation: Overwrite disk.
+Wipe Type: Standard overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 09 Apr 2020 at 13:43:15
+Date & time operation was completed: Thursday, 09 Apr 2020 at 14:52:48
+Total elapsed time (HH:MM:SS): 01:09:33
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: HP Model: EG0600FCVBK
+             Serial: S0M3KTQ00000K5115KYB Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FCVBK
+             Serial: S0M3KTQ00000K5115KYB Size: 600  GB  [ 2:3 ]
+
+UUID: B91E5339-9439-4F2C-9B51-16415737899B
+Operation: Overwrite disk.
+Wipe Type: Standard overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 09 Apr 2020 at 13:43:15
+Date & time operation was completed: Thursday, 09 Apr 2020 at 14:42:44
+Total elapsed time (HH:MM:SS): 00:59:29
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHE9PGD Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHE9PGD Size: 600  GB  [ 2:4 ]
+
+UUID: E6574916-5A08-4614-BED7-24EC67FC811E
+Operation: Overwrite disk.
+Wipe Type: Standard overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 09 Apr 2020 at 13:43:15
+Date & time operation was completed: Thursday, 09 Apr 2020 at 14:53:16
+Total elapsed time (HH:MM:SS): 01:10:01
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHESHRD Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHESHRD Size: 600  GB  [ 2:5 ]
+
+UUID: 70EFE90E-49B5-451E-B805-4D0FDE2F04AA
+Operation: Overwrite disk.
+Wipe Type: Standard overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 09 Apr 2020 at 13:43:15
+Date & time operation was completed: Thursday, 09 Apr 2020 at 14:53:03
+Total elapsed time (HH:MM:SS): 01:09:48
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHEL0ED Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHEL0ED Size: 600  GB  [ 2:6 ]
+
+UUID: 255E494B-84D7-4BE6-B335-2C7DF94D60E7
+Operation: Overwrite disk.
+Wipe Type: Standard overwrite, Number of wipes: 1
+Date & time operation was started: Thursday, 09 Apr 2020 at 13:43:15
+Date & time operation was completed: Thursday, 09 Apr 2020 at 14:52:36
+Total elapsed time (HH:MM:SS): 01:09:21
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

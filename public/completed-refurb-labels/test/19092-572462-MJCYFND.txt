@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3157C5U
+Computer Serial: MJCYFND
+Motherboard Vendor: LENOVO
+Motherboard Model: To be filled by O.E.M.
+Processor: Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 8c:89:a5:38:e9:ce
+DVD-RAM writer: DVD-RAM GH60N
+Drive 1: Model: ST3500413AS, Serial: W2A3A8KY, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 99EE684B-C4FA-4E54-853B-CB9CE91696F4
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 572462
+Lot Name: Northwell Health
+Lot Number: 19092
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3500413AS
+             Serial: W2A3A8KY Size: 500.11 GB
+
+UUID: DB19B8D4-B7C6-475B-8FAA-7F83289DED23
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Friday, 14 Feb 2020 at 12:16:20
+Action End Time: Friday, 14 Feb 2020 at 17:27:26
+Action Duration: 05:11:06
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

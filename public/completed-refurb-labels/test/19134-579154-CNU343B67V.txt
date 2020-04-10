@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook Folio 9470m
+Computer Serial: CNU343B67V
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18DF
+Processor: Intel(R) Core(TM) i5-3437U CPU @ 1.90GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 9c:b6:54:a3:a0:79
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: Unavailable
+Drive 1: Model: LITEONIT LCS-128M6S-HP, Serial: 002340123313, Size: 128.04 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: E9DD6CF6-2A00-4CC2-9627-699F1E4E3CAE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 579154
+User3: Avis Budget Group
+User4: 19134
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: LITEONIT LCS-128M6S-HP
+             Serial: 002340123313 Size: 128.04 GB
+
+UUID: 7A5D61A3-6315-4F31-ACA1-84FA9A120474
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 20 Feb 2020 at 06:01:47
+Date & time operation was completed: Thursday, 20 Feb 2020 at 06:07:13
+Total elapsed time (HH:MM:SS): 00:05:26
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

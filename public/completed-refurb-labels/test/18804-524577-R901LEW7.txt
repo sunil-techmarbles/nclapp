@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20A8S03N00
+Computer Serial: R901LEW7
+Motherboard Vendor: LENOVO
+Motherboard Model: 20A8S03N00
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 54:ee:75:11:4e:a8
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: e8:2a:ea:14:6c:75
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: b2:5a:56:64:a1:3d
+Drive 1: Model: SAMSUNG MZNTD512HAGL-000L1, Serial: S171NYAF802626, Size: 512.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 7
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 29D33E58-6AA5-4732-9E83-16EFA786C344
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524577
+Lot Name: Bain & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNTD512HAGL-000L1
+             Serial: S171NYAF802626 Size: 512.11 GB
+
+UUID: 18C384D4-0B5C-47EA-BE8E-0F8DBC455943
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Monday, 04 Nov 2019 at 00:06:16
+Date & time operation was completed: Monday, 04 Nov 2019 at 00:07:09
+Total elapsed time (HH:MM:SS): 00:00:53
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 990
+Computer Serial: 5Y52ZQ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0VNP2H
+Processor: Intel(R) Core(TM) i5-2500 CPU @ 3.30GH, Speed: 3300 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 78:2b:cb:b1:b9:78
+DVD-RAM writer: DVD+-RW GH70N
+Drive 1: Model: Samsung SSD 850 PRO 256GB, Serial: S39KNX0J611738E, Size: 256.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G84 [GeForce 8400 GS]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 983094C8-94B0-4ED7-BBC0-C6EFC3AFF622
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 569772
+Lot Name: Levittown Union Free Sch Dist
+Lot Number: 18756
+\"Product\": Computer
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 PRO 256GB
+             Serial: S39KNX0J611738E Size: 256.06 GB
+
+UUID: 6AC00B13-83AF-472F-91E4-AD789115071F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Thursday, 27 Feb 2020 at 09:32:24
+Action End Time: Thursday, 27 Feb 2020 at 09:34:03
+Action Duration: 00:01:39
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

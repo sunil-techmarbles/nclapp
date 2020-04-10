@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3157C5U
+Computer Serial: MJCZFTV
+Motherboard Vendor: LENOVO
+Motherboard Model: To be filled by O.E.M.
+Processor: Intel(R) Core(TM) i3-2100 CPU @ 3.10GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 6144 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 8c:89:a5:3a:4b:ca
+DVD-RAM writer: DVD-RAM GH60N
+Drive 1: Model: ST3500413AS, Serial: W2A3AHMB, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B8C04F5F-5B38-4D34-A355-0F30C864063B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578804
+User3: Avis Budget Group
+User4: 19134
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3500413AS
+             Serial: W2A3AHMB Size: 500.11 GB
+
+UUID: 5B7C6902-83FD-4008-B836-F7D2F69D3EA5
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Friday, 31 Jan 2020 at 12:26:05
+Date & time operation was completed: Friday, 31 Jan 2020 at 14:16:33
+Total elapsed time (HH:MM:SS): 01:50:28
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

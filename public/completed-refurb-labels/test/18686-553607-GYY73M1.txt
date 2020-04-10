@@ -1,0 +1,192 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R710
+Computer Serial: GYY73M1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0YDJK3
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 57344 MB, Memory banks: 9, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: a4:ba:db:15:2b:06
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: a4:ba:db:15:2b:08
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: a4:ba:db:15:2b:0a
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: a4:ba:db:15:2b:0c
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 00:10:18:69:94:24
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 00:10:18:69:94:26
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+DVD reader: Virtual CD
+DVD reader: DVD-ROM DV-28SW
+Drive 1: Model: ST9146852SS     , Serial: 3TB15LNC, Size: 146.16 GB
+Drive 2: Model: ST9146852SS     , Serial: 3TB15G53, Size: 146.16 GB
+Drive 3: Model: ST9146852SS     , Serial: 3TB15F51, Size: 146.16 GB
+Drive 4: Model: ST9146852SS     , Serial: 3TB15F36, Size: 146.16 GB
+Drive 5: Model: ST9146852SS     , Serial: 3TB15F1J, Size: 146.16 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: F8701D9E-D200-4AB6-8195-6845B6CFDF88
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 553607
+Lot Name: Blue Wolf Capital Partners LLC
+Lot Number: 18686
+\"Product\": Server
+
+>> Raid device #1  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15LNC Size: 146.16 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15LNC Size: 136.125 GB  [ 32:0 ]
+
+UUID: F6C9DD02-8293-4988-B41F-2D61C6C90E6B
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 28547482
+Action Start Time: Friday, 13 Dec 2019 at 15:20:28
+Action End Time: Friday, 13 Dec 2019 at 15:39:10
+Action Duration: 00:18:42
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15G53 Size: 146.16 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15G53 Size: 136.125 GB  [ 32:1 ]
+
+UUID: 36EE5F25-1C54-4AE7-9721-9F91307AE4AF
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 28547482
+Action Start Time: Friday, 13 Dec 2019 at 15:20:29
+Action End Time: Friday, 13 Dec 2019 at 15:39:20
+Action Duration: 00:18:51
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15F51 Size: 146.16 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15F51 Size: 136.125 GB  [ 32:2 ]
+
+UUID: 4388B52B-CFBD-4491-9954-5E4A3A0EF4B4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 28547482
+Action Start Time: Friday, 13 Dec 2019 at 15:20:29
+Action End Time: Friday, 13 Dec 2019 at 15:39:34
+Action Duration: 00:19:05
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15F36 Size: 146.16 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15F36 Size: 136.125 GB  [ 32:3 ]
+
+UUID: 15A92E9B-8500-4445-A634-D584B26A677D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 28547482
+Action Start Time: Friday, 13 Dec 2019 at 15:20:29
+Action End Time: Friday, 13 Dec 2019 at 15:39:24
+Action Duration: 00:18:55
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15F1J Size: 146.16 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9146852SS     
+             Serial: 3TB15F1J Size: 136.125 GB  [ 32:5 ]
+
+UUID: 558A55AC-DE3A-46BC-A523-32AE44D82BD5
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 28547482
+Action Start Time: Friday, 13 Dec 2019 at 15:20:29
+Action End Time: Friday, 13 Dec 2019 at 15:39:21
+Action Duration: 00:18:52
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

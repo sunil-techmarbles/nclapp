@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro11,3
+Computer Serial: C02M30BMFD57
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-2BD1B31983FE1663
+Processor: Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+Drive 1: Model: APPLE SSD SM0512F, Serial: S1K5NYADC98923, Size: 500.28 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 750M Mac Edition]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+Multimedia Adapter: Vendor: Broadcom Inc. and subsidiaries, Model: 720p FaceTime HD Camera
+USB Ports: 11
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: C7127260-1CC1-43AC-83B2-065923C88F8E
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 553205
+Lot Name: Hasbro
+Lot Number: 18868
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0512F
+             Serial: S1K5NYADC98923 Size: 500.28 GB
+
+UUID: BCB556A8-2105-4AF1-89D0-5226CC9E6624
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 977105060
+Sectors Not Overwritten: 0
+Sectors Verified: 97712016
+Action Start Time: Friday, 20 Dec 2019 at 20:56:10
+Action End Time: Friday, 20 Dec 2019 at 22:08:27
+Action Duration: 01:12:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

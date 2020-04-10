@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FRS09N02
+Computer Serial: R90JZP66
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FRS09N02
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: a4:34:d9:bf:a4:50
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 54:ee:75:91:39:04
+Drive 1: Model: SAMSUNG MZNLN256HCHP-000L7, Serial: S20GNX0H524636, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: EE5D95E8-6B45-4A9C-9BB9-ACCC6A29D1BA
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524630
+Lot Name: BAIN & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNLN256HCHP-000L7
+             Serial: S20GNX0H524636 Size: 256.06 GB
+
+UUID: AC79D49B-0EF0-43BD-8EFA-C26BA7DFCA2C
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Monday, 01 Jan 2001 at 00:05:25
+Date & time operation was completed: Monday, 01 Jan 2001 at 00:27:25
+Total elapsed time (HH:MM:SS): 00:22:00
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6400
+Computer Serial: HNX5NH1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0RX495
+Processor: Intel(R) Core(TM)2 Duo CPU T9400 @ 2.53GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 6144 kB
+RAM: 2048 MB, Memory banks: 2, DDR DIMM
+NIC: Vendor: Intel Corporation, Model: 82567LM Gigabit Network Connection, MAC Address: 00:21:70:b6:ba:a8
+NIC: Vendor: Broadcom Limited, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW DU-8A2S
+Drive 1: Model: ST9160827AS, Serial: 5RF2BGTA, Size: 160.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G98M [Quadro NVS 160M]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801I (ICH9 Family) HD Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 77E58708-D872-4D02-BCFC-0145D214D4E6
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548182
+User3: Adelphi University
+User4: 17537
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9160827AS
+             Serial: 5RF2BGTA Size: 160.04 GB
+
+UUID: 65432CD0-DF54-4B9D-B748-4D87974516FA
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 10 Oct 2008 at 00:14:44
+Date & time operation was completed: Friday, 10 Oct 2008 at 01:12:33
+Total elapsed time (HH:MM:SS): 00:57:49
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

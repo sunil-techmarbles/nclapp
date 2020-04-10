@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: Macmini5,1
+Computer Serial: C07JH0GSDJD2
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-8ED6AF5B48C039E1
+Processor: Intel(R) Core(TM) i5-2415M CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: a8:20:66:2e:31:74
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4331 802.11a/b/g/n, MAC Address: 20:c9:d0:8c:90:57
+Drive 1: Model: APPLE HDD HTS727575A9E362, Serial: J3640084HX937E, Size: 750.16 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 9B3E12CC-5A97-4133-BB0B-FEFD4D008A8A
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 550782
+Lot Name: Metropolitan Museum of Art
+Lot Number: 17594
+\"Product\": Computer
+
+>> Drive #1  Vendor: Hitachi Model: APPLE HDD HTS727575A9E362
+             Serial: J3640084HX937E Size: 750.16 GB
+
+UUID: 0A96D6A4-7614-498A-87EB-AC309DEAFE8C
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1465149168
+Sectors Not Overwritten: 0
+Sectors Verified: 1465149168
+Action Start Time: Monday, 06 Jan 2020 at 15:07:51
+Action End Time: Monday, 06 Jan 2020 at 23:45:51
+Action Duration: 08:38:00
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

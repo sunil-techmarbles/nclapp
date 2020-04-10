@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteDesk 800 G1 SFF
+Computer Serial: MXL4161DFM
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 1998
+Processor: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: a0:d3:c1:0e:88:58
+DVD-RAM writer: DVDRAM GTA0N
+Drive 1: Model: WDC WD5000AAKX-60U6AA0, Serial: WD-WCC2EYL04998, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: C805FC19-E7AB-444A-9A84-1D455E2D9279
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 562959
+User3: Linklaters
+User4: 19022
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-60U6AA0
+             Serial: WD-WCC2EYL04998 Size: 500.11 GB
+
+UUID: 20E4AD16-EAD1-41A6-9055-9D4E388BB9E4
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 09 Jan 2020 at 15:24:40
+Date & time operation was completed: Thursday, 09 Jan 2020 at 16:56:15
+Total elapsed time (HH:MM:SS): 01:31:35
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

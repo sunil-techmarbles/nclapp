@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7450
+Computer Serial: 3NRWG72
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0D8H72
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: f8:ca:b8:3b:bd:1f
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: Unavailable
+Drive 1: Model: SK hynix SC210 mSATA 256GB, Serial: EJ59N160011609S66, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: A40D6787-FDF6-4E94-AFCF-4B95F8C5166E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 546865
+User3: PRA Health Sciences
+User4: 18743
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: SK hynix SC210 mSATA 256GB
+             Serial: EJ59N160011609S66 Size: 256.06 GB
+
+UUID: A99B8EDA-892A-4AC0-8D77-2FF453BD8593
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 09 Dec 2019 at 12:28:14
+Date & time operation was completed: Monday, 09 Dec 2019 at 13:04:19
+Total elapsed time (HH:MM:SS): 00:36:05
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

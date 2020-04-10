@@ -26,6 +26,7 @@
 				@endif	
 			</div>
 		</form>
+		<div class="shipments-table">
 		<table id="shipment-list" class="table">
 			<thead> 
 				<tr>
@@ -62,7 +63,7 @@
 			@endforeach
 			</tbody>
 		</table>
-		
+		</div>
 		@if(!empty($asins))
 			<h3>Items for Shipment {{$shipmentName}}</h3>
 			<table id="shipment-asin-list" class="table">

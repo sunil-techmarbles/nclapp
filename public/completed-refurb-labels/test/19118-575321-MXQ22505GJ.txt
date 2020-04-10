@@ -1,0 +1,266 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL360p Gen8
+Computer Serial: MXQ22505GJ
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, Speed: 2000 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, Speed: 2000 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 32768 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:4f:02:00
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:4f:02:01
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:4f:02:02
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:4f:02:03
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+Drive 1: Model: EG0450FBLSF, Serial: 6XQ1CRWA0000B24891XJ, Size: 450.10 GB
+Drive 2: Model: EG0450FBLSF, Serial: 6XQ1CS9P0000B248DL51, Size: 450.10 GB
+Drive 3: Model: EG0450FBLSF, Serial: 6XQ1CS060000B248A203, Size: 450.10 GB
+Drive 4: Model: EG0450FBLSF, Serial: 6XQ1D89G0000B2489XDC, Size: 450.10 GB
+Drive 5: Model: EG0450FBLSF, Serial: 6XQ1CRGH0000B248DH2B, Size: 450.10 GB
+Drive 6: Model: EG0450FBLSF, Serial: 6XQ1CS1C0000B248DLCC, Size: 450.10 GB
+Drive 7: Model: EG0600FBDBU, Serial: PZHE7UGD, Size: 600.13 GB
+Drive 8: Model: EG0600FBDBU, Serial: PZH9WBMD, Size: 600.13 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EH
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 95DA142E-2302-47B7-AEDF-3CAF795A81D6
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 575321
+Lot Name: Mishcon de Reya New York LLP
+Lot Number: 19118
+\"Product\": Server
+
+>> Drive #1  Vendor: HP Model: EG0450FBLSF
+             Serial: 6XQ1CRWA0000B24891XJ Size: 450.10 GB
+
+UUID: B62577F9-B6D9-490C-9ABD-6B2164959CE5
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 27 Jan 2020 at 14:35:38
+Action End Time: Monday, 27 Jan 2020 at 15:39:58
+Action Duration: 01:04:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: HP Model: EG0450FBLSF
+             Serial: 6XQ1CS9P0000B248DL51 Size: 450.10 GB
+
+UUID: 98391271-EC45-42DC-ACD7-94C188BA4536
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 27 Jan 2020 at 14:35:38
+Action End Time: Monday, 27 Jan 2020 at 15:38:51
+Action Duration: 01:03:13
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: HP Model: EG0450FBLSF
+             Serial: 6XQ1CS060000B248A203 Size: 450.10 GB
+
+UUID: 253DBF0A-B8FB-427E-8D24-1F2660B8B7D8
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 27 Jan 2020 at 14:35:38
+Action End Time: Monday, 27 Jan 2020 at 15:37:33
+Action Duration: 01:01:55
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: HP Model: EG0450FBLSF
+             Serial: 6XQ1D89G0000B2489XDC Size: 450.10 GB
+
+UUID: B2A9D20F-97EA-464A-A2DE-0BE084ACA509
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 27 Jan 2020 at 14:35:38
+Action End Time: Monday, 27 Jan 2020 at 15:41:22
+Action Duration: 01:05:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: HP Model: EG0450FBLSF
+             Serial: 6XQ1CRGH0000B248DH2B Size: 450.10 GB
+
+UUID: 388C9204-8BC8-4C7C-BB87-02B5E473F08A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 27 Jan 2020 at 14:35:38
+Action End Time: Monday, 27 Jan 2020 at 15:40:05
+Action Duration: 01:04:27
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: HP Model: EG0450FBLSF
+             Serial: 6XQ1CS1C0000B248DLCC Size: 450.10 GB
+
+UUID: A43ED8A5-2BF5-423A-AC84-AE9BB8101C38
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 879097968
+Sectors Not Overwritten: 0
+Sectors Verified: 87909797
+Action Start Time: Monday, 27 Jan 2020 at 14:35:38
+Action End Time: Monday, 27 Jan 2020 at 15:39:19
+Action Duration: 01:03:41
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHE7UGD Size: 600.13 GB
+
+UUID: 87D01970-68D1-440C-AEFC-C9D070996DBE
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 117212357
+Action Start Time: Monday, 27 Jan 2020 at 14:35:35
+Action End Time: Monday, 27 Jan 2020 at 15:51:29
+Action Duration: 01:15:54
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: HP Model: EG0600FBDBU
+             Serial: PZH9WBMD Size: 600.13 GB
+
+UUID: 8311ECCA-6133-402F-908C-A4D98B0E9EE3
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172123568
+Sectors Not Overwritten: 0
+Sectors Verified: 117212357
+Action Start Time: Monday, 27 Jan 2020 at 14:35:35
+Action End Time: Monday, 27 Jan 2020 at 15:53:04
+Action Duration: 01:17:29
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

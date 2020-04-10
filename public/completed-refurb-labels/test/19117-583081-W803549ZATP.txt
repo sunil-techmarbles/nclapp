@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro7,1
+Computer Serial: W803549ZATP
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F222BEC8
+Processor: Intel(R) Core(TM)2 Duo CPU     P8600  @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: 78:ca:39:b7:a4:cd
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: c8:bc:c8:8a:b1:ba
+DVD writer: DVD-R UJ-898
+Drive 1: Model: Hitachi HTS545025B9SA02, Serial: 100814PBL200CSJA10XN, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: MCP89 [GeForce 320M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: MCP89 High Definition Audio
+USB Ports: 10
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 3ABF9C59-B5C9-4CA6-BB67-13A8C2CB0F5A
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 583081
+Lot Name: Geometry Global
+Lot Number: 19117
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HTS545025B9SA02
+             Serial: 100814PBL200CSJA10XN Size: 250.06 GB
+
+UUID: D4629DE5-C836-4DDD-BF2A-511ABE867803
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Monday, 01 Jan 2001 at 02:02:41
+Action End Time: Monday, 01 Jan 2001 at 03:20:43
+Action Duration: 01:18:02
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E5530 non-vPro
+Computer Serial: H3MPYY1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 05GRXT
+Processor: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM4313 802.11bgn Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5761 Gigabit Ethernet PCIe, MAC Address: f0:1f:af:69:60:c2
+DVD-RAM writer: DVD+-RW GTA0N
+Drive 1: Model: WDC WD3200BEKX-75B7WT0, Serial: WD-WX71AA3C8555, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 4D46396E-4B83-4316-B47D-34C132B48A5D
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548036
+User3: Related Companies
+User4: 17604
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD3200BEKX-75B7WT0
+             Serial: WD-WX71AA3C8555 Size: 320.07 GB
+
+UUID: 2AB63396-58B9-4E3F-957F-EBE91C3B06CA
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 22 Jan 2020 at 13:59:17
+Date & time operation was completed: Wednesday, 22 Jan 2020 at 18:12:15
+Total elapsed time (HH:MM:SS): 04:12:58
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

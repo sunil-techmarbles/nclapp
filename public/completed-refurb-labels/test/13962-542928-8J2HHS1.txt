@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Precision WorkStation T3500
+Computer Serial: 8J2HHS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 09KPNV
+Processor: Intel(R) Xeon(R) CPU W3530 @ 2.80GHz, Speed: 2800 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 12288 MB, Memory banks: 6, DDR3 DIMM
+DVD-RAM writer: DVD+-RW SH-216AB
+Drive 1: Model: WDC WD2500AAKX-753CA1, Serial: WD-WMAYW1688126, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF108GL [Quadro 600]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF108 High Definition Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: A496BDAF-17AE-44D9-A2B7-F1A58BA9603D
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 542928
+Lot Name: Perkins Eastman
+Lot Number: 13962
+\"Product\": Server
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-753CA1
+             Serial: WD-WMAYW1688126 Size: 250.06 GB
+
+UUID: 0BC535F6-CC09-4735-A6F4-AF9465949699
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Friday, 13 Dec 2019 at 08:07:52
+Action End Time: Friday, 13 Dec 2019 at 08:56:09
+Action Duration: 00:48:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FRS09M02
+Computer Serial: R90KS3DK
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FRS09M02
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, LPDDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 54:ee:75:9f:c3:25
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 66:5a:a3:3c:ab:c0
+Drive 1: Model: LITEON L8H-256V2G, Serial: SD0F66162L2TH6510GS8, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 6E6F4AEB-0563-4A9A-BA9F-EF8525692452
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 532687
+User3: BAIN user3 = Lot Name CO
+User4: 18840
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: LITEON L8H-256V2G
+             Serial: SD0F66162L2TH6510GS8 Size: 256.06 GB
+
+UUID: 1D1EA360-DE08-470D-8DBE-40BA950D3F28
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 11 Nov 2019 at 15:33:59
+Date & time operation was completed: Monday, 11 Nov 2019 at 15:36:23
+Total elapsed time (HH:MM:SS): 00:02:24
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

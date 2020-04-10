@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20B7000QUS
+Computer Serial: PC0067RN
+Motherboard Vendor: LENOVO
+Motherboard Model: 20B7000QUS
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4GiB, Memory banks: 1, Chip DDR3 Synchronous 1600 MHz (0.6 ns)
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 28:d2:44:c5:1b:77
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+Drive 1: Model: TOSHIBA MQ01ACF050, Serial: 74KCCBYAT, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 92E42F8B-D38C-4081-9195-BAA0AB0EE395
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 582318
+User3: Northwell Health
+User4: 19143
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MQ01ACF050
+             Serial: 74KCCBYAT Size: 500.11 GB
+
+UUID: 5438D9CA-36FF-4B2C-9AFC-19129BD5762D
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 26 Feb 2020 at 12:14:17
+Date & time operation was completed: Wednesday, 26 Feb 2020 at 17:27:40
+Total elapsed time (HH:MM:SS): 05:13:23
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

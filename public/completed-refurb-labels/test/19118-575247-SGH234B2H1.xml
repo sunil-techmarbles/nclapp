@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 8.1.3">
+        <KernelVersion>4.4.39-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>HP</ComputerVendor>
+            <ComputerModel>ProLiant DL380p Gen8</ComputerModel>
+            <ComputerSerial>SGH234B2H1</ComputerSerial>
+            <MotherboardVendor>Unavailable</MotherboardVendor>
+            <MotherboardModel>Unavailable</MotherboardModel>
+            <AssetTag>Unavailable</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz</Name>
+                    <Speed>2500 MHz</Speed>
+                    <ID>Proc 2</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>192 kB</L1Cache>
+                    <L2Cache>1536 kB</L2Cache>
+                    <L3Cache>15360 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz</Name>
+                    <Speed>2500 MHz</Speed>
+                    <ID>Proc 2</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>192 kB</L1Cache>
+                    <L2Cache>1536 kB</L2Cache>
+                    <L3Cache>15360 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>UNKNOWN</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1333 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>Not Specified</SerialNumber>
+                    <AssetTag>Not Specified</AssetTag>
+                    <PartNumber>NOT AVAILABLE</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>UNKNOWN</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1333 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>Not Specified</SerialNumber>
+                    <AssetTag>Not Specified</AssetTag>
+                    <PartNumber>NOT AVAILABLE</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Corporation</Vendor>
+                    <Product>NetXtreme BCM5719 Gigabit Ethernet PCIe</Product>
+                    <MACAddress>ac:16:2d:72:6c:1c</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1657</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Corporation</Vendor>
+                    <Product>NetXtreme BCM5719 Gigabit Ethernet PCIe</Product>
+                    <MACAddress>ac:16:2d:72:6c:1d</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1657</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Corporation</Vendor>
+                    <Product>NetXtreme BCM5719 Gigabit Ethernet PCIe</Product>
+                    <MACAddress>ac:16:2d:72:6c:1e</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1657</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Corporation</Vendor>
+                    <Product>NetXtreme BCM5719 Gigabit Ethernet PCIe</Product>
+                    <MACAddress>ac:16:2d:72:6c:1f</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1657</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device index="1">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHG2EED</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="2">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHA3H4D</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="3">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PPX9YTYD</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="4">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHG222D</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="5">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>Z0M0DBMV0000C5435600</Serial>
+                    <Firmware>HPD9</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="6">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>Z0M0AXHT0000C534A9VW</Serial>
+                    <Firmware>HPD9</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="7">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBVFP</Product>
+                    <Serial>KNW33M2F</Serial>
+                    <Firmware>HPDE</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="8">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHEH2YD</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="9">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>S0M673E40000K60819B1</Serial>
+                    <Firmware>HPD9</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="10">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBLSH</Product>
+                    <Serial>6XR3KDR20000M236745C</Serial>
+                    <Firmware>HPD8</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="11">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHGB7UD</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="12">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHDKGHD</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="13">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHEGYWD</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="14">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHDTEYD</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="15">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>Z0M0AXZ20000C5357EX7</Serial>
+                    <Firmware>HPD9</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+                <Device index="16">
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHDNEED</Serial>
+                    <Firmware>HPDA</Firmware>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                    <Interface>SAS</Interface>
+                    <RaidDrives/>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>MGA G200EH</Product>
+                    <PciId>102B:533</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>Hewlett-Packard Company</Vendor>
+                    <Product>Smart Array Gen8 Controllers</Product>
+                    <Description>RAID bus controller</Description>
+                    <PciId>103C:323B</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Hewlett-Packard Company</Vendor>
+                    <Product>Smart Array Gen8 Controllers</Product>
+                    <Description>RAID bus controller</Description>
+                    <PciId>103C:323B</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>C600/X79 series chipset 4-Port SATA IDE Controller</Product>
+                    <Description>IDE interface</Description>
+                    <PciId>8086:1D00</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>2</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>B6BBBC6F-D0EB-40AA-9967-104992E1A0F5</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>575247</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Mishcon de Reya New York LLP</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19118</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>User5</Name>
+                        <Value>Server</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1">
+                    <UUID>B98F2455-D3E8-4279-97E0-CD0215545445</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:20</StartTime>
+                    <Duration>01:09:28</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHG2EED</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="2">
+                    <UUID>5E3B1443-A9EA-40D1-8B4F-FDB519B44A70</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:20</StartTime>
+                    <Duration>01:11:31</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHA3H4D</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="3">
+                    <UUID>C6FBA597-2E39-4394-82D6-67E34F671722</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:09:47</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PPX9YTYD</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="4">
+                    <UUID>3ACDBBF4-587B-44F3-A785-A3FB81213582</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:09:31</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHG222D</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="5">
+                    <UUID>066B6E08-8C0F-4FC7-9D51-C837E71C3C72</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>00:58:15</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>Z0M0DBMV0000C5435600</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="6">
+                    <UUID>7F600BBD-6347-4C8E-B952-B64829062A81</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:07:47</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>Z0M0AXHT0000C534A9VW</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="7">
+                    <UUID>104971F4-7EF4-44D6-A19D-9A7C96D1D76A</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:05:00</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBVFP</Product>
+                    <Serial>KNW33M2F</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="8">
+                    <UUID>DC52E825-C9EF-446D-A4D9-50FA24C780C8</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:20</StartTime>
+                    <Duration>01:09:25</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHEH2YD</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="9">
+                    <UUID>47E6E884-2E4C-41B0-9A5A-0B588AC116B2</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:08:07</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>S0M673E40000K60819B1</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="10">
+                    <UUID>83E891E1-9139-41AA-AFBF-C706D5C5A14C</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:17:12</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBLSH</Product>
+                    <Serial>6XR3KDR20000M236745C</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="11">
+                    <UUID>88F9B71B-A3AD-42CE-959C-5FEF90390A10</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:20</StartTime>
+                    <Duration>01:09:39</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHGB7UD</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="12">
+                    <UUID>657D5E5E-A9E5-4DE1-86AF-F338F63F116B</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:09:57</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHDKGHD</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="13">
+                    <UUID>09979C5D-7CC7-43CA-9895-AAB32D7D8DD5</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:09:46</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHEGYWD</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="14">
+                    <UUID>021928BD-A6B3-480F-9399-90172A6945D9</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:20</StartTime>
+                    <Duration>01:09:56</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHDTEYD</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="15">
+                    <UUID>A1CAF859-4F89-4E37-A6BB-B689193171D1</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>00:57:19</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FCVBK</Product>
+                    <Serial>Z0M0AXZ20000C5357EX7</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+                <Operation DeviceIndex="16">
+                    <UUID>3E1B1A18-D495-42E2-A9A5-33707348D9CD</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Standard overwrite</Method>
+                    <StartTime>Thursday, 09 Apr 2020 14:39:21</StartTime>
+                    <Duration>01:11:10</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <SectorsOverwritten>1172058032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <Vendor>HP</Vendor>
+                    <Product>EG0600FBDBU</Product>
+                    <Serial>PZHDNEED</Serial>
+                    <Gigabytes>600.09</Gigabytes>
+                    <IsSSD>No</IsSSD>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

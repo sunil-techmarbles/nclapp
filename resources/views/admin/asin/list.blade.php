@@ -2,7 +2,7 @@
 @section('title', 'ASINs')
 @section('content')
 <div class="abs" style="text-align: center;">
-	<table class="table" cellspacing="0" cellpadding="0" border="0">
+	<table class="table  record-filed" cellspacing="0" cellpadding="0" border="0">
 		<tbody>
 			<tr>
 				<td>

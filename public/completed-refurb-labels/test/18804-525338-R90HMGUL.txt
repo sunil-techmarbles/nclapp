@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BTS0YG00
+Computer Serial: R90HMGUL
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BTS0YG00
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 54:ee:75:6f:8f:9a
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: dc:53:60:02:fe:1d
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 2e:fa:3d:e8:7a:04
+Drive 1: Model: TOSHIBA THNSFJ256GDNU, Serial: 555S10RFTBZW, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: C0F71EAD-F178-427E-AA1A-06D3AF4FEB6E
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525338
+Lot Name: Bain & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA THNSFJ256GDNU
+             Serial: 555S10RFTBZW Size: 256.06 GB
+
+UUID: 64AA3984-59A9-4C11-A4DE-AD95F6F608C4
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Tuesday, 05 Nov 2019 at 11:57:33
+Date & time operation was completed: Tuesday, 05 Nov 2019 at 11:57:46
+Total elapsed time (HH:MM:SS): 00:00:13
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

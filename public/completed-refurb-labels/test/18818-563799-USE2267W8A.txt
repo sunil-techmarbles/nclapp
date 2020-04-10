@@ -1,0 +1,311 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL370 G6
+Computer Serial: USE2267W8A
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU X5650 @ 2.67GHz, Speed: 2700 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU X5650 @ 2.67GHz, Speed: 2700 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 24576 MB, Memory banks: 6, DDR3 DIMM
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: 80:c1:6e:75:b1:6c
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: 80:c1:6e:75:b1:6d
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: 80:c1:6e:75:b1:6e
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: 80:c1:6e:75:b1:6f
+NIC: Vendor: Intel Corporation, Model: 82571EB/82571GB Gigabit Ethernet Controller D0/D1 (copper applications), MAC Address: e8:39:35:0f:b9:d4
+NIC: Vendor: Intel Corporation, Model: 82571EB/82571GB Gigabit Ethernet Controller D0/D1 (copper applications), MAC Address: e8:39:35:0f:b9:d5
+Drive 1: Model: EF0600FATFF, Serial: LXVHLAKM, Size: 600.09 GB
+Drive 2: Model: EF0600FATFF, Serial: LXVHZWDM, Size: 600.09 GB
+Drive 3: Model: EF0600FATFF, Serial: LXVHLMEM, Size: 600.09 GB
+Drive 4: Model: EF0600FATFF, Serial: LXVJ06WM, Size: 600.09 GB
+Drive 5: Model: EF0600FATFF, Serial: LXVGJ58M, Size: 600.09 GB
+Drive 6: Model: EF0600FATFF, Serial: LXVHMXTM, Size: 600.09 GB
+Drive 7: Model: EF0600FATFF, Serial: LXVHNDGM, Size: 600.09 GB
+Drive 8: Model: EF0600FATFF, Serial: LXVHMWZM, Size: 600.09 GB
+Drive 9: Model: EF0600FATFF, Serial: LXVEVMMM, Size: 600.09 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: ES1000
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 62F26B66-E2A5-402A-AC80-FAFED5724E86
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 563799
+Lot Name: Northwell Health
+Lot Number: 18818
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHLAKM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHLAKM Size: 600 GB  [ 2:1 ]
+
+UUID: 0DA7BC2C-DF88-4CAD-BA13-FB8C2B2CF5C4
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:08
+Action End Time: Thursday, 02 Jan 2020 at 15:03:52
+Action Duration: 05:57:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHZWDM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHZWDM Size: 600 GB  [ 1:1 ]
+
+UUID: 340E79A9-A08F-4E99-ACFC-1409AF2AB2E5
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:08
+Action End Time: Thursday, 02 Jan 2020 at 15:03:39
+Action Duration: 05:57:31
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHLMEM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHLMEM Size: 600 GB  [ 2:2 ]
+
+UUID: A56FF515-D52C-4215-A42D-BCBDFA4C163B
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 9728
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:09
+Action End Time: Thursday, 02 Jan 2020 at 13:48:13
+Action Duration: 04:42:04
+
+Action Result: FAILURE
+
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Raid device #4  Vendor: HP Model: EF0600FATFF
+             Serial: LXVJ06WM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVJ06WM Size: 600 GB  [ 1:2 ]
+
+UUID: D4B10007-C247-45C7-84F9-BA0ADB523E2A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:08
+Action End Time: Thursday, 02 Jan 2020 at 15:03:50
+Action Duration: 05:57:42
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: HP Model: EF0600FATFF
+             Serial: LXVGJ58M Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVGJ58M Size: 600 GB  [ 1:3 ]
+
+UUID: 916C2B87-35C0-4851-988A-CC738B733BF6
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:09
+Action End Time: Thursday, 02 Jan 2020 at 15:03:55
+Action Duration: 05:57:46
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHMXTM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHMXTM Size: 600 GB  [ 2:3 ]
+
+UUID: 75BB1E7F-A1DA-41B0-A593-1F9F93EBB826
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:09
+Action End Time: Thursday, 02 Jan 2020 at 15:03:55
+Action Duration: 05:57:46
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #7  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHNDGM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHNDGM Size: 600 GB  [ 1:4 ]
+
+UUID: 4EB5427F-DC21-425C-82D1-90661DECDB0B
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:09
+Action End Time: Thursday, 02 Jan 2020 at 15:03:57
+Action Duration: 05:57:48
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #8  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHMWZM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVHMWZM Size: 600 GB  [ 2:4 ]
+
+UUID: C9531A16-140F-43C2-9CED-84C4FC3B497A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:08
+Action End Time: Thursday, 02 Jan 2020 at 15:03:51
+Action Duration: 05:57:43
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #9  Vendor: HP Model: EF0600FATFF
+             Serial: LXVEVMMM Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EF0600FATFF
+             Serial: LXVEVMMM Size: 600 GB  [ 2:5 ]
+
+UUID: 142711B8-FB36-4DC4-8176-240700CEB31A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 1172058032
+Action Start Time: Thursday, 02 Jan 2020 at 09:06:09
+Action End Time: Thursday, 02 Jan 2020 at 15:03:38
+Action Duration: 05:57:29
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

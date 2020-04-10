@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac17,1
+Computer Serial: D25RX1BHGQ17
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-B809C3757DA9BB8D
+Processor: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz, Speed: 4000 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: 28:f0:76:4e:07:fc
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 38:c9:86:53:a1:59
+Drive 1: Model: APPLE SSD SM1024G, Serial: S2HGNYAH502054, Size: 1000.56 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Advanced Micro Devices, Inc. [AMD/ATI]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Tonga HDMI Audio [Radeon R9 285/380]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 100 Series/C230 Series Chipset Family HD Audio Controller
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: D3A016BE-CBA0-414B-B272-F3D57627F881
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 552962
+Lot Name: Hasbro Inc
+Lot Number: 18868
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM1024G
+             Serial: S2HGNYAH502054 Size: 1000.56 GB
+
+UUID: 993985AC-8ED7-4FCF-89B1-B3AAC94DA40D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1954210120
+Sectors Not Overwritten: 0
+Sectors Verified: 195424016
+Action Start Time: Friday, 20 Dec 2019 at 20:16:04
+Action End Time: Friday, 20 Dec 2019 at 20:18:03
+Action Duration: 00:01:59
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Precision Tower 3620
+Computer Serial: 9R77482
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 09WH54
+Processor: Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz, Speed: 3700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (2) I219-LM, MAC Address: 64:00:6a:7f:74:1c
+DVD reader: DVD-ROM DH50N
+Drive 1: Model: ST500DM002-1BD142, Serial: Z6ERVKBS, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119 [NVS 315]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-H HD Audio
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 2A847CF7-333C-45F3-A81F-E19BD2EC971B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 539331
+User3: ITAMG
+User4: 11725
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z6ERVKBS Size: 500.11 GB
+
+UUID: 19E92085-DB4B-4F53-9159-0C9BDF0B0E2D
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Wednesday, 11 Dec 2019 at 16:36:16
+Date & time operation was completed: Wednesday, 11 Dec 2019 at 21:42:26
+Total elapsed time (HH:MM:SS): 05:06:10
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

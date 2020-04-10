@@ -2,17 +2,17 @@
 @section('title', 'Supplies')
 @section('content')
 <div class="abs" style="text-align: center;">
-	<table class="table" cellspacing="0" cellpadding="0" border="0">
+	<table class="table  record-filed" cellspacing="0" cellpadding="0" border="0">
 		<tbody>
 			<tr>
 				<td>
 					<a class="btn btn-primary btn-sm border" href="{{route('add.supplies')}}" >Add Record</a>
 					<a class="btn btn-secondary btn-sm border" href="{{route('export.supplies')}}">Export</a>
 				</td>
-				<td nowrap="" style="text-align: right">
+				<td nowrap="" style="text-align: right;">
 					<form method="post" action="{{route('import.supplies')}}" enctype="multipart/form-data">
 						@csrf
-						<input type="file" name="impfile">
+						<input class="supplies-flie-upload" type="file" name="impfile">
 						<input type="submit" class="btn btn-secondary btn-sm border" value="Import">
 					</form>
 					@if($errors->has('impfile'))
@@ -21,7 +21,7 @@
 				</td>
 				<td nowrap="" style="text-align: right">
 					<form method="get" action="{{route('supplies')}}">
-						<input type="text" name="s" value="{{request()->get('s')}}" placeholder=" Search">
+						<input class="record-form" type="text" name="s" value="{{request()->get('s')}}" placeholder=" Search">
 						<select name="f" style="height:26px;border: 0;">
 							@foreach($searchItemsLists as $key => $searchItem)
 								<option @if(request()->get('f') == $key) selected @endif value="{{$key}}">{{$searchItem}}</option>

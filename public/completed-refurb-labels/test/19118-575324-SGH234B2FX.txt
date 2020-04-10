@@ -1,0 +1,96 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL380p Gen8
+Computer Serial: SGH234B2FX
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 24576 MB, Memory banks: 3, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:56:a3:b4
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:56:a3:b5
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:56:a3:b6
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5719 Gigabit Ethernet PCIe, MAC Address: 2c:76:8a:56:a3:b7
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+Drive 1: Model: EG0600FBDBU, Serial: PZHEN4ND, Size: 600.09 GB
+Drive 2: Model: EG0600FBDBU, Serial: PZHDVRRD, Size: 600.09 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EH
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 8CB89206-A347-4DB2-BA69-D4726059B9FB
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 575324
+Lot Name: Mishcon de Reya New York LLP
+Lot Number: 19118
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHEN4ND Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHEN4ND Size: 600 GB  [ 2:1 ]
+
+UUID: C100A01F-EEBE-4326-A35E-EF2DE132F60C
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 117205804
+Action Start Time: Monday, 27 Jan 2020 at 16:01:20
+Action End Time: Monday, 27 Jan 2020 at 17:18:55
+Action Duration: 01:17:35
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHDVRRD Size: 600.09 GB
+    >>> Raid member #1  Vendor: HP Model: EG0600FBDBU
+             Serial: PZHDVRRD Size: 600 GB  [ 2:2 ]
+
+UUID: 53D72514-61F3-4E34-AD08-BAFE99123869
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1172058032
+Sectors Not Overwritten: 0
+Sectors Verified: 117205804
+Action Start Time: Monday, 27 Jan 2020 at 16:01:20
+Action End Time: Monday, 27 Jan 2020 at 17:18:22
+Action Duration: 01:17:02
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

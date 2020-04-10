@@ -1,0 +1,138 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R620
+Computer Serial: FJR63W1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0KCKR5
+Processor: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, Speed: 2000 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, Speed: 2000 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 98304 MB, Memory banks: 24, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:00:dc:d9
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:00:dc:da
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:00:dc:d7
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:00:dc:d8
+DVD reader: DVD-ROM DU60N
+Drive 1: Model: PERC H310, Serial: 00837b4e0e823c5b2300a50c05c0110b, Size: 499.56 GB
+Drive 2: Model: PERC H310, Serial: 007a5c3f0e813c5b2300a50c05c0110b, Size: 499.56 GB
+Drive 3: Model: PERC H310, Serial: 002325570e823c5b2300a50c05c0110b, Size: 499.56 GB
+Drive 4: Model: PERC H310, Serial: 00006a600e833c5b2300a50c05c0110b, Size: 499.56 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: C93AA689-2BBF-40DC-B835-6E2F31C5EBE1
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 51688
+Lot Name: CARDONE INDUSTRIES
+Lot Number: 11685
+\"Product\": Server
+
+>> Drive #1  Vendor: DELL Model: PERC H310
+             Serial: 00837b4e0e823c5b2300a50c05c0110b Size: 499.56 GB
+
+UUID: D58C91D0-6608-438A-AFF4-E6D8B71A9994
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 18 Oct 2018 at 12:47:31
+Date & time operation was completed: Thursday, 18 Oct 2018 at 14:32:54
+Total elapsed time (HH:MM:SS): 01:45:23
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: DELL Model: PERC H310
+             Serial: 007a5c3f0e813c5b2300a50c05c0110b Size: 499.56 GB
+
+UUID: 42B16E37-7228-4D25-9237-98AB4752F3C5
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 18 Oct 2018 at 12:47:31
+Date & time operation was completed: Thursday, 18 Oct 2018 at 14:32:26
+Total elapsed time (HH:MM:SS): 01:44:55
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: DELL Model: PERC H310
+             Serial: 002325570e823c5b2300a50c05c0110b Size: 499.56 GB
+
+UUID: D315454A-55E5-4F6A-A558-4C36BA09A8C3
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 18 Oct 2018 at 12:47:31
+Date & time operation was completed: Thursday, 18 Oct 2018 at 14:33:06
+Total elapsed time (HH:MM:SS): 01:45:35
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: DELL Model: PERC H310
+             Serial: 00006a600e833c5b2300a50c05c0110b Size: 499.56 GB
+
+UUID: 7DBA36DB-D60C-41A4-AAFA-488F449B28A4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 18 Oct 2018 at 12:47:31
+Date & time operation was completed: Thursday, 18 Oct 2018 at 14:33:05
+Total elapsed time (HH:MM:SS): 01:45:34
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

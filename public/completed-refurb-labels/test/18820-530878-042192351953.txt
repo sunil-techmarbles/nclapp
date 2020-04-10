@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 3
+Computer Serial: 042192351953
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 3
+Processor: Intel(R) Core(TM) i7-4650U CPU @ 1.70GHz, Speed: 2900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88W8897 [AVASTAR] 802.11ac Wireless, MAC Address: Unavailable
+Drive 1: Model: SAMSUNG MZMTE512HMHP-000MV, Serial: S1F2NYAG103856, Size: 512.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 70E23C20-BBBC-4822-BC77-6680BFC70BE0
+Current user: ITAMG
+Computer ID: 0
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 530878
+Lot Name: Northwell Health
+Lot Number: 18820
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZMTE512HMHP-000MV
+             Serial: S1F2NYAG103856 Size: 512.11 GB
+
+UUID: 056A89C2-EDA5-40A5-AB72-ABEBE9ADABFF
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 11 Nov 2019 at 10:59:45
+Date & time operation was completed: Monday, 11 Nov 2019 at 12:02:49
+Total elapsed time (HH:MM:SS): 01:03:04
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

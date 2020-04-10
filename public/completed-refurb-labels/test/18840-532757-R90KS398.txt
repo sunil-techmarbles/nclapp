@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FR209M02
+Computer Serial: R90KS398
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FR209M02
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, LPDDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 54:ee:75:ce:b7:75
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 0e:25:45:a6:96:bd
+Drive 1: Model: SanDisk SD8TN8U256G1001, Serial: 171161802049, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: D3988912-9B80-45C4-8803-C76493FDF6FE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 532757
+User3: BAIN user3 = Lot Name CO
+User4: 18840
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD8TN8U256G1001
+             Serial: 171161802049 Size: 256.06 GB
+
+UUID: 34C66E05-0C25-43DD-A9DA-1F0026494477
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 11 Nov 2019 at 13:39:08
+Date & time operation was completed: Monday, 11 Nov 2019 at 13:42:43
+Total elapsed time (HH:MM:SS): 00:03:35
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

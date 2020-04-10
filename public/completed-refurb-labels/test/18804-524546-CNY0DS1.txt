@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6320
+Computer Serial: CNY0DS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0TWRG4
+Processor: Intel(R) Core(TM) i7-2640M CPU @ 2.80GH, Speed: 2800 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:2a:f1:f3
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N + WiMAX 6250 [Kilmer Peak], MAC Address: 64:80:99:5c:d2:a4
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: ca:29:55:48:ee:4b
+DVD-RAM writer: DVD+-RW GU60N
+Drive 1: Model: SAMSUNG SSD PM800 Series 2.5" 256GB, Serial: S0GHNEAZ600526, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 045DFDAC-81DB-4052-98E7-AAC441DBE3DF
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524546
+Lot Name: BAIN & co
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD PM800 Series 2.5" 256GB
+             Serial: S0GHNEAZ600526 Size: 256.06 GB
+
+UUID: 6A52C893-3988-456F-A93D-93D299E969E0
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Tuesday, 05 Nov 2019 at 13:19:03
+Date & time operation was completed: Tuesday, 05 Nov 2019 at 13:20:20
+Total elapsed time (HH:MM:SS): 00:01:17
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7450
+Computer Serial: 8C63762
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 06HN6G
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: f8:ca:b8:1e:50:13
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 18:5e:0f:34:af:df
+Drive 1: Model: SAMSUNG SSD PM871 mSATA 256GB, Serial: S20ENXBG902996, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 5104BA05-E64D-4847-BB4F-7C67659237A9
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 597403
+Lot Name: Wunderman Thompson
+Lot Number: 19370
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD PM871 mSATA 256GB
+             Serial: S20ENXBG902996 Size: 256.06 GB
+
+UUID: F87B20ED-407F-42D3-A651-06677CDBAA7A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Wednesday, 18 Mar 2020 at 12:38:02
+Action End Time: Wednesday, 18 Mar 2020 at 12:40:52
+Action Duration: 00:02:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

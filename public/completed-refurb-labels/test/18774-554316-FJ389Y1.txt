@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 3010
+Computer Serial: FJ389Y1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 042P49
+Processor: Intel(R) Core(TM) i3-3225 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: a4:1f:72:8b:ee:1e
+DVD-RAM writer: DVD+-RW SW830
+Drive 1: Model: ST500DM002-1BD142, Serial: Z6EH0NFY, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 5FA75CDD-607E-4847-8609-B1BECAB56D79
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 554316
+User3: Guilford Press
+User4: 18774
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z6EH0NFY Size: 500.11 GB
+
+UUID: 7B600393-3776-4609-9770-B5E92A891067
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 13 Dec 2019 at 13:56:06
+Date & time operation was completed: Friday, 13 Dec 2019 at 15:36:38
+Total elapsed time (HH:MM:SS): 01:40:32
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

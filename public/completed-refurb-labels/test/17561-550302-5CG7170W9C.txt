@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 820 G3
+Computer Serial: 5CG7170W9C
+Motherboard Vendor: HP
+Motherboard Model: 807C
+Processor: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-V, MAC Address: 3c:52:82:44:83:5c
+Drive 1: Model: SanDisk SD8SN8U-256G-1006, Serial: 170359801456, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: C8B780E5-B72C-4F57-AD3A-5CD389580E47
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 550302
+User3: World Wrestling Entertainment
+User4: 17561
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD8SN8U-256G-1006
+             Serial: 170359801456 Size: 256.06 GB
+
+UUID: 46295DFB-9DC2-4CB5-82A6-6C1FF3C57249
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+Date & time operation was started: Tuesday, 04 Feb 2020 at 13:28:11
+Date & time operation was completed: Tuesday, 04 Feb 2020 at 14:53:58
+Total elapsed time (HH:MM:SS): 01:25:47
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

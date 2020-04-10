@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Mini 2102
+Computer Serial: CNF03745TW
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 3660
+Processor: Intel(R) Atom(TM) CPU N455   @ 1.66GHz, Speed: 1700 MHz, Cores: 1, L1 Cache: 32 kB, L2 Cache: 512 kB
+RAM: 2048 MB, Memory banks: 1, DDR2 SODIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL810xE PCI Express Fast Ethernet controller, MAC Address: 60:eb:69:4c:bd:3f
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4312 802.11b/g LP-PHY, MAC Address: 5c:ac:4c:93:c3:2c
+Drive 1: Model: TOSHIBA MK2556GSY, Serial: 80K6FCJNS, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Atom Processor D4xx/D5xx/N4xx/N5xx Integrated Graphics Controller
+Display Adapter: Vendor: Intel Corporation, Model: Atom Processor D4xx/D5xx/N4xx/N5xx Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: NM10/ICH7 Family High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 4880BE00-7EAA-45FC-A377-26DEF3FFA31E
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 561103
+Lot Name: H2M Architects & Engineers
+Lot Number: 18897
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK2556GSY
+             Serial: 80K6FCJNS Size: 250.06 GB
+
+UUID: F23A0471-0983-4AA9-B2BD-8D17FBEAAA7E
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Thursday, 13 Feb 2020 at 09:46:38
+Action End Time: Thursday, 13 Feb 2020 at 10:46:44
+Action Duration: 01:00:06
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

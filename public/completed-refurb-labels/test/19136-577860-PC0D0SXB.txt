@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FN002JUS
+Computer Serial: PC0D0SXB
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FN002JUS
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: c8:5b:76:05:c4:75
+Drive 1: Model: TOSHIBA THNSFJ256GCSU, Serial: 46KS112MT8LW, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 00E3CF0D-21C1-4EB0-85EB-3DB91E9D16E5
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 577860
+User3: The Hackett Group
+User4: 19136
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA THNSFJ256GCSU
+             Serial: 46KS112MT8LW Size: 256.06 GB
+
+UUID: CEA166A0-D85D-4F5C-BAE9-4BA84173F769
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 20 Feb 2020 at 07:17:38
+Date & time operation was completed: Thursday, 20 Feb 2020 at 07:19:29
+Total elapsed time (HH:MM:SS): 00:01:51
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,86 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge T320
+Computer Serial: 1SGK282
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0FDT3J
+Processor: Intel(R) Xeon(R) CPU E5-2403 v2 @ 1.80GHz, Speed: 1800 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 20:47:47:90:90:30
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 20:47:47:90:90:32
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD reader: DVD-ROM DH50N
+Drive 1: Model: WD4000FYYX, Serial: WMC130E76JD7, Size: 4000.23 GB
+Drive 2: Model: PERC H310, Serial: 00e4a0bc06b48dfb2500e1e04e708741, Size: 4000.23 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: BFEDAB4D-8E0A-4CB3-91F2-421F29F4097C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 569291
+User3: Abacus Group
+User4: 18863
+\"Product\": Server
+
+>> Raid device #1  Vendor: Western Digital Model: WD4000FYYX
+             Serial: WMC130E76JD7 Size: 4000.23 GB
+    >>> Raid member #1  Vendor: ATA Model: WD4000FYYX
+             Serial: WMC130E76JD7 Size: 3.638 GB  [ 32:1 ]
+
+UUID: DC8E5A61-1460-4D82-9088-BB8621154D4B
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 12:05:45
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 21:00:07
+Total elapsed time (HH:MM:SS): 08:54:22
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: DELL Model: PERC H310
+             Serial: 00e4a0bc06b48dfb2500e1e04e708741 Size: 4000.23 GB
+
+UUID: 97581F43-2434-499E-93E1-76FA66009D80
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 11 Mar 2020 at 12:05:45
+Date & time operation was completed: Wednesday, 11 Mar 2020 at 20:58:45
+Total elapsed time (HH:MM:SS): 08:53:00
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

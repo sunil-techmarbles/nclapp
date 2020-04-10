@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20A8S031US
+Computer Serial: R900GBG0
+Motherboard Vendor: LENOVO
+Motherboard Model: 20A8S031US
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 54:ee:75:22:dd:76
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: 7c:7a:91:1a:b2:2e
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 3c:18:a0:f0:52:28
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: da:b0:4b:ff:12:90
+Drive 1: Model: SAMSUNG MZNTE256HMHP-000L7, Serial: S1KHNYAF915248, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 10
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: B2B57A12-B69E-43E5-A871-B11D4A2366D2
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525319
+Lot Name: Bain & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNTE256HMHP-000L7
+             Serial: S1KHNYAF915248 Size: 256.06 GB
+
+UUID: E5B94866-0D66-419C-9DE5-4DA5C27019E4
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Monday, 04 Nov 2019 at 01:27:29
+Date & time operation was completed: Monday, 04 Nov 2019 at 01:56:37
+Total elapsed time (HH:MM:SS): 00:29:08
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

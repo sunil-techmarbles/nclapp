@@ -1,0 +1,99 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3619
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c7:7c
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c7:7d
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c7:7e
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c7:7f
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:f9:28
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:f9:29
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6e:ea
+DVD reader: Device-CD#0
+Drive 1: Model: GB0500EAFJH, Serial: 9QMBYR0T, Size: 500.11 GB
+Drive 2: Model: WDC WD5000AAKX-001CA0, Serial: WD-WMAYUV465501, Size: 500.11 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 13
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 5BA3C293-AB8B-4CCC-9F42-4F0FC1AAB644
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 5593680002
+Lot Name: Control V Symphony
+Lot Number: 19019
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: HP Model: GB0500EAFJH
+             Serial: 9QMBYR0T Size: 500.11 GB
+
+UUID: BC32B023-7540-42E1-A004-F8C8621C68A3
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97677317
+Action Start Time: Tuesday, 07 Jan 2020 at 06:17:25
+Action End Time: Tuesday, 07 Jan 2020 at 08:02:16
+Action Duration: 01:44:51
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD5000AAKX-001CA0
+             Serial: WD-WMAYUV465501 Size: 500.11 GB
+
+UUID: 6A3AFDDF-637F-4DB6-BB50-1E0FB3470058
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97677317
+Action Start Time: Tuesday, 07 Jan 2020 at 06:17:25
+Action End Time: Tuesday, 07 Jan 2020 at 07:51:38
+Action Duration: 01:34:13
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro11,1
+Computer Serial: C02P4K2MG3QJ
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-189A3D4F975D5FFC
+Processor: Intel(R) Core(TM) i5-4278U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 3072 KB, L2 Cache: Unavailable
+Processor: Intel(R) Core(TM) i5-4278U CPU @ 2.60GHz, Speed: 3000 MHz, Cores: 2, L1 Cache: 3072 KB, L2 Cache: Unavailable
+RAM: 8GiB, Memory banks: 2, SODIMM DDR3 Synchronous 1600 MHz (0.6 ns)
+NIC: Vendor: Broadcom Limited, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+Drive 1: Model: APPLE SSD SM0256G, Serial: S2Z5NY0J445819, Size: 251.00 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+Multimedia Adapter: Vendor: Broadcom Limited, Model: 720p FaceTime HD Camera
+USB Ports: 11
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 79D12652-B97A-4BF0-BA07-02FE01F5517D
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 530295
+Lot Name: Conde Nast
+Lot Number: 17405
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0256G
+             Serial: S2Z5NY0J445819 Size: 251.00 GB
+
+UUID: 5159544B-EFA8-4F38-A019-2307A382B00A
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Sunday, 01 Jan 2017 at 21:46:55
+Date & time operation was completed: Sunday, 01 Jan 2017 at 21:47:37
+Total elapsed time (HH:MM:SS): 00:00:42
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

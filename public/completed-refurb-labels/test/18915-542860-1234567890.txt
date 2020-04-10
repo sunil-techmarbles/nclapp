@@ -1,0 +1,280 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: X9DR7/E-(J)LN4F
+Computer Serial: 1234567890
+Motherboard Vendor: Supermicro
+Motherboard Model: X9DR7/E-(J)LN4F
+Processor: Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz, Speed: 2200 MHz, Cores: 8, L1 Cache: 512 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-2660 0 @ 2.20GHz, Speed: 2200 MHz, Cores: 8, L1 Cache: 512 kB, L2 Cache: 2048 kB
+RAM: 262144 MB, Memory banks: 16, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 00:25:90:c2:a9:10
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 00:25:90:c2:a9:11
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 00:25:90:c2:a9:12
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 00:25:90:c2:a9:13
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: a0:36:9f:19:66:5c
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: a0:36:9f:19:66:5e
+DVD-RAM writer: DRW-24F1ST a
+Drive 1: Model: KINGSTON SH103S3480G, Serial: 50026B723402CA15, Size: 479.56 GB
+Drive 2: Model: KINGSTON SH103S3480G, Serial: 50026B723402C9B9, Size: 479.56 GB
+Drive 3: Model: KINGSTON SH103S3480G, Serial: 50026B723402C173, Size: 479.56 GB
+Drive 4: Model: KINGSTON SH103S3480G, Serial: 50026B723402C81F, Size: 479.56 GB
+Drive 5: Model: KINGSTON SH103S3480G, Serial: 50026B723402C9DA, Size: 479.56 GB
+Drive 6: Model: KINGSTON SH103S3480G, Serial: 50026B723402C82A, Size: 479.56 GB
+Drive 7: Model: ST9146853SS, Serial: 6XM2GQCE0000B339MM12, Size: 146.82 GB
+Drive 8: Model: ST9146853SS, Serial: 6XM2GQ7A0000B339MMVV, Size: 146.82 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: EEFE4807-C9BA-466E-B626-823D829F83D3
+Current user: ITAMG
+Computer ID: To Be Filled By O.E.M.
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 542860
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: LSI Model: KINGSTON SH103S3480G
+             Serial: 50026B723402CA15 Size: 479.56 GB
+    >>> Raid member #1  Vendor: ATA Model: KINGSTON SH103S3480G
+             Serial: 50026B723402CA15 Size: 446.625 GB  [ 252:0 ]
+
+UUID: 63655024-E3E9-4FDC-9C97-62D1D7354992
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 936640512
+Sectors Not Overwritten: 0
+Sectors Verified: 93664052
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:11
+Action End Time: Tuesday, 26 Nov 2019 at 16:48:08
+Action Duration: 00:16:57
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: LSI Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C9B9 Size: 479.56 GB
+    >>> Raid member #1  Vendor: ATA Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C9B9 Size: 446.625 GB  [ 252:1 ]
+
+UUID: 407D5623-4584-46EE-8C93-DC219F86B6DE
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 936640512
+Sectors Not Overwritten: 0
+Sectors Verified: 93664052
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:11
+Action End Time: Tuesday, 26 Nov 2019 at 16:48:09
+Action Duration: 00:16:58
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: LSI Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C173 Size: 479.56 GB
+    >>> Raid member #1  Vendor: ATA Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C173 Size: 446.625 GB  [ 252:2 ]
+
+UUID: 552B1018-B0A6-439F-831B-CACF136D7A62
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 936640512
+Sectors Not Overwritten: 0
+Sectors Verified: 93664052
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:11
+Action End Time: Tuesday, 26 Nov 2019 at 16:48:09
+Action Duration: 00:16:58
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: LSI Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C81F Size: 479.56 GB
+    >>> Raid member #1  Vendor: ATA Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C81F Size: 446.625 GB  [ 252:3 ]
+
+UUID: 4082D019-BA55-405B-A4AE-7F0C67FE21ED
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 936640512
+Sectors Not Overwritten: 0
+Sectors Verified: 93664052
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:11
+Action End Time: Tuesday, 26 Nov 2019 at 16:48:09
+Action Duration: 00:16:58
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: LSI Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C9DA Size: 479.56 GB
+    >>> Raid member #1  Vendor: ATA Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C9DA Size: 446.625 GB  [ 252:4 ]
+
+UUID: 3564E05D-8182-4B71-B546-A922F4EED181
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 936640512
+Sectors Not Overwritten: 0
+Sectors Verified: 93664052
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:11
+Action End Time: Tuesday, 26 Nov 2019 at 16:48:08
+Action Duration: 00:16:57
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: LSI Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C82A Size: 479.56 GB
+    >>> Raid member #1  Vendor: ATA Model: KINGSTON SH103S3480G
+             Serial: 50026B723402C82A Size: 446.625 GB  [ 252:5 ]
+
+UUID: FB440E35-006C-45B3-ADD0-8BA9ADF34A95
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 936640512
+Sectors Not Overwritten: 0
+Sectors Verified: 93664052
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:11
+Action End Time: Tuesday, 26 Nov 2019 at 16:48:08
+Action Duration: 00:16:57
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: SEAGATE Model: ST9146853SS
+             Serial: 6XM2GQCE0000B339MM12 Size: 146.82 GB
+
+UUID: 97160362-5D1B-4976-BB38-517840781EE7
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286749488
+Sectors Not Overwritten: 0
+Sectors Verified: 28674949
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:16
+Action End Time: Tuesday, 26 Nov 2019 at 16:47:06
+Action Duration: 00:15:50
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: SEAGATE Model: ST9146853SS
+             Serial: 6XM2GQ7A0000B339MMVV Size: 146.82 GB
+
+UUID: FDCE23C5-458E-4365-9664-400E00F33E43
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286749488
+Sectors Not Overwritten: 0
+Sectors Verified: 28674949
+Action Start Time: Tuesday, 26 Nov 2019 at 16:31:16
+Action End Time: Tuesday, 26 Nov 2019 at 16:47:15
+Action Duration: 00:15:59
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

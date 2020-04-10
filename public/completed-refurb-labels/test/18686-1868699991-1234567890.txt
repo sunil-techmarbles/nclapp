@@ -1,0 +1,450 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: MBD-X8DT6-A-IS018
+Computer Serial: 1234567890
+Motherboard Vendor: Supermicro
+Motherboard Model: X8DT6
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 40960 MB, Memory banks: 5, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:8e
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:8f
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+Drive 1: Model: STE60005 CLAR600, Serial: 6SL7A1BY    0000N41525YX, Size: 585.40 GB
+Drive 2: Model: STE60005 CLAR600, Serial: 6SL7ACEY    0000N41511ZJ, Size: 585.40 GB
+Drive 3: Model: STE60005 CLAR600, Serial: 6SL7AP03    0000N4140QTE, Size: 585.40 GB
+Drive 4: Model: STE60005 CLAR600, Serial: 6SL7ANE2    0000N4141977, Size: 585.40 GB
+Drive 5: Model: HUC15606 CLAR600, Serial: 0XV6A9JL, Size: 585.40 GB
+Drive 6: Model: STE60005 CLAR600, Serial: 6SL7ANRY    0000N41510UB, Size: 585.40 GB
+Drive 7: Model: STE60005 CLAR600, Serial: 6SL7ANBB    0000N41505MB, Size: 585.40 GB
+Drive 8: Model: STE60005 CLAR600, Serial: 6SL7ALMT    0000N4140HAE, Size: 585.40 GB
+Drive 9: Model: STE60005 CLAR600, Serial: 6SL7AGCA    0000N4150KPX, Size: 585.40 GB
+Drive 10: Model: STE60005 CLAR600, Serial: 6SL7AP3S    0000N4141BP5, Size: 585.40 GB
+Drive 11: Model: STE60005 CLAR600, Serial: 6SL7AE7P    0000N4150JW5, Size: 585.40 GB
+Drive 12: Model: STE60005 CLAR600, Serial: 6SL78Y6T    0000N4150KPS, Size: 585.40 GB
+Drive 13: Model: STE60005 CLAR600, Serial: 6SL7AXZY    0000N4130T2U, Size: 585.40 GB
+Drive 14: Model: STE60005 CLAR600, Serial: None found, Size: 585.40 GB
+Drive 15: Model: STE60005 CLAR600, Serial: 6SL7908X    0000N4151499, Size: 585.40 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D082DADA-7709-40CA-A44A-B7237BA4144F
+Current user: ITAMG
+Computer ID: To Be Filled By O.E.M.
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 1868699991
+Lot Name: Blue Wolf Capital Partners LLC
+Lot Number: 18686
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7A1BY    0000N41525YX Size: 585.40 GB
+
+UUID: A4DB4A16-8B63-4552-9E74-9838CD99AF25
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:07
+Action End Time: Friday, 13 Dec 2019 at 18:47:53
+Action Duration: 01:00:46
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7ACEY    0000N41511ZJ Size: 585.40 GB
+
+UUID: 4B908C09-4CC3-428F-B679-5587730F7BC8
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:12
+Action End Time: Friday, 13 Dec 2019 at 18:48:02
+Action Duration: 01:00:50
+
+Action Result: FAILURE
+
+Drive Errors Detected: 4
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #3  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7AP03    0000N4140QTE Size: 585.40 GB
+
+UUID: 0F6980C4-D44A-4BB3-886E-06811475F5B3
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:46:59
+Action End Time: Friday, 13 Dec 2019 at 18:50:03
+Action Duration: 01:03:04
+
+Action Result: FAILURE
+
+Drive Errors Detected: 63
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #4  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7ANE2    0000N4141977 Size: 585.40 GB
+
+UUID: 00144AF7-C8EE-4E52-B005-9E16FBE649A7
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:16
+Action End Time: Friday, 13 Dec 2019 at 18:47:56
+Action Duration: 01:00:40
+
+Action Result: FAILURE
+
+Drive Errors Detected: 2
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #5  Vendor: HITACHI Model: HUC15606 CLAR600
+             Serial: 0XV6A9JL Size: 585.40 GB
+
+UUID: 604D40E5-0FDF-4B41-8278-BAE486540551
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:46:57
+Action End Time: Friday, 13 Dec 2019 at 18:49:16
+Action Duration: 01:02:19
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Overwrite Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7ANRY    0000N41510UB Size: 585.40 GB
+
+UUID: 129DDBC3-9907-42A9-9E29-C86612303170
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:08
+Action End Time: Friday, 13 Dec 2019 at 18:48:14
+Action Duration: 01:01:06
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7ANBB    0000N41505MB Size: 585.40 GB
+
+UUID: 0B0F4584-26D7-4191-A451-F0C92C396364
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:05
+Action End Time: Friday, 13 Dec 2019 at 18:46:37
+Action Duration: 00:59:32
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7ALMT    0000N4140HAE Size: 585.40 GB
+
+UUID: E62DDBFB-C887-4155-A9CD-6EA07152BB7B
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 42057728
+Sectors Not Overwritten: 1083710848
+Sectors Verified: 0
+Action Start Time: Friday, 13 Dec 2019 at 17:47:23
+Action End Time: Friday, 13 Dec 2019 at 17:49:33
+Action Duration: 00:02:10
+
+Action Result: FAILURE
+
+Drive Errors Detected: 3
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #9  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7AGCA    0000N4150KPX Size: 585.40 GB
+
+UUID: 29B0D98F-4441-40A3-B794-2ACBCEDD861C
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:00
+Action End Time: Friday, 13 Dec 2019 at 18:47:41
+Action Duration: 01:00:41
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7AP3S    0000N4141BP5 Size: 585.40 GB
+
+UUID: A25F76EE-5A55-44A5-853D-A3226CAA9BCD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:46:59
+Action End Time: Friday, 13 Dec 2019 at 18:48:07
+Action Duration: 01:01:08
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #11  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7AE7P    0000N4150JW5 Size: 585.40 GB
+
+UUID: 62E5F517-4044-4506-8CEF-90778A879AB6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:00
+Action End Time: Friday, 13 Dec 2019 at 18:48:35
+Action Duration: 01:01:35
+
+Action Result: FAILURE
+
+Drive Errors Detected: 21
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #12  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL78Y6T    0000N4150KPS Size: 585.40 GB
+
+UUID: B70551D1-863D-485C-B845-61D0E80C5C5F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:01
+Action End Time: Friday, 13 Dec 2019 at 18:48:26
+Action Duration: 01:01:25
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #13  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7AXZY    0000N4130T2U Size: 585.40 GB
+
+UUID: D707EDEB-7E43-492E-831C-C3B91C517A7E
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:46:59
+Action End Time: Friday, 13 Dec 2019 at 18:47:47
+Action Duration: 01:00:48
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #13 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #14  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: None found Size: 585.40 GB
+
+UUID: 4B78DC2C-9E48-401D-8CB4-658EF9051101
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:46:59
+Action End Time: Friday, 13 Dec 2019 at 18:48:50
+Action Duration: 01:01:51
+
+Action Result: FAILURE
+
+Drive Errors Detected: 23
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #15  Vendor: SEAGATE Model: STE60005 CLAR600
+             Serial: 6SL7908X    0000N4151499 Size: 585.40 GB
+
+UUID: 83BD5893-079A-4806-8FD2-D8DB10EA9544
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Friday, 13 Dec 2019 at 17:47:06
+Action End Time: Friday, 13 Dec 2019 at 18:47:01
+Action Duration: 00:59:55
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #15 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

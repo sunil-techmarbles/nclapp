@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7450
+Computer Serial: DYJVF72
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0D8H72
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: f8:ca:b8:39:57:c0
+NIC: Vendor: Intel Corporation, Model: Intel Corporation, MAC Address: Unavailable
+Drive 1: Model: SanDisk X300 MSATA 256GB, Serial: 153246404383, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: C224463E-E5A6-4112-B43F-897ECEF4AC44
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 575940
+User3: PRA Health Sciences
+User4: 19122
+User5: Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk X300 MSATA 256GB
+             Serial: 153246404383 Size: 256.06 GB
+
+UUID: 8B8E5864-E257-4939-983F-67B8FD8FBB1C
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Thursday, 19 Mar 2020 at 09:45:39
+Date & time operation was completed: Thursday, 19 Mar 2020 at 09:45:51
+Total elapsed time (HH:MM:SS): 00:00:12
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: UNKNOWN!
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown

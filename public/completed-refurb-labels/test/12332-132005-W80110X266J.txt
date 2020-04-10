@@ -1,0 +1,56 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro5,5
+Computer Serial: W80110X266J
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F2268AC8
+Processor: Intel(R) Core(TM)2 Duo CPU     P8700  @ 2.53GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: NVIDIA Corporation, Model: MCP79 Ethernet, MAC Address: 34:15:9e:23:0c:86
+NIC: Vendor: Broadcom Limited, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: Unavailable
+DVD writer: DVDRW GS23N
+Drive 1: Model: TOSHIBA MK2555GSXF, Serial: X0R1P5LIT, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: C79 [GeForce 9400M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: MCP79 High Definition Audio
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 39C012C9-195A-4CD8-AEA9-02CB1756F9B9
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 132005
+Lot Name: Ogilvy
+Lot Number: 12332
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK2555GSXF
+             Serial: X0R1P5LIT Size: 250.06 GB
+
+UUID: F1AFCFDA-757D-454B-9FFE-3AAFE55CCCEF
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Monday, 01 Jan 2001 at 00:05:46
+Date & time operation was completed: Monday, 01 Jan 2001 at 00:11:20
+Total elapsed time (HH:MM:SS): 00:05:34
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

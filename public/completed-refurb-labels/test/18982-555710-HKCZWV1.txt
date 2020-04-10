@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 3010
+Computer Serial: HKCZWV1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 042P49
+Processor: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 78:45:c4:21:ff:9a
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD writer: DVD+-RW TS-H653B
+Drive 1: Model: WDC WDS250G1B0A-00H9H0, Serial: 164403A023D2, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 09B399F8-3241-48F9-87FF-02DAA882142D
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 555710
+Lot Name: Northwell Health
+Lot Number: 18982
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WDS250G1B0A-00H9H0
+             Serial: 164403A023D2 Size: 250.06 GB
+
+UUID: C810428D-2F61-4AF6-BEB8-C41036F1315A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 488397168
+Action Start Time: Thursday, 23 Jan 2020 at 15:42:11
+Action End Time: Thursday, 23 Jan 2020 at 16:36:49
+Action Duration: 00:54:38
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

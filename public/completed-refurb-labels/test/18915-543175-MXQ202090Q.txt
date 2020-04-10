@@ -1,0 +1,158 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL360 G7
+Computer Serial: MXQ202090Q
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E5606 @ 2.13GHz, Speed: 2100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU E5606 @ 2.13GHz, Speed: 2100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 294912 MB, Memory banks: 18, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:3f:fc
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:3f:fe
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:4f:00
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:11:5b:e7:4f:02
+DVD-RAM writer: DVD A DS8A5LH
+Drive 1: Model: EH0146FAWJB, Serial: 3TB1NZYL000090486JE9, Size: 146.78 GB
+Drive 2: Model: EH0146FAWJB, Serial: 3TB1KRPY00009045SM6P, Size: 146.78 GB
+Drive 3: Model: EH0146FAWJB, Serial: 3TB1N8RC00009046H6X1, Size: 146.78 GB
+Drive 4: Model: EH0146FAWJB, Serial: 3TB1Q3R800009049JM3T, Size: 146.78 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: ES1000
+USB Ports: 7
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 570C5101-529C-4229-A192-B2E7CC04118C
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 543175
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1NZYL000090486JE9 Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1NZYL000090486JE9 Size: 146 GB  [ 1:1 ]
+
+UUID: 19CCF6DF-9E00-4189-9820-99EA3DBAF5BB
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 18:28:08
+Action End Time: Wednesday, 27 Nov 2019 at 18:46:17
+Action Duration: 00:18:09
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1KRPY00009045SM6P Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1KRPY00009045SM6P Size: 146 GB  [ 1:2 ]
+
+UUID: 2BF399CF-6861-41DC-A835-309B3D3AAB08
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 18:28:08
+Action End Time: Wednesday, 27 Nov 2019 at 18:47:03
+Action Duration: 00:18:55
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1N8RC00009046H6X1 Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1N8RC00009046H6X1 Size: 146 GB  [ 1:3 ]
+
+UUID: 12BCE18B-812C-433D-B4A1-80B383B60173
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 18:28:08
+Action End Time: Wednesday, 27 Nov 2019 at 18:46:51
+Action Duration: 00:18:43
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1Q3R800009049JM3T Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FAWJB
+             Serial: 3TB1Q3R800009049JM3T Size: 146 GB  [ 1:4 ]
+
+UUID: 19417D54-D61E-46F6-85FB-12C85C7E67BA
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 18:28:08
+Action End Time: Wednesday, 27 Nov 2019 at 18:46:06
+Action Duration: 00:17:58
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

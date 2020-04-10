@@ -72,3 +72,34 @@
     background-color: #fff;
     border-color: #ccc;
 }
+.site-dashboard {
+    padding: 100px 0 !important;
+}
+.back-btn {
+    padding: 8px 12px;
+}
+.abs > .record-filed tr td {
+    padding: 12px 0;
+    text-align: left;
+}
+.record-filed tr td {
+    width: 33.33%;
+}
+.record-form {
+    border: 0;
+    padding: 4px 0;
+    width: 200px;
+}
+.supplies-flie-upload{
+    width: 180px;
+}
+.shipments-table{
+    height: 250px;
+    overflow-y: scroll;
+    margin-bottom: 30px;
+}
+.category-table {
+    max-height: 500px;
+    overflow: auto;
+    margin-bottom: 100px;
+}

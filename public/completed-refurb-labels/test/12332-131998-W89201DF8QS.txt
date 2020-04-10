@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBook5,1
+Computer Serial: W89201DF8QS
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F42D89A9
+Processor: Intel(R) Core(TM)2 Duo CPU     P7350  @ 2.00GHz, Speed: 2000 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: NVIDIA Corporation, Model: MCP79 Ethernet, MAC Address: 00:25:4b:b7:79:a2
+NIC: Vendor: Broadcom Limited, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: Unavailable
+DVD writer: DVDRW GS21N
+Drive 1: Model: Hitachi HTS543216L9SA02, Serial: 090417FBE200LCKUZE1F, Size: 160.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: C79 [GeForce 9400M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: MCP79 High Definition Audio
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 3534D777-A98E-42E0-B7B6-68FD58FDDEF6
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 131998
+Lot Name: Ogilvy
+Lot Number: 12332
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HTS543216L9SA02
+             Serial: 090417FBE200LCKUZE1F Size: 160.04 GB
+
+UUID: 68949819-3769-44D3-B8B6-D6A5C6FA8591
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 01 Jan 2001 at 00:12:24
+Date & time operation was completed: Monday, 01 Jan 2001 at 03:40:58
+Total elapsed time (HH:MM:SS): 03:28:34
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

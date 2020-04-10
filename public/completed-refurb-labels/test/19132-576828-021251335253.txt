@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 2
+Computer Serial: 021251335253
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 2
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+Drive 1: Model: SAMSUNG MZMPC128HBFU-000MV, Serial: S19FNYBD431260, Size: 128.04 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 6
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 600EAE16-7DE5-422E-A58C-A806BBA798B7
+Current user: ITAMG
+Computer ID: 0
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 576828
+Lot Name: Owens Corning
+Lot Number: 19132
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZMPC128HBFU-000MV
+             Serial: S19FNYBD431260 Size: 128.04 GB
+
+UUID: CCE79075-097D-4408-881C-2E664421B4F1
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Thursday, 22 Aug 2013 at 01:02:08
+Action End Time: Thursday, 22 Aug 2013 at 01:12:33
+Action Duration: 00:10:25
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

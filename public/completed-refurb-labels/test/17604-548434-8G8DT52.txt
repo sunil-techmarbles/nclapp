@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 9020
+Computer Serial: 8G8DT52
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 00V62H
+Processor: Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 64:00:6a:4c:ad:a9
+DVD-RAM writer: DVD+-RW SN-208FB
+Drive 1: Model: ST500DM002-1BD142, Serial: Z6EKMSX6, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 84438629-70D4-4DE8-84FF-082685B8EE7C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548434
+User3: Related Companies
+User4: 17604
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z6EKMSX6 Size: 500.11 GB
+
+UUID: FAA29554-A9A9-4F1C-ADC7-C5DC8D9CB2E0
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 24 Feb 2020 at 14:47:02
+Date & time operation was completed: Monday, 24 Feb 2020 at 20:04:32
+Total elapsed time (HH:MM:SS): 05:17:30
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

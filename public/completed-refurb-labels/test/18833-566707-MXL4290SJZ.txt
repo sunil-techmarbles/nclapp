@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteDesk 800 G1 USDT
+Computer Serial: MXL4290SJZ
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18E5
+Processor: Intel(R) Core(TM) i5-4570S CPU @ 2.90GHz, Speed: 2900 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 40:a8:f0:a4:d5:62
+DVD-RAM writer: DVDRAM GTA0N
+Drive 1: Model: SAMSUNG MZ7PD256HAFV-000H7, Serial: S16PNSAF641562, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 04A084A8-7BE4-49E1-9709-B5E11D2F7F69
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 566707
+User3: Proskauer Rose
+User4: 18833
+\"Product\": Computer
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZ7PD256HAFV-000H7
+             Serial: S16PNSAF641562 Size: 256.06 GB
+
+UUID: 7A00BB13-F956-4FCB-AE9E-FCA89E31B218
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Friday, 06 Mar 2020 at 12:59:54
+Date & time operation was completed: Friday, 06 Mar 2020 at 13:24:18
+Total elapsed time (HH:MM:SS): 00:24:24
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

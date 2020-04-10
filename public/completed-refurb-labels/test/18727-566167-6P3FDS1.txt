@@ -1,0 +1,67 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6420
+Computer Serial: 6P3FDS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 038C0K
+Processor: Intel(R) Core(TM) i7-2760QM CPU @ 2.40GH, Speed: 2400 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:31:3d:ae
+NIC: Vendor: Intel Corporation, Model: Centrino Ultimate-N 6300, MAC Address: 24:77:03:78:6b:d4
+DVD-RAM writer: DVD+-RW UJ8B2
+Drive 1: Model: LITEONIT LCT-128M3S, Serial: TW0K11MF5508524G4007, Size: 128.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119M [NVS 4200M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 48385BEB-9B01-4EED-A7E2-8CC3C32096F2
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 566167
+Lot Name: 18727
+Lot Number: 18727
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Lite-On Model: LITEONIT LCT-128M3S
+             Serial: TW0K11MF5508524G4007 Size: 128.04 GB
+
+UUID: 0B64C2C2-434F-4D2A-97BE-E5D4A2046B66
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Thursday, 16 Jan 2020 at 14:02:14
+Action End Time: Thursday, 16 Jan 2020 at 14:04:08
+Action Duration: 00:01:54
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

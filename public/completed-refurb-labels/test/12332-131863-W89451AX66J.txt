@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro5,5
+Computer Serial: W89451AX66J
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F2268AC8
+Processor: Intel(R) Core(TM)2 Duo CPU     P8700  @ 2.53GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: NVIDIA Corporation, Model: MCP79 Ethernet, MAC Address: 64:b9:e8:d1:e6:82
+NIC: Vendor: Broadcom Limited, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: Unavailable
+DVD writer: DVD-R UJ-868
+Drive 1: Model: ST9250315ASG, Serial: 5VC9W6Z1, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: C79 [GeForce 9400M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: MCP79 High Definition Audio
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 6AB0D41B-16F9-417F-8676-E8B534549CD5
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 131863
+Lot Name: Ogilvy
+Lot Number: 12332
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9250315ASG
+             Serial: 5VC9W6Z1 Size: 250.06 GB
+
+UUID: 10867B64-DE1F-48DF-8E2A-A38A544B3D33
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 01 Jan 2001 at 00:06:24
+Date & time operation was completed: Monday, 01 Jan 2001 at 04:37:21
+Total elapsed time (HH:MM:SS): 04:30:57
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 2
+Computer Serial: 029876341253
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 2
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 50:1a:c5:16:cb:b6
+Drive 1: Model: HFS256G3AMNB-2200A, Serial: EI43N02591080371M, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 6
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: C0AFD3FC-BA43-4B64-9B3E-E5466B666112
+Current user: ITAMG
+Computer ID: 0
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 576728
+Lot Name: Owens Corning
+Lot Number: 19132
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: HFS256G3AMNB-2200A
+             Serial: EI43N02591080371M Size: 256.06 GB
+
+UUID: B14201B8-38C7-4BDA-91E1-8CF65543DDE2
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 01 Jan 2009 at 00:10:09
+Date & time operation was completed: Thursday, 01 Jan 2009 at 00:57:58
+Total elapsed time (HH:MM:SS): 00:47:49
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

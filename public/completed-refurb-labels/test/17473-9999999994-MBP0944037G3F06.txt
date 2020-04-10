@@ -1,0 +1,332 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBP0944037G3F06
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c9:9c
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c9:9d
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c9:9e
+NIC: Vendor: Intel Corporation, Model: 82580 Gigabit Network Connection, MAC Address: 90:e2:ba:34:c9:9f
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:b9:c6
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:b9:c7
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD reader: Device-CD#0
+Drive 1: Model: SEAGATE ST3500320NS, Serial: 9QMCMEBD, Size: 500.11 GB
+Drive 2: Model: Hitachi HUA722050CLA330, Serial: JPW9K0N12KN8GL, Size: 500.11 GB
+Drive 3: Model: SEAGATE ST3500320NS, Serial: 9QMCJJPC, Size: 500.11 GB
+Drive 4: Model: SEAGATE ST3500320NS, Serial: 9QMCMEMT, Size: 500.11 GB
+Drive 5: Model: SEAGATE ST3500320NS, Serial: 9QMCKMG3, Size: 500.11 GB
+Drive 6: Model: SEAGATE ST3500320NS, Serial: 9QMCKMC9, Size: 500.11 GB
+Drive 7: Model: SEAGATE ST3500320NS, Serial: 9QMCKLY7, Size: 500.11 GB
+Drive 8: Model: Hitachi HUA722050CLA330, Serial: JPW9K0N12KMTXL, Size: 500.11 GB
+Drive 9: Model: SEAGATE ST3500320NS, Serial: 9QMCKM8D, Size: 500.11 GB
+Drive 10: Model: Hitachi HUA722050CLA330, Serial: JPW9K0N11XJ6KL, Size: 500.11 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: FD13E5B0-D4CF-46D2-8316-8B6616DF7FB3
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999994
+Lot Name: Tangoe
+Lot Number: 17473
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCMEBD Size: 500.11 GB
+
+UUID: FA3A9BDA-8D3B-4337-95E1-52E7980C607E
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:53
+Action End Time: Wednesday, 04 Dec 2019 at 11:40:52
+Action Duration: 06:21:59
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Hitachi Model: Hitachi HUA722050CLA330
+             Serial: JPW9K0N12KN8GL Size: 500.11 GB
+
+UUID: D5BBD885-1FFE-4D17-99D5-D6C6BC691F8D
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 876389376
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:54
+Action End Time: Wednesday, 04 Dec 2019 at 09:27:19
+Action Duration: 04:08:25
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #3  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCJJPC Size: 500.11 GB
+
+UUID: C493B296-8AC2-4F0E-88F4-81AD9AAFB830
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 612362240
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:54
+Action End Time: Wednesday, 04 Dec 2019 at 10:51:42
+Action Duration: 05:32:48
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+>> Drive #4  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCMEMT Size: 500.11 GB
+
+UUID: F5DC4ADA-E1C5-4749-A213-D73BB91161E9
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 2
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:53
+Action End Time: Wednesday, 04 Dec 2019 at 10:25:05
+Action Duration: 05:06:12
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: FAILED!
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #5  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCKMG3 Size: 500.11 GB
+
+UUID: D5EA2E76-FCC5-4AC1-96D2-6439DD398097
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 216409088
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:54
+Action End Time: Wednesday, 04 Dec 2019 at 10:15:31
+Action Duration: 04:56:37
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+>> Drive #6  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCKMC9 Size: 500.11 GB
+
+UUID: CACDC720-AFCB-4352-8C56-38BF21073FD5
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:53
+Action End Time: Wednesday, 04 Dec 2019 at 11:41:47
+Action Duration: 06:22:54
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCKLY7 Size: 500.11 GB
+
+UUID: 3F5BD824-A735-42A2-B8F2-93135EFB59DF
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:53
+Action End Time: Wednesday, 04 Dec 2019 at 11:38:58
+Action Duration: 06:20:05
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: Hitachi Model: Hitachi HUA722050CLA330
+             Serial: JPW9K0N12KMTXL Size: 500.11 GB
+
+UUID: 77B985AF-3C88-4F51-9F28-E71F081B5DD3
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 667427840
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:55
+Action End Time: Wednesday, 04 Dec 2019 at 09:15:15
+Action Duration: 03:56:20
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #9  Vendor: Seagate Model: SEAGATE ST3500320NS
+             Serial: 9QMCKM8D Size: 500.11 GB
+
+UUID: 6521A200-9A94-4444-BCBD-45D86C5F59D5
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 184320
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:53
+Action End Time: Wednesday, 04 Dec 2019 at 10:04:20
+Action Duration: 04:45:27
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+>> Drive #10  Vendor: Hitachi Model: Hitachi HUA722050CLA330
+             Serial: JPW9K0N11XJ6KL Size: 500.11 GB
+
+UUID: 87A98C06-140D-4C1F-A77D-AA83D34BA01D
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 04 Dec 2019 at 05:18:55
+Action End Time: Wednesday, 04 Dec 2019 at 09:42:52
+Action Duration: 04:23:57
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

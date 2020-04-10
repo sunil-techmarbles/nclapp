@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 80HE
+Computer Serial: PF097GPC
+Motherboard Vendor: LENOVO
+Motherboard Model: VIUU4
+Processor: Intel(R) Core(TM) M-5Y71 CPU @ 1.20GHz, Speed: 2200 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, LPDDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4352 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+Drive 1: Model: SAMSUNG MZNTE512HMJH-000L2, Serial: S1NRNYAG100471, Size: 512.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5300
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 9823314E-ACAA-43E0-AC95-9BF182AFFF01
+Current user: ITAMG
+Computer ID: NO Asset Tag
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 565675
+Lot Name: Northwell Health
+Lot Number: 19033
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNTE512HMJH-000L2
+             Serial: S1NRNYAG100471 Size: 512.11 GB
+
+UUID: 1DA92D8C-E515-48C5-BAF9-C2D4546D9C5B
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1000215216
+Sectors Not Overwritten: 0
+Sectors Verified: 1000215216
+Action Start Time: Thursday, 30 Jan 2020 at 11:52:42
+Action End Time: Thursday, 30 Jan 2020 at 13:12:23
+Action Duration: 01:19:41
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

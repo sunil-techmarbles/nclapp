@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10B7001RUS
+Computer Serial: MG009T3B
+Motherboard Vendor: LENOVO
+Motherboard Model: Unavailable
+Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 44:8a:5b:bd:a7:c0
+DVD-RAM writer: DVD-RAM GHB0N
+Drive 1: Model: WDC WD5000AAKX-08U6AA0, Serial: WD-WCC2E2CNDSPC, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 4th Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 0F1FF1A2-F264-40BA-BBE1-73F49A743C49
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 557874
+Lot Name: Northwell Health
+Lot Number: 18960
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-08U6AA0
+             Serial: WD-WCC2E2CNDSPC Size: 500.11 GB
+
+UUID: A886CEC0-867A-4190-9A49-07660EF020FA
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Wednesday, 22 Jan 2020 at 16:57:38
+Action End Time: Wednesday, 22 Jan 2020 at 22:22:46
+Action Duration: 05:25:08
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

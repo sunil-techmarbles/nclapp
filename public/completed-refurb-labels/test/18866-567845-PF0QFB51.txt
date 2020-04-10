@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20ET0013US
+Computer Serial: PF0QFB51
+Motherboard Vendor: LENOVO
+Motherboard Model: 20ET0013US
+Processor: Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: 34:f3:9a:4e:76:9f
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-V, MAC Address: c8:5b:76:ae:b4:24
+Drive 1: Model: ST500LM021-1KJ152, Serial: W62FAFS2, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Topaz XT [Radeon R7 M260/M265 / M340/M360 / M440/M445]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B2920751-10C6-4956-A885-5164612F3551
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 567845
+Lot Name: Rye City School District
+Lot Number: 18866
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W62FAFS2 Size: 500.11 GB
+
+UUID: F3035E9F-0939-4D91-912B-0AA5572218DE
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Wednesday, 26 Feb 2020 at 11:37:46
+Action End Time: Wednesday, 26 Feb 2020 at 13:05:52
+Action Duration: 01:28:06
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

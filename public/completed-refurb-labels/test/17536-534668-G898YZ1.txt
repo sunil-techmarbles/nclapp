@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6540
+Computer Serial: G898YZ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0725FP
+Processor: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: ec:f4:bb:1b:58:4c
+NIC: Vendor: Qualcomm Atheros, Model: AR9485 Wireless Network Adapter, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW GU90N
+Drive 1: Model: ST1000LM014-1EJ164, Serial: W381JT9L, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Mars XTX [Radeon HD 8790M]
+Display Adapter: Vendor: Intel Corporation, Model: 4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 6F6A2CB3-5DB5-4948-B51F-7C6842ADF922
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 534668
+User3: PRA Health Sciences
+User4: 17536
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST1000LM014-1EJ164
+             Serial: W381JT9L Size: 1000.20 GB
+
+UUID: F8B441E3-C451-4778-9525-C43E213E950C
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 13 Nov 2019 at 14:45:01
+Date & time operation was completed: Thursday, 14 Nov 2019 at 06:11:46
+Total elapsed time (HH:MM:SS): 15:26:45
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 9
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

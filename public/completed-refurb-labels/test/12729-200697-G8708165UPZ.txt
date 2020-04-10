@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Computer, Inc.
+Computer Model: MacPro1,1
+Computer Serial: G8708165UPZ
+Motherboard Vendor: Apple Computer, Inc.
+Motherboard Model: Mac-F4208DC8
+Processor: Intel(R) Xeon(R) CPU, Speed: 2700 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 4096 kB
+Processor: Intel(R) Xeon(R) CPU, Speed: 2700 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 4096 kB
+RAM: 4096 MB, Memory banks: 4, DDR2 FB-DIMM FB-DIMM
+NIC: Vendor: Intel Corporation, Model: 80003ES2LAN Gigabit Ethernet Controller (Copper), MAC Address: 00:17:f2:07:4f:ee
+NIC: Vendor: Intel Corporation, Model: 80003ES2LAN Gigabit Ethernet Controller (Copper), MAC Address: 00:17:f2:07:4f:ef
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD writer: DVD-RW DVR-111D
+Drive 1: Model: WDC WD2500JS-41SGB0, Serial: WD-WCANY2458872, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G73 [GeForce 7300 GT]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 631xESB/632xESB High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 1EEF981C-8F94-455B-8D98-F84E549617C6
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 200697
+Lot Name: Penske Media Corporation
+Lot Number: 12729
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500JS-41SGB0
+             Serial: WD-WCANY2458872 Size: 250.06 GB
+
+UUID: C89EA31D-6F94-465C-A957-1C915E7971FC
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Wednesday, 24 Jul 2019 at 15:41:35
+Date & time operation was completed: Wednesday, 24 Jul 2019 at 15:42:39
+Total elapsed time (HH:MM:SS): 00:01:04
+
+Operation result: Canceled by User
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

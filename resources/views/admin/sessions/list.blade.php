@@ -23,6 +23,7 @@
 				</div>
 			</div>
 		</form>
+		<div class="shipments-table">
 		<table id="sessions-list" class="table">
 			<thead>
 				<tr>
@@ -51,6 +52,7 @@
 				@endforeach
 			</tbody>
 		</table>
+	</div>
 		@if(!empty($items) && $items->count() > 0)
 			<h3>Items for session {{$sessionName}}</h3>
 			<table id="sessions-asins-list" class="table">

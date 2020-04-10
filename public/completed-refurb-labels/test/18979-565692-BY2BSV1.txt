@@ -1,0 +1,166 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R620
+Computer Serial: BY2BSV1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0KCKR5
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+Processor: Intel(R) Xeon(R) CPU E5-2640 0 @ 2.50GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 192 kB, L2 Cache: 1536 kB
+RAM: 32768 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: d4:ae:52:b2:a2:61
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: d4:ae:52:b2:a2:62
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: d4:ae:52:b2:a2:5f
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: d4:ae:52:b2:a2:60
+DVD reader: DVD-ROM TS-U333B
+Drive 1: Model: HUC151414CSS600, Serial: PLY3BGZE, Size: 146.16 GB
+Drive 2: Model: PERC H710P, Serial: 007575450e34b2bd25002122af20e54a, Size: 146.16 GB
+Drive 3: Model: PERC H710P, Serial: 009a794e0e34b2bd25002122af20e54a, Size: 146.16 GB
+Drive 4: Model: PERC H710P, Serial: 0022c63d0e33b2bd25002122af20e54a, Size: 146.16 GB
+Drive 5: Model: PERC H710P, Serial: 008b6c410e33b2bd25002122af20e54a, Size: 146.16 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 28500E02-3757-425C-8C43-A1F841F11A66
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 565692
+User3: Northwell Health
+User4: 18979
+\"Product\": Server
+
+>> Raid device #1  Vendor: HITACHI Model: HUC151414CSS600
+             Serial: PLY3BGZE Size: 146.16 GB
+    >>> Raid member #1  Vendor: HITACHI Model: HUC151414CSS600
+             Serial: PLY3BGZE Size: 136.125 GB  [ 32:2 ]
+
+UUID: 7B6558A6-5864-445E-81DC-51D7A8A9420A
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 24 Jan 2020 at 13:48:47
+Date & time operation was completed: Friday, 24 Jan 2020 at 14:57:16
+Total elapsed time (HH:MM:SS): 01:08:29
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: DELL Model: PERC H710P
+             Serial: 007575450e34b2bd25002122af20e54a Size: 146.16 GB
+
+UUID: FBB0E7E4-CC70-4381-BB6F-526B178EACED
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 24 Jan 2020 at 13:48:47
+Date & time operation was completed: Friday, 24 Jan 2020 at 14:59:33
+Total elapsed time (HH:MM:SS): 01:10:46
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: DELL Model: PERC H710P
+             Serial: 009a794e0e34b2bd25002122af20e54a Size: 146.16 GB
+
+UUID: 238F2096-64B9-4130-B368-8239C60DAFAB
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 24 Jan 2020 at 13:48:47
+Date & time operation was completed: Friday, 24 Jan 2020 at 15:00:58
+Total elapsed time (HH:MM:SS): 01:12:11
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: DELL Model: PERC H710P
+             Serial: 0022c63d0e33b2bd25002122af20e54a Size: 146.16 GB
+
+UUID: 835C0B6C-A05B-458E-BEED-68C06226EA4F
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 24 Jan 2020 at 13:48:47
+Date & time operation was completed: Friday, 24 Jan 2020 at 14:59:22
+Total elapsed time (HH:MM:SS): 01:10:35
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: DELL Model: PERC H710P
+             Serial: 008b6c410e33b2bd25002122af20e54a Size: 146.16 GB
+
+UUID: 80863B16-0E9D-46A4-AF75-CD0CBC482EA5
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 24 Jan 2020 at 13:48:47
+Date & time operation was completed: Friday, 24 Jan 2020 at 14:58:36
+Total elapsed time (HH:MM:SS): 01:09:49
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

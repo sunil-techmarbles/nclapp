@@ -1,0 +1,59 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro9,2
+Computer Serial: CPWKXG1XDTY3
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-6F01561E16C75D06
+Processor: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: 10:dd:b1:e0:ed:79
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+DVD writer: DVDRW GS31N
+Drive 1: Model: APPLE HDD HTS545050A7E362, Serial: TNS519GY12HJBH, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 60F254BA-C502-47C4-BC32-B1FD365686EC
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568043
+User3: CSM Sport user3 = Lot Name Entertainment
+User4: 18890
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE HDD HTS545050A7E362
+             Serial: TNS519GY12HJBH Size: 500.11 GB
+
+UUID: BB71F85A-2712-4D7A-8460-0BD3913F8EFC
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 01 Jan 2018 at 00:12:34
+Date & time operation was completed: Monday, 01 Jan 2018 at 02:11:10
+Total elapsed time (HH:MM:SS): 01:58:36
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

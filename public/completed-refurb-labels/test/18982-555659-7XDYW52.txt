@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 7020
+Computer Serial: 7XDYW52
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 02YYK5
+Processor: Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 64:00:6a:56:1d:78
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVD+-RW GTA0N
+Drive 1: Model: SAMSUNG SSD PM871 2.5 7mm 256GB, Serial: S1ZTNXAG750845, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: A2ED1EBE-0A31-438A-8B2C-3AEB421B9CF0
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 555659
+Lot Name: Northwell Health
+Lot Number: 18982
+\"Product\": Computer
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD PM871 2.5 7mm 256GB
+             Serial: S1ZTNXAG750845 Size: 256.06 GB
+
+UUID: 9A5C50F4-E502-4C72-87E9-E7DB4F1B14E0
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 500118192
+Action Start Time: Thursday, 23 Jan 2020 at 16:00:44
+Action End Time: Thursday, 23 Jan 2020 at 16:36:10
+Action Duration: 00:35:26
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

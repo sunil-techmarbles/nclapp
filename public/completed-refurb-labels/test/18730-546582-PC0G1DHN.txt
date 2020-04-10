@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20F5S0LQ00
+Computer Serial: PC0G1DHN
+Motherboard Vendor: LENOVO
+Motherboard Model: 20F5S0LQ00
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: c8:5b:76:5f:d8:42
+Drive 1: Model: INTEL SSDSC2KF180H6L, Serial: CVLT6215018E180BGN, Size: 180.05 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: BFBF7872-677A-4363-BAD2-9548F3BA5BA9
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 546582
+User3: Northwell Health
+User4: 18730
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSC2KF180H6L
+             Serial: CVLT6215018E180BGN Size: 180.05 GB
+
+UUID: FC65CF72-F4CD-4300-B6BA-762C0BA31BF3
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 12 Dec 2019 at 18:01:07
+Date & time operation was completed: Thursday, 12 Dec 2019 at 19:19:10
+Total elapsed time (HH:MM:SS): 01:18:03
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

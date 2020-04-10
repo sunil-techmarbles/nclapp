@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 8770w
+Computer Serial: CNU251C288
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 176C
+Processor: Intel(R) Core(TM) i5-3360M CPU @ 2.80GHz, Speed: 2800 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 2048 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 88:51:fb:fe:f8:d8
+NIC: Vendor: Intel Corporation, Model: Centrino Ultimate-N 6300, MAC Address: 24:77:03:f0:18:24
+DVD-RAM writer: DVD A DS8A8SH
+Drive 1: Model: Hitachi HTS725050A7E630, Serial: TF1500Y9J9NESK, Size: 500.11 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Chelsea XT GL [FirePro M4000]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cape Verde/Pitcairn HDMI Audio [Radeon HD 7700/7800 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 7D062E1B-840D-479B-8BBE-19B33B000BE5
+Current user: ITAMG
+Computer ID: CNU251C288
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 534545
+Lot Name: Greenman Pederen Inc.
+Lot Number: 18800
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HTS725050A7E630
+             Serial: TF1500Y9J9NESK Size: 500.11 GB
+
+UUID: 1387BE44-E792-45EF-ADF4-0F7BF80EA054
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 13 Nov 2019 at 12:02:54
+Date & time operation was completed: Wednesday, 13 Nov 2019 at 13:27:10
+Total elapsed time (HH:MM:SS): 01:24:16
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
