@@ -317,13 +317,13 @@ class ShipmentController extends Controller
 		$status = '';
 		if($request->has('remove'))
 		{
-			$r = $request->get('remove');
+			$r = trim($request->get('remove'));
 			$status = 'removed';
 			SessionData::updateSessiontStatus($r, $s='active');
 		}
 		if($request->has('restore'))
 		{
-			$r = $request->get('restore');
+			$r = trim($request->get('restore'));
 			$status = 'active';
 		}
 		ShipmentsData::updateShipmentStatus($r, $status , $shipmentId);
