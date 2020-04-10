@@ -1,0 +1,81 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: System x3550 M3 -[7944AC1]-
+Computer Serial: KQ07Y2V
+Motherboard Vendor: IBM
+Motherboard Model: 69Y5698
+Processor: Intel(R) Xeon(R) CPU           L5640  @ 2.27GHz, Speed: 2300 MHz, Cores: 6, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           L5640  @ 2.27GHz, Speed: 2300 MHz, Cores: 6, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 32768 MB, Memory banks: 4, Other DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:b8:81:30
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:b8:81:32
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: e6:1f:13:ab:81:33
+DVD reader: DVD-ROM TS-L333H
+Drive 1: Model: ESXSMBE2147RC, Serial: SC17D300C4Y0SC17SC17SC17, Size: 146.00 GB
+Drive 2: Model: MBE2147RC, Serial: D309PAB07W3J, Size: 146.81 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EV
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 93D3CAE9-1A65-4C57-B120-CA76DE6C9F4F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 571418
+User3: Northwell Health
+User4: 18978
+\"Product\": Server
+
+>> Raid device #1  Vendor: IBM Model: ESXSMBE2147RC
+             Serial: SC17D300C4Y0SC17SC17SC17 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSMBE2147RC
+             Serial: SC17D300C4Y0SC17SC17SC17 Size: 136.731 GB  [ 64:1 ]
+
+UUID: 2CF9659F-92BA-405A-A140-AEE3061E5EE4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 11:13:41
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 13:15:39
+Total elapsed time (HH:MM:SS): 02:01:58
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1588
+Total dirty or unreadable disk sectors: 13133
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #2  Vendor: IBM-ESXS Model: MBE2147RC
+             Serial: D309PAB07W3J Size: 146.81 GB
+
+UUID: 2EE61A3B-DBE7-4996-9473-F0E5754A1670
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 11:13:42
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 12:15:35
+Total elapsed time (HH:MM:SS): 01:01:53
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

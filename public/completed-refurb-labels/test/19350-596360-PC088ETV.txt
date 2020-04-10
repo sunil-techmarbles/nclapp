@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BUS14500
+Computer Serial: PC088ETV
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BUS14500
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 50:7b:9d:43:de:a1
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 4c:34:88:b0:1b:2a
+Drive 1: Model: WDC WD5000LPLX-08ZNTT0, Serial: WD-WXF1A6550U40, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 25C9EC43-913C-4E8E-BEE1-05AFA72A4EF4
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 596360
+Lot Name: Northwell Health
+Lot Number: 19350
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000LPLX-08ZNTT0
+             Serial: WD-WXF1A6550U40 Size: 500.11 GB
+
+UUID: 84AE3530-20F7-4F22-8382-7B646E334020
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 11 Mar 2020 at 10:35:59
+Action End Time: Wednesday, 11 Mar 2020 at 15:22:41
+Action Duration: 04:46:42
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

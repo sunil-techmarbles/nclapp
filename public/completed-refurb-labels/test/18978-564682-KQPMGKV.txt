@@ -1,0 +1,78 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: System x3550 M2 -[7946AC1]-
+Computer Serial: KQPMGKV
+Motherboard Vendor: IBM
+Motherboard Model: 90Y6495
+Processor: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 18432 MB, Memory banks: 6, Other DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:6b:bc:54
+NIC: Vendor: Broadcom Limited, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: e4:1f:13:6b:bc:56
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: e6:1f:13:5d:bc:57
+DVD reader: UJDA782 DVD/CDRW
+Drive 1: Model: ST973452SS, Serial: 3TA0H6ZZ00009010RXG3, Size: 73.41 GB
+Drive 2: Model: ST973452SS, Serial: 3TA0H77C00009010Q9RE, Size: 73.41 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200EV
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 443F917C-0D09-471A-87DA-6C530D658D35
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 564682
+User3: Northwell Health
+User4: 18978
+\"Product\": Server
+
+>> Drive #1  Vendor: IBM-ESXS Model: ST973452SS
+             Serial: 3TA0H6ZZ00009010RXG3 Size: 73.41 GB
+
+UUID: 613AE5D9-1284-4448-B46A-8BF15AF2DCA2
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 14:50:33
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 15:22:53
+Total elapsed time (HH:MM:SS): 00:32:20
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #2  Vendor: IBM-ESXS Model: ST973452SS
+             Serial: 3TA0H77C00009010Q9RE Size: 73.41 GB
+
+UUID: D9FF7DB0-7F90-4EEC-881D-553ADB44D6D0
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 14:50:32
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 15:20:17
+Total elapsed time (HH:MM:SS): 00:29:45
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ProBook 6360b
+Computer Serial: 2CE1240G4M
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 1621
+Processor: Intel(R) Core(TM) i5-2410M CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579V Gigabit Network Connection, MAC Address: b4:99:ba:56:30:19
+NIC: Vendor: Broadcom Limited, Model: BCM43224 802.11a/b/g/n, MAC Address: Unavailable
+DVD-RAM writer: DVD RW AD-7711H
+Drive 1: Model: TOSHIBA MK3261GSYN, Serial: 51IWB3XEB, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B454E509-8691-4E22-82AD-65C58809F056
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 582687
+User3: Family Residences user3 = Lot Name Essential Enterprises, Inc
+User4: 19172
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK3261GSYN
+             Serial: 51IWB3XEB Size: 320.07 GB
+
+UUID: B7A6AAF8-3281-4410-8888-C39DB51B7FC5
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 01 Jan 1980 at 00:11:25
+Date & time operation was completed: Tuesday, 01 Jan 1980 at 01:15:21
+Total elapsed time (HH:MM:SS): 01:03:56
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

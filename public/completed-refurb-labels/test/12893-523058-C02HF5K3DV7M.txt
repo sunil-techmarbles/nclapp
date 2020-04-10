@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro8,2
+Computer Serial: C02HF5K3DV7M
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-94245A3940C91C80
+Processor: Intel(R) Core(TM) i7-2760QM CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: 3c:07:54:7b:f5:52
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+DVD writer: DVD-R UJ-8A8
+Drive 1: Model: TOSHIBA MK7559GSXF, Serial: Z1GBC4ZHT, Size: 750.16 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Whistler [Radeon HD 6730M/6770M/7690M XT]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Turks HDMI Audio [Radeon HD 6500/6600 / 6700M Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 5EA67E6C-1A09-4279-935F-EF1C4FEFD2DA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 523058
+User3: Ogilvy (Effective)
+User4: 12893
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MK7559GSXF
+             Serial: Z1GBC4ZHT Size: 750.16 GB
+
+UUID: 9D9851B8-2AC4-40E6-8339-25A473331728
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 06 Nov 2019 at 14:31:34
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 17:32:01
+Total elapsed time (HH:MM:SS): 03:00:27
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

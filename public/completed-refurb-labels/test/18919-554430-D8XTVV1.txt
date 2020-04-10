@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 390
+Computer Serial: D8XTVV1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0M5DCD
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.10GH, Speed: 3100 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 78:45:c4:1c:b9:60
+DVD reader: DVD-ROM DH41N
+Drive 1: Model: WDC WD2500AAKX-00ERMA0, Serial: WD-WCC2EYD28575, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: E092A38B-C7CD-41BD-8C20-51351D85F5A2
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 554430
+Lot Name: Arkwin Industries, Inc.
+Lot Number: 18919
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-00ERMA0
+             Serial: WD-WCC2EYD28575 Size: 250.06 GB
+
+UUID: 7CD14D38-66AA-42DD-9128-8AF04053DABD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Thursday, 20 Feb 2020 at 11:49:09
+Action End Time: Thursday, 20 Feb 2020 at 12:39:07
+Action Duration: 00:49:58
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

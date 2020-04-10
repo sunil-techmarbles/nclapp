@@ -1,0 +1,97 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: SAMSUNG ELECTRONICS CO., LTD.
+Computer Model: 700Z7C
+Computer Serial: HR4D91MC301120
+Motherboard Vendor: SAMSUNG ELECTRONICS CO., LTD.
+Motherboard Model: 700Z7C
+Processor: Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 4, L1 Cache: Unavailable, L2 Cache: Unavailable
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: c4:85:08:05:93:30
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: e8:03:9a:9a:4f:14
+DVD-RAM writer: DVD-RAM UJ8A7AS
+Drive 1: Model: SanDisk iSSD P4 8GB, Serial: 180100120008, Size: 8.01 GB
+Drive 2: Model: ST1000LM024 HN-M101MBB, Serial: S2RQJ9CC200013, Size: 1000.20 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 650M]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 10FF1B43-AA09-4FE2-9AA5-59B04EBD97E8
+Current user: ITAMG
+Computer ID: Asset Tag
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 568797
+Lot Name: World Wrestling Entertainment
+Lot Number: 18694
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk iSSD P4 8GB
+             Serial: 180100120008 Size: 8.01 GB
+
+UUID: 17B7539C-0176-4550-B06E-3702CAE68266
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 15649200
+Sectors Not Overwritten: 0
+Sectors Verified: 1564921
+Action Start Time: Monday, 05 Mar 2012 at 00:07:25
+Action End Time: Monday, 05 Mar 2012 at 00:12:27
+Action Duration: 00:05:02
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Seagate Model: ST1000LM024 HN-M101MBB
+             Serial: S2RQJ9CC200013 Size: 1000.20 GB
+
+UUID: B882707C-6483-4852-B9A7-62DC934F33C4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195360016
+Action Start Time: Monday, 05 Mar 2012 at 00:07:26
+Action End Time: Monday, 05 Mar 2012 at 04:12:16
+Action Duration: 04:04:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro8,1
+Computer Serial: C02F4JG3DH2G
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-94245B3640C91C81
+Processor: Intel(R) Core(TM) i5-2415M CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: c8:2a:14:01:45:e9
+NIC: Vendor: Broadcom Limited, Model: BCM4331 802.11a/b/g/n, MAC Address: Unavailable
+DVD writer: DVD-R UJ-898
+Drive 1: Model: Hitachi HTS545032B9A302, Serial: 110110PBSC00PYH777HS, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 10
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 8DA11721-D1FA-45C6-B680-65AA9AA708FB
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 550798
+User3: Metropolitan Museum of Art
+User4: 17594
+\"Product\": Computer
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HTS545032B9A302
+             Serial: 110110PBSC00PYH777HS Size: 320.07 GB
+
+UUID: 808A8B8E-8C6A-4E40-B434-ACBD8E4B711C
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 02 Jan 2001 at 05:16:03
+Date & time operation was completed: Tuesday, 02 Jan 2001 at 07:00:09
+Total elapsed time (HH:MM:SS): 01:44:06
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

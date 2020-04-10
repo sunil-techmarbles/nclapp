@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4177L55
+Computer Serial: R8DXW6N
+Motherboard Vendor: LENOVO
+Motherboard Model: 4177L55
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 00:21:cc:b4:79:5a
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD RW AD-7740H
+Drive 1: Model: ST9500420AS, Serial: 5VJEHNBN, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: C5303D27-B3FF-404A-90DA-0EC3899619A0
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 525008
+User3: Ogilvy CommonHealth Worldwide LLC
+User4: 17533
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST9500420AS
+             Serial: 5VJEHNBN Size: 500.11 GB
+
+UUID: 65EB3639-F8F8-42A8-878E-3EED64993BA1
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 30 Oct 2019 at 15:22:33
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 17:27:36
+Total elapsed time (HH:MM:SS): 02:05:03
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.1.3
+Kernel Version 4.4.39-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq Elite 8300 USDT
+Computer Serial: MXL3300MJ4
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 3398
+Processor: Intel(R) Core(TM) i5-3475S CPU @ 2.90GHz, Speed: 2900 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection, MAC Address: d4:c9:ef:d3:20:24
+DVD-RAM writer: CDDVDW SN-208DB
+Drive 1: Model: ST500LM000SSHD8GB, Serial: W764J7LZ, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C210 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: FC9F414E-29A8-448D-BF09-A6ECC7CB760E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 562070
+User3: ITAMG
+User4: 11725
+User5: Computer
+
+>> Drive #1  Vendor: Seagate Model: ST500LM000SSHD8GB
+             Serial: W764J7LZ Size: 500.11 GB
+
+UUID: EAF1854B-DDC9-4D92-BA22-326458F321AE
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO Locked: WARNING: This drive has DCO features but they were locked by the machine during startup.  In this state WipeDrive is not able to determine if the drive size has been altered.  As a result the drive might not have been completely wiped.
+Date & time operation was started: Thursday, 19 Mar 2020 at 08:19:15
+Date & time operation was completed: Thursday, 19 Mar 2020 at 08:19:15
+Total elapsed time (HH:MM:SS): 00:00:00
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 4883865840
+Total dirty or unreadable disk sectors: 4883865840
+WARNING: At least one drive was security locked and could not be wiped.
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 0
+Sanitize Crypto Erase passes: 0
+Sanitize Block Erase passes: 0
+Sanitize Overwrite passes: 0
+NIST Method Type: Unknown

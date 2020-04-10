@@ -1,0 +1,417 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: MBD-X8DT6-A-IS018
+Computer Serial: 1234567890
+Motherboard Vendor: Supermicro
+Motherboard Model: X8DT6
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 49152 MB, Memory banks: 12, DDR3 DIMM
+NIC: Vendor: Chelsio Communications Inc, Model: T320 10GbE Dual Port Adapter, MAC Address: 00:07:43:09:7b:b2
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:96:3f:64
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:96:3f:65
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:07:43:09:7b:b3
+Drive 1: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33416340, Size: 1000.20 GB
+Drive 2: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33054406, Size: 1000.20 GB
+Drive 3: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33035601, Size: 1000.20 GB
+Drive 4: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33038217, Size: 1000.20 GB
+Drive 5: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33396673, Size: 1000.20 GB
+Drive 6: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33038002, Size: 1000.20 GB
+Drive 7: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33397561, Size: 1000.20 GB
+Drive 8: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33394310, Size: 1000.20 GB
+Drive 9: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33338326, Size: 1000.20 GB
+Drive 10: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33307360, Size: 1000.20 GB
+Drive 11: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33408959, Size: 1000.20 GB
+Drive 12: Model: WDC WD1003FBYX-01Y7B0, Serial: WD-WCAW33408596, Size: 1000.20 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 10
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 89965684-7295-4FC7-BE75-6E2481E2B04B
+Current user: ITAMG
+Computer ID: To Be Filled By O.E.M.
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999992
+Lot Name: Control V Symphony
+Lot Number: 19009
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33416340 Size: 1000.20 GB
+
+UUID: 2B14D3E4-C729-42A5-91E0-BC5DDFA51FE0
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:23:58
+Action Duration: 03:10:17
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33054406 Size: 1000.20 GB
+
+UUID: 7595ECBF-C512-40E5-914B-0AE2B43FAACC
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:22:18
+Action Duration: 03:08:37
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33035601 Size: 1000.20 GB
+
+UUID: 5F22B7E6-B52E-485A-8D84-82EE76A0E37D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:23:53
+Action Duration: 03:10:12
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33038217 Size: 1000.20 GB
+
+UUID: D14B622D-31ED-4F23-B040-70B6DC0146AD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:26:26
+Action Duration: 03:12:45
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33396673 Size: 1000.20 GB
+
+UUID: 098AAF8A-A9A0-497A-B18C-1453274D8385
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:25:57
+Action Duration: 03:12:16
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33038002 Size: 1000.20 GB
+
+UUID: 6363C3C1-56BD-41C3-84C4-EC1BAA934270
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:20:10
+Action Duration: 03:06:29
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33397561 Size: 1000.20 GB
+
+UUID: 22E1F8E6-4C57-4DB2-8EFB-C13A743A7700
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:24:48
+Action Duration: 03:11:07
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33394310 Size: 1000.20 GB
+
+UUID: 03735D69-1801-4163-B90E-699232406BD7
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:25:02
+Action Duration: 03:11:21
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #9  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33338326 Size: 1000.20 GB
+
+UUID: 1B830886-51FE-4E93-B981-51D76028A52C
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:20:43
+Action Duration: 03:07:02
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33307360 Size: 1000.20 GB
+
+UUID: B31E0FEA-9C44-490C-A6F2-CD911360F223
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:24:46
+Action Duration: 03:11:05
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #11  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33408959 Size: 1000.20 GB
+
+UUID: FF2196FC-7459-40DA-8558-07D7CE5E6F89
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:25:51
+Action Duration: 03:12:10
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #11 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #12  Vendor: Western Digital Model: WDC WD1003FBYX-01Y7B0
+             Serial: WD-WCAW33408596 Size: 1000.20 GB
+
+UUID: 878CB9D3-0D79-4B16-95F1-C0744C78DA2B
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 09 Jan 2020 at 14:13:41
+Action End Time: Thursday, 09 Jan 2020 at 17:26:20
+Action Duration: 03:12:39
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,1047 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: MBD-X8DT6-A-IS018
+Computer Serial: 1234567890
+Motherboard Vendor: Supermicro
+Motherboard Model: X8DT6
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz, Speed: 1600 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 49152 MB, Memory banks: 6, DDR3 DIMM
+NIC: Vendor: Chelsio Communications Inc, Model: T320 10GbE Dual Port Adapter, MAC Address: 00:07:43:09:f7:2c
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:fe
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:90:c7:0a:ff
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6e:ea
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:07:43:09:f7:2d
+Drive 1: Model: HUC10906 CLAR600, Serial: W7GNM0EX, Size: 585.40 GB
+Drive 2: Model: ST930065 CLAR300, Serial: 6XN2GYBB    0000B320EDXS, Size: 292.70 GB
+Drive 3: Model: HUC10906 CLAR600, Serial: W7GNL6RX, Size: 585.40 GB
+Drive 4: Model: ST930065 CLAR300, Serial: 6XN64KF8    0000M433BT66, Size: 292.70 GB
+Drive 5: Model: HUC10906 CLAR600, Serial: W7GNUR6X, Size: 585.40 GB
+Drive 6: Model: ST930065 CLAR300, Serial: 6XN7FENB    0000M511A1LP, Size: 292.70 GB
+Drive 7: Model: SS162512 CLAR200, Serial: 0ZNEAF203214, Size: 200.05 GB
+Drive 8: Model: ST930065 CLAR300, Serial: 6XN10N3L    0000B244DJLN, Size: 292.70 GB
+Drive 9: Model: HUC10906 CLAR600, Serial: W7GNURNX, Size: 585.40 GB
+Drive 10: Model: ST930065 CLAR300, Serial: 6XN2F7MG    0000B319DK1W, Size: 292.70 GB
+Drive 11: Model: HUC10906 CLAR600, Serial: KWHZBESR, Size: 585.40 GB
+Drive 12: Model: HUC10906 CLAR600, Serial: W7GNS4UX, Size: 585.40 GB
+Drive 13: Model: HUC10906 CLAR600, Serial: W7GNLV8X, Size: 585.40 GB
+Drive 14: Model: ST930065 CLAR300, Serial: 6XN3YJTP    0000B346HRU6, Size: 292.70 GB
+Drive 15: Model: HUC10906 CLAR600, Serial: W7GNPBZX, Size: 585.40 GB
+Drive 16: Model: ST930065 CLAR300, Serial: 6XN2GYWQ    0000B320CMJB, Size: 292.70 GB
+Drive 17: Model: ST930065 CLAR300, Serial: 6XN2FTHF    0000B320CH8R, Size: 292.70 GB
+Drive 18: Model: ST930065 CLAR300, Serial: 6XN10PHM    0000B244D252, Size: 292.70 GB
+Drive 19: Model: HUC10906 CLAR600, Serial: W7GNLNNX, Size: 585.40 GB
+Drive 20: Model: HUC10906 CLAR600, Serial: KWHZJE5R, Size: 585.40 GB
+Drive 21: Model: HUC10906 CLAR600, Serial: KWHZ46LR, Size: 585.40 GB
+Drive 22: Model: ST930065 CLAR300, Serial: 6XN2FRND    0000M3202YAE, Size: 292.70 GB
+Drive 23: Model: ST930065 CLAR300, Serial: 6XN6K3T0    0000N4437BXB, Size: 292.70 GB
+Drive 24: Model: SS162512 CLAR200, Serial: 0ZNEAF104854, Size: 200.05 GB
+Drive 25: Model: HUC10906 CLAR600, Serial: KWJ2M4AR, Size: 585.40 GB
+Drive 26: Model: HUC10906 CLAR600, Serial: KWHZ2JAR, Size: 585.40 GB
+Drive 27: Model: HUC10906 CLAR600, Serial: W7GNKEKX, Size: 585.40 GB
+Drive 28: Model: ST930065 CLAR300, Serial: 6XN5ZR8X    0000N4309SXY, Size: 292.70 GB
+Drive 29: Model: HUC10906 CLAR600, Serial: KWHZBBUR, Size: 585.40 GB
+Drive 30: Model: ST930065 CLAR300, Serial: 6XN63KN9    0000M4339HL0, Size: 292.70 GB
+Drive 31: Model: ST930065 CLAR300, Serial: 6XN59HJN    0000B419D267, Size: 292.70 GB
+Drive 32: Model: ST930065 CLAR300, Serial: 6XN63S1R    0000M433632H, Size: 292.70 GB
+Drive 33: Model: HUC10906 CLAR600, Serial: W7GNRPUX, Size: 585.40 GB
+Drive 34: Model: ST930065 CLAR300, Serial: 6XN5ZRAG    0000N4309SYF, Size: 292.70 GB
+Drive 35: Model: ST930065 CLAR300, Serial: 6XN4SWN9    0000B410FA3L, Size: 292.70 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 11
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: C6136A49-0018-42EA-B2C4-22E0ECF1F6AB
+Current user: ITAMG
+Computer ID: To Be Filled By O.E.M.
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999998
+Lot Name: Control V Symphony
+Lot Number: 19009
+\"Product\": Parts_Hard Drive 2.5
+
+>> Drive #1  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNM0EX Size: 585.40 GB
+
+UUID: 6874E451-7AF2-4697-9B3A-BFFC21E39884
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:43:30
+Action Duration: 01:19:42
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN2GYBB    0000B320EDXS Size: 292.70 GB
+
+UUID: D4052C2B-5594-4B44-A37B-E7786843E8F2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:36
+Action Duration: 01:05:45
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #3  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNL6RX Size: 585.40 GB
+
+UUID: 845593A6-24C5-4E34-B10D-1801FE1698EF
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:07
+Action Duration: 01:21:19
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN64KF8    0000M433BT66 Size: 292.70 GB
+
+UUID: 88473CCB-8006-4ABE-9ACB-B841DDDD4122
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:34
+Action Duration: 01:05:43
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNUR6X Size: 585.40 GB
+
+UUID: BDAA9ED0-863D-4FA4-BB62-149F450AFD5A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:43:53
+Action Duration: 01:20:05
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN7FENB    0000M511A1LP Size: 292.70 GB
+
+UUID: EF069701-C7BE-4FBA-B5C3-3A09130754DC
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:35
+Action Duration: 01:05:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: SAMSUNG Model: SS162512 CLAR200
+             Serial: 0ZNEAF203214 Size: 200.05 GB
+
+UUID: C2BE302B-CC1C-4A04-BF13-B04B1B70B78D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 384710861
+Sectors Not Overwritten: 0
+Sectors Verified: 38471087
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 17:27:33
+Action Duration: 00:03:45
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN10N3L    0000B244DJLN Size: 292.70 GB
+
+UUID: 1529F6E8-712B-411E-9A12-1140430FD2C2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:13
+Action Duration: 01:04:22
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #9  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNURNX Size: 585.40 GB
+
+UUID: 62D6B4EB-9CCA-4923-B038-9897F846D8A9
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:44:56
+Action Duration: 01:21:08
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN2F7MG    0000B319DK1W Size: 292.70 GB
+
+UUID: F65057D8-2871-46A5-863F-DE3E4C69CA46
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:12
+Action Duration: 01:04:21
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #11  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: KWHZBESR Size: 585.40 GB
+
+UUID: 8350F4C1-70E8-4420-8DAD-CA53E750FF9D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:44:06
+Action Duration: 01:20:18
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #11 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #12  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNS4UX Size: 585.40 GB
+
+UUID: B2256A76-7EEA-47A8-9790-49A216AD2160
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:34
+Action Duration: 01:21:46
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #13  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNLV8X Size: 585.40 GB
+
+UUID: E666FAB1-51F6-462B-BF41-8851B91CCFAC
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:15
+Action Duration: 01:21:27
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #13 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #14  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN3YJTP    0000B346HRU6 Size: 292.70 GB
+
+UUID: A2654B38-647F-434A-A42F-3740B6253C36
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:11
+Action Duration: 01:04:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #14 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #15  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNPBZX Size: 585.40 GB
+
+UUID: 49C60521-A607-4634-ACF2-F2F636BC4DFA
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:13
+Action Duration: 01:21:25
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #15 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #16  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN2GYWQ    0000B320CMJB Size: 292.70 GB
+
+UUID: 0832ABA3-8EBB-4440-9707-1E86D025D382
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:12
+Action Duration: 01:04:21
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #16 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #17  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN2FTHF    0000B320CH8R Size: 292.70 GB
+
+UUID: C1561C5A-175C-424A-88AD-B37EDEFF5774
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:13
+Action Duration: 01:04:22
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #17 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #18  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN10PHM    0000B244D252 Size: 292.70 GB
+
+UUID: 9895A52C-DF80-423A-BBD7-CBAB8944659A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:52
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:12
+Action Duration: 01:04:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #18 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #19  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNLNNX Size: 585.40 GB
+
+UUID: DDF84E8F-46BE-4B48-9734-6063A1FB1DD5
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:43:43
+Action Duration: 01:19:55
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #19 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #20  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: KWHZJE5R Size: 585.40 GB
+
+UUID: 9DEC7977-F1E1-4FAA-9B20-9DF162F7B312
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:44:09
+Action Duration: 01:20:21
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #20 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #21  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: KWHZ46LR Size: 585.40 GB
+
+UUID: C96B21AD-0221-412A-B5A2-FBA6A42C8CDD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:35
+Action Duration: 01:21:47
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #21 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #22  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN2FRND    0000M3202YAE Size: 292.70 GB
+
+UUID: A78714F9-E106-45FC-811B-F2CDFF464BAE
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:13
+Action Duration: 01:04:22
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #22 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #23  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN6K3T0    0000N4437BXB Size: 292.70 GB
+
+UUID: B63DCBBB-D676-49FC-804D-BAE7F055B970
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:35
+Action Duration: 01:05:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #23 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #24  Vendor: SAMSUNG Model: SS162512 CLAR200
+             Serial: 0ZNEAF104854 Size: 200.05 GB
+
+UUID: 2FC6DADB-C05C-41EA-8399-1E06E21E129A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 38471087
+Sectors Not Overwritten: 346239774
+Sectors Verified: 2
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 19:26:37
+Action Duration: 02:02:49
+
+Action Result: FAILURE
+
+Drive Errors Detected: 2
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #25  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: KWJ2M4AR Size: 585.40 GB
+
+UUID: 5778A081-A611-4D04-BED3-A58AF58A1776
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:44:15
+Action Duration: 01:20:27
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #25 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #26  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: KWHZ2JAR Size: 585.40 GB
+
+UUID: 93C4C52D-69BF-4111-AFFC-7DC2200573A2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:38
+Action Duration: 01:21:50
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #26 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #27  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNKEKX Size: 585.40 GB
+
+UUID: CC1B1FB8-0996-4448-A783-AFABC74FC73D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:43:59
+Action Duration: 01:20:11
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #27 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #28  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN5ZR8X    0000N4309SXY Size: 292.70 GB
+
+UUID: 37174F0F-5DE2-4DD6-9968-7B030B9BBCE2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:11
+Action Duration: 01:04:20
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #28 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #29  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: KWHZBBUR Size: 585.40 GB
+
+UUID: A635EBE4-AD01-4617-8A3F-C30BDAC4E859
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:45:37
+Action Duration: 01:21:49
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #29 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #30  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN63KN9    0000M4339HL0 Size: 292.70 GB
+
+UUID: 2ED06042-188D-49CE-B422-D6E49F7723E5
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:35
+Action Duration: 01:05:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #30 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #31  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN59HJN    0000B419D267 Size: 292.70 GB
+
+UUID: 2C5B4AAF-5486-4177-8197-5CD8708B7EC9
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:52
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:35
+Action Duration: 01:05:43
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #31 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #32  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN63S1R    0000M433632H Size: 292.70 GB
+
+UUID: 11E932BD-DB3F-477D-A876-47C91C83CAF6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:35
+Action Duration: 01:05:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #32 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #33  Vendor: HITACHI Model: HUC10906 CLAR600
+             Serial: W7GNRPUX Size: 585.40 GB
+
+UUID: E75779D8-DF8A-4EA4-8D58-D2B454B2780A
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1125768576
+Sectors Not Overwritten: 0
+Sectors Verified: 112576858
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:48
+Action End Time: Tuesday, 07 Jan 2020 at 18:44:54
+Action Duration: 01:21:06
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #33 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #34  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN5ZRAG    0000N4309SYF Size: 292.70 GB
+
+UUID: F1C15BE9-7DBA-41D4-B2D0-654ADD5887EA
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:28:12
+Action Duration: 01:04:21
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #34 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #35  Vendor: SEAGATE Model: ST930065 CLAR300
+             Serial: 6XN4SWN9    0000B410FA3L Size: 292.70 GB
+
+UUID: A8058A36-ECD6-4891-B3A3-45F1E4765FA0
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 562884302
+Sectors Not Overwritten: 0
+Sectors Verified: 56288431
+Action Start Time: Tuesday, 07 Jan 2020 at 17:23:51
+Action End Time: Tuesday, 07 Jan 2020 at 18:29:35
+Action Duration: 01:05:44
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #35 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2904FPU
+Computer Serial: R96BFWC
+Motherboard Vendor: LENOVO
+Motherboard Model: 2904FPU
+Processor: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LM Gigabit Network Connection, MAC Address: f0:de:f1:0b:bb:c1
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6200, MAC Address: 00:27:10:79:62:14
+DVD-RAM writer: DVD-RAM UJ892
+Drive 1: Model: SAMSUNG MMCRE28G8MXP-0VBL1, Serial: S0ENNEAZ512050, Size: 128.04 GB
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: CA641FEE-8E6D-4A8E-8E30-327D3B6C0802
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 557335
+Lot Name: Tishman Speyer
+Lot Number: 19004
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MMCRE28G8MXP-0VBL1
+             Serial: S0ENNEAZ512050 Size: 128.04 GB
+
+UUID: DA1F0674-7798-4D91-8A71-49E1026545B9
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 250069680
+Action Start Time: Monday, 16 Mar 2020 at 15:51:10
+Action End Time: Monday, 16 Mar 2020 at 16:23:40
+Action Duration: 00:32:30
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

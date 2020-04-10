@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ProDesk 600 G1 SFF
+Computer Serial: 2UA4310KBS
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18E7
+Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 40:a8:f0:3e:87:f0
+DVD-RAM writer: DVDRAM GTA0N
+Drive 1: Model: TOSHIBA DT01ACA050, Serial: 74APSG0AS, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 4th Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: E15A53FA-9A53-47EF-867A-084FA21D10DD
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 547328
+User3: Equinox
+User4: 18706
+\"Product\": Computer
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA DT01ACA050
+             Serial: 74APSG0AS Size: 500.11 GB
+
+UUID: 2EF6A55A-A756-46F9-870A-D250F18B1F1C
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 05 Dec 2019 at 09:58:18
+Date & time operation was completed: Thursday, 05 Dec 2019 at 10:58:37
+Total elapsed time (HH:MM:SS): 01:00:19
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

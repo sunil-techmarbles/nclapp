@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac14,2
+Computer Serial: C02L454AF8J4
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-27ADBB7B4CEE8E61
+Processor: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 10:dd:b1:ed:40:7d
+Drive 1: Model: APPLE HDD ST1000DM003, Serial: S1DCQSYF, Size: 1000.20 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 755M Mac Edition]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 2C870E04-D01C-4154-92A7-1A383A480E3C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 567947
+User3: CSM Sport user3 = Lot Name Entertainment
+User4: 18890
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Apple Model: APPLE HDD ST1000DM003
+             Serial: S1DCQSYF Size: 1000.20 GB
+
+UUID: B994F183-892D-4687-8465-7F02C42DDC29
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 10 Jan 2020 at 16:25:47
+Date & time operation was completed: Friday, 10 Jan 2020 at 18:36:02
+Total elapsed time (HH:MM:SS): 02:10:15
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBP0944037G284B
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:33:e2
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6a:33:e3
+DVD reader: Unavailable
+Drive 1: Model: WDC WD5003ABYZ-011FA0, Serial: WD-WMAYP0K80L9F, Size: 500.11 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 4BCBCC89-314C-422B-82F1-3DB65AB499B7
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 9999999992
+User3: BAIN user3 = Lot Name CO
+User4: 18755
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5003ABYZ-011FA0
+             Serial: WD-WMAYP0K80L9F Size: 500.11 GB
+
+UUID: 07420AE3-67B4-490A-BDCC-1508A2D65171
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Wednesday, 06 Nov 2019 at 03:32:59
+Date & time operation was completed: Wednesday, 06 Nov 2019 at 05:06:06
+Total elapsed time (HH:MM:SS): 01:33:07
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

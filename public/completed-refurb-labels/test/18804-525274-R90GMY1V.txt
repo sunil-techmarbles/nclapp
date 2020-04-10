@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BTS0Y1US
+Computer Serial: R90GMY1V
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BTS0Y1US
+Processor: Intel(R) Core(TM) i7-5600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 54:ee:75:a5:f4:30
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 5c:e0:c5:50:5c:35
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6f:3d
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 56:c7:6e:ec:dc:ba
+Drive 1: Model: TOSHIBA THNSFJ256GDNU A, Serial: 66CS10PRTJ4V, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 8
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: AC3EE5B0-3FB0-4B7C-AEDB-AFB615DCAEE0
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 525274
+Lot Name: Bain & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA THNSFJ256GDNU A
+             Serial: 66CS10PRTJ4V Size: 256.06 GB
+
+UUID: 12A44078-2891-4550-A100-EC9FECD1B964
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 04 Nov 2019 at 15:03:38
+Date & time operation was completed: Monday, 04 Nov 2019 at 15:03:42
+Total elapsed time (HH:MM:SS): 00:00:04
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

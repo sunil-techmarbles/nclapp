@@ -1,0 +1,91 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: IBM System x3650 M4: -[7915AC1]-
+Computer Serial: E2CH424
+Motherboard Vendor: IBM
+Motherboard Model: 00KF656
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 122880 MB, Memory banks: 15, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:44:26:5a
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:44:26:5b
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:44:26:5c
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 98:be:94:44:26:5d
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 9a:be:94:44:26:59
+DVD reader: DEVICE 81Y3682
+Drive 1: Model: XST9146853SS, Serial: L63L6XM4KP1B0331B644, Size: 146.00 GB
+Drive 2: Model: XST9146853SS, Serial: L63L6XM4KQHR0331B644, Size: 146.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: EEC888EC-19D9-40FC-B44D-3D3A1DDCA182
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 571416
+User3: Northwell Health
+User4: 18978
+\"Product\": Server
+
+>> Raid device #1  Vendor: LENOVO Model: XST9146853SS
+             Serial: L63L6XM4KP1B0331B644 Size: 146.00 GB
+    >>> Raid member #1  Vendor: LENOVO Model: XST9146853SS
+             Serial: L63L6XM4KP1B0331B644 Size: 136.731 GB  [ 252:0 ]
+
+UUID: 655CB240-F1C5-4696-914F-AADB9C9803BF
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 10:21:30
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 11:17:35
+Total elapsed time (HH:MM:SS): 00:56:05
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: LENOVO Model: XST9146853SS
+             Serial: L63L6XM4KQHR0331B644 Size: 146.00 GB
+    >>> Raid member #1  Vendor: LENOVO Model: XST9146853SS
+             Serial: L63L6XM4KQHR0331B644 Size: 136.731 GB  [ 252:1 ]
+
+UUID: 9689CD2C-4609-45C1-AD95-9B69BB5C4655
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 10:21:30
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 11:18:17
+Total elapsed time (HH:MM:SS): 00:56:47
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

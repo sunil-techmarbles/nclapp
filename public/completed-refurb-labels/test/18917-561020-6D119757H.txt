@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: TOSHIBA
+Computer Model: TECRA R950
+Computer Serial: 6D119757H
+Motherboard Vendor: TOSHIBA
+Motherboard Model: TECRA R950
+Processor: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579V Gigabit Network Connection, MAC Address: b8:6b:23:8c:dc:16
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: b4:b6:76:55:e4:5c
+DVD-RAM writer: DVD-RAM UJ8C2
+Drive 1: Model: HGST HTS541064A9E680, Serial: 130313J814001AG3XYNA, Size: 640.14 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Thames [Radeon HD 7550M/7570M/7650M]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Turks HDMI Audio [Radeon HD 6500/6600 / 6700M Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 72D3C88A-5357-4CF2-847A-948793C317D6
+Current user: ITAMG
+Computer ID: 0000000000
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 561020
+Lot Name: New York Athletic Club
+Lot Number: 18917
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: HGST HTS541064A9E680
+             Serial: 130313J814001AG3XYNA Size: 640.14 GB
+
+UUID: 8600C134-5627-4B80-A81C-8618E139074B
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1250263728
+Sectors Not Overwritten: 0
+Sectors Verified: 125040016
+Action Start Time: Thursday, 13 Feb 2020 at 09:24:23
+Action End Time: Thursday, 13 Feb 2020 at 12:18:10
+Action Duration: 02:53:47
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

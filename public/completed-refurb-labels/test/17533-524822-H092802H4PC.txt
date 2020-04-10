@@ -1,0 +1,90 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro4,1
+Computer Serial: H092802H4PC
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           W3520  @ 2.67GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:ee:77:25
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:25:00:ee:83:8a
+DVD writer: DVD-RW GH41N
+Drive 1: Model: WDC WD1001FALS-41Y6A0, Serial: WD-WCATR3351422, Size: 1000.20 GB
+Drive 2: Model: WDC WD1001FALS-41Y6A0, Serial: WD-WCATR5387120, Size: 1000.20 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G96 [GeForce 9500 GT]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 9A5B6C8C-A089-46C3-BFC5-E453852439B6
+Current user: ITAMG
+Computer ID: Asset Tag#
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524822
+Lot Name: Ogilvy Common Health Worldwide
+Lot Number: 17533
+"Product": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD1001FALS-41Y6A0
+             Serial: WD-WCATR3351422 Size: 1000.20 GB
+
+UUID: 858E8A87-2E6C-43CD-9B8C-F5AB75BB0873
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Wednesday, 30 Oct 2019 at 17:56:23
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 20:43:26
+Total elapsed time (HH:MM:SS): 02:47:03
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD1001FALS-41Y6A0
+             Serial: WD-WCATR5387120 Size: 1000.20 GB
+
+UUID: 718522EC-9663-46B1-9E69-BC3A9ED50F46
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Wednesday, 30 Oct 2019 at 17:56:23
+Date & time operation was completed: Wednesday, 30 Oct 2019 at 20:29:12
+Total elapsed time (HH:MM:SS): 02:32:49
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

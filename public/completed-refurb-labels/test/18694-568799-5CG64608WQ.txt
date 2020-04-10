@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 840 G3
+Computer Serial: 5CG64608WQ
+Motherboard Vendor: HP
+Motherboard Model: 8079
+Processor: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-V, MAC Address: c8:d3:ff:75:d0:11
+Drive 1: Model: LITEON CV1-8B256-HP, Serial: 00264410033N, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: D6E52E15-96CE-493B-82F1-139953A74992
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568799
+User3: World Wrestling Entertainment
+User4: 18694
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: LITEON CV1-8B256-HP
+             Serial: 00264410033N Size: 256.06 GB
+
+UUID: 22BB34D3-BB7B-442F-BB98-AAAEC3F094B2
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 24 Feb 2020 at 09:45:05
+Date & time operation was completed: Monday, 24 Feb 2020 at 10:31:17
+Total elapsed time (HH:MM:SS): 00:46:12
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

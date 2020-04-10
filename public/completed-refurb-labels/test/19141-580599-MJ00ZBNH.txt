@@ -1,0 +1,87 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10A90014US
+Computer Serial: MJ00ZBNH
+Motherboard Vendor: LENOVO
+Motherboard Model: SHARKBAY
+Processor: Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: 44:39:c4:4f:7c:69
+NIC: Vendor: Intel Corporation, Model: Centrino Wireless-N 105, MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVD-RAM GHB0N
+Drive 1: Model: WDC WD10EZEX-08M2NA0, Serial: WD-WCC3F4095548, Size: 1000.20 GB
+Drive 2: Model: DataTraveler 2.0, Serial: 0, Size: 7.75 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119 [GeForce GT 620 OEM]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: B3564BAA-6BA2-4404-B947-572BC200DF37
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 580599
+User3: Golub Capital Partners LLC
+User4: 19141
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD10EZEX-08M2NA0
+             Serial: WD-WCC3F4095548 Size: 1000.20 GB
+
+UUID: FF8817FA-8CA4-4FFA-B12A-713031AAF5E7
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Tuesday, 10 Mar 2020 at 10:02:06
+Date & time operation was completed: Tuesday, 10 Mar 2020 at 12:25:53
+Total elapsed time (HH:MM:SS): 02:23:47
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Kingston Model: DataTraveler 2.0
+             Serial: 0 Size: 7.75 GB
+
+UUID: 03AABBFD-2316-4BF4-BF34-4513676D3A81
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 10 Mar 2020 at 10:02:07
+Date & time operation was completed: Tuesday, 10 Mar 2020 at 10:02:09
+Total elapsed time (HH:MM:SS): 00:00:02
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

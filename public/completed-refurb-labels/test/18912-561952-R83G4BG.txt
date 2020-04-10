@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2522WL9
+Computer Serial: R83G4BG
+Motherboard Vendor: LENOVO
+Motherboard Model: 2522WL9
+Processor: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LM Gigabit Network Connection, MAC Address: 5c:ff:35:0c:32:09
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6200, MAC Address: Unavailable
+DVD-RAM writer: DVDRAM GU10N
+Drive 1: Model: HITACHI HTS545025B9A300, Serial: 100611PBN2043SKZMJ7T, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 53E3ABB0-0F4D-4317-B8FB-128201C61D25
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561952
+User3: Northwell Health
+User4: 18912
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: HITACHI HTS545025B9A300
+             Serial: 100611PBN2043SKZMJ7T Size: 250.06 GB
+
+UUID: 11BB0C10-55DA-4D66-A8CC-10E678E147E7
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 09 Jan 2020 at 12:56:09
+Date & time operation was completed: Thursday, 09 Jan 2020 at 18:48:33
+Total elapsed time (HH:MM:SS): 05:52:24
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

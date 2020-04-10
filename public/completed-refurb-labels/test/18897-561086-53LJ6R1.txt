@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6520
+Computer Serial: 53LJ6R1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0NVF5K
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GH, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 6144 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:10:a8:09
+NIC: Vendor: Broadcom Limited, Model: BCM43228 802.11a/b/g/n, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW UJ8B2
+Drive 1: Model: ST320LT014-9YK142, Serial: W0Q2YL6D, Size: 320.07 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 85147DCA-E399-4EB1-A61C-BF14EDE4B9F8
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561086
+User3: H2M Architects user3 = Lot Name Engineers
+User4: 18897
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST320LT014-9YK142
+             Serial: W0Q2YL6D Size: 320.07 GB
+
+UUID: 43FDF833-219B-4B48-B64B-57CC32975A41
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 07 Feb 2020 at 16:57:40
+Date & time operation was completed: Friday, 07 Feb 2020 at 17:10:17
+Total elapsed time (HH:MM:SS): 00:12:37
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

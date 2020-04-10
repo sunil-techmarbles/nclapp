@@ -1,0 +1,163 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: ProLiant DL580 G7
+Computer Serial: USE232BEWW
+Motherboard Vendor: Unavailable
+Motherboard Model: Unavailable
+Processor: Intel(R) Xeon(R) CPU E7- 4830 @ 2.13GHz, Speed: 2100 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E7- 4830 @ 2.13GHz, Speed: 2100 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E7- 4830 @ 2.13GHz, Speed: 2100 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E7- 4830 @ 2.13GHz, Speed: 2100 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+RAM: 1048576 MB, Memory banks: 64, DDR3 FB-DIMM
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: ac:16:2d:a3:b7:54
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: ac:16:2d:a3:b7:55
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: ac:16:2d:a3:b7:56
+NIC: Vendor: NetXen Incorporated, Model: NX3031 Multifunction 1/10-Gigabit Server Adapter, MAC Address: ac:16:2d:a3:b7:57
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 0c:c4:7a:1f:c7:a4
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 0c:c4:7a:1f:c7:a5
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD-RAM writer: DVD A DS8A8SH
+Drive 1: Model: EH0146FARWD, Serial: PLVZS12E, Size: 146.78 GB
+Drive 2: Model: EH0146FARWD, Serial: PLX00VZE, Size: 146.78 GB
+Drive 3: Model: EG0900FCVBL, Serial: S0N3YWR70000K5456ERS, Size: 900.15 GB
+Drive 4: Model: EG0900FCSPN, Serial: 95Q0A05AFTM11539, Size: 900.15 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: ES1000
+USB Ports: 7
+USB2 Ports: 1
+USB3 Ports: 0
+
+Job UUID: 38F049BD-CFEF-4347-9D85-6BD7F737C7BC
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 543040
+Lot Name: Control V Symphony
+Lot Number: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: HP Model: EH0146FARWD
+             Serial: PLVZS12E Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FARWD
+             Serial: PLVZS12E Size: 146 GB  [ 1:1 ]
+
+UUID: 4FACEEAD-D137-4657-916D-4DC731F53D46
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 13:54:41
+Action End Time: Wednesday, 27 Nov 2019 at 14:16:40
+Action Duration: 00:21:59
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: HP Model: EH0146FARWD
+             Serial: PLX00VZE Size: 146.78 GB
+    >>> Raid member #1  Vendor: HP Model: EH0146FARWD
+             Serial: PLX00VZE Size: 146 GB  [ 1:2 ]
+
+UUID: FA0D9348-5B0F-4CB5-8513-F06DB94A41A4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 286677120
+Sectors Not Overwritten: 0
+Sectors Verified: 28667713
+Action Start Time: Wednesday, 27 Nov 2019 at 13:54:40
+Action End Time: Wednesday, 27 Nov 2019 at 14:16:39
+Action Duration: 00:21:59
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: HP Model: EG0900FCVBL
+             Serial: S0N3YWR70000K5456ERS Size: 900.15 GB
+    >>> Raid member #1  Vendor: HP Model: EG0900FCVBL
+             Serial: S0N3YWR70000K5456ERS Size: 900.1 GB  [ 1:3 ]
+
+UUID: 97D22055-866D-4484-93E1-5152D24CE870
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758109232
+Sectors Not Overwritten: 0
+Sectors Verified: 175810924
+Action Start Time: Wednesday, 27 Nov 2019 at 13:54:41
+Action End Time: Wednesday, 27 Nov 2019 at 15:40:46
+Action Duration: 01:46:05
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: HP Model: EG0900FCSPN
+             Serial: 95Q0A05AFTM11539 Size: 900.15 GB
+    >>> Raid member #1  Vendor: HP Model: EG0900FCSPN
+             Serial: 95Q0A05AFTM11539 Size: 900.1 GB  [ 1:4 ]
+
+UUID: A93E1C55-06A2-4B83-92CE-896BA1217CC2
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1758109232
+Sectors Not Overwritten: 0
+Sectors Verified: 175810924
+Action Start Time: Wednesday, 27 Nov 2019 at 13:54:41
+Action End Time: Wednesday, 27 Nov 2019 at 15:41:10
+Action Duration: 01:46:29
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

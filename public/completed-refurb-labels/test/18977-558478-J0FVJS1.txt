@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 390
+Computer Serial: J0FVJS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0M5DCD
+Processor: Intel(R) Core(TM) i3-2120 CPU @ 3.30GH, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 6144 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: d4:be:d9:ba:82:cc
+DVD-RAM writer: DVD+-RW GH70N
+Drive 1: Model: WDC WD2500AAKX-753CA1, Serial: WD-WMAYV1130558, Size: 250.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D2F8D313-F758-400A-BE65-1DED0539B51C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 558478
+User3: Northwell Health
+User4: 18977
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-753CA1
+             Serial: WD-WMAYV1130558 Size: 250.06 GB
+
+UUID: FEB52FAD-3A28-4A2C-AE70-D5C6C5F3955A
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Monday, 27 Jan 2020 at 12:29:37
+Date & time operation was completed: Monday, 27 Jan 2020 at 15:53:31
+Total elapsed time (HH:MM:SS): 03:23:54
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

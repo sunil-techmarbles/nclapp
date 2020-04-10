@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FRS09M02
+Computer Serial: R90KY3M0
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FRS09M02
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: e4:b3:18:97:17:ec
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 54:ee:75:a4:00:47
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 3a:d6:2d:a4:82:16
+Drive 1: Model: SanDisk SD8TN8U256G1001, Serial: 171174800559, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 6
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 9CD24B92-529B-4956-86E6-7B9470FA2EC3
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524508
+Lot Name: BAIN  & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD8TN8U256G1001
+             Serial: 171174800559 Size: 256.06 GB
+
+UUID: CBCF7B5C-C65E-4732-8018-2B1C291FE9FB
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Tuesday, 05 Nov 2019 at 11:09:01
+Date & time operation was completed: Tuesday, 05 Nov 2019 at 11:09:20
+Total elapsed time (HH:MM:SS): 00:00:19
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

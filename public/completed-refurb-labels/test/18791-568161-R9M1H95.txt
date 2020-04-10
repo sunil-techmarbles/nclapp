@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4243VS4
+Computer Serial: R9M1H95
+Motherboard Vendor: LENOVO
+Motherboard Model: 4243VS4
+Processor: Intel(R) Core(TM) i7-2860QM CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:de:f1:ce:b5:11
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVDRAM GT50N
+Drive 1: Model: INTEL SSDSA2BW160G3L, Serial: BTPR151103G5160DGN, Size: 160.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119M [Quadro NVS 4200M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B5427E1F-6567-484C-B1E9-09F4CD8BC180
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568161
+User3: Goodwin Procter LLP
+User4: 18791
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: BTPR151103G5160DGN Size: 160.04 GB
+
+UUID: B2DA1ACB-7A64-486E-A395-8A3335D0118E
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 25 Feb 2020 at 13:29:13
+Date & time operation was completed: Tuesday, 25 Feb 2020 at 13:31:54
+Total elapsed time (HH:MM:SS): 00:02:41
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

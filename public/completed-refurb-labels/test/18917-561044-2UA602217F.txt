@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP ProDesk 600 G2 SFF
+Computer Serial: 2UA602217F
+Motherboard Vendor: HP
+Motherboard Model: 805D
+Processor: Intel(R) Core(TM) i3-6100 CPU @ 3.70GHz, Speed: 3700 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR4 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (2) I219-LM, MAC Address: 50:65:f3:46:20:9e
+DVD-RAM writer: DVDRW SU-208HB
+Drive 1: Model: WDC WD5000AAKX-60U6AA0, Serial: WD-WCC2E2PJYSSN, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 530
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-H HD Audio
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 011A1350-676B-456C-9091-9C9045290DC6
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561044
+User3: New York Athletic Club
+User4: 18917
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-60U6AA0
+             Serial: WD-WCC2E2PJYSSN Size: 500.11 GB
+
+UUID: 3FEB0646-52EC-4B84-ADFA-DC63439BD9E2
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Thursday, 26 Dec 2019 at 16:18:05
+Date & time operation was completed: Thursday, 26 Dec 2019 at 17:49:13
+Total elapsed time (HH:MM:SS): 01:31:08
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

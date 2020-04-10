@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6410
+Computer Serial: GYVK0M1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0K42JR
+Processor: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GH, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LM Gigabit Network Connection, MAC Address: 00:26:b9:d8:09:04
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6200, MAC Address: 00:23:14:8e:8a:f4
+DVD-RAM writer: DVD+-RW GU10N
+Drive 1: Model: Samsung SSD 850 PRO 128GB, Serial: S1SMNSAFC40032T, Size: 128.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GT218M [NVS 3100M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: High Definition Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: C6D2CF60-D5D5-44F2-86DD-A93F0F9231D8
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 569675
+Lot Name: 18756
+Lot Number: 18756
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 PRO 128GB
+             Serial: S1SMNSAFC40032T Size: 128.04 GB
+
+UUID: 431F2288-8204-4CA0-B067-E3E0A433AB13
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Friday, 13 Mar 2020 at 15:50:05
+Action End Time: Friday, 13 Mar 2020 at 15:51:44
+Action Duration: 00:01:39
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,58 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude 7480
+Computer Serial: 2FWXFH2
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 00F6D3
+Processor: Intel(R) Core(TM) i5-7300U CPU @ 2.60GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (4) I219-LM, MAC Address: a4:4c:c8:3e:a3:cb
+Drive 1: Model: A400 NVMe SanDisk 512GB, Serial: 172824424262, Size: 512.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 8777AEC8-9947-4334-9DCC-39887ABD275B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 572021
+User3: Camfil USA Inc
+User4: 19100
+\"Product\": Laptop
+
+>> Drive #1  Vendor: NVMe Model: A400 NVMe SanDisk 512GB
+             Serial: 172824424262 Size: 512.11 GB
+
+UUID: 8F134E42-413A-422D-9817-7BE23F26C50B
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 12 Mar 2020 at 11:33:01
+Date & time operation was completed: Thursday, 12 Mar 2020 at 11:37:14
+Total elapsed time (HH:MM:SS): 00:04:13
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

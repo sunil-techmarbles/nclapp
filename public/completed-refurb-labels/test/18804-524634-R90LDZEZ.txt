@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20FRS09M02
+Computer Serial: R90LDZEZ
+Motherboard Vendor: LENOVO
+Motherboard Model: 20FRS09M02
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: e4:a7:a0:01:d7:9a
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-V, MAC Address: 54:ee:75:d3:9d:f7
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 42:0f:8f:65:83:90
+Drive 1: Model: SAMSUNG MZNTY256HDHP-000L7, Serial: S305NY0H855913, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 65ACC3AF-894B-42E8-A8D7-2CEF615E0BE4
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 524634
+Lot Name: BAIN & CO
+Lot Number: 18804
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNTY256HDHP-000L7
+             Serial: S305NY0H855913 Size: 256.06 GB
+
+UUID: 98829B5E-E869-474F-9E65-A6BF229C890E
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 2
+Date & time operation was started: Tuesday, 05 Nov 2019 at 12:57:06
+Date & time operation was completed: Tuesday, 05 Nov 2019 at 13:26:29
+Total elapsed time (HH:MM:SS): 00:29:23
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

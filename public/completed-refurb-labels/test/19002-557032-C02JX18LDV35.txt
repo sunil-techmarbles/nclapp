@@ -1,0 +1,66 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro9,1
+Computer Serial: C02JX18LDV35
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-4B7AC7E43945597E
+Processor: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57765 Gigabit Ethernet PCIe, MAC Address: a8:20:66:54:ad:23
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4331 802.11a/b/g/n, MAC Address: 4c:8d:79:d6:c2:1a
+DVD writer: DVD-R UJ-8A8
+Drive 1: Model: Samsung SSD 850 EVO 250GB, Serial: S2R5NXBH304970R, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 650M Mac Edition]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: C368B481-46DB-48FE-9A9B-636F92C80EBB
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 557032
+Lot Name: Anomaly
+Lot Number: 19002
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 850 EVO 250GB
+             Serial: S2R5NXBH304970R Size: 250.06 GB
+
+UUID: 75416128-EFD6-49A4-9C0A-1F4A113E8C18
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Monday, 01 Jan 2018 at 01:10:59
+Action End Time: Monday, 01 Jan 2018 at 02:27:49
+Action Duration: 01:16:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 820 G3
+Computer Serial: 5CG62453NG
+Motherboard Vendor: HP
+Motherboard Model: 807C
+Processor: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: e4:b3:18:a0:ab:7c
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-V, MAC Address: a0:8c:fd:9f:26:67
+Drive 1: Model: SanDisk SD7SN6S-256G-1006, Serial: 161921804910, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 18461BE8-7F1A-4CF2-A30C-F127F4C1B728
+Current user: ITAMG
+Computer ID: 5CG62453NG
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 549322
+Lot Name: wORLD wRESTLING eNTERTAINMENT
+Lot Number: 18953
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD7SN6S-256G-1006
+             Serial: 161921804910 Size: 256.06 GB
+
+UUID: 32FF25EF-51F0-4E89-B81E-E91ED00F4658
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50016016
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Wednesday, 12 Feb 2020 at 10:48:01
+Action End Time: Wednesday, 12 Feb 2020 at 11:48:15
+Action Duration: 01:00:14
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

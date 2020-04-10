@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 840 G5
+Computer Serial: 5CG81249QV
+Motherboard Vendor: HP
+Motherboard Model: 83B2
+Processor: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, Speed: 1700 MHz, Cores: 4, L1 Cache: 0 kB, L2 Cache: 0 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: f8:63:3f:cf:39:97
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (4) I219-V, MAC Address: b4:b6:86:21:e4:b5
+Drive 1: Model: KXG50ZNV256G TOSHIBA, Serial: 18NS102FTP4T, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: UHD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: F440E6F1-913C-4C99-9381-E301D6D77B03
+Current user: ITAMG
+Computer ID: 5CG81249QV
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 549325
+Lot Name: World Wrestling Entertainment
+Lot Number: 18953
+\"Product\": Laptop
+
+>> Drive #1  Vendor: 0x1179 Model: KXG50ZNV256G TOSHIBA
+             Serial: 18NS102FTP4T Size: 256.06 GB
+
+UUID: 97641369-08DD-4762-9E34-86FC8481F9BB
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Wednesday, 12 Feb 2020 at 16:11:34
+Action End Time: Wednesday, 12 Feb 2020 at 16:13:30
+Action Duration: 00:01:56
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

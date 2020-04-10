@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 840 G3
+Computer Serial: 5CG64607X5
+Motherboard Vendor: HP
+Motherboard Model: 8079
+Processor: Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: f0:d5:bf:c2:23:c4
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-V, MAC Address: c8:d3:ff:74:de:78
+Drive 1: Model: SAMSUNG MZNLN256HMHQ-000H1, Serial: S2Y2NX0HA30699, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: DAF851E9-9D09-4D3A-B00B-5BF75D11EEA1
+Current user: ITAMG
+Computer ID: 5CG64607X5
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 549324
+Lot Name: World Wrestling Entertainment
+Lot Number: 18953
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZNLN256HMHQ-000H1
+             Serial: S2Y2NX0HA30699 Size: 256.06 GB
+
+UUID: C60EE882-BC8D-43E6-BA9A-2507BB1FDFD0
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50016016
+Action Start Time: Wednesday, 12 Feb 2020 at 16:21:36
+Action End Time: Wednesday, 12 Feb 2020 at 16:24:27
+Action Duration: 00:02:51
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

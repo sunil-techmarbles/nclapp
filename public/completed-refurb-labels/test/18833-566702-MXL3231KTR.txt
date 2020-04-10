@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq Elite 8300 USDT
+Computer Serial: MXL3231KTR
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 3398
+Processor: Intel(R) Core(TM) i5-3475S CPU @ 2.90GHz, Speed: 2900 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 88:51:fb:81:c6:00
+DVD-RAM writer: CDDVDW SN-208DB
+Drive 1: Model: KINGSTON SKC300S37A240G, Serial: 50026B724401D3A9, Size: 240.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 008FCC2E-A38C-4491-A641-C6E22D6587DA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 566702
+User3: Proskauer Rose
+User4: 18833
+\"Product\": Computer
+
+>> Drive #1  Vendor: Kingston Model: KINGSTON SKC300S37A240G
+             Serial: 50026B724401D3A9 Size: 240.06 GB
+
+UUID: 954191D5-1C29-44CA-8B6C-F668928D28FA
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 06 Mar 2020 at 15:25:31
+Date & time operation was completed: Friday, 06 Mar 2020 at 15:58:41
+Total elapsed time (HH:MM:SS): 00:33:10
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 7517C1U
+Computer Serial: MJLVMBA
+Motherboard Vendor: LENOVO
+Motherboard Model: Unavailable
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz, Speed: 3100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 44:37:e6:80:c6:86
+DVD-RAM writer: DVD-RAM GH70N
+Drive 1: Model: WDC WD5000AAKX-083CA1, Serial: WD-WMAYUS030494, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B094EA3B-737C-43B1-9DF7-385159D2FAEF
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 584317
+User3: Northwell Health
+User4: 19183
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-083CA1
+             Serial: WD-WMAYUS030494 Size: 500.11 GB
+
+UUID: 8A6F6097-8689-49FD-916D-8486EDB41C63
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 04 Mar 2020 at 17:11:52
+Date & time operation was completed: Wednesday, 04 Mar 2020 at 22:28:17
+Total elapsed time (HH:MM:SS): 05:16:25
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

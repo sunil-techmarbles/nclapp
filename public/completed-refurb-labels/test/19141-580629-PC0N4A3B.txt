@@ -1,0 +1,58 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20K6000TUS
+Computer Serial: PC0N4A3B
+Motherboard Vendor: LENOVO
+Motherboard Model: 20K6000TUS
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: Unavailable
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 54:e1:ad:39:bf:30
+Drive 1: Model: INTEL SSDPEKKF256G7L, Serial: BTPY71050MA0256D, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 520
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B2D289F7-8CAA-4224-95A4-35B1DF44482C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 580629
+User3: Golub Capital Partners LLC
+User4: 19141
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDPEKKF256G7L
+             Serial: BTPY71050MA0256D Size: 256.06 GB
+
+UUID: 06D2FB5C-9E1E-41A4-B7EC-F1E0AF3D2F53
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 2
+Date & time operation was started: Wednesday, 12 Feb 2020 at 15:09:35
+Date & time operation was completed: Wednesday, 12 Feb 2020 at 16:17:30
+Total elapsed time (HH:MM:SS): 01:07:55
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

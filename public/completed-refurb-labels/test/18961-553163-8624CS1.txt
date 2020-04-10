@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6520
+Computer Serial: 8624CS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0692FT
+Processor: Intel(R) Core(TM) i7-2760QM CPU @ 2.40GH, Speed: 2400 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: d4:be:d9:22:0d:1c
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N + WiMAX 6250 [Kilmer Peak], MAC Address: Unavailable
+Drive 1: Model: ST500LM021-1KJ152, Serial: W62B5S92, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119M [NVS 4200M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: EFBF53CF-4317-4034-B189-D80472AB0485
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 553163
+User3: Clever Devices
+User4: 18961
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W62B5S92 Size: 500.11 GB
+
+UUID: 65866F67-F6C7-4D4F-87EB-765BE6679C44
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 14 Nov 2013 at 23:23:11
+Date & time operation was completed: Friday, 15 Nov 2013 at 00:52:19
+Total elapsed time (HH:MM:SS): 01:29:08
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook Folio 9470m
+Computer Serial: CNU409BH7V
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18DF
+Processor: Intel(R) Core(TM) i5-3437U CPU @ 1.90GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: fc:15:b4:ec:3c:d3
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: Unavailable
+Drive 1: Model: SAMSUNG MZMPD256HAGM-000H1, Serial: S1DZNYADB05371, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 54347314-71D3-4118-9B7F-33D9499CB79F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 563053
+User3: Linklaters
+User4: 19022
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZMPD256HAGM-000H1
+             Serial: S1DZNYADB05371 Size: 256.06 GB
+
+UUID: 2B360154-D717-41AB-AA8B-44B84E4E362D
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 01 Jan 1980 at 00:02:58
+Date & time operation was completed: Tuesday, 01 Jan 1980 at 00:10:47
+Total elapsed time (HH:MM:SS): 00:07:49
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

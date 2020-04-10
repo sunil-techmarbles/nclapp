@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BUS14500
+Computer Serial: PC08MW4N
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BUS14500
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 50:7b:9d:57:95:f5
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: dc:53:60:05:f5:f0
+Drive 1: Model: ST500LM021-1KJ152, Serial: W628Z7LP, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: FD879823-57D7-48E8-843A-A0B11D8C10D5
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 596366
+Lot Name: Northwell Health
+Lot Number: 19350
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W628Z7LP Size: 500.11 GB
+
+UUID: A0C1F150-C94F-46F2-B831-5184ACDEA1EB
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Wednesday, 11 Mar 2020 at 10:09:26
+Action End Time: Wednesday, 11 Mar 2020 at 14:51:16
+Action Duration: 04:41:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

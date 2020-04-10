@@ -1,0 +1,54 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3227DR2
+Computer Serial: MJ77T2H
+Motherboard Vendor: LENOVO
+Motherboard Model: MAHOBAY
+Processor: Intel(R) Core(TM) i5-3470 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 44:37:e6:c5:01:45
+DVD-RAM writer: DVD-RAM GHA2N
+Drive 1: Model: DataTraveler 2.0, Serial: 6, Size: 7.75 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: B325790A-395A-4517-ABA3-900BA4E12380
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 562284
+User3: Tishman Speyer
+User4: 19023
+\"Product\": Computer
+
+>> Drive #1  Vendor: Kingston Model: DataTraveler 2.0
+             Serial: 6 Size: 7.75 GB
+
+UUID: 08980458-D00E-4A5F-A8F5-73B0FCA521E4
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 1
+Date & time operation was started: Monday, 24 Feb 2020 at 11:13:26
+Date & time operation was completed: Monday, 24 Feb 2020 at 11:13:31
+Total elapsed time (HH:MM:SS): 00:00:05
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

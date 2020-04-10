@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20K3S0YQ00
+Computer Serial: PF12L3DD
+Motherboard Vendor: LENOVO
+Motherboard Model: 20K3S0YQ00
+Processor: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 Row Of Chips
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: a0:af:bd:4f:1e:ab
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 8c:16:45:09:ea:0d
+Drive 1: Model: SAMSUNG MZVLW256HEHP-000L7, Serial: S35ENA0K125497, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 518E64AD-F25F-4E9E-8FF5-452F73BBDF66
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 551548
+Lot Name: Goodwin Procter LLP
+Lot Number: 17540
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZVLW256HEHP-000L7
+             Serial: S35ENA0K125497 Size: 256.06 GB
+
+UUID: D84682E5-B1C8-49C0-AD46-6D7942E274CD
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Monday, 03 Feb 2020 at 16:16:41
+Action End Time: Monday, 03 Feb 2020 at 17:03:48
+Action Duration: 00:47:07
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

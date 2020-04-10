@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro12,1
+Computer Serial: C02PR2LMFVH6
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-E43C1C25D4880AD6
+Processor: Intel(R) Core(TM) i5-5287U CPU @ 2.90GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: a4:5e:60:ed:8a:4f
+Drive 1: Model: APPLE SSD SM0256G, Serial: S29CNYAG476594, Size: 251.00 GB
+Display Adapter: Vendor: Intel Corporation, Model: Iris Graphics 6100
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+Multimedia Adapter: Vendor: Broadcom Inc. and subsidiaries, Model: 720p FaceTime HD Camera
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: A098BD08-8FEE-4804-B205-2DFD250C8FEC
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 538213
+Lot Name: Newsela
+Lot Number: 18835
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0256G
+             Serial: S29CNYAG476594 Size: 251.00 GB
+
+UUID: 14CEEAE5-C73C-4592-BD56-69096BAE408D
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 490234752
+Sectors Not Overwritten: 0
+Sectors Verified: 49024016
+Action Start Time: Monday, 30 Dec 2019 at 14:52:05
+Action End Time: Monday, 30 Dec 2019 at 14:52:48
+Action Duration: 00:00:43
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

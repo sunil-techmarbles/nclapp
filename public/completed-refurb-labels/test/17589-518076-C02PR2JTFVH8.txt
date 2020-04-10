@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro12,1
+Computer Serial: C02PR2JTFVH8
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-E43C1C25D4880AD6
+Processor: Intel(R) Core(TM) i5-5287U CPU @ 2.90GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: a4:5e:60:ec:b3:e5
+Drive 1: Model: APPLE SSD SM0512G, Serial: S29ANYCG403077, Size: 500.28 GB
+Display Adapter: Vendor: Intel Corporation, Model: Iris Graphics 6100
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+Multimedia Adapter: Vendor: Broadcom Limited, Model: 720p FaceTime HD Camera
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: FABB68FF-AE09-492D-B95D-7DBF14E33E45
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 518076
+Lot Name: FCB Global
+Lot Number: 17589
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0512G
+             Serial: S29ANYCG403077 Size: 500.28 GB
+
+UUID: 618EA3A2-0C08-4428-BDE7-7D6B8E13CCBC
+Operation: Overwrite disk.
+Wipe Type: Single overwrite, Number of wipes: 1
+Date & time operation was started: Friday, 25 Oct 2019 at 17:44:57
+Date & time operation was completed: Friday, 25 Oct 2019 at 17:45:05
+Total elapsed time (HH:MM:SS): 00:00:08
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

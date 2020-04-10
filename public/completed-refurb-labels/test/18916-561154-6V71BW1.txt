@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E5530 non-vPro
+Computer Serial: 6V71BW1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 05GRXT
+Processor: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Centrino Ultimate-N 6300, MAC Address: Unavailable
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5761 Gigabit Ethernet PCIe, MAC Address: e0:db:55:e2:da:c9
+DVD reader: DVD-ROM DS-8D9SH
+Drive 1: Model: WDC WD5000BPKT-75PK4T0, Serial: WD-WX11A8262495, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 377C6BDD-AF6B-4265-892F-5B5EF72CC892
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 561154
+User3: EquiLend
+User4: 18916
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000BPKT-75PK4T0
+             Serial: WD-WX11A8262495 Size: 500.11 GB
+
+UUID: 5EBC2124-68FC-4E69-B51C-A76F0157AAB1
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 07 Feb 2020 at 16:37:09
+Date & time operation was completed: Friday, 07 Feb 2020 at 18:27:04
+Total elapsed time (HH:MM:SS): 01:49:55
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

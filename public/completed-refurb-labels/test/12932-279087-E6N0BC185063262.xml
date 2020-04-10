@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 8.3.2 64-bit">
+        <KernelVersion>4.16.15-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>ASUSTeK COMPUTER INC.</ComputerVendor>
+            <ComputerModel>T100TA</ComputerModel>
+            <ComputerSerial>E6N0BC185063262</ComputerSerial>
+            <MotherboardVendor>ASUSTeK COMPUTER INC.</MotherboardVendor>
+            <MotherboardModel>T100TA</MotherboardModel>
+            <AssetTag>No Asset Tag</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Atom(TM) CPU Z3740 @ 1.33GHz</Name>
+                    <Speed>1300 MHz</Speed>
+                    <ID>SOCKET 0</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>224 kB</L1Cache>
+                    <L2Cache>2048 kB</L2Cache>
+                    <L3Cache>Unavailable</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>A1_Manufacturer0</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1066 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>A1_SerNum0</SerialNumber>
+                    <AssetTag>A1_AssetTagNum0</AssetTag>
+                    <PartNumber>Array1_PartNumber0</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>A1_Manufacturer1</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1066 MHz</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>A1_SerNum1</SerialNumber>
+                    <AssetTag>A1_AssetTagNum1</AssetTag>
+                    <PartNumber>Array1_PartNumber1</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>2048 MB</TotalCapacity>
+            </RAM>
+            <Devices>
+                <Device index="1">
+                    <Vendor>None found</Vendor>
+                    <Product>None found</Product>
+                    <Serial>0x01c378e2</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>62.55</Gigabytes>
+                    <IsSSD>Yes</IsSSD>
+                    <Interface>MMC</Interface>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Atom Processor Z36xxx/Z37xxx Series Graphics &amp; Display</Product>
+                    <PciId>8086:F31</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <USBPorts>2</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>838A4ADB-7784-4DC7-B383-5BD8FD583D7D</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>No Asset Tag</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>279087</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Levittown Union free sch dist</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>12932</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Laptop</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="347284211967423177175185146163461039997">
+                    <UUID>11FA4FA9-5526-44F0-ACE7-32EFA6975A7A</UUID>
+                    <DiskOperationType>Wipe</DiskOperationType>
+                    <Method>Single overwrite</Method>
+                    <MethodValue>1</MethodValue>
+                    <StartTime>Friday, 13 Apr 2018 17:50:19</StartTime>
+                    <Duration>00:25:21</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>122159104</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>None found</Vendor>
+                    <Product>None found</Product>
+                    <Serial>0x01c378e2</Serial>
+                    <Gigabytes>62.55</Gigabytes>
+                    <IsSSD>Yes</IsSSD>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

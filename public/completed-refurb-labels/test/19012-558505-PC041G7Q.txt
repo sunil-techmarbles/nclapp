@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20AM0053US
+Computer Serial: PC041G7Q
+Motherboard Vendor: LENOVO
+Motherboard Model: 20AM0053US
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 68:f7:28:6d:c0:74
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+Drive 1: Model: INTEL SSDSC2BF180A5L, Serial: CVTS451605JJ180IGN, Size: 180.05 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 47D34710-4F31-4BFF-9405-A69091645E8A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 558505
+User3: Northwell Health
+User4: 19012
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSC2BF180A5L
+             Serial: CVTS451605JJ180IGN Size: 180.05 GB
+
+UUID: A64CF179-0B09-4E88-B23D-1ADF87EC9F24
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 04 Feb 2020 at 13:50:08
+Date & time operation was completed: Tuesday, 04 Feb 2020 at 14:23:03
+Total elapsed time (HH:MM:SS): 00:32:55
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

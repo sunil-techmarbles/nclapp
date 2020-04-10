@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 3030 AIO
+Computer Serial: 32YDZ12
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0F96C8
+Processor: Intel(R) Core(TM) i5-4590S CPU @ 3.00GHz, Speed: 3000 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 2048 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: f8:bc:12:9b:22:a8
+DVD-RAM writer: DVD+-RW DU-8A5LH
+Drive 1: Model: ST500LT012-1DG142, Serial: S3PAW6MZ, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 5983049D-5D5F-4AE7-B574-BD88AF13FE30
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 549501
+User3: New York Athletic Club
+User4: 18917
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Seagate Model: ST500LT012-1DG142
+             Serial: S3PAW6MZ Size: 500.11 GB
+
+UUID: 864ECB7E-AA86-4950-9F25-2D28FB0F0908
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 07 Feb 2020 at 08:07:36
+Date & time operation was completed: Friday, 07 Feb 2020 at 10:04:53
+Total elapsed time (HH:MM:SS): 01:57:17
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,92 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: System x3550 M4 -[7914AC1]-
+Computer Serial: KQ8N8HC
+Motherboard Vendor: IBM
+Motherboard Model: 01GR486
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 131072 MB, Memory banks: 16, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 6c:ae:8b:62:00:7a
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 6c:ae:8b:62:00:7b
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 6c:ae:8b:62:00:7c
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 6c:ae:8b:62:00:7d
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 6e:ae:8b:62:00:79
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:6e:ea
+DVD reader: DEVICE 81Y3665
+Drive 1: Model: ESXSMK1401GRRB, Serial: SC2963T0E693SC29SC29SC29, Size: 146.00 GB
+Drive 2: Model: ESXSMK1401GRRB, Serial: SC297372C193SC29SC29SC29, Size: 146.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 445FD698-4CAB-4343-B35B-FE857AF43CB6
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 571480
+User3: Northwell Health
+User4: 18978
+\"Product\": Server
+
+>> Raid device #1  Vendor: IBM Model: ESXSMK1401GRRB
+             Serial: SC2963T0E693SC29SC29SC29 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSMK1401GRRB
+             Serial: SC2963T0E693SC29SC29SC29 Size: 136.731 GB  [ 252:0 ]
+
+UUID: E172A1F4-2656-46BF-8748-8A100742C5AF
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 11:03:02
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 11:59:06
+Total elapsed time (HH:MM:SS): 00:56:04
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: IBM Model: ESXSMK1401GRRB
+             Serial: SC297372C193SC29SC29SC29 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM Model: ESXSMK1401GRRB
+             Serial: SC297372C193SC29SC29SC29 Size: 136.731 GB  [ 252:1 ]
+
+UUID: 9B71DC22-FFFE-459A-A2CC-B5C068E2CD92
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Wednesday, 29 Jan 2020 at 11:03:02
+Date & time operation was completed: Wednesday, 29 Jan 2020 at 11:57:39
+Total elapsed time (HH:MM:SS): 00:54:37
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

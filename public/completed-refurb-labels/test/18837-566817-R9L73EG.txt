@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4282AD5
+Computer Serial: R9L73EG
+Motherboard Vendor: LENOVO
+Motherboard Model: 4282AD5
+Processor: Intel(R) Core(TM) i7-2760QM CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 12288 MB, Memory banks: 3, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:de:f1:be:36:04
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 10:0b:a9:5f:d4:04
+DVD-RAM writer: DVDRAM GT33N
+Drive 1: Model: HGST HTS725050A7E630, Serial: TF655AWH117X7L, Size: 500.11 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF108GLM [Quadro 1000M]
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 8E6060F6-FED8-4A68-87BC-78B3004D5764
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 566817
+Lot Name: Tangoe US, Inc.
+Lot Number: 18837
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Hitachi Model: HGST HTS725050A7E630
+             Serial: TF655AWH117X7L Size: 500.11 GB
+
+UUID: D52E14AD-2021-4197-9489-CB6F16CE89B6
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Thursday, 06 Feb 2020 at 17:30:51
+Action End Time: Thursday, 06 Feb 2020 at 22:43:46
+Action Duration: 05:12:55
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20AUS0HF00
+Computer Serial: R90GZ2L9
+Motherboard Vendor: LENOVO
+Motherboard Model: 20AUS0HF00
+Processor: Intel(R) Core(TM) i5-4300M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-V, MAC Address: 54:ee:75:66:6e:f4
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+DVD-RAM writer: DVDRAM GUB0N
+Drive 1: Model: WDC WD5000LPLX-08ZNTT0, Serial: WD-WXB1EC47DX9M, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: 4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 3C8813CE-1576-4BE0-B8FB-D22A39193084
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 522237
+User3: Tory Burch
+User4: 17406
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000LPLX-08ZNTT0
+             Serial: WD-WXB1EC47DX9M Size: 500.11 GB
+
+UUID: FFE89B7F-69F2-4E05-857D-4C66C794FC23
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Friday, 01 Nov 2019 at 09:21:47
+Date & time operation was completed: Friday, 01 Nov 2019 at 14:05:44
+Total elapsed time (HH:MM:SS): 04:43:57
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

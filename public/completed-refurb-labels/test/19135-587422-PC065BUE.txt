@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20BUS05A09
+Computer Serial: PC065BUE
+Motherboard Vendor: LENOVO
+Motherboard Model: 20BUS05A09
+Processor: Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz, Speed: 2300 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (3) I218-LM, MAC Address: 68:f7:28:f2:e0:75
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: 5c:e0:c5:0f:cf:62
+Drive 1: Model: SAMSUNG MZ7LN256HCHP-000L7, Serial: S20HNXAG554609, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: ADF632E6-E881-48D0-AC55-07B5CFCF8575
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 587422
+Lot Name: Ogilvy (SF)
+Lot Number: 19135
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZ7LN256HCHP-000L7
+             Serial: S20HNXAG554609 Size: 256.06 GB
+
+UUID: 446A2AA1-1893-4A6E-B52B-0A0BDF1808E6
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Monday, 09 Mar 2020 at 04:45:19
+Action End Time: Monday, 09 Mar 2020 at 05:09:26
+Action Duration: 00:24:07
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

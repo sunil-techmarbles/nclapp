@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6530
+Computer Serial: 42SLMX1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0JC5MT
+Processor: Intel(R) Core(TM) i5-3340M CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:1f:af:2a:e1:be
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4313 802.11bgn Wireless Network Adapter, MAC Address: 0c:84:dc:a6:bb:c9
+DVD-RAM writer: DVD+-RW SU-208CB
+Drive 1: Model: LITEONIT LCS-256M6S 2.5 7mm 256GB, Serial: TW0XFJWX550853710017, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 8D52069C-81D5-4B57-860A-A9B0D06EDEE6
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 550804
+Lot Name: Metropolitan Museum of Art
+Lot Number: 17594
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Lite-On Model: LITEONIT LCS-256M6S 2.5 7mm 256GB
+             Serial: TW0XFJWX550853710017 Size: 256.06 GB
+
+UUID: 61AACED7-52C8-4803-85CE-256895C7459B
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 500118192
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Action Start Time: Thursday, 23 Jan 2020 at 12:11:35
+Action End Time: Thursday, 23 Jan 2020 at 12:40:30
+Action Duration: 00:28:55
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

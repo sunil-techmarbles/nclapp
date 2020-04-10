@@ -1,0 +1,90 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ZBook 17
+Computer Serial: CND4140LYH
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 190A
+Processor: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 16384 MB, Memory banks: 3, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: a0:2b:b8:39:0d:68
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: Unavailable
+DVD-RAM writer: DVD A DU8A5SH
+Drive 1: Model: SanDisk SD6SB1M-256G-1006, Serial: 141139406236, Size: 256.06 GB
+Drive 2: Model: Hitachi HTS727575A9E364, Serial: J3340084K3UN2B, Size: 750.16 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK104GLM [Quadro K3100M]
+Display Adapter: Vendor: Intel Corporation, Model: 4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 534200CE-19D5-438B-8089-23C9498B2D53
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548013
+User3: Related Companies
+User4: 17604
+\"Product\": Laptop
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk SD6SB1M-256G-1006
+             Serial: 141139406236 Size: 256.06 GB
+
+UUID: FFE2FB72-C7C8-47F8-8C5B-59B6F0F61F3F
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 01 Jan 1980 at 00:14:57
+Date & time operation was completed: Tuesday, 01 Jan 1980 at 00:44:15
+Total elapsed time (HH:MM:SS): 00:29:18
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Block Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Hitachi Model: Hitachi HTS727575A9E364
+             Serial: J3340084K3UN2B Size: 750.16 GB
+
+UUID: C16749B0-DFCC-4AE5-A8C2-64B2BB673165
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Tuesday, 01 Jan 1980 at 00:14:58
+Date & time operation was completed: Tuesday, 01 Jan 1980 at 09:12:56
+Total elapsed time (HH:MM:SS): 08:57:58
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

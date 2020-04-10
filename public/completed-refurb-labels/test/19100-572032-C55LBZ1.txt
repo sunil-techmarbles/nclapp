@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Precision M4700
+Computer Serial: C55LBZ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0WWPJY
+Processor: Intel(R) Core(TM) i7-3740QM CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:1f:af:49:1b:e6
+NIC: Vendor: Broadcom Limited, Model: BCM43228 802.11a/b/g/n, MAC Address: Unavailable
+DVD-RAM writer: DVD+-RW GS40N
+Drive 1: Model: WDC WD7500BPKX-75HPJT0, Serial: WD-WXC1A63M2585, Size: 750.16 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Chelsea XT GL [FirePro M4000]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cape Verde/Pitcairn HDMI Audio [Radeon HD 7700/7800 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: BB42CB40-E494-4DFE-BFD1-F0A05EBE53A3
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 572032
+User3: Camfil USA Inc
+User4: 19100
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD7500BPKX-75HPJT0
+             Serial: WD-WXC1A63M2585 Size: 750.16 GB
+
+UUID: 4444E89E-607B-48D3-8B32-3858A387648C
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 27 Aug 2013 at 11:34:21
+Date & time operation was completed: Tuesday, 27 Aug 2013 at 14:03:16
+Total elapsed time (HH:MM:SS): 02:28:55
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

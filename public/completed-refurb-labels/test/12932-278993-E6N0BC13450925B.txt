@@ -1,0 +1,54 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: ASUSTeK COMPUTER INC.
+Computer Model: T100TA
+Computer Serial: E6N0BC13450925B
+Motherboard Vendor: ASUSTeK COMPUTER INC.
+Motherboard Model: T100TA
+Processor: Intel(R) Atom(TM) CPU Z3740 @ 1.33GHz, Speed: 1300 MHz, Cores: 4, L1 Cache: 224 kB, L2 Cache: 2048 kB
+RAM: 2048 MB, Memory banks: 2, DDR3 DIMM
+Drive 1: Model: None found, Serial: 0x00f40eef, Size: 62.55 GB
+Display Adapter: Vendor: Intel Corporation, Model: Atom Processor Z36xxx/Z37xxx Series Graphics & Display
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 59393AB6-1F37-43A1-9D99-D2D3F9FC84F3
+Current user: ITAMG
+Computer ID: No Asset Tag
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 278993
+Lot Name: Levittown Union free sch dist
+Lot Number: 12932
+\"Product\": Laptop
+
+>> Drive #1  Vendor: None found Model: None found
+             Serial: 0x00f40eef Size: 62.55 GB
+
+UUID: 4E2BD143-2A33-448B-A11A-767E509E599F
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 2
+Date & time operation was started: Sunday, 01 Jan 2012 at 00:23:50
+Date & time operation was completed: Sunday, 01 Jan 2012 at 01:13:15
+Total elapsed time (HH:MM:SS): 00:49:25
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

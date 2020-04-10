@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookAir6,2
+Computer Serial: C02P43L6G086
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-7DF21CB3ED6977E5
+Processor: Intel(R) Core(TM) i5-4260U CPU @ 1.40GHz, Speed: 1400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: Unavailable
+Drive 1: Model: APPLE SSD SM0256F, Serial: S1K4NYAG157863, Size: 251.00 GB
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+Multimedia Adapter: Vendor: Broadcom Inc. and subsidiaries, Model: 720p FaceTime HD Camera
+USB Ports: 6
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B7FC1389-B322-4A69-AB13-846270E8A912
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 583076
+Lot Name: Geometry Global
+Lot Number: 19117
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0256F
+             Serial: S1K4NYAG157863 Size: 251.00 GB
+
+UUID: A00A3F45-2734-481B-9685-B3158C94B085
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 490234752
+Sectors Not Overwritten: 0
+Sectors Verified: 49024016
+Action Start Time: Sunday, 01 Jan 2017 at 00:21:56
+Action End Time: Sunday, 01 Jan 2017 at 01:02:33
+Action Duration: 00:40:37
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacPro5,1
+Computer Serial: H0034141EUF
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-F221BEC8
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 6, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: e8:06:88:ca:fd:92
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: e8:06:88:cb:5e:a6
+NIC: Vendor: Broadcom Limited, Model: BCM4322 802.11a/b/g/n Wireless LAN Controller, MAC Address: Unavailable
+DVD writer: DVD-RW GH41N
+Drive 1: Model: WDC WD1001FALS-41Y6A0, Serial: WD-WCATR2213597, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Juniper XT [Radeon HD 5770]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Juniper HDMI Audio [Radeon HD 5700 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B48C947A-FA86-48D8-9A23-6FE0AEF07C0A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 536040
+User3: Ogilvy North America
+User4: 18869
+\"Product\": Computer
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD1001FALS-41Y6A0
+             Serial: WD-WCATR2213597 Size: 1000.20 GB
+
+UUID: 8F15023E-C296-4F87-B97C-5CAF72FAFFD0
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 18 Nov 2019 at 20:11:25
+Date & time operation was completed: Tuesday, 19 Nov 2019 at 03:25:37
+Total elapsed time (HH:MM:SS): 07:14:12
+
+Operation result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 3249
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown

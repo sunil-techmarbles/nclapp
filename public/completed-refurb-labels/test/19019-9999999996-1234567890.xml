@@ -1,0 +1,3277 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.1.3 64-bit">
+        <KernelVersion>4.14.65-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>Supermicro</ComputerVendor>
+            <ComputerModel>MBD-X8DT6-A-IS018</ComputerModel>
+            <ComputerSerial>1234567890</ComputerSerial>
+            <MotherboardVendor>Supermicro</MotherboardVendor>
+            <MotherboardModel>X8DT6</MotherboardModel>
+            <AssetTag>To Be Filled By O.E.M.</AssetTag>
+            <ChassisType>Main Server Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz</Name>
+                    <Speed>1600 MHz</Speed>
+                    <ID>CPU 1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>4096 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5603  @ 1.60GHz</Name>
+                    <Speed>1600 MHz</Speed>
+                    <ID>CPU 1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>4096 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Other</TypeDetail>
+                    <SerialNumber>A7179CE6</SerialNumber>
+                    <AssetTag>AssetTagNum0</AssetTag>
+                    <PartNumber>18KSF1G72PDZ-1G6E1</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Other</TypeDetail>
+                    <SerialNumber>83E27731</SerialNumber>
+                    <AssetTag>AssetTagNum2</AssetTag>
+                    <PartNumber>18KSF1G72PDZ-1G6E1</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Other</TypeDetail>
+                    <SerialNumber>84E27731</SerialNumber>
+                    <AssetTag>AssetTagNum4</AssetTag>
+                    <PartNumber>18KSF1G72PDZ-1G6E1</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Other</TypeDetail>
+                    <SerialNumber>D9169CE6</SerialNumber>
+                    <AssetTag>AssetTagNum6</AssetTag>
+                    <PartNumber>18KSF1G72PDZ-1G6E1</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Other</TypeDetail>
+                    <SerialNumber>09179CE6</SerialNumber>
+                    <AssetTag>AssetTagNum8</AssetTag>
+                    <PartNumber>18KSF1G72PDZ-1G6E1</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Other</TypeDetail>
+                    <SerialNumber>9D179CE6</SerialNumber>
+                    <AssetTag>AssetTagNum10</AssetTag>
+                    <PartNumber>18KSF1G72PDZ-1G6E1</PartNumber>
+                </Stick>
+                <MemoryBanks>6</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>49152 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Chelsio Communications Inc</Vendor>
+                    <Product>T320 10GbE Dual Port Adapter</Product>
+                    <MACAddress>00:07:43:09:f7:70</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>1425:31</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82574L Gigabit Network Connection</Product>
+                    <MACAddress>00:25:90:c7:0b:48</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10D3</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82574L Gigabit Network Connection</Product>
+                    <MACAddress>00:25:90:c7:0b:49</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10D3</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Unavailable</Vendor>
+                    <Product>Unavailable</Product>
+                    <MACAddress>00:07:43:09:f7:71</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>Unavailable</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device index="1">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2G4GF    0000B320CTNG</Serial>
+                    <Firmware>0210C70A</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="2">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5D1NF    0000B421AQHT</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="3">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN59GV3    0000B419H4Z7</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="4">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5DPZP    0000B42198XY</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="5">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6YM1H    00009447DJZL</Serial>
+                    <Firmware>1217C70C</Firmware>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="6">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN3WACN    0000B3459U2W</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="7">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6YVDJ    00009447DJAX</Serial>
+                    <Firmware>1217C70C</Firmware>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="8">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6Y8VP    00009447DH6V</Serial>
+                    <Firmware>1217C70C</Firmware>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="9">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2GY7R    0000B319DD7K</Serial>
+                    <Firmware>0210C70A</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="10">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN58WY3    0000B418G34N</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="11">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN6JB12    0000M443L8CS</Serial>
+                    <Firmware>0210C70A</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="12">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2FWQB    0000B319EM3M</Serial>
+                    <Firmware>0210C70A</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="13">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN61M28    0000M431CBJF</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="14">
+                    <Vendor>SAMSUNG</Vendor>
+                    <Product>SS162512 CLAR200</Product>
+                    <Serial>0ZNEADB00972</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>200.05</Gigabytes>
+                    <Bytes>200049647720</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="15">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2G6KV    0000B320CQNU</Serial>
+                    <Firmware>0210C70A</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="16">
+                    <Vendor>SAMSUNG</Vendor>
+                    <Product>SS162512 CLAR200</Product>
+                    <Serial>0ZNEADC09580</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>200.05</Gigabytes>
+                    <Bytes>200049647720</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="17">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6Z3PR    00009445VZFP</Serial>
+                    <Firmware>1217C70C</Firmware>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="18">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5CWFG    0000B421AKQT</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="19">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN59H94    0000B419FQ2Q</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="20">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6Z3QH    00009447DKE5</Serial>
+                    <Firmware>1217C70C</Firmware>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="21">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN64NK3    0000M433DES8</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="22">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN58V48    0000B418GAWK</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="23">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN6541M    0000M433ECWB</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+                <Device index="24">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5YLPW    0000N4302Y7S</Serial>
+                    <Firmware>0418C708</Firmware>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>MGA G200eW WPCM450</Product>
+                    <PciId>102B:532</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>LSI Logic / Symbios Logic</Vendor>
+                    <Product>SAS2008 PCI-Express Fusion-MPT SAS-2 [Falcon]</Product>
+                    <Description>Serial Attached SCSI controller</Description>
+                    <PciId>1000:72</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82801JI (ICH10 Family) 4 port SATA IDE Controller #1</Product>
+                    <Description>IDE interface</Description>
+                    <PciId>8086:3A20</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82801JI (ICH10 Family) 2 port SATA IDE Controller #2</Product>
+                    <Description>IDE interface</Description>
+                    <PciId>8086:3A26</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>6</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>574B0EC4-6FE5-42A0-887D-83424980C42D</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>To Be Filled By O.E.M.</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>9999999996</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Control V Symphony</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>19019</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Parts_Hard Drive 2.5</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="65682262379352115213841518415892189236160">
+                    <UUID>4A74B034-634C-45DB-B6C0-92BF26C112E9</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:33:02</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2G4GF    0000B320CTNG</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52871</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52872</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="2" SecurityCode="75731788321520089477319657154129235168137">
+                    <UUID>8C17F747-B157-413E-98DE-9EF8BA710615</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:33:15</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5D1NF    0000B421AQHT</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>45074</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 48 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>45074</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 48 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="3" SecurityCode="246641404219841741771531831691314724142225">
+                    <UUID>6D35D07D-32FB-456C-8E3B-FF3FB4CF92C9</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:14</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN59GV3    0000B419H4Z7</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44984</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44985</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="4" SecurityCode="5010488161815559258129255150204314717">
+                    <UUID>55DE069A-DEA4-4946-AC52-A477B85F62CB</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:57</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5DPZP    0000B42198XY</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>46780</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 48 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>46781</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 48 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="5" SecurityCode="20791224018192246215616410213876589120">
+                    <UUID>B40B102E-6C31-4C48-8D0A-D8C7E7000F09</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:02</StartTime>
+                    <Duration>03:19:29</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1923470933</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>192347094</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6YM1H    00009447DJZL</Serial>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44893</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44896</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="6" SecurityCode="622826353518578532092195013215124410280">
+                    <UUID>96F7DE75-D071-41F2-AC1C-BE3F8DC66C9E</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:31</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN3WACN    0000B3459U2W</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>46431</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 21 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>46432</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 21 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="7" SecurityCode="74161205167140671696641205110918118310105">
+                    <UUID>B556A060-7FD1-41A4-B535-7E634F26939C</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:02</StartTime>
+                    <Duration>03:16:24</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1923470933</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>192347094</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6YVDJ    00009447DJAX</Serial>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44893</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44896</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="8" SecurityCode="2401171172558312411504188618512010418875">
+                    <UUID>C29E0888-1D61-44EE-A14A-0DA00BDC9DA2</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:02</StartTime>
+                    <Duration>03:17:26</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1923470933</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>192347094</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6Y8VP    00009447DH6V</Serial>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44873</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44877</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="9" SecurityCode="244118552102472361892161242371811868988950">
+                    <UUID>40F2CA83-5613-4E07-8825-62915956937C</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:49</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2GY7R    0000B319DD7K</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52871</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52872</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="10" SecurityCode="132351568522013220136239185151792424410431">
+                    <UUID>4664AD31-A4BB-459B-97E5-C75C376E9C40</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:23</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN58WY3    0000B418G34N</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>45047</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 45 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>45047</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 45 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="11" SecurityCode="52227115181137217202632231072187223417428157">
+                    <UUID>E2FEE2A3-D160-4C17-A51E-9E8A44EF722C</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:33:05</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN6JB12    0000M443L8CS</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44995</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 18 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44996</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 18 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="12" SecurityCode="7725466135056252232443222420168205249244">
+                    <UUID>B9F7AB5D-32E4-4935-A6A2-66DB855ADBF0</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:33:02</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2FWQB    0000B319EM3M</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52871</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52871</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="13" SecurityCode="33541042001621215114152227170751608632212">
+                    <UUID>57C75719-2020-4828-955B-9ADF8CD62930</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:31:44</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN61M28    0000M431CBJF</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44966</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 07 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44967</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 07 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="14" SecurityCode="2449111992261499293582421282517712124183">
+                    <UUID>33A743D4-CE7A-47F0-9269-BF097EEB15C3</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:51:58</StartTime>
+                    <Duration>00:03:04</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>1</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>384710861</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>38471087</SectorsVerified>
+                    <NISTMethodType>Purge</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Purge achieved.</NISTMethodTypeReason>
+                    <Vendor>SAMSUNG</Vendor>
+                    <Product>SS162512 CLAR200</Product>
+                    <Serial>0ZNEADB00972</Serial>
+                    <Gigabytes>200.05</Gigabytes>
+                    <Bytes>200049647720</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>71582788</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 44 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>71582788</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 44 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="15" SecurityCode="157851023020111186223301211061551251019226">
+                    <UUID>F436BD68-F03B-43E7-9847-B47751E3E1E9</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:26</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN2G6KV    0000B320CQNU</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52265</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>52266</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 47 Year: 2012</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="16" SecurityCode="202167213238759142194128187133204840119229">
+                    <UUID>376DD62A-D219-4EAD-B56E-E536FF827471</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:51:58</StartTime>
+                    <Duration>00:02:53</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>1</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>384710861</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>38471087</SectorsVerified>
+                    <NISTMethodType>Purge</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Purge achieved.</NISTMethodTypeReason>
+                    <Vendor>SAMSUNG</Vendor>
+                    <Product>SS162512 CLAR200</Product>
+                    <Serial>0ZNEADC09580</Serial>
+                    <Gigabytes>200.05</Gigabytes>
+                    <Bytes>200049647720</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>71582788</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 51 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>71582788</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 51 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="17" SecurityCode="11425215617160102114159029159118813724931">
+                    <UUID>1121B8D7-2BFC-4122-A2A3-E55C038C8C02</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:02</StartTime>
+                    <Duration>03:13:30</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1923470933</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>192347094</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6Z3PR    00009445VZFP</Serial>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44892</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44896</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="18" SecurityCode="93878267159463511136282478969232149139">
+                    <UUID>D4D9D0BA-7E08-4F2F-9C52-FDF7C79FA3B6</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:25</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5CWFG    0000B421AKQT</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44912</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 48 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44912</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 48 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="19" SecurityCode="24718917136240242199621021842521063225188107">
+                    <UUID>B2C8AD33-1DE6-4881-B5C5-C80CA64A6448</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:45</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN59H94    0000B419FQ2Q</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44985</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44985</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="20" SecurityCode="109200326010215621219621610610520624310319824">
+                    <UUID>44254E55-CB5B-4EB0-A2A9-1647A0FA3802</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:02</StartTime>
+                    <Duration>03:21:32</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1923470933</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>192347094</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST910006CLAR1000</Product>
+                    <Serial>9XG6Z3QH    00009447DKE5</Serial>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204885160</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44893</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44896</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 24 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="21" SecurityCode="827522315573908376240811031391772383084">
+                    <UUID>33C82662-21F0-45AF-9C3E-7796C59EFF96</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:31:56</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN64NK3    0000M433DES8</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44876</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 08 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44877</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>1</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 08 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="22" SecurityCode="642301948610517815811812479612636096192">
+                    <UUID>6179B3D2-D303-4623-8B3C-88C940A5BE7F</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:56</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN58V48    0000B418GAWK</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44961</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44962</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 46 Year: 2013</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="23" SecurityCode="220223721402222411011959624613021313331219227">
+                    <UUID>22D2DED3-D51A-4C83-95CD-ED8B91E0C5D9</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:33:15</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN6541M    0000M433ECWB</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44992</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 08 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44992</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 08 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+                <Operation DeviceIndex="24" SecurityCode="1659241161204129238611655912422524619310435">
+                    <UUID>737983A8-51F0-4C0B-BE56-594685D04E07</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 07 Jan 2020 16:52:01</StartTime>
+                    <Duration>00:32:48</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>562884302</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>56288431</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST930065 CLAR300</Product>
+                    <Serial>6XN5YLPW    0000N4302Y7S</Serial>
+                    <Gigabytes>292.70</Gigabytes>
+                    <Bytes>292699837040</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44938</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 04 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PreWipeSmartAttributes>
+                    <PostWipeSmartAttributes>
+                        <SMARTAttribute>
+                            <ID>9</ID>
+                            <Name>Power_On_Hours</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>44939</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>5</ID>
+                            <Name>Reallocated_Sector_Ct</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>0</RawValue>
+                        </SMARTAttribute>
+                        <SMARTAttribute>
+                            <ID>65000</ID>
+                            <Name>Manufactured_Date</Name>
+                            <Flag>-</Flag>
+                            <Value>-</Value>
+                            <Worst>-</Worst>
+                            <Threshold>-</Threshold>
+                            <Type>-</Type>
+                            <Updated>-</Updated>
+                            <WhenFailed>-</WhenFailed>
+                            <RawValue>Week: 04 Year: 2014</RawValue>
+                        </SMARTAttribute>
+                    </PostWipeSmartAttributes>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

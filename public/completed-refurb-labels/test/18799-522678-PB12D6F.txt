@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2347GD4
+Computer Serial: PB12D6F
+Motherboard Vendor: LENOVO
+Motherboard Model: 2347GD4
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 00:21:cc:cd:cd:6d
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 60:67:20:de:b7:98
+DVD-RAM writer: DVD-RW DS8A8SH
+Drive 1: Model: Samsung SSD 840 PRO Series, Serial: S1ATNSAD812646K, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 4440B1D8-A323-4C93-AAFA-71A3E4B41B1D
+Current user: ITAMG
+Computer ID: No Asset Information
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 522678
+Lot Name: 18799
+Lot Number: 18799
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: Samsung SSD 840 PRO Series
+             Serial: S1ATNSAD812646K Size: 256.06 GB
+
+UUID: 246C2EB7-6F90-46D3-A2CE-7BB5777D8E74
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Wednesday, 15 Jan 2020 at 16:39:30
+Action End Time: Wednesday, 15 Jan 2020 at 16:44:26
+Action Duration: 00:04:56
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

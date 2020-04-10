@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP EliteBook 820 G4
+Computer Serial: 5CG815073F
+Motherboard Vendor: HP
+Motherboard Model: 8292
+Processor: Intel(R) Core(TM) i7-7600U CPU @ 2.80GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 0 kB, L2 Cache: 0 kB
+RAM: 8192 MB, Memory banks: 1, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: d4:6d:6d:b7:76:c7
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (4) I219-LM, MAC Address: b4:b6:86:27:4c:0a
+Drive 1: Model: MTFDDAV256TBN-1AR15ABHA, Serial: UFZNP01J1ADZKL, Size: 256.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 3C74F0D4-0C44-442D-93A3-1803C76ED079
+Current user: ITAMG
+Computer ID: 5CG815073F
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 547428
+Lot Name: FCB Global
+Lot Number: 18794
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Micron Model: MTFDDAV256TBN-1AR15ABHA
+             Serial: UFZNP01J1ADZKL Size: 256.06 GB
+
+UUID: E7DCEB1E-1DCE-4F05-B3BD-5FB027035C9E
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50016016
+Action Start Time: Wednesday, 11 Dec 2019 at 11:29:48
+Action End Time: Wednesday, 11 Dec 2019 at 11:33:17
+Action Duration: 00:03:29
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

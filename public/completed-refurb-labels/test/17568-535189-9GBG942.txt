@@ -1,0 +1,86 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R420
+Computer Serial: 9GBG942
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0K29HN
+Processor: Intel(R) Xeon(R) CPU E5-2450 v2 @ 2.50GHz, Speed: 2500 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-2450 v2 @ 2.50GHz, Speed: 2500 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+RAM: 24576 MB, Memory banks: 6, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: b0:83:fe:e4:33:0b
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: b0:83:fe:e4:33:0c
+DVD reader: DVD-ROM DTA0N
+Drive 1: Model: ST300MM0006, Serial: Z0K0CD1A, Size: 299.44 GB
+Drive 2: Model: PERC H710, Serial: 008fd5b004d5056025001712eae03f08, Size: 299.44 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 8A9D4825-2A73-4FBA-BE5B-57804B460FDC
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 535189
+User3: PRA Health Sciences
+User4: 17568
+\"Product\": Server
+
+>> Raid device #1  Vendor: SEAGATE Model: ST300MM0006
+             Serial: Z0K0CD1A Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST300MM0006
+             Serial: Z0K0CD1A Size: 278.875 GB  [ 32:1 ]
+
+UUID: E5BE5331-3B6A-40C5-825A-4E514823FFB9
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 12:44:34
+Date & time operation was completed: Thursday, 14 Nov 2019 at 14:47:12
+Total elapsed time (HH:MM:SS): 02:02:38
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: DELL Model: PERC H710
+             Serial: 008fd5b004d5056025001712eae03f08 Size: 299.44 GB
+
+UUID: 8156B310-3E2E-4BB7-A029-9080A6D0CAAC
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 14 Nov 2019 at 12:44:34
+Date & time operation was completed: Thursday, 14 Nov 2019 at 14:50:19
+Total elapsed time (HH:MM:SS): 02:05:45
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

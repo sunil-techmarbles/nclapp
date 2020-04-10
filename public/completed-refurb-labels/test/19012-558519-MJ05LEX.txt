@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3554-E5U
+Computer Serial: MJ05LEX
+Motherboard Vendor: LENOVO
+Motherboard Model: MAHOBAY
+Processor: Intel(R) Core(TM) i5-3470S CPU @ 2.90GHz, Speed: 2900 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: f8:0f:41:6a:7a:73
+NIC: Vendor: Intel Corporation, Model: Centrino Wireless-N 2230, MAC Address: Unavailable
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVD-RW DS8A9SH
+Drive 1: Model: ST500DM002-1BD142, Serial: Z3TWCGE7, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 95C45E1F-88C9-4B65-ADCB-14551AD828A6
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 558519
+User3: Northwell Health
+User4: 19012
+\"Product\": All_In_One
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z3TWCGE7 Size: 500.11 GB
+
+UUID: E02988F0-14CC-46A1-B20C-12C5D96074C7
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+DCO-Locked: WARNING: Drive has DCO features but they have been locked out prior to WipeDrive running.
+Date & time operation was started: Monday, 27 Jan 2020 at 10:52:11
+Date & time operation was completed: Monday, 27 Jan 2020 at 16:12:35
+Total elapsed time (HH:MM:SS): 05:20:24
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

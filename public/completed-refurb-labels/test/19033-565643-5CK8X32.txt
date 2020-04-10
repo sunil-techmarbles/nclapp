@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude 3550
+Computer Serial: 5CK8X32
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0VMXPH
+Processor: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz, Speed: 2200 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 34:17:eb:8f:bd:f0
+NIC: Vendor: Intel Corporation, Model: Wireless 7265, MAC Address: Unavailable
+Drive 1: Model: ST500LM021-1KJ152, Serial: W6238DEX, Size: 500.11 GB
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 5500
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: DB8DE112-381E-4308-8468-CC4CB7C76DD8
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 565643
+User3: Northwell Health
+User4: 19033
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W6238DEX Size: 500.11 GB
+
+UUID: 080800B0-EDE9-42AA-92DF-B6840C7A3943
+Operation: Overwrite disk.
+Wipe Type: DoD 5220.22-M - 3 Pass, Number of wipes: 3
+Date & time operation was started: Thursday, 30 Jan 2020 at 15:02:50
+Date & time operation was completed: Thursday, 30 Jan 2020 at 19:52:05
+Total elapsed time (HH:MM:SS): 04:49:15
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

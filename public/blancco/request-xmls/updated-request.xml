@@ -2,7 +2,7 @@
 <request>
     <export-report>
         <report mode="original"/>
-        <search path="report.uuid" value="258f7748-d9fc-4036-a944-33b578e33c25" operator="eq" datatype="string" conjunction="true"/>
+        <search path="report.uuid" value="982bd903-91a6-4258-af41-cb55c88a4fa1" operator="eq" datatype="string" conjunction="true"/>
         <pdf-options pdfLanguage="en_US" embedBarcode="false" embedVerificationPercentage="false" type="albus_standard"/>
     </export-report>
 </request>

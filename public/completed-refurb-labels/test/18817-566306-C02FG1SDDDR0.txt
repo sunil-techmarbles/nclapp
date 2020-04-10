@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookAir3,1
+Computer Serial: C02FG1SDDDR0
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-942452F5819B1C1B
+Processor: Intel(R) Core(TM)2 Duo CPU     U9400  @ 1.40GHz, Speed: 1400 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: Unavailable
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43224 802.11a/b/g/n, MAC Address: 44:2a:60:f8:ac:56
+Drive 1: Model: APPLE SSD TS128C, Serial: 21DA50G3K0XK, Size: 121.33 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: MCP89 [GeForce 320M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: MCP89 High Definition Audio
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: FA36DAB4-4D04-47F8-A3F0-B6670CF9BC3D
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 566306
+Lot Name: NBA
+Lot Number: 18817
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD TS128C
+             Serial: 21DA50G3K0XK Size: 121.33 GB
+
+UUID: 56B5D6B0-94D8-468C-9CB9-3A89A0ADFB7F
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 236978176
+Sectors Not Overwritten: 0
+Sectors Verified: 23697818
+Action Start Time: Monday, 01 Jan 2001 at 00:03:30
+Action End Time: Monday, 01 Jan 2001 at 00:09:24
+Action Duration: 00:05:54
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

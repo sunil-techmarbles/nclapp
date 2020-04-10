@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteDesk 800 G1 SFF
+Computer Serial: 2UA4220YSD
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 1998
+Processor: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: a0:d3:c1:1d:a7:d9
+DVD-RAM writer: DVD-RAM UJ8E1
+Drive 1: Model: KINGSTON SV300S37A240G, Serial: 50026B77640455CB, Size: 240.06 GB
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 88DF4A42-9275-40FC-B7B5-EFA6CE473445
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 562740
+User3: Linklaters
+User4: 19022
+\"Product\": Computer
+
+>> Drive #1  Vendor: Kingston Model: KINGSTON SV300S37A240G
+             Serial: 50026B77640455CB Size: 240.06 GB
+
+UUID: 94935A7E-7517-4505-8355-0383C0416E3D
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Thursday, 16 Jan 2020 at 10:50:48
+Date & time operation was completed: Thursday, 16 Jan 2020 at 10:56:25
+Total elapsed time (HH:MM:SS): 00:05:37
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

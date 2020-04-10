@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro10,2
+Computer Serial: C02KP086FFRR
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-AFD8A9D944EA4843
+Processor: Intel(R) Core(TM) i7-3540M CPU @ 3.00GHz, Speed: 3000 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57786 Gigabit Ethernet PCIe, MAC Address: Unavailable
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4331 802.11a/b/g/n, MAC Address: 54:26:96:d4:f3:69
+Drive 1: Model: APPLE SSD SM768E, Serial: S119NYAD207234, Size: 751.28 GB
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: A622DB45-3E4E-43ED-9B06-BEFAFC6E52A3
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 557107
+Lot Name: Anomaly
+Lot Number: 19002
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM768E
+             Serial: S119NYAD207234 Size: 751.28 GB
+
+UUID: 9737102B-3F92-40D9-B4B2-A59F8A9977BB
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1467339812
+Sectors Not Overwritten: 0
+Sectors Verified: 146736016
+Action Start Time: Monday, 10 Feb 2020 at 17:11:08
+Action End Time: Monday, 10 Feb 2020 at 17:43:30
+Action Duration: 00:32:22
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

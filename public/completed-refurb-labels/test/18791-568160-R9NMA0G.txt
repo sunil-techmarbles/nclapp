@@ -1,0 +1,56 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 4243VS4
+Computer Serial: R9NMA0G
+Motherboard Vendor: LENOVO
+Motherboard Model: 4243VS4
+Processor: Intel(R) Core(TM) i7-2860QM CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 4, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 1, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:de:f1:e7:91:bf
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: Unavailable
+DVD-RAM writer: DVD RW AD-7740H
+Drive 1: Model: INTEL SSDSA2BW160G3L, Serial: BAD_CTX     00000159, Size: 160.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF119M [Quadro NVS 4200M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF119 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: A3B8521C-4293-47C1-818D-B34841004CE9
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568160
+User3: Goodwin Procter LLP
+User4: 18791
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSA2BW160G3L
+             Serial: BAD_CTX     00000159 Size: 160.04 GB
+
+UUID: 5BADB8AD-2C52-43E4-A1E0-6D9C2F416D13
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 25 Feb 2020 at 13:21:02
+Date & time operation was completed: Tuesday, 25 Feb 2020 at 13:22:10
+Total elapsed time (HH:MM:SS): 00:01:08
+
+Operation result: FAILURE
+
+Total disk sector read/write errors: 1
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: Yes
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

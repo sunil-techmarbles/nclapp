@@ -1,0 +1,399 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Xyratex
+Computer Model: Storage Server
+Computer Serial: MBC0944037G3859
+Motherboard Vendor: Xyratex
+Motherboard Model: HS-1235T-ATX
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 24576 MB, Memory banks: 3, Other DIMM
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:02:d8
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: 00:50:cc:6b:02:d9
+NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:5b
+DVD reader: Device-CD#0
+Drive 1: Model: SEAGATE ST31000340NS, Serial: 9QJ42C6V, Size: 1000.20 GB
+Drive 2: Model: SEAGATE ST31000340NS, Serial: 9QJ420NP, Size: 1000.20 GB
+Drive 3: Model: SEAGATE ST31000340NS, Serial: 9QJ41NNP, Size: 1000.20 GB
+Drive 4: Model: SEAGATE ST31000340NS, Serial: 9QJ42NCE, Size: 1000.20 GB
+Drive 5: Model: SEAGATE ST31000340NS, Serial: 9QJ42V88, Size: 1000.20 GB
+Drive 6: Model: SEAGATE ST31000340NS, Serial: 9QJ426A7, Size: 1000.20 GB
+Drive 7: Model: SEAGATE ST31000340NS, Serial: 9QJ428QZ, Size: 1000.20 GB
+Drive 8: Model: SEAGATE ST31000340NS, Serial: 9QJ420J4, Size: 1000.20 GB
+Drive 9: Model: SEAGATE ST31000340NS, Serial: 9QJ42N78, Size: 1000.20 GB
+Drive 10: Model: SEAGATE ST31000340NS, Serial: 9QJ42NW7, Size: 1000.20 GB
+Drive 11: Model: SEAGATE ST31000340NS, Serial: 9QJ42N7V, Size: 1000.20 GB
+Drive 12: Model: Hitachi HUA721010KLA330, Serial: GTA060PBK0ZZ0F, Size: 1000.20 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 9
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 29B37602-334F-4B38-A4B1-44C8955E6501
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 9999999991
+Lot Name: Tangoe
+Lot Number: 17473
+\"Product\": Parts_Hard Drive 3.5
+
+>> Drive #1  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ42C6V Size: 1000.20 GB
+
+UUID: 85D6BE60-5F25-45E3-B8C2-1C626E6A9D4F
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 07:14:17
+Action Duration: 13:11:46
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ420NP Size: 1000.20 GB
+
+UUID: 5304EA12-1FCE-4467-8BEE-9B289E51DE2A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 2
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 2
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Tuesday, 03 Dec 2019 at 21:28:14
+Action Duration: 03:25:43
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: FAILED!
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+>> Drive #3  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ41NNP Size: 1000.20 GB
+
+UUID: ABA00C7F-57B9-4F72-90B6-82EAC6D104B2
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 06:44:34
+Action Duration: 12:42:03
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ42NCE Size: 1000.20 GB
+
+UUID: F3F74EB3-09FF-4968-B188-C2805C156E15
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 07:18:09
+Action Duration: 13:15:38
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #5  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ42V88 Size: 1000.20 GB
+
+UUID: 4EFD93AA-A823-4A5C-B3C1-3E66F75836EA
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 07:20:29
+Action Duration: 13:17:58
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #6  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ426A7 Size: 1000.20 GB
+
+UUID: 39FB39DA-A64A-405D-BD98-2348AC01422D
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 197120
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 03:42:13
+Action Duration: 09:39:42
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+>> Drive #7  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ428QZ Size: 1000.20 GB
+
+UUID: 5CA4E382-CA9A-4656-BEF0-6985319CF40D
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 07:12:39
+Action Duration: 13:10:08
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #8  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ420J4 Size: 1000.20 GB
+
+UUID: 038DBEE8-2F85-4557-B3FC-87689F4C224D
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 06:32:24
+Action Duration: 12:29:53
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #9  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ42N78 Size: 1000.20 GB
+
+UUID: F08A9B03-F0A4-4B47-A898-02DF5926086A
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 06:41:23
+Action Duration: 12:38:52
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #10  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ42NW7 Size: 1000.20 GB
+
+UUID: 866BD977-3841-43D2-9494-E29C5BE184FB
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 2560
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Wednesday, 04 Dec 2019 at 03:37:40
+Action Duration: 09:35:09
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #11  Vendor: Seagate Model: SEAGATE ST31000340NS
+             Serial: 9QJ42N7V Size: 1000.20 GB
+
+UUID: 7BFBAC02-E82C-45D7-B2E2-9A3071F72A3B
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 1
+Sectors Overwritten: 1953406466
+Sectors Not Overwritten: 118702
+Sectors Verified: 2
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:31
+Action End Time: Tuesday, 03 Dec 2019 at 21:18:47
+Action Duration: 03:16:16
+
+Action Result: FAILURE
+
+Pre-wipe SMART health status: FAILED!
+Drive Errors Detected: 2
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Drive #12  Vendor: Hitachi Model: Hitachi HUA721010KLA330
+             Serial: GTA060PBK0ZZ0F Size: 1000.20 GB
+
+UUID: 470F30E0-44A4-4BAF-9453-A285981377CE
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 1953525168
+Action Start Time: Tuesday, 03 Dec 2019 at 18:02:32
+Action End Time: Wednesday, 04 Dec 2019 at 09:56:52
+Action Duration: 15:54:20
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

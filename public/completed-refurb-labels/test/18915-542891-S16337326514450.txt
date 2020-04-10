@@ -1,0 +1,259 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Supermicro
+Computer Model: SYS-2028R-C1R4+
+Computer Serial: S16337326514450
+Motherboard Vendor: Supermicro
+Motherboard Model: X10DRC-LN4+
+Processor: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz, Speed: 2600 MHz, Cores: 10, L1 Cache: 640 kB, L2 Cache: 2560 kB
+Processor: Intel(R) Xeon(R) CPU E5-2660 v3 @ 2.60GHz, Speed: 2600 MHz, Cores: 10, L1 Cache: 640 kB, L2 Cache: 2560 kB
+RAM: 262144 MB, Memory banks: 16, DDR4 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:57:ef:5c
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:57:ef:5d
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:57:ef:5e
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 0c:c4:7a:57:ef:5f
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 0c:c4:7a:b7:39:78
+NIC: Vendor: Intel Corporation, Model: Ethernet Controller 10-Gigabit X540-AT2, MAC Address: 0c:c4:7a:b7:39:79
+Drive 1: Model: ST300MP0005, Serial: N003S7K0GRDW, Size: 299.44 GB
+Drive 2: Model: ST300MP0005, Serial: N003S7K0JNMK, Size: 299.44 GB
+Drive 3: Model: SAMSUNG, Serial: MZ7LM480HCHP-00005, Size: 479.56 GB
+Drive 4: Model: SAMSUNG, Serial: MZ7LM480HCHP-00005, Size: 479.56 GB
+Drive 5: Model: SAMSUNG, Serial: MZ7LM480HCHP-00005, Size: 479.56 GB
+Drive 6: Model: SAMSUNG, Serial: MZ7LM480HCHP-00005, Size: 479.56 GB
+Drive 7: Model: SAMSUNG, Serial: MZ7LM480HCHP-00005, Size: 479.56 GB
+Drive 8: Model: SAMSUNG, Serial: MZ7LM480HCHP-00005, Size: 479.56 GB
+Display Adapter: Vendor: ASPEED Technology, Inc., Model: ASPEED Graphics Family
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: E17C4C04-CDB8-4FE8-BFBC-C67AE0CDD741
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 542891
+User3: Control V Symphony
+User4: 18915
+\"Product\": Server
+
+>> Raid device #1  Vendor: SEAGATE Model: ST300MP0005
+             Serial: N003S7K0GRDW Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST300MP0005
+             Serial: N003S7K0GRDW Size: 279.396 GB  [ 252:0 ]
+
+UUID: 4C6A7E70-0920-43E0-8B16-4D8858AD8B3A
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:52
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:41:22
+Total elapsed time (HH:MM:SS): 00:25:30
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: SEAGATE Model: ST300MP0005
+             Serial: N003S7K0JNMK Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST300MP0005
+             Serial: N003S7K0JNMK Size: 279.396 GB  [ 252:1 ]
+
+UUID: 6593B24D-4059-4C7E-900F-A75342E8D60D
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:53
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:41:24
+Total elapsed time (HH:MM:SS): 00:25:31
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: S2E4NX0H405342 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 479.56 GB
+    >>> Raid member #1  Vendor: S2E4NX0H405342 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 447.130 GB  [ 252:4 ]
+
+UUID: C6C9C1FB-6C76-4FE0-9A96-2F4A990EAEC2
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:52
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:54:24
+Total elapsed time (HH:MM:SS): 00:38:32
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: S2E4NX0H404947 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 479.56 GB
+    >>> Raid member #1  Vendor: S2E4NX0H404947 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 447.130 GB  [ 252:2 ]
+
+UUID: 1D1EF4C9-F000-47FB-8176-25E8F8EAB457
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:53
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:58:47
+Total elapsed time (HH:MM:SS): 00:42:54
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: S2E4NX0H404888 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 479.56 GB
+    >>> Raid member #1  Vendor: S2E4NX0H404888 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 447.130 GB  [ 252:3 ]
+
+UUID: 827E982B-ACD4-41FA-B404-51639F585EF4
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:52
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:52:59
+Total elapsed time (HH:MM:SS): 00:37:07
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: S2E4NX0H405370 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 479.56 GB
+    >>> Raid member #1  Vendor: S2E4NX0H405370 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 447.130 GB  [ 252:6 ]
+
+UUID: 138558C1-90C5-476F-8A02-86CF76EBE183
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:53
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:52:51
+Total elapsed time (HH:MM:SS): 00:36:58
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #7  Vendor: S2E4NX0H405338 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 479.56 GB
+    >>> Raid member #1  Vendor: S2E4NX0H405338 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 447.130 GB  [ 252:5 ]
+
+UUID: A270AD28-EDB1-4F41-A35E-2349610F9701
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:52
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:53:59
+Total elapsed time (HH:MM:SS): 00:38:07
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #8  Vendor: S2E4NX0H405369 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 479.56 GB
+    >>> Raid member #1  Vendor: S2E4NX0H405369 Model: SAMSUNG
+             Serial: MZ7LM480HCHP-00005 Size: 447.130 GB  [ 252:7 ]
+
+UUID: C9C72776-F4ED-4E77-B4BB-608DD8918DD1
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Monday, 25 Nov 2019 at 16:15:53
+Date & time operation was completed: Monday, 25 Nov 2019 at 16:57:41
+Total elapsed time (HH:MM:SS): 00:41:48
+
+Operation result: SUCCESS
+
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

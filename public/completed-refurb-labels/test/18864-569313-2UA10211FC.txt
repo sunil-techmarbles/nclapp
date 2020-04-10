@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3 32-bit
+Kernel Version 4.12.12-gentoo
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Z400 Workstation
+Computer Serial: 2UA10211FC
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 0B4Ch
+Processor: Intel(R) Xeon(R) CPU W3503 @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 3072 MB, Memory banks: 3, DDR3 DIMM
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5764M Gigabit Ethernet PCIe, MAC Address: 64:31:50:23:7d:db
+DVD-RAM writer: DVD A DH16ABLH
+Drive 1: Model: ST3250318AS, Serial: 9VYB654S, Size: 250.06 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: G98 [Quadro NVS 450]
+Display Adapter: Vendor: NVIDIA Corporation, Model: G98 [Quadro NVS 450]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 82801JI (ICH10 Family) HD Audio Controller
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: C93CEE13-7D4A-426C-8F6E-968247A85C93
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 569313
+User3: Argonaut Capital Management
+User4: 18864
+\"Product\": Computer
+
+>> Drive #1  Vendor: Seagate Model: ST3250318AS
+             Serial: 9VYB654S Size: 250.06 GB
+
+UUID: BB1A7235-10E1-4712-AD15-AD22FFCE6603
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Tuesday, 28 Jan 2020 at 15:12:08
+Date & time operation was completed: Tuesday, 28 Jan 2020 at 16:00:24
+Total elapsed time (HH:MM:SS): 00:48:16
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

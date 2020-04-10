@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Precision M4500
+Computer Serial: GFY81M1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 041WH1
+Processor: Intel(R) Core(TM) i7 CPU       Q 820  @ 1.73GH, Speed: 1700 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82577LM Gigabit Network Connection, MAC Address: 00:26:b9:d1:72:18
+NIC: Vendor: Intel Corporation, Model: Centrino Ultimate-N 6300, MAC Address: 00:24:d7:07:e8:d8
+DVD-RAM writer: DVD+-RW TS-U633A
+Drive 1: Model: SAMSUNG SSD PM800 2.5" 128GB, Serial: YFA1C21011SY011A3765, Size: 128.04 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GT215GLM [Quadro FX 1800M]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: High Definition Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 43BCC0B4-B553-4D18-AC49-057EF0DB1B63
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 563794
+Lot Name: 19040
+Lot Number: 19040
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG SSD PM800 2.5" 128GB
+             Serial: YFA1C21011SY011A3765 Size: 128.04 GB
+
+UUID: 282199CA-DDF7-4363-98B7-12729206ADA4
+Action: Overwrite disk.
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Monday, 30 Jul 2012 at 21:56:56
+Action End Time: Monday, 30 Jul 2012 at 22:27:18
+Action Duration: 00:30:22
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
