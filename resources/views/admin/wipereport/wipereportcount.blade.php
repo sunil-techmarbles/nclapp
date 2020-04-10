@@ -13,7 +13,7 @@
             </form>
         </div>
     </div>
-    <div class="row">
+    <div class="row wipereportcount-row">
         <div class="col-sm-4">
             <h4 style="margin: 5px">Wipe Data ( PDFs ) </h4>
             <ul class="chart">

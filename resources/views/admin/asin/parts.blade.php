@@ -20,7 +20,7 @@
 				<div class="mx-0 form-group float-right mb-2">
 					<label for="qty">Quantity:</label>
 					<input style="width:80px" class="form-control" type="number" name="qty" id="qty" value="{{$qty}}"/>
-					<button class="btn btn-primary" type="submit">Update</button>
+					<button class="btn btn-primary update-btn" type="submit">Update</button>
 					<button class="btn btn-warning" name="withdraw" value="1" type="submit">Withdraw</button>
 				</div>
 			</div>
@@ -50,8 +50,8 @@
 				@endforeach
 			</table>
 		</form>
-		<div style="margin-bottom: 10px">
-			<button class="btn btn-default" onclick="$('#mlookup').toggle()">Show/Hide Models</button>
+		<div style="margin-bottom: 10px" class="show-hide-btn">
+			<button class="btn btn-default " onclick="$('#mlookup').toggle()">Show/Hide Models</button>
 			@if($miss > 0)
 				<form class="w-80 form-inline float-right" action="{{route('parts.asin', $asinsParts['id'])}}" method="GET">
 					<input type="hidden" name="qty" value="{{$qty}}"/>
@@ -79,7 +79,7 @@
 			</tr>
 			@endforeach
 		</table>
-		<div style="margin-bottom: 10px">
+		<div style="margin-bottom: 10px" class="show-hide-btn">
 			<button class="btn btn-default" onclick="$('#all_parts').toggle()">Show/Hide Parts ({{$asinsParts['model']}} ({{$asinsParts['asin']}})
 			</button>
 		</div>
@@ -114,7 +114,7 @@
 					@endforeach
 				</table>
 			</div>
-			<div style="margin-bottom: 10px;text-align: right">
+			<div style="margin: 10px 0; text-align: right">
 				<button type="submit" value="1" name="assignasinsparts" class="btn btn-primary">Assign selected Parts</button>
 			</div>
 		</form>
