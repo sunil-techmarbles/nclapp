@@ -32,7 +32,11 @@ class LoginController extends Controller
         $rememberMe = ( $request->rememberMe == '1' ) ? true : false ;
         try
         {
-            if (Sentinel::authenticate($request->all(), $rememberMe))
+            $loginData = [
+                'login'    => $request->username,
+                'password' => $request->password,
+            ];
+            if (Sentinel::authenticate($loginData, $rememberMe))
             {
                 return redirect()->route('dashboard');
             }
