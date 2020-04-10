@@ -103,3 +103,17 @@
     overflow: auto;
     margin-bottom: 100px;
 }
+.update-btn {
+    margin: 0 10px;
+} 
+.show-hide-btn button{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+div#footer {
+    padding-top: 40px;
+}
+.text-danger {
+    margin-right: 10px !important;
+}

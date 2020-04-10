@@ -5,6 +5,7 @@ use App\LenovoModelData;
 use App\IbmModel;
 use App\NewAppleData;
 use App\NewProcessors;
+use App\MacDataRaw;
 
 trait CommonWipeMakorApiTraits
 {
@@ -17,6 +18,7 @@ trait CommonWipeMakorApiTraits
     {
         $this->apiData = [];
         $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName, $type);
+        
         if($type == 'Computer')
         {
             $this->SetGraphic();
@@ -46,8 +48,7 @@ trait CommonWipeMakorApiTraits
         }
         elseif ($type == 'Makor_Apple')
         {
-            // $this->appleTableData = getMakorAppleDataFromTable($this->hardware_data);
-            $this->appleTableData = [];
+            $this->appleTableData = MacDataRaw::getMakorAppleDataFromTable($this->hardwareData);
             $this->SaveAppleDataArray();
             $this->SetMakorAppleProcessorData();
             $this->SetMakorAppleHardDriveData();
@@ -2163,8 +2164,23 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['part_number'] = "N/A";
             }
 
-                //set hard drive serial
-            $this->apiData['hard_drive'][$key]['serial'] = $hardDriveData['Serial'];
+            
+            //set hard drive serial
+            if( is_array( $hardDriveData['Serial'] ) && !empty( $hardDriveData['Serial'] ))
+            {
+                $hardDriveDataSerial = $hardDriveData['Serial'][0];
+            }
+            else if (  !is_array( $hardDriveData['Serial'] ) )
+            {
+                $hardDriveDataSerial = $hardDriveData['Serial'];
+            }
+            else
+            {
+                $hardDriveDataSerial = '';
+            }
+
+
+            $this->apiData['hard_drive'][$key]['serial'] = $hardDriveDataSerial;
 
                  //set hard drive capacity
             if (isset($hardDriveData['Gigabytes']) && $hardDriveData['Gigabytes'] > 999)

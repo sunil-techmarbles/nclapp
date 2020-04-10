@@ -458,7 +458,7 @@ function getMakorSmartAttribute($jobOperationData)
     $smartData = "";
     if (isset($jobOperationData['@attributes']))
     {
-        if (isset($jobOperationData['@attributes']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
+        if (isset($jobOperationData['@attributes']['DeviceIndex']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
         {
             foreach ($jobOperationData['PreWipeSmartAttributes']['SMARTAttribute'] as $key => $value)
             {
@@ -493,7 +493,7 @@ function getMakorServiecsQueueStatus($jobOperationDataArray, $productName)
         {
             if (isset($jobOperationData['@attributes']))
             {
-                if (isset($jobOperationData['@attributes']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
+                if (isset($jobOperationData['@attributes']['DeviceIndex']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
                 {
                     $actionresult = $jobOperationData['ActionResult'];
 
@@ -513,7 +513,7 @@ function getMakorServiecsQueueStatus($jobOperationDataArray, $productName)
     {
         if (isset($jobOperationDataArray['@attributes']))
         {
-            if (isset($jobOperationDataArray['@attributes']) && $jobOperationDataArray['@attributes']['DeviceIndex'] == 1)
+            if (isset($jobOperationDataArray['@attributes']['DeviceIndex']) && $jobOperationDataArray['@attributes']['DeviceIndex'] == 1)
             {
                 $actionresult = $jobOperationDataArray['ActionResult'];
                 if (strtolower($actionresult) == "failure")
@@ -879,7 +879,7 @@ function getMakorActionResult($jobOperationDataArray, $productName)
         {
             if (isset($jobOperationData['@attributes']))
             {
-                if (isset($jobOperationData['@attributes']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
+                if (isset($jobOperationData['@attributes']['DeviceIndex']) && $jobOperationData['@attributes']['DeviceIndex'] == 1)
                 {
                     $smartData = $jobOperationData['ActionResult'];
                 }
@@ -890,7 +890,7 @@ function getMakorActionResult($jobOperationDataArray, $productName)
     {
         if (isset($jobOperationDataArray['@attributes']))
         {
-            if (isset($jobOperationDataArray['@attributes']) && $jobOperationDataArray['@attributes']['DeviceIndex'] == 1)
+            if (isset($jobOperationDataArray['@attributes']['DeviceIndex']) && $jobOperationDataArray['@attributes']['DeviceIndex'] == 1)
             {
                 $smartData = $jobOperationDataArray['ActionResult'];
             }
