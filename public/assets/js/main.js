@@ -505,6 +505,10 @@ function getAssetData(fId)
 
 $(document).ready(function()
 {
+	if($('#sel-bs').length > 0)
+	{
+		$('#sel-bs').selectpicker();
+	}
 	if($('.it-amg-redirect').length > 0)
 	{
 		setTimeout(

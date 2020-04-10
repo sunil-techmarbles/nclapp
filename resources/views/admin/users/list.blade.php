@@ -16,6 +16,7 @@
 		<th>User ID</th>
 		<th>User name</th>
 		<th>Email</th>
+		<th>User Name</th>
 		<th>Role</th>
 	</thead>
 	<tbody>
@@ -35,6 +36,7 @@
 			<td>{{$user->id}}</td>
 			<td>{{$user->first_name}} {{$user->last_name}} </td>
 			<td>{{$user->email}}</td>
+			<td>{{$user->username}}</td>
 			<td>{{$user->roles()->get()[0]->name}}</td>
 		</tr>
 		@endforeach

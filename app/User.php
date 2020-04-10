@@ -9,6 +9,14 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends EloquentUser {
 
+	protected static function boot()
+	{
+	    parent::boot();
+
+	    static::deleting(function($usersList) {
+	        $usersList->userCronJobList()->delete();
+	    });
+	}
 	use SoftDeletes; 
 	protected $dates = ['deleted_at'];
 	
@@ -32,14 +40,19 @@ class User extends EloquentUser {
 	public static function getUserDetail($id)
 	{
 		return $data = self::where('users.id' , $id )
-		->join('role_users', 'role_users.user_id', '=', 'users.id')
-		->select('*')
-		->first();
+			->join('role_users', 'role_users.user_id', '=', 'users.id')
+			->select('*')
+			->first();
 	}
 	
 	public static function deleteUserByID($uid)
 	{
 		$user = self::find($uid);
 		return ($user->delete()) ? true : false;
+	}
+
+	public function userCronJobList()
+	{
+		return $this->hasMany('App\UserCronJob');
 	}
 }

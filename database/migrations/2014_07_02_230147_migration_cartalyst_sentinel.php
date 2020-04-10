@@ -106,8 +106,6 @@ class MigrationCartalystSentinel extends Migration
             $table->timestamps();
 
             $table->engine = 'InnoDB';
-            $table->unique('email');
-            $table->unique('username');
         });
     }
 

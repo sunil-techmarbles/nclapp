@@ -19,7 +19,7 @@
 			@csrf  
 			<div class="form-group text-left">
 				<label for="email">First Name:</label>
-				<input type="text" class="form-control" placeholder="Enter First Name" name="fname" value="{{ $user->first_name }}"> 
+				<input type="text" class="form-control" placeholder="Enter First Name" name="fname" value="{{ $user->first_name }}" required> 
 				@if ($errors->has('fname'))
 				<span class="text-danger">{{ $errors->first('fname') }}</span>
 				@endif
@@ -33,17 +33,26 @@
 			</div>
 			<div class="form-group text-left"> 
 				<label for="email">Email:</label>
-				<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{ $user->email }}"> 
+				<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{ $user->email }}" required> 
 				@if ($errors->has('email'))
 				<span class="text-danger">{{ $errors->first('email') }}</span>  
 				@endif
 			</div>
 			<div class="form-group text-left"> 
 				<label for="username">User Name:</label>
-				<input type="text" class="form-control" id="username" placeholder="Enter username" name="email" value="{{ $user->username }}"> 
+				<input type="text" class="form-control" name="username" id="username" placeholder="Enter username" value="{{ $user->username }}" required> 
 				@if ($errors->has('username'))
 				<span class="text-danger">{{ $errors->first('username') }}</span>  
 				@endif
+			</div>
+			<div class="form-group text-left">
+				<label for="selsel-bs1">Cron Job:</label>
+				<select id="sel-bs" name="cronjob[]" multiple data-live-search="true">
+					<option value="" disabled>--Select option--</option>
+					@foreach($cronjobs as $key => $cronjob)
+						<option @if(in_array($key, $user->userCronJobs)) selected @endif value="{{$key}}">{{$cronjob}}</option>
+					@endforeach
+				</select>
 			</div>
 			<div class="form-group text-left">
 				<label for="sel1">Role:</label>

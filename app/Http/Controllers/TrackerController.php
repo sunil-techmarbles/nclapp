@@ -51,8 +51,6 @@ class TrackerController extends Controller
             $user = $request->get("user");
             $act = $request->get("activity");
             $acts = Tracker::getSearchFilterResult($request);
-            // print_r($acts->toArray());
-            // die;
             $total   = count($acts);
             $totalHours = 0;
             $actions = [];

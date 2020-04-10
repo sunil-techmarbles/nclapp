@@ -64,14 +64,12 @@ class LoginController extends Controller
 
     public function sendPasswordResetEmail(Request $request)
     {     
-        $validator = $request->validate(
-                [
-                    'email' => 'required|email|exists:users,email'
-                ],
-                [
-                    'email.exists' => 'User not found with this email',
-                ]
-            );
+        $validator = $request->validate([
+            'email' => 'required|email|exists:users,email'
+        ],
+        [
+            'email.exists' => 'User not found with this email',
+        ]);
         $email = $request->email;
         $user = User::checkEmailExits($email);
         if($user)
@@ -134,12 +132,10 @@ class LoginController extends Controller
 
     public function resetPassword(Request $request)
     {
-        $validator = $request->validate(
-                [
-                    'newpassword' => 'required|min:6',
-                    'confirmpassword' => 'required|min:6|max:20|same:newpassword'
-                ]
-            );    
+        $validator = $request->validate([
+            'newpassword' => 'required|alphaNum|min:6|max:14|',
+            'confirmpassword' => 'required|min:6|max:14|same:newpassword',
+        ]);    
         $resetUserPassword = PasswordReset::ResetUserPassword($request->newpassword, $request->token);
         PasswordReset::RemovePasswordResetToken($request->token);
         if($resetUserPassword)

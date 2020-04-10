@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Http\Request;
 use App\User;
+use App\UserCronJob;
 
 class UsersController extends Controller
 {
@@ -22,37 +23,56 @@ class UsersController extends Controller
 
 	public function edituser($Userid)
 	{
-		$cronjob = config('cronjob.cronJobList');
+		$cronjobs = config('cronjob.cronJobList');
 		$user = User::getUserDetail($Userid);
-		return view('admin.users.edit', compact('user', 'cronjob'))->with(['roles' => $this->roles]);
+		if($user)
+		{
+			$result = UserCronJob::getCronJobName($Userid);
+			$user['userCronJobs'] = ($result->count() > 0) ? $result->toArray() : [];
+			return view('admin.users.edit', compact('user', 'cronjobs'))->with(['roles' => $this->roles]);
+		}
+		abort('404');
 	}
 
 	public function edituserHandle(Request $request, $Userid)
 	{
-		$validator = $request->validate(
-			[
-				'fname' => 'required|min:2|max:50',
-				'lname' => 'required|min:2|max:50',
-				'email' => 'required|unique:users,email,'.$Userid
-			],
-			[
-				'fname.required' => 'First Name is required',
-				'fname.min' => 'First Name must be at least 2 characters.',
-				'fname.max' => 'First Name should not be greater than 50 characters.',
-				'lname.required' => 'Last Name is required',
-				'lname.min' => 'Last Name must be at least 2 characters.',
-				'lname.max' => 'Last Name should not be greater than 50 characters.',
-			]
-		);
+		$validator = $request->validate([
+			'fname' => 'required|min:2|max:50',
+			'lname' => 'required|min:2|max:50',
+			'email' => 'required|unique:users,email,'.$Userid.',id,deleted_at,NULL',
+			'username' => 'required|unique:users,username,'.$Userid.',id,deleted_at,NULL',
+		],[
+			'fname.required' => 'First Name is required',
+			'fname.min' => 'First Name must be at least 2 characters.',
+			'fname.max' => 'First Name should not be greater than 50 characters.',
+			'lname.required' => 'Last Name is required',
+			'lname.min' => 'Last Name must be at least 2 characters.',
+			'lname.max' => 'Last Name should not be greater than 50 characters.',
+		]);
 
 		try {
-			$user_data = [
+			$userData = [
 			    'first_name' => $request->fname ,
-			    'last_name' => $request->lname ,
-			    'email'    => $request->email,
+			    'last_name'  => $request->lname ,
+			    'email'      => $request->email,
+			    'username'   => $request->username,
 	     	];
+	     	if($request->cronjob)
+	     	{
+	     		$cronjobs = $request->cronjob;
+	     		foreach ($cronjobs as $key => $value) {
+	     			$data = [
+						'user_id' => $Userid,
+						'cron_job' => $value,
+						'status' => 1,
+	     			];
+	     			UserCronJob::deleteRecord($Userid);
+	     			UserCronJob::addRecord($data);
+
+	     		}
+	     	}
 	 		$user = User::findorfail($Userid);
-			$user = Sentinel::update($user, $user_data);
+			$user = Sentinel::update($user, $userData);
 			$role = Sentinel::findRoleById( $user->roles()->get()[0]->id );
 			$role->users()->detach($user);
 			$role = Sentinel::findRoleById( $request->user_role );
