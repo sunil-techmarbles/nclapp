@@ -98,7 +98,7 @@ class CommonController extends Controller
 		$wipePdf = $biosPdf = $blancooPdf = $totalFiles = 0;
 		if(isset($request->dates))
 		{
-			$dates = $request->dates ;
+			$dates = $request->dates;
 			$datesArray = explode(" - ",$dates);
 			$dateFrom = date("Y-m-d",strtotime($datesArray[0]));
 			$dateTo = date("Y-m-d",strtotime($datesArray[1]))." 23:59:59";
@@ -108,7 +108,7 @@ class CommonController extends Controller
 			$date1 = date("m/d/Y",strtotime("-1 days"))." 23:59:59";
 			$dateFrom = date("Y-m-d",strtotime("-1 days"));
 			$dateTo = date("Y-m-d",strtotime("-1 days"))." 23:59:59";
-			$dates = date("m/d/Y",strtotime("-1 days")) . " - " . $date1;
+			$dates = date("m/d/Y",strtotime("-1 days")). " - ".$date1;
 		}
 		$reports = WipeReport::getWipeReportsFilesCountData($dateFrom, $dateTo);
 		foreach ($reports as $key => $report)

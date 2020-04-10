@@ -870,19 +870,18 @@ class RecycleController extends Controller
     {
         if (isset($request->cat_name) && !empty($request->cat_name))
         {
-            $data = ['category' => $request->cat_name];
+            $data = ['category' => trim($request->cat_name)];
             $categoryData = Recycle::getTypeOfScrap((object) $data);
             $categoryData = (!$categoryData->isEmpty()) ? $categoryData->toArray() : [];
             if($categoryData)
             {
-                return view('admin.recycle-first.category-edit', compact('categoryData'));
+                return redirect()->route('recycle.first')->with('success', 'Record updated successfully');
             }
             else
             {
                 abort('404');
             }
         }
-        abort('404');
     }
 
     public function updateCategoryRecord(Request $request)

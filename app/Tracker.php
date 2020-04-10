@@ -41,44 +41,29 @@ class Tracker extends Model
     public static function getSearchFilterResult($request)
     {
         $query = self::select('*');
+        $dateTo = date("Y-m-d")." 23:59:59";
+        $dateFrom = date("Y-m-d")." 00:00:00";
         if($request->has('dates'))
         {
             $dates = $request->get('dates');
             $adates = explode(" - ",$dates);
-            $dateFrom = date("Y-m-d",strtotime($adates[0]));
+            $dateFrom = date("Y-m-d",strtotime($adates[0]))." 00:00:00";
             $dateTo = date("Y-m-d",strtotime($adates[1]))." 23:59:59";
         }
-        else
-        {
-            $dateTo = date("Y-m-d")." 23:59:59";
-            $dateFrom = date("Y-m-d");
-            $dates = date("m/d/Y",strtotime($dateFrom)) . " - " . date("m/d/Y",strtotime($dateTo));
-        }
-
-        $query = $query->where('start', '>=', $dateFrom);
-        $query = $query->where('start', '<=', $dateTo);
-        $query = $query->orderBy('start');
-
+        $query = $query->whereBetween('start', [$dateFrom, $dateTo]);
         if($request->has("user"))
         {
             $user = $request->get("user");
             $query = $query->where(['user' => $user]);
         }
-        else
-        {
-            $user = false;
-        }
 
         if($request->has("activity"))
         {
             $act = $request->get("activity");
-            $query = $query->where('activity','LIKE', $act);
-        }
-        else
-        {
-            $act = false;
+            $query = $query->where('activity','LIKE', '%'.$act.'%');
         }
         $query = $query->where('activity','!=', "");
+        $query = $query->orderBy('start');
         return $query->get();
     }
 
