@@ -10,7 +10,7 @@
 				<div class="col-md-3 mx-0">
 				<input type="hidden" name="p" value="report"/>
 					<select name="user" class="form-control" id="user" onchange="doFilter()">
-						<option value="">User:</option>
+						<option disabled selected value> Select User</option>
 						@foreach($userList as $key => $user)
 							<option @if(request()->get('user') == htmlentities($user, ENT_QUOTES)) selected @endif value="{{htmlentities($user, ENT_QUOTES)}}">{{$user}}</option>
 						@endforeach
@@ -18,7 +18,7 @@
 				</div>
 				<div class="col-md-6 mr-0">
 					<select name="activity" class="form-control" id="activity" onchange="doFilter()">
-						<option value="">Activity:</option>
+						<option disabled selected value>Select Activity</option>
 						@foreach($actionList as $key => $action)
 							<option @if(request()->get('activity') == htmlentities($action, ENT_QUOTES)) selected @endif value="{{htmlentities($action, ENT_QUOTES)}}">{{$action}}</option>
 						@endforeach

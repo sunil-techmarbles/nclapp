@@ -18,15 +18,15 @@ class WipeReport extends Model
 
     public static function getWipeReportsFilesCountData( $dateFrom, $dateTo )
     {
-		return self::whereBetween( 'date', [$dateFrom, $dateTo] )
-					->get() ;
+		return self::whereBetween('date', [$dateFrom, $dateTo])
+			->get() ;
     }
 
     public static function getWipeReportsFilesData($date)
     {
         return self::select('*')
-                ->where('date', '>=', $date )
-                ->get();
+            ->where('date', '>=', $date )
+            ->get();
     }
 
     public static function InsertWipeReportsFileData($wipePdfFilesCount, $wipeBiosFilesCount, $blanccoPdfFilesCount, $TodayDate)
@@ -42,9 +42,10 @@ class WipeReport extends Model
     public static function UpdateWipeReportsFileData($wipePdfFilesCount, $wipeBiosFilesCount, $blanccoPdfFilesCount, $TodayDate)
     {
         return self::where('date', '>=', $TodayDate )
-                    ->update(['wipe_data_pdf_count' => $wipePdfFilesCount,
-                              'bios_data_file_count' => $wipeBiosFilesCount,
-                              'blancco_pdf_data_count' => $blanccoPdfFilesCount
-                            ]);
+            ->update([
+                'wipe_data_pdf_count' => $wipePdfFilesCount,
+                'bios_data_file_count' => $wipeBiosFilesCount,
+                'blancco_pdf_data_count' => $blanccoPdfFilesCount
+            ]);
     }
 }

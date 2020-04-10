@@ -41,10 +41,18 @@ class TrackerController extends Controller
         $currentUser = Sentinel::getUser()->first_name;
         if(isset($request->p))
         {
-            $dates = $request->get('dates');
+            $dateTo = date("Y-m-d")." 23:59:59";
+            $dateFrom = date("Y-m-d")." 00:00:00";
+            $dates = date("m/d/Y",strtotime($dateFrom)) . " - " . date("m/d/Y",strtotime($dateTo));
+            if($request->has('dates'))
+            {
+                $dates = $request->get('dates');
+            }
             $user = $request->get("user");
             $act = $request->get("activity");
             $acts = Tracker::getSearchFilterResult($request);
+            // print_r($acts->toArray());
+            // die;
             $total   = count($acts);
             $totalHours = 0;
             $actions = [];
