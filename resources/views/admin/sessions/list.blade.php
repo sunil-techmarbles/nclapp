@@ -6,14 +6,12 @@
 		<form method="post" class="form-inline" enctype="multipart/form-data" action="{{route('sessions')}}" style="max-height: 250px;overflow: auto;">
 			@csrf
 			<div class="w-100 row mb-3 mt-3">
-				<div class="col-md-6 mr-0">
+				<div class="col-md-7 mr-0">
 					<div class="form-group">
 						<input class="form-control" type="file" name="bulk_data" id="bulk_data"/>
-						<input type="submit" value="Bulk Upload" class="btn btn-warning" name="bulk_upload"/>
+						<input type="submit" value="Bulk Upload" class="btn btn-warning ml-1" name="bulk_upload"/>
+						<a target="_blank" class="btn btn-warning ml-1" href="{{URL('/sample-files/sample.xlsx')}}">Sample</a>
 					</div>					
-				</div>
-				<div class="col-md-1">
-					<a target="_blank" class="btn btn-warning" href="{{URL('/sample-files/sample.xlsx')}}">Sample</a>
 				</div>
 				<div class="col-md-5">
 					<div class="form-group float-right">

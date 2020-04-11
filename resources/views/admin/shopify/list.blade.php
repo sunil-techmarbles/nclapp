@@ -2,22 +2,22 @@
 @section('title', 'Shopify Inventory')
 @section('content')
 <div class="container">
-	<div style="position: sticky;top:0; background:white; height:75px; border-bottom:2px solid #dddddd">
+	<div style="position: sticky;top:0; background:white; height:100px; border-bottom:2px solid #dddddd; padding: 1px 10px;">
 		<div class="mb-3">
 			<h3>
-				<span class="float-left">New Running List</span>
-				<span class="float-right">UPC Remaining: @if(is_array($upcCount)) {{@$upcCount[0]["count"]}} @endif</span>
+				<span class="float-left pb-1">New Running List</span>
+				<span class="float-right pb-1">UPC Remaining: @if(is_array($upcCount)) {{@$upcCount[0]["count"]}} @endif</span>
 			</h3>
 		</div>
-		<form method="post" class="form-inline row w-100" action="{{route('inventory',['shopifysubmit' => 'true'])}}" enctype="multipart/form-data">
+		<form method="post" class="form-inline row w-100 m-0" action="{{route('inventory',['shopifysubmit' => 'true'])}}" enctype="multipart/form-data">
 			@csrf
-			<div class="col-6 float-left">
+			<div class="col-6 float-left p-0">
 				<div class="form-group">
 					<input class="form-control" type="file" name="bulk_data" id="bulk_data"/>
 					<input type="submit" value="Bulk Upload" class="btn btn-warning" name="bulk_upload"/>
 				</div>
 			</div>
-			<div class="col-6 float-right">
+			<div class="col-6 float-right p-0">
 				<a class="btn btn-info ml-2 float-right" href="{{route('inventory.csv',['csv' => '1'])}}">Export</a>
 				<button type="button" class="btn btn-warning ml-2 float-right" data-toggle="modal" data-target="#brModal">Bulk Remove</button>
 				<button type="button" class="btn btn-info ml-2 float-right" id="sync-all-to-shopify">Sync to Shopify</button>
@@ -25,7 +25,7 @@
 		</form>
 	</div>
 	@if (!empty($runningList))
-		<table class="table table-condensed table-hover" id="maintable" style="background: white">
+		<table class="table table-condensed table-hover table-responsive" id="maintable" style="background: white">
 			<thead>
 				<tr>
 					<th style="white-space: nowrap">

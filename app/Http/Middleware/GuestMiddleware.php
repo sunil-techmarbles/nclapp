@@ -34,7 +34,7 @@ class GuestMiddleware
                 return redirect()->back()->with(['error' => 'You have no permission to access this page.']);
             }
         }
-        else if (\Route::current()->uri() == 'admin/dashboard')
+        else if (\Route::current()->uri() == 'admin/dashboard' || \Route::current()->uri() == 'admin/itamgdashboard' || \Route::current()->uri() == 'admin/refurbconnectdashboard' )
         {
             if (Sentinel::guest())
             {

@@ -1,4 +1,4 @@
-<div class="modal fade" id="pnModal" tabindex="-1" role="dialog" aria-labelledby="pnModalLabel" aria-hidden="true">
+<div class="modal fade add-part-num" id="pnModal" tabindex="-1" role="dialog" aria-labelledby="pnModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-sm" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -25,8 +25,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default pull-right" onclick="savePN('addpartnumber')">Save</button> 
+			<div class="modal-footer ">
+				<button type="button" class="btn btn-default pull-right save" onclick="savePN('addpartnumber')">Save</button> 
 			</div>
 		</div>
 	</div>

@@ -9,7 +9,7 @@
     <div style="text-align: center;font-size: 50px;font-weight: bold;color:#139999">
         ONE COMPUTER AT A TIME
     </div>
-    <div class="pt-2 site-dashboard" style="max-width: 700px;margin: auto;">
+    <div class="pt-2" style="max-width: 700px;margin: auto;">
         <div class="menu-item">
             <a href="{{route('audit')}}"><span class="fa fa-refresh"></span></a>
             <a href="{{route('audit')}}">Audit</a>

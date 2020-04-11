@@ -9,7 +9,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');
 Route::get('/logout', 'LoginController@logout')->name('logout');
 Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');
@@ -25,6 +24,8 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	Route::get('/register', 'RegisterController@index')->name('user.register');
 	Route::prefix('admin')->group(function () {
 		Route::get('/dashboard','DashboardController@index')->name('dashboard');
+		Route::get('/itamgdashboard','DashboardController@itamgDashboardSection')->name('dashboard.itamg');
+		Route::get('/refurbconnectdashboard','DashboardController@RefurbConnectDashboard')->name('dashboard.refurbconnect');
 	});
 });
 
