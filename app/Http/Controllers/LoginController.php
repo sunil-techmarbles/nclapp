@@ -24,7 +24,7 @@ class LoginController extends Controller
     }
 
     public function loginAuthenticate(Request $request)
-    { 
+    {
         $validator = $request->validate([
             'username' => 'required',
             'password' => 'required|alphaNum'

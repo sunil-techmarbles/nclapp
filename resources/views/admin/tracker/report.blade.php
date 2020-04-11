@@ -6,8 +6,8 @@
 	<div id="page-head" class="noprint">Time Tracker Report</div>
 	<div class="row">
 		<div class="col-sm-12" style="text-align: right">
-			<form method="get" class="form-inline" id="statsform" action="{{route('tracker')}}">
-				<div class="col-md-3 mx-0">
+			<form class="tracker-form" method="get" class="form-inline" id="statsform" action="{{route('tracker')}}">
+				<div class="tracker-tab  m-1">
 				<input type="hidden" name="p" value="report"/>
 					<select name="user" class="form-control" id="user" onchange="doFilter()">
 						<option disabled selected value> Select User</option>
@@ -16,7 +16,7 @@
 						@endforeach
 					</select>
 				</div>
-				<div class="col-md-6 mr-0">
+				<div class="tracker-tab  m-1">
 					<select name="activity" class="form-control" id="activity" onchange="doFilter()">
 						<option disabled selected value>Select Activity</option>
 						@foreach($actionList as $key => $action)
@@ -24,7 +24,7 @@
 						@endforeach
 					</select>
 				</div>
-				<div class="col-md-3 mr-0">
+				<div class="tracker-tab  m-1">
 					<input type="text" style="display: inline-block;" class="form-control" id="dates" name="dates" value="{{request()->get('dates')}}" />
 				</div>
 			</form>

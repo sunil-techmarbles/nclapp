@@ -1,7 +1,7 @@
 .chart li{
     background: rgb(19, 118, 166);
     list-style-type: none;
-    padding: 5px;
+    padding: 5px 20px;
     box-sizing: border-box;
     margin-top: 3px;
     white-space: nowrap;
@@ -14,6 +14,12 @@
 .wipeReportNav {
     list-style-type: none;
     float: right;
+}
+.btn.btn-default.btn-sm.border {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+    padding: 8px 12px;
 }
 /*tech css*/
 #printbtn .btn.btn-default {
@@ -116,4 +122,34 @@ div#footer {
 }
 .text-danger {
     margin-right: 10px !important;
+}
+.wipereportcount-row {
+    padding-top: 20px;
+}
+.wipereportcount-row .chart {
+    padding: 10px 0;
+}
+input#bulk_data {
+    padding: 3px 5px !important;
+}
+.tracker-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+        padding: 20px 0;
+}
+.add-part-num .modal-footer .save {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+#supplie table.table tr td input {
+    width: 100% !important;
+}
+#supplie table.table tr td textarea {
+    width: 100%;
+    height: 200px;
+}
+#supplie table.table tr td label input {
+    width: 16px !important;
 }

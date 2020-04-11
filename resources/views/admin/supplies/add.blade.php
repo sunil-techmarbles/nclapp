@@ -10,7 +10,7 @@
 					<tr>
 						<td class="float-right">
 							<button type="submit" class="btn btn-primary"> Save </button> 
-							<a class="btn btn-default btn-sm border" href="{{route('supplies')}}">Back</a>
+							<a class="btn btn-default btn-sm border btn-secondary" href="{{route('supplies')}}">Back</a>
 						</td>
 						<td class="float-left">
 							<h3>Add Supply</h3>
