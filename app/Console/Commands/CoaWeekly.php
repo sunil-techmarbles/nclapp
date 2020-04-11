@@ -5,6 +5,7 @@ use Illuminate\Console\Command;
 use App\CoaReport;
 use App\Asin;
 use App\ReportEmail;
+use App\UserCronJob;
 use File;
 use Illuminate\Support\Facades\Mail;
 
@@ -58,8 +59,17 @@ class CoaWeekly extends Command
 
     public function SendCOAReportWeekly($fileName, $filePath)
     {
+        $e_mails = [];
         $emails = ReportEmail::getRecordForEdit('coa');
-        $emailsToSend =  explode(', ', $emails[0]);
+        $reportEmailsWeekly = UserCronJob::getCronJobUserEmails('coaEmails');
+        if($reportEmailsWeekly->count() > 0)
+        {
+            foreach ($reportEmailsWeekly as $key => $value) {
+                $e_mails[] = $value->email;
+            }
+        }
+        $emailsToSend = ($reportEmailsWeekly->count() > 0) ? $e_mails : explode(', ', $emails[0]);
+        // $emailsToSend =  explode(', ', $emails[0]);
         $subject = "Weekly COA Report";
         $body = "Please find the weekly COA report attached";
         Mail::raw($body, function($m) use ( $subject, $emailsToSend, $filePath, $fileName )

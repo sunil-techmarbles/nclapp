@@ -2,6 +2,7 @@
 namespace App\Console\Commands;
 use App\ReportEmail;
 use App\FailedSearch;
+use App\UserCronJob;
 use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Console\Command;
@@ -56,7 +57,16 @@ class FailedSearchWeekly extends Command
     public function SendFailedSearchReportDaily( $fileName, $filePath )
     {
         $emails = ReportEmail::getRecordForEdit('Weekly');
-        $emailsToSend =  explode(', ', $emails[0]);
+        $e_mails = [];
+        $reportEmailsWeekly = UserCronJob::getCronJobUserEmails('reportEmailsWeekly');
+        if($reportEmailsWeekly->count() > 0)
+        {
+            foreach ($reportEmailsWeekly as $key => $value) {
+                $e_mails[] = $value->email;
+            }
+        }
+        $emailsToSend = ($reportEmailsWeekly->count() > 0) ? $e_mails : explode(', ', $emails[0]);
+        // $emailsToSend =  explode(', ', $emails[0]);
         $subject = "Weekly Failed Search Report";
         $body = "Please find the Failed Search report attached";
         Mail::raw($body, function($m) use ( $subject, $emailsToSend, $filePath, $fileName )

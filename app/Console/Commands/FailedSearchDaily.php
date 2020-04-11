@@ -2,6 +2,7 @@
 namespace App\Console\Commands;
 use App\ReportEmail;
 use App\FailedSearch;
+use App\UserCronJob;
 use Illuminate\Support\Facades\Mail;
 
 use Illuminate\Console\Command;
@@ -51,23 +52,30 @@ class FailedSearchDaily extends Command
         die('Failed Search Daily Report Sent');
     }
 
-
     public function SendFailedSearchReportDaily($fileName, $filePath)
     {
         $emails = ReportEmail::getRecordForEdit('Daily');
-        $emailsToSend =  explode(', ', $emails[0]);
+        $e_mails = [];
+        $reportEmailsDaily = UserCronJob::getCronJobUserEmails('reportEmailsDaily');
+        if($reportEmailsDaily->count() > 0)
+        {
+            foreach ($reportEmailsDaily as $key => $value) {
+                $e_mails[] = $value->email;
+            }
+        }
+        $emailsToSend = ($reportEmailsDaily->count() > 0) ? $e_mails : explode(', ', $emails[0]);
+        // $emailsToSend =  explode(', ', $emails[0]);
         $subject = "Daily Failed Search Report";
         $body = "Please find the Failed Search report attached";
         Mail::raw($body, function($m) use ( $subject, $emailsToSend, $filePath, $fileName )
         {
-                $m->to( $emailsToSend )->subject($subject);
-                $m->attach( $filePath , array(
-                            'as' => $fileName,
-                            'mime' => 'csv')
-                        );
+            $m->to( $emailsToSend )->subject($subject);
+            $m->attach( $filePath , array(
+                'as' => $fileName,
+                'mime' => 'csv')
+            );
         });
     }
-
 
     /**
      * Create a CSV file.

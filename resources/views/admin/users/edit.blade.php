@@ -46,15 +46,6 @@
 				@endif
 			</div>
 			<div class="form-group text-left">
-				<label for="selsel-bs1">Cron Job:</label>
-				<select id="sel-bs" name="cronjob[]" multiple data-live-search="true">
-					<option value="" disabled>--Select option--</option>
-					@foreach($cronjobs as $key => $cronjob)
-						<option @if(in_array($key, $user->userCronJobs)) selected @endif value="{{$key}}">{{$cronjob}}</option>
-					@endforeach
-				</select>
-			</div>
-			<div class="form-group text-left">
 				<label for="sel1">Role:</label>
 				<select class="form-control" name="user_role">  
 					@foreach($roles as $role)

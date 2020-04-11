@@ -39,10 +39,15 @@ class User extends EloquentUser {
 
 	public static function getUserDetail($id)
 	{
-		return $data = self::where('users.id' , $id )
+		return self::where('users.id' , $id )
 			->join('role_users', 'role_users.user_id', '=', 'users.id')
 			->select('*')
 			->first();
+	}
+
+	public static function getAllUserEmails()
+	{
+		return self::pluck('email','id');
 	}
 	
 	public static function deleteUserByID($uid)

@@ -12,7 +12,7 @@
 	<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/dataTables/jquery.dataTables.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/datepicker/datepicker.min.css')}}" rel="stylesheet">
-	@if(request()->segment(count(request()->segments())) == 'recyclesecond' ||
+	@if(request()->segment(count(request()->segments())) == 'assetlookup' ||
 		request()->segment(count(request()->segments())) == 'failedsearch' ||
 		request()->segment(count(request()->segments())) == 'category' ||
 		request()->segment(count(request()->segments())) == 'email')
@@ -49,7 +49,7 @@
 					<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">
 				</a>
 			</div>
-			@if(request()->segment(count(request()->segments())) == 'recyclesecond' ||
+			@if(request()->segment(count(request()->segments())) == 'assetlookup' ||
 				request()->segment(count(request()->segments())) == 'failedsearch' ||
 				request()->segment(count(request()->segments())) == 'category' ||
 				request()->segment(count(request()->segments())) == 'email'
@@ -85,12 +85,12 @@
 @if(request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'runninglist')
 <script type="text/javascript" src = "{{URL('assets/js/inventory.js')}}" ></script>
 @endif
-@if(request()->segment(count(request()->segments())) == 'recyclesecond' ||
+@if(request()->segment(count(request()->segments())) == 'assetlookup' ||
 	request()->segment(count(request()->segments())) == 'search' ||
 	request()->segment(count(request()->segments())) == 'failedsearch' || 
 	request()->segment(count(request()->segments())) == 'category'||
 	request()->segment(count(request()->segments())) == 'email')
-	@if(request()->segment(count(request()->segments())) == 'recyclesecond' ||
+	@if(request()->segment(count(request()->segments())) == 'assetlookup' ||
 		request()->segment(count(request()->segments())) == 'category')
 		@include('layouts.datatableexportscripts')
 	@endif

@@ -18,13 +18,24 @@ use App\Session;
 use App\ShipmentsData;
 use App\SessionData;
 use App\SupplieEmail;
+use App\UserCronJob;
 
 class SessionController extends Controller
 {
-    public $basePath, $refurbLabels, $current, $refurbAssetData, $formData, $sessionReports;
+    public $basePath, $refurbLabels, $current, $refurbAssetData, $formData, $sessionReports, $sessionEmails,
+    $e_mails;
 
 	public function __construct()
     {
+    	$this->e_mails = [];
+    	$this->sessionEmails = UserCronJob::getCronJobUserEmails('sessionEmails');
+        if($this->sessionEmails->count() > 0)
+        {
+            foreach ($this->sessionEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+    	$this->sessionEmails = ($this->sessionEmails->coount() > 0) ? $this->e_mails : Config::get('constants.sessionEmails');
     	$this->basePath = base_path().'/public';
     	$this->current = Carbon::now();
     	$this->sessionReports = $this->basePath.'/session-reports';
@@ -142,7 +153,7 @@ class SessionController extends Controller
 				
 				$pdf = PDF::loadView('admin.pdf.sessdetails', $data);
 				$pdf->save($this->sessionReports.'/session'.$currentSession.'.pdf');
-				$sessionEmails = Config::get('constants.sessionEmails');
+				$sessionEmails = $this->sessionEmails;
 				$subject = 'Session details';
 				$name = $currentSession.'.csv';
 				$name2 = $currentSession.'.pdf';

@@ -27,12 +27,49 @@ class UsersController extends Controller
 		$user = User::getUserDetail($Userid);
 		if($user)
 		{
-			$result = UserCronJob::getCronJobName($Userid);
-			$user['userCronJobs'] = ($result->count() > 0) ? $result->toArray() : [];
 			return view('admin.users.edit', compact('user', 'cronjobs'))->with(['roles' => $this->roles]);
 		}
 		abort('404');
 	}
+
+	public function manageEmail(Request $request)
+    {
+    	$cronjobTypes = config('cronjob.cronJobType');
+    	if($request->isMethod('post'))
+    	{
+    		$cronjobname = $request->cronjobname;
+			if($request->cronjob)
+			{
+				$cronjobs = $request->cronjob;
+				UserCronJob::deleteRecord($cronjobname);
+				foreach ($cronjobs as $key => $value)
+				{
+					$data = [
+					'user_id' => $value,
+					'cron_job' => $cronjobname,
+					'status' => 1,
+					];
+					UserCronJob::addRecord($data);
+				}
+	    	}
+	    	return redirect()->route('manage.emails')->with('success', 'Record added successfully ');
+	   	}
+	   	else
+	   	{
+	    	if($request->a)
+	    	{
+	    		$name = $cronjobTypes[$request->t];
+	    		$result = UserCronJob::getCronJobName($request->t);
+	    		$result = $result->toArray();
+	    		$userEmails = User::getAllUserEmails();
+	    		return view('admin.users.add-cron-email', compact('result','name','userEmails'));
+	    	}
+	    	else
+	    	{
+	        	return view('admin.users.manage-email', compact('cronjobTypes'));
+	    	}
+	   	}
+    }
 
 	public function edituserHandle(Request $request, $Userid)
 	{
@@ -57,20 +94,6 @@ class UsersController extends Controller
 			    'email'      => $request->email,
 			    'username'   => $request->username,
 	     	];
-	     	if($request->cronjob)
-	     	{
-	     		$cronjobs = $request->cronjob;
-	     		foreach ($cronjobs as $key => $value) {
-	     			$data = [
-						'user_id' => $Userid,
-						'cron_job' => $value,
-						'status' => 1,
-	     			];
-	     			UserCronJob::deleteRecord($Userid);
-	     			UserCronJob::addRecord($data);
-
-	     		}
-	     	}
 	 		$user = User::findorfail($Userid);
 			$user = Sentinel::update($user, $userData);
 			$role = Sentinel::findRoleById( $user->roles()->get()[0]->id );

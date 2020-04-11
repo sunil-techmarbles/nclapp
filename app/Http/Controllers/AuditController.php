@@ -21,7 +21,7 @@ use App\ListData;
 class AuditController extends Controller
 {
 
-	public $basePath, $formData, $sandboxMode, $wipeDataAdditional, $wipeDataMobile;
+	public $basePath, $formData, $sandboxMode, $wipeDataAdditional, $wipeDataMobile, $adminEmails;
 	/**
      * Create a new controller instance.
      *
@@ -29,6 +29,7 @@ class AuditController extends Controller
      */
 	public function __construct()
 	{
+		$this->adminEmails = Config::get('constants.adminEmail');
 		$this->sandboxMode = false;
 		$this->basePath = base_path().'/public';
 		$this->current = Carbon::now();
@@ -1213,7 +1214,7 @@ class AuditController extends Controller
 						}
 					}
 				}
-				$adminEmails = Config::get('constants.adminEmail');
+				$adminEmails = $this->adminEmails;
 				$subject = "New item addition request";
 				if (!empty($itmvalnew) && !in_array($itmvalnew, $vals) && stripos($fld["config"], "allowcustom") === false)
 				{

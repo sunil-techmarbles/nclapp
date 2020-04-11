@@ -30,7 +30,7 @@
 						<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
 					</a>
 					<a href="{{route('change.passowrd',['u' => $user->id])}}" class="mt-1 " title="Change Passowrd">
-						<i class="fa fa-shield fa-2x" aria-hidden="true"></i>
+						<img src="{{URL('/assets/images/shield.png')}}" class="icons" title="Change Passowrd">
 					</a>
 				</td>
 			<td>{{$user->id}}</td>

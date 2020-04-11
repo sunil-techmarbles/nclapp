@@ -14,13 +14,23 @@ use App\ShipmentsData;
 use App\Asin;
 use App\SessionData;
 use App\Supplies;
+use App\UserCronJob;
 
 class ShipmentController extends Controller
 {
-	public $basePath, $refurbLabels, $current, $refurbAssetData, $formData, $sessionReports, $completedRefurbLabels;
+	public $basePath, $refurbLabels, $current, $refurbAssetData, $formData, $sessionReports, $completedRefurbLabels, $shipmentEmails, $e_mails;
 
 	public function __construct()
     {
+    	$this->e_mails = [];
+    	$this->shipmentEmails = UserCronJob::getCronJobUserEmails('shipmentEmails');
+        if($this->shipmentEmails->count() > 0)
+        {
+            foreach ($this->shipmentEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+		$this->shipmentEmails = ($this->shipmentEmails->count() > 0) ? $this->e_mails : Config::get('constants.shipmentEmails');
     	$this->basePath = base_path().'/public';
     	$this->current = Carbon::now();
     	$this->sessionReports = $this->basePath.'/session-reports';
@@ -463,7 +473,7 @@ class ShipmentController extends Controller
 		    SessionData::updateSessionRunStatus($i["asset"], $status='shipped');
 		}
 		fclose($fp);
-		$shipmentEmails = Config::get('constants.shipmentEmails');
+		$shipmentEmails = $this->shipmentEmails;
 		$subject = 'Shipment details';
 		$name = $currentSession.'.csv';
 		$files[] = $this->sessionReports.'/shipment'.$name;

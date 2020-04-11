@@ -56,6 +56,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	    Route::get('/users', 'UsersController@index')->name('users');
 		Route::any('/changepassowrd','UsersController@changePassowrd')->name('change.passowrd');
 	    Route::get('/messagelog', 'MainController@index')->name('message.log');
+	    Route::any('/manageemail', 'UsersController@manageEmail')->name('manage.emails');
 	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
@@ -138,8 +139,8 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/recycle', 'RecycleController@recycleFirstIndex')->name('recycle.first');
 		Route::any('/editcategoryrecord', 'RecycleController@editCategoryRecord')->name('edit.category.record');
 		Route::any('/updateCategoryRecord', 'RecycleController@updateCategoryRecord')->name('update.category.record');
-		Route::any('/recyclesecond', 'RecycleController@recycleTwoIndex')->name('recycle.second');
-		Route::prefix('recyclesecond')->group(function () {
+		Route::any('/assetlookup', 'RecycleController@recycleTwoIndex')->name('recycle.second');
+		Route::prefix('assetlookup')->group(function () {
 			Route::get('/deleterecycletwocategory/{recycleId}', 'RecycleController@deleteRecycleTwoCategory');
 			Route::any('/search', 'RecycleController@recycleTwoSearch')->name('search');
 			Route::any('/getrecordeedit', 'RecycleController@recycleTwoInventoryEdit');

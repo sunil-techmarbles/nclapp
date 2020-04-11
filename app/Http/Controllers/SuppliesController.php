@@ -12,10 +12,11 @@ use App\Supplies;
 use App\SupplieEmail;
 use App\SupplieAsinModel;
 use App\Asin;
+use App\UserCronJob;
 
 class SuppliesController extends Controller
 {
-	public $searchItemsLists, $adminEmails, $emailTemplate;
+	public $searchItemsLists, $adminEmails, $e_mails, $emailTemplate;
 	/**
      * Create a new controller instance.
      *
@@ -37,12 +38,19 @@ class SuppliesController extends Controller
 			'dlv_time' => 'Delivery Time',
 		);
 
-        $this->adminEmails = array(
-            'richy@itamg.com' => 'richy@itamg.com',
-            'randy@itamg.com' => 'randy@itamg.com',
-            'kamal@itamg.com' => 'kamal@itamg.com',
+        $this->e_mails = [];
+        $this->adminEmails = UserCronJob::getCronJobUserEmails('defaultEmails');
+        if($this->adminEmails->count() > 0)
+        {
+            foreach ($this->adminEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : array(
+            'richy@itamg.com',
+            'randy@itamg.com',
+            'kamal@itamg.com',
         );
-
         $this->emailTemplate = "Hi, 
                         We are running low on item: 
                         [item_name] 

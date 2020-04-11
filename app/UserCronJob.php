@@ -32,15 +32,15 @@ class UserCronJob extends Model
 
     public static function getCronJobName($value)
     {
-    	return self::where('user_id', $value)->pluck('cron_job');
+    	return self::where('cron_job', $value)->pluck('user_id');
     }
 
     public static function deleteRecord($value)
     {
-    	$getCronId = self::where(['user_id' => $value])->pluck('id');
+    	$getCronId = self::where(['cron_job' => $value])->pluck('id');
     	if($getCronId)
     	{
-    		self::whereIn('user_id', $getCronId)->delete();
+    		self::whereIn('id', $getCronId)->delete();
     	}
     }
 
@@ -48,4 +48,14 @@ class UserCronJob extends Model
     {
 		return $this->belongsTo('App\User');
 	}
+
+    public static function getCronJobUserEmails($value)
+    {
+        return self::select('u.email')
+        ->join('users as u', function($join) use ($value){
+            $join->on('u.id','=','user_cron_jobs.user_id')
+                ->where('user_cron_jobs.cron_job','=',$value);
+        })
+        ->get();
+    }
 }

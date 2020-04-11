@@ -1,5 +1,5 @@
 var prefix = 'admin';
-var recyclePrefix = 'admin/recyclesecond';
+var recyclePrefix = 'admin/assetlookup';
 var _token = $('meta[name="csrf-token"]').attr('content');
 var cbWidth=0;
 var reqFld = [];

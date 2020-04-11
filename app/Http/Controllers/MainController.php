@@ -48,7 +48,7 @@ class MainController extends Controller
         }
         return view('admin.import.list', compact('shopifyPriceData'));
     }
-
+    
     public function shopifyProductImport(Request $request)
     {
         $request->validate([

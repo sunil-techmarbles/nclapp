@@ -25,13 +25,14 @@ use App\ShopifyPricingCustom;
 use App\ShopifyBarCode;
 use App\ShopifyImages;
 use App\ShopifyPricing;
+use App\UserCronJob;
 use App\Traits\CommenShopifyTraits;
 use App\Http\Controllers\AuditController;
 
 class ShopifyController extends Controller
 {
 	use CommenShopifyTraits;
-	public $basePath, $current, $baseUrl, $productMainSiteUrl, $wipeData2, $methodData, $finalPrice, $asinImages;
+	public $basePath, $current, $baseUrl, $productMainSiteUrl, $wipeData2, $methodData, $finalPrice, $asinImages, $shopifyEmails, $e_mails;
 	/**
      * Instantiate a new ShopifyController instance.
      */
@@ -41,6 +42,15 @@ class ShopifyController extends Controller
     	/**
      	* Set value for common uses in the ShopifyController instance.
      	*/
+     	$this->e_mails = [];
+     	$this->shopifyEmails = UserCronJob::getCronJobUserEmails('shopifyEmails');
+        if($this->shopifyEmails->count() > 0)
+        {
+            foreach ($this->shopifyEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+		$this->shopifyEmails = ($this->shopifyEmails->count() > 0) ? $this->e_mails : config('constants.syncProductAddedMailUser');
      	$this->basePath = base_path().'/public';
      	$this->current = Carbon::now();
      	$this->baseUrl = Config::get('constants.finalPriceConstants.shopifyBaseUrl');
@@ -874,10 +884,10 @@ class ShopifyController extends Controller
 				Product options are assigned
 				Reviews are added
 				Google shopping feed settings are correct ";
-				$user = config('constants.finalPriceConstants.syncProductAddedMailUser');
+				$shopifyEmails = $this->shopifyEmails;
 				$subject = "New Product Created";
 				Mail::raw($body, function ($m) use ($subject,$user) {
-					$m->to($user)
+					$m->to($shopifyEmails)
 					->subject($subject);
 				});
 				$status = true;

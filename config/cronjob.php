@@ -9,6 +9,15 @@ return [
 		'failedsearchreportdaily' => 'Failed search report daily',
 		'failedsearchreportweekly' => 'Failed search report weekly',
 		'reportcount' => 'Report count',
+	],
+	'cronJobType' => [
+		'defaultEmails' => 'Default Emails',
+		'sessionEmails' => 'Session Emails',
+		'reportEmailsDaily' => 'Report Emails Daily',
+		'reportEmailsWeekly' => 'Report Emails Weekly',
+		'shopifyEmails' => 'Shopify Emails',
+		'shipmentEmails' => 'Shipment Emails',
+		'coaEmails' => 'COA Emails',
 	]
 ];
 
