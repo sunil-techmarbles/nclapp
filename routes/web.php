@@ -48,6 +48,10 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 		Route::any('/recycledownload', 'RecycleController@recycleDownloadPdf');
 		Route::post('/readdatafromfiles', 'RecycleController@readDataFromFile')->name('read.data.from.files');
 		Route::post('/shopifyproductimport', 'MainController@shopifyProductImport')->name('shopify.product.import');
+		// asin inventry export 
+		Route::prefix('asininventry')->group(function () {
+			Route::any('/exportinventry', 'AsinInventryController@exportInventry')->name('asininventry.exportinventry');
+		});
 	});
 });
 
@@ -156,6 +160,11 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/tracker', 'TrackerController@index')->name('tracker');
 		Route::any('/timetracker', 'TrackerController@timeTracker');
 		Route::any('/import', 'MainController@importIndex')->name('import');
+		// Asin Inventry Section
+		Route::any('/asininventry', 'AsinInventryController@index')->name('asininventry');
+		Route::prefix('asininventry')->group(function () {
+			Route::any('/removeasset', 'AsinInventryController@RemoveAsset')->name('asininventry.removeasset');
+		});
 	});
 });
 

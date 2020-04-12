@@ -547,7 +547,7 @@ $(document).ready(function()
 		"bAutoWidth": false
 	});
 	
-	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part, #package-table').DataTable
+	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part, #package-table, #asinInventryTable').DataTable
 	({
 		"searching": false,
 		"bPaginate": false,
