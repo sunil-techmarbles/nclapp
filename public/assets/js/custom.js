@@ -69,9 +69,11 @@ $(window).keydown(function (event)
 	{
 		if ($("#lotNum").is(":focus"))
 		{
+			showLoader();
 			var lotNum = $("#lotNum").val();
 			if( lotNum == '')
 			{
+				hideLoader();
 				sweetAlertAfterResponse(status = 'error' , title = 'lot number empty', message = 'Please Enter a lot number to search files' , showbutton = true );
 				return false;
 			}
@@ -88,6 +90,7 @@ $(window).keydown(function (event)
 			})
 			.done(function(response)
 			{
+				hideLoader();
 				$("#wipe-report-result").html("");
 				$("#downloadFiles").remove();
 				if( response.status == true)
@@ -114,6 +117,7 @@ $(window).keydown(function (event)
 			})
 			.fail(function()
 			{
+				hideLoader();
 				sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Something went wrong with ajax !' , showbutton = true );
 			});
 		}

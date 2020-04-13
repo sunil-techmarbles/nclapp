@@ -5,12 +5,12 @@
 	<div id="page-head" class="noprint">
 		Asin Inventory
 	</div>
-	<ul class="wipeReportNav">
-		<li><a class="btn btn-info" href="{{route('asininventry.removeasset')}}">Remove Assets</a></li>
-		<li><a class="btn btn-info" href="{{route('asininventry.exportinventry')}}">Export To Excel</a></li>
-	</ul>
+	<div class="wipeReportNav">
+		<a class="btn btn-info" href="{{route('asininventry.removeasset')}}">Remove Assets</a>
+		<a class="btn btn-info" href="{{route('asininventry.exportinventry')}}">Export To Excel</a>
+	</div>
 	<h3>Items In session</h3>
-	<table class="table table-hover" id="asinInventryTable">
+	<table class="table table-striped table-condensed table-hover" id="asinInventryTable-Itmg">
 		<thead>
 			<th>ASIN</th>
 			<th>Model</th>
@@ -22,7 +22,7 @@
 		<tbody>
 			@foreach($items as $i)
 			<tr>
-				<td><a href="#" onclick="$('.assets{{$i->aid}}').toggle();">{{$i->asin}}</a></td>
+				<td><a href="javascript:void(0)" onclick="$('.assets{{$i->aid}}').toggle();">{{$i->asin}}</a></td>
 				<td>{{$i->model}}</td>
 				<td>{{$i->form_factor}}</td>
 				<td>{{$i->cpu_core}} {{$i->cpu_model}} CPU @ {{$i->cpu_speed}}</td>
