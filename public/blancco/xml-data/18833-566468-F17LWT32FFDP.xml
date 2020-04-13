@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><root><report>
     <blancco_data>
         <description>
-            <document_id>4e669ddc-4910-4800-90a1-1cf35ccd71c6</document_id>
+            <document_id>982bd903-91a6-4258-af41-cb55c88a4fa1</document_id>
             <document_log>
                 <log_entry>
                     <author>
@@ -9,8 +9,8 @@
                         <product_version>4.2.2</product_version>
                         <product_revision>4.2.2</product_revision>
                     </author>
-                    <date>2020-03-11T12:55:19+0000</date>
-                    <integrity>Fron8t6n/ogQpJ1b+q6LiKizgvoIQN8qR/7qNqOYkB9+en4zYfieIG7i+5OnrEI1P9FE8sIjhpRjiUevyRIqFa3LaYYBuddwGiCmbJnzzR8LsSbk03RElABYu1KbTs+NoRw3xoybC/AyuYUaaDhwEjNCseCX/bzkiSBWXyR5HTC354/4Jk4ZL38Xg/14x33OaIOxEXVX1MvulPXA5RJzzf+/XpECBGVOVCj7VcryLLhyrAY5TdbGjC7nT7lwMJitECv0I3CJRaWwAx7GG7eUcnXiLZrdOWdHo4o5dk+bZgp653kUuzBIp51u7QJSwCQLqHuOlWBMKGbJ0QqyZ8CpDg==</integrity>
+                    <date>2020-03-09T14:54:11+0000</date>
+                    <integrity>vAoawIgQ9iEdQpwryyistJiFIyJNgwSVnXA+auAeDcTb5fXZA5ZmGYTmzkfjRLU6znLyWGt6CFdRwqFr5yrGKGCInmkicuWryvZZzHCn1f00aYxdWOD+ZndySvGFKCI396a94/xQmB4luNenvPU0VBZWkhETI6JFGlHsrBvKGPsj6BWRDBfDXvsZMvXMq83p/It5CCqhxZYRLxGk1z0rQ6xZaB1rng/DfeIOJjH0dcWkt9GIGgqSsQmVpEQTzs2deh4ugZXTc1IENjjRzgBe+NKj2KsjUrdhp5H+tGNOT8F9piXY+QyszWo6QioS0vvzJUf84kk6TalVtONS1Khq8Q==</integrity>
                     <key identifier="300"></key>
                 </log_entry>
                 <log_entry>
@@ -19,8 +19,8 @@
                         <product_version>5.3.2</product_version>
                         <product_revision>7a3325aea61a+</product_revision>
                     </author>
-                    <date>2020-03-11T12:55:27+0000</date>
-                    <integrity>Ik9fMchTKyub/gMBJ7RJmzN7rYXwkRjO0cNurPIKTseZK42hOr9v5GX3+X0vuDMenK9Cl6Z8TvirSd+tdy5iSyakoDDnAq8MbiOfdJnAQzwoSaOFlq4DtFBYqeb/mO8qvLgHGElUw0cCUyRRnCbuFGNc3SWaVDKRDzfCoBCpnGpx6QNFSq+V5oKuZ8szOYurGd0IAaJoHfWi1ds2+9I5y9fLt71e+dGUZrMQH9hh6QAOP4Z8lQW5lgi+2bmE9YSd45hB92dNc+PUnjQ3BW2Ofba74qz7Ya30OCJwD5EXEi6ymWJr6/Uw/LxcbOyMPEJC491qauMLYg0bUhPQbV5oVQ==</integrity>
+                    <date>2020-03-09T14:54:16+0000</date>
+                    <integrity>STggGE5sy0Oo7l34pk17uBV9ytHe4DZF7F65FQNx1qvKCeTh5qJi9tHAerP4Oyc3W6Cq0I826NAMq6lxQs6cCbGaXeUeHBP+kHbv8Nby4+4iKnfUURXtbKQuAEVlVeXofjY0vwQG8zNom52mpnUY8ML4TRW6Vjwo+tY+Fe7UYLQvvqs5K192BQj8rlBcxpLfI3El9Lhfc50IbVkfDBQFNg3CmW0TdLGetcotrysepwtd+WXt1lBeLG4p3BrW8q+Qn4jQbP5iW3aUjjCCLiRwu9MD4/Nni5foDiBY6o+7DHHEAGEGrzuRPaw6W47bidSQjr5WYPUUZO1nJ85gyBi5wQ==</integrity>
                     <key identifier="100"></key>
                 </log_entry>
             </document_log>
@@ -37,17 +37,22 @@
         <blancco_erasure_report>
             <entries name="erasures">
                 <entries name="erasure">
-                    <entry name="timestamp" type="string">2020-03-11T12:45:02+0000</entry>
-                    <entry name="start_time" type="string">2020-03-11 12:45:02</entry>
-                    <entry name="end_time" type="string">2020-03-11 12:52:53</entry>
-                    <entry name="elapsed_time" type="string">00:07:51</entry>
+                    <entry name="timestamp" type="string">2020-03-09T14:25:45+0000</entry>
+                    <entry name="start_time" type="string">2020-03-09 14:25:45</entry>
+                    <entry name="end_time" type="string">2020-03-09 14:29:05</entry>
+                    <entry name="elapsed_time" type="string">00:03:19</entry>
                     <entry name="erasure_standard_name" type="string">NIST 800-88 Purge</entry>
-                    <entry name="state" type="string">Successful</entry>
+                    <entry name="state" type="string">Failed</entry>
                     <entries name="target">
                         <entry name="type" type="string">Internal memory</entry>
                         <entry name="capacity" type="uint">32000000000</entry>
                         <entry name="serial" type="string">IMEI:013853003978498</entry>
                         <entry name="vendor" type="string"></entry>
+                    </entries>
+                    <entries name="erasure_details">
+                        <entries name="failure">
+                            <entry name="message" type="string">Cannot connect to device</entry>
+                        </entries>
                     </entries>
                 </entries>
             </entries>
@@ -73,9 +78,16 @@
                 <entry name="wifi_mac" type="string">84:8e:0c:72:fa:5e</entry>
                 <entry name="ecid" type="string">0000048D2BA97AD0</entry>
                 <entry name="chassis_type" type="string">Mobile Device</entry>
+                <entry name="find_my_iphone" type="string">Locked</entry>
+                <entry name="find_my_iphone_source" type="string">Prolog Mobile</entry>
                 <entry name="mdm_status" type="string">Unknown</entry>
+                <entry name="initial_carrier" type="string">T-Mobile</entry>
+                <entry name="prolog_blacklisted" type="string">Unlocked</entry>
+                <entry name="prolog_graylisted" type="string">Unlocked</entry>
+                <entry name="prolog_simlock" type="string">Locked</entry>
                 <entry name="manufacturing_date" type="string">201351</entry>
                 <entry name="touch_id_serial" type="string">F58DBW7UMLFGL7AZF2</entry>
+                <entry name="carrier_code" type="string">ATT/TMO/VZW</entry>
             </entries>
             <entries name="disks">
                 <entries name="disk">
@@ -89,13 +101,13 @@
                 <entry name="battery_serial" type="string">F5D348425NQFHG1AE</entry>
                 <entry name="battery_vendor" type="string">F</entry>
                 <entry name="battery_manufacture_date" type="string">201348</entry>
-                <entry name="battery_cycles" type="uint">925</entry>
+                <entry name="battery_cycles" type="uint">924</entry>
                 <entry name="battery_capacity_design" type="uint">1550</entry>
-                <entry name="battery_capacity_current" type="uint">899</entry>
-                <entry name="battery_capacity_wear_level" type="uint">42</entry>
-                <entry name="battery_capacity_health_level" type="uint">58</entry>
-                <entry name="battery_temperature" type="string">33</entry>
-                <entry name="battery_charge_level" type="uint">26</entry>
+                <entry name="battery_capacity_current" type="uint">445</entry>
+                <entry name="battery_capacity_wear_level" type="uint">71</entry>
+                <entry name="battery_capacity_health_level" type="uint">29</entry>
+                <entry name="battery_temperature" type="string">31</entry>
+                <entry name="battery_charge_level" type="uint">100</entry>
             </entries>
             <entries name="cameras">
                 <entries name="camera">

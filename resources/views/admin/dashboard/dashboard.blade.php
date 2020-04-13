@@ -12,11 +12,15 @@
 
     <div class="pt-2" style="max-width: 700px;margin: auto;">
         <div class="menu-item">
-            <a href="{{route('dashboard.itamg')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('dashboard.itamg')}}">
+                <img src="{{URL('/assets/images/refub-connect.png')}}" class="icons" title="refurbconnect">
+            </a>
             <a href="{{route('dashboard.itamg')}}">ITMAG</a>
         </div>   
         <div class="menu-item">
-            <a href="{{route('dashboard.refurbconnect')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('dashboard.refurbconnect')}}">
+                <img src="{{URL('/assets/images/logo_itamg.png')}}" class="icons" title="itamg">
+            </a>
             <a href="{{route('dashboard.refurbconnect')}}">Refurb Connect</a>
         </div>
     </div>

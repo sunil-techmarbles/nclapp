@@ -44,8 +44,8 @@
             <a href="{{route('import')}}">Import</a>
         </div>
         <div class="menu-item">
-            <a href=""><span class="fa fa-sign-in"></span></a>
-            <a href="">Asin Inventory</a>
+            <a href="{{route('asininventry')}}"><span class="fa fa-sign-in"></span></a>
+            <a href="{{route('asininventry')}}">Asin Inventory</a>
         </div>
     </div>
 </div>

@@ -43,7 +43,7 @@ class SessionData extends Model
 
     public static function hasAssests($value)
     {
-    	return self::where(["asset"=>$asset])->get();
+    	return self::where(["asset"=>$value])->get();
     }
 
     public static function getSessionDataCount($id)
@@ -224,5 +224,30 @@ class SessionData extends Model
                 })
             ->groupBy('session_data.aid')
             ->get();
+    }
+
+    public static function getAsinInventrySectionData()
+    {
+        return self::select('session_data.aid', 'session_data.added_on', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core',  'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+            ->selectSub('count(session_data.aid)', 'cnt')
+            ->join('asins as a', function($join){
+                $join->on('session_data.aid', '=', 'a.id')
+                        ->where('a.asin','!=', '0')
+                        ->where('session_data.status','=', 'active');
+                })
+            ->groupBy('a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed')
+            ->get();
+    }
+
+     public static function getSessionData()
+    {
+        return self::select('aid', 'asset', 'status')
+            ->where(['status' => 'active'])
+            ->get();
+    }
+
+    public static function CheckAssetExist($assetId)
+    {
+        return self::where(["asset"=>$assetId])->get()->first();
     }
 }
