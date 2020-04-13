@@ -8,11 +8,14 @@ return [
 		'export'
 	],
 	'custom' => [
-		// Just add the key like mention in full permission e.g (add, edit, delete, import, export)
-		'##KEY##'=> [
+		// Primary Key are roles e.g user, admin & etc
+		'##PRIMARYKEY##'=> [
+			// Just add the key like mention in full permission e.g (add, edit, delete, import, export) & etc
+			'##KEY##'=> [
+			],
 		],
 	],
-	"full" => [
+	'full' => [
 		'audit' => 'all',
 		'refurb' => 'all',
 		'supply' => 'all',
@@ -31,7 +34,7 @@ return [
 	'admin' => [
 		'admin' => 'true',
 	],
-	"roles" => [
+	'roles' => [
 		'user' => 'User',
 		'manager-itamg' => 'Manager Itamg',
 		'manager-refurbconnect' => 'Manager Refurbconnect'

@@ -19,7 +19,9 @@
 				</td>
 				<td></td>
 				<td></td>
-				<td colspan="2">{{$cronjob}}</td>
+				<td colspan="2"><a href="{{route('manage.emails',['t' => $key, 'a' => 'add' ] )}}">
+				{{$cronjob}}
+				</a></td>
 			</tr>
 			@endforeach
 		</tbody>

@@ -35,7 +35,7 @@ class SessionController extends Controller
                 $this->e_mails[] = $value->email;
             }
         }
-    	$this->sessionEmails = ($this->sessionEmails->coount() > 0) ? $this->e_mails : Config::get('constants.sessionEmails');
+    	$this->sessionEmails = ($this->sessionEmails->count() > 0) ? $this->e_mails : Config::get('constants.sessionEmails');
     	$this->basePath = base_path().'/public';
     	$this->current = Carbon::now();
     	$this->sessionReports = $this->basePath.'/session-reports';
