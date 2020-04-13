@@ -114,6 +114,16 @@ class Asin extends Model
     		->get();	
     }
 
+    public static function getAsinForPriceUpdate()
+    {
+        return self::select('asins.id', 'asins.asin', 'asins.price')
+            ->where('asin', '!=' , '0' )
+            ->orWhere('asin', '!=' , '' )
+            ->get();
+    }
+
+
+
     public static function getAsinsIdByAsin($asinID='')
     {
         return self::where(['asin' => $asinID])
@@ -143,6 +153,12 @@ class Asin extends Model
     {
         return self::where(['asin' => $asinId])
             ->update(['shopify_product_id' => $productId]);
+    }
+
+    public static function UpdateAsinPrice($price, $asinRecordid)
+    {
+        return self::where(['id' => $asinRecordid])
+            ->update(['price' => $price]);
     }
 
     public static function getSpecificFirstRecord($fields, $model, $part1, $part2, $part3)
