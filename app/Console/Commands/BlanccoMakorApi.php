@@ -6,14 +6,15 @@ use App\MessageLog;
 use File;
 use Config;
 use App\Traits\TMXmlToArrayTraits;
-use App\Traits\BlanccoMakorMobileTraits; 
+use App\Traits\BlanccoMakorMobileTraits;
+use Illuminate\Support\Facades\Mail;
 
 class BlanccoMakorApi extends Command
 {
     use TMXmlToArrayTraits;
     use BlanccoMakorMobileTraits;
 
-    public $basePath, $blanccoXmlDataDir, $blanccoAdditionMobileDataDir, $blanccoMakorRequestFileDir;
+    public $basePath, $blanccoXmlDataDir, $blanccoAdditionMobileDataDir, $blanccoMakorRequestFileDir, $executedFiles;
     public $blanccoMakorProcessedDataDir;
     /**
      * The name and signature of the console command.
@@ -46,6 +47,12 @@ class BlanccoMakorApi extends Command
      */
     public function handle()
     {
+        $subject = 'BlanccoMakor:api '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for BlanccoMakor:api', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $this->basePath  = base_path().'/public';
         $this->blanccoXmlDataDir = $this->basePath . "/blancco/xml-data/";
         $this->blanccoAdditionMobileDataDir = $this->basePath . "/wipe-data-mobile";
@@ -55,7 +62,7 @@ class BlanccoMakorApi extends Command
         // read all the xml files form blancco and create makor request.
         $this->createMakorRequestFromBlanccoData();
 
-        die("Blancco Makor api done");
+        die( $this->executedFiles . " files Successfully exectuted for Blancco Makor api");
     }
 
     /**
@@ -65,11 +72,13 @@ class BlanccoMakorApi extends Command
      */
     public function createMakorRequestFromBlanccoData()
     {
+        $this->executedFiles = 0;
         $blanccoXmlFiles = getDirectoryFiles($this->blanccoXmlDataDir);
         if( is_array($blanccoXmlFiles) && !empty($blanccoXmlFiles))
         {
             foreach ($blanccoXmlFiles as $key => $blanccoXmlFile)
             {
+              
                 $apiDataSendToMakor = [];
                 if (substr($blanccoXmlFile, 0, 4) != "data")
                 {
@@ -185,6 +194,8 @@ class BlanccoMakorApi extends Command
 
                             if($MakorResponse == 200)
                             {
+                                $this->executedFiles++;
+
                                 $RequestFile = $this->blanccoMakorRequestFileDir . $assetId . ".xml";
                                 WriteDataFile($RequestFile, $MakorMobileApiRequestDataXml);
 

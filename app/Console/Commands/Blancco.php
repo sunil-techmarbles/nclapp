@@ -6,6 +6,7 @@ use App\MessageLog;
 use File;
 use Config;
 use App\Traits\TMXmlToArrayTraits;
+use Illuminate\Support\Facades\Mail;
 
 class Blancco extends Command
 {
@@ -45,6 +46,12 @@ class Blancco extends Command
      */ 
     public function handle()
     {
+        $subject = 'blancco:api '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for blancco:api', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $this->basePath  = base_path().'/public';
         $this->AllDatarequestFilePath = $this->basePath . "/blancco/request-xmls/all-reports.xml";
         $this->singleReportRequestFilePath = $this->basePath . "/blancco/request-xmls/single-report.xml";

@@ -7,11 +7,13 @@ use File;
 use App\Traits\CommonWipeBiosMakorApiTraits;
 use Config;
 use SimpleXMLElement;
+use Illuminate\Support\Facades\Mail;
+
 
 class WipeBiosMakor extends Command
 {
     use CommonWipeBiosMakorApiTraits;
-    public $basePath, $wipeBiosDataDir, $wipeBiosAdditionalDataDir, $wipeBiosExecutedFileDir, $wipeBiosAdditionalExecutedDir, $wipeBiosResponseFileDIr, $WipeBiosMakorRequestFileDir;
+    public $basePath, $wipeBiosDataDir, $wipeBiosAdditionalDataDir, $wipeBiosExecutedFileDir, $wipeBiosAdditionalExecutedDir, $wipeBiosResponseFileDIr, $WipeBiosMakorRequestFileDir, $executedFiles;
 
     /**
      * The name and signature of the console command.
@@ -44,6 +46,12 @@ class WipeBiosMakor extends Command
      */
     public function handle()
     {
+        $subject = 'WipeBiosMakor:api '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for WipeBiosMakor:api', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $this->basePath  = base_path().'/public';
         $this->wipeBiosDataDir = $this->basePath . "/wipe-data/bios-data";
         $this->wipeBiosAdditionalDataDir = $this->basePath . "/wipe-data-additional";
@@ -51,10 +59,8 @@ class WipeBiosMakor extends Command
         $this->wipeBiosAdditionalExecutedDir = $this->basePath . "/makor-processed-data/additional";
         $this->wipeBiosResponseFileDIr = $this->basePath . "/wipe-data2/bios-data";
         $this->WipeBiosMakorRequestFileDir = $this->basePath . "/makor-request/bios-makor-request";
-
-
         $this->createMakorRequestFromWipeBiosData();
-        die("Wipe Bios Makor api done");
+        die( $this->executedFiles . " files Successfully exectuted for Wipe Bios Makor api");
     }
 
     /**
@@ -64,6 +70,7 @@ class WipeBiosMakor extends Command
      */
     public function createMakorRequestFromWipeBiosData()
     {
+        $this->executedFiles = 0;
         // get all XML files from wipe Bios data directory
         $wipeBiosDataFiles = getDirectoryFiles($this->wipeBiosDataDir);
         if( !empty($wipeBiosDataFiles))
@@ -75,7 +82,7 @@ class WipeBiosMakor extends Command
                 {
                     //read XML file
                     $wipeBiosFileContent = getXMLContent($wipeBiosDataFilePath);
-                    
+
                     //check if XML is valid
                     if (false === $wipeBiosFileContent)
                     {
@@ -121,7 +128,7 @@ class WipeBiosMakor extends Command
                     }
 
                     $allDataArray = $wipeBiosFileContent['node'];
-                
+
                     switch ($productName) {
                         case 'Computer':
                             $apiDataObject = $this->init($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber);
@@ -147,6 +154,8 @@ class WipeBiosMakor extends Command
 
                     if ($WipeBiosMakorResponse == 200)
                     {
+                        $this->executedFiles++;
+
                         $destinationBiosWipeReportExecutedFile = $this->wipeBiosExecutedFileDir . '/' . $wipeBiosDataFile;
                         rename($wipeBiosDataFilePath, $destinationBiosWipeReportExecutedFile);
 
@@ -209,10 +218,13 @@ class WipeBiosMakor extends Command
         $component = $xml->addChild('component', $ApidataObject['saveDataArray']['ProcessorModel_Speed']);
         $component->addAttribute('name', 'ProcessorModel_Speed');
         
-        foreach ($ApidataObject['saveDataArray']['MemoryType_Speed'] as $key => $MemoryTypeSpeed)
+        if( isset( $ApidataObject['saveDataArray']['MemoryType_Speed'] ))
         {
-            $component = $xml->addChild('component', $MemoryTypeSpeed);
-            $component->addAttribute('name', 'MemoryType_Speed');
+            foreach ($ApidataObject['saveDataArray']['MemoryType_Speed'] as $key => $MemoryTypeSpeed)
+            {
+                $component = $xml->addChild('component', $MemoryTypeSpeed);
+                $component->addAttribute('name', 'MemoryType_Speed');
+            }
         }
         $component = $xml->addChild('component', 'No HD');
         $component->addAttribute('name', 'HardDriveType_Interface');
