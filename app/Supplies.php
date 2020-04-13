@@ -68,9 +68,7 @@ class Supplies extends Model
 		{
 			$result = $supplies->id;
 		}
-    	
     	return $result;
-    	# code...
     }
 
     public static function updateSupplieById($request)
@@ -197,6 +195,13 @@ class Supplies extends Model
     {
         return self::where(['id' => $sid])
             ->update(['email_sent' => $current]);
+    }
+
+    public static function getRecordByName($ptname)
+    {
+        return self::where(['item_name' => $ptname])
+            ->pluck('id')
+            ->first();
     }
 
     public static function getExportResult()

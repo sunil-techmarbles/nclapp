@@ -15,13 +15,13 @@
             <a href="{{route('dashboard.itamg')}}">
                 <img src="{{URL('/assets/images/refub-connect.png')}}" class="icons" title="refurbconnect">
             </a>
-            <a href="{{route('dashboard.itamg')}}">ITMAG</a>
+            <a href="{{route('dashboard.itamg')}}">ITAMG</a>
         </div>   
         <div class="menu-item">
             <a href="{{route('dashboard.refurbconnect')}}">
                 <img src="{{URL('/assets/images/logo_itamg.png')}}" class="icons" title="itamg">
             </a>
-            <a href="{{route('dashboard.refurbconnect')}}">Refurb Connect</a>
+            <a href="{{route('dashboard.refurbconnect')}}">RefurbConnect</a>
         </div>
     </div>
 </div>

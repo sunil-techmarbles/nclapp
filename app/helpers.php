@@ -19,6 +19,16 @@ function supplieEmialArray($object)
     return $r;
 }
 
+function getBetween($string, $start, $end){
+    $string = ' ' . $string;
+    $ini = strpos($string, $start);
+    if ($ini == 0) return '';
+    $ini += strlen($start);
+    $len = strpos($string, $end, $ini) - $ini;
+    if ($len<=0) return '';
+    return substr($string, $ini, $len);
+}
+
 function ifnull($var, $default='')
 {
     return is_null($var) ? $default : $var;

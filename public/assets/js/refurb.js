@@ -78,11 +78,13 @@ function saveCoa()
 
 function getAssetData(fId)
 {
+	showLoader();
 	var data = encodeURIComponent($("#asset_num").val());
 	if (data.length > 3)
 	{
 		$.get("/"+prefix+"/getasset?asset="+data+"&t="+Math.random(), function(response)
 		{
+			hideLoader();
 			if(response.status)
 			{
 				forceWS = false;
@@ -320,6 +322,7 @@ function getAssetData(fId)
 	}
 	else
 	{
+		hideLoader();
 		Swal.fire({
 			icon: 'warning',
 			title: 'Oops...',

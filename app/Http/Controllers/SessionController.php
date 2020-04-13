@@ -27,6 +27,7 @@ class SessionController extends Controller
 
 	public function __construct()
     {
+    	ini_set('max_execution_time', 300); //5 minutes
     	$this->e_mails = [];
     	$this->sessionEmails = UserCronJob::getCronJobUserEmails('sessionEmails');
         if($this->sessionEmails->count() > 0)
@@ -65,7 +66,6 @@ class SessionController extends Controller
 			    $cpuMdl = strtolower($cpudata[1]);
 			    if(!SessionData::hasAssests($asset))
 			    {	
-			    	echo "true";
 			        $fields = ["id","model","asin","ram","hdd","os","cpu_core","cpu_model","cpu_speed","price"];
 			        $asins = Asin::getSpecificFourthRecord($fields, $model, $cpuCore, $cpuMdl);
 			        if(!$asins)
@@ -248,6 +248,7 @@ class SessionController extends Controller
 		{
 			$s['count'] = SessionData::getSessionDataCount($s['id']);
 		}
+		unset($s);
 		if($session = $request->get('s'))
 		{
 			$sessionName = Session::getCurrentSessionName($session);

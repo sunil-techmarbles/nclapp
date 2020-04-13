@@ -287,4 +287,11 @@ class Asin extends Model
             })
             ->get();
     }
+
+    public static function getAsinIdFormModel($query)
+    {
+        return self::where($query)
+            ->pluck('id')
+            ->first();
+    }
 }

@@ -6,13 +6,17 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Asin;
+use File;
+use Illuminate\Support\Facades\DB;
 use App\Supplies;
-use App\SupplieEmail;
 use App\SupplieAsinModel;
+use App\SupplieEmail;
+use App\MessageLog;
+use App\UserCronJob;
 
 class AsinController extends Controller
 {
-	public $searchItemsLists;
+	public $searchItemsLists, $adminEmails, $e_mails, $emailTemplate, $emailSubject;
 	/**
      * Create a new controller instance.
      *
@@ -21,23 +25,50 @@ class AsinController extends Controller
     public function __construct()
     {
         $this->searchItemsLists = array(
-         'id'          =>'ID',
-         'asin'        =>'ASIN',
-         'price'       =>'Price',
-         'manufacturer'=>'Manufacturer',
-         'model'       =>'Model',
-         'form_factor' =>'Form Factor',
-         'cpu_core'    =>'CPU Core',
-         'cpu_model'   =>'CPU Model',
-         'cpu_speed'   =>'CPU Speed',
-         'ram'         =>'RAM',
-         'hdd'         =>'HDD',
-         'os'          =>'OS',
-         'webcam'      =>'Webcam',
-         'notes'       =>'Notes',
-         'link'        =>'Link',
-         'notifications'=>'Notif.',
-     );
+             'id'          =>'ID',
+             'asin'        =>'ASIN',
+             'price'       =>'Price',
+             'manufacturer'=>'Manufacturer',
+             'model'       =>'Model',
+             'form_factor' =>'Form Factor',
+             'cpu_core'    =>'CPU Core',
+             'cpu_model'   =>'CPU Model',
+             'cpu_speed'   =>'CPU Speed',
+             'ram'         =>'RAM',
+             'hdd'         =>'HDD',
+             'os'          =>'OS',
+             'webcam'      =>'Webcam',
+             'notes'       =>'Notes',
+             'link'        =>'Link',
+             'notifications'=>'Notif.',
+        );
+
+        $this->e_mails = [];
+        $this->adminEmails = UserCronJob::getCronJobUserEmails('defaultEmails');
+        if($this->adminEmails->count() > 0)
+        {
+            foreach ($this->adminEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : array(
+            'richy@itamg.com',
+            'randy@itamg.com',
+            'kamal@itamg.com',
+        );
+
+        $this->emailTemplate = "Hi, 
+            We are running low on item: 
+            [item_name] 
+            Part Number: [part_num]
+            Current Qty: [qty]
+
+            We get this item from Vendor: [vendor]. Suggested Reorder Quantity is: [reorder_qty]. This item usually ships: [dlv_time]. 
+
+            Please Reorder As Soon As Possible. 
+        Thanks!";
+
+        $this->emailSubject = "Running Low On An Item! - Reorder Request";
     }
 
     public function index(Request $request)
@@ -50,6 +81,22 @@ class AsinController extends Controller
     public function addAsins(Request $request)
     {
     	return view ('admin.asin.add');
+    }
+
+    public function getAsinPrice($asin)
+    {
+        if(File::exists("http://www.amazon.com/gp/aw/d/".$asin))
+        {
+            $html = file_get_contents("http://www.amazon.com/gp/aw/d/".$asin);
+            $price = getBetween($html,'data-asin-price="','"');
+
+        }
+        else
+        {
+            MessageLog::addLogMessageRecord("asin number don't exist","asin price","failure");
+            $price = 0;
+        }
+        return $price;
     }
 
     public function storeAsins(Request $request)
@@ -69,9 +116,111 @@ class AsinController extends Controller
             'webcam' =>'required',
         ]);
 
+        $asin = $request->asin;
+        if($asin)
+        {
+            $price = $this->getAsinPrice($asin);
+            if($price) $request->merge(['price' => $price]);
+        }
+
         $asinId = Asin::storeAsinValue($request);
         if($asinId)
         {
+            $savedId = $asinId;
+            if($request->model != "Template")
+            {
+                $tplid = Asin::getAsinIdFormModel([
+                    "model" => "Template",
+                    "form_factor" => $request->form_factor
+                ]);
+                if($tplid)
+                {
+                    $supIds = SupplieAsinModel::getSupplieIdExistsAsinValue($tplid);
+                    foreach ($supIds as $key => $value)
+                    {
+                        SupplieAsinModel::addSupplieAsinModel($savedId, $value);
+                    }
+                }
+
+                $ffsubs = [
+                    "Notebook" => "Laptop",
+                    "Ultra Small Form Factor" => "USFF",
+                    "Small Form Factor" => "SFF",
+                    "Tiny Desktop" => "Desktop"
+                ];
+
+                if(isset($ffsubs[$request->form_factor]))
+                {
+                    $ff = $ffsubs[$request->form_factor];
+                }
+                else
+                {
+                    $ff = $request->form_factor;
+                }
+                $ptname = $request->manufacturer." ".$request->model." ".$ff."Product Card";
+                $ptid = Supplies::getRecordByName($ptname);
+                if($ptid)
+                {
+                    SupplieAsinModel::addSupplieAsinModel($savedId, $ptid);
+                }
+                else
+                {
+                    $data = [
+                        "item_name"   => $ptname,
+                        "qty"         => 0,
+                        "item_url"    => '',
+                        "description"    => '',
+                        "description"    => '',
+                        "bulk_options"    => '',
+                        "part_num"    => "N/A",
+                        "dept"        => "Refurb - Supplies",
+                        "vendor"      => "Minute Men",
+                        "low_stock"   => 50,
+                        "price"       => 0.4,
+                        "reorder_qty" => 100,
+                        "dlv_time"    => "1 day",
+                        "email_subj"  => $this->emailSubject,
+                        "email_tpl"   => $this->emailTemplate,
+                    ];
+                    $suppliesID = Supplies::addSupplies((object) $data);
+                    foreach ($this->adminEmails as $key => $value)
+                    {
+                        SupplieEmail::addSupplieEmail($value, $suppliesID);
+                    }
+                    SupplieAsinModel::addSupplieAsinModel($savedId, $suppliesID);
+                }
+                $ptname = $request->manufacturer." ".$request->model." ".$ff." Skin";
+                $ptid = Supplies::getRecordByName($ptname);
+                if($ptid)
+                {
+                    SupplieAsinModel::addSupplieAsinModel($savedId, $ptid);
+                }
+                else
+                {
+                    $data = [
+                        "item_name"   => $ptname,
+                        "qty"         => 0,
+                        "item_url"    => '',
+                        "description"    => '',
+                        "bulk_options"    => '',
+                        "part_num"    => "IBM / Black",
+                        "dept"        => "Refurb - Supplies",
+                        "vendor"      => "LidStyles",
+                        "low_stock"   => 10,
+                        "reorder_qty" => 50,
+                        "price"       => 5,
+                        "dlv_time"    => "1-2 days Express | 3-5 Days Ground",
+                        "email_subj"  => $this->emailSubject,
+                        "email_tpl"   => $this->emailTemplate,
+                    ];
+                    $suppliesID = Supplies::addSupplies((object) $data);
+                    foreach ($this->adminEmails as $key => $value)
+                    {
+                        SupplieEmail::addSupplieEmail($value, $suppliesID);
+                    }
+                    SupplieAsinModel::addSupplieAsinModel($savedId, $suppliesID);
+                }
+            }
             return redirect()->route('asin')->with('success','Item created successfully!');
         }
         else

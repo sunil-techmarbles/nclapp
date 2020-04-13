@@ -657,6 +657,14 @@ class AuditController extends Controller
 				if(!empty($itm["model"]))
 				{
 					$asin = FormModel::getAsinModelRecord($itm["model"]);
+					if(strpos($asin,",") !== false)
+					{
+						$asin = explode(",",$asin);
+					}
+					else
+					{
+						$asin = [$asin];
+					}
 					$itm["models"] = Asin::getModelFromAsin($asin, $notifications='');
 				}
 				else
@@ -680,8 +688,6 @@ class AuditController extends Controller
 		$asins = [];
 		if (File::exists($this->formData.'/'.$asset.'.json'))
 		{
-			// echo "Here in Asset Model";
-			// echo $asset;
 			$data = [];
 			$data["Model"] = "N/A";
 			$data["CPU"] = "N/A";

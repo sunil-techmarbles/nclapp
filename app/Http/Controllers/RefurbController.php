@@ -100,8 +100,7 @@ class RefurbController extends Controller
 					if(!empty($adata['new_coa'])) $data['new_coa'] = $adata['new_coa'];
 					if(!empty($adata['old_coa'])) $data['old_coa'] = $adata['old_coa'];
 					if(!empty($adata['win8'])) $data['win8'] = $adata['win8'];
-				}
-				
+				}				
 				if(File::exists($refurbLabels))
 				{
 					$data["print"] = file_get_contents($refurbLabels);
@@ -147,11 +146,9 @@ class RefurbController extends Controller
 				{
 					$data["Model"] = $asset.".xml not found";
 					$data["Model_Not_f"] = true;
-					$data["Serial"] = '000000';
+					// $data["Serial"] = '000000';
 				}
 				$fields = ["id","model","asin","ram","hdd","os","cpu_core","cpu_model","cpu_speed","price"];
-				// print_r($data["CPU"]);
-				// die;
 				if(!empty($data["CPU"]))
 				{
 					$parts1 = explode("_",$data["CPU"]);

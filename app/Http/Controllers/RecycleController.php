@@ -875,7 +875,7 @@ class RecycleController extends Controller
             $categoryData = (!$categoryData->isEmpty()) ? $categoryData->toArray() : [];
             if($categoryData)
             {
-                return redirect()->route('recycle.first')->with('success', 'Record updated successfully');
+                return view('admin.recycle-first.category-edit', compact('categoryData'));
             }
             else
             {
