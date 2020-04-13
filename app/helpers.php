@@ -346,15 +346,23 @@ function getXMLContent($xmlFilePath)
 {
     //file content
     $fileContent = iconv('UTF-8', 'UTF-8//IGNORE', utf8_encode(file_get_contents($xmlFilePath)));
-    //load xml
-    $fileContentObject = simplexml_load_string($fileContent, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
-    //check if XML is valid
-    if (false === $fileContentObject) {
-        return false;
-    }
-    //converting to array
-    $fileContentArray = json_decode(json_encode($fileContentObject), 1);
-    return $fileContentArray;
+
+    try{
+             //load xml
+            $fileContentObject = simplexml_load_string($fileContent, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
+            //check if XML is valid
+            if (false === $fileContentObject) {
+                return false;
+            }
+            //converting to array
+            $fileContentArray = json_decode(json_encode($fileContentObject), 1);
+            return $fileContentArray;
+
+        }   catch( Exception $e )
+        {
+            // pr( $e); die("**");
+        }
+
 }
 
 

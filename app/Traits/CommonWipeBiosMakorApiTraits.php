@@ -231,9 +231,15 @@ trait CommonWipeBiosMakorApiTraits
     	$this->saveDataArray['Serial'] = $this->apiData['serial'];
         $this->saveDataArray['Combined_RAM'] = $this->apiData['CombinedRAM'];
         $this->saveDataArray['Combined_HD'] = $this->apiData['CombinedHD'];
-        foreach ($this->apiData['memory_data'] as $key => $memoryValue) {
-            $this->saveDataArray['MemoryType_Speed'][$key] = $memoryValue['type'] . '_' . $memoryValue['speed'];
+        
+        if(isset( $this->apiData['memory_data']))
+        {
+            foreach ($this->apiData['memory_data'] as $key => $memoryValue)
+            {
+                $this->saveDataArray['MemoryType_Speed'][$key] = $memoryValue['type'] . '_' . $memoryValue['speed'];
+            }
         }
+
         $this->saveDataArray['ProcessorModel_Speed'] = $this->apiData['processors'][0]['processor_model'] . '_' . $this->apiData['processors'][0]['processor_speed'];
     }
 
@@ -726,9 +732,12 @@ trait CommonWipeBiosMakorApiTraits
         $this->saveDataArray['Serial'] = $this->apiData['serial'];
         $this->saveDataArray['Combined_RAM'] = $this->apiData['CombinedRAM'];
         $this->saveDataArray['Combined_HD'] = $this->apiData['CombinedHD'];
-        foreach ($this->apiData['memory_data'] as $key => $memorValue)
+        if(isset($this->apiData['memory_data']))
         {
-            $this->saveDataArray['MemoryType_Speed'][$key] = $memorValue['type'] . '_' . $memorValue['speed'];
+            foreach ($this->apiData['memory_data'] as $key => $memorValue)
+            {
+                $this->saveDataArray['MemoryType_Speed'][$key] = $memorValue['type'] . '_' . $memorValue['speed'];
+            }
         }
         $this->saveDataArray['ProcessorModel_Speed'] = $this->apiData['processors'][0]['processor_model'] . '_' . $this->apiData['processors'][0]['processor_speed'];
     }

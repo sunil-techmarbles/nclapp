@@ -41,6 +41,12 @@ class FailedSearchDaily extends Command
      */ 
     public function handle()
     {
+        $subject = 'failedSearch:daily '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for failedSearch:daily', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $this->basePath  = base_path().'/public';
         $this->sessionReportDir = $this->basePath . "/session-reports";
         $date = date('Y-m-d');

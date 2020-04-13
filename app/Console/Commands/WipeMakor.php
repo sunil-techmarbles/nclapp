@@ -7,12 +7,14 @@ use File;
 use Config;
 use App\Traits\CommonWipeMakorApiTraits;
 use SimpleXMLElement;
+use Illuminate\Support\Facades\Mail;
+
 
 class WipeMakor extends Command
 {
     use CommonWipeMakorApiTraits;
 
-     public $basePath, $wipeDataDir , $wipeAdditionalDataDir, $wipeExecutedFileDir, $wipeAdditionalExecutedDir, $wipeResponseFileDIr, $WipeMakorRequestFileDir;
+     public $basePath, $wipeDataDir , $wipeAdditionalDataDir, $wipeExecutedFileDir, $wipeAdditionalExecutedDir, $wipeResponseFileDIr, $WipeMakorRequestFileDir, $executedFiles;
 
     /**
      * The name and signature of the console command.
@@ -45,6 +47,12 @@ class WipeMakor extends Command
      */
     public function handle()
     {
+        $subject = 'WipeMakor:api '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for WipeMakor:api', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $this->basePath  = base_path().'/public';
         $this->wipeDataDir = $this->basePath . "/wipe-data";
         $this->wipeAdditionalDataDir = $this->basePath . "/wipe-data-additional";
@@ -53,7 +61,7 @@ class WipeMakor extends Command
         $this->wipeResponseFileDIr = $this->basePath . "/wipe-data2";
         $this->WipeMakorRequestFileDir = $this->basePath . "/makor-request/wipe-makor-request";
         $this->createMakorRequestFromWipeData();
-        die("Wipe Makor api done");
+        die( $this->executedFiles . " files Successfully exectuted for Wipe Makor api");
     }
 
     /**
@@ -63,6 +71,7 @@ class WipeMakor extends Command
      */
     public function createMakorRequestFromWipeData()
     {
+        $this->executedFiles = 0;
         // get all XML files from wipe data directory
         $wipeDataFiles = getDirectoryFiles($this->wipeDataDir);
         if( !empty($wipeDataFiles))
@@ -199,6 +208,8 @@ class WipeMakor extends Command
 
                         if ($WipeMakorResponse == 200)
                         {
+                            $this->executedFiles++;
+
                             $RequestFile = $this->WipeMakorRequestFileDir .'/' . $assetTag . ".xml";
                             WriteDataFile($RequestFile, $ApidataObject['xml_data']);
 
