@@ -62,43 +62,28 @@ class AsinPriceUpdate extends Command
             if(!empty($asinRecord["asin"]) || $asinRecord["asin"] != 0)
             {
                 $price = $this->getAsinPrice($asinRecord["asin"]);
-                if($price )
+                if($price)
                 {
                     Asin::UpdateAsinPrice($price, $asinRecord['id'] );
                     $this->UpdateAsinCount++;
                 }
             }
-        }
-    }
-
-    public function getHttpResponseCode($url)
-    {
-        $headers = get_headers($url);
-        return substr($headers[0], 9, 3);
+        }        
     }
 
     public function getAsinPrice($asin)
     {
-        // if(File::exists("http://www.amazon.com/gp/aw/d/".$asin))
-        // {
-            // $html = file_get_contents("http://www.amazon.com/gp/aw/d/$asin");
-            // $price = $this->getBetween($html,'data-asin-price="','"');
-            // pr( $price );  die;
-            // return $price; 
-        // }
-        $url = "http://www.amazon.com/gp/aw/d/".$asin;
-        if($this->getHttpResponseCode($url) == "404")
+        try
         {
-            MessageLog::addLogMessageRecord("asin number don't exist","asin price","failure");
-            $price = 0;
-        }
-        else
-        {
+            $url = "http://www.amazon.com/gp/aw/d/".$asin;
             $html = file_get_contents($url);
             $price = $this->getBetween($html,'data-asin-price="','"');
+            return $price;
         }
-        return $price;
-        // return false;
+        catch (\Exception $e)
+        {
+            return false;
+        }
     }
 
     public function getBetween($string, $start, $end)
