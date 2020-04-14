@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 use App\Asin;
+use App\MessageLog;
 use File;
 
 class AsinPriceUpdate extends Command
@@ -70,16 +71,34 @@ class AsinPriceUpdate extends Command
         }
     }
 
+    public function getHttpResponseCode($url)
+    {
+        $headers = get_headers($url);
+        return substr($headers[0], 9, 3);
+    }
+
     public function getAsinPrice($asin)
     {
         // if(File::exists("http://www.amazon.com/gp/aw/d/".$asin))
         // {
-            $html = file_get_contents("http://www.amazon.com/gp/aw/d/$asin");
-            $price = $this->getBetween($html,'data-asin-price="','"');
-            pr( $price );  die;
-            return $price; 
+            // $html = file_get_contents("http://www.amazon.com/gp/aw/d/$asin");
+            // $price = $this->getBetween($html,'data-asin-price="','"');
+            // pr( $price );  die;
+            // return $price; 
         // }
-            return false;
+        $url = "http://www.amazon.com/gp/aw/d/".$asin;
+        if($this->getHttpResponseCode($url) == "404")
+        {
+            MessageLog::addLogMessageRecord("asin number don't exist","asin price","failure");
+            $price = 0;
+        }
+        else
+        {
+            $html = file_get_contents($url);
+            $price = $this->getBetween($html,'data-asin-price="','"');
+        }
+        return $price;
+        // return false;
     }
 
     public function getBetween($string, $start, $end)
