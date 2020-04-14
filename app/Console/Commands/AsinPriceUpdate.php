@@ -41,15 +41,8 @@ class AsinPriceUpdate extends Command
      */
     public function handle()
     {
-        // $subject = 'AsinPrice:update '. date('Y-m-d h:i:s');
-        // $emailsToSend = "sunil.techmarbles@gmail.com";
-        // Mail::raw('Test Crons for AsinPrice:update', function($m) use ( $subject, $emailsToSend)
-        // {
-        //         $m->to( $emailsToSend )->subject($subject);
-        // });
- 
-        $this->UpdateAsinPriceCron();
-        echo "$this->UpdateAsinCount records updated"; 
+        $result = $this->UpdateAsinPriceCron();
+        echo implode(',', $result). "These Asin number's price updated successfully"; 
         die();
     }
 
@@ -57,6 +50,7 @@ class AsinPriceUpdate extends Command
     {
         $asinRecords = Asin::getAsinForPriceUpdate();
         $this->UpdateAsinCount = 0;
+        $asinArray = [];
         foreach ($asinRecords as $key => $asinRecord)
         {
             if(!empty($asinRecord["asin"]) || $asinRecord["asin"] != 0)
@@ -64,11 +58,13 @@ class AsinPriceUpdate extends Command
                 $price = $this->getAsinPrice($asinRecord["asin"]);
                 if($price)
                 {
+                    array_push($asinArray, $asinRecord["asin"]);
                     Asin::UpdateAsinPrice($price, $asinRecord['id'] );
                     $this->UpdateAsinCount++;
                 }
             }
-        }        
+        }
+        return $asinArray;
     }
 
     public function getAsinPrice($asin)
@@ -77,23 +73,12 @@ class AsinPriceUpdate extends Command
         {
             $url = "http://www.amazon.com/gp/aw/d/".$asin;
             $html = file_get_contents($url);
-            $price = $this->getBetween($html,'data-asin-price="','"');
+            $price = getBetween($html,'data-asin-price="','"');
             return $price;
         }
         catch (\Exception $e)
         {
             return false;
         }
-    }
-
-    public function getBetween($string, $start, $end)
-    {
-        $string = ' ' . $string;
-        $ini = strpos($string, $start);
-        if ($ini == 0) return '';
-        $ini += strlen($start);
-        $len = strpos($string, $end, $ini) - $ini;
-        if ($len<=0) return '';
-        return substr($string, $ini, $len);
     }
 }
