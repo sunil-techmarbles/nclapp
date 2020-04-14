@@ -50,6 +50,13 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('AsinPrice:update')
             ->daily();
+
+        $schedule->command('Inventry:email')
+            ->daily();
+
+        $schedule->command('Shopify:sync')
+            ->daily();
+
     }
 
     /**
