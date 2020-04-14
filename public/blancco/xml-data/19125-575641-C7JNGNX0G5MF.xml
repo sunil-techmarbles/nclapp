@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><root><report>
     <blancco_data>
         <description>
-            <document_id>6208c23d-fa32-4dee-b2dc-ebefb9832ec9</document_id>
+            <document_id>669e0baa-1078-48af-97e9-44419f5ea082</document_id>
             <document_log>
                 <log_entry>
                     <author>
@@ -9,8 +9,8 @@
                         <product_version>4.2.2</product_version>
                         <product_revision>4.2.2</product_revision>
                     </author>
-                    <date>2020-03-06T13:03:04+0000</date>
-                    <integrity>mZ1dYipUTZ/YVgr/q8ZJGAu71hCEDPlms02HQB9/ogxtlH/S3DT4OTiuIVML8U3Lt5YqpynVJsNZBJ+3IU1a/TweyBMVojuSeSyY3ffBppD4fyKDYi7lObCv+w/peyO3rkuMsQkz48mcWFnnvK+mr3GtQusAt/KQh3tldPyTLUJHpd0tkEK+sUThUkJjsj5mJfSe+Ohq48KlwOthDXApIhC6NM49pro8BI6mltJW74Hg63aBVv7WTsBh6KbG2vE/JdMdXGpi3roUtAzpcJgnNEtoJG26fPx+8wcau3A3unEsL2HAQRvBCI1Xgc6NSBjRiMQcnKMbhrz1owEFy4inOA==</integrity>
+                    <date>2020-03-03T21:00:30+0000</date>
+                    <integrity>BTOq0Af7sj9aJmWG3UZL0OOMt/3XwliufpcGK59DA8hPpsnZydjm5chL8pppNudczLNRkbcxfwPfc5buGaPMvlFL/efe36VO2JmJ5wJtUAZ6DDMFpzj9UD2uZBOHT53tvE1ovGH9c9c9AlIO8TFaRWuXAcB5h5RespTTL20jDbnyOfGLcwA2SryqeiGSzwujFhB81SHaPHojyjx7hx4sguaqyUDODqKHR8mylHIwcroatuGNk3xHwWZnyrYaaErZLBsU5j7HOtCzYf2l23Lve5tYTuvLFZUI2ymvw3rJCc1jVHb4+F0Dacz8xr0XtbXufdI4ZoMoEUO7M0UjrTMGGA==</integrity>
                     <key identifier="300"></key>
                 </log_entry>
                 <log_entry>
@@ -19,8 +19,8 @@
                         <product_version>5.3.2</product_version>
                         <product_revision>7a3325aea61a+</product_revision>
                     </author>
-                    <date>2020-03-06T13:03:06+0000</date>
-                    <integrity>qeez0UbrSyDXZIUL+ASe4EwEXwMfY+uGQAPL8mMLAvcEQsZSu7fYr+2Y2RbV0MQ6DeO3W82kcY2XcYS5Ucd6uYvKXKDWmk1tYWdrTmwC+TXubUCZWceDTqOIAbY9zTTgyAG8U8IwXmiXI+zsT3fHuRVx8GHnd8Y3i2rL5BgYtuMCSNRJRHwrs154l0w7ib29glN9ymeU+bafCaJFHcR/5QgZU03goBzdNmFvPKhIkxbSwLf10ptdR+gTm3LSZUpSSRhurwAZn+hSCfOVud0CrN9ZmM3Jf+f8fjXhbp0iiacxwfKwhrpQ7dhQj7LWkFMy2WS9CtVGoOFWisaTEByopg==</integrity>
+                    <date>2020-03-03T21:00:31+0000</date>
+                    <integrity>enGf4Sy+qU4UrggfIvUQxgXlOofZyE+yvxAulAkuD71dEAW03m85nEOskW86jYXZz1LL8jIpOcSTfWyADN1Mjz4O42yCxLv8PKZp6iB/UOpQkWl6qLdrF2Ewmift9CKZYyKGJ4e1hmMFGFRrMYSEH05PeX+CA6DB7T/YWow5RHtjDnsEASF6ZKvED3OAtK2noqSIP43TSOQ4PHQ3OBxSKIEtqR3YeGoD/v39S7Bh8VuELMJVbtXvVAawN+PGqYCL3OzIF4C6jvOQu6foXG4OFa62XQFxHl/YtYYxSL05Khmr5FrC45gNXbvkOI0QN9sJR85dJ4JLFq+BhhV/aBjDzA==</integrity>
                     <key identifier="100"></key>
                 </log_entry>
             </document_log>
@@ -37,22 +37,17 @@
         <blancco_erasure_report>
             <entries name="erasures">
                 <entries name="erasure">
-                    <entry name="timestamp" type="string">2020-03-05T21:26:28+0000</entry>
-                    <entry name="start_time" type="string">2020-03-05 21:26:28</entry>
-                    <entry name="end_time" type="string">2020-03-05 21:29:48</entry>
-                    <entry name="elapsed_time" type="string">00:03:19</entry>
+                    <entry name="timestamp" type="string">2020-03-03T20:28:11+0000</entry>
+                    <entry name="start_time" type="string">2020-03-03 20:28:11</entry>
+                    <entry name="end_time" type="string">2020-03-03 20:41:43</entry>
+                    <entry name="elapsed_time" type="string">00:13:31</entry>
                     <entry name="erasure_standard_name" type="string">NIST 800-88 Purge</entry>
-                    <entry name="state" type="string">Failed</entry>
+                    <entry name="state" type="string">Successful</entry>
                     <entries name="target">
                         <entry name="type" type="string">Internal memory</entry>
-                        <entry name="capacity" type="uint">16000000000</entry>
-                        <entry name="serial" type="string">IMEI:354410064993697</entry>
+                        <entry name="capacity" type="uint">32000000000</entry>
+                        <entry name="serial" type="string">IMEI:355400087961457</entry>
                         <entry name="vendor" type="string"></entry>
-                    </entries>
-                    <entries name="erasure_details">
-                        <entries name="failure">
-                            <entry name="message" type="string">Cannot connect to device</entry>
-                        </entries>
                     </entries>
                 </entries>
             </entries>
@@ -60,82 +55,84 @@
         <blancco_hardware_report>
             <entries name="system">
                 <entry name="manufacturer" type="string">Apple, Inc.</entry>
-                <entry name="name" type="string">iPhone 6 GSM+CDMA 16GB Gold</entry>
-                <entry name="market_name" type="string">iPhone 6</entry>
-                <entry name="model" type="string">iPhone 6 GSM+CDMA 16GB Gold</entry>
-                <entry name="ram" type="string">1GB</entry>
-                <entry name="device_color" type="string">Gold</entry>
-                <entry name="identifier" type="string">IMEI:354410064993697</entry>
-                <entry name="meid" type="string">35441006499369</entry>
-                <entry name="meid_fourteen" type="string">35441006499369</entry>
-                <entry name="imei" type="string">354410064993697</entry>
-                <entry name="serial" type="string">C7JNGNX0G5MF</entry>
-                <entry name="internal_model" type="string">MG4Q2</entry>
-                <entry name="a_model_number" type="string">A1549</entry>
-                <entry name="firmware_version" type="string">8.0</entry>
+                <entry name="name" type="string">iPhone 6S GSM+CDMA 32GB Space Gray</entry>
+                <entry name="market_name" type="string">iPhone 6s</entry>
+                <entry name="model" type="string">iPhone 6S GSM+CDMA 32GB Space Gray</entry>
+                <entry name="ram" type="string">2GB</entry>
+                <entry name="device_color" type="string">Space Gray</entry>
+                <entry name="identifier" type="string">IMEI:355400087961457</entry>
+                <entry name="meid" type="string">35540008796145</entry>
+                <entry name="meid_fourteen" type="string">35540008796145</entry>
+                <entry name="imei" type="string">355400087961457</entry>
+                <entry name="serial" type="string">FK1TK8KRHFLR</entry>
+                <entry name="internal_model" type="string">MN1M2</entry>
+                <entry name="a_model_number" type="string">A1688</entry>
+                <entry name="firmware_version" type="string">13.3.1</entry>
                 <entry name="region" type="string">LL/A</entry>
                 <entry name="region_code" type="string">LL/A</entry>
                 <entry name="region_name" type="string">USA, Canada, [replacement unit]</entry>
-                <entry name="uuid" type="string">a70d18adaf46b3a2c6a72a5902e0a782194eeb01</entry>
-                <entry name="wifi_mac" type="string">70:3e:ac:a8:f1:6e</entry>
-                <entry name="ecid" type="string">000E022128D00826</entry>
+                <entry name="uuid" type="string">fba9f82745ac2d7601d9bd87d80b607ed837b611</entry>
+                <entry name="wifi_mac" type="string">b4:9c:df:17:8b:5e</entry>
+                <entry name="ecid" type="string">000004B44A6F45F9</entry>
                 <entry name="chassis_type" type="string">Mobile Device</entry>
                 <entry name="find_my_iphone" type="string">Unlocked</entry>
                 <entry name="find_my_iphone_source" type="string">Prolog Mobile</entry>
-                <entry name="mdm_status" type="string">Unlocked</entry>
-                <entry name="initial_carrier" type="string">AT&amp;T</entry>
+                <entry name="mdm_status" type="string">Unknown</entry>
+                <entry name="initial_carrier" type="string">Unlocked</entry>
                 <entry name="prolog_blacklisted" type="string">Unlocked</entry>
                 <entry name="prolog_graylisted" type="string">Unlocked</entry>
-                <entry name="prolog_simlock" type="string">Locked</entry>
-                <entry name="manufacturing_date" type="string">201439</entry>
-                <entry name="touch_id_serial" type="string">F5843836H2LG2MTANW</entry>
-                <entry name="carrier_code" type="string">ATT/TMO/VZW</entry>
+                <entry name="prolog_simlock" type="string">Unlocked</entry>
+                <entry name="manufacturing_date" type="string">201716</entry>
+                <entry name="touch_id_serial" type="string">F5871362VFLG896AHD</entry>
+                <entry name="carrier_code" type="string">TMO/VZW/SPR</entry>
             </entries>
             <entries name="disks">
                 <entries name="disk">
                     <entry name="type" type="string">Internal memory</entry>
-                    <entry name="serial" type="string">IMEI:354410064993697</entry>
-                    <entry name="capacity" type="uint">16000000000</entry>
+                    <entry name="serial" type="string">IMEI:355400087961457</entry>
+                    <entry name="capacity" type="uint">32000000000</entry>
                     <entry name="vendor" type="string"></entry>
                 </entries>
             </entries>
             <entries name="mobile_battery">
-                <entry name="battery_serial" type="string">FG94384L98NFW60BJ</entry>
+                <entry name="battery_serial" type="string">FG97106M8CUG5P2CD</entry>
                 <entry name="battery_vendor" type="string">F</entry>
-                <entry name="battery_manufacture_date" type="string">201438</entry>
-                <entry name="battery_cycles" type="uint">154</entry>
-                <entry name="battery_capacity_design" type="uint">1751</entry>
-                <entry name="battery_capacity_current" type="uint">1647</entry>
-                <entry name="battery_capacity_wear_level" type="uint">5</entry>
-                <entry name="battery_capacity_health_level" type="uint">95</entry>
-                <entry name="battery_temperature" type="string">29</entry>
-                <entry name="battery_charge_level" type="uint">100</entry>
+                <entry name="battery_manufacture_date" type="string">201710</entry>
+                <entry name="battery_cycles" type="uint">265</entry>
+                <entry name="battery_capacity_design" type="uint">1690</entry>
+                <entry name="battery_capacity_current" type="uint">954</entry>
+                <entry name="battery_capacity_wear_level" type="uint">43</entry>
+                <entry name="battery_capacity_health_level" type="uint">57</entry>
+                <entry name="battery_temperature" type="string">32</entry>
+                <entry name="battery_health_metric" type="uint">425</entry>
+                <entry name="battery_chemical_weighted_ra" type="uint">425</entry>
+                <entry name="battery_charge_level" type="uint">48</entry>
             </entries>
             <entries name="cameras">
                 <entries name="camera">
                     <entry name="type" type="string">Front Camera</entry>
-                    <entry name="serial" type="string">00 02 04 25 05 04 44 F0</entry>
-                    <entry name="module_serial" type="string">F6J43757416FTFP3X</entry>
+                    <entry name="serial" type="string">00 01 07 0F 04 00 29 71</entry>
+                    <entry name="module_serial" type="string">F0W71540961G7RG19</entry>
                 </entries>
                 <entries name="camera">
                     <entry name="type" type="string">Back Camera</entry>
-                    <entry name="serial" type="string">00 00 04 25 07 03 7F E4</entry>
-                    <entry name="module_serial" type="string">DNL43775UDJFPDN10</entry>
+                    <entry name="serial" type="string">00 00 07 0A 02 00 BE D7</entry>
+                    <entry name="module_serial" type="string">F6J7102188XG7RL1C</entry>
                 </entries>
             </entries>
         </blancco_hardware_report>
         <blancco_software_report>
             <entries name="operating_system">
                 <entry name="name" type="string">iOS</entry>
-                <entry name="version" type="string">8.0</entry>
+                <entry name="version" type="string">13.3.1</entry>
             </entries>
         </blancco_software_report>
     </blancco_data>
     <user_data>
         <entries name="fields">
             <entry name="Comments" type="string"></entry>
-            <entry name="Lot Number" type="string">19125</entry>
-            <entry name="Asset ID" type="string">575641</entry>
+            <entry name="Lot Number" type="string">18867</entry>
+            <entry name="Asset ID" type="string">560446</entry>
         </entries>
     </user_data>
 </report></root>

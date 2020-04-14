@@ -193,3 +193,12 @@ Route::get('/faildsearchweekly', function () { Artisan::queue('faildSearch:weekl
 
 // Cron for couniting file in the different dir and adding to database
 Route::get('/reportcount', function () { Artisan::queue('WipeBiosBlanccoFiles:count', []); });
+
+// Cron for Update price for ASINs in ASIN Section
+Route::get('/asinpriceupdate', function () { Artisan::queue('AsinPrice:update', []); });
+
+// Cron for Inventry Emailis 
+Route::get('/inventryemail', function () { Artisan::queue('Inventry:email', []); });
+
+// Cron for shopify sync
+Route::get('/shopifysync', function () { Artisan::queue('Shopify:sync', []); });

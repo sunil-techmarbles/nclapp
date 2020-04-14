@@ -39,7 +39,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('failedSearch:daily')
             ->daily();
 
-        $schedule->command('faildSearch:weekly')
+        $schedule->command('faildSearch:weekly') 
             ->weekly();
 
         $schedule->command('WipeBiosBlanccoFiles:count')
@@ -47,6 +47,9 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('COA:weekly')
             ->weekly();
+
+        $schedule->command('AsinPrice:update')
+            ->daily();
     }
 
     /**
