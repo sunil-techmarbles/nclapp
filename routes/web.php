@@ -195,3 +195,9 @@ Route::get('/reportcount', function () { Artisan::queue('WipeBiosBlanccoFiles:co
 
 // Cron for Update price for ASINs in ASIN Section
 Route::get('/asinpriceupdate', function () { Artisan::queue('AsinPrice:update', []); });
+
+// Cron for Inventry Emailis 
+Route::get('/inventryemail', function () { Artisan::queue('Inventry:email', []); });
+
+// Cron for shopify sync
+Route::get('/shopifysync', function () { Artisan::queue('Shopify:sync', []); });
