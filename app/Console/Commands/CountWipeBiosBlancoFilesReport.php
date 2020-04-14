@@ -45,12 +45,12 @@ class CountWipeBiosBlancoFilesReport extends Command
      */
     public function handle()
     {
-        $subject = 'WipeBiosBlanccoFiles:count '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for WipeBiosBlanccoFiles:count', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'WipeBiosBlanccoFiles:count '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for WipeBiosBlanccoFiles:count', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
         $this->basePath  = base_path().'/public';
         $this->wipeDataFilesDir = $this->basePath . '/wipe-data';
         $this->blanccoDataFilesDir = $this->basePath . '/blancco/pdf-data';

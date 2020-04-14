@@ -42,12 +42,12 @@ class FailedSearchWeekly extends Command
      */
     public function handle()
     {
-        $subject = 'faildSearch:weekly '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for faildSearch:weekly', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'faildSearch:weekly '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for faildSearch:weekly', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
         $this->basePath  = base_path().'/public';
         $this->sessionReportDir = $this->basePath . "/session-reports";
         $date = date('Y-m-d');

@@ -46,12 +46,12 @@ class WipeBiosMakor extends Command
      */
     public function handle()
     {
-        $subject = 'WipeBiosMakor:api '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for WipeBiosMakor:api', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'WipeBiosMakor:api '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for WipeBiosMakor:api', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
         $this->basePath  = base_path().'/public';
         $this->wipeBiosDataDir = $this->basePath . "/wipe-data/bios-data";
         $this->wipeBiosAdditionalDataDir = $this->basePath . "/wipe-data-additional";
