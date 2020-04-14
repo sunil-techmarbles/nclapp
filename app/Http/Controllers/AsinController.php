@@ -83,18 +83,24 @@ class AsinController extends Controller
     	return view ('admin.asin.add');
     }
 
+    public function getHttpResponseCode($url)
+    {
+        $headers = get_headers($url);
+        return substr($headers[0], 9, 3);
+    }
+
     public function getAsinPrice($asin)
     {
-        if(File::exists("http://www.amazon.com/gp/aw/d/".$asin))
-        {
-            $html = file_get_contents("http://www.amazon.com/gp/aw/d/".$asin);
-            $price = getBetween($html,'data-asin-price="','"');
-
-        }
-        else
+        $url = "http://www.amazon.com/gp/aw/d/".$asin;
+        if($this->getHttpResponseCode($url) == "404")
         {
             MessageLog::addLogMessageRecord("asin number don't exist","asin price","failure");
             $price = 0;
+        }
+        else
+        {
+            $html = file_get_contents($url);
+            $price = getBetween($html,'data-asin-price="','"');
         }
         return $price;
     }
