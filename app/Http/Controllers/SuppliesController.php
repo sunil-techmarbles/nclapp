@@ -243,11 +243,11 @@ class SuppliesController extends Controller
             // if ($result) 
             // {
                 $supplieEmails = Supplies::getSupplieDetailAndEmails($sid);
-                $var_keys = array_keys($supplieEmails->toArray());
+                $varKeys = array_keys($supplieEmails->toArray());
                 $supplieEmails["reorder_qty"] = ($qty) ? $qty : 0 ;
                 $body = $supplieEmails['email_tpl'];
                 $subject = $supplieEmails['email_subj'];
-                foreach($var_keys as $v)
+                foreach($varKeys as $v)
                 {
                     $body = str_replace("[".$v."]",$supplieEmails[$v],$body);
                 }

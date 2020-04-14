@@ -183,6 +183,15 @@ class Supplies extends Model
             ->first();
     }
 
+    public static function getEmailsAndSupplyrecord($date)
+    {
+        return self::with(['getSupplieEmails'])
+            ->where('qty' ,'<=', 'low_stock')
+            ->where('low_stock' ,'>', '0')
+            ->where('email_sent' ,'<', $date)
+            ->get();
+    }
+
     public static function getAllPartsSpecificFields($specificFields, $orderBy, $asinID)
     {
         return self::with(['getSupplieAsinModels'])

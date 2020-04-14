@@ -549,7 +549,7 @@ $(document).ready(function()
 		}
 	});
 
-	$('#supplies, #asins, #users_table').DataTable();
+	$('#supplies, #asins, #users_table, #message-logs').DataTable();
 	
 	$('#shipment').DataTable
 	({
