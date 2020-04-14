@@ -8,7 +8,7 @@
 			<div class="w-100 row mb-3 mt-3">
 				<div class="col-md-7 mr-0">
 					<div class="form-group">
-						<input class="form-control" type="file" name="bulk_data" id="bulk_data"/>
+						<input class="form-control" type="file" accept=".csv,.xls,.xlsx" name="session_file" id="bulk_data"/>
 						<input type="submit" value="Bulk Upload" class="btn btn-warning ml-1" name="bulk_upload"/>
 						<a target="_blank" class="btn btn-warning ml-1" href="{{URL('/sample-files/sample.xlsx')}}">Sample</a>
 					</div>					

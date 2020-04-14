@@ -144,6 +144,7 @@ class ShopifyController extends Controller
  		{
  			$error = [];
  			$currentSession = Session::getOpenStatucRecord($request, $status = 'open');
+ 			$currentSession = $currentSession[0];
  			try
  			{
 				/**

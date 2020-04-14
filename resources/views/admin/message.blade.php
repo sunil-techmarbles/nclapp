@@ -26,6 +26,12 @@
 </div>
 @endif
 
+@if ($message = Session::get('bulksession'))
+<div class="alert-warning alert-block">
+	<div class="bulk-session-itamg">{!! $message !!}</div>
+</div>
+@endif
+
 @if ($errors->any())
 <div class="alert alert-danger">
 	<button type="button" class="close" data-dismiss="alert">×</button>	

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use App\Traits\CommenRecycleTraits;
 use Maatwebsite\Excel\Facades\Excel;
@@ -205,6 +206,14 @@ class RecycleController extends Controller
 
     public function readDataFromFile(Request $request)
     {
+        $status = 'error';
+        $validator = Validator::make($request->all(),[
+            'file' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
+        ]);
+        if ($validator->fails())
+        {
+            $message = $validator->messages()->first();
+        }
         if($request->has('file'))
         {
             if($request->hasFile('file'))
@@ -213,13 +222,23 @@ class RecycleController extends Controller
                 {   
                     $import = new RecycleTwoFileImport();
                     Excel::import($import,request()->file('file'));
+                    $status = 'success';
+                    $message = "File upload successfully";
                 }
                 catch (\Maatwebsite\Excel\Validators\ValidationException $e)
                 {
                     return redirect()->back()->with('error', $e->getMessage());
+                    $message = $e->getMessage();
                 }
-
-                return redirect()->back()->with('success', "File upload successfully");
+                catch (\Exception $e)
+                {
+                    $message = $e->getMessage();
+                }
+                catch (\Error $e)
+                {
+                    $message = $e->getMessage();
+                }
+                return redirect()->back()->with($status, $message);
             }
         }
     }

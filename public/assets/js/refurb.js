@@ -291,7 +291,6 @@ function getAssetData(fId)
 							$("#edit_"+ka).append('<div><button class="btn btn-primary" onclick="addCOA()" type="button">COA Info</button> <button class="btn btn-warning" onclick="setWS()" type="button">To Wholesale</button> <span style="float:right"><button class="btn btn-primary" onclick="prevTab('+i+')" type="button">Back</button>&nbsp;<button class="btn btn-primary" onclick="nextTab('+i+')" type="button">Next</button></span></div>');
 						}
 					}
-					
 				}		
 				alignCB();
 				setChange(); 
@@ -303,7 +302,7 @@ function getAssetData(fId)
 				{
 					changeASIN();
 				}
-				if(adata.asin_match == 'saved') $("#btnSetAsin").show();
+				if (adata.asin_match == 'saved') $("#btnSetAsin").show();
 				if (adata.print != '') $("#printsaved").show();
 				if (adata.pdf != '')
 				{

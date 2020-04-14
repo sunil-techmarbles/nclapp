@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\SessionsImport;
@@ -49,11 +50,13 @@ class SessionController extends Controller
     public function getAssetsAsinId($request, $currentSession)
     {
     	$pageMessage = [];
+    	$responseMessage = [];
 		foreach ($request as $key => $value)
 		{
 			$rcheck = $value['rcheck'];
 			if ($rcheck > 0)
-			{	
+			{
+				$formfactor = $value['form_factor'];
 			    $asset = $rcheck;
 			    $manuf = $value['manuf'];
 			    $model = $value['model'];
@@ -61,13 +64,14 @@ class SessionController extends Controller
 			    $cpuModel = $value['cpuModel'];
 			    $cpuSpeed = $value['cpuSpeed'];
 			    $ram = $value['ram'];
-			    $cpudata = explode("-",$cpu_model);
+			    $cpudata = explode("-",$cpuModel);
 			    $cpuCore = strtolower($cpudata[0]);
 			    $cpuMdl = strtolower($cpudata[1]);
-			    if(!SessionData::hasAssests($asset))
-			    {	
+			    $result = SessionData::hasAssests($asset);
+			    if($result->count() == 0)
+			    {
 			        $fields = ["id","model","asin","ram","hdd","os","cpu_core","cpu_model","cpu_speed","price"];
-			        $asins = Asin::getSpecificFourthRecord($fields, $model, $cpuCore, $cpuMdl);
+			        $asins = Asin::getSpecificFourthRecord($fields, $model, $cpuCore, $cpuMdl, $formfactor);
 			        if(!$asins)
 			        {
 			            $asins = Asin::getSpecificFifthRecord($fields, $model, $cpuCore);
@@ -76,27 +80,28 @@ class SessionController extends Controller
 			        {
 			            $asins = Asin::getSpecificSixthRecord($fields, $model);
 			        }
-			        
 			        if(count($asins)==1)
 			        {
 			            $aid = $asins[0]["id"];
 			            $data = [
-			                "sid" => $currentSession,
+			                "sid" => $currentSession->first(),
 			                "aid" => $aid,
 			                "asset" => $asset,
 			                "added_by" => Sentinel::getUser()->first_name,
 			                "added_on" => $this->current
 			            ];
+			            $current = $this->current;
 			            SessionData::addSessionDataRecord((object) $data, $current);
+			            $pageMessage[] = "<strong>ASINs correctly matched. \n" + $key + "  Records Inserted</strong>";
 			        }
 			        elseif(!$asins)
 			        {
-			            $pageMessage[] = "The ASIN match for the Asset". $asset."(".$manuf.$model.','.$cpuModel.','.$cpuSpeed.") was not found";
+			            $pageMessage[] = "<strong>The ASIN match for the Asset". $asset."(".$manuf.$model.','.$cpuModel.','.$cpuSpeed.") was not found</strong>";
 			        }
 			        else
 			        {
-			            $out = "Please select matching ASIN for the Asset". $asset."(".$manuf.$model.','. $cpuModel.','.$cpuSpeed.','. $ram."):<br/>";
-			            $out.= "<select id='asset'".$asset."' onchange='setBulkAsin(this.id)'><option value=''>Select</option>";
+			            $out = "<strong>Please select matching ASIN for the Asset". $asset."(".$manuf.$model.','. $cpuModel.','.$cpuSpeed.','. $ram.")</strong>:<br/>";
+			            $out.= "<select class='form-control' id='asset{$asset}' onchange='setBulkAsin(this.id)'><option disabled value=''>Select</option>";
 			            foreach($asins as $a)
 			            {
 			                $out.= "<option value='".$a['id']."'>".$a['asin']." ".$a['model']." ".$a['cpu_core']."-".$a['cpu_model']."</option>";
@@ -110,12 +115,29 @@ class SessionController extends Controller
 		return $pageMessage;
     }
 
+    public function setBulkAsin(Request $request)
+    {
+		$asset = $request->get("asset");
+		$aid = $request->get("aid");
+		$currentSession = Session::getOpenStatucRecord($request, $status='open');
+		$data = [
+            "sid" => $currentSession->first(),
+            "aid" => $aid,
+            "asset" => $asset,
+            "added_by" => Sentinel::getUser()->first_name,
+            "added_on" => $this->current
+        ];
+        $current = $this->current;
+        SessionData::addSessionDataRecord((object) $data, $current);
+		return "asset".$asset;
+	}
+
     public function sendSessionPdfReport($request)
     {
     	$currentSession = Session::getOpenStatucRecord($request, $status = 'open');
     	if(count($currentSession) > 0)
     	{
-	    	$currentSession = $currentSession[0];
+	    	$currentSession = $currentSession->first();
 	    	Session::updateSessionRecord($status="closed", $this->current);
 	    	Session::addSessionRecord($request, $this->current);
 			$sessionSummary = SessionData::sessionSummary($currentSession);
@@ -213,26 +235,54 @@ class SessionController extends Controller
 		$assets = [];
 		if ($request->isMethod('post'))
 		{
-			if($request->has('bulk_upload'))
+			$validator = Validator::make($request->all(),[
+	            'session_file' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
+	        ],
+	    	[
+	    		'session_file.required' => 'Please upload file',
+	    		'session_file.mimes' => 'Only csv and excel files are allowed'
+	    	]);
+	        if ($validator->fails())
+	        {
+	        	$status = 'error';
+	            $message = $validator->messages()->first();
+	            \Session::flash($status, $message);
+	        }
+			if($request->has('session_file'))
 			{
-				if($request->hasFile('bulk_data'))
+				if($request->hasFile('session_file'))
 				{
 					$currentSession = Session::getOpenStatucRecord($request, $status='open');
 					try
 					{	
 						$import = new SessionsImport();
-						Excel::import($import,request()->file('bulk_data'));
-						$this->getAssetsAsinId($import->data, $currentSession);
-					}
-					catch (\Maatwebsite\Excel\Validators\ValidationException $e)
-					{
-						$failures = $e->failures();
-						foreach ($failures as $failure)
+						Excel::import($import,request()->file('session_file'));
+						$resposeMessage = $this->getAssetsAsinId($import->data, $currentSession);
+						foreach ($resposeMessage as $key => $value)
 						{
-							$failure->row(); // row that went wrong
-							$failure->attribute(); // either heading key (if using heading row concern) or column index
+							\Session::flash('bulksession', $value);
 						}
 					}
+					
+					catch (\Maatwebsite\Excel\Validators\ValidationException $e)
+	                {
+	                    return redirect()->back()->with('error', $e->getMessage());
+	                    $status = 'error';
+	                    $message = $e->getMessage();
+        				\Session::flash($status, $message);
+	                }
+	                catch (\Exception $e)
+	                {
+	                	$status = 'error';
+	                    $message = $e->getMessage();
+        				\Session::flash($status, $message);
+	                }
+	                catch (\Error $e)
+	                {
+	                	$status = 'error';
+	                    $message = $e->getMessage();
+        				\Session::flash($status, $message);
+	                }
 				}
 			}
 		}
@@ -241,7 +291,7 @@ class SessionController extends Controller
 			$this->sendSessionPdfReport($request);
 			$status = 'success';
             $message = 'Session created successfully';
-            \Session::flash($status, $message);					
+            \Session::flash($status, $message);
 		}
 		$sessions = Session::getSessionRecord($request);
 		foreach($sessions as &$s)

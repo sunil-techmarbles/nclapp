@@ -182,12 +182,13 @@ class Asin extends Model
             ->get();
     }
     
-    public static function getSpecificFourthRecord($fields, $model, $cpuCore, $cpuMdl)
-    {   
+    public static function getSpecificFourthRecord($fields, $model, $cpuCore, $cpuMdl, $formfactor)
+    {
         return self::select($fields)
-            ->where(function($q) use ($model, $cpuCore, $cpuMdl){
+            ->where(function($q) use ($model, $cpuCore, $cpuMdl, $formfactor){
                 $q->where([
                     "cpu_core" => $cpuCore,
+                    "form_factor" => $formfactor,
                 ]);
                 $q->where('cpu_model', 'LIKE', $cpuMdl);
                 $q->orWhere('model', 'LIKE', $model);

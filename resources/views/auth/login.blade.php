@@ -22,7 +22,7 @@
 		<form method="post" action="{{route('login.authenticate')}}"> 
 			@csrf  
 			<div class="form-group text-left">
-				<label for="username">Email / Username</label>
+				<label for="username">Username</label>
 				<input type="text" class="form-control" value="{{ old('username') }}" id="username" placeholder="Enter email or user name " name="username">
 				@if ($errors->has('username'))
 				<span class="text-danger">{{ $errors->first('username') }}</span>

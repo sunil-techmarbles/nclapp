@@ -33,7 +33,7 @@ class LoginController extends Controller
         try
         {
             $loginData = [
-                'login'    => $request->username,
+                'username' => $request->username,
                 'password' => $request->password,
             ];
             if (Sentinel::authenticate($loginData, $rememberMe))

@@ -72,6 +72,20 @@ function showSweetAlertMessage(type, message, icon)
 		) 
 }
 
+function setBulkAsin(sid)
+{
+	var asset = sid.replace("asset","");
+	console.log(asset);
+	var aid = $('#'+sid).val();
+	if(aid !='')
+	{
+		$.get("/"+prefix+"/setbulkasin?aid="+aid+"&asset="+asset+"&t="+Math.random(), function(data)
+		{
+			$('#'+data).parent().hide();
+		});
+	}
+}
+
 function setHeader()
 {
 	var lh = $("#page-logo").height();
