@@ -4,6 +4,7 @@
 <div class="mte_content">
 	<div class="container">
 		<form method="post" class="form-inline" enctype="multipart/form-data" action="{{route('sessions')}}" style="max-height: 250px;overflow: auto;">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="w-100 row mb-3 mt-3">
 				<div class="col-md-7 mr-0">
@@ -38,7 +39,7 @@
 				@foreach($sessions as $p)
 					<tr>
 						<td>{{$p["id"]}}</td>
-						<td><a href="{{route('sessions', ['s' => $p['id']])}}">{{$p["name"]}}</a></td>
+						<td><a href="{{route('sessions', ['pageaction' => request()->get('pageaction'),'s' => $p['id']])}}">{{$p["name"]}}</a></td>
 						<td>{{$p["started_on"]}}</td>
 						<td>{{$p["status"] == 'open' ? '' : $p["updated_on"]}}</td>
 						<td>{{$p["status"]}}</td>
@@ -82,8 +83,8 @@
 										@foreach($assets['asin'.$i['aid']]['active'] as $itm)
 											<a href="{{route('sessions', [
 												's' => request()->get('s'),
-												'remove' => $itm
-
+												'remove' => $itm,
+												'pageaction' => request()->get('pageaction')
 											])}}">
 										{{$itm}}</a>&nbsp;
 										@endforeach
@@ -94,8 +95,8 @@
 										@foreach($assets['asin'.$i['aid']]['removed'] as $itm)
 											<a href="{{route('sessions', [
 												's' => request()->get('s'),
-												'restore' => $itm
-
+												'restore' => $itm,
+												'pageaction' => request()->get('pageaction')
 											])}}">{{$itm}}</a>&nbsp;
 										@endforeach
 										(click to restore)
@@ -116,6 +117,7 @@
 		@if(!empty($parts) && $parts->count() > 0)
 			<h3>Required Parts</h3>
 			<form method="post" action="{{route('sessions')}}">
+				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 				@csrf
 				<table id="sessions-asins-part-list" class="table">
 					<thead>
@@ -154,8 +156,8 @@
 						@if(@$miss>0)
 							<a href="{{route('sessions', [
 									's' => request()->get('s'),
-									'reorder' => 1
-
+									'reorder' => 1,
+									'pageaction' => request()->get('pageaction')
 								])}}" onclick="$(this).hide()" class="btn btn-warning">Reorder</a>
 						@endif
 					</div>					

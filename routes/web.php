@@ -70,7 +70,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
 		Route::get('/updateqtyreorder','SuppliesController@updateQtyReorder')->name('update.qty.reorder');
 		Route::post('/storesupplie','SuppliesController@storeSupplies')->name('store.supplies');
-		Route::get('/editsupplie/{supplieid}','SuppliesController@editSupplies')->name('edit.supplies');
+		Route::get('/editsupplie','SuppliesController@editSupplies')->name('edit.supplies');
 		Route::post('/updatesupplie','SuppliesController@updateSupplies')->name('update.supplies');
 		Route::get('/deletesupplie/{supplieid}','SuppliesController@deleteSupplie')->name('delete.supplies');
 		// Asin Section
@@ -78,8 +78,8 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/addasin','AsinController@addAsins')->name('add.asins');
 		Route::post('/storeasin','AsinController@storeAsins')->name('store.asin');
 		Route::post('/updateasin','AsinController@updateAsins')->name('update.asin');
-		Route::get('/editasin/{asinid}','AsinController@editAsin')->name('edit.asin');
-		Route::get('/asinparts/{asinid}','AsinController@partsAsin')->name('parts.asin');
+		Route::get('/editasin','AsinController@editAsin')->name('edit.asin');
+		Route::any('/asinparts','AsinController@partsAsin')->name('parts.asin');
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
 		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup');
 		// Refurb Section

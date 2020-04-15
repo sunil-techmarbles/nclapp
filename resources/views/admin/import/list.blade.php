@@ -4,6 +4,7 @@
 <div class="container shopify-product-table">
     <div id="page-head" class="noprint">Import</div>
     <form action="{{route('import')}}" method="GET" class="search-table" enctype="multipart/form-data">
+		<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
         @if (request()->get('model') && empty($shopifyPriceData))
             <p class="alert alert-danger"> No Data Found.</p>
         @endif
@@ -32,7 +33,7 @@
         <div class="row">
             <div class="w-100 float-right">
                 <div class="form-group-sm float-right mt-3">
-                    <a href="{{route('import')}}" class="btn btn-warning">Reset</a>
+                    <a href="{{route('import',['pageaction' => request()->get('pageaction')])}}" class="btn btn-warning">Reset</a>
                     <input class="btn btn-success" type="submit" value="Search"/>
                 </div>
             </div> 

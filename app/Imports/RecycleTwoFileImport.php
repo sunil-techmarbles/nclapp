@@ -17,7 +17,7 @@ class RecycleTwoFileImport implements ToModel, WithStartRow
         $data = [
             "Brand"  => ifnull(@$row[0]),
             "Model"   => ifnull(@$row[1]),
-            "PartNo"   => ifnull(@intval($row[2])),
+            "PartNo"   => ifnull(@$row[2]),
             "Category" => ifnull(@$row[3]),
             "Notes"    => ifnull(@$row[4]),
             "Value"    => ifnull(@$row[5]),

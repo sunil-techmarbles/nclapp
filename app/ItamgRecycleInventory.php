@@ -42,7 +42,8 @@ class ItamgRecycleInventory extends Model
 
     public static function getAllRecord($value='')
     {
-    	return self::get();
+    	return self::orderBy('id', 'desc')
+            ->get();
     }
 
     public static function getRecordById($value)
@@ -62,7 +63,7 @@ class ItamgRecycleInventory extends Model
     {
     	return self::select($fields)
     		->where(['Model' => $request->search])
-    		->orWhere(['PartNo' => $request->search])
+    		->where(['PartNo' => $request->search])
     		->get();
     }
 

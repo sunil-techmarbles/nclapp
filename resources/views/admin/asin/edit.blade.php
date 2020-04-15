@@ -2,7 +2,8 @@
 @section('title', 'Edit ASIN')
 @section('content')
 <div class="mte_content">
-	<form id="asins-validation" method="post" action="{{route('update.asin')}}">   
+	<form id="asins-validation" method="post" action="{{route('update.asin')}}">
+		<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 		@csrf 
 		<div>
 			<table class="table" cellspacing="0" cellpadding="0" style="border: 0">
@@ -10,7 +11,7 @@
 					<tr>
 						<td class="float-right">
 							<button type="submit" class="btn btn-primary"> Update </button> 
-							<a class="btn btn-default btn-sm border back-btn btn-secondary" href="{{route('asin')}}">Back</a>
+							<a class="btn btn-default btn-sm border back-btn btn-secondary" href="{{route('asin', ['pageaction' => request()->get('pageaction')])}}">Back</a>
 						</td>
 						<td class="float-left">
 							<h3>Edit ASIN</h3>

@@ -433,5 +433,4 @@ class RefurbController extends Controller
 	{
 		return (new IssuesReportExport)->download('issues.csv', \Maatwebsite\Excel\Excel::CSV); 
 	}
-
 }

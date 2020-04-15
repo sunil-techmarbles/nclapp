@@ -10,6 +10,7 @@
 			</h3>
 		</div>
 		<form method="post" class="form-inline row w-100 m-0" action="{{route('inventory',['shopifysubmit' => 'true'])}}" enctype="multipart/form-data">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="col-6 float-left p-0">
 				<div class="form-group">
@@ -136,7 +137,7 @@
 						<td>{{ $i["cnt"] }}</td>
 						<td>
 							@if($i["mid"])
-								<a href="{{route('model.data.template',['tplid' => $i["mid"]])}}" target="_blank">Model Data</a> 
+								<a href="{{route('model.data.template',['pageaction' => request()->get('pageaction'),'tplid' => $i["mid"]])}}" target="_blank">Model Data</a> 
 							@else
 								<span style="cursor:pointer" onclick="$('#mid{{$i['asin']}}').toggle()">Specify Model</span>
 								<div style="display: none;position:absolute" id="mid{{$i['asin']}}">
@@ -179,7 +180,7 @@
 							<td>{{$a["asset"]}}</td>
 							<td colspan="5">{{$a["added_on"]}}</td>
 							<td></td>
-							<td><a href="{{route("inventory", ["remove" => $a["asset"]])}}"><span class="fa fa-trash"></span></a></td>
+							<td><a href="{{route("inventory", ['pageaction' => request()->get('pageaction') ,"remove" => $a["asset"]])}}"><span class="fa fa-trash"></span></a></td>
 						</tr>
 					@endforeach
 				@endforeach

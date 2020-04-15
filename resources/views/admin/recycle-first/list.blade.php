@@ -5,6 +5,7 @@
 	<div id="page-head">Recycle</div>
     <div class="row">
         <form action="{{route('recycle.record')}}" class="form-inline mb-3" method="POST">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
             @csrf
         	<div class="col-5">
     	    	<div class="form-group">
@@ -72,7 +73,7 @@
                         <strong>{{$p['name'] }}</strong>
                         <button class="btn btn-sm btn-link recycle-download" data-file_id="{{$p['id']}}" data-file_name_download="{{$p['name']}}"><strong>View</strong></button>
                         @if($p["status"] == 1)
-                            <a class="btn btn-sm btn-link" target="__blank" data-file_id="{{$p['id']}}" href="{{route('edit.recycle.record', ["record_id" => $p["id"]])}}" title="Edit">
+                            <a class="btn btn-sm btn-link" target="__blank" data-file_id="{{$p['id']}}" href="{{route('edit.recycle.record', ['pageaction' => request()->get('pageaction'), 'record_id' => $p['id']])}}" title="Edit">
                                 Edit
                             </a>
                         @endif
@@ -98,7 +99,7 @@
                 <table class="table table-striped">
                     <tr>
                         <th></th>
-                        <th>Category Name <span class="glyphicon glyphicon-eye-close" onclick="$('.s_price').toggle()"></span></th>
+                        <th>Category Name <span class="fa fa-eye-slash" onclick="$('.s_price').toggle()"></span></th>
                         <th class="s_price" style="display: none;">Price</th>
                         <th>Type</th>
                         <th></th>
@@ -121,7 +122,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{route('edit.category.record', ["cat_name" => $unapporovedCategory['Type_of_Scrap']])}}">
+                                <a href="{{route('edit.category.record', ['pageaction' => request()->get('pageaction'), 'cat_name' => $unapporovedCategory['Type_of_Scrap']])}}">
                                     <img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
                                 </a>
                             </td>

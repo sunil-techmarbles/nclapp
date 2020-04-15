@@ -1,6 +1,8 @@
 <div id="userModal" class="modal fade">
     <div class="modal-dialog">
         <form method="post" id="user_form" enctype="multipart/form-data">
+			@csrf
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Missing Part List</h4>

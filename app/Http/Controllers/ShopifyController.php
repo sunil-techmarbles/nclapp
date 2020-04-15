@@ -85,6 +85,7 @@ class ShopifyController extends Controller
  	*/
  	public function setPrice($id, $price)
  	{
+ 		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
  		if($price)
  		{
  			$data = [
@@ -94,7 +95,7 @@ class ShopifyController extends Controller
  			ShopifyPricingCustom::deleteExistRecord($id);
  			ShopifyPricingCustom::addNewRecorde((object) $data);
  		}
- 		return redirect()->route('inventory');
+ 		return redirect()->route('inventory',['pageaction'=>$pageaction]);
  	}
 
     /**
@@ -102,6 +103,7 @@ class ShopifyController extends Controller
  	*/
  	public function bulkRemoveRecord($request)
  	{
+ 		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
  		if($request->hasFile('datafile'))
  		{
  			$error = '';
@@ -127,11 +129,11 @@ class ShopifyController extends Controller
 			 }
 			 if($error)
 			 {
-			 	return redirect()->route('inventory')->with('error', $error);
+			 	return redirect()->route('inventory',['pageaction'=>$pageaction])->with('error', $error);
 			 }
 			 else
 			 {
-			 	return redirect()->route('inventory')->with('success', 'Records remove successfully');
+			 	return redirect()->route('inventory',['pageaction'=>$pageaction])->with('success', 'Records remove successfully');
 			 }
 			}
 		}
@@ -141,6 +143,7 @@ class ShopifyController extends Controller
  	*/
  	public function bulkUploadRecord($request)
  	{
+ 		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
  		if($request->hasFile('bulk_data'))
  		{
  			$error = [];
@@ -168,11 +171,11 @@ class ShopifyController extends Controller
 			 }
 			 if($error)
 			 {
-			 	return redirect()->route('inventory')->with('error', $error);
+			 	return redirect()->route('inventory',['pageaction'=>$pageaction])->with('error', $error);
 			 }
 			 else
 			 {
-			 	return redirect()->route('inventory')->with('success', 'Records upload successfully');
+			 	return redirect()->route('inventory',['pageaction'=>$pageaction])->with('success', 'Records upload successfully');
 			 }
 			}
 		}
@@ -182,6 +185,7 @@ class ShopifyController extends Controller
  	*/
  	public function index(Request $request)
  	{
+ 		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
  		if($request->get('goto'))
  		{
 			/**
@@ -194,7 +198,7 @@ class ShopifyController extends Controller
 		 	}
 		 	else
 		 	{
-		 		return redirect()->route('inventory');
+		 		return redirect()->route('inventory',['pageaction'=>$pageaction]);
 		 	}
 		 }
 
@@ -211,32 +215,47 @@ class ShopifyController extends Controller
 		 if($request->get('remove'))
 		 {
 		 	ListData::updateRunStatus($request->get('remove'), $status='removed');
-		 	redirect()->route('inventory');
 		 }
 
 		 if($request->get('bulk_remove'))
 		 {
+		 	$validator = Validator::make($request->all(),[
+            	'bulk_remove' => 'required|mimes:xlsx,csv,xls,txt'
+	        ],
+	    	[
+	    		'bulk_remove.required' => 'Please upload file',
+	    		'bulk_remove.mimes' => 'Only csv and excel files are allowed'
+	    	]);
+	    	
+	        if ($validator->fails())
+	        {
+		 		$status = 'error';
+	            $message = $validator->messages()->first();
+	            \Session::flash($status, $message);
+	        }
 			/**
 		 	* bulkRemoveRecord call with Request instance object.
 		 	*/
 		 	$this->bulkRemoveRecord($request);
 		 }
 
-        $validator = Validator::make($request->all(),[
-            'bulk_upload' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
-        ],
-    	[
-    		'bulk_upload.required' => 'Please upload file',
-    		'bulk_upload.mimes' => 'Only csv and excel files are allowed'
-    	]);
-        if ($validator->fails())
-        {
-	 		$status = 'error';
-            $message = $validator->messages()->first();
-            \Session::flash($status, $message);
-        }
+        
 		 if($request->get('bulk_upload'))
 		 {
+		 	$validator = Validator::make($request->all(),[
+            	'bulk_upload' => 'required|mimes:xlsx,csv,xls,txt'
+	        ],
+	    	[
+	    		'bulk_upload.required' => 'Please upload file',
+	    		'bulk_upload.mimes' => 'Only csv and excel files are allowed'
+	    	]);
+	    	
+	        if ($validator->fails())
+	        {
+		 		$status = 'error';
+	            $message = $validator->messages()->first();
+	            \Session::flash($status, $message);
+	        }
 			/**
 		 	* bulkUploadRecord call with Request instance object.
 		 	*/

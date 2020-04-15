@@ -15,7 +15,9 @@
 		<div id="page-head">
 			Parts for {{$asinsParts['model']}} ({{$asinsParts['asin']}})
 		</div>
-		<form method="GET" class="form-inline" action="{{route('parts.asin', $asinsParts['id'])}}">
+		<form method="GET" class="form-inline" action="{{route('parts.asin',['pageaction' => request()->get('pageaction'), 'id' => $asinsParts['id']])}}">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="id" value="{{$asinsParts['id']}}"/>
 			<div class="w-100">
 				<div class="mx-0 form-group float-right mb-2">
 					<label for="qty">Quantity:</label>
@@ -53,8 +55,10 @@
 		<div style="margin-bottom: 10px" class="show-hide-btn">
 			<button class="btn btn-default " onclick="$('#mlookup').toggle()">Show/Hide Models</button>
 			@if($miss > 0)
-				<form class="w-80 form-inline float-right" action="{{route('parts.asin', $asinsParts['id'])}}" method="GET">
+				<form class="w-80 form-inline float-right" action="{{route('parts.asin', ['pageaction' => request()->get('pageaction'), 'id' => $asinsParts['id']])}}" method="GET">
 					<input type="hidden" name="qty" value="{{$qty}}"/>
+					<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+					<input type="hidden" name="id" value="{{$asinsParts['id']}}"/>
 					<button class="btn btn-warning" onclick="$(this).hide()" name="reorder" value="1" type="submit">Reorder</button>
 				</form>
 			@endif
@@ -69,7 +73,7 @@
 				<th>HDD</th>
 			</tr>
 			@foreach($models as $m)
-			<tr style="cursor: pointer" class="mdlrow" data-model="{{strtolower($m['asin'].$m['model'])}}" onclick="location.href = '{{route("parts.asin", $m["id"])}}'">
+			<tr style="cursor: pointer" class="mdlrow" data-model="{{strtolower($m['asin'].$m['model'])}}" onclick="location.href = '{{route("parts.asin", ['pageaction' => request()->get('pageaction'), 'id' => $m["id"]])}}'">
 				<td>{{$m['asin']}}</td>
 				<td>{{$m['model']}}</td>
 				<td>{{$m['form_factor']}}</td>
@@ -83,7 +87,9 @@
 			<button class="btn btn-default" onclick="$('#all_parts').toggle()">Show/Hide Parts ({{$asinsParts['model']}} ({{$asinsParts['asin']}})
 			</button>
 		</div>
-		<form id="all_parts" style="display:none;" method="GET" action="{{route('parts.asin', $asinsParts['id'])}}">
+		<form id="all_parts" style="display:none;" method="GET" action="{{route('parts.asin', ['pageaction' => request()->get('pageaction'), 'id' => $asinsParts['id']])}}">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="id" value="{{$asinsParts['id']}}"/>
 			<div style="height:600px;overflow: auto">
 				<table style="background-color: #eceef2;" class="table table-striped table-condensed table-hover">
 					<tr>
@@ -104,9 +110,7 @@
 					@foreach($allParts as $p)
 					<tr class="invrow" data-dept="{{htmlentities($p['dept'])}}">
 						<td>
-							<input type="checkbox" name="mpart[]" id="mpart{{$p["id"]}}" value="{{$p["id"]}}" {{in_array($asinsParts['id'],$p['models']) ? 'checked' : '' }} >
-							{{$p['part_num']}}
-						</td>
+							<input type="checkbox" name="mpart[]" id="mpart{{$p['id']}}" value="{{$p['id']}}" {{in_array($asinsParts['id'],$p['models']) ? 'checked' : '' }} >{{$p['part_num']}}</td>
 						<td>{{$p['item_name']}}</td>
 						<td>{{$p['dept']}}</td>
 						<td>{{$p['vendor']}}</td>

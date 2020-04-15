@@ -81,6 +81,7 @@ class SuppliesController extends Controller
 
     public function storeSupplies(Request $request)
     {
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $validatedData = $request->validate([
             'item_name' => 'required',
             'qty' => 'required|integer',
@@ -112,17 +113,18 @@ class SuppliesController extends Controller
                     SupplieAsinModel::addSupplieAsinModel($applicableModel, $supplieID);
                 }
             }
-
-            return redirect()->route('supplies')->with('success','Item created successfully!');
+            return redirect()->route('supplies',['pageaction'=>$pageaction])->with('success','Item created successfully!');
         }
         else
         {
-            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');
+            return redirect()->route('supplies',['pageaction'=>$pageaction])->with('error','Something went wrong! Please try again');
         }
     }
 
-    public function editSupplies(Request $request, $supplieID)
+    public function editSupplies(Request $request)
     {
+        $supplieID = $request->id;
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $supplieDetail = Supplies::getSupplieById($supplieID);
         $models = Asin::getModelList();
         if($supplieDetail)
@@ -130,18 +132,18 @@ class SuppliesController extends Controller
             return view ('admin.supplies.edit',compact('models', 'supplieDetail'))->with([
                 'adminEmails' => $this->adminEmails,
                 'emailTemplate' => $this->emailTemplate
-            ]);        # code...
+            ]);
         }
         else
         {
-            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
+            return redirect()->route('supplies',['pageaction' => $pageaction])->with('error','Something went wrong! Please try again');   
         }
         abort('404');
-
     }
 
     public function updateSupplies(Request $request)
     {
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $validatedData = $request->validate([
             'item_name' => 'required',
             'qty' => 'required|integer',
@@ -186,11 +188,11 @@ class SuppliesController extends Controller
                 SupplieAsinModel::deleteSupplieAsinModel($supplieAsinModelId);                
             }
 
-            return redirect()->route('supplies')->with('success','Item update successfully!');
+            return redirect()->route('supplies',['pageaction' => $pageaction])->with('success','Item update successfully!');
         }
         else
         {
-            return redirect()->route('supplies')->with('error','Something went wrong! Please try again');
+            return redirect()->route('supplies',['pageaction' => $pageaction])->with('error','Something went wrong! Please try again');
         }
     }
 
@@ -279,16 +281,17 @@ class SuppliesController extends Controller
         }
         else
         {
+            $pageaction = isset($request->pageaction) ? $request->pageaction : '';
             $sid = intval($request->supplieid);
             $qty = intval($request->qty);
             $result = Supplies::updateQuantityBySupplieID($sid,$qty);
             if ($result)
             {
-                return redirect()->route('supplies')->with('success','Item quantity update successfully!');
+                return redirect()->route('supplies',['pageaction' => $pageaction])->with('success','Item quantity update successfully!');
             }
             else
             {
-                return redirect()->route('supplies')->with('error','Something went wrong! Please try again');   
+                return redirect()->route('supplies',['pageaction' => $pageaction])->with('error','Something went wrong! Please try again');   
             }
         }
     }
@@ -300,6 +303,7 @@ class SuppliesController extends Controller
 
     public function importSupplies(Request $request)
     {
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $validatedData = $request->validate([
                 'impfile' => 'required|mimes:xlsx,csv,txt',
             ],
@@ -309,7 +313,7 @@ class SuppliesController extends Controller
             ]
         );
     	Excel::import(new SuppliesImport,request()->file('impfile'));
-        return redirect()->route('supplies')->with('success','Record import successfully');
+        return redirect()->route('supplies',['pageaction' => $pageaction])->with('success','Record import successfully');
     }
 
     public function deleteSupplie(Request $request, $supplieID)

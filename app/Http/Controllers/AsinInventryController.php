@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\request;
 use App\SessionData;
 use App\Exports\AsinInventryExport;
 use Excel;
@@ -25,42 +25,51 @@ class AsinInventryController extends Controller
 		return view('admin.asininventry.index', compact('items', 'assets'));
 	}
 
-	public function RemoveAsset(Request $Request)
+	public function RemoveAsset(Request $request)
 	{
-		if( isset( $Request->assetIds ))
+		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
+		if($request->isMethod('post'))
 		{
-			$assets = explode("\r\n",$Request['assetIds']) ;
+			if(isset($request->assetIds))
+			{
+				$assets = explode("\r\n",$request['assetIds']) ;
 
-			$FailedToRemoveCount = 0;
-  			$SuccessfullyRemovedCount = 0;
+				$FailedToRemoveCount = 0;
+					$SuccessfullyRemovedCount = 0;
 
-  			foreach ($assets as $key => $asset)
-  			{
-  				$assetData = SessionData::CheckAssetExist($asset);
-
-  				if( isset(  $assetData['asset'] )  )
-  				{
-  					$SuccessfullyRemovedCount++;
-  					SessionData::updateSessiontStatus($asset, 'removed');
-  				}
-  				else
-  				{
-  					$FailedToRemoveCount++;
-  				}
-  			}
-
-  			if($FailedToRemoveCount > 1 && $SuccessfullyRemovedCount < 1 )
-		    {
-		      	return redirect()->route('asininventry.removeasset')->with('error', 'Asset Id Not Match.');
-		    }
-		    elseif($FailedToRemoveCount >= 1 && $SuccessfullyRemovedCount >= 1 )
-		    {
-		      	return redirect()->route('asininventry.removeasset')->with('success', " $FailedToRemoveCount Asset Id Not Match ,$SuccessfullyRemovedCount Asset Id removed Successfully.");
-		    }
-		    else if( $FailedToRemoveCount < 1 && $SuccessfullyRemovedCount >= 1  )
-		    {
-		      	return redirect()->route('asininventry.removeasset')->with('success', 'Asset Id Remove Successfully.');
-		    }
+					foreach ($assets as $key => $asset)
+					{
+						$assetData = SessionData::CheckAssetExist($asset);
+						if( isset(  $assetData['asset'] )  )
+						{
+							$SuccessfullyRemovedCount++;
+							SessionData::updateSessiontStatus($asset, 'removed');
+						}
+						else
+						{
+							$FailedToRemoveCount++;
+						}
+					}
+					$status = '';
+					$message = '';
+					if($FailedToRemoveCount > 1 && $SuccessfullyRemovedCount < 1 )
+			    {
+			    	$status = 'error';
+			    	$message = 'Asset Id Not Match.';
+			    }
+			    elseif($FailedToRemoveCount >= 1 && $SuccessfullyRemovedCount >= 1 )
+			    {
+			    	$status = 'success';
+			    	$message = '{$FailedToRemoveCount} Asset Id Not Match ,{$SuccessfullyRemovedCount} Asset Id removed Successfully.';
+			    }
+			    else if( $FailedToRemoveCount < 1 && $SuccessfullyRemovedCount >= 1  )
+			    {
+			    	$status = 'error';
+			    	$message = 'Asset Id Remove Successfully.';
+			    }
+			    return redirect()->route('asininventry.removeasset',['pageaction' => $pageaction])
+			    	->with($status,$message);
+			}
 		}
 		else
 		{

@@ -2,6 +2,7 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <form method="post" id="bulk-addform" enctype="multipart/form-data" action="{{route('inventory')}}">
+				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
                 @csrf
                 <div class="modal-header">
                     <h3 class="modal-title" id="brModalLabel">Bulk Remove Items</h3>
@@ -27,7 +28,8 @@
 <div class="modal fade" id="priceModal" tabindex="-1" role="dialog" aria-labelledby="priceModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
-            <form method="post" id="addform" enctype="multipart/form-data" action="{{route('inventory')}}"> 
+            <form method="post" id="addform" enctype="multipart/form-data" action="{{route('inventory')}}">
+				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
                 @csrf
                 <div class="modal-header">
                     <h3 class="modal-title" id="priceModalLabel">Set Custom Price</h3>

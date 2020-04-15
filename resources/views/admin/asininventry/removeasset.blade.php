@@ -6,12 +6,13 @@
 		Remove Asset Id 
 	</div>
 	<ul class="wipeReportNav">
-		<li><a class="btn btn-info" href="{{route('asininventry')}}">Asin Inventory</a></li>
+		<li><a class="btn btn-info" href="{{route('asininventry',['pageaction' => request()->get('pageaction')])}}">Asin Inventory</a></li>
 	</ul>
 	<div class="modal-header">
 		<h3 class="modal-title" id="asinModalLabel">Add Asset Id's to Remove From Session</h3>
 	</div>
-	<form action = "{{route('asininventry.removeasset')}}" method="post">
+	<form action = "{{route('asininventry.removeasset',['pageaction' => request()->get('pageaction')])}}" method="post">
+	<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 		@csrf
 		<div class="modal-body">
 			<div class="row">

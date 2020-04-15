@@ -8,6 +8,7 @@
 		<div class="col-sm-12" style="text-align: right">
 			<form class="tracker-form" method="get" class="form-inline" id="statsform" action="{{route('tracker')}}">
 				<div class="tracker-tab  m-1">
+					<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 				<input type="hidden" name="p" value="report"/>
 					<select name="user" class="form-control" id="user" onchange="doFilter()">
 						<option disabled selected value> Select User</option>

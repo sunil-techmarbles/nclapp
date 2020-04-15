@@ -4,22 +4,25 @@
 <div class="container">
 	<table id="emils-type-table" class="table table-hover">
 		<thead>
-			<th></th>
-			<th></th>
-			<th></th>
-			<th colspan="2">Emails Type</th>
+			<th>Action</th>
+			<th>Type</th>
 		</thead>
 		<tbody>
 			@foreach($cronjobTypes as $key => $cronjob)
 			<tr>
-				<td nowrap="">
-					<a href="{{route('manage.emails',['t' => $key, 'a' => 'add' ] )}}">
-						<img src="{{URL('/assets/images/plus.png')}}" class="icons" title="Add">
-					</a>
+				<td>
+					<small>
+						<a class="btn btn-xs btn-default border border-primary" href="{{route('manage.emails',['t' => $key, 'a' => 'add'])}}">
+							Add
+						</a>
+					</small>
+					<small>
+						<a class="btn btn-xs btn-default border border-primary" href="{{route('manage.emails',['t' => $key, 'a' => 'view'])}}">
+							View
+						</a>
+					</small>
 				</td>
-				<td></td>
-				<td></td>
-				<td colspan="2"><a href="{{route('manage.emails',['t' => $key, 'a' => 'add' ] )}}">
+				<td><a href="{{route('manage.emails',['t' => $key, 'a' => 'add' ] )}}">
 				{{$cronjob}}
 				</a></td>
 			</tr>

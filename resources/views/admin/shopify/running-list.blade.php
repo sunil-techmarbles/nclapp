@@ -13,7 +13,7 @@
 </div>
 	<div class="row pb-4">
 		<div class="col-sm-12">
-            <a class="btn btn-info ml-2 float-right" href="{{route('runninglist.csv',['csv' => '1'])}}">Export</a>
+            <a class="btn btn-info ml-2 float-right" href="{{route('runninglist.csv',['pageaction' => request()->get('pageaction'),'csv' => '1'])}}">Export</a>
             <button type="button" class="btn btn-info ml-2 float-right" id="sync-all-to-shopify">Sync to Shopify</button>
             <input type="hidden" name="reunlistsyns" value="true">      
         </div>
@@ -44,7 +44,7 @@
                     <td><a href="javascript:void(0)" onclick="$('.asin{{$i["aid"]}}').toggle()">{{$i["asin"]}}</a></td>
                     <td>{{$i["model"]}}</td>
                     <td>{{$i["form_factor"]}}</td>
-                    <td>{{$i["cpu_core"]}} {{$i["cpu_model"]}} CPU @ <?= htmlspecialchars($i["cpu_speed"]) ?></td>
+                    <td>{{$i["cpu_core"]}} {{$i["cpu_model"]}} CPU @ {{htmlspecialchars($i["cpu_speed"]) }}</td>
                     <td>{{$i["price"]}}</td>
                     <td colspan=2>&nbsp;</td>
                     <td>{{$i["cnt"]}}</td>
@@ -83,7 +83,7 @@
                         <td>{{ number_format($a["price"], 2) }}</td>
                         <td>{{ $a["asset"] }}</td>
                         <td>{{ $a["added_on"] }}</td>
-                        <td><a onclick="return confirm('Are you sure want to delete this?');" href="{{route('running.list',['remove' => $a["asset"], 't' => time()])}}"><span class="fa fa-trash"></span></a></td>
+                        <td><a onclick="return confirm('Are you sure want to delete this?');" href="{{route('running.list',['pageaction' => request()->get('pageaction'),'remove' => $a["asset"], 't' => time()])}}"><span class="fa fa-trash"></span></a></td>
                     </tr>
                 @endforeach
             @endforeach

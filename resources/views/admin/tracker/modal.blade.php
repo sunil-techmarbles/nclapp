@@ -2,6 +2,7 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <form method="post" id="addform" action="{{route('tracker')}}">
+				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
                 @csrf
                 <input type="hidden" name="a" value="add_action"/>
                 <div class="modal-header">

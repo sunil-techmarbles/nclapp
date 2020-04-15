@@ -2,6 +2,7 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <form method="post" id="addform" action="{{route('shipments')}}">
+				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
                 @csrf
                 <div class="modal-header">
                     <h3 class="modal-title" id="asinModalLabel">Add Items to Shipment</h3>

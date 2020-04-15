@@ -100,6 +100,7 @@ class AsinController extends Controller
 
     public function storeAsins(Request $request)
     {
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $validatedData = $request->validate([
             'asin' => 'required|unique:asins,asin',
             'manufacturer' => 'required',
@@ -220,16 +221,18 @@ class AsinController extends Controller
                     SupplieAsinModel::addSupplieAsinModel($savedId, $suppliesID);
                 }
             }
-            return redirect()->route('asin')->with('success','Item created successfully!');
+            return redirect()->route('asin',['pageaction'=>$pageaction])->with('success','Item created successfully!');
         }
         else
         {
-            return redirect()->route('asin')->with('error','Something went wrong! Please try again');
+            return redirect()->route('asin',['pageaction'=>$pageaction])->with('error','Something went wrong! Please try again');
         }
     }
 
-    public function editAsin(Request $request , $asinID)
+    public function editAsin(Request $request)
     {
+        $asinID = $request->id;
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
     	$asinDetail = Asin::getAsinById($asinID);
         if($asinDetail)
         {
@@ -237,13 +240,14 @@ class AsinController extends Controller
         }
         else
         {
-            return redirect()->route('asin')->with('error','Something went wrong! Please try again');   
+            return redirect()->route('asin',['pageaction'=>$pageaction])->with('error','Something went wrong! Please try again');   
         }
         abort('404');
     }
 
     public function updateAsins(Request $request)
     {
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $id = $request->id;
         $validatedData = $request->validate([
             'asin' => 'required|unique:asins,asin,'.$id,
@@ -262,16 +266,18 @@ class AsinController extends Controller
 
         if(Asin::updateAsinRecord($request))
         {
-            return redirect()->route('asin')->with('success','Item update successfully!');
+            return redirect()->route('asin',['pageaction'=>$pageaction])->with('success','Item update successfully!');
         }
         else
         {
-            return redirect()->route('asin')->with('error','Something went wrong! Please try again');
+            return redirect()->route('asin',['pageaction'=>$pageaction])->with('error','Something went wrong! Please try again');
         }
     }
 
-    public function partsAsin(Request $request, $asinID)
+    public function partsAsin(Request $request)
     {
+        $asinID = $request->id;
+        $pageaction = isset($request->pageaction) ? $request->pageaction : '';
         $qty = ($request->has('qty')) ? $request->get('qty') : 1;
         $pparts = ($request->has("ppart")) ? $request->get('ppart') : [];
         $specificFields = ['id','item_name','part_num','dept','vendor'];
@@ -282,7 +288,7 @@ class AsinController extends Controller
         $status = '';
         $message = '';
 
-        if($request->has('assignasinsparts'))
+        if($request->get('assignasinsparts'))
         {
             $assignAsinsParts = ($request->get('mpart')) ? $request->get('mpart') : [];
             if(!empty($assignAsinsParts))
@@ -304,7 +310,7 @@ class AsinController extends Controller
 
         foreach($parts as $p)
         {
-            if($request->has('withdraw'))
+            if($request->get('withdraw'))
             {   
                 if(in_array($p["id"],$pparts))
                 {
@@ -319,7 +325,7 @@ class AsinController extends Controller
             if($p["missing"] > 0)
             {
                 $p["reorder_qty"] = max($p["missing"] + $p["low_stock"],$p["reorder_qty"]);
-                if($request->has('reorder'))
+                if($request->get('reorder'))
                 {
                     $vars = array_keys($p->toArray());
                     $body = $p["email_tpl"];

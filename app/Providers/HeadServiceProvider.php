@@ -19,6 +19,27 @@ class HeadServiceProvider extends ServiceProvider {
             $view->with('user_role', $role->slug);
             $view->with('currentUser', $currentUser);
         });
+        View::composer('layouts.appadminlayout', function ($view)
+        {
+            $redirect = URL('/');
+            $logo = URL('assets/images/logo_itamg.png');
+            $title = 'ITAMG';
+            if(request()->get('pageaction') == 'itamgconnect'||
+            request()->segment(count(request()->segments())) == 'itamgdashboard'){
+                $redirect = route('dashboard.itamg');
+                $title = 'ITAMG';
+                $logo = URL('assets/images/logo_itamg.png');
+            }
+            else if(request()->get('pageaction') == 'refurbconnect'||
+            request()->segment(count(request()->segments())) == 'refurbconnectdashboard'){
+                $redirect = route('dashboard.refurbconnect');
+                $logo = URL('assets/images/rc-logo-vertical.png');
+                $title = 'Refurb Connect';
+            }
+            $view->with('redirect', $redirect);
+            $view->with('logo', $logo);
+            $view->with('title', $title);
+        });
     }
 }
  

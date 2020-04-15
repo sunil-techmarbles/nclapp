@@ -7,8 +7,9 @@
 	</div>
 	 <div class="row">
         <div class="col-sm-12" style="text-align: right">
-            <form method="post" class="form-inline" id="wipereportcountform" action="{{route('getwipereportfilescount')}}">
+            <form method="post" class="form-inline" id="wipereportcountform" action="{{route('getwipereportfilescount',['pageaction' => request()->get('pageaction')])}}">
                 @csrf
+                <input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
                 <input type="text" style="width:200px;" class="daterange form-control" id="dates" name="dates" value="{{$dates}}">
             </form>
         </div>
