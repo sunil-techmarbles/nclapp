@@ -54,7 +54,7 @@
 				request()->segment(count(request()->segments())) == 'category' ||
 				request()->segment(count(request()->segments())) == 'email'
 				)
-				@include('admin.recycle-second.navbar')
+				@include('admin.asset-lookup.navbar')
 			@endif
 			@include('admin.message')
 			@yield('content')

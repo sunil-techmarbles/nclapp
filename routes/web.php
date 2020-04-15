@@ -146,7 +146,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::any('/editcategoryrecord', 'RecycleController@editCategoryRecord')->name('edit.category.record');
 		Route::any('/updateCategoryRecord', 'RecycleController@updateCategoryRecord')->name('update.category.record');
 		Route::any('/assetlookup', 'RecycleController@recycleTwoIndex')->name('recycle.second');
-		Route::prefix('assetlookup')->group(function () {
+		Route::prefix('assetlookup')->group(function (){
 			Route::get('/deleterecycletwocategory/{recycleId}', 'RecycleController@deleteRecycleTwoCategory');
 			Route::any('/search', 'RecycleController@recycleTwoSearch')->name('search');
 			Route::any('/getrecordeedit', 'RecycleController@recycleTwoInventoryEdit');

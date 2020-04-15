@@ -2,10 +2,8 @@
 @section('title', 'Category')
 @section('content')
 <div class="container">
-	<h3 align="center"><strong>Category</strong></h3>
 	<input type="hidden" name="recycletwopage" value="category">
 	<div class="table-responsive">
-		<a href="{{route('recycle.second')}}" class="btn btn-default border border-success float-right mb-2">Back</a>
 		<table id="itamg_inventory_value" class="table table-bordered table-striped">
 			<thead>
 				<tr>
@@ -37,5 +35,5 @@
 		</table>
 	</div>
 </div>
-@include('admin.recycle-second.modal',['result' => []]);
+@include('admin.asset-lookup.modal',['result' => []]);
 @endsection

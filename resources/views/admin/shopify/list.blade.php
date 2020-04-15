@@ -13,7 +13,7 @@
 			@csrf
 			<div class="col-6 float-left p-0">
 				<div class="form-group">
-					<input class="form-control" type="file" name="bulk_data" id="bulk_data"/>
+					<input class="form-control" accept=".csv,.xls,.xlsx" type="file" name="bulk_data" id="bulk_data"/>
 					<input type="submit" value="Bulk Upload" class="btn btn-warning" name="bulk_upload"/>
 				</div>
 			</div>

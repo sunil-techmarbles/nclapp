@@ -153,3 +153,9 @@ input#bulk_data {
 #supplie table.table tr td label input {
     width: 16px !important;
 }
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}

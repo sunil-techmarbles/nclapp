@@ -286,7 +286,7 @@ class SessionController extends Controller
 				}
 			}
 		}
-		if($request->get('new_session') && $request->get('session_name') && !$request->get('bulk_upload'))
+		if($request->get('new_session') && $request->get('session_name') && !$request->get('session_file'))
 		{
 			$this->sendSessionPdfReport($request);
 			$status = 'success';

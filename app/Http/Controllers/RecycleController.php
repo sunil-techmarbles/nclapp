@@ -54,13 +54,13 @@ class RecycleController extends Controller
   	{
         $result = Category::getAllRecord();
         $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
-  		return view('admin.recycle-second.list', compact('itamgRecycleInventors', 'result'));
+  		return view('admin.asset-lookup.list', compact('itamgRecycleInventors', 'result'));
   	}
 
     public function recycleTwoCategory(Request $request)
     {
         $categories = Category::getAllRecord();
-        return view('admin.recycle-second.category-list', compact('categories'));
+        return view('admin.asset-lookup.category-list', compact('categories'));
     }
 
     public function recycleTwoFailedSearchEmails(Request $request)
@@ -83,7 +83,7 @@ class RecycleController extends Controller
         {
             $emails[] = (object) array('email' => implode(',', $a[$key]), 'type' => $key);
         }
-        return view('admin.recycle-second.failed-search-email-list', compact('emails'));
+        return view('admin.asset-lookup.failed-search-email-list', compact('emails'));
     }
 
     public function getFaildSearchEmails(Request $request)
@@ -200,7 +200,7 @@ class RecycleController extends Controller
         {
             $result = Category::getAllRecord();
             $failedSearches = FailedSearch::getAllRecord();
-            return view('admin.recycle-second.failed-search-list', compact('failedSearches', 'result'));
+            return view('admin.asset-lookup.failed-search-list', compact('failedSearches', 'result'));
         }
     }
 
@@ -518,7 +518,7 @@ class RecycleController extends Controller
         }
         else
         {
-            return view('admin.recycle-second.search', compact('result'));
+            return view('admin.asset-lookup.search', compact('result'));
             abort('404');
         }
     }

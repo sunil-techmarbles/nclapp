@@ -26,8 +26,8 @@
             <a href="{{route('recycle.first')}}">Recycle Trailer</a>
         </div>
          <div class="menu-item">
-            <a href="{{route('recycle.second')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('recycle.second')}}">Asset Lookup</a>
+            <a href="{{route('search')}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('search')}}">Asset Lookup</a>
         </div>
         <div class="menu-item">
              <a href="{{route('wipereport')}}"><span class="fa fa-file-excel-o"></span></a>

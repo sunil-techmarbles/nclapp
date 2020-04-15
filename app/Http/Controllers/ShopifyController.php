@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\ShopifyBulkRemoveImport;
@@ -221,6 +222,19 @@ class ShopifyController extends Controller
 		 	$this->bulkRemoveRecord($request);
 		 }
 
+        $validator = Validator::make($request->all(),[
+            'bulk_upload' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
+        ],
+    	[
+    		'bulk_upload.required' => 'Please upload file',
+    		'bulk_upload.mimes' => 'Only csv and excel files are allowed'
+    	]);
+        if ($validator->fails())
+        {
+	 		$status = 'error';
+            $message = $validator->messages()->first();
+            \Session::flash($status, $message);
+        }
 		 if($request->get('bulk_upload'))
 		 {
 			/**
@@ -259,7 +273,7 @@ class ShopifyController extends Controller
 		 $data = ListData::getSelectedFields($fields= ['id','asset','mid','technology'], $query= ['asin' => '']);
 		 foreach($data as $itm)
 		 {
-		 	$asset = $itm['asset'];
+		 	$asset = trim($itm['asset']);
 		 	$file = "";
 		 	$this->wipeData2 = $this->basePath.'/wipe-data2';
 		 	if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
@@ -275,8 +289,9 @@ class ShopifyController extends Controller
 		 		$xml = '';
 		 		if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
 			 	{
-		 			$xml = simplexml_load_file($this->wipeData2.'/'.$asset.'.xml');
+					$xml = simplexml_load_file($this->wipeData2.'/'.$asset.'.xml');
 			 	}
+
 		 		if($xml)
 		 		{
 		 			$xmlData = [];

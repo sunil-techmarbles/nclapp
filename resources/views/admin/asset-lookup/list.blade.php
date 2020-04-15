@@ -2,7 +2,6 @@
 @section('title', 'Recycle Second')
 @section('content')
 <div class="container">
-	<h3 align="center"><strong>ITAMG INVENTORY</strong></h3>
 	<div class="table-responsive">
 		<table id="itamg_inventory_value" class="table table-bordered table-striped">
 			<thead>
@@ -46,5 +45,5 @@
 		</table>
 	</div>
 </div>
-@include('admin.recycle-second.modal',['result' => $result]);
+@include('admin.asset-lookup.modal',['result' => $result]);
 @endsection

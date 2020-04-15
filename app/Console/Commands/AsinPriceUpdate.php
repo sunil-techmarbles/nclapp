@@ -42,7 +42,7 @@ class AsinPriceUpdate extends Command
     public function handle()
     {
         $result = $this->UpdateAsinPriceCron();
-        echo implode(',', $result). "These Asin number's price updated successfully"; 
+        echo implode(',', $result). " These Asin number's price updated successfully"; 
         die();
     }
 
