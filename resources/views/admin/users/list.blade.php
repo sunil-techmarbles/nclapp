@@ -12,7 +12,7 @@
 </table>
 <table id="users_table" class="table table-hover">
 	<thead>
-		<th></th>
+		<th></th> 
 		<th>User ID</th>
 		<th>User name</th>
 		<th>Email</th>

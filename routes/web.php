@@ -8,7 +8,7 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+*/ 
 Route::post('/registerAuthenticate', 'RegisterController@registerAuthenticate')->name('register.registerAuthenticate');
 Route::get('/logout', 'LoginController@logout')->name('logout');
 Route::get('/ForgetPassword', 'LoginController@forgetPassword')->name('forgetPassword');
