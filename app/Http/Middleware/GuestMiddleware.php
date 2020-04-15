@@ -15,7 +15,7 @@ class GuestMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(\Route::current()->uri() == 'register')
+        if(\Route::current()->uri() == 'admin/adduser')
         {
             if ($user = Sentinel::check())
             {

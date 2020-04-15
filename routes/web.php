@@ -21,8 +21,8 @@ Route::middleware(['guest','revalidate'])->group(function () {
 	Route::get('/','LoginController@index')->name('login.view');
 	Route::get('/login','LoginController@index')->name('login.view');
 	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');
-	Route::get('/register', 'RegisterController@index')->name('user.register');
 	Route::prefix('admin')->group(function () {
+		Route::get('/adduser', 'RegisterController@index')->name('user.add');
 		Route::get('/dashboard','DashboardController@index')->name('dashboard');
 		Route::get('/itamgdashboard','DashboardController@itamgDashboardSection')->name('dashboard.itamg');
 		Route::get('/refurbconnectdashboard','DashboardController@RefurbConnectDashboard')->name('dashboard.refurbconnect');

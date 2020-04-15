@@ -5,7 +5,7 @@
 	<tbody>
 		<tr>
 			<td class = "float-right">
-				<a class="float-right btn btn-primary btn-sm btn-sm border" href="{{route('user.register')}}" >Add User</a>
+				<a class="float-right btn btn-primary btn-sm btn-sm border" href="{{route('user.add')}}" >Add User</a>
 			</td>
 		</tr>
 	</tbody>
