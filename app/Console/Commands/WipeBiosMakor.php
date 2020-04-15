@@ -52,7 +52,7 @@ class WipeBiosMakor extends Command
         // {
         //         $m->to( $emailsToSend )->subject($subject);
         // });
-        $this->basePath  = base_path().'/public';
+        $this->basePath  = base_path().'/public';   
         $this->wipeBiosDataDir = $this->basePath . "/wipe-data/bios-data";
         $this->wipeBiosAdditionalDataDir = $this->basePath . "/wipe-data-additional";
         $this->wipeBiosExecutedFileDir = $this->basePath . "/makor-processed-data/bios-data";
