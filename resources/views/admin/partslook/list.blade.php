@@ -4,6 +4,7 @@
 <div class="container">
 	<h3 align="center"><strong>Inventory Lookup</strong></h3>
 	<form method="post" id="main-form" autocomplete="off">
+		<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 		<div class="formitem" style="text-align: center;">
 			<div class="form-group">
 				<label class="ttl" for="text_1">Please enter ASIN<span class="req">*</span></label><br>
@@ -22,7 +23,7 @@
 		<thead>
 		<tbody> 
 			@foreach( $models as $model )
-			<tr style="cursor: pointer" class="mdlrow" data-model="@php echo strtolower( $model->asin . $model->model ); @endphp" onclick="location.href = '{{route('parts.asin', $model->id)}}'">
+			<tr style="cursor: pointer" class="mdlrow" data-model="@php echo strtolower( $model->asin . $model->model ); @endphp" onclick="location.href = '{{route('parts.asin',['pageaction' => request()->get('pageaction'),'id' => $model->id])}}'">
 				<td>{{ $model->asin }} </td>
 				<td>{{ $model->model }}</td>
 				<td>{{ $model->form_factor }}</td>

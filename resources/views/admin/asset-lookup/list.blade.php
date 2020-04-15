@@ -31,7 +31,6 @@
 					<td>{{$itamgRecycleInventor->Status}}</td>
 					<td>{{$itamgRecycleInventor->require_pn}}</td>
 					<td>
-						<!--{{route('edit.category.record', ["cat_name" => $itamgRecycleInventor->id])}} -->
                         <a href="javascript:void(0)" class="edit_entry_link" data-table_id="{{$itamgRecycleInventor->id}}">
                             <img src="{{URL('/assets/images/edit.png')}}" class="icons"  title="Edit">
                         </a>

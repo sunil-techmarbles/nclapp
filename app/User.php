@@ -12,8 +12,7 @@ class User extends EloquentUser {
 	protected static function boot()
 	{
 	    parent::boot();
-
-	    static::deleting(function($usersList) {
+	    static::deleting(function($usersList){
 	        $usersList->userCronJobList()->delete();
 	    });
 	}
@@ -35,6 +34,13 @@ class User extends EloquentUser {
 	{
 		$exits = self::where([ 'email' => $email ])->first();
 		return ( $exits ) ? true : false ;
+	}
+
+	public static function getUserEmailByUserId($value)
+	{
+		return self::where(['id' => $value])
+			->pluck('email')
+			->first();
 	}
 
 	public static function getUserDetail($id)

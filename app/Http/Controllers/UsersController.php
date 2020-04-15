@@ -56,18 +56,28 @@ class UsersController extends Controller
 	   	}
 	   	else
 	   	{
-	    	if($request->a)
-	    	{
-	    		$name = $cronjobTypes[$request->t];
-	    		$result = UserCronJob::getCronJobName($request->t);
-	    		$result = $result->toArray();
-	    		$userEmails = User::getAllUserEmails();
-	    		return view('admin.users.add-cron-email', compact('result','name','userEmails'));
-	    	}
-	    	else
-	    	{
-	        	return view('admin.users.manage-email', compact('cronjobTypes'));
-	    	}
+	   		if($request->a)
+	   		{
+	   			$action = $request->a;
+	   			switch ($action)
+	   			{
+	   				case 'add':
+	   				$view = 'add-cron-email';
+	   				break;
+	   				case 'view':
+	   				$view = 'view-cron-email';
+	   				break;
+	   			}
+	   			$name = $cronjobTypes[$request->t];
+	   			$result = UserCronJob::getCronJobName($request->t);
+	   			$result = $result->toArray();
+	   			$userEmails = User::getAllUserEmails();
+	   			return view('admin.users.'.$view, compact('result','name','userEmails'));
+	   		}
+	   		else
+	   		{
+	   			return view('admin.users.manage-email', compact('cronjobTypes'));
+	   		}
 	   	}
     }
 

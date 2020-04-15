@@ -381,6 +381,7 @@ class ShipmentController extends Controller
 
 	public function addShipment(Request $request)
 	{
+		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
 		$validatedData = $request->validate(
 			[
             	'session_name' => 'required',
@@ -411,13 +412,13 @@ class ShipmentController extends Controller
 				{
 					$this->createShipmentReport($request, $sessionItems, $currentSession, $sessionSummary);
 				}
-				return redirect()->route('shipments')->with([
+				return redirect()->route('shipments',['pageaction'=>$pageaction])->with([
 					'success', 'Shipment added successfully.'
 				]);
 			}
 			else
 			{
-				return redirect()->route('shipments')->with([
+				return redirect()->route('shipments',['pageaction'=>$pageaction])->with([
 					'error', 'Somethging went wrong'
 				]);
 			}

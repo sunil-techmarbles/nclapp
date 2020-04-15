@@ -14,11 +14,13 @@ class DashboardController extends Controller
 
     public function itamgDashboardSection()
     {
-		return view('admin.dashboard.itamgDashboard');
+        $action = 'itamgconnect';
+		return view('admin.dashboard.itamgDashboard', compact('action'));
     }
 
     public function RefurbConnectDashboard()
     {
-    	return view('admin.dashboard.RefurbConnectDashboard');
+        $action = 'refurbconnect';
+    	return view('admin.dashboard.RefurbConnectDashboard', compact('action'));
     }
 }

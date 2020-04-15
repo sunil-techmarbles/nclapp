@@ -441,7 +441,7 @@ class RecycleController extends Controller
                     ];
                     $result = ItamgRecycleInventory::getResult($query, $fields);
                     $output = 'N';
-                    if(!$result->isEmpty())
+                    if($result->count() > 0)
                     {
                         $value = '';
                         foreach($result as $row)
@@ -578,6 +578,7 @@ class RecycleController extends Controller
     */
     public function recyclRecord(Request $request)
     {
+        $pageaction = (isset($request->pageaction)) ? $request->pageaction : '';
         if (isset($request->action) && $request->action == 'new_record')
         {
             //**** Calculate Price Start
@@ -634,11 +635,11 @@ class RecycleController extends Controller
                 ];
                 $recordData = RecycleRecordLine::addRecord((object) $data);
             }
-            return redirect()->route('recycle.first');
+            return redirect()->route('recycle.first',['pageaction' => $pageaction]);
         }
         else
         {
-            return redirect()->route('recycle.first')->with('error', 'Access Denied');
+            return redirect()->route('recycle.first',['pageaction' => $pageaction])->with('error', 'Access Denied');
         }
     }
     
@@ -650,10 +651,19 @@ class RecycleController extends Controller
             $categories = Recycle::getAllTypeOfScrap($query= ['status' => '0']);
             $recordId = $request->record_id;
             $allRecords = RecycleRecordLine::getAllRecycleRecordLineByRecordId($recordId);
-            return view('admin.recycle-first.edit', compact('allRecords', 'recordId', 'categories'));
+            if($allRecords->count() > 0)
+            {
+                return view('admin.recycle-first.edit', compact('allRecords', 'recordId', 'categories'));
+            }
+            else
+            {
+                abort('404');
+            }
         }
-        abort('404');
-    
+        else
+        {
+            abort('404');
+        }
     }
 
     /**

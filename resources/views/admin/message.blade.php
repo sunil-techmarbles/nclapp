@@ -43,7 +43,7 @@
 	<div class="alert alert-warning alert-block">
 		You will be redirected to the 
 		    <strong>
-				<a class="it-amg-redirect" href="{{route('audit')}}">main page</a>
+				<a class="it-amg-redirect" href="{{route('audit', ['pageaction' => request()->get('pageaction')])}}">main page</a>
 			</strong>
 		shortly
 	</div>

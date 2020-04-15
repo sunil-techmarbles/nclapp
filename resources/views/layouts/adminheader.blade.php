@@ -10,61 +10,61 @@
 				@if(request()->segment(count(request()->segments())) == 'audit')
 					@if(request()->get('edit'))
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('audit')}}">Main Form</a>
+						<a class="nav-link" href="{{route('audit',['pageaction' => request()->get('pageaction')])}}">Main Form</a>
 					</li>
 					@else
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('audit',['edit' => 1])}}">Search & Edit</a>
+						<a class="nav-link" href="{{route('audit',['pageaction' => request()->get('pageaction'), 'edit' => 1])}}">Search & Edit</a>
 					</li>
 					@endif
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'dashboard' || request()->segment(count(request()->segments())) == 'refurbconnectdashboard' || request()->segment(count(request()->segments())) == 'itamgdashboard')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-						<a class="nav-link" href="{{route('users')}}">Users</a>
+						<a class="nav-link" href="{{route('users',['pageaction' => request()->get('pageaction')])}}">Users</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('manage.emails')}}">Manage Emails</a>
+						<a class="nav-link" href="{{route('manage.emails',['pageaction' => request()->get('pageaction')])}}">Manage Emails</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('message.log')}}">Message Logs</a>
+						<a class="nav-link" href="{{route('message.log',['pageaction' => request()->get('pageaction')])}}">Message Logs</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'runninglist' || request()->segment(count(request()->segments())) == 'recycle')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-						<a class="nav-link" href="{{route('inventory')}}">New List</a>
+						<a class="nav-link" href="{{route('inventory',['pageaction' => request()->get('pageaction')])}}">New List</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'inventory')
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
-						<a class="nav-link" href="{{route('running.list')}}">Running List</a>
+						<a class="nav-link" href="{{route('running.list',['pageaction' => request()->get('pageaction')])}}">Running List</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'refurb')
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('get.coa.report')}}">COA Report</a>
+						<a class="nav-link" href="{{route('get.coa.report',['pageaction' => request()->get('pageaction')])}}">COA Report</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('get.issue.report')}}">Issues Report</a>
+						<a class="nav-link" href="{{route('get.issue.report',['pageaction' => request()->get('pageaction')])}}">Issues Report</a>
 					</li>
 				@endif
 				@if( request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'recycle' )
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('asin')}}">ASIN Database</a>
+						<a class="nav-link" href="{{route('asin',['pageaction' => request()->get('pageaction')])}}">ASIN Database</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'asin')
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('part.lookup')}}">Parts Lookup</a>
+						<a class="nav-link" href="{{route('part.lookup',['pageaction' => request()->get('pageaction')])}}">Parts Lookup</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'supplies' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'audit' || request()->segment(count(request()->segments())) == 'packages' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'recycle')
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('sessions')}}">Sessions</a>
+						<a class="nav-link" href="{{route('sessions',['pageaction' => request()->get('pageaction')])}}">Sessions</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'asin' || request()->segment(count(request()->segments())) == 'shipments' || request()->segment(count(request()->segments())) == 'sessions' || request()->segment(2) == 'asinparts' || request()->segment(count(request()->segments())) == 'partlookup' || request()->segment(count(request()->segments())) == 'wipereport' || request()->segment(count(request()->segments())) == 'inventory' || request()->segment(count(request()->segments())) == 'recycle' )
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('supplies')}}">Supply</a>
+						<a class="nav-link" href="{{route('supplies',['pageaction' => request()->get('pageaction')])}}">Supply</a>
 					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'audit')
@@ -74,7 +74,7 @@
 				@endif
 				@if ( request()->segment(count(request()->segments())) == 'packages' )
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('shipments')}}">Outbound</a>
+						<a class="nav-link" href="{{route('shipments',['pageaction' => request()->get('pageaction')])}}">Outbound</a>
 					</li>
 				@endif
 				@if ( request()->segment(count(request()->segments())) == 'tracker' )
@@ -82,11 +82,11 @@
 					<!-- @endif -->
 					@if ( request()->get('p') == 'report' )
 						<li class="nav-item">
-							<a class="nav-link" href="{{route('tracker')}}">Tracker</a>
+							<a class="nav-link" href="{{route('tracker',['pageaction' => request()->get('pageaction')])}}">Tracker</a>
 						</li>
 					@else
 						<li class="nav-item">
-							<a class="nav-link" href="{{route('tracker',['p' => 'report'])}}">Report</a>
+							<a class="nav-link" href="{{route('tracker',['pageaction' => request()->get('pageaction'),'p' => 'report'])}}">Report</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="javascript: void(0)" onclick="$('#listModal').modal('show')">Actions</a>
@@ -95,7 +95,7 @@
 				@endif
 				@if ( request()->segment(count(request()->segments())) == 'wipereportfilescount' )
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('wipereport')}}">Wipe Report</a>
+						<a class="nav-link" href="{{route('wipereport',['pageaction' => request()->get('pageaction')])}}">Wipe Report</a>
 					</li>
 				@endif
 			@endif

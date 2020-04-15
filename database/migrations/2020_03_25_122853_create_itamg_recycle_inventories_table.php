@@ -17,7 +17,7 @@ class CreateItamgRecycleInventoriesTable extends Migration
             $table->bigIncrements('id');
             $table->string('Brand', 255)->nullable();
             $table->string('Model', 255)->nullable();
-            $table->integer('PartNo')->default(0);
+            $table->string('PartNo', 255)->nullable();
             $table->string('Category', 255)->nullable();
             $table->string('Notes', 255)->nullable();
             $table->string('Value', 255)->nullable();

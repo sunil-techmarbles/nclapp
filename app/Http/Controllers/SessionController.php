@@ -228,6 +228,7 @@ class SessionController extends Controller
 
     public function index(Request $request)
 	{
+		$pageaction = isset($request->pageaction) ? $request->pageaction : '';
 		$failures = [];
 		$items = [];
 		$parts = [];
@@ -244,9 +245,7 @@ class SessionController extends Controller
 	    	]);
 	        if ($validator->fails())
 	        {
-	        	$status = 'error';
-	            $message = $validator->messages()->first();
-	            \Session::flash($status, $message);
+	        	return redirect()->back()->with('error', $validator->messages()->first());
 	        }
 			if($request->has('session_file'))
 			{
@@ -267,21 +266,14 @@ class SessionController extends Controller
 					catch (\Maatwebsite\Excel\Validators\ValidationException $e)
 	                {
 	                    return redirect()->back()->with('error', $e->getMessage());
-	                    $status = 'error';
-	                    $message = $e->getMessage();
-        				\Session::flash($status, $message);
 	                }
 	                catch (\Exception $e)
 	                {
-	                	$status = 'error';
-	                    $message = $e->getMessage();
-        				\Session::flash($status, $message);
+	                	return redirect()->back()->with('error', $e->getMessage());
 	                }
 	                catch (\Error $e)
 	                {
-	                	$status = 'error';
-	                    $message = $e->getMessage();
-        				\Session::flash($status, $message);
+	                	return redirect()->back()->with('error', $e->getMessage());
 	                }
 				}
 			}

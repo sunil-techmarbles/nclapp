@@ -1,7 +1,7 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Refurb')
 @section('content')
-<div class="mte_content">
+<div class="mte_content refurb-itamg">
 	<div class="container">
 		<div id="page-head" class="noprint">
 			Refurb
@@ -190,6 +190,6 @@
 	</div>
 </div>
 <script type="text/javascript">
-	var process = '<?php echo json_encode($process); ?>';
+	var process = <?php echo json_encode($process); ?>;
 </script>
 @endsection

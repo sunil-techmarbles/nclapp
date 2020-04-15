@@ -22,31 +22,17 @@
 	<link href="{{URL('assets/css/additional-style.css')}}" rel="stylesheet">
 	<link rel="shortcut icon" href="{{URL('assets/favicon.ico')}}">
 </head>
-<style type="text/css">
-	.loader {
-		display: none;
-		position: fixed;
-		left: 50%;
-		top: 50%;
-		width: 100%;
-		height: 100%;
-		opacity: 1;
-		z-index: 9999;
-	}
-	body.loader-opacity{
-		opacity: 0.5;
-	}
-</style>
 <body>
 	<div class="loader">
 		<img src="{{URL('assets/images/loader.gif')}}">
 	</div>
 	<div id="main_content">
 		<div class="container">
+			<input type="hidden" name="page_a" value="">
 			@include('layouts.adminheader')
 			<div id="page-logo">
-				<a href="{{URL('/')}}">
-					<img src="{{URL('assets/images/logo_itamg.png')}}" id="img-logo" alt="ITAMG">
+				<a href="{{$redirect}}">
+					<img src="{{$logo}}" id="img-logo" alt="{{$title}}">
 				</a>
 			</div>
 			@if(request()->segment(count(request()->segments())) == 'assetlookup' ||

@@ -48,7 +48,7 @@ class AsinPriceUpdate extends Command
         //         $m->to( $emailsToSend )->subject($subject);
         // });
         $result = $this->UpdateAsinPriceCron();
-        echo implode(',', $result). " These Asin number's price updated successfully"; 
+        echo implode(',', $result). " These Asin's price updated successfully"; 
         die();
     }
 

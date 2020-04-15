@@ -12,40 +12,40 @@
     <div class="pt-2" style="max-width: 700px;margin: auto;">
           
         <div class="menu-item">
-            <a href="{{route('refurb')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('refurb')}}">Refurb</a>
+            <a href="{{route('refurb',['pageaction' => $action])}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('refurb',['pageaction' => $action])}}">Refurb</a>
         </div>  
         <div class="menu-item">
-            <a href="{{route('supplies')}}"><span class="fa fa-wrench"></span></a>
-            <a href="{{route('supplies')}}">Supplies</a>
+            <a href="{{route('supplies',['pageaction' => $action])}}"><span class="fa fa-wrench"></span></a>
+            <a href="{{route('supplies',['pageaction' => $action])}}">Supplies</a>
         </div> 
         <div class="menu-item">
-            <a href="{{route('asin')}}"><span class="fa fa-hdd-o"></span></a>
-            <a href="{{route('asin')}}">ASINs</a>
+            <a href="{{route('asin',['pageaction' => $action])}}"><span class="fa fa-hdd-o"></span></a>
+            <a href="{{route('asin',['pageaction' => $action])}}">ASINs</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('shipments')}}"><span class="fa fa-sign-out"></span></a>
-            <a href="{{route('shipments')}}">Outbound</a>
+            <a href="{{route('shipments',['pageaction' => $action])}}"><span class="fa fa-sign-out"></span></a>
+            <a href="{{route('shipments',['pageaction' => $action])}}">Outbound</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('sessions')}}"><span class="fa fa-tasks"></span></a>
-            <a href="{{route('sessions')}}">Sessions</a>
+            <a href="{{route('sessions',['pageaction' => $action])}}"><span class="fa fa-tasks"></span></a>
+            <a href="{{route('sessions',['pageaction' => $action])}}">Sessions</a>
         </div> 
         <div class="menu-item">
-            <a href="{{route('inventory')}}"><span class="fa fa-shopping-cart"></span></a>
-            <a href="{{route('inventory')}}">Inventory</a>
+            <a href="{{route('inventory',['pageaction' => $action])}}"><span class="fa fa-shopping-cart"></span></a>
+            <a href="{{route('inventory',['pageaction' => $action])}}">Inventory</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('tracker')}}"><span class="fa fa-hourglass"></span></a>
-            <a href="{{route('tracker')}}">Time Tracker</a>
+            <a href="{{route('tracker',['pageaction' => $action])}}"><span class="fa fa-hourglass"></span></a>
+            <a href="{{route('tracker',['pageaction' => $action])}}">Time Tracker</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('import')}}"><span class="fa fa-download"></span></a>
-            <a href="{{route('import')}}">Import</a>
+            <a href="{{route('import',['pageaction' => $action])}}"><span class="fa fa-download"></span></a>
+            <a href="{{route('import',['pageaction' => $action])}}">Import</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('asininventry')}}"><span class="fa fa-sign-in"></span></a>
-            <a href="{{route('asininventry')}}">Asin Inventory</a>
+            <a href="{{route('asininventry',['pageaction' => $action])}}"><span class="fa fa-sign-in"></span></a>
+            <a href="{{route('asininventry',['pageaction' => $action])}}">Asin Inventory</a>
         </div>
     </div>
 </div>

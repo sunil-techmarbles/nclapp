@@ -10,28 +10,28 @@
     </div>
     <div class="pt-2" style="max-width: 700px;margin: auto;">
         <div class="menu-item">
-            <a href="{{route('audit')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('audit')}}">Audit</a>
+            <a href="{{route('audit',['pageaction' => $action])}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('audit',['pageaction' => $action])}}">Audit</a>
         </div>  
+        <!-- <div class="menu-item">
+            <a href="{{route('sessions',['pageaction' => $action])}}"><span class="fa fa-tasks"></span></a>
+            <a href="{{route('sessions',['pageaction' => $action])}}">Sessions</a>
+        </div>  -->
         <div class="menu-item">
-            <a href="{{route('sessions')}}"><span class="fa fa-tasks"></span></a>
-            <a href="{{route('sessions')}}">Sessions</a>
-        </div> 
-        <div class="menu-item">
-            <a href="{{route('import')}}"><span class="fa fa-download"></span></a>
-            <a href="{{route('import')}}">Import</a>
+            <a href="{{route('import',['pageaction' => $action])}}"><span class="fa fa-download"></span></a>
+            <a href="{{route('import',['pageaction' => $action])}}">Import</a>
         </div>
         <div class="menu-item">
-            <a href="{{route('recycle.first')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('recycle.first')}}">Recycle Trailer</a>
+            <a href="{{route('recycle.first',['pageaction' => $action])}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('recycle.first',['pageaction' => $action])}}">Recycle Trailer</a>
         </div>
          <div class="menu-item">
-            <a href="{{route('search')}}"><span class="fa fa-refresh"></span></a>
-            <a href="{{route('search')}}">Asset Lookup</a>
+            <a href="{{route('search',['pageaction' => $action])}}"><span class="fa fa-refresh"></span></a>
+            <a href="{{route('search',['pageaction' => $action])}}">Asset Lookup</a>
         </div>
         <div class="menu-item">
-             <a href="{{route('wipereport')}}"><span class="fa fa-file-excel-o"></span></a>
-            <a href="{{route('wipereport')}}">Wipe Report</a>
+             <a href="{{route('wipereport',['pageaction' => $action])}}"><span class="fa fa-file-excel-o"></span></a>
+            <a href="{{route('wipereport',['pageaction' => $action])}}">Wipe Report</a>
         </div>
     </div>
 </div>

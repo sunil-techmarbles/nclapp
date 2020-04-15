@@ -14,6 +14,7 @@
 			<form method="post" id="main-form" action="{{route('store.audit.record')}}">    
 				@csrf
 				<input type="hidden" name="asinid" id="asinid" value="0"/>
+				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 				<input type="hidden" name="refurb" id="refurb" value="0"/>
 				<input type="hidden" name="modelid" id="modelid" value="0"/>
 				<input type="hidden" name="cpuname" id="cpuname" value=""/>
@@ -39,7 +40,7 @@
 </div>
 @include('admin.audit.modal')
 <script type="text/javascript">
-	var dScores = '<?php echo json_encode($damageScores); ?>';
-	var ref_BL = '<?php echo json_encode($refurbBlacklist); ?>';
+	var dScores = <?php echo json_encode($damageScores); ?>;
+	var ref_BL = <?php echo json_encode($refurbBlacklist); ?>;
 </script>
 @endsection

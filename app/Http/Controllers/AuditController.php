@@ -1315,14 +1315,14 @@ class AuditController extends Controller
 				FormData::saveFormDataRecorde((object) $formData);
 			}
 		}
-		// die;
+		$pageaction = $request->pageaction;
 		if($result)
 		{
-			return redirect()->route('audit', ["redirect" => "true"])->with('success', "Your data has been saved");
+			return redirect()->route('audit', ["pageaction" => $pageaction, "redirect" => "true"])->with('success', "Your data has been saved");
 		}
 		else
 		{
-			return redirect()->route('audit', ["redirect" => "true"])->with('error', "Unable to save the file");
+			return redirect()->route('audit', ["pageaction" => $pageaction, "redirect" => "true"])->with('error', "Unable to save the file");
 		}
 	}
 

@@ -3,14 +3,15 @@
 @section('content')
 <div class="mte_content">
 	<div style="width: 100%">
-		<form id="supplie" method="post" action="{{route('update.supplies')}}">   
+		<form id="supplie" method="post" action="{{route('update.supplies')}}">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 			@csrf 
 			<table class="table" cellspacing="0" cellpadding="0" border="0">
 				<tbody>
 					<tr>
 						<td class="float-right">
 							<button type="submit" class="btn btn-primary"> Update </button> 
-							<a class="btn btn-default btn-sm border" href="{{route('supplies')}}">Back</a>
+							<a class="btn btn-default btn-sm border" href="{{route('supplies',['pageaction' => request()->get('pageaction')])}}">Back</a>
 						</td>
 						<td class="float-left">
 							<h3>Edit Supply</h3>

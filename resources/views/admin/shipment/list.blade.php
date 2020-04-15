@@ -14,6 +14,7 @@
 			</div>
 		</form>
 		<form method="post" class="form-inline" action="{{route('add.shipment')}}" style="max-height: 250px;overflow: auto;">
+			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div  class="w-100" style="text-align: right; margin-bottom: 10px">
 				<div class="form-group float-right new-shipment">
@@ -45,7 +46,7 @@
 				<tr>
 					<td>{{$p["id"]}}</td>
 					<td>
-						<a href="{{route('shipments', ['s' => $p['id']])}}">
+						<a href="{{route('shipments', ['pageaction' => request()->get('pageaction'),'s' => $p['id']])}}">
 							{{$p["name"]}}
 						</a>
 					</td>
@@ -109,7 +110,7 @@
 								<td>{{($a["win8_activated"] ? 'WIN8 Activated' : $a["new_coa"])}}</td>
 								<td>{{$a["added_on"]}}</td>
 								<td><a href="
-									{{route('shipments', ['s' => request()->get('s'), 'remove' => $a['asset']])}}
+									{{route('shipments', ['pageaction' => request()->get('pageaction'),'s' => request()->get('s'),'remove' => $a['asset']])}}
 									"><span class="fa fa-trash"></span></a>
 								</td>
 							</tr>

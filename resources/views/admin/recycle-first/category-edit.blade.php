@@ -4,6 +4,7 @@
 <div class="container">
     <div id="page-head">Update Category</div>
     <form action="{{route('update.category.record')}}" method="post" class="category_update_table">
+		<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
     	@csrf
         <div class="form-group">
             <input type="hidden" name="action" value="update_category" />
@@ -33,7 +34,7 @@
         </div>
         <div class="form-group">
             <input type="submit" class="btn btn-success" name="submit" value="Update"/>
-            <a href="{{route('recycle.first')}}" class="btn btn-default border">Cancel</a>
+            <a href="{{route('recycle.first',['pageaction' => request()->get('pageaction')])}}" class="btn btn-default border">Cancel</a>
         </div>
     </form>
 </div>
