@@ -18,6 +18,7 @@ Route::post('ResetPassword', 'LoginController@resetPassword')->name('resetPasswo
 Route::get('/logout', 'LoginController@logout')->name('logout');
 
 Route::middleware(['guest','revalidate'])->group(function () {
+	Route::get('/register', 'RegisterController@index')->name('register');
 	Route::get('/','LoginController@index')->name('login.view');
 	Route::get('/login','LoginController@index')->name('login.view');
 	Route::post('/authenticate','LoginController@loginAuthenticate')->name('login.authenticate');
@@ -59,6 +60,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
 	    // Users Section
 	    Route::get('/users', 'UsersController@index')->name('users');
+	    Route::any('/verifyuser', 'UsersController@verifyUser')->name('verify.user');
 		Route::any('/changepassowrd','UsersController@changePassowrd')->name('change.passowrd');
 	    Route::get('/messagelog', 'MainController@index')->name('message.log');
 	    Route::any('/manageemail', 'UsersController@manageEmail')->name('manage.emails');

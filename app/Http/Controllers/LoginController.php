@@ -30,30 +30,41 @@ class LoginController extends Controller
             'password' => 'required|alphaNum'
         ]);
         $rememberMe = ( $request->rememberMe == '1' ) ? true : false ;
-        try
+        $userDetail = User::getUserbyUserName($request->username);
+        if(!$userDetail)
         {
-            $loginData = [
-                'username' => $request->username,
-                'password' => $request->password,
-            ];
-            if (Sentinel::authenticate($loginData, $rememberMe))
+            return redirect()->back()->with(['error' => 'user not found']);
+        }
+        if($userDetail['verified'])
+        {
+            try
             {
-                return redirect()->route('dashboard');
+                $loginData = [
+                    'username' => $request->username,
+                    'password' => $request->password,
+                ];
+                if (Sentinel::authenticate($loginData, $rememberMe))
+                {
+                    return redirect()->route('dashboard');
+                }
+                else 
+                {
+                    return redirect()->back()->with(['error' => 'Wrong Credentials']);
+                }
             }
-            else 
+            catch (ThrottlingException $e)
             {
-                return redirect()->back()->with(['error' => 'Wrong Credentials']);
+                return redirect()->back()->with(['error' => $e->getMessage()]);
             }
+            catch (NotActivatedException $e)
+            {
+                return redirect()->back()->with(['error' => $e->getMessage()]);
+            }
+            return redirect('/');
         }
-        catch (ThrottlingException $e)
-        {
-            return redirect()->back()->with(['error' => $e->getMessage()]);
+        else{
+            return redirect()->back()->with(['error' => 'User not verified yet']);
         }
-        catch (NotActivatedException $e)
-        {
-            return redirect()->back()->with(['error' => $e->getMessage()]);
-        }
-        return redirect('/');
     }
 
     public function logout(Request $request)

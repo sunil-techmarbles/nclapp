@@ -1,24 +1,27 @@
-@extends('layouts.appadminlayout')
-@section('title' , 'Add User')
-@section('content') 
+@extends('layouts.appmainlayout')
+@section('title' , 'Register')
+@section('content')
 
-<div class="row justify-content-center text-center">
-	<table  class="table table-hover">
-		<tbody>
-			<tr> 
-				<td class = "">
-					<h3 class="float-left">Add User</h3>
-				</td>
-				<td class = "float-right">
-					<a class=" btn btn-primary btn-sm btn-sm border" href="{{route('users')}}" >Cancel</a>
-				</td>
-			</tr>
-		</tbody>
-	</table>
+@if (Session('error'))
+<div class="alert alert-danger alert-dismissible">
+	<a href="javascript:void(0)" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
+	<strong>{{ Session::get('error') }}</strong>
+</div>
+@endif   
 
+@if (Session('success'))
+<div class="alert alert-success alert-dismissible">
+	<a href="javascript:void(0)" class="close" data-dismiss="alert" aria-label="close">&times;</a> 
+	<strong>{{ Session::get('success') }}</strong>
+</div> 
+@endif     
+
+<div class="row justify-content-center text-center"> 
 	<div class="col-6">
+		<h3 class="text-center">Sign Up</h3>
 		<form method="post" action="{{route('register.registerAuthenticate')}}">  
 			@csrf
+			<input type="hidden" name="type" value="new">
 			<div class="form-group text-left">
 				<label for="email">First Name:</label>
 				<input type="text" class="form-control" placeholder="Enter First Name" name="fname" value="{{ old('fname') }}" required> 
@@ -61,15 +64,8 @@
                 	<span class="text-danger">{{ $errors->first('confirm_password') }}</span> 
             	@endif
 			</div>
-			<div class="form-group text-left"> 
-				<label for="sel1">Role:</label>
-				<select class="form-control" name="user_role">  
-					 @foreach($roles as $role)
-      					<option value="{{$role->id}}">{{$role->name}}</option>
-    				 @endforeach 
-				</select> 
-			</div>
-			<button type="submit" class="btn btn-primary"> Save </button> 
+			<button type="submit" class="btn btn-primary"> Sign Up </button>
+			<a class="btn btn-primary" href="{{route('login.view')}}">Sign In</a>
 		</form>
 	</div> 
 </div>  

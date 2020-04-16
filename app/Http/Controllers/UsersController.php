@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\User;
 use App\UserCronJob;
@@ -18,7 +19,50 @@ class UsersController extends Controller
 	public function index()
 	{
 		$users = User::all();
+		foreach ($users as $key => $value) {
+			$role = Sentinel::findById($value->id)->roles()->get();
+			foreach ($role as $rolekey => $rolevalue) {
+				$users[$key]['role'] = isset($rolevalue->slug) ? $rolevalue->slug : 'N/A';
+			}
+		}
 		return view('admin.users.list', compact('users'));
+	}
+
+	public function verifyUser(Request $request)
+	{
+		$userid = intval($request->userid);
+		$status = $request->status;
+		switch ($status) {
+			case 0:
+				$s = 1;
+				$m = 'verified';
+				$t = '';
+				break;
+			case 1:
+				$s = 0;
+				$m = 'unverified';
+				$t = '';
+				break;
+		}
+        $result = User::changeUserStatus($userid,$s);        
+        if ($result)
+        {
+        	$userDetail = User::getUserDetail($userid);
+        	$subject = 'Verified User';
+        	$data['name'] = $userDetail['username'];
+        	$email = $userDetail['email'];
+        	Mail::send('admin.emails.verifyemail', $data, function ($m) use ($subject, $email) {
+                $m->to($email)->subject($subject);
+            });
+            $response['status']  = true;
+            $response['message'] = 'user '.$m.' successfully';
+        }
+        else
+        {
+            $response['status']  = false;
+            $response['message'] = 'Unable to delete supply';
+        }
+        return response()->json($response);
 	}
 
 	public function edituser($Userid)

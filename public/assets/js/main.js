@@ -72,6 +72,44 @@ function showSweetAlertMessage(type, message, icon)
 		) 
 }
 
+function verifyuser(userid, verifystatus, url)
+{
+	$.ajax
+	({
+		url: url,
+		type: 'POST',
+		data: {userid: userid, status: verifystatus},
+		dataType: 'json',
+		beforeSend: function ()
+		{
+			showLoader();
+		},
+		complete: function ()
+		{
+			hideLoader();
+		},
+		success: function (response)
+	    {
+	    	hideLoader();
+	    	var type = (response.status) ? 'Success' : 'Error';
+	    	var icon = (response.status) ? 'success' : 'error';
+	    	swalWithBootstrapButtons.fire
+			( 
+				type,
+				response.message,
+				icon
+			)
+			if(response.status)
+			{
+				location.reload(true);
+			}
+	    }
+	}).fail(function (jqXHR, textStatus, error){
+		hideLoader();
+		showSweetAlertMessage('Error', 'something went wrong with ajax request', 'error');
+	});	
+}
+
 function setBulkAsin(sid)
 {
 	var asset = sid.replace("asset","");

@@ -18,7 +18,6 @@ class User extends EloquentUser {
 	}
 	use SoftDeletes; 
 	protected $dates = ['deleted_at'];
-	
 	protected $fillable = [
         'email',
         'username',
@@ -26,6 +25,8 @@ class User extends EloquentUser {
         'last_name',
         'first_name',
         'permissions',
+        'verified',
+        'profile',
     ];
 
     protected $loginNames = ['email', 'username'];
@@ -51,9 +52,22 @@ class User extends EloquentUser {
 			->first();
 	}
 
+	public static function changeUserStatus($userId,$s)
+	{
+		return self::where(['id' => $userId])
+			->update(['verified' => $s]);
+	}
+
+	public static function getUserbyUserName($value)
+	{
+		return self::where(['username' => $value])
+			->first();
+	}
+
 	public static function getAllUserEmails()
 	{
-		return self::pluck('email','id');
+		return self::where(['verified' => 1])
+			->pluck('email','id');
 	}
 	
 	public static function deleteUserByID($uid)
