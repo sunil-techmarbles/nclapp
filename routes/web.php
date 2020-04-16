@@ -62,6 +62,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
 	    // Users Section
 	    Route::get('/users', 'UsersController@index')->name('users');
+	    Route::any('/profile', 'UsersController@editProfile')->name('edit.profile');
 		Route::any('/changepassowrd','UsersController@changePassowrd')->name('change.passowrd');
 	    Route::get('/messagelog', 'MainController@index')->name('message.log');
 	    Route::any('/manageemail', 'UsersController@manageEmail')->name('manage.emails');
@@ -126,6 +127,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/storeauditrecord', 'AuditController@storeAuditRecord')->name('store.audit.record');
 		// Inventory and Ajax Request
 		Route::any('/inventory', 'ShopifyController@index')->name('inventory');
+		Route::any('/inventorygallery', 'ShopifyController@inventoryGallery')->name('gallery.inventory');
 		Route::post('/syncalltoshopify', 'ShopifyController@syncAllToShopify')->name('sync.all.to.shopify');
 		Route::post('/updatetoshopify', 'ShopifyController@syncAllToShopify')->name('update.to.shopify');
 		Route::post('/updatepricetoshopify', 'ShopifyController@updateProductPriceToShopify')->name('update.price.to.shopify');

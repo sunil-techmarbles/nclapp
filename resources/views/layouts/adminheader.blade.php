@@ -38,6 +38,9 @@
 					<li class="nav-item {{ request()->segment(count(request()->segments())) == 'users' ? 'active' : '' }}">
 						<a class="nav-link" href="{{route('running.list',['pageaction' => request()->get('pageaction')])}}">Running List</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('gallery.inventory',['pageaction' => request()->get('pageaction')])}}">Gallery</a>
+					</li>
 				@endif
 				@if(request()->segment(count(request()->segments())) == 'refurb')
 					<li class="nav-item">
@@ -106,8 +109,8 @@
 					<strong>{{$currentUser}}</strong>
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="javascript:void(0)">Profile</a>
-					<a class="dropdown-item" href="javascript:void(0)">Change Password</a>
+					<a class="dropdown-item" href="{{route('edit.profile')}}">Profile</a>
+					<a class="dropdown-item" href="{{route('change.passowrd',['t'=>1])}}">Change Password</a>
 					<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
 				</div>
 			</li>

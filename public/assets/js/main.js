@@ -561,6 +561,11 @@ $(document).ready(function()
 	{
 		$('#sel-bs').selectpicker();
 	}
+	if($('.itamg-gallery').length > 0)
+	{
+		$('.dropify').dropify();
+		lightGallery(document.getElementById('lightgallery'));
+	}
 	if($('.it-amg-redirect').length > 0)
 	{
 		setTimeout(

@@ -1548,9 +1548,46 @@ class ShopifyController extends Controller
 				$r['priceData'] = $this->getShopifyPrice($r["asin"], $r["shopify_product_id"]);
 			}
 		}
-		// print_r($runningList->toArray());
-		// die;
 		unset($r);
 		return view('admin.shopify.running-list', compact('runningList', 'upcCount', 'tcnt', 'asinImages'));
+	}
+
+	public function inventoryGallery(Request $request)
+	{
+		if($request->isMethod('post'))
+		{
+			$pageaction = ($request->pageaction) ? $request->pageaction : '';
+			$files = $request->file('invgallery');
+			$fileArray = [];
+			foreach ($files as $key => $file)
+			{
+				$imageName = $file->getClientOriginalName();
+				if(File::exists($this->asinImages.'/'.$imageName))
+				{
+					File::delete($this->asinImages.'/'.$imageName);
+				}
+        		$file->move($this->asinImages, $imageName);
+        		array_push($fileArray, $imageName);
+			}
+			$n = implode(',', $fileArray);
+			return redirect()->route('gallery.inventory', ['pageaction' => $pageaction])->with('success', $n.' These file moved successfully');
+		}
+		else
+		{
+			$scanDir = scandir($this->asinImages);
+			$scanDir = array_diff($scanDir, array('.','..'));
+			$allImages = [];
+			foreach ($scanDir as $key => $value){
+				$a = [];
+				if(strpos($value,"."))
+				{
+					$a['url'] = url('/asin-images').'/'.$value;
+					$a['name'] = $value;
+				}
+				$allImages[] = $a;
+				$allImages = array_filter($allImages);
+			}
+			return view('admin.shopify.gallery', compact('allImages'));
+		}
 	}
 }
