@@ -96,12 +96,12 @@ class RegisterController extends Controller
                 'name' => $request->fname.''.$request->lname,
                 'email' => $request->email,
                 'username' => $request->username,
-                'link' => '/',
+                'link' => route('verify.user',['type' => 'email', 'userid'=> $user->id, 'status'=> $user->verified]),
             ];
             Mail::send('admin.emails.newuser', $data, function ($m) use ($subject, $emails) {
                 $m->to($emails)->subject($subject);
             });
-            return redirect()->back()->with('success', 'Register successfully, Please wait until admin verified you');
+            return redirect()->back()->with('success', 'Register successfully');
         }
         else
         {

@@ -1,5 +1,5 @@
 @extends('layouts.appadminlayout')
-@section('title', 'Recycle Second')
+@section('title', 'Asset Lookup')
 @section('content')
 <div class="container">
 	<div class="table-responsive">

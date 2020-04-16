@@ -100,6 +100,17 @@
 				@endif
 			@endif
 		</ul>
-		<strong>{{$currentUser}}</strong>|<a class="nav-link" href="{{route('logout')}}">Logout</a>
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item dropdown float-right">
+				<a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<strong>{{$currentUser}}</strong>
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="javascript:void(0)">Profile</a>
+					<a class="dropdown-item" href="javascript:void(0)">Change Password</a>
+					<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+				</div>
+			</li>
+		</ul>
 	</div>
 </nav>

@@ -16,7 +16,8 @@
     <br>
     Username  <strong>{{ $username }}</strong>
     <br>
-    Please verify this user
+    Please verify this user on <a href="{{$link}}" target="__blank">click here</a> OR
+    In admin panel
     <br/>
 </div>
 

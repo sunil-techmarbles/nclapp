@@ -60,9 +60,17 @@ class UsersController extends Controller
         else
         {
             $response['status']  = false;
-            $response['message'] = 'Unable to delete supply';
+            $response['message'] = 'Something went wrong';
         }
-        return response()->json($response);
+        if($request->type)
+        {
+        	$icon  = ($response['status']) ? 'success' : 'error';
+        	return redirect()->route('login.view')->with($icon,$response['message']);
+        }
+        else
+        {
+        	return response()->json($response);
+        }
 	}
 
 	public function edituser($Userid)
