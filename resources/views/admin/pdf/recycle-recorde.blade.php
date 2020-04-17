@@ -33,18 +33,22 @@
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Ship From:</strong></td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0; border-bottom: 0; border-right: 0;">
-							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">IT Asset Management Group<br>
+							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">
+								{{$recycleSetting['RecycleShipFromAddress']}}
+								<!-- IT Asset Management Group<br>
 								110 Bi County Bld, Suite 106<br>
-								Farmingdale, NY, 11735
+								Farmingdale, NY, 11735 -->
 							</td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-bottom: 0px; border-spacing: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Contact</strong></td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0; border-right: 0;">
-							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">Kamal Kaur
+							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">
+								{{$recycleSetting['RecycleShipFromContact']}}
+								<!-- Kamal Kaur
 								Office: 516-284-8568<br>
-								kamal@itamg.com
+								kamal@itamg.com -->
 							</td>
 						</tr>
 					</table>
@@ -55,14 +59,18 @@
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Ship To:</strong></td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0; border-bottom: 0; border-right: 0;">
-							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">EcoTech Management Inc <br>935 Lincoln Avenue <br>Holbrook, NY 11741
+							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">
+								{{$recycleSetting['RecycleShipToAddress']}}
+								<!-- EcoTech Management Inc <br>935 Lincoln Avenue <br>Holbrook, NY 11741 -->
 							</td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-bottom: 0px; border-spacing: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Contact</strong></td>
 						</tr>
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0; border-right: 0;">
-							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">Nat VariscoOffice: <br>631-567-2727
+							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">
+								{{$recycleSetting['RecycleShipToContact']}}
+								<!-- Nat VariscoOffice: <br>631-567-2727 -->
 							</td>
 						</tr>
 					</table>

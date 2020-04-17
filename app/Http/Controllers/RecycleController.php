@@ -26,19 +26,19 @@ use App\SiteOptions;
 class RecycleController extends Controller
 {
     use CommenRecycleTraits;
-	public $basePath, $current, $wipeData2, $filePath, $logo, $returlPath, $rootPath;
+    public $basePath, $current, $wipeData2, $filePath, $logo, $returlPath, $rootPath;
 
-	/**
+    /**
      * Instantiate a new RecycleController instance.
      */
-	public function __construct($searchDataArray=[])
-	{
+    public function __construct($searchDataArray=[])
+    {
         // set_time_limit(0);
         ini_set('max_execution_time', 300); //5 minutes
 
-    	/**
-     	* Set value for common uses in the RecycleController instance.
-     	*/
+        /**
+        * Set value for common uses in the RecycleController instance.
+        */
         $this->basePath = base_path().'/public';
         $this->current = Carbon::now();
         $this->rootPath = $this->basePath.'/recycle/files';
@@ -48,7 +48,7 @@ class RecycleController extends Controller
         $this->logo = url('/').'/recycle/logo.jpg';
     }
 
-   public function recycleEditSettings(Request $request)
+    public function recycleEditSettings(Request $request)
     {
         if( isset( $request->recycleSetting ))
         {
@@ -57,19 +57,25 @@ class RecycleController extends Controller
         }
         else
         {
-             return view('admin.recycle-first.settings');
+            $recycleSetting = [];
+            $settings = SiteOptions::GetRecycleAddressOptions('RecycleBolSettings');
+            foreach ($settings as $key => $setting)
+            {
+                $recycleSetting[$setting->option_name] = $setting->option_value;
+            }
+            return view('admin.recycle-first.settings', compact('recycleSetting'));
         }
     }
 
     /**
- 	* Method recycleTwoIndex use for Recycle 2
- 	*/
+    * Method recycleTwoIndex use for Recycle 2
+    */
     public function recycleTwoIndex(Request $request)
-  	{
+    {
         $result = Category::getAllRecord();
         $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
-  		return view('admin.asset-lookup.list', compact('itamgRecycleInventors', 'result'));
-  	}
+        return view('admin.asset-lookup.list', compact('itamgRecycleInventors', 'result'));
+    }
 
     public function recycleTwoCategory(Request $request)
     {
@@ -543,23 +549,23 @@ class RecycleController extends Controller
         }
     }
     
-  	/**
- 	* Method recycleSecondIndex use for Recycle 
- 	*/
-  	public function recycleFirstIndex(Request $request)
-  	{
-  		$currentUser = Sentinel::getUser()->first_name;
-  		$selected = '';
-  		//get all categories
-  		$categories = Recycle::getAllRecord($single='Type_of_Scrap', $query=['status'=>0]);
-		//get unapproved categories
-		$order = [
-			'field' => 'id',
-			'order' => 'DESC'
-		];
-		$unapporovedCategories = Recycle::getAllRecordOrderBy($order);
-		//get recycle files
-		$recycleDataFiles = RecycleRecord::getRecord($value=0);
+    /**
+    * Method recycleSecondIndex use for Recycle 
+    */
+    public function recycleFirstIndex(Request $request)
+    {
+        $currentUser = Sentinel::getUser()->first_name;
+        $selected = '';
+        //get all categories
+        $categories = Recycle::getAllRecord($single='Type_of_Scrap', $query=['status'=>0]);
+        //get unapproved categories
+        $order = [
+            'field' => 'id',
+            'order' => 'DESC'
+        ];
+        $unapporovedCategories = Recycle::getAllRecordOrderBy($order);
+        //get recycle files
+        $recycleDataFiles = RecycleRecord::getRecord($value=0);
         if($recycleDataFiles->count() > 0)
         {
             $recycleDatas = $recycleDataFiles->toArray();
@@ -574,8 +580,8 @@ class RecycleController extends Controller
         {
             $adminAccess = true;
         }
-  		return view('admin.recycle-first.list', compact('recycleDataFiles', 'unapporovedCategories', 'categories', 'currentUser', 'selected', 'adminAccess'));
-  	}
+        return view('admin.recycle-first.list', compact('recycleDataFiles', 'unapporovedCategories', 'categories', 'currentUser', 'selected', 'adminAccess'));
+    }
 
     /**
     * Method getTarePrice return tare price on basis user input 
@@ -870,7 +876,13 @@ class RecycleController extends Controller
                 $pdfFileData = (!$pdfFileData->isEmpty()) ? $pdfFileData->toArray() : [];
                 $closed = ($pdfFileData[0]['status']) ? '' : date('l F jS,Y', strtotime($pdfFileData[0]['closed']));
                 $pdfData = RecycleRecordLine::getAllRecycleRecordLineByRecordId(intval($request->id));
-                $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo'))->render();
+                $recycleSetting = [];
+                $settings = SiteOptions::GetRecycleAddressOptions('RecycleBolSettings');
+                foreach ($settings as $key => $setting)
+                {
+                    $recycleSetting[$setting->option_name] = $setting->option_value;
+                }
+                $html = view('admin.pdf.recycle-recorde', compact('closed', 'pdfData', 'logo', 'recycleSetting'))->render();
                 $this->createPDF($html, $request->file_name, $filePath);
                 return response()->json(['url' => $returnPath, 'status' => true]);
             }

@@ -10,7 +10,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="Ship-From-Address">Ship From Address:</label>
-                        <textarea required="required" name="shipFromAddress" rows=5 cols=10 class="form-control"></textarea>
+                        <textarea required="required" name="shipFromAddress" rows=5 cols=10 class="form-control">{{$recycleSetting['RecycleShipFromAddress']}}</textarea>
                     </div>
                 </div>
             </div>
@@ -18,7 +18,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="Ship-To-Address">Ship To Address:</label>
-                        <textarea required="required" name="shipToAddress" rows=5 cols=10 class="form-control"></textarea>
+                        <textarea required="required" name="shipToAddress" rows=5 cols=10 class="form-control">{{$recycleSetting['RecycleShipToAddress']}}</textarea>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="Ship-From-Contact">Ship From Contact:</label>
-                        <textarea required="required" name="shipFromContact" rows=3 cols=10 class="form-control"></textarea>
+                        <textarea required="required" name="shipFromContact" rows=3 cols=10 class="form-control">{{$recycleSetting['RecycleShipFromContact']}}</textarea>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="Ship-To-Contact">Ship To Contact:</label>
-                        <textarea required="required" name="shipToContact" rows=3 cols=10 class="form-control"></textarea>
+                        <textarea required="required" name="shipToContact" rows=3 cols=10 class="form-control">{{$recycleSetting['RecycleShipToContact']}}</textarea>
                     </div>
                 </div>
             </div>

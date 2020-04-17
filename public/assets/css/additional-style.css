@@ -293,3 +293,8 @@ input#bulk_data {
 div#navbarSupportedContent {
     padding-bottom: 30px;
 }
+.dt-buttons button {
+    background: #666666;
+    border: 0 !important;
+    color: #fff;
+}
