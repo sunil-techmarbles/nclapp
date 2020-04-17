@@ -8,6 +8,8 @@
 	<title>{{ config('app.name') }} - @yield('title')</title>
 	<link href="{{URL('assets/css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/bootstrap/font-awesome.min.css')}}" rel="stylesheet">
+	<link href="{{URL('assets/css/dropify.min.css')}}" rel="stylesheet">
+	<link href="{{URL('assets/css/lightgallery.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/multiselect/bootstrap-select.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/dataTables/jquery.dataTables.min.css')}}" rel="stylesheet">
@@ -51,14 +53,24 @@
 <script type="text/javascript" src = "{{URL('assets/js/jquery.min.js')}}" ></script> 
 <script type="text/javascript" src = "{{URL('assets/js/jquery.validate.min.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/datepicker/moment.min.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/dropify.min.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/multiselect/popper.min.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap.min.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/multiselect/bootstrap-select.min.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/datepicker/datepicker.min.js')}}" ></script>
-<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap-combobox.min.js')}}" ></script>
-<script type="text/javascript" src = "{{URL('assets/js/datepicker/daterangepicker.min.js')}}" ></script>
-<script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/bootstrap/bootstrap-combobox.min.js')}}" >
+</script>
+<script type="text/javascript" src = "{{URL('assets/js/datepicker/daterangepicker.min.js')}}" >
+</script>
+<script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" >
+</script>
 <script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/picturefill.min.js')}}"></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lightgallery.min.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-pager.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-autoplay.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-fullscreen.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-zoom.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>
 <script type="text/javascript" src = "{{URL('assets/js/main.js')}}" ></script>
 @if(request()->segment(count(request()->segments())) != 'tracker')

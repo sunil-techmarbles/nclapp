@@ -68,7 +68,7 @@
       					<option value="{{$role->id}}">{{$role->name}}</option>
     				 @endforeach 
 				</select> 
-			</div> 
+			</div>
 			<button type="submit" class="btn btn-primary"> Save </button> 
 		</form>
 	</div> 

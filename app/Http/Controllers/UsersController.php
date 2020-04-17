@@ -2,7 +2,9 @@
 namespace App\Http\Controllers;
 
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Hash;
 use App\User;
 use App\UserCronJob;
 
@@ -18,7 +20,58 @@ class UsersController extends Controller
 	public function index()
 	{
 		$users = User::all();
+		foreach ($users as $key => $value) {
+			$role = Sentinel::findById($value->id)->roles()->get();
+			foreach ($role as $rolekey => $rolevalue) {
+				$users[$key]['role'] = isset($rolevalue->slug) ? $rolevalue->slug : 'N/A';
+			}
+		}
 		return view('admin.users.list', compact('users'));
+	}
+
+	public function verifyUser(Request $request)
+	{
+		$userid = intval($request->userid);
+		$status = $request->status;
+		switch ($status) {
+			case 0:
+				$s = 1;
+				$m = 'verified';
+				$t = '';
+				break;
+			case 1:
+				$s = 0;
+				$m = 'unverified';
+				$t = '';
+				break;
+		}
+        $result = User::changeUserStatus($userid,$s);        
+        if ($result)
+        {
+        	$userDetail = User::getUserDetail($userid);
+        	$subject = 'Verified User';
+        	$data['name'] = $userDetail['username'];
+        	$email = $userDetail['email'];
+        	Mail::send('admin.emails.verifyemail', $data, function ($m) use ($subject, $email) {
+                $m->to($email)->subject($subject);
+            });
+            $response['status']  = true;
+            $response['message'] = 'user '.$m.' successfully';
+        }
+        else
+        {
+            $response['status']  = false;
+            $response['message'] = 'Something went wrong';
+        }
+        if($request->type)
+        {
+        	$icon  = ($response['status']) ? 'success' : 'error';
+        	return redirect()->route('login.view')->with($icon,$response['message']);
+        }
+        else
+        {
+        	return response()->json($response);
+        }
 	}
 
 	public function edituser($Userid)
@@ -29,7 +82,59 @@ class UsersController extends Controller
 		{
 			return view('admin.users.edit', compact('user', 'cronjobs'))->with(['roles' => $this->roles]);
 		}
-		abort('404');
+		else
+		{
+			abort('404');
+		}
+	}
+
+	public function editProfile(Request $request)
+	{
+		$userId = Sentinel::getUser()->id;
+		if($request->isMethod('post'))
+		{
+			if($request->update)
+			{
+				$validator = $request->validate([
+					'fname' => 'required|min:2|max:50',
+					'lname' => 'required|min:2|max:50',
+					'email' => 'required|unique:users,email,'.$userId.',id,deleted_at,NULL',
+					'username' => 'required|unique:users,username,'.$userId.',id,deleted_at,NULL',
+				],[
+					'fname.required' => 'First Name is required',
+					'fname.min' => 'First Name must be at least 2 characters.',
+					'fname.max' => 'First Name should not be greater than 50 characters.',
+					'lname.required' => 'Last Name is required',
+					'lname.min' => 'Last Name must be at least 2 characters.',
+					'lname.max' => 'Last Name should not be greater than 50 characters.',
+				]);
+
+				try {
+					$userData = [
+					    'first_name' => $request->fname,
+					    'last_name'  => $request->lname,
+					    'email'      => $request->email,
+					    'username'   => $request->username,
+			     	];
+			 		$user = User::findorfail($userId);
+					$user = Sentinel::update($user, $userData);
+				 	return redirect()->route('users')->with('success', 'Profile Updated successfully.');
+				}
+				catch(\Exception $error)
+				{
+				 	return redirect()->route('users')->with('error', 'Something went wrong. Please try again.');
+				}
+			}
+			else
+			{
+		 		return redirect()->route('users')->with('error', 'Something went wrong. Please try again.');
+			}
+		}
+		else
+		{
+			$profile = User::getUserDetail($userId);
+			return view('admin.users.profile', compact('profile'));
+		}
 	}
 
 	public function manageEmail(Request $request)
@@ -112,26 +217,41 @@ class UsersController extends Controller
 			$role->users()->attach( $user );
 		 	return redirect()->route('users')->with('success', 'User Updated successfully.');
 		}
-		catch(Exception $error)
+		catch(\Exception $error)
 		{
-		 	return redirect()->route('users')->with('success', 'Error occred Please try again.');
+		 	return redirect()->route('users')->with('error', 'Something went wrong. Please try again.');
 		}
 	}
 
 	public function changePassowrd(Request $request)
 	{
-		$userId = $request->u;
+		$userId = ($request->t) ? Sentinel::getUser()->id : $request->u;
 		$userDetial = User::findorfail($userId);
 		if ($request->isMethod('post'))
 		{
-			$validator = $request->validate(
-	      	[
+			$request->validate([
 	            'password' => 'required|alphaNum|min:6|max:14|',
-	            'confirm_password' => 'required|min:6|max:20|same:password',
+	            'confirm_password' => 'required|min:6|max:14|same:password',
 	    	]);
+    		$logout = true;
+	    	if($request->t)
+	    	{
+	    		$request->validate([
+		            'oldpassword' => 'required|alphaNum|min:6|max:14|',
+		    	]);
+				if(!Hash::check($request->oldpassword, Sentinel::getUser()->password))
+				{
+					return back()
+				        ->with('error','The specified password does not match the your password');
+				}
+				$logout = false;
+	    	}
 	    	$user = Sentinel::findUserById($userId);
 	        Sentinel::update($user, array('password' => $request->password));
-	        Sentinel::logout($user);
+	        if($logout)
+	        {
+	        	Sentinel::logout($user);
+	        }
 	        return redirect()->route('users')->with('success', 'Password updated successfully.');
 		}
 		else

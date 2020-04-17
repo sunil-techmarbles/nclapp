@@ -9,6 +9,38 @@ function implodeSupplieEmails($array )
     return implode(',', $r);
 }
 
+function userVerifiedString($value)
+{
+    switch ($value) {
+        case 0:
+            $status = 'unverified';
+            break;
+        case 1:
+            $status = 'verified';
+            break;
+        default:
+            $status = 'N/A';
+            break;
+    }
+    return $status;
+}
+
+function userVerifiedClass($value)
+{
+    switch ($value) {
+        case 0:
+            $class = 'text-danger';
+            break;
+        case 1:
+            $class = 'text-primary';
+            break;
+        default:
+            $class = 'text-muted';
+            break;
+    }
+    return $class;
+}
+
 function supplieEmialArray($object)
 {
     $r = array();

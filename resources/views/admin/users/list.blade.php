@@ -17,13 +17,15 @@
 		<th>User name</th>
 		<th>Email</th>
 		<th>User Name</th>
+		<th>Status</th>
 		<th>Role</th>
 	</thead>
 	<tbody>
 		@foreach($users as $user)
 		<tr>
 			<td nowrap="">
-					<a href="javascript:void(0)" onclick="del_confirm({{$user->id}} ,'DeleteUser','User')">
+					<a href="javascript:void(0)" 
+					onclick="del_confirm({{$user->id}} ,'DeleteUser','User')">
 						<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
 					</a>
 					<a href="{{route('edit.user', $user->id )}}">
@@ -37,7 +39,16 @@
 			<td>{{$user->first_name}} {{$user->last_name}} </td>
 			<td>{{$user->email}}</td>
 			<td>{{$user->username}}</td>
-			<td>{{$user->roles()->get()[0]->name}}</td>
+			<td>
+				<span class="{{userVerifiedClass($user->verified)}}">{{userVerifiedString($user->verified)}}
+				</span>
+				@if(!$user->verified)
+					<a href="javascript:void(0)" onclick="verifyuser({{$user->id}},{{$user->verified}},'verifyuser')">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</a>
+				@endif
+			</td>
+			<td>{{$user->role}}</td>
 		</tr>
 		@endforeach
 	</tbody>

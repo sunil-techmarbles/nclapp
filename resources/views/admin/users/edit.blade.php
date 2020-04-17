@@ -26,7 +26,7 @@
 			</div>
 			<div class="form-group text-left">
 				<label for="email">Last Name:</label>
-				<input type="text" class="form-control" placeholder="Enter Last Name" name="lname" value="{{ $user->first_name }}" > 
+				<input type="text" class="form-control" placeholder="Enter Last Name" name="lname" value="{{ $user->last_name }}" > 
 				@if ($errors->has('lname'))
 				<span class="text-danger">{{ $errors->first('lname') }}</span>
 				@endif

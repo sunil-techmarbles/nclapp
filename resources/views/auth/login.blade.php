@@ -43,7 +43,8 @@
 				<label for="rememberMe">Remember me</label>  
 			</div>
 			<div class="form-group">
-				<button type="submit" class="btn btn-primary">Log In</button> 
+				<button type="submit" class="btn btn-primary">Sign In</button>
+				<a class="btn btn-primary" href="{{route('register',['t' => 'new'])}}">Sign Up</a>
 			</div>
 		</form>
 	</div> 

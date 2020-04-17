@@ -12,13 +12,14 @@ class HeadServiceProvider extends ServiceProvider {
     {
         View::composer('layouts.adminheader', function ($view)
         {
-        	$uid = Sentinel::getUser()->id;
-        	$userDetails = User::getUserDetail($uid);
+            $uid = Sentinel::getUser()->id;
+            $userDetails = User::getUserDetail($uid);
             $currentUser = Sentinel::getUser()->first_name;
-        	$role = Sentinel::findRoleById($userDetails->role_id);
+            $role = Sentinel::findRoleById($userDetails->role_id);
             $view->with('user_role', $role->slug);
             $view->with('currentUser', $currentUser);
         });
+
         View::composer('layouts.appadminlayout', function ($view)
         {
             $redirect = URL('/');
