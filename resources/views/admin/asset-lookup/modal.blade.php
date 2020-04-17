@@ -1,7 +1,7 @@
 <div id="add_entry" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="add_entry_form" enctype="multipart/form-data">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction1" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
@@ -48,7 +48,7 @@
 <div id="upload_files" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="upload_entry_form" action="{{route('read.data.from.files')}}" enctype="multipart/form-data">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction2" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
@@ -66,7 +66,7 @@
 <div id="searchModal" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="search_form" enctype="multipart/form-data">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction3" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="modal-content">
 				<div class="modal-header">
@@ -76,7 +76,7 @@
 				<div class="modal-body">
 					<div class="pop-heading">
 						<label>Part NO</label>
-						<input type="text" name="model1" id="model1" required="" class="form-control" />
+						<input type="text" name="model1" id="model1" required class="form-control" />
 						<br />
 					</div>
 				</div>
@@ -91,7 +91,7 @@
 <div id="add_search_entry" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="add_search_entry_form" enctype="multipart/form-data">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction4" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
@@ -131,7 +131,7 @@
 <div id="cat_entry" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="cat_entry_form" enctype="multipart/form-data">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction5" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="modal-content">
 				<div class="modal-body">
@@ -153,7 +153,7 @@
 <div id="faildsearchemailsidentry" class="modal fade">
 	<div class="modal-dialog">
 		<form method="post" id="faildsearchemailsidentry_form" enctype="multipart/form-data">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction6" value="{{request()->get('pageaction')}}"/>
 			@csrf
 			<div class="modal-content">
 				<div class="modal-body">

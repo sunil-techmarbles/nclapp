@@ -1,29 +1,17 @@
-$(window).on('load', function (){
-    
-    setTimeout(function(){
-        var ele = '<a class="btn btn-default border mr-1 border-primary add_new_entry" href="javascript:void(0)">Add</a><a class="btn btn-default border mr-1 border-primary upload_data_from_files" href="javascript:void(0)">Upload CSV or XLS</a><a href="javascript:void(0)" class="btn btn-default border border-primary dt-button delete_button"><span>Delete Selected</span></a>';
-        if($("input[name='recycletwopage']").val() == 'category')
-        {
-            var ele = '<a class="btn btn-default border mr-1 border-primary add_new_entry" href="javascript:void(0)">Add</a><a href="javascript:void(0)" class="btn btn-default border border-primary dt-button delete_button"><span>Delete Selected</span></a>';
-        }
-        $('.dt-buttons').append(ele);
-        $('#itamg_inventory_value_processing').after('<br><br>');
-        $('.first_heading').removeClass('sorting_asc');
-    },300)
-});
-
 $(document).ready(function(){
     var categoryDelete = ($("input[name='recycletwopage']").val() == 'category') ? 'true' : 'false';
     $(document).on("click",".select_all_to_delete", function(e){
-        if(this.checked){
+        if(this.checked)
+        {
             $('.select_to_delete').each(function () {
                 $(this).prop('checked', true);
-            });  
-        }else{
-
+            });
+        }
+        else
+        {
             $('.select_to_delete').each(function () {
                 $(this).prop('checked', false);
-            });  
+            });
         }
     });
 
@@ -62,22 +50,22 @@ $(document).ready(function(){
                     {
                         hideLoader();
                         var status = (response.status) ? 'success' : 'error';
-                        showSweetAlertMessage(type = status, message = response.message , icon= status);
+                        showSweetAlertMessage(status, response.message, status);
                     }).fail(function(){
                         hideLoader();
-                        showSweetAlertMessage(type = 'error', message = 'Something went wrong with ajax !' , icon= 'error');
+                        showSweetAlertMessage('error', 'Something went wrong with ajax !', 'error');
                     });
                     setTimeout(function(){location.reload();}, 2000);
                 }
                 else if (result.dismiss === Swal.DismissReason.cancel ) 
                 {
-                    showSweetAlertMessage(type = 'warning', message = 'Your record is safe :)' , icon= 'warning');
+                    showSweetAlertMessage('warning','Your record is safe :)','warning');
                 } 
             })
         }
         else
         {
-            showSweetAlertMessage(type = 'warning', message = 'Please select record to delete' , icon= 'warning');
+            showSweetAlertMessage('warning', 'Please select record to delete' ,'warning');
         }
            
     });
@@ -116,15 +104,20 @@ $(document).ready(function(){
       
     })
 
-    var ClassName = 'btn btn-default border border-primary';
+    var ClassName = 'mx-1 btn btn-xs btn-default border border-primary';
     $('#itamg_inventory_value').DataTable({
-        dom: 'Bfrtip',
+        dom: 'lipBf',
         buttons: [
             { extend: 'excel', className: ClassName },
             { extend: 'csv', className: ClassName },
             { extend: 'pdf', className: ClassName },
             { extend: 'copy', className: ClassName },
-        ]
+        ],
+        aoColumnDefs: [{
+            bSortable: false,
+            aTargets: [ 0 ]
+        }],
+        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
     });
 
     $(document).on("click",".edit_faildsearch_address", function(e){
@@ -261,7 +254,7 @@ function commenAjaxOnSearchResponse(argument){
     });
 }
 
-$( "#search" ).click(function(){
+$(document).on('click', "#search", function(){
     $.ajax({
         type: "POST",
         url: "/"+recyclePrefix+"/search",
