@@ -16,7 +16,30 @@ class SiteOptions extends Model
     ];
     
 
-    
+    public static function UpdateRecycleAddressOptions($request)
+    {
+    	dd( $request ); die; 
+
+    }
+
+
+    public static function CheckSettingExists($optionName, $optionGroup)
+    {
+
+
+    }
+
+    public static function UpdateSingleSettings($optionName, $optionValue, $optionGroup)
+    {
+
+
+    }
+
+     public static function AddSingleSettings($optionName, $optionValue, $optionGroup)
+    {
+
+
+    }
 
 
 }
