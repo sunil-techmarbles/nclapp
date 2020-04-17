@@ -21,6 +21,7 @@ use App\FailedSearch;
 use App\RecycleRecord;
 use App\RecycleRecordLine;
 use App\ItamgRecycleInventory;
+use App\SiteOptions;
 
 class RecycleController extends Controller
 {
@@ -47,11 +48,12 @@ class RecycleController extends Controller
         $this->logo = url('/').'/recycle/logo.jpg';
     }
 
-    public function recycleEditSettings(Request $request)
+   public function recycleEditSettings(Request $request)
     {
         if( isset( $request->recycleSetting ))
         {
-            dd( $request ); 
+            SiteOptions::UpdateRecycleAddressOptions($request);
+            return redirect()->route('recycle.settings')->with('success', 'Settings Updated successfully ');
         }
         else
         {
