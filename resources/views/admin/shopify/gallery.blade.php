@@ -16,6 +16,7 @@
 		                <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="{{$value['url']}} 375, {{$value['url']}} 480, {{$value['url']}} 800" data-src="{{$value['url']}}" >
 		                    <a href="{{$value['url']}}">
 		                        <img class="img-responsive" src="{{$value['url']}}" alt="{{$value['name']}}">
+		                        <strong>{{$value['name']}}</strong>
 		                    </a>
 		                </li>
 	            	@endforeach

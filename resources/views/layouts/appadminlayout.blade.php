@@ -9,8 +9,7 @@
 	<link href="{{URL('assets/css/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/bootstrap/font-awesome.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/dropify.min.css')}}" rel="stylesheet">
-	<!-- <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet"> -->
-	
+	<link href="{{URL('assets/css/lightgallery.min.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/multiselect/bootstrap-select.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/admin-style.css')}}" rel="stylesheet">
 	<link href="{{URL('assets/css/dataTables/jquery.dataTables.min.css')}}" rel="stylesheet">
@@ -66,14 +65,12 @@
 <script type="text/javascript" src = "{{URL('assets/js/dataTables/jquery.dataTables.min.js')}}" >
 </script>
 <script type="text/javascript" src = "{{URL('assets/js/JsBarcode/JsBarcode.all.min.js')}}" ></script>
-<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js">
-</script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js">
-</script>
-<script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/picturefill.min.js')}}"></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lightgallery.min.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-pager.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-autoplay.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-fullscreen.js')}}" ></script>
+<script type="text/javascript" src = "{{URL('assets/js/lightgallery/lg-zoom.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/sweetAlert/sweetalert.min.js')}}"></script>
 <script type="text/javascript" src = "{{URL('assets/js/main.js')}}" ></script>
 @if(request()->segment(count(request()->segments())) != 'tracker')

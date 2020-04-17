@@ -1557,20 +1557,36 @@ class ShopifyController extends Controller
 		if($request->isMethod('post'))
 		{
 			$pageaction = ($request->pageaction) ? $request->pageaction : '';
-			$files = $request->file('invgallery');
 			$fileArray = [];
-			foreach ($files as $key => $file)
+			$validator = Validator::make($request->all(), [
+			    "invgallery.*"  => "required|mimes:jpeg,jpg,png",
+			]);
+			if ($validator->fails()) 
 			{
-				$imageName = $file->getClientOriginalName();
-				if(File::exists($this->asinImages.'/'.$imageName))
-				{
-					File::delete($this->asinImages.'/'.$imageName);
-				}
-        		$file->move($this->asinImages, $imageName);
-        		array_push($fileArray, $imageName);
+				$status = 'error';
+	            $message = $validator->messages()->first();
+	            return back()->with($status, $message);
 			}
-			$n = implode(',', $fileArray);
-			return redirect()->route('gallery.inventory', ['pageaction' => $pageaction])->with('success', $n.' These file moved successfully');
+			if($request->hasFile('invgallery'))
+			{
+				$files = $request->file('invgallery');
+				foreach ($files as $key => $file)
+				{
+					$imageName = $file->getClientOriginalName();
+					if(File::exists($this->asinImages.'/'.$imageName))
+					{
+						File::delete($this->asinImages.'/'.$imageName);
+					}
+	        		$file->move($this->asinImages, $imageName);
+	        		array_push($fileArray, $imageName);
+				}
+				$n = implode(',', $fileArray);
+				return redirect()->route('gallery.inventory', ['pageaction' => $pageaction])->with('success', $n.' These file moved successfully');
+			}
+			else
+			{
+				return back()->with('error', 'Please upload a file');
+			}
 		}
 		else
 		{
