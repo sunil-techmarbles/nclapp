@@ -43,12 +43,12 @@ class CoaWeekly extends Command
      */
     public function handle()
     {
-        // $subject = 'COA:weekly '. date('Y-m-d h:i:s');
-        // $emailsToSend = "sunil.techmarbles@gmail.com";
-        // Mail::raw('Test Crons for COA:weekly', function($m) use ( $subject, $emailsToSend)
-        // {
-        //         $m->to( $emailsToSend )->subject($subject);
-        // });
+        $subject = 'COA:weekly '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for COA:weekly', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $this->basePath  = base_path().'/public';
         $this->sessionReportDir = $this->basePath . "/session-reports";
         $this->refurbAssetDataDir = $this->basePath.'/refurb-asset-data';

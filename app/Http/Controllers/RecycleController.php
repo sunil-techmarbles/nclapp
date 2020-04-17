@@ -47,6 +47,18 @@ class RecycleController extends Controller
         $this->logo = url('/').'/recycle/logo.jpg';
     }
 
+    public function recycleEditSettings(Request $request)
+    {
+        if( isset( $request->recycleSetting ))
+        {
+            dd( $request ); 
+        }
+        else
+        {
+             return view('admin.recycle-first.settings');
+        }
+    }
+
     /**
  	* Method recycleTwoIndex use for Recycle 2
  	*/

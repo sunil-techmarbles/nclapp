@@ -41,12 +41,12 @@ class AsinPriceUpdate extends Command
      */
     public function handle()
     {
-        // $subject = 'AsinPrice:update '. date('Y-m-d h:i:s');
-        // $emailsToSend = "sunil.techmarbles@gmail.com";
-        // Mail::raw('Test Crons for AsinPrice:update', function($m) use ( $subject, $emailsToSend)
-        // {
-        //         $m->to( $emailsToSend )->subject($subject);
-        // });
+        $subject = 'AsinPrice:update '. date('Y-m-d h:i:s');
+        $emailsToSend = "sunil.techmarbles@gmail.com";
+        Mail::raw('Test Crons for AsinPrice:update', function($m) use ( $subject, $emailsToSend)
+        {
+                $m->to( $emailsToSend )->subject($subject);
+        });
         $result = $this->UpdateAsinPriceCron();
         echo implode(',', $result). " These Asin's price updated successfully"; 
         die();

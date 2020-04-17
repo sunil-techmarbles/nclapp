@@ -77,6 +77,16 @@
 						<a class="nav-link" href="{{route('shipments',['pageaction' => request()->get('pageaction')])}}">Outbound</a>
 					</li>
 				@endif
+				@if ( request()->segment(count(request()->segments())) == 'recycle' )
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('recycle.settings',['pageaction' => request()->get('pageaction')])}}">Recycle Edit Settings </a>
+					</li>
+				@endif
+				@if ( request()->segment(count(request()->segments())) == 'recyclesettings' )
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('recycle.first',['pageaction' => request()->get('pageaction')])}}">Recycle</a>
+					</li>
+				@endif
 				@if ( request()->segment(count(request()->segments())) == 'tracker' )
 					<!-- @if(in_array($currentUser, config('constants.adminUsers'))) -->
 					<!-- @endif -->
