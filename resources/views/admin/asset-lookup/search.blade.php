@@ -4,7 +4,9 @@
 <div class="container box assest-lookup-search">
 	<div class="admin-access-Itamg row">
 		<div class="col text-center">
-			<a class="btn btn-info mx-1" href="{{route('recycle.second', ['pageaction' => request()->get('pageaction')])}}">Admin Access</a>
+			@if($adminAccess)
+				<a class="btn btn-info mx-1" href="{{route('recycle.second', ['pageaction' => request()->get('pageaction')])}}">Admin Access</a>
+			@endif
 		</div>
 	</div>
 	<div class="box-cen">

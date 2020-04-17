@@ -13,7 +13,7 @@
 				<td>
 					<small>
 						<a class="btn btn-xs btn-default border border-primary" href="{{route('manage.emails',['t' => $key, 'a' => 'add'])}}">
-							Add
+							Edit
 						</a>
 					</small>
 					<small>

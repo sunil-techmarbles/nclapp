@@ -27,7 +27,9 @@ class Asin extends Model
 		'cpu_model',		
 		'cpu_speed',	
 		'ram',		
-		'hdd',		
+		'hdd',
+		'ramtype',
+		'hddtype',		
 		'os',		
 		'webcam',		
 		'notes',		
@@ -67,7 +69,9 @@ class Asin extends Model
         $asins->cpu_core = $request->cpu_core; 
         $asins->cpu_model = $request->cpu_model; 
         $asins->cpu_speed = $request->cpu_speed;   
-        $asins->ram = $request->ram;       
+        $asins->ram = $request->ram;
+        $asins->ramtype = $request->ramtype;
+        $asins->hddtype = $request->hddtype;       
         $asins->hdd = $request->hdd;   
         $asins->os = $request->os;     
         $asins->webcam = $request->webcam;     
@@ -97,6 +101,8 @@ class Asin extends Model
                 'cpu_core' => $request->cpu_core,
                 'cpu_model' => $request->cpu_model,
                 'cpu_speed'=> $request->cpu_speed,
+                'ramtype' => $request->ramtype,
+				'hddtype' => $request->hddtype,
                 'ram' => $request->ram,
                 'hdd' => $request->hdd,
                 'os' => $request->os,

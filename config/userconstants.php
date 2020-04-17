@@ -35,6 +35,7 @@ return [
 		'admin' => 'true',
 	],
 	'roles' => [
+		'admin' => 'Admin',
 		'user' => 'User',
 		'manager-itamg' => 'Manager Itamg',
 		'manager-refurbconnect' => 'Manager Refurbconnect'

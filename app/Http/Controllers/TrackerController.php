@@ -128,7 +128,17 @@ class TrackerController extends Controller
             $actionList = Tracker::getActivityRecord();
             $userList = ($userList) ? array_filter($userList->toArray()) : [];
             $actionList = ($actionList) ? array_filter($actionList->toArray()) : [];
-            return view('admin.tracker.report', compact('currentUser', 'userList', 'actionList', 'actions', 'dactions', 'users', 'dusers', 'dates', 'act', 'total', 'daily', 'monthly', 'ddaily', 'dweekly', 'weekly', 'dmonthly', 'totalHours'));
+            $user = Sentinel::getUser();
+            $adminAccess = false;
+            if ($user->inRole('admin'))
+            {
+                return view('admin.tracker.report', compact('currentUser', 'userList', 'actionList', 'actions', 'dactions', 'users', 'dusers', 'dates', 'act', 'total', 'daily', 'monthly', 'ddaily', 'dweekly', 'weekly', 'dmonthly', 'totalHours'));
+            }
+            else
+            {
+                return redirect()->route('tracker',['pageaction' => request()->get('pageaction')])
+                ->with('error',"Permission denied");
+            }
         }
     	return view('admin.tracker.index', compact('currentUser', 'actions'));
     }

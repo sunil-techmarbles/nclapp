@@ -91,51 +91,51 @@
                 @endforeach
         </table>
     @endif
-        @if(!empty($unapporovedCategories))
-            <div class="heading">
-                <h2>Categories</h2>
-            </div>
-            <div class="category-table">
-                <table class="table table-striped">
+    @if($adminAccess && !empty($unapporovedCategories))
+        <div class="heading">
+            <h2>Categories</h2>
+        </div>
+        <div class="category-table">
+            <table class="table table-striped">
+                <tr>
+                    <th></th>
+                    <th>Category Name <span class="fa fa-eye-slash" onclick="$('.s_price').toggle()"></span></th>
+                    <th class="s_price" style="display: none;">Price</th>
+                    <th>Type</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach ($unapporovedCategories as $key => $unapporovedCategory)
                     <tr>
-                        <th></th>
-                        <th>Category Name <span class="fa fa-eye-slash" onclick="$('.s_price').toggle()"></span></th>
-                        <th class="s_price" style="display: none;">Price</th>
-                        <th>Type</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <td></td>
+                        <td><strong>{{$unapporovedCategory['Type_of_Scrap']}}</strong></td>
+                        <td class="s_price" style="display: none;">
+                        	<strong>{{$unapporovedCategory['PRICE']}}</strong>
+                        </td>
+                        <td><strong>{{$unapporovedCategory['TYPE']}}</strong></td>
+                        <td>
+                            @if($unapporovedCategory['status'])
+                                <button class="btn btn-link recycle-approve" data-approve_name="{{$unapporovedCategory['Type_of_Scrap']}}">
+                                	<strong>Approve</strong>
+                                </button>
+                            @endif
+                        </td>
+                        <td>
+                            <a href="{{route('edit.category.record', ['pageaction' => request()->get('pageaction'), 'cat_name' => $unapporovedCategory['Type_of_Scrap']])}}">
+                                <img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0)" onclick="del_confirm('{{$unapporovedCategory['Type_of_Scrap']}}','deleterecyclecategoryrecord','Category')" data-reject_name="{{$unapporovedCategory['Type_of_Scrap']}}" class=" recycle-reject">
+                                <img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
+                            </a>
+                        </td>
                     </tr>
-                    @foreach ($unapporovedCategories as $key => $unapporovedCategory)
-                        <tr>
-                            <td></td>
-                            <td><strong>{{$unapporovedCategory['Type_of_Scrap']}}</strong></td>
-                            <td class="s_price" style="display: none;">
-                            	<strong>{{$unapporovedCategory['PRICE']}}</strong>
-                            </td>
-                            <td><strong>{{$unapporovedCategory['TYPE']}}</strong></td>
-                            <td>
-                                @if($unapporovedCategory['status'])
-                                    <button class="btn btn-link recycle-approve" data-approve_name="{{$unapporovedCategory['Type_of_Scrap']}}">
-                                    	<strong>Approve</strong>
-                                    </button>
-                                @endif
-                            </td>
-                            <td>
-                                <a href="{{route('edit.category.record', ['pageaction' => request()->get('pageaction'), 'cat_name' => $unapporovedCategory['Type_of_Scrap']])}}">
-                                    <img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="javascript:void(0)" onclick="del_confirm('{{$unapporovedCategory['Type_of_Scrap']}}','deleterecyclecategoryrecord','Category')" data-reject_name="{{$unapporovedCategory['Type_of_Scrap']}}" class=" recycle-reject">
-                                    <img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
-                                </a>
-                            </td>
-                        </tr>
-                    @endforeach
-                </table>
-            </div>
-        @endif
+                @endforeach
+            </table>
+        </div>
+    @endif
 </div>
 @include('admin.recycle-first.modal', ['categories' => (object)[]])
 @endsection

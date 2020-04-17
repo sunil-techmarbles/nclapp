@@ -12,16 +12,16 @@
 
     <div class="pt-2" style="max-width: 700px;margin: auto;">
         <div class="menu-item">
-            <a href="{{route('dashboard.itamg')}}">
+            <a href="{{route('dashboard.itamg',['pageaction' => $action['itamg']])}}">
                 <img src="{{URL('/assets/images/logo_itamg.png')}}" class="icons" title="itamg">
             </a>
-            <a href="{{route('dashboard.itamg')}}">ITAMG</a>
+            <a href="{{route('dashboard.itamg',['pageaction' => $action['itamg']])}}">ITAMG</a>
         </div>   
         <div class="menu-item">
-            <a href="{{route('dashboard.refurbconnect')}}">
+            <a href="{{route('dashboard.refurbconnect',['pageaction' => $action['refurb']])}}">
                 <img src="{{URL('/assets/images/rc-logo-vertical.png')}}" class="icons" title="refurbconnect">
             </a>
-            <a href="{{route('dashboard.refurbconnect')}}">RefurbConnect</a>
+            <a href="{{route('dashboard.refurbconnect',['pageaction' => $action['refurb']])}}">RefurbConnect</a>
         </div>
     </div>
 </div>

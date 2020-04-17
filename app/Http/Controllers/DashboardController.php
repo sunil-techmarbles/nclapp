@@ -9,7 +9,9 @@ class DashboardController extends Controller
     // Load the view after login
     public function index()
     {
-    	return view('admin.dashboard.dashboard');
+        $action['itamg'] = 'itamgconnect';
+        $action['refurb'] = 'refurbconnect';
+    	return view('admin.dashboard.dashboard', compact('action'));
     }
 
     public function itamgDashboardSection()

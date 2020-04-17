@@ -8,7 +8,7 @@
 <div>
     Hi Admin,
     <br>
-    New user has been register now. Please check user detail below 
+    You have a new user for approval, below are the details
     <br>
     Name <strong>{{ $name }}</strong>
     <br>
@@ -16,8 +16,7 @@
     <br>
     Username  <strong>{{ $username }}</strong>
     <br>
-    Please verify this user on <a href="{{$link}}" target="__blank">click here</a> OR
-    In admin panel
+    Please verify the account in admin panel or by <a href="{{$link}}" target="__blank">clicking here</a>
     <br/>
 </div>
 

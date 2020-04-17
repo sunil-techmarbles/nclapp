@@ -27,6 +27,8 @@ class CreateAsinsTable extends Migration
             $table->string('cpu_model', 200);
             $table->string('cpu_speed', 200);
             $table->string('ram', 200);
+            $table->string('ramtype', 200);
+            $table->string('hddtype', 200);
             $table->string('hdd', 200);
             $table->string('os', 200);
             $table->string('webcam', 200);

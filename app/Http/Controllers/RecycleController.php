@@ -530,7 +530,13 @@ class RecycleController extends Controller
         }
         else
         {
-            return view('admin.asset-lookup.search', compact('result'));
+            $user = Sentinel::getUser();
+            $adminAccess = false;
+            if ($user->inRole('admin'))
+            {
+                $adminAccess = true;
+            }
+            return view('admin.asset-lookup.search', compact('result','adminAccess'));
             abort('404');
         }
     }
@@ -560,7 +566,13 @@ class RecycleController extends Controller
                 $recycleDataFiles[$key]['total'] = count($value['recycle_record_lines']);
             }
         }
-  		return view('admin.recycle-first.list', compact('recycleDataFiles', 'unapporovedCategories', 'categories', 'currentUser', 'selected'));
+        $user = Sentinel::getUser();
+        $adminAccess = false;
+        if ($user->inRole('admin'))
+        {
+            $adminAccess = true;
+        }
+  		return view('admin.recycle-first.list', compact('recycleDataFiles', 'unapporovedCategories', 'categories', 'currentUser', 'selected', 'adminAccess'));
   	}
 
     /**

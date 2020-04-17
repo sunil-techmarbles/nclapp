@@ -13,6 +13,11 @@ use App\SupplieAsinModel;
 use App\SupplieEmail;
 use App\MessageLog;
 use App\UserCronJob;
+use App\FormFactor;
+use App\OperatingSystem;
+use App\CpuCore;
+use App\RamType;
+use App\HddType;
 
 class AsinController extends Controller
 {
@@ -80,7 +85,12 @@ class AsinController extends Controller
 
     public function addAsins(Request $request)
     {
-    	return view ('admin.asin.add');
+        $formFactor = FormFactor::getRecord();
+        $operatingSystem = OperatingSystem::getRecord();
+        $cpuCore = CpuCore::getRecord();
+        $ramType = RamType::getRecord();
+        $hddType = HddType::getRecord();
+    	return view ('admin.asin.add', compact('formFactor','operatingSystem','ramType','hddType','cpuCore'));
     }
 
     public function getAsinPrice($asin)
@@ -236,7 +246,12 @@ class AsinController extends Controller
     	$asinDetail = Asin::getAsinById($asinID);
         if($asinDetail)
         {
-            return view ('admin.asin.edit',compact('asinDetail'));
+            $formFactor = FormFactor::getRecord();
+            $operatingSystem = OperatingSystem::getRecord();
+            $cpuCore = CpuCore::getRecord();
+            $ramType = RamType::getRecord();
+            $hddType = HddType::getRecord();
+            return view ('admin.asin.edit',compact('asinDetail','formFactor','operatingSystem','ramType','hddType','cpuCore'));
         }
         else
         {

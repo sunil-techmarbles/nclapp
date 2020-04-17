@@ -35,5 +35,5 @@
 		</table>
 	</div>
 </div>
-@include('admin.asset-lookup.modal',['result' => $result]);
+@include('admin.asset-lookup.modal',['result' => $result])
 @endsection

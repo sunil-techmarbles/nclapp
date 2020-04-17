@@ -86,20 +86,30 @@
 					<tr style="background:#fff">
 						<td><b>Form Factor</b></td>
 						<td>
-							<input required type="text" name="form_factor" value="{{old('form_factor', $asinDetail['form_factor'])}}" maxlength="varchar(200)" class="mte_req" id="id_4">
+							<select class="mte_req" name="form_factor" id="id_4">
+								@foreach($formFactor as $key => $value)
+									<option @if($asinDetail['form_factor'] == $value->form_factor_value) selected @endif value="{{$value->form_factor_value}}">{{$value->form_factor_name}}</option>
+								@endforeach
+							</select>
+							<!-- <input required type="text" name="form_factor" value="{{old('form_factor', $asinDetail['form_factor'])}}" maxlength="varchar(200)" class="mte_req" id="id_4">
 							@if($errors->has('form_factor'))
 								<div class="error">{{ $errors->first('form_factor') }}</div>
-							@endif
+							@endif -->
 						</td>
 						<td style="min-width:300px;"></td>
 					</tr>
 					<tr style="background:#eee">
 						<td><b>CPU Core</b></td>
 						<td>
-							<input required type="text" name="cpu_core" value="{{old('cpu_core', $asinDetail['cpu_core'])}}" maxlength="varchar(20)" class="mte_req" id="id_5">
+							<select class="mte_req" name="cpu_core" id="id_5">
+								@foreach($cpuCore as $key => $value)
+									<option @if($asinDetail['cpu_core'] == $value->cpu_core_name) selected @endif value="{{$value->cpu_core_value}}">{{$value->cpu_core_name}}</option>
+								@endforeach
+							</select>
+							<!-- <input required type="text" name="cpu_core" value="{{old('cpu_core', $asinDetail['cpu_core'])}}" maxlength="varchar(20)" class="mte_req" id="id_5">
 							@if($errors->has('cpu_core'))
 								<div class="error">{{ $errors->first('cpu_core') }}</div>
-							@endif
+							@endif -->
 						</td>
 						<td style="min-width:300px;"></td>
 					</tr>
@@ -133,6 +143,17 @@
 						</td>
 						<td style="min-width:300px;"></td>
 					</tr>
+					<tr style="background:#fff">
+						<td><b>RAM Type</b></td>
+						<td>
+							<select class="mte_req" name="ramtype" id="id_21">
+								@foreach($ramType as $key => $value)
+									<option @if($asinDetail['ramtype'] == $value->ram_type_value) selected @endif value="{{$value->ram_type_value}}">{{$value->ram_type_name}}</option>
+								@endforeach
+							</select>
+						</td>
+						<td style="min-width:300px;"></td>
+					</tr>
 					<tr style="background:#eee">
 						<td><b>HDD</b></td>
 						<td>
@@ -144,12 +165,28 @@
 						<td style="min-width:300px;"></td>
 					</tr>
 					<tr style="background:#fff">
+						<td><b>HDD Type</b></td>
+						<td>
+							<select class="mte_req" name="hddtype" id="id_22">
+								@foreach($hddType as $key => $value)
+									<option @if($asinDetail['hddtype'] == $value->hdd_type_value) selected @endif value="{{$value->hdd_type_value}}">{{$value->hdd_type_name}}</option>
+								@endforeach
+							</select>
+						</td>
+						<td style="min-width:300px;"></td>
+					</tr>
+					<tr style="background:#fff">
 						<td><b>OS</b></td>
 						<td>
-							<input required type="text" name="os" value="{{old('os', $asinDetail['os'])}}" maxlength="varchar(100)" class="mte_req" id="id_10">
+							<select class="mte_req" name="os" id="id_10">
+								@foreach($operatingSystem as $key => $value)
+									<option @if($asinDetail['os'] == $value->operating_system_value) selected @endif value="{{$value->operating_system_value}}">{{$value->operating_system_name}}</option>
+								@endforeach								
+							</select>
+							<!-- <input required type="text" name="os" value="{{old('os', $asinDetail['os'])}}" maxlength="varchar(100)" class="mte_req" id="id_10">
 							@if($errors->has('os'))
 								<div class="error">{{ $errors->first('os') }}</div>
-							@endif
+							@endif -->
 						</td>
 						<td style="min-width:300px;"></td>
 					</tr>

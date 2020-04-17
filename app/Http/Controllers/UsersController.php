@@ -56,7 +56,7 @@ class UsersController extends Controller
                 $m->to($email)->subject($subject);
             });
             $response['status']  = true;
-            $response['message'] = 'user '.$m.' successfully';
+            $response['message'] = 'User '.$m.' successfully';
         }
         else
         {

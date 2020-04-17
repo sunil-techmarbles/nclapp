@@ -98,12 +98,14 @@
 							<a class="nav-link" href="{{route('tracker',['pageaction' => request()->get('pageaction')])}}">Tracker</a>
 						</li>
 					@else
-						<li class="nav-item">
-							<a class="nav-link" href="{{route('tracker',['pageaction' => request()->get('pageaction'),'p' => 'report'])}}">Report</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="javascript: void(0)" onclick="$('#listModal').modal('show')">Actions</a>
-						</li>
+						@if($adminAccess)
+							<li class="nav-item">
+								<a class="nav-link" href="{{route('tracker',['pageaction' => request()->get('pageaction'),'p' => 'report'])}}">Report</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="javascript: void(0)" onclick="$('#listModal').modal('show')">Actions</a>
+							</li>
+						@endif
 					@endif
 				@endif
 				@if ( request()->segment(count(request()->segments())) == 'wipereportfilescount' )
