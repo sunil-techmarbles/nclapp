@@ -25,7 +25,20 @@ class RecycleTwoFileImport implements ToModel, WithStartRow
             "require_pn" => ifnull(@$row[7]),
         ];
 
-        $itamgRecycleInventory = ItamgRecycleInventory::addRecord($data);
+        $result = ItamgRecycleInventory::getRecord($row[1]);
+        $chk = false;
+        if($result)
+        {
+            $chk = true;
+        }
+        if(!$chk && $row[0])
+        {
+            ItamgRecycleInventory::addRecord($data);
+        }
+        else
+        {
+            ItamgRecycleInventory::updateRecord($data, ['id' => $result->id]);
+        }
         return;
     }
 

@@ -43,7 +43,8 @@ class Supplies extends Model
         }
 
     	return $query->orderBy('id', 'DESC')
-            ->get();
+            // ->get();
+        ->paginate(10);
     }
 
     public static function addSupplies($request)

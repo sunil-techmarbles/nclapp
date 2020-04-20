@@ -228,7 +228,7 @@ class RecycleController extends Controller
     {
         $status = 'error';
         $validator = Validator::make($request->all(),[
-            'file' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
+            'file' => 'required|mimes:xlsx,csv,xls,txt'
         ]);
         if ($validator->fails())
         {

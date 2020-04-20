@@ -6,7 +6,7 @@
 		<table id="itamg_inventory_value" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th class="first_heading"><input type="checkbox" class="select_all_to_delete" name="select_all_to_delete"></th>
+					<th class="first_heading noExport"><input type="checkbox" class="select_all_to_delete" name="select_all_to_delete"></th>
 					<th>Brand</th>  
 					<th>Model</th>
 					<th>Part No</th>
@@ -15,7 +15,7 @@
 					<th>Value</th>
 					<th>Status</th>
 					<th>Require PN</th>
-					<th>Action</th>
+					<th class="noExport">Action</th>
 				</tr>
 			</thead>
 			<tbody>

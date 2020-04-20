@@ -26,7 +26,7 @@
 		</form>
 	</div>
 	@if (!empty($runningList))
-		<table class="table table-condensed table-hover table-responsive" id="maintable" style="background: white">
+		<table class="table table-condensed table-hover table-responsive" id="main-table" style="background: white">
 			<thead>
 				<tr>
 					<th style="white-space: nowrap">
@@ -117,7 +117,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				@foreach ($runningList as $i)
+				@foreach ($runningList as $i_key => $i)
 					@php
 						$list_price = checkRunlistPrice($i);
 						$price_display = $list_price ? 'Available' : 'N/A';
@@ -158,7 +158,7 @@
 							''
 							@endif
 						</td>
-						<td  class="s_price" style="display:none;text-align: center;">
+						<td class="s_price" style="display:none;text-align: center;">
 							@if ($i["shopify_product_id"])
 								@php
 									$price_data = getShopifyRunlistPrice($i);
@@ -186,6 +186,7 @@
 				@endforeach
 			</tbody> 
 		</table>
+		{!! $runningList->appends(request()->input())->links() !!}
 		<div style="text-align: right"><b>Total Count: {{$tcnt}}</b></div>
 	@endif
 </div>

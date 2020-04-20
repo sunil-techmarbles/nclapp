@@ -108,10 +108,26 @@ $(document).ready(function(){
     $('#itamg_inventory_value').DataTable({
         dom: 'lipBf',
         buttons: [
-            { extend: 'excel', className: ClassName },
-            { extend: 'csv', className: ClassName },
-            { extend: 'pdf', className: ClassName },
-            { extend: 'copy', className: ClassName },
+            { extend: 'excel', className: ClassName, 
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+            { extend: 'csv', className: ClassName,
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+            { extend: 'pdf', className: ClassName,
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+            { extend: 'copy', className: ClassName,
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
         ],
         aoColumnDefs: [{
             bSortable: false,

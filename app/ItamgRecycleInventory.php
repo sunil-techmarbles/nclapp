@@ -52,6 +52,12 @@ class ItamgRecycleInventory extends Model
             ->first();
     }
 
+    public static function getRecord($value)
+    {
+        return self::where('Model','LIKE',$value)
+            ->first();
+    }
+
     public static function getResult($query, $fields)
     {
     	return self::select($fields)
@@ -63,7 +69,7 @@ class ItamgRecycleInventory extends Model
     {
     	return self::select($fields)
     		->where(['Model' => $request->search])
-    		->where(['PartNo' => $request->search])
+    		->orWhere(['PartNo' => $request->search])
     		->get();
     }
 

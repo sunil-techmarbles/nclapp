@@ -51,7 +51,8 @@ class Asin extends Model
             $query->where($request->get('f'), 'like', '%' .$request->get('s'). '%');
         }
         return $query->orderBy('id', 'DESC')
-            ->get();
+            // ->get();
+        ->paginate(10);
     }
 
     public static function storeAsinValue($request)

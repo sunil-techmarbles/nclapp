@@ -3,7 +3,7 @@
 	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
 			<li>
-				<a class="btn btn-info btn-xs mx-1" href="{{route('search',['pageaction' => request()->get('pageaction')])}}">Asset lookup</a>
+				<a class="btn btn-info btn-xs mx-1" href="{{route('search',['pageaction' => request()->get('pageaction')])}}">Front Search</a>
 			</li>
 			<li>
 				<a class="btn btn-info btn-xs mx-1" href="{{route('recycle.second',['pageaction' => request()->get('pageaction')])}}">Admin Access</a>

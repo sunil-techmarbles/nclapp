@@ -183,7 +183,8 @@ class SessionData extends Model
                         ->where('session_data.run_status','=', 'active');
                 })
             ->groupBy('session_data.aid')
-            ->get();
+            // ->get();
+            ->paginate(10);
     }
 
     public static function getrunningListItemsFromSessionData($id)

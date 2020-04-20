@@ -135,7 +135,8 @@ class ListData extends Model
             ->where(['status' => 'active', 'run_status' => 'active'])
             ->where('asin',  '!=', '')
             ->groupBy(['asin','technology','model','cpu_core','cpu_gen','shopify_product_id'])
-            ->get();
+            // ->get();
+            ->paginate(10);
 	}
 
 	public static function getDistinctRecordForCPU($mid)

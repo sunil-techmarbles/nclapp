@@ -88,6 +88,7 @@
                 @endforeach
             @endforeach
         </table>
+        {!! $runningList->appends(request()->input())->links() !!}
     @endif
     <div style="text-align: right">
         <b>Total Count: {{$tcnt}}</b>

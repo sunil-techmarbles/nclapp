@@ -37,7 +37,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<table id="supplies" class="table">
+	<table id="supplies-list" class="table">
 		<thead>
 			<tr>
 				<th></th>
@@ -91,5 +91,9 @@
 			@endforeach
 		</tbody>
 	</table>
+	@if($supplieLists->count() == 0)
+		<p><center><strong>Nothing found</strong></center></p>
+	@endif
+	{!! $supplieLists->appends(request()->input())->links() !!}
 </div>
 @endsection

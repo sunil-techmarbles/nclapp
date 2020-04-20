@@ -12,7 +12,7 @@
 					<th>Category</th>
 					<th>Require PN</th>
 					<th>Date Time</th>
-					<th>Action</th>
+					<th class="noExport" >Action</th>
 				</tr>
 			</thead>
 			<tbody>

@@ -12,7 +12,7 @@
 				<td nowrap="" style="text-align: right">
 					<form method="get" action="{{route('asin')}}">
 						<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
-						<input type="text" name="s" value="" placeholder=" Search">
+						<input type="text" name="s" value="{{request()->get('s')}}" placeholder=" Search">
 						<select name="f" style="height:26px;border: 0;">
 							@foreach($searchItemsLists as $key => $searchItem)
 								<option value="{{$key}}">{{$searchItem}}</option>
@@ -27,7 +27,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<table id="asins" class="table">
+	<table id="asins-list" class="table">
 		<thead>
 			<tr>
 				<th></th>
@@ -81,5 +81,9 @@
 			@endforeach
 		</tbody>
 	</table>
+	@if($asinLists->count() == 0)
+		<p><center><strong>Nothing found</strong></center></p>
+	@endif
+	{!! $asinLists->appends(request()->input())->links() !!}
 </div>
 @endsection

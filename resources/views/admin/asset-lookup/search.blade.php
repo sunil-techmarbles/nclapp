@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<h3 align="center"><strong></strong>
-		<p class="searchresult" style="display: none;"></p>
+		<p class="searchresult mt-2" style="display: none;color: #1f1f1f; font-size: 35px;"></p>
 	</h3>
 </div>
 @include('admin.asset-lookup.modal',['result' => $result]);
