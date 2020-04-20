@@ -986,7 +986,8 @@ class ShopifyController extends Controller
 				$status = 'failure';
 				$message = "Can't sync product.Reason: No images found for ASIN " . $runningList['asin'];
 				MessageLog::addLogMessageRecord($message, $type, $status);
-				// continue;
+				continue;
+				
 			}
 			$insertDataArray = $this->getAdditionalDataForNewRunlist($runningList['id'], $type='runlist');
 			$insertDataArray['processer_gen'] = getProcessorGenration($runningList['cpu_model']);
@@ -1114,6 +1115,14 @@ class ShopifyController extends Controller
 							$asin = createAsinFromData($runningList);
 							$imageAsin = createImageAsinFromData($runningList);
 							$allImages = glob($this->basePath.'/'.config('constants.finalPriceConstants.imagePathNew').$imageAsin.'*');
+							if (empty($allImages))
+							{
+								$type = 'Shopify product image';
+								$status = 'failure';
+								$message = "Can't sync product.Reason: No images found for ASIN " . $runningList['asin'];
+								MessageLog::addLogMessageRecord($message, $type, $status);
+								continue;
+							}
 							$insertDataArray = $this->getAdditionalDataForNewRunlist($runningList['id'], $type='');
 							$insertDataArray['processer_gen'] = getProcessorGenration($runningList['cpu_model']);
 							$runningList['cpu_model'] = getProcessorModel($runningList['cpu_model']);
