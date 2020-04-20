@@ -151,7 +151,10 @@ $(document).ready(function ()
 	            	hideLoader();
 	            	let icon = (result.status) ? 'success' : 'error';
 	            	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
-	            	location.reload(true);
+	            	if(result.status)
+	            	{
+	            		location.reload(true);
+	            	}
 	            },
 	            error: function(xhr, status, error){
 	            	hideLoader();
@@ -196,7 +199,10 @@ $(document).ready(function ()
             	hideLoader();
             	let icon = (result.status) ? 'success' : 'error';
             	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
-            	location.reload(true);
+            	if(result.status)
+            	{
+            		location.reload(true);
+            	}
             },
             error: function(xhr, status, error){
             	hideLoader();
@@ -229,7 +235,10 @@ $(document).ready(function ()
             	hideLoader();
             	let icon = (result.status) ? 'success' : 'error';
             	showSweetAlertMessage(type = icon, message = result['message'] , icon = icon);
-            	location.reload(true);
+            	if(result.status)
+            	{
+            		location.reload(true);
+            	}
             },
             error: function(xhr, status, error){
             	hideLoader();
