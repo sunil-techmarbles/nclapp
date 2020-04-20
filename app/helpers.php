@@ -106,6 +106,12 @@ function checkImages($data)
 {
     $asin = createImageAsinFromData($data);
     $allImages = glob(public_path().'/'. config('constants.finalPriceConstants.imagePathNew') . $asin . '*');
+    echo public_path().'/'. config('constants.finalPriceConstants.imagePathNew') . $asin . '*'."\n";
+    echo "<pre>";
+    echo "Asin "."\n";
+    print_r($asin);
+    echo "Images "."\n";
+    print_r($allImages);
     if (empty($allImages))
     {
         return 'N/A';
