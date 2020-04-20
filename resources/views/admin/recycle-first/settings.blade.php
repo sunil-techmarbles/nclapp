@@ -1,7 +1,7 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Recycle settings')
 @section('content')
-<div class="container">
+<div class="container recycle-setting">
 	<div id="page-head">Recycle Settings</div>
     <form action = "{{route('recycle.settings')}}" method="post">
         @csrf

@@ -82,7 +82,7 @@
 				@endif
 				@if ( request()->segment(count(request()->segments())) == 'recycle' )
 					<li class="nav-item">
-						<a class="nav-link" href="{{route('recycle.settings',['pageaction' => request()->get('pageaction')])}}">Recycle Edit Settings </a>
+						<a class="nav-link" href="{{route('recycle.settings',['pageaction' => request()->get('pageaction')])}}">Recycle Settings </a>
 					</li>
 				@endif
 				@if ( request()->segment(count(request()->segments())) == 'recyclesettings' )

@@ -577,7 +577,7 @@ $(document).ready(function()
 	$('#asset').focus();
 	$(window).keydown(function(event)
 	{
-		if(event.keyCode == 13 && $('#asset1').length != 1 && $('#ws_list').length != 1) 
+		if(event.keyCode == 13 && $('#asset1').length != 1 && $('#ws_list').length != 1 && $('.recycle-setting').length != 1 && $('#searchList').length != 1) 
 		{
 			if($("#asset").is(":focus"))
 			{
