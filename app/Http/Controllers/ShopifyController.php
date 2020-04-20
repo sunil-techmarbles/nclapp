@@ -986,8 +986,6 @@ class ShopifyController extends Controller
 				$status = 'failure';
 				$message = "Can't sync product.Reason: No images found for ASIN " . $runningList['asin'];
 				MessageLog::addLogMessageRecord($message, $type, $status);
-				continue;
-				
 			}
 			$insertDataArray = $this->getAdditionalDataForNewRunlist($runningList['id'], $type='runlist');
 			$insertDataArray['processer_gen'] = getProcessorGenration($runningList['cpu_model']);
@@ -1016,6 +1014,7 @@ class ShopifyController extends Controller
 				$type = 'Shopify product image';
 				$status = 'failure';
 				$message = "Can't sync product. Reason: Class " . $insertDataArray['product_class'] . " not found for asin " . $runningList['asin'] . ". Valid classes are Computer & Laptop";
+				$output = ['message' => $message, 'status' => false];
 				MessageLog::addLogMessageRecord($message, $type, $status);
 				continue;
 				break;
@@ -1121,7 +1120,6 @@ class ShopifyController extends Controller
 								$status = 'failure';
 								$message = "Can't sync product.Reason: No images found for ASIN " . $runningList['asin'];
 								MessageLog::addLogMessageRecord($message, $type, $status);
-								continue;
 							}
 							$insertDataArray = $this->getAdditionalDataForNewRunlist($runningList['id'], $type='');
 							$insertDataArray['processer_gen'] = getProcessorGenration($runningList['cpu_model']);
@@ -1156,7 +1154,7 @@ class ShopifyController extends Controller
 								break;
 								default:
 								$error = "Can't sync product. Reason: Class " . $insertDataArray['product_class'] . " not found for asin " . $asin . ". Valid classes are Computer & Laptop";
-								$output = $error;
+								$output = ['message' => $error, 'status' => false];
 								$type = 'Shopify sync product';
 								$status = 'failure';
 								$dataObject = [];
