@@ -27,11 +27,13 @@
 				</td>
 			</tr>
 			<tr>
-				<td>
-					<table style="width: 100%;">
+				<td style="width: 50%;" >
+					<table >
+						
 						<tr style="border: 1px solid #ccc; display: block; border-bottom: 0px; border-spacing: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Ship From:</strong></td>
 						</tr>
+						
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0; border-bottom: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">
 								{{$recycleSetting['RecycleShipFromAddress']}}
@@ -40,9 +42,11 @@
 								Farmingdale, NY, 11735 -->
 							</td>
 						</tr>
+
 						<tr style="border: 1px solid #ccc; display: block; border-bottom: 0px; border-spacing: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Contact</strong></td>
 						</tr>
+						
 						<tr style="border: 1px solid #ccc; display: block; border-spacing: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;">
 								{{$recycleSetting['RecycleShipFromContact']}}
@@ -53,8 +57,8 @@
 						</tr>
 					</table>
 				</td>
-				<td>
-					<table style="width: 100%;">
+				<td style="width: 50%;" >
+					<table >
 						<tr style="border: 1px solid #ccc; display: block; border-bottom: 0px; border-spacing: 0; border-right: 0;">
 							<td style="font-size:16px;border: 1px solid #ccc; display: block; text-align: center; padding: 5px;"><strong>Ship To:</strong></td>
 						</tr>
