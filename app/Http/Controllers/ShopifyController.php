@@ -916,7 +916,7 @@ class ShopifyController extends Controller
 				Google shopping feed settings are correct ";
 				$shopifyEmails = $this->shopifyEmails;
 				$subject = "New Product Created";
-				Mail::raw($body, function ($m) use ($subject,$user) {
+				Mail::raw($body, function ($m) use ($subject,$shopifyEmails) {
 					$m->to($shopifyEmails)
 					->subject($subject);
 				});
