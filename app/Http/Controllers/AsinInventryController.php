@@ -79,6 +79,22 @@ class AsinInventryController extends Controller
 
 	public function exportInventry()
 	{
-		return Excel::download(new AsinInventryExport, 'Asin.xlsx');
+		try
+		{
+			return Excel::download(new AsinInventryExport, 'Asin.xlsx');
+		}
+		catch (\Maatwebsite\Excel\Validators\ValidationException $e)
+		{
+			$message = $e->getMessage();
+		}
+		catch (\Exception $e)
+		{
+			$message = $e->getMessage();
+		}
+		catch (\Error $e)
+		{
+			$message = $e->getMessage();
+		}
+		return redirect()->back()->with('error', $message);
 	}
 }

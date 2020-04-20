@@ -758,12 +758,12 @@ class ShopifyController extends Controller
 			if (empty($upc))
 			{
 				$upc = ShopifyBarCode::getUPS($asin='', $orderby = 'id');
-				$barCode = $upc[0]['upc'];
+				$barCode = $upc['upc'];
 				ShopifyBarCode::updateQueryFields(['asin' => $asin], ['upc' => $barCode]);
 			}
 			else
 			{
-				$barCode = $upc[0]['upc'];
+				$barCode = $upc['upc'];
 			}
 			return $barCode;
 		}
