@@ -92,35 +92,58 @@ $(window).keydown(function (event)
 			{
 				hideLoader();
 				$("#wipe-report-result").html("");
-				$("#downloadFiles").remove();
+				
 				if( response.status == true)
 				{
-
-					console.log( response );
 					var html = "<div>";
 						html += "<h2> Total Files : "+ response.total_file_count +" </h2>";
 						html += "<h3> Wipe Files : "+ response.wipe_files_count +" </h3>"
 						html += "<h3> Blancco Files : "+ response.blancco_files_count +" </h3>"
 						html += "</div><div>";
-						html += "<h2> Download All </h2>";
-						html += "<h2> Download Wipe Files </h2>"
-						html += "<h2> Download Blancco Files </h2>"
-						html += "</div>"
 
-					// $("#selectAllFiles").prop("checked",false);
-					// var html = '<table><table id="wipeReportresultsFileTable" class="table"><thead>';
-					// 	html += '<tr><th><input type="checkbox" id="selectAllFiles"/>Select All</th>';
-					// 	html += '<th>File Name</th></tr></thead><tbody>';
-					// $.each(response.files, function (key, value) 
-					// {
-					//     html += '<tr>';
-					// 	html += '<td><input value="' + value.path + '" name="wipefiles[]" type="checkbox" class="selectSingleFile"/></td>';
-					// 	html += '<td><a target="_blank" download href="'+value.url+'">' + key + '</a></td>';
-					// 	html += '</tr>'; 
-					// });
-					// 	html += '</tbody></table>'; 
+						if(response.total_file_count > 0 )
+						{
+							html += '<form method="post" id="search-wipe-form-all" autocomplete="off" action = "'+ response.report_form_submit_url +'">';
+							html += '<input type="hidden" name="_token" value="'+_token+'">';
+							$.each(response.blancco_files, function (key, value)
+							{
+								html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
+							});
+							$.each(response.wipe_files, function (key, value)
+							{
+								html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
+							});
+							html += "<button class='btn btn-primary' type='submit'> Download All </button>";
+							html += '</form>';
+						}
+						
+						if(response.wipe_files_count > 0 )
+						{
+							html += '<form method="post" id="search-wipe-form-wipe" autocomplete="off" action = "'+ response.report_form_submit_url +'">';
+							html += '<input type="hidden" name="_token" value="'+_token+'">';
+							$.each(response.wipe_files, function (key, value)
+							{
+								html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
+							});
+							html += "<button class='btn btn-prima ry' type='submit'> Download Wipe Files txt/pdf/csv </button>";
+							html += '</form>';
+						}
+						
+						if(response.blancco_files_count > 0 )
+						{
+							html += '<form method="post" id="search-wipe-form-blancco" autocomplete="off" action = "'+ response.report_form_submit_url +'" >';
+							html += '<input type="hidden" name="_token" value="'+_token+'">';
+							$.each(response.blancco_files, function (key, value)
+							{
+								html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
+							});
+							html += "<button class='btn btn-primary' type='submit'> Download Blancco Files pdf</button>";
+							html += '</form>';
+						}
+
+						html += '<a class="btn btn-primary" href="javascript:Void(0)" data-toggle="modal" data-target="#SearchAssetModal">Advance Search</a>';
+						html += "</div>";
 					$("#wipe-report-result").append(html); 
-					// $( "#wipeReportresultsFileTable" ).after( '<button type="submit" class="btn btn-primary" id="downloadFiles">Download</button>' );
 				}
 				else if(response.status == false)
 				{
@@ -136,28 +159,13 @@ $(window).keydown(function (event)
 	}
 });
 
-// wipe report section for bulk select or unselect files to download js 
-$(document).on('click', '#selectAllFiles', function ()
-{
-	if ($(this).is(":checked"))
-	{
-		$(".selectSingleFile").prop("checked", true);
-	}
-	else
-	{
-		$(".selectSingleFile").prop("checked", false);
-	}
+jQuery(document).on( 'click' , '.SearchAssetModalSubmit', function(){
+
+	alert("*******");
+	
 });
 
-// for downloading Wipe Reports for a lot number in wipereport section 
-$(document).on('submit', '#search-wipe-form', function (e)
-{
-    if ($('.selectSingleFile:checked').length < 1)
-    {
-        sweetAlertAfterResponse(status = 'error' , title = 'Select files', message = 'Please select some files to download !' , showbutton = true );
- 		e.preventDefault();
-    }
-});
+
 
 // For saving part number with modal in Autit section 
 function savePN(url)

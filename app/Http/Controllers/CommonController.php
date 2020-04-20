@@ -84,6 +84,7 @@ class CommonController extends Controller
 			$response['wipe_files_count'] = (count($returnFilesWipe)); 
 			$response['blancco_files'] = $returnFilesBlancco;
 			$response['wipe_files'] = $returnFilesWipe;
+			$response['report_form_submit_url'] = url("/admin/exportwipereportfiles/");
 		}
 		return response()->json($response);
 	}
@@ -100,9 +101,11 @@ class CommonController extends Controller
 		$zip = new ZipArchive();
 		$zip->open($zip_file, ZipArchive::CREATE | ZipArchive::OVERWRITE);
 		$path = storage_path('wipereport');
+		
 		foreach ($files as $name => $file)
 		{
 			$relativePath = 'wipereport/' . substr($file, strlen($path) + 1);
+			$relativePath =  str_replace("/data","", $relativePath);
 			$zip->addFile($file, $relativePath);
 		}
 		$zip->close();

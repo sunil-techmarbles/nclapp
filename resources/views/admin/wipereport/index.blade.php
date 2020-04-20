@@ -8,8 +8,6 @@
     <ul class="wipeReportNav">
       <li> <a href="{{route('getwipereportfilescount')}}" class="btn btn-info">Reporting</a></li>
    </ul>
-    <!-- <form method="post" id="search-wipe-form" autocomplete="off" action="{{route('exportwipereportfiles')}}"> -->
-        @csrf
         <div class="noprint text-center">
             <div class='formitem'>
                 <div class='form-group'>
@@ -22,6 +20,6 @@
         </div>
         <div id="wipe-report-result">
         </div>
-    <!-- </form> -->
 </div>
+@include('admin.wipereport.modal')
 @endsection
