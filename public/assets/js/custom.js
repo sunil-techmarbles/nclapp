@@ -125,7 +125,7 @@ $(window).keydown(function (event)
 							{
 								html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
 							});
-							html += "<button class='btn btn-prima ry' type='submit'> Download Wipe Files txt/pdf/csv </button>";
+							html += "<button class='btn btn-primary' type='submit'> Download Wipe Files txt/pdf/csv </button>";
 							html += '</form>';
 						}
 						
@@ -162,7 +162,6 @@ $(window).keydown(function (event)
 jQuery(document).on( 'click' , '.SearchAssetModalSubmit', function(){
 
 	alert("*******");
-	
 });
 
 
