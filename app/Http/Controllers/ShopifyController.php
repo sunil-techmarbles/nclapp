@@ -754,11 +754,16 @@ class ShopifyController extends Controller
 
 		public function getBarCode($asin)
 		{
-			$barCode = ShopifyBarCode::getUPS($asin, $orderby = '');
+			$upc = ShopifyBarCode::getUPS($asin, $orderby = '');
 			if (empty($upc))
 			{
-				$barCode = ShopifyBarCode::getUPS($asin='', $orderby = 'id');
+				$upc = ShopifyBarCode::getUPS($asin='', $orderby = 'id');
+				$barCode = $upc['upc'];
 				ShopifyBarCode::updateQueryFields(['asin' => $asin], ['upc' => $barCode]);
+			}
+			else
+			{
+				$barCode = $upc['upc'];
 			}
 			return $barCode;
 		}
@@ -916,7 +921,7 @@ class ShopifyController extends Controller
 				Google shopping feed settings are correct ";
 				$shopifyEmails = $this->shopifyEmails;
 				$subject = "New Product Created";
-				Mail::raw($body, function ($m) use ($subject,$shopifyEmails) {
+				Mail::raw($body, function ($m) use ($subject,$user) {
 					$m->to($shopifyEmails)
 					->subject($subject);
 				});
@@ -1070,7 +1075,7 @@ class ShopifyController extends Controller
 		{
 			if (isset($request->ids) && !empty($request->ids))
 			{
-				$output = ['message' => "Something went wong", 'status' => false];
+				$output = ['message' => "Nothing to update", 'status' => false];
 				$errorAsinId = [];
 				$errorModelId = [];
 				foreach ($request->ids as $key => $id)
@@ -1156,6 +1161,7 @@ class ShopifyController extends Controller
 								continue;
 								break;
 							}
+							print_r($dataObject);
 							if($dataObject)
 							{
 								$data = $dataObject;
