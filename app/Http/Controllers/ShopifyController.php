@@ -888,7 +888,7 @@ class ShopifyController extends Controller
 				if($type != '')
 				{
 					$this->insertShopifyImages($runningList['asin'], $shopifyData['product']['id'], $imageName);
-					$return_error = 'Created asin: ' . $runningList['asin'] . ' => Shopify product id:' . $shopifyData['product']['id'];
+					$meassge = 'Created asin: ' . $runningList['asin'] . ' => Shopify product id:' . $shopifyData['product']['id'];
 				}
 				else
 				{
@@ -930,11 +930,11 @@ class ShopifyController extends Controller
 				}
 				else
 				{
-					$meassge = 'Not created for asin:' . $runningList['asin'];
+					$message = 'Not created for asin:' . $runningList['asin'];
 				}
 				$status = false;
 			}
-			$response = ['message' => $meassge,	'status' => $status];
+			$response = ['message' => $message,	'status' => $status];
 			return $response;
 		}
 
@@ -944,7 +944,7 @@ class ShopifyController extends Controller
 			$productsurl = $this->baseUrl."/admin/api/2019-04/products/" . $runningList['shopify_product_id'] . ".json";
 			$shopifyData = putApiData($productsurl, $data);
 			if ($shopifyData)
-			{
+			{				
 				$variantData['variant']['id'] = $shopifyData['product']['variants'][0]['id'];
 				$variantData['variant']['product_id'] = $shopifyData['product']['id'];
 				$productsurl = $this->baseUrl."/admin/api/2019-04/variants/" . $shopifyData['product']['variants'][0]['id'] . ".json";
@@ -957,7 +957,7 @@ class ShopifyController extends Controller
 				}
 				else
 				{
-					$return_error = 'Updated asin: ' . $runningList['asin'] . ' Shopify product id:' . $shopifyData['product']['id'];
+					$message = 'Updated asin: ' . $runningList['asin'] . ' Shopify product id:' . $shopifyData['product']['id'];
 				}
 				$status = true;
 			}
@@ -973,11 +973,11 @@ class ShopifyController extends Controller
 				}
 				$status = false;
 			}
-			$response = ['message' => $meassge,	'status' => $status];
+			$response = ['message' => $message,	'status' => $status];
 			return $response;
 		}
 
-		public function syncProductToShopifyFormRunList($runningList, $request)
+		public function syncProductToShopifyFormRunList($runningList, $request, $id)
 		{
 			$allImages = glob($this->basePath.'/'.config('constants.finalPriceConstants.imagePathNew').$runningList['asin'].'*');
 			if (empty($allImages))
@@ -1049,7 +1049,7 @@ class ShopifyController extends Controller
 					}
 					else
 					{
-						if (isset($request->asin) && !empty($request->asin))
+						if (isset($id) && !empty($id))
 						{
 							$output = $this->updateShopifyNewRunlistProduct($data, $runningList, $variantData, $type="runlist");
 						}
@@ -1081,7 +1081,7 @@ class ShopifyController extends Controller
 						{
 							foreach ($allRunningList as $key => $runningList)
 							{
-								$output = $this->syncProductToShopifyFormRunList($runningList, $request);
+								$output = $this->syncProductToShopifyFormRunList($runningList, $request, $id);
 								if(!$output['status'])
 								{
 									array_push($errorAsinId, $runningList['asin']);
@@ -1162,8 +1162,6 @@ class ShopifyController extends Controller
 								continue;
 								break;
 							}
-							print_r($dataObject);
-							print_r($errorModelId);
 							if($dataObject)
 							{
 								$data = $dataObject;
@@ -1194,7 +1192,7 @@ class ShopifyController extends Controller
 									}
 									else
 									{
-										if (isset($request->asin) && !empty($request->asin))
+										if (isset($id) && !empty($id))
 										{
 											$output = $this->updateShopifyNewRunlistProduct($data, $runningList, $variantData, $type='');
 										}
