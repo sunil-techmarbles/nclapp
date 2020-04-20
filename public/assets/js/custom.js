@@ -92,7 +92,7 @@ $(window).keydown(function (event)
 			{
 				hideLoader();
 				$("#wipe-report-result").html("");
-				
+				$("#wipe-advance-report-result").html("");
 				if( response.status == true)
 				{
 					var html = "<div>";
@@ -182,15 +182,16 @@ jQuery(document).on( 'click' , '.SearchAssetModalSubmit', function(){
 	.done(function(response)
 	{
 		hideLoader();
-		$("#wipe-report-result").html("");
+		$("#wipe-advance-report-result").html("");
 		if( response.status == true)
 		{
 			var html = '<form method="post" id="search-wipe-form" autocomplete="off" action = "'+ response.report_form_submit_url +'">';
+			html += '<input type="hidden" name="_token" value="'+_token+'">';
 			html += '<table><table id="wipeReportresultsFileTable" class="table"><thead>';
 			html += '<tr><th><input type="checkbox" id="selectAllFiles"/>Select All</th>';
 			html += '<th>File Name</th></tr></thead><tbody>';
 
-			$.each(response.files, function (key, value) 
+			$.each(response.files, function (key, value)
 			{
 				html += '<tr>';
 				html += '<td><input value="' + value.path + '" name="wipefiles[]" type="checkbox" class="selectSingleFile"/></td>';
@@ -199,7 +200,7 @@ jQuery(document).on( 'click' , '.SearchAssetModalSubmit', function(){
 			});
 			html += '</tbody></table></form>';
 
-			$("#wipe-report-result").append(html); 
+			$("#wipe-advance-report-result").append(html);
 			$( "#wipeReportresultsFileTable" ).after( '<button type="submit" class="btn btn-primary" id="downloadFiles">Download</button>' );
 		}
 		else if(response.status == false)
@@ -212,6 +213,29 @@ jQuery(document).on( 'click' , '.SearchAssetModalSubmit', function(){
 		hideLoader();
 		sweetAlertAfterResponse(status = 'error' , title = 'Oops...', message = 'Something went wrong with ajax !' , showbutton = true );
 	});
+});
+
+// wipe report section for bulk select or unselect files to download js 
+$(document).on('click', '#selectAllFiles', function ()
+{
+	if ($(this).is(":checked"))
+	{
+		$(".selectSingleFile").prop("checked", true);
+	}
+	else
+	{
+		$(".selectSingleFile").prop("checked", false);
+	}
+});
+
+// for downloading Wipe Reports for a lot number in wipereport section 
+$(document).on('submit', '#search-wipe-form', function (e)
+{
+    if ($('.selectSingleFile:checked').length < 1)
+    {
+        sweetAlertAfterResponse(status = 'error' , title = 'Select files', message = 'Please select some files to download !' , showbutton = true );
+ 		e.preventDefault();
+    }
 });
 
 

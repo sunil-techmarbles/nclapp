@@ -20,6 +20,8 @@
         </div>
         <div id="wipe-report-result">
         </div>
+        <div id="wipe-advance-report-result">
+        </div>
 </div>
 @include('admin.wipereport.modal')
 @endsection

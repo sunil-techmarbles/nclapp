@@ -754,16 +754,11 @@ class ShopifyController extends Controller
 
 		public function getBarCode($asin)
 		{
-			$upc = ShopifyBarCode::getUPS($asin, $orderby = '');
+			$barCode = ShopifyBarCode::getUPS($asin, $orderby = '');
 			if (empty($upc))
 			{
-				$upc = ShopifyBarCode::getUPS($asin='', $orderby = 'id');
-				$barCode = $upc['upc'];
+				$barCode = ShopifyBarCode::getUPS($asin='', $orderby = 'id');
 				ShopifyBarCode::updateQueryFields(['asin' => $asin], ['upc' => $barCode]);
-			}
-			else
-			{
-				$barCode = $upc['upc'];
 			}
 			return $barCode;
 		}
@@ -1019,7 +1014,6 @@ class ShopifyController extends Controller
 				$type = 'Shopify product image';
 				$status = 'failure';
 				$message = "Can't sync product. Reason: Class " . $insertDataArray['product_class'] . " not found for asin " . $runningList['asin'] . ". Valid classes are Computer & Laptop";
-				$output = ['message' => $message, 'status' => false];
 				MessageLog::addLogMessageRecord($message, $type, $status);
 				continue;
 				break;
@@ -1159,7 +1153,7 @@ class ShopifyController extends Controller
 								break;
 								default:
 								$error = "Can't sync product. Reason: Class " . $insertDataArray['product_class'] . " not found for asin " . $asin . ". Valid classes are Computer & Laptop";
-								$output = ['message' => $error, 'status' => false];
+								$output = $error;
 								$type = 'Shopify sync product';
 								$status = 'failure';
 								$dataObject = [];
@@ -1169,6 +1163,7 @@ class ShopifyController extends Controller
 								break;
 							}
 							print_r($dataObject);
+							print_r($errorModelId);
 							if($dataObject)
 							{
 								$data = $dataObject;
