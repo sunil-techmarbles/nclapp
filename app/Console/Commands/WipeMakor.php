@@ -47,12 +47,12 @@ class WipeMakor extends Command
      */
     public function handle()
     { 
-        $subject = 'WipeMakor:api '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for WipeMakor:api', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'WipeMakor:api '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for WipeMakor:api', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
         $this->basePath  = base_path().'/public';
         $this->wipeDataDir = $this->basePath . "/wipe-data";
         $this->wipeAdditionalDataDir = $this->basePath . "/wipe-data-additional";

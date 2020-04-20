@@ -25,16 +25,16 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('blancco:api')
-            ->daily();
+            ->hourly();
 
         $schedule->command('BlanccoMakor:api')
-            ->daily();
+            ->hourly();
 
         $schedule->command('WipeMakor:api')
-            ->daily();
+            ->hourly();
 
         $schedule->command('WipeBiosMakor:api')
-            ->daily();
+            ->hourly();
 
         $schedule->command('failedSearch:daily')
             ->daily();
@@ -43,19 +43,19 @@ class Kernel extends ConsoleKernel
             ->weekly();
 
         $schedule->command('WipeBiosBlanccoFiles:count')
-            ->daily();
+            ->hourly();
 
         $schedule->command('COA:weekly')
-            ->weekly();
+            ->weeklyOn(5, '13:00');
 
         $schedule->command('AsinPrice:update')
-            ->daily();
+            ->twiceDaily(1, 13);
 
         $schedule->command('Inventry:email')
-            ->daily();
+            ->dailyAt('3:00'); 
 
         $schedule->command('Shopify:sync')
-            ->daily();
+            ->twiceDaily(1, 13);
 
     }
 

@@ -9,7 +9,7 @@ class ShopifySync extends Command
 {
     public $skuToIgnore = ['HP-600-M602-CE390A','HP-400-M401dn-CF280X','HP-P2035-CE505A','HP-400-M401dn-CF280X','HP-P2055dn-05A-CE505A','HP-600-M601-CE390A','HP-400-m401' ];
     public $baseurl = "https://14a2e3d9e7a3661419a88549b45aa63e:11305811ff0dcf66770d9a9e7e3d80ef@what-does-refurbished-mean.myshopify.com";
-    public $sandboxMode = false;
+    public $sandboxMode = true;
     /**
      * The name and signature of the console command.
      *

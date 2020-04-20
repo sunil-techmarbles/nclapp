@@ -47,12 +47,12 @@ class BlanccoMakorApi extends Command
      */
     public function handle()
     {
-        $subject = 'BlanccoMakor:api '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for BlanccoMakor:api', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'BlanccoMakor:api '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for BlanccoMakor:api', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
         $this->basePath  = base_path().'/public';
         $this->blanccoXmlDataDir = $this->basePath . "/blancco/xml-data/";
         $this->blanccoAdditionMobileDataDir = $this->basePath . "/wipe-data-mobile";

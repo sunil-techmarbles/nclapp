@@ -16,7 +16,7 @@ class SiteOptions extends Model
     ];
 
     public static function GetRecycleAddressOptions($optionGroup)
-    {
+    { 
     	return self::where(['option_group' => $optionGroup])
 			->get();
     }

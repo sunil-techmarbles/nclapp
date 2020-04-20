@@ -6,10 +6,9 @@
         Wipe Report
     </div>
     <ul class="wipeReportNav">
-      <li> <a href="{{route('getwipereportfilescount',['pageaction' => request()->get('pageaction')])}}" class="btn btn-info">Reporting</a></li>
+      <li> <a href="{{route('getwipereportfilescount')}}" class="btn btn-info">Reporting</a></li>
    </ul>
-    <form method="post" id="search-wipe-form" autocomplete="off" action="{{route('exportwipereportfiles')}}">
-		<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+    <!-- <form method="post" id="search-wipe-form" autocomplete="off" action="{{route('exportwipereportfiles')}}"> -->
         @csrf
         <div class="noprint text-center">
             <div class='formitem'>
@@ -23,6 +22,6 @@
         </div>
         <div id="wipe-report-result">
         </div>
-    </form>
+    <!-- </form> -->
 </div>
 @endsection

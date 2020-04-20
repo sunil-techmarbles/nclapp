@@ -95,20 +95,32 @@ $(window).keydown(function (event)
 				$("#downloadFiles").remove();
 				if( response.status == true)
 				{
-					$("#selectAllFiles").prop("checked",false);
-					var html = '<table><table id="wipeReportresultsFileTable" class="table"><thead>';
-						html += '<tr><th><input type="checkbox" id="selectAllFiles"/>Select All</th>';
-						html += '<th>File Name</th></tr></thead><tbody>';
-					$.each(response.files, function (key, value) 
-					{
-					    html += '<tr>';
-						html += '<td><input value="' + value.path + '" name="wipefiles[]" type="checkbox" class="selectSingleFile"/></td>';
-						html += '<td><a target="_blank" download href="'+value.url+'">' + key + '</a></td>';
-						html += '</tr>'; 
-					});
-						html += '</tbody></table>';
-					$("#wipe-report-result").append(html);
-					$( "#wipeReportresultsFileTable" ).after( '<button type="submit" class="btn btn-primary" id="downloadFiles">Download</button>' );
+
+					console.log( response );
+					var html = "<div>";
+						html += "<h2> Total Files : "+ response.total_file_count +" </h2>";
+						html += "<h3> Wipe Files : "+ response.wipe_files_count +" </h3>"
+						html += "<h3> Blancco Files : "+ response.blancco_files_count +" </h3>"
+						html += "</div><div>";
+						html += "<h2> Download All </h2>";
+						html += "<h2> Download Wipe Files </h2>"
+						html += "<h2> Download Blancco Files </h2>"
+						html += "</div>"
+
+					// $("#selectAllFiles").prop("checked",false);
+					// var html = '<table><table id="wipeReportresultsFileTable" class="table"><thead>';
+					// 	html += '<tr><th><input type="checkbox" id="selectAllFiles"/>Select All</th>';
+					// 	html += '<th>File Name</th></tr></thead><tbody>';
+					// $.each(response.files, function (key, value) 
+					// {
+					//     html += '<tr>';
+					// 	html += '<td><input value="' + value.path + '" name="wipefiles[]" type="checkbox" class="selectSingleFile"/></td>';
+					// 	html += '<td><a target="_blank" download href="'+value.url+'">' + key + '</a></td>';
+					// 	html += '</tr>'; 
+					// });
+					// 	html += '</tbody></table>'; 
+					$("#wipe-report-result").append(html); 
+					// $( "#wipeReportresultsFileTable" ).after( '<button type="submit" class="btn btn-primary" id="downloadFiles">Download</button>' );
 				}
 				else if(response.status == false)
 				{

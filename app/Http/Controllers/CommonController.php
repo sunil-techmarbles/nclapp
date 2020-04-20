@@ -41,7 +41,11 @@ class CommonController extends Controller
 		$response = [];
 		$response['status'] = false;
 		$returnFiles = [];
+		$returnFilesBlancco = [];
+		$returnFilesWipe = [];
+
 		$searchedAsset = $request->lotNum;
+		
 		foreach($this->directories as $key => $directory)
 		{
 			foreach($this->fileExtensions as $extension)
@@ -53,16 +57,33 @@ class CommonController extends Controller
 					if (stripos($file, $searchedAsset) !== false)
 					{
 						$fileName = substr($file, strrpos($file, '/') + 1);
-						$returnFiles[$fileName]['url'] = URL($key.'/'.$fileName);
-						$returnFiles[$fileName]['path'] = $file;
+						if( $key == "wipe-data" )
+						{
+							$returnFilesWipe[$fileName]['url'] = URL($key.'/'.$fileName);
+							$returnFilesWipe[$fileName]['path'] = $file;
+						}
+						else if( $key == "blancco/pdf-data" )
+						{
+							$returnFilesBlancco[$fileName]['url'] = URL($key.'/'.$fileName);
+							$returnFilesBlancco[$fileName]['path'] = $file;
+						}
+						// $returnFiles[$fileName]['url'] = URL($key.'/'.$fileName);
+						// $returnFiles[$fileName]['path'] = $file;
 					}
 				}
 			}
 		}
-		if (count($returnFiles) > 0)
+
+		$totalFilesCount = (int) (count($returnFilesWipe)) + (int) (count($returnFilesBlancco));
+
+		if ($totalFilesCount > 0)
 		{
 			$response['status'] = true;
-			$response['files'] = $returnFiles;
+			$response['total_file_count'] = $totalFilesCount;
+			$response['blancco_files_count'] =  (count($returnFilesBlancco));
+			$response['wipe_files_count'] = (count($returnFilesWipe)); 
+			$response['blancco_files'] = $returnFilesBlancco;
+			$response['wipe_files'] = $returnFilesWipe;
 		}
 		return response()->json($response);
 	}
