@@ -90,6 +90,47 @@ class CommonController extends Controller
 	}
 
 	/**
+     * get wipe report files for a Assets numbers.
+     *
+     * @return mixed
+     */
+	public function getAdvanceWipeReportFiles(Request $request)
+	{
+		$response = [];
+		$response['status'] = false;
+		$returnFiles = [];
+		$searchedAssets = $request->Assets;
+		foreach($this->directories as $key => $directory)
+		{
+			foreach($this->fileExtensions as $extension)
+			{
+				$search_path = $directory.".".$extension;
+				$files = glob($search_path);
+				foreach ($files as $file)
+				{
+					foreach ($searchedAssets as $key => $searchedAsset) {
+
+						if (stripos($file, $searchedAsset) !== false)
+						{
+							$fileName = substr($file, strrpos($file, '/') + 1);
+							$returnFiles[$fileName]['url'] = URL($key.'/'.$fileName);
+							$returnFiles[$fileName]['path'] = $file;
+						}
+					}
+
+				}
+			}
+		}
+		if (!empty( $returnFiles ) )
+		{
+			$response['status'] = true;
+			$response['files'] = $returnFiles;
+			$response['report_form_submit_url'] = url("/admin/exportwipereportfiles/");
+		}
+		return response()->json($response);
+	}
+
+	/**
      * For Exporting wipe data files.
      *
      * @return mixed

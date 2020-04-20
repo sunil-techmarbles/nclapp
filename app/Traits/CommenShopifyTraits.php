@@ -334,7 +334,7 @@ trait CommenShopifyTraits
     	. "<li>Available Ports: " . $this->insertDataArray['available_port'] . "</li>"
     	. "<li>Available Video Ports: " . $this->insertDataArray['available_vedio_port'] . "</li>"
     	. "<li>Screen Size: " . $this->insertDataArray['screen_size'] . "</li>"
-    	. "<li>Screen Resolution: " . $this->insertDataArray['screen_res'] . "</li>"
+    	. "<li>Screen Resolution: " . @$this->insertDataArray['screen_res'] . "</li>"
     	. "<li>Dimensions: " . $this->insertDataArray['width'] . " X " . $this->insertDataArray['length'] . " X " . $this->insertDataArray['height'] . " inches</li>"
     	. "<li>Weight: " . $this->insertDataArray['weight'] . "</li>"
     	. "<li>Color: " . $this->insertDataArray['color'] . "</li>"
