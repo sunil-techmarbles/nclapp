@@ -33,6 +33,37 @@ var pauseTime = 0;
 var action = "";
 var prevAction = "";
 var isPause=false;
+var itamgClassName = 'mx-1 btn btn-xs btn-default border border-primary';
+var itamgSort = [{
+    bSortable: false,
+    aTargets: [ 0 ]
+}];
+var itamgLength = [ [10, 25, 50, -1], [10, 25, 50, "All"] ];
+var itamgButton = [
+    { extend: 'excel', className: itamgClassName, 
+        exportOptions: {
+            columns: "thead th:not(.noExport)"
+        }
+    },
+    { extend: 'csv', className: itamgClassName,
+        exportOptions: {
+            columns: "thead th:not(.noExport)"
+        }
+    },
+    { extend: 'pdf', className: itamgClassName,
+        exportOptions: {
+            columns: "thead th:not(.noExport)"
+        }
+    },
+    { extend: 'copy', className: itamgClassName,
+        exportOptions: {
+            columns: "thead th:not(.noExport)"
+        }
+    },
+];
+let searchParams = new URLSearchParams(window.location.search)
+let pageaction = searchParams.get('pageaction');
+let dItamgTable = true;
 
 // Array of inputs for package modal for per-populating values of package
 var packageModalInputs = ["order_date", "expected_arrival", "description", "qty", "value", "req_name", "tracking_number", "ref_number", "carrier", "freight_ground", "recipient", "received", "worker_id", "location" ];

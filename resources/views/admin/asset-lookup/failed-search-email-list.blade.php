@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="table-responsive">
 		<h6 align="center"><strong>If you want to get Search Result Report access on many email, please add another email by putting , (comma)</strong></h6>
-		<table id="itamg_inventory_value" class="table table-bordered table-striped">
+		<table class="table table-bordered table-striped">
 			<thead>
 				<tr>
 					<th>#</th>

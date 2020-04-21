@@ -100,7 +100,26 @@ class RecycleController extends Controller
     public function recycleTwoCategory(Request $request)
     {
         $categories = Category::getAllRecord();
-        return view('admin.asset-lookup.category-list', compact('categories'));
+        if($request->dtable)
+        {
+            $deleterecycletwo = "'deleterecycletwocategory'";
+            $assetLookup = "'Asset Lookup Category'";
+            foreach ($categories as $key => $value)
+            {
+                $categories[$key]['action'] = '<a href="javascript:void(0)" class="edit_cat_link" data-table_id="'.$value->id.'">
+                            <img src="'.URL("/assets/images/edit.png").'" class="icons"  title="Edit">
+                    </a>
+                    <a href="javascript:void(0)" class="delete_cat_link" onclick="del_confirm('.$value->id.','.$deleterecycletwo.','.$assetLookup.');" data-table_id="'.$value->id.'">
+                        <img src="'.URL("/assets/images/del.png").'" class="icons"  title="Delete">
+                    </a>';
+            }
+            $v = DataTables::of($categories)->make(true);
+            return $v;
+        }
+        else
+        {
+            return view('admin.asset-lookup.category-list', compact('categories'));
+        }
     }
 
     public function recycleTwoFailedSearchEmails(Request $request)
@@ -211,6 +230,8 @@ class RecycleController extends Controller
     */
     public function recycleTwoFailedSearch(Request $request)
     {
+        $result = Category::getAllRecord();
+        $failedSearches = FailedSearch::getAllRecord();
         if($request->ajax())
         {
             if ($request->isMethod('post'))
@@ -234,12 +255,22 @@ class RecycleController extends Controller
                         return response()->json(['status' => false, 'data' => $output]);
                     }
                 }
+
+                if($request->dtable)
+                {
+                    foreach ($failedSearches as $key => $value)
+                    {
+                        $failedSearches[$key]['action'] = '<a href="javascript:void(0)" class="update" data-table_id="'.$value->id.'">
+                                    <img src="'.URL("/assets/images/edit.png").'" class="icons"  title="Edit">
+                            </a>';
+                    }
+                    $v = DataTables::of($failedSearches)->make(true);
+                    return $v;
+                }
             }
         }
         else
         {
-            $result = Category::getAllRecord();
-            $failedSearches = FailedSearch::getAllRecord();
             return view('admin.asset-lookup.failed-search-list', compact('failedSearches', 'result'));
         }
     }

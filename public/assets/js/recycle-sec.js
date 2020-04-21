@@ -100,25 +100,18 @@ $(document).ready(function(){
         } 
     })
 
-    $(document).on('click', '.cat_entry', function(e){
-      
-    })
-
-    var ClassName = 'mx-1 btn btn-xs btn-default border border-primary';
     $('.asset-lookup-list').DataTable({
         dom: 'lipBf',
         "processing" : true,
         "serverSide" : true,
         "ajax" : {
-            url:'/'+prefix+'/assetlookup?pageaction=itamgconnect&dtable=true',
+            url:'/'+recyclePrefix+'?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
-        columns: [
-            {
-                mRender: function (data, type, row) {
-                    return '<input type="checkbox" class="select_to_delete" name="select_to_delete" value="'+row.id+'">'
-                }
-            },
+        columns: [{
+            mRender: function (data, type, row) {
+                return '<input type="checkbox" class="select_to_delete" name="select_to_delete" value="'+row.id+'">'
+            }},
             { 'data': 'Brand' },
             { 'data': 'Model' },
             { 'data': 'PartNo' },
@@ -129,64 +122,52 @@ $(document).ready(function(){
             { 'data': 'require_pn' },
             { 'data': 'action' },
         ],
-        buttons: [
-            { extend: 'excel', className: ClassName, 
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-            { extend: 'csv', className: ClassName,
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-            { extend: 'pdf', className: ClassName,
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-            { extend: 'copy', className: ClassName,
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-        ],
-        aoColumnDefs: [{
-            bSortable: false,
-            aTargets: [ 0 ]
-        }],
-        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+        buttons: itamgButton,
+        aoColumnDefs: itamgSort,
+        "lengthMenu": itamgLength,
     });
 
-    $('#itamg_inventory_value').DataTable({
-        dom: 'lipBf',        
-        buttons: [
-            { extend: 'excel', className: ClassName, 
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-            { extend: 'csv', className: ClassName,
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-            { extend: 'pdf', className: ClassName,
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
-            { extend: 'copy', className: ClassName,
-                exportOptions: {
-                    columns: "thead th:not(.noExport)"
-                }
-            },
+    $('.failed-search-result').DataTable({
+        dom: 'lipBf',
+        "processing" : true,
+        "serverSide" : true,
+        "ajax" : {
+            url:'/'+recyclePrefix+'/failedsearch?pageaction='+pageaction+'&dtable='+dItamgTable,
+            type:"POST"
+        },
+        columns: [
+            { 'data': 'model_or_part' },
+            { 'data': 'partNo' },
+            { 'data': 'Brand' },
+            { 'data': 'Category' },
+            { 'data': 'require_pn' },
+            { 'data': 'on_datetime' },
+            { 'data': 'action' },
         ],
-        aoColumnDefs: [{
-            bSortable: false,
-            aTargets: [ 0 ]
-        }],
-        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+        buttons: itamgButton,
+        aoColumnDefs: itamgSort,
+        "lengthMenu": itamgLength,
+    });
+
+    $('.catageory-list-result').DataTable({
+        dom: 'lipBf',
+        "processing" : true,
+        "serverSide" : true,
+        "ajax" : {
+            url:'/'+recyclePrefix+'/category?pageaction='+pageaction+'&dtable='+dItamgTable,
+            type:"POST"
+        },
+        columns: [{
+            mRender: function (data, type, row) {
+                return '<input type="checkbox" class="select_to_delete" name="select_to_delete" value="'+row.id+'">'
+            }},
+            { 'data': 'category_name' },
+            { 'data': 'value' },
+            { 'data': 'action' },
+        ],        
+        buttons: itamgButton,
+        aoColumnDefs: itamgSort,
+        "lengthMenu": itamgLength,
     });
 
     $(document).on("click",".edit_faildsearch_address", function(e){
