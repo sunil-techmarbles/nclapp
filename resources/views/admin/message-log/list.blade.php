@@ -2,7 +2,7 @@
 @section('title', 'Running List')
 @section('content')
 <div class="container">
-	<table id="message-logs" class="table table-striped table-condensed table-hover">
+	<table id="message-logs" class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Type</th>

@@ -1,12 +1,6 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Asset Lookup')
 @section('content')
-<style type="text/css">
-    .dataTables_processing {
-        top: 64px !important;
-        z-index: 11000 !important;
-    }
-</style>
 <div class="container">
 	<div class="table-responsive">
 		<table id="itamg_inventory_value" class="asset-lookup-list table table-bordered table-striped">

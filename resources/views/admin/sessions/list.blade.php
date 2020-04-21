@@ -23,7 +23,7 @@
 			</div>
 		</form>
 		<div class="shipments-table">
-		<table id="sessions-list" class="table">
+		<table id="sessions-list" class="sessions-list table table-bordered table-striped">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -54,7 +54,7 @@
 	</div>
 		@if(!empty($items) && $items->count() > 0)
 			<h3>Items for session {{$sessionName}}</h3>
-			<table id="sessions-asins-list" class="table">
+			<table id="sessions-asins-list" class="sessions-asins-list table table-bordered table-striped">
 				<thead>
 					<tr>
 						<th>ASIN</th>
@@ -77,7 +77,7 @@
 						</tr>
 						@if (!empty($assets['asin'.$i['aid']]))
 							<tr class="assets{{$i['aid']}}" style="display: none">
-								<td colspan="6">
+								<td colspan="6" align="center">
 									@if(!empty($assets['asin'.$i['aid']]['active']))
 										<b>Asset Numbers {{$i["asin"]}}:</b> 
 										@foreach($assets['asin'.$i['aid']]['active'] as $itm)
@@ -119,7 +119,7 @@
 			<form method="post" action="{{route('sessions')}}">
 				<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 				@csrf
-				<table id="sessions-asins-part-list" class="table">
+				<table id="sessions-asins-part-list" class=" sessions-asins-part-list table table-bordered table-striped">
 					<thead>
 						<tr>
 							<th>Part Num</th>

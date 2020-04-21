@@ -29,46 +29,46 @@
 			</div>
 		</form>
 		<div class="shipments-table">
-		<table id="shipment-list" class="table">
-			<thead> 
-				<tr>
-					<th>ID</th>
-					<th>Name</th>
-					<th>Started On</th>
-					<th>Closed On</th>
-					<th>Status</th>
-					<th>Items Count</th>
-					<th>&nbsp;</th>
-				</tr>
-			</thead>
-			<tbody>
-			@foreach($shipments as $key => $p)
-				<tr>
-					<td>{{$p["id"]}}</td>
-					<td>
-						<a href="{{route('shipments', ['pageaction' => request()->get('pageaction'),'s' => $p['id']])}}">
-							{{$p["name"]}}
-						</a>
-					</td>
-					<td>{{$p["started_on"]}}</td>
-					<td>{{$p["status"] == 'open' ? '' : $p["updated_on"] }}</td>
-					<td>{{$p["status"]}}</td>
-					<td>{{$p["count"]}}</td>
-					<td>@if($p["status"] == 'open')
-							<span style="cursor:pointer" onclick="$('#asinModal').modal('toggle')" class="fa fa-plus" aria-hidden="true">
-							</span>
-						@else
-							
-						@endif
-					</td>
-				</tr>
-			@endforeach
-			</tbody>
-		</table>
+			<table id="shipment-list" class="shipment-list table table-bordered table-striped">
+				<thead> 
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Started On</th>
+						<th>Closed On</th>
+						<th>Status</th>
+						<th>Items Count</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+				@foreach($shipments as $key => $p)
+					<tr>
+						<td>{{$p["id"]}}</td>
+						<td>
+							<a href="{{route('shipments', ['pageaction' => request()->get('pageaction'),'s' => $p['id']])}}">
+								{{$p["name"]}}
+							</a>
+						</td>
+						<td>{{$p["started_on"]}}</td>
+						<td>{{$p["status"] == 'open' ? '' : $p["updated_on"] }}</td>
+						<td>{{$p["status"]}}</td>
+						<td>{{$p["count"]}}</td>
+						<td>@if($p["status"] == 'open')
+								<span style="cursor:pointer" onclick="$('#asinModal').modal('toggle')" class="fa fa-plus" aria-hidden="true">
+								</span>
+							@else
+								
+							@endif
+						</td>
+					</tr>
+				@endforeach
+				</tbody>
+			</table>
 		</div>
 		@if(!empty($asins))
 			<h3>Items for Shipment {{$shipmentName}}</h3>
-			<table id="shipment-asin-list" class="table">
+			<table id="shipment-asin-list" class="shipment-asin-list table table-bordered table-striped">
 				<thead>
 					<tr>
 						<th>ASIN</th>
@@ -81,7 +81,7 @@
 						<th>S/N</th>
 						<th>COA</th>
 						<th>Added</th>
-						<th>&nbsp;</th>
+						<th>#</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -95,7 +95,11 @@
 							<td>{{$i["cpu_core"]}} {{$i["cpu_model"]}} CPU @ {{htmlspecialchars($i["cpu_speed"])}}</td>
 							<td>{{number_format($i["price"],2)}}</td>
 							<td>{{$i["cnt"]}}</td>
-							<td colspan="5">&nbsp;</td>
+							<td colspan="5" align="center"></td>
+							<td style="display: none;"></td>
+							<td style="display: none;"></td>
+							<td style="display: none;"></td>
+							<td style="display: none;"></td>
 						</tr>
 						@foreach($i['items'] as $a)
 							<tr style="display: none;" class="asin{{$i["aid"]}}">
@@ -104,7 +108,7 @@
 								<td>{{$a["form_factor"]}}</td>
 								<td>{{$a["cpu_core"]}} {{$a["cpu_model"]}} CPU @ {{htmlspecialchars($a["cpu_speed"])}}</td>
 								<td>{{number_format($a["price"],2)}}</td>
-								<td>&nbsp;</td>
+								<td></td>
 								<td>{{$a["asset"]}}</td>
 								<td>{{$a["sn"]}}</td>
 								<td>{{($a["win8_activated"] ? 'WIN8 Activated' : $a["new_coa"])}}</td>

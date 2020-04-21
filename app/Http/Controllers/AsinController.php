@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Asin;
 use File;
+use DataTables;
 use Illuminate\Support\Facades\DB;
 use App\Supplies;
 use App\SupplieAsinModel;
@@ -80,7 +81,30 @@ class AsinController extends Controller
     {
     	$searchItemsLists = $this->searchItemsLists;
     	$asinLists = Asin::getAllAsins($request);
-    	return view ('admin.asin.list', compact('asinLists','searchItemsLists'));
+        $deleteUrl = "'deleteasin'";
+        $textMessage = "'ASIN'";
+        foreach ($asinLists as $key => $value)
+        {
+            $asinLists[$key]['action'] = '<a href="'.route('edit.asin', ['pageaction' => $request->pageaction,'id' => $value->id]).'" >
+                        <img src="'.URL("/assets/images/edit.png").'" class="icons"  title="Edit">
+                </a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" class="delete_cat_link" onclick="del_confirm('.$value->id.','.$deleteUrl.','.$textMessage.');" data-table_id="'.$value->id.'">
+                    <img src="'.URL("/assets/images/del.png").'" class="icons"  title="Delete">
+                </a>
+                <a href="'.route('parts.asin',['pageaction' => $request->pageaction, 'id' => $value->id]).'" title="Parts List"><img src="'.URL('/assets/images/tools.png').'" class="icons" title="Parts"></a>';
+            $asinLists[$key]['asinlink'] = (!empty($value->link)) ? true : false;
+        }
+
+        $dynamicID = ($request->search) ? 'asins' : 'asins-list';
+        if($request->dtable)
+        {
+            $v = DataTables::of($asinLists)->make(true);
+            return $v;
+        }
+        else
+        {
+           return view ('admin.asin.list', compact('asinLists','searchItemsLists', 'dynamicID'));
+        }
     }
 
     public function addAsins(Request $request)

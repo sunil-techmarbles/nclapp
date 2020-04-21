@@ -22,6 +22,7 @@
 				<td nowrap="" style="text-align: right">
 					<form method="get" action="{{route('supplies')}}">
 						<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+						<input type="hidden" name="search" id="dtable" value="true"/>
 						<input class="record-form" type="text" name="s" value="{{request()->get('s')}}" placeholder=" Search">
 						<select name="f" style="height:26px;border: 0;">
 							@foreach($searchItemsLists as $key => $searchItem)
@@ -37,7 +38,9 @@
 			</tr>
 		</tbody>
 	</table>
-	<table id="supplies-list" class="table">
+	@php
+	@endphp
+	<table id="{{$dynamicID}}" class="table table-bordered table-striped">
 		<thead>
 			<tr>
 				<th></th>
@@ -54,7 +57,6 @@
 				<th> Delivery Time </th>
 			</tr>
 		</thead>
-
 		<tbody>
 			@foreach($supplieLists as $supplie)
 			<tr>
@@ -91,9 +93,5 @@
 			@endforeach
 		</tbody>
 	</table>
-	@if($supplieLists->count() == 0)
-		<p><center><strong>Nothing found</strong></center></p>
-	@endif
-	{!! $supplieLists->appends(request()->input())->links() !!}
 </div>
 @endsection

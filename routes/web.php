@@ -61,7 +61,7 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
 	    // Users Section
-	    Route::get('/users', 'UsersController@index')->name('users');
+	    Route::any('/users', 'UsersController@index')->name('users');
 	    Route::any('/profile', 'UsersController@editProfile')->name('edit.profile');
 		Route::any('/changepassowrd','UsersController@changePassowrd')->name('change.passowrd');
 	    Route::get('/messagelog', 'MainController@index')->name('message.log');
@@ -70,7 +70,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');
 		// Supplies Section
-		Route::get('/supplies','SuppliesController@index')->name('supplies');
+		Route::any('/supplies','SuppliesController@index')->name('supplies');
 		Route::get('/addsupplie','SuppliesController@addSupplies')->name('add.supplies');
 		Route::get('/updateqtyreorder','SuppliesController@updateQtyReorder')->name('update.qty.reorder');
 		Route::post('/storesupplie','SuppliesController@storeSupplies')->name('store.supplies');
@@ -78,7 +78,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::post('/updatesupplie','SuppliesController@updateSupplies')->name('update.supplies');
 		Route::get('/deletesupplie/{supplieid}','SuppliesController@deleteSupplie')->name('delete.supplies');
 		// Asin Section
-		Route::get('/asin','AsinController@index')->name('asin');
+		Route::any('/asin','AsinController@index')->name('asin');
 		Route::get('/addasin','AsinController@addAsins')->name('add.asins');
 		Route::post('/storeasin','AsinController@storeAsins')->name('store.asin');
 		Route::post('/updateasin','AsinController@updateAsins')->name('update.asin');

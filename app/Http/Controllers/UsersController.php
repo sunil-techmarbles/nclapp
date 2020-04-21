@@ -5,6 +5,7 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Hash;
+use DataTables;
 use App\User;
 use App\UserCronJob;
 
@@ -17,7 +18,7 @@ class UsersController extends Controller
 		$this->roles = \DB::table('roles')->select( 'name' , 'id' )->get();
 	}
 
-	public function index()
+	public function index(Request $request)
 	{
 		$users = User::all();
 		foreach ($users as $key => $value) {
@@ -26,7 +27,33 @@ class UsersController extends Controller
 				$users[$key]['role'] = isset($rolevalue->slug) ? $rolevalue->slug : 'N/A';
 			}
 		}
-		return view('admin.users.list', compact('users'));
+		$deleteUrl = "'DeleteUser'";
+        $textMessage = "'User'";
+        foreach ($users as $key => $value)
+        {
+            $users[$key]['action'] = '<a href="'.route('edit.user', $value->id).'" >
+                        <img src="'.URL("/assets/images/edit.png").'" class="icons"  title="Edit">
+                </a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" onclick="del_confirm('.$value->id.','.$deleteUrl.','.$textMessage.');" data-table_id="'.$value->id.'">
+                    <img src="'.URL("/assets/images/del.png").'" class="icons"  title="Delete">
+                </a>
+                <a href="'.route('change.passowrd',['u' => $value->id, 'pageaction' => $request->pageaction]).'" class="mt-1 " title="Change Passowrd"><img src="'.URL('/assets/images/shield.png').'" class="icons" title="Change Passowrd"></a>';
+            $users[$key]['verifiedclass'] = userVerifiedClass($value->verified);
+            $users[$key]['verifyuser'] = "'verifyuser'";
+            $users[$key]['name'] = $value->first_name.' '.$value->last_name;
+            $users[$key]['verifiedtext'] = userVerifiedString($value->verified);
+            $users[$key]['verifiedcheck'] = (!$value->verified) ? true : false;
+        }
+        $dynamicID = ($request->search) ? 'asins' : 'asins-list';
+        if($request->dtable)
+        {
+            $v = DataTables::of($users)->make(true);
+            return $v;
+        }
+        else
+        {
+			return view('admin.users.list', compact('users'));
+        }
 	}
 
 	public function verifyUser(Request $request)

@@ -8,6 +8,7 @@ use App\Exports\SuppliesExport;
 use App\Imports\SuppliesImport;
 use Carbon\Carbon;
 use Excel;
+use DataTables;
 use App\Supplies;
 use App\SupplieEmail;
 use App\SupplieAsinModel;
@@ -67,7 +68,33 @@ class SuppliesController extends Controller
     {
 		$searchItemsLists = $this->searchItemsLists;
     	$supplieLists = Supplies::getAllSupplies($request);
-    	return view ('admin.supplies.list', compact('supplieLists','searchItemsLists'));
+        $deleteUrl = "'deletesupplie'";
+        $textMessage = "'Supplie'";
+        foreach ($supplieLists as $key => $value)
+        {
+            $supplieLists[$key]['action'] = '<a href="'.route('edit.supplies', ['pageaction' => $request->pageaction,'id' => $value->id]).'" >
+                        <img src="'.URL("/assets/images/edit.png").'" class="icons"  title="Edit">
+                </a>&nbsp;&nbsp;
+                <a href="javascript:void(0)" class="delete_cat_link" onclick="del_confirm('.$value->id.','.$deleteUrl.','.$textMessage.');" data-table_id="'.$value->id.'">
+                    <img src="'.URL("/assets/images/del.png").'" class="icons"  title="Delete">
+                </a>';
+            $supplieLists[$key]['updateurl'] = route('update.qty.reorder');
+            $supplieLists[$key]['cartimageurl'] = URL('assets/images/cart.png');
+            $supplieLists[$key]['tickimageurl'] = URL('assets/images/tick.png');
+            $supplieLists[$key]['pageaction'] = $request->pageaction;
+            $supplieLists[$key]['updateqtyreorder'] = "'updateqtyreorder'";
+        }
+
+        $dynamicID = ($request->search) ? 'supplies' : 'supplies-list';
+        if($request->dtable)
+        {
+            $v = DataTables::of($supplieLists)->make(true);
+            return $v;
+        }
+        else
+        {
+    	   return view ('admin.supplies.list', compact('supplieLists','searchItemsLists', 'dynamicID'));
+        }
     }
 
     public function addSupplies()

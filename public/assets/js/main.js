@@ -623,19 +623,7 @@ $(document).ready(function()
 		}
 	});
 
-	$('#supplies, #asins, #users_table, #message-logs').DataTable();
-	
-	$('#shipment').DataTable
-	({
-		"searching": false,
-		"bPaginate": false,
-		"bLengthChange": false,
-		"bFilter": true,
-		"bInfo": false,
-		"bAutoWidth": false
-	});
-	
-	$('#shipment-asin, #sessions, #sessions-asins, #sessions-asins-part, #package-table, #asinInventryTable').DataTable
+	$('#package-table, #asinInventryTable').DataTable
 	({
 		"searching": false,
 		"bPaginate": false,

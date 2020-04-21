@@ -37,14 +37,12 @@ class Supplies extends Model
     public static function getAllSupplies($request)
     {
     	$query = self::select('*');
-
         if ($request->has('s') || $request->has('f')) {
             $query->where($request->get('f'), 'like', '%' .$request->get('s'). '%');
         }
-
     	return $query->orderBy('id', 'DESC')
-            // ->get();
-        ->paginate(10);
+            ->get();
+            // ->paginate(10);
     }
 
     public static function addSupplies($request)

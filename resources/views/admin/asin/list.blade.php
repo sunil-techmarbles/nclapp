@@ -12,6 +12,7 @@
 				<td nowrap="" style="text-align: right">
 					<form method="get" action="{{route('asin')}}">
 						<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+						<input type="hidden" name="search" id="dtable" value="true"/>
 						<input type="text" name="s" value="{{request()->get('s')}}" placeholder=" Search">
 						<select name="f" style="height:26px;border: 0;">
 							@foreach($searchItemsLists as $key => $searchItem)
@@ -27,7 +28,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<table id="asins-list" class="table">
+	<table id="{{$dynamicID}}" class="table table-bordered table-striped">
 		<thead>
 			<tr>
 				<th></th>
@@ -48,42 +49,38 @@
 		</thead>
 		<tbody>
 			@foreach($asinLists as $asin)
-				<tr>
-					<td nowrap="">
-						<a href="javascript:void(0)" onclick="del_confirm({{$asin->id}},'deleteasin','ASINs')">
-							<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
-						</a>&nbsp;&nbsp;
-						<a href="{{route('edit.asin',['pageaction' => request()->get('pageaction'), 'id' => $asin->id])}}">
-							<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
-						</a>
-						<a href="{{route('parts.asin',['pageaction' => request()->get('pageaction'), 'id' => $asin->id])}}" title="Parts List"><img src="{{URL('/assets/images/tools.png')}}" class="icons" title="Parts"></a>
-					</td>
-					<td>{{$asin->id}}</td>
-					<td>
-						@if(!empty($asin->link))
-							<a href="{{$asin->link}}" target="_blank">{{$asin->asin}}</a>
-						@else
-							<a href="https://www.amazon.com/dp/{{$asin->asin}}?ref=myi_title_dp" target="_blank">{{$asin->asin}}</a>
-						@endif
-					</td>
-					<td>{{$asin->price}}</td>
-					<td>{{$asin->manufacturer}}</td>
-					<td>{{$asin->notifications}}</td>
-					<td>{{$asin->form_factor}}</td>
-					<td>{{$asin->cpu_core}}</td>
-					<td>{{$asin->cpu_model}}</td>
-					<td>{{$asin->cpu_speed}}</td>
-					<td>{{$asin->ram}}</td>
-					<td>{{$asin->hdd}}</td>
-					<td>{{$asin->os}}</td>
-					<td>{{$asin->webcam}}</td>
-				</tr>
+			<tr>
+				<td>
+					<a href="javascript:void(0)" onclick="del_confirm({{$asin->id}},'deleteasin','ASINs')">
+						<img src="{{URL('/assets/images/del.png')}}" class="icons" title="Delete">
+					</a>&nbsp;&nbsp;
+					<a href="{{route('edit.asin',['pageaction' => request()->get('pageaction'), 'id' => $asin->id])}}">
+						<img src="{{URL('/assets/images/edit.png')}}" class="icons" title="Edit">
+					</a>
+					<a href="{{route('parts.asin',['pageaction' => request()->get('pageaction'), 'id' => $asin->id])}}" title="Parts List"><img src="{{URL('/assets/images/tools.png')}}" class="icons" title="Parts"></a>
+				</td>
+				<td>{{$asin->id}}</td>
+				<td>
+					@if(!empty($asin->link))
+					<a href="{{$asin->link}}" target="_blank">{{$asin->asin}}</a>
+					@else
+					<a href="https://www.amazon.com/dp/{{$asin->asin}}?ref=myi_title_dp" target="_blank">{{$asin->asin}}</a>
+					@endif
+				</td>
+				<td>{{$asin->price}}</td>
+				<td>{{$asin->manufacturer}}</td>
+				<td>{{$asin->notifications}}</td>
+				<td>{{$asin->form_factor}}</td>
+				<td>{{$asin->cpu_core}}</td>
+				<td>{{$asin->cpu_model}}</td>
+				<td>{{$asin->cpu_speed}}</td>
+				<td>{{$asin->ram}}</td>
+				<td>{{$asin->hdd}}</td>
+				<td>{{$asin->os}}</td>
+				<td>{{$asin->webcam}}</td>
+			</tr>
 			@endforeach
 		</tbody>
 	</table>
-	@if($asinLists->count() == 0)
-		<p><center><strong>Nothing found</strong></center></p>
-	@endif
-	{!! $asinLists->appends(request()->input())->links() !!}
 </div>
 @endsection

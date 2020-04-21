@@ -102,4 +102,5 @@ request()->segment(count(request()->segments())) == 'report')
 <script type="text/javascript" src = "{{URL('assets/js/chart.js')}}" ></script>
 <script type="text/javascript" src = "{{URL('assets/js/tracker.js')}}" ></script>
 @endif
+<script type="text/javascript" src = "{{URL('assets/js/dataTables/main.datatable.js')}}" ></script>
 </html>
