@@ -36,6 +36,12 @@ class MacDataRaw extends Model
         'Avg_Weight',
     ];
 
+    public static function getRecord($value)
+    {
+        return self::where('Apple_Model_Combined', 'LIKE', '%'.$value.'%')
+            ->first();    
+    }
+
     public static function getMakorAppleDataFromTable($searchData)
     {
     	$query = self::select('*'); 

@@ -1,9 +1,15 @@
 @extends('layouts.appadminlayout')
 @section('title', 'Asset Lookup')
 @section('content')
+<style type="text/css">
+    .dataTables_processing {
+        top: 64px !important;
+        z-index: 11000 !important;
+    }
+</style>
 <div class="container">
 	<div class="table-responsive">
-		<table id="itamg_inventory_value" class="table table-bordered table-striped">
+		<table id="itamg_inventory_value" class="asset-lookup-list table table-bordered table-striped">
 			<thead>
 				<tr>
 					<th class="first_heading noExport"><input type="checkbox" class="select_all_to_delete" name="select_all_to_delete"></th>
@@ -18,29 +24,6 @@
 					<th class="noExport">Action</th>
 				</tr>
 			</thead>
-			<tbody>
-				@foreach($itamgRecycleInventors as $key => $itamgRecycleInventor)
-				<tr>
-					<td><input type="checkbox" class="select_to_delete" name="select_to_delete" value="{{$itamgRecycleInventor->id}}"></td>
-					<td>{{$itamgRecycleInventor->Brand}}</td>
-					<td>{{$itamgRecycleInventor->Model}}</td>
-					<td>{{$itamgRecycleInventor->PartNo}}</td>
-					<td>{{recycleTwocategoryName($itamgRecycleInventor->Category)}}</td>
-					<td>{{$itamgRecycleInventor->Notes}}</td>
-					<td>{{$itamgRecycleInventor->Value}}</td>
-					<td>{{$itamgRecycleInventor->Status}}</td>
-					<td>{{$itamgRecycleInventor->require_pn}}</td>
-					<td>
-                        <a href="javascript:void(0)" class="edit_entry_link" data-table_id="{{$itamgRecycleInventor->id}}">
-                            <img src="{{URL('/assets/images/edit.png')}}" class="icons"  title="Edit">
-                        </a>
-                        <a href="javascript:void(0)" class="delete_entry_link" onclick="del_confirm({{$itamgRecycleInventor->id}},'deleterecycletwo','Recycle Inventory')" data-table_id="{{$itamgRecycleInventor->id}}">
-                            <img src="{{URL('/assets/images/del.png')}}" class="icons"  title="Delete">
-                        </a>
-					</td>
-				</tr>
-				@endforeach
-			</tbody>
 		</table>
 	</div>
 </div>

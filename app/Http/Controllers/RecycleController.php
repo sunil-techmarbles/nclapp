@@ -9,6 +9,7 @@ use App\Traits\CommenRecycleTraits;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\RecycleTwoFileImport;
 use Illuminate\Http\Request;
+use DataTables;
 use Carbon\Carbon;
 use Redirect;
 use Config;
@@ -74,7 +75,26 @@ class RecycleController extends Controller
     {
         $result = Category::getAllRecord();
         $itamgRecycleInventors = ItamgRecycleInventory::getAllRecord();
-        return view('admin.asset-lookup.list', compact('itamgRecycleInventors', 'result'));
+        if($request->dtable)
+        {
+            $deleterecycletwo = "'deleterecycletwo'";
+            $assetLookup = "'Asset Lookup'";
+            foreach ($itamgRecycleInventors as $key => $value)
+            {
+                $itamgRecycleInventors[$key]['action'] = '<a href="javascript:void(0)" class="edit_entry_link" data-table_id="'.$value->id.'">
+                            <img src="'.URL("/assets/images/edit.png").'" class="icons"  title="Edit">
+                    </a>
+                    <a href="javascript:void(0)" class="delete_entry_link" onclick="del_confirm('.$value->id.','.$deleterecycletwo.','.$assetLookup.');" data-table_id="'.$value->id.'">
+                        <img src="'.URL("/assets/images/del.png").'" class="icons"  title="Delete">
+                    </a>';
+            }
+            $v = DataTables::of($itamgRecycleInventors)->make(true);
+            return $v;
+        }
+        else
+        {
+            return view('admin.asset-lookup.list', compact('itamgRecycleInventors', 'result'));
+        }
     }
 
     public function recycleTwoCategory(Request $request)

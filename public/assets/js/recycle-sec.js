@@ -105,8 +105,61 @@ $(document).ready(function(){
     })
 
     var ClassName = 'mx-1 btn btn-xs btn-default border border-primary';
-    $('#itamg_inventory_value').DataTable({
+    $('.asset-lookup-list').DataTable({
         dom: 'lipBf',
+        "processing" : true,
+        "serverSide" : true,
+        "ajax" : {
+            url:'/'+prefix+'/assetlookup?pageaction=itamgconnect&dtable=true',
+            type:"POST"
+        },
+        columns: [
+            {
+                mRender: function (data, type, row) {
+                    return '<input type="checkbox" class="select_to_delete" name="select_to_delete" value="'+row.id+'">'
+                }
+            },
+            { 'data': 'Brand' },
+            { 'data': 'Model' },
+            { 'data': 'PartNo' },
+            { 'data': 'Category' },
+            { 'data': 'Notes' },
+            { 'data': 'Value' },
+            { 'data': 'Status' },
+            { 'data': 'require_pn' },
+            { 'data': 'action' },
+        ],
+        buttons: [
+            { extend: 'excel', className: ClassName, 
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+            { extend: 'csv', className: ClassName,
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+            { extend: 'pdf', className: ClassName,
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+            { extend: 'copy', className: ClassName,
+                exportOptions: {
+                    columns: "thead th:not(.noExport)"
+                }
+            },
+        ],
+        aoColumnDefs: [{
+            bSortable: false,
+            aTargets: [ 0 ]
+        }],
+        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ],
+    });
+
+    $('#itamg_inventory_value').DataTable({
+        dom: 'lipBf',        
         buttons: [
             { extend: 'excel', className: ClassName, 
                 exportOptions: {

@@ -33,7 +33,7 @@
 						<input type="checkbox" class="check-all-ids" name="check-all-ids"> <span class="fa fa-arrow-down" onclick="$('#syncfilter').toggle()"></span>
 						<div id="syncfilter" style="position: absolute;background:#eceef2;border:1px solid #ddd;padding:10px;display:none;z-index: 222;">
 							<label for="sync_true" style="display: block">
-								<input type="checkbox" onchange="tblFilter()" id="sync_true" class="sync" value="yes"/> Synchronized
+								<input type="checkbox" checked="checked" onchange="tblFilter()" id="sync_true" class="sync" value="yes"/> Synchronized
 							</label>
 							<label for="sync_false" style="display: block">
 								<input type="checkbox" checked="checked" onchange="tblFilter()" id="sync_false" class="sync" value="no"/> Not Synchronized

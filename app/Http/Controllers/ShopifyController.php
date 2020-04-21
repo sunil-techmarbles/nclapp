@@ -27,6 +27,7 @@ use App\ShopifyBarCode;
 use App\ShopifyImages;
 use App\ShopifyPricing;
 use App\UserCronJob;
+use App\MacDataRaw;
 use App\Traits\CommenShopifyTraits;
 use App\Http\Controllers\AuditController;
 
@@ -689,51 +690,44 @@ class ShopifyController extends Controller
 
 		public function getShopifyAppleDataFromTable($searchData)
 		{
-	    // $searchData['model'] = str_replace(' )', ')', $searchData['model']);
-	    // if (strpos($searchData['model'], 'Mac') !== false)
-	    // {
-	    //     echo 'true';
-	    // }
-	    // else
-	    // {
-	    //     return;
-	    // }
-	    // $query = "select * from Mac_Data_Raw where `Apple_Model_Combined` LIKE '%" . $searchData['model']."%'";
-	    // $results = $mysqli->query($query)->fetchAll(PDO::FETCH_ASSOC);
-
-	    // if (empty($results))
-	    // {
-	    //     echo "MODEL NOT FOUND FOR APPLE PRODUCT, Model :" . $searchData['model'];
-	    //     return;
-	    // }
-	    // if (count($results) == 1)
-	    // {
-	    //     return $results[0];
-	    // }
-	    // //match based on Processor Speed
-	    // //remove extra spsaces
-	    // $wipeProcessorname = $searchData['cpu_core'] . '-' . $searchData['cpu_model'];
-	    // foreach ($results as $key => $result)
-	    // {
-	    //     if (!empty($result['Processor_Model']))
-	    //     {
-	    //         $dbProcessormodel = trim($result['Processor_Model']);
-	    //         if (stripos($wipeProcessorname, $dbProcessormodel) !== FALSE)
-	    //         {
-	    //             $return = $result;
-	    //             break;
-	    //         }
-	    //     }
-	    // }
-	    // if (!empty($return))
-	    // {
-	    //     return $return;
-	    // }
-	    // else
-	    // {
-	    //     return $results[0];
-	    // }
-			return '';
+		    $searchData['model'] = str_replace(' )', ')', $searchData['model']);
+		    if (strpos($searchData['model'], 'Mac') == false)
+		    {
+		        return '';
+		    }
+		    $results = MacDataRaw::getRecord($searchData['model']);
+		    if (empty($results))
+		    {
+		        // "MODEL NOT FOUND FOR APPLE PRODUCT, Model :" . $searchData['model'];
+		        return '';
+		    }
+		    else
+		    {
+		    	return $results;
+		    }
+		    //match based on Processor Speed
+		    //remove extra spsaces
+		    $wipeProcessorname = $searchData['cpu_core'] . '-' . $searchData['cpu_model'];
+		    foreach ($results as $key => $result)
+		    {
+		        if (!empty($result['Processor_Model']))
+		        {
+		            $dbProcessormodel = trim($result['Processor_Model']);
+		            if (stripos($wipeProcessorname, $dbProcessormodel) !== FALSE)
+		            {
+		                $return = $result;
+		                break;
+		            }
+		        }
+		    }
+		    if (!empty($return))
+		    {
+		        return $return;
+		    }
+		    else
+		    {
+		        return $results;
+		    }
 		}
 
 		public function inventoryCSV(Request $request)
