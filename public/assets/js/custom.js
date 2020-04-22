@@ -1,12 +1,10 @@
 // Remove Validation from AddUpdate Package in Inbound section  
-$(document).on('change ,keyup , load, blur' , "#newPackageForm input, #newPackageForm select" , function()
-{ 
+$(document).on('change ,keyup , load, blur' , "#newPackageForm input, #newPackageForm select" , function(){ 
 	removeErrorMessage(this);
 });
 
 // This id for Inbound Section for package AddUpdate Form submit
-$(document).ready(function () 
-{
+$(document).ready(function () {
 	$('.datepicker').datepicker({format: "yyyy-mm-dd"}); 
 	
 	// $(".daterange").daterangepicker({
@@ -26,40 +24,40 @@ $(".daterange").daterangepicker({
 });
 
 $('#newPackageForm').validate({
-	rules: { 
-		expected_arrival: {
-			required: true
+		rules: { 
+			expected_arrival: {
+				required: true
+			},
+			description: {
+				required: true,
+			},
+			req_name: {
+				required: true,
+			},
+			tracking_number: {
+				required: true,
+			},
+			order_date: {
+				required: true,
+			},
+			carrier: {
+				required: true,
+			},
+			freight_ground: {
+				required: true,
+			},
+			qty:{
+				required: true,
+				number: true
+			},
+			value:{
+				number: true
+			} 
 		},
-		description: {
-			required: true,
-		},
-		req_name: {
-			required: true,
-		},
-		tracking_number: {
-			required: true,
-		},
-		order_date: {
-			required: true,
-		},
-		carrier: {
-			required: true,
-		},
-		freight_ground: {
-			required: true,
-		},
-		qty:{
-			required: true,
-			number: true
-		},
-		value:{
-			number: true
-		} 
-	},
-	submitHandler: function() {  
-		addUpdatePackage(event, 'addupdatepackage');
-	}
-}); 
+		submitHandler: function() {  
+			addUpdatePackage(event, 'addupdatepackage');
+		}
+	}); 
 });
 
 // Ajax for WipeReport section To get the report of entered Lot number. 
@@ -99,7 +97,7 @@ $(window).keydown(function (event)
 					html += "<h2> Total Files : "+ response.total_file_count +" </h2>";
 					html += "<h3> Wipe Files : "+ response.wipe_files_count +" </h3>"
 					html += "<h3> Blancco Files : "+ response.blancco_files_count +" </h3>"
-					html += "</div><div>";
+					html += "</div><div class='row'>";
 
 					if(response.total_file_count > 0 )
 					{
@@ -119,29 +117,29 @@ $(window).keydown(function (event)
 
 					if(response.wipe_files_count > 0 )
 					{
-						html += '<form method="post" id="search-wipe-form-wipe" autocomplete="off" action = "'+ response.report_form_submit_url +'">';
+						html += '<form method="post" style="margin-left:10px" id="search-wipe-form-wipe" autocomplete="off" action = "'+ response.report_form_submit_url +'">';
 						html += '<input type="hidden" name="_token" value="'+_token+'">';
 						$.each(response.wipe_files, function (key, value)
 						{
 							html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
 						});
-						html += "<button class='btn btn-primary' type='submit'> Download Wipe Files txt/pdf/csv </button>";
+						html += "<button class='btn btn-primary' type='submit'> Download Wipe Files (txt/pdf/csv) </button>";
 						html += '</form>';
 					}
 
 					if(response.blancco_files_count > 0 )
 					{
-						html += '<form method="post" id="search-wipe-form-blancco" autocomplete="off" action = "'+ response.report_form_submit_url +'" >';
+						html += '<form method="post" style="margin-left:10px" id="search-wipe-form-blancco" autocomplete="off" action = "'+ response.report_form_submit_url +'" >';
 						html += '<input type="hidden" name="_token" value="'+_token+'">';
 						$.each(response.blancco_files, function (key, value)
 						{
 							html += '<input type="hidden" value="' + value.path + '" name="wipefiles[]"/>';
 						});
-						html += "<button class='btn btn-primary' type='submit'> Download Blancco Files pdf</button>";
+						html += "<button class='btn btn-primary' type='submit'> Download Blancco Files (pdf)</button>";
 						html += '</form>';
 					}
 
-					html += '<a class="btn btn-primary" href="javascript:Void(0)" data-toggle="modal" data-target="#SearchAssetModal">Advance Search</a>';
+					html += '<a style="margin-left:10px" class="btn btn-primary" href="javascript:Void(0)" data-toggle="modal" data-target="#SearchAssetModal">Advance Search</a>';
 					html += "</div>";
 					$("#wipe-report-result").append(html);
 				}
