@@ -10,18 +10,16 @@ function getModels(fId)
 		out.insertAfter(inp);
 		$.get("/"+prefix+"/getmodels?tgt="+fId+"&part="+data+"&tab=&tech=&t="+Math.random(), function(data)
 		{
-			console.log(data);
-
-			// if(data)
-			// {
-			// 	$("#hints").html(data);
-			// 	modelSet = false;
-			// 	out.show()
-			// }
-			// else
-			// {
-			// 	out.hide();
-			// }
+			if(data)
+			{
+				$("#hints").html(data);
+				modelSet = false;
+				out.show();
+			}
+			else
+			{
+				out.hide();
+			}
 		});
 	}
 	else
@@ -33,7 +31,7 @@ function getModels(fId)
 function getModelData(mid,asin)
 {
 	$("#uhint").hide();
-	$.get(""+prefix+"/setmodelid?mid="+mid+"&asin="+asin+"&t="+Math.random(), function(data)
+	$.get("/"+prefix+"/setmodelid?mid="+mid+"&asin="+asin+"&t="+Math.random(), function(data)
 	{
 		if(data=='OK')
 		{
@@ -41,7 +39,7 @@ function getModelData(mid,asin)
 		}
 		else
 		{
-			showSweetAlertMessage('error', data, 'error');
+			showSweetAlertMessage('Error', data, 'error');
 		}
 	});
 }
@@ -173,7 +171,7 @@ $(document).ready(function ()
 		$("input[type=checkbox]").prop('checked', $(this).prop('checked'));
 	});
 
-	$(".sync-to-shopify").click(function (e) {
+	$(document).on('click', ".sync-to-shopify", function (e) {
 		e.preventDefault();
 		var ids = [];
 		var that = $(this);
@@ -210,7 +208,7 @@ $(document).ready(function ()
 			}
         });
 	});
-	$(".update-price-to-shopify").click(function (e) {
+	$(document).on('click',".update-price-to-shopify",function (e) {
 		e.preventDefault();
 		var id = $(this).data('id');
 		var that = $(this);

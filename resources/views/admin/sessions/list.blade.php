@@ -65,7 +65,7 @@
 						<th>Count</th>
 					</tr>
 				</thead>
-				<tbody>	
+				<tbody>
 					@foreach($items as $i)
 						<tr>
 							<td><a href="javascript:void(0);" onclick="$('.assets{{$i['aid']}}').toggle();">{{$i["asin"]}}</a></td>
@@ -101,12 +101,7 @@
 										@endforeach
 										(click to restore)
 									@endif
-								</td>
-								<td style="display: none;"></td>
-								<td style="display: none;"></td>
-								<td style="display: none;"></td>
-								<td style="display: none;"></td>
-								<td style="display: none;"></td>
+								</td>								
 							</tr>
 						@endif
 					@endforeach

@@ -107,7 +107,7 @@
     @if (!empty($shopifyPriceData))
         <div class="show_all_record" style="display: none">
             <h2> Shopify product data </h2>
-            <table id="itmag-import-lits" class="display table-responsive" style="width:100%">
+            <table id="itmag-import-lits" class="display table table-bordered table-striped table-responsive" style="width:100%">
                 <thead>
                     <tr>
                         <th>Asset ID</th>

@@ -418,11 +418,11 @@ function setVideo(hasCrd)
 
 function getModels(fId)
 {
-	var inp=$("#"+fId);
-	var out=$("#uhint");
+	var inp = $("#"+fId);
+	var out = $("#uhint");
 	var cTab = $('input[name="radio_2"]:checked').val();
 	var cTech = encodeURIComponent($('input[data-technology="1"]:checked').val());
-	var data=encodeURIComponent(inp.val());
+	var data = encodeURIComponent(inp.val());
 	var position = inp.position();
 	if (data.length>1)
 	{
@@ -436,7 +436,7 @@ function getModels(fId)
 			{
 				$("#hints").html(data);
 				modelSet = false;
-				out.show()
+				out.show();
 			}
 			else
 			{
@@ -622,22 +622,6 @@ $(document).ready(function()
 			}
 		}
 	});
-
-	$('#package-table, #asinInventryTable').DataTable
-	({
-		"searching": false,
-		"bPaginate": false,
-		"bLengthChange": false,
-		"bFilter": true,
-		"bInfo": false,
-		"bAutoWidth": false
-	});
-
-	$('#lookup').DataTable
-	({
-		"searching": false,
-		"bPaginate": false, 
-	}); 
 
 	if($('#supplie').length > 0)
 	{

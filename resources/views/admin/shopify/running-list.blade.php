@@ -18,77 +18,25 @@
             <input type="hidden" name="reunlistsyns" value="true">      
         </div>
 	</div>
-        <table class="table table-striped table-condensed table-hover">
-            <tr>
-                <th><input type="checkbox" class="check-all-ids" name="all_asin_sync"></th>
-                <th>ASIN</th>
-                <th>Model</th>
-                <th>Form Factor</th>
-                <th>CPU</th>
-                <th>Price</th>
-                <th>Asset</th>
-                <th>Added On</th>
-                <th>Count</th>
-                <th>Update to Shopify</th>
-                <th>Images</th>
-                <th>Shopify Product ID</th>
-                <th>Price Diff on Shopify </th>
-            </tr>
-            @foreach ($runningList as $i)
-                <tr style="font-weight: bold">
-                    <td>
-                        @if (empty($i["shopify_product_id"]))
-                            <input id="cb-select-{{$i["asin"]}}" type="checkbox" name="sync-all-ids[]" value="{{$i["asin"]}}">
-                        @endif
-                    </td>
-                    <td><a href="javascript:void(0)" onclick="$('.asin{{$i["aid"]}}').toggle()">{{$i["asin"]}}</a></td>
-                    <td>{{$i["model"]}}</td>
-                    <td>{{$i["form_factor"]}}</td>
-                    <td>{{$i["cpu_core"]}} {{$i["cpu_model"]}} CPU @ {{htmlspecialchars($i["cpu_speed"]) }}</td>
-                    <td>{{$i["price"]}}</td>
-                    <td colspan=2>&nbsp;</td>
-                    <td>{{$i["cnt"]}}</td>
-                    <td>
-                        @if ($i["shopify_product_id"])
-                            <button class="btn btn-link sync-to-shopify" data-id="{{$i["asin"]}}">Update</button>
-                        @endif
-                    </td>
-                    <td>
-                        @php
-                        $allImages = glob($asinImages.'/'. $i["asin"] . '*');
-                        if (empty($allImages)) { @endphp
-                            N/A
-                        @php } else { @endphp
-                            Available
-                        @php } @endphp
-                    </td>
-                    <td>{{$i["shopify_product_id"]}}</td>
-                    <td style="text-align: center;">
-                        @if ($i["shopify_product_id"])
-                            @if ($i["priceData"] && $i["priceData"]['diffrence'] != 0)
-                                Shopify Price: $ {{$i["priceData"]['shopify_price']}} <br>
-                                Final Price: $  {{$i["priceData"]['final_price']}} <br>
-                                Diffrence: $  {{$i["priceData"]['diffrence']}} <br>
-                                <button class="btn btn-link update-price-to-shopify" data-id="{{$i["asin"]}}">Update Price</button>
-                            @endif
-                        @endif
-                    </td>
+        <table style="background: white;" id="itamg-running-list" class="itamg-running-list table table table-bordered table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" class="check-all-ids" name="all_asin_sync"></th>
+                    <th>ASIN</th>
+                    <th>Model</th>
+                    <th>Form Factor</th>
+                    <th>CPU</th>
+                    <th>Price</th>
+                    <th>Asset</th>
+                    <th>Added On</th>
+                    <th>Count</th>
+                    <th>Update to Shopify</th>
+                    <th>Images</th>
+                    <th>Shopify Product ID</th>
+                    <th>Price Diff on Shopify </th>
                 </tr>
-                @foreach ($i['items'] as $a)
-                    <tr style="display: none;" class="asin{{$i["aid"] }}">
-                        <td>{{ $a["asin"] }}</td>
-                        <td>{{ $a["model"] }}</td>
-                        <td>{{ $a["form_factor"] }}</td>
-                        <td>{{ $a["cpu_core"]}} {{$a["cpu_model"] }} CPU @ {{htmlspecialchars($a["cpu_speed"])}}</td>
-                        <td>{{ number_format($a["price"], 2) }}</td>
-                        <td>{{ $a["asset"] }}</td>
-                        <td>{{ $a["added_on"] }}</td>
-                        <td><a onclick="return confirm('Are you sure want to delete this?');" href="{{route('running.list',['pageaction' => request()->get('pageaction'),'remove' => $a["asset"], 't' => time()])}}"><span class="fa fa-trash"></span></a></td>
-                    </tr>
-                @endforeach
-            @endforeach
+            </thead>            
         </table>
-        {!! $runningList->appends(request()->input())->links() !!}
     @endif
     <div style="text-align: right">
         <b>Total Count: {{$tcnt}}</b>

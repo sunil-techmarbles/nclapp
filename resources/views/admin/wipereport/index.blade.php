@@ -6,7 +6,7 @@
         Wipe Report
     </div>
     <ul class="wipeReportNav">
-      <li> <a href="{{route('getwipereportfilescount')}}" class="btn btn-info">Reporting</a></li>
+      <li> <a href="{{route('getwipereportfilescount',['pageaction' => request()->get('pageaction')])}}" class="btn btn-info">Reporting</a></li>
    </ul>
         <div class="noprint text-center">
             <div class='formitem'>

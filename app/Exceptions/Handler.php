@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
             {
                 // not found
                 case 404:
-                    return redirect()->route('dashboard');
+                    return redirect()->route('dashboard')->with('error','Data is not found');
                     break;
                 // internal error
                 case 500:

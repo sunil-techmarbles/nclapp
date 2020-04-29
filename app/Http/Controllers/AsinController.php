@@ -395,8 +395,14 @@ class AsinController extends Controller
         $allParts = resultInReadableform(
             Supplies::getAllPartsSpecificFields($specificFields, $orderBy='item_name', $asinID)
         );
-        return view('admin.asin.parts', compact('asinsParts','qty','parts','models','departments','allParts'));
-        abort('404');
+        if($asinsParts)
+        {
+            return view('admin.asin.parts', compact('asinsParts','qty','parts','models','departments','allParts'));
+        }
+        else
+        {
+            abort('404');
+        }
     }
 
     public function deleteAsin(Request $request, $asinID)
@@ -419,7 +425,20 @@ class AsinController extends Controller
     public function PartLookup(Request $request)
     {   
         $models = Asin::getAsinLookupFields();
-        return view ('admin.partslook.list', compact('models'));
+        foreach ($models as $key => $model)
+        {
+            $models[$key]['url'] = route('parts.asin',['pageaction' => $request->pageaction,'id' => $model->id]);
+        }
+
+        if($request->dtable)
+        {
+            $v = DataTables::of($models)->make(true);
+            return $v;
+        }
+        else
+        {
+            return view ('admin.partslook.list', compact('models'));
+        }
     }
 
     public function getASINNumber(Request $request)

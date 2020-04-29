@@ -85,7 +85,7 @@ Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 		Route::get('/editasin','AsinController@editAsin')->name('edit.asin');
 		Route::any('/asinparts','AsinController@partsAsin')->name('parts.asin');
 		Route::get('/deleteasin/{asinid}','AsinController@deleteAsin')->name('delete.asin');
-		Route::get('/partlookup','AsinController@PartLookup')->name('part.lookup');
+		Route::any('/partlookup','AsinController@PartLookup')->name('part.lookup');
 		// Refurb Section
 		Route::get('/refurb','RefurbController@index')->name('refurb');
 		Route::get('/getasset','RefurbController@getAsset')->name('get.asset');

@@ -3,13 +3,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\request;
 use App\SessionData;
+use DataTables;
 use App\Exports\AsinInventryExport;
 use Excel;
 
 class AsinInventryController extends Controller
 {
 
-	public function index()
+	public function index(Request $request)
 	{
 		$assets = [];
 		$items = SessionData::getAsinInventrySectionData();
@@ -22,7 +23,23 @@ class AsinInventryController extends Controller
 				$assets['asin'.$asst['aid']][$asst['status']][] = $asst['asset'];
 			}
 		}
-		return view('admin.asininventry.index', compact('items', 'assets'));
+		foreach ($items as $key => $item)
+		{
+			$items[$key]['assets'] = [];
+			if ( !empty($assets['asin'.$item->aid]['active']) )
+			{
+				$items[$key]['assets'] = $assets['asin'.$item->aid]['active'];
+			}
+		}		
+		if($request->dtable)
+		{
+            $v = DataTables::of($items)->make(true);
+            return $v;
+		}
+		else
+		{
+			return view('admin.asininventry.index', compact('items', 'assets'));
+		}
 	}
 
 	public function RemoveAsset(Request $request)

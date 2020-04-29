@@ -1,5 +1,5 @@
 @extends('layouts.appadminlayout')
-@section('title', 'ASINs Parts')
+@section('title', 'ASIN Parts')
 @section('content')
 <div class="mte_content itmg-asin">
 	<div class="container itmg-asin-parts">
@@ -26,7 +26,7 @@
 					<button class="btn btn-warning" name="withdraw" value="1" type="submit">Withdraw</button>
 				</div>
 			</div>
-			<table class="table table-striped table-condensed table-hover">
+			<table class="table table-bordered table-striped">
 				<tr>
 					<th>Part Num</th>
 					<th>Part Name</th>
@@ -63,25 +63,29 @@
 				</form>
 			@endif
 		</div>
-		<table id="mlookup" style="display:none;background-color: #eceef2;" class="table table-striped table-condensed table-hover">
-			<tr>
-				<th>ASIN</th>
-				<th>Model</th>
-				<th>Form Factor</th>
-				<th>CPU</th>
-				<th>RAM</th>
-				<th>HDD</th>
-			</tr>
-			@foreach($models as $m)
-			<tr style="cursor: pointer" class="mdlrow" data-model="{{strtolower($m['asin'].$m['model'])}}" onclick="location.href = '{{route("parts.asin", ['pageaction' => request()->get('pageaction'), 'id' => $m["id"]])}}'">
-				<td>{{$m['asin']}}</td>
-				<td>{{$m['model']}}</td>
-				<td>{{$m['form_factor']}}</td>
-				<td>{{$m['cpu_core']}} {{$m['cpu_model']}} {{$m['cpu_speed']}}</td>
-				<td>{{$m['ram']}}</td>
-				<td>{{$m['hdd']}}</td>
-			</tr>
-			@endforeach
+		<table id="mlookup" style="display:none;background-color: #eceef2;" class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>ASIN</th>
+					<th>Model</th>
+					<th>Form Factor</th>
+					<th>CPU</th>
+					<th>RAM</th>
+					<th>HDD</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach($models as $m)
+				<tr style="cursor: pointer" class="mdlrow" data-model="{{strtolower($m['asin'].$m['model'])}}" onclick="location.href = '{{route("parts.asin", ['pageaction' => request()->get('pageaction'), 'id' => $m["id"]])}}'">
+					<td>{{$m['asin']}}</td>
+					<td>{{$m['model']}}</td>
+					<td>{{$m['form_factor']}}</td>
+					<td>{{$m['cpu_core']}} {{$m['cpu_model']}} {{$m['cpu_speed']}}</td>
+					<td>{{$m['ram']}}</td>
+					<td>{{$m['hdd']}}</td>
+				</tr>
+				@endforeach
+			</tbody>
 		</table>
 		<div style="margin-bottom: 10px" class="show-hide-btn">
 			<button class="btn btn-default" onclick="$('#all_parts').toggle()">Show/Hide Parts ({{$asinsParts['model']}} ({{$asinsParts['asin']}})
@@ -91,7 +95,7 @@
 			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
 			<input type="hidden" name="id" value="{{$asinsParts['id']}}"/>
 			<div style="height:600px;overflow: auto">
-				<table style="background-color: #eceef2;" class="table table-striped table-condensed table-hover">
+				<table style="background-color: #eceef2;" class="table table-bordered table-striped">
 					<tr>
 						<th>Part Number</th>
 						<th>Part Name</th>

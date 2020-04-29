@@ -12,7 +12,7 @@
 			</div>
 		</div>
 	</form>
-	<table id="lookup" class="table">
+	<table id="lookup" class="table lookup table-bordered table-striped">
 		<thead>
 			<th>ASIN</th>
 			<th>Model</th>
@@ -20,19 +20,7 @@
 			<th>CPU</th>
 			<th>RAM</th>
 			<th>HDD</th>
-		<thead>
-		<tbody> 
-			@foreach( $models as $model )
-			<tr style="cursor: pointer" class="mdlrow" data-model="@php echo strtolower( $model->asin . $model->model ); @endphp" onclick="location.href = '{{route('parts.asin',['pageaction' => request()->get('pageaction'),'id' => $model->id])}}'">
-				<td>{{ $model->asin }} </td>
-				<td>{{ $model->model }}</td>
-				<td>{{ $model->form_factor }}</td>
-				<td>{{ $model->cpu_core }} {{ $model->cpu_model }} {{ $model->cpu_speed }}</td>
-				<td>{{ $model->ram }}</td>
-				<td>{{ $model->hdd }}</td>
-			</tr>
-			@endforeach 
-		</tbody>
+		</thead>
 	</table>
 </div>
 @endsection
