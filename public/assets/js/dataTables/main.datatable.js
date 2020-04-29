@@ -572,20 +572,6 @@ $(document).ready(function(){
         "aoColumnDefs": itamgSort,
         "lengthMenu": itamgLength,
     });
-
-    partLookups.on( 'xhr', function () {
-	    var json = partLookups.ajax.json();
-		if(json.data.length > 0)
-		{
-			setTimeout(function(){
-				$.each(json.data, function( index, value ) {
-					var url = value.url;
-					var id = value.id;
-					$('tr.asin'+id).attr("data-url",url)
-				});
-			}, 300);
-		}
-	});
 })
 
 function asinShopifyInventoryIist(argument,el,asinClass)
@@ -642,22 +628,6 @@ function asinInventoryItems(argument,el,asinClass)
   	html = html.concat('<td colspan="6"><b>Asset Numbers:</b>'+argument.toString()+'</td>');
 	html = html.concat('</tr>');
 	$(html).insertAfter(el+' tr.'+asinClass);
-}
-
-function addListener(element, eventName, handler, handlerValue)
-{
-	if (element.addEventListener)
-	{
-		element.addEventListener(eventName, handler, false);
-	}
-	else if (element.attachEvent)
-	{
-		element.attachEvent('on' + eventName, handler);
-	}
-	else
-	{
-		element['on' + eventName] = handler;
-	}
 }
 
 $(document).on('click','.partslookup-asin', function (argument) {
