@@ -44,13 +44,7 @@ class InventryEmail extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $subject = 'Inventry:email '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for Inventry:email', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+    {        
         $reorderQty = 0;
         $dt = date("Y-m-d",strtotime("-7 days"));
         $supplyDatas = Supplies::getEmailsAndSupplyrecord($dt);
@@ -77,7 +71,7 @@ class InventryEmail extends Command
                 {
                     array_push($user, $value['email']);
                 }
-                if(sizeof($user) > 0)
+                if(sizeof($user) > 0 && $r['dlv_time'] && $r["item_name"] && $r["vendor"] && $r["part_num"] && $r["qty"])
                 {
                     $current = Carbon::now();
                     Supplies::updateMailSentTime($r["id"],$current);
