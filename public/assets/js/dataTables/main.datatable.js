@@ -1,8 +1,14 @@
 $(document).ready(function(){
+	$.extend( $.fn.dataTable.defaults, {
+	    language: {
+	        processing: "Loading. Please wait..."
+	    },
+	 
+	});
 	$('#supplies-list').DataTable({
-        "processing" : true,
-        "serverSide" : true,
-        "ajax" : {
+        processing : true,
+        serverSide : true,
+        ajax : {
             url:'/'+prefix+'/supplies?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
@@ -31,13 +37,13 @@ $(document).ready(function(){
 			{ 'data': 'dlv_time' },
         ],        
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
     $('#asins-list').DataTable({
-        "processing" : true,
-        "serverSide" : true,
-        "ajax" : {
+        processing : true,
+        serverSide : true,
+        ajax : {
             url:'/'+prefix+'/asin?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
@@ -68,13 +74,13 @@ $(document).ready(function(){
 			{ 'data': 'webcam' },
         ],        
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
     $('#users-table').DataTable({
-        "processing" : true,
-        "serverSide" : true,
-        "ajax" : {
+        processing : true,
+        serverSide : true,
+        ajax : {
             url:'/'+prefix+'/users?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
@@ -89,29 +95,30 @@ $(document).ready(function(){
         		var html = '<span class="'+row.verifiedclass+'">'+row.verifiedtext+'</span>';
 	            if(row.verifiedcheck)
 	            {
-        			html = html.concat('<a href="javascript:void(0)" onclick="verifyuser('+row.id+','+row.verified+','+row.verifyuser+')"><i class="fa fa-check" aria-hidden="true"></i></a>')
+        			html = html.concat('<a href="javascript:void(0)" title="Verified User" onclick="verifyuser('+row.id+','+row.verified+','+row.verifyuser+')"><i class="fa fa-check" aria-hidden="true"></i></a>')
 	            }
 	            return html;
             }},
 			{ 'data': 'role' },
         ],        
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
     var itamgShopifyInventoryIist = $('#main-table').DataTable({
-        "processing" : true,
-        "serverSide" : true,
-        "responsive" : true,
-        "order": [[ 1, "desc" ]],
-        "ajax" : {
+    	responsive: true,
+		autoWidth: false,
+        processing : true,
+        serverSide : true,        
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+prefix+'/inventory?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
         "rowCallback": function( row, data ) {
         	let shopifyProductId = (data.shopify_product_id) ? 'no' : 'yes';
         	$(row).css('font-weight','bold');
-        	$(row).addClass("nlrow");
+        	// $(row).addClass("nlrow");
         	$(row).addClass(data.asin);
         	$(row).attr("data-img",data.images);
         	$(row).attr("data-mdl",data.model);
@@ -120,12 +127,12 @@ $(document).ready(function(){
         	$(row).attr("data-cpu",data.cpg);
         	$(row).attr("data-synced",shopifyProductId);
 		},
-		"columnDefs": [
+		columnDefs: [
 		{
-			'targets': 0,
-			'searchable': false,
-			'orderable': false,
-			'className': 'dt-body-center',
+			targets: 0,
+			searchable: false,
+			orderable: false,
+			defaultContent: "",
 			render: function (full, type, data, meta){
 				var html = '';
 				if(data.shopify_product_id == '' && data.mid != '')
@@ -136,16 +143,16 @@ $(document).ready(function(){
 			}
 		},
 		{
-			'targets': 1,
+			targets: 1,
 			render: function (full, type, data, meta){
 				return data.asin
 			}
 		},
 		{
-			"targets": 2,
-			'searchable':false,
-			'orderable':false,
-			'className': 'asin-items',
+			targets: 2,
+			searchable:false,
+			orderable:false,
+			defaultContent: "",
 			render: function (full, type, data, meta){
 				var itamgasinclass = "'.asin"+data.asin+"'";
 				var html = '<a href="javascript:void(0);" onclick="$('+itamgasinclass+').toggle()">'+data.model+'</a>';
@@ -153,19 +160,17 @@ $(document).ready(function(){
 			},
 		},
 		{
-			'targets': 3,
-			'searchable': false,
-			'orderable': false,
-			'className': 'dt-body-center',
+			targets: 3,
+			searchable: false,
+			orderable: false,
 			render: function (full, type, data, meta){
 				return data.technology;
 			}
 		},
 		{
-			"targets": 4,
-			'searchable': false,
-			'orderable': false,
-			'className': 'dt-body-center',
+			targets: 4,
+			searchable: false,
+			orderable: false,
 			render: function (full, type, data, meta){
 				var html = data.cpg+' ('+data.cpus+' CPUs)';
 				return html;
@@ -173,13 +178,13 @@ $(document).ready(function(){
 		},
 		
 		{
-			'targets': 7,
+			targets: 7,
 			render: function (full, type, data, meta){
 				return data.cnt;
 			}
 		},
 		{
-			'targets': 8,
+			targets: 8,
 			render: function (full, type, data, meta){
 				var itamgasinclass = "'#mid"+data.asin+"'";
 				var html = '<span style="cursor:pointer" onclick="$('+itamgasinclass+').toggle()">Specify Model</span><div style="display: none;position:absolute" id="mid'+data.asin+'"><input class="form-control" type="text" id="model'+data.asin+'" onkeyup="getModels(this.id)"/></div>';
@@ -191,7 +196,7 @@ $(document).ready(function(){
 			}
 		},
 		{
-			'targets': 9,
+			targets: 9,
 			render: function (full, type, data, meta){
 				var html = '';
 				if (data.shopify_product_id)
@@ -202,20 +207,18 @@ $(document).ready(function(){
 			}
 		},
 		{
-			'targets': 10,
-			'searchable': false,
-			'orderable': false,
-			'className': 'dt-body-center',
+			targets: 10,
+			searchable: false,
+			orderable: false,
 			render: function (full, type, data, meta){
 				var html = data.images;					
 				return html;
 			}
 		},
 		{
-			"targets": 11,
-			'searchable':false,
-			'orderable':false,
-			'className': 'dt-body-center',			
+			targets: 11,
+			searchable:false,
+			orderable:false,
 			render: function(full, type, data, meta){
 				var html = data.price_display;
 				if(data.price_display == 'N/A')
@@ -226,26 +229,24 @@ $(document).ready(function(){
 			}
 		},
 		{
-			'targets': 12,
-			'searchable': false,
-			'orderable': false,
-			'className': 'dt-body-center',
+			targets: 12,
+			searchable: false,
+			orderable: false,
 			render: function (full, type, data, meta){
 				var html = '';
 				if (data.shopify_product_id)
 				{
 					html = '<a href="'+data.inventoryUrl+'">'+data.shopify_product_id+'</a>';
 				}
-				return html;
-				
+				return html;				
 			}
 		},
 		{
-			"targets": 13,
-			'searchable':false,
-			'orderable':false,
-			'className': 's_price',
-			'vissible': false,
+			targets: 13,
+			searchable:false,
+			orderable:false,
+			className: 's_price',
+			vissible: false,
 			render: function (full, type, data, meta){
 				var html = '';
 				if (data.checkItamgPriceDiff)
@@ -259,35 +260,37 @@ $(document).ready(function(){
 			}
 		},
 		{
-			"targets": [5,6],
-			"searchable": false,
-			'orderable':false,
-			'className': 'dt-body-center',
+			targets: [5,6],
+			searchable: false,
+			orderable:false,
 			render: function (data, type, row, meta){
 				return '';
 			}
 		},
 		],
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
 	var itamgRunningIist = $('#itamg-running-list').DataTable({
-        "processing" : true,
-        "serverSide" : true,        
-        "order": [[ 1, "desc" ]],
-        "ajax" : {
+		responsive: true,
+		autoWidth: false,
+        processing : true,        
+        serverSide : true,        
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+prefix+'/runninglist?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
         rowCallback: function( row, data ){
         	$(row).addClass(data.aid);
 		},
-		"columnDefs": [
+		columnDefs: [
 			{
-				"targets": 0,
-				"searchable":false,
-			    "orderable":false,
+				targets: 0,
+				searchable:false,
+			    orderable:false,
+			    defaultContent: "",
 				render: function (data, type, row, meta){
 					var html = '';
 	        		if(row.shopify_product_id == '' && row.mid != '')
@@ -298,7 +301,8 @@ $(document).ready(function(){
 		        },
 			},
 			{
-				"targets": 1,
+				targets: 1,
+				defaultContent: "",
 				render: function (data, type, row, meta){
 					var itamgasinclass = "'.asin"+row.aid+"'";					
             		var html = '<a href="javascript:void(0);" onclick="$('+itamgasinclass+').toggle()">'+row.asin+'</a>';
@@ -306,50 +310,50 @@ $(document).ready(function(){
 		        },
 			},
 			{
-				"targets": 2,
+				targets: 2,
 				render: function (data, type, row, meta){
 		            return row.model;
 		        }
 			},
 			{
-				"targets": 3,
+				targets: 3,
 				render: function (data, type, row, meta){
 					return row.form_factor;
 		        }
 			},
 			{
-				"targets": 4,
+				targets: 4,
 				render: function (data, type, row, meta){
 					var html = row.cpu_core+row.cpu_model+' CPU @ '+row.cpu_speed;
 		            return html;
 		        }
 			},
 			{
-				"targets": 5,
+				targets: 5,
 				render: function (data, type, row, meta){
 		            return row.price;
 		        }
 			},
 			{
-				"targets": 6,
+				targets: 6,
 				render: function (data, type, row, meta){
 		            return '';
 		        }
 			},
 			{
-				"targets": 7,
+				targets: 7,
 				render: function (data, type, row, meta){
 		            return '';
 		        }
 			},
 			{
-				"targets": 8,
+				targets: 8,
 				render: function (data, type, row, meta){
 		            return row.cnt;
 		        }
 			},
 			{
-				"targets": 9,
+				targets: 9,
 				render: function (data, type, row, meta) {
 					var html = '';
 					if (row.shopify_product_id)
@@ -360,19 +364,19 @@ $(document).ready(function(){
 				}
 			},
 			{
-				"targets": 10,
+				targets: 10,
 				render: function (data, type, row, meta){
 		            return row.images;
 		        }
 			},
 			{
-				"targets": 11,
+				targets: 11,
 				render: function (data, type, row, meta){
 		            return row.shopify_product_id;
 		        }
 			},
 			{
-				"targets": 12,
+				targets: 12,
 				render: function (data, type, row, meta){
 		            var html = '';
 					if (row.checkItamgPriceDiff)
@@ -386,8 +390,8 @@ $(document).ready(function(){
 		        }
 			},
 		],        
-        "aoColumnDefs": itamgSort,
-        "lengthMenu": itamgLength,
+        aoColumnDefs: itamgSort,
+        lengthMenu: itamgLength,
     });
 	
 	itamgRunningIist.on( 'xhr', function () {
@@ -445,19 +449,22 @@ $(document).ready(function(){
 	});
 
 	var asinInventryTableItmg = $('#asinInventryTable-Itmg').DataTable({
-        "processing" : true,
-        "serverSide" : true,        
-        "order": [[ 1, "desc" ]],
-        "ajax" : {
+		responsive: true,
+		autoWidth: false,
+        processing : true,
+        serverSide : true,             
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+prefix+'/asininventry?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
         rowCallback: function( row, data ){
         	$(row).addClass(data.aid);
 		},
-		"columnDefs": [
+		columnDefs: [
 			{
-				"targets": 0,
+				targets: 0,
+				defaultContent: "",
 				render: function (data, type, row, meta){
 					var cc = "'.asset"+row.aid+"'";
 					var html = '<a href="javascript:void(0);" onclick="$('+cc+').toggle();">'+row.asin+'</a>';
@@ -465,39 +472,39 @@ $(document).ready(function(){
 		        },
 			},
 			{
-				"targets": 1,
+				targets: 1,
 				render: function (data, type, row, meta){
 		            return row.model;
 		        }
 			},
 			{
-				"targets": 2,
+				targets: 2,
 				render: function (data, type, row, meta){
 					return row.form_factor;
 		        }
 			},
 			{
-				"targets": 3,
+				targets: 3,
 				render: function (data, type, row, meta){
 					var html = row.cpu_core+row.cpu_model+' CPU @ '+row.cpu_speed;
 		            return html;
 		        }
 			},
 			{
-				"targets": 4,
+				targets: 4,
 				render: function (data, type, row, meta){
 		            return row.price;
 		        }
 			},
 			{
-				"targets": 5,
+				targets: 5,
 				render: function (data, type, row, meta){
 		            return row.cnt;
 		        }
 			},
 		],        
-        "aoColumnDefs": itamgSort,
-        "lengthMenu": itamgLength,
+        aoColumnDefs: itamgSort,
+        lengthMenu: itamgLength,
     });
 	
 	asinInventryTableItmg.on( 'xhr', function () {
@@ -515,62 +522,65 @@ $(document).ready(function(){
 	});
 
 	var partLookups = $('#lookup').DataTable({
-        "processing" : true,
-        "serverSide" : true,        
-        "order": [[ 1, "desc" ]],
-        "ajax" : {
+		responsive: true,
+		autoWidth: false, 
+        processing : true,
+        serverSide : true,             
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+prefix+'/partlookup?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
         rowCallback: function( row, data ){
         	$(row).css('cursor','pointer');
-        	$(row).addClass("mdlrow partslookup-asin");
+        	$(row).addClass("partslookup-asin");
         	$(row).addClass(data.asin);
         	$(row).addClass('asin'+data.id);
         	$(row).attr("data-model",data.asin.toLowerCase()+data.model.toLowerCase());
         	$(row).attr("data-url",data.url);
 		},
-		"columnDefs": [
+		columnDefs: [
 			{
-				"targets": 0,
+				targets: 0,
+				defaultContent: "",
 				render: function (data, type, row, meta){
 					var html = '<a href="javascript:void(0);" onclick="location.href = '+"'"+row.url+"'"+'">'+row.asin+'</a>';
 		            return html;
 		        },
 			},
 			{
-				"targets": 1,
+				targets: 1,
 				render: function (data, type, row, meta){
 		            return row.model;
 		        }
 			},
 			{
-				"targets": 2,
+				targets: 2,
 				render: function (data, type, row, meta){
 					return row.form_factor;
 		        }
 			},
 			{
-				"targets": 3,
+				targets: 3,
 				render: function (data, type, row, meta){
 					return row.cpu_core+row.cpu_model+row.cpu_speed;
 		        }
 			},
 			{
-				"targets": 4,
+				targets: 4,
 				render: function (data, type, row, meta){
 		            return row.ram;
 		        }
 			},
 			{
-				"targets": 5,
+				targets: 5,
 				render: function (data, type, row, meta){
 		            return row.hdd;
 		        }
 			},
 		],        
-        "aoColumnDefs": itamgSort,
-        "lengthMenu": itamgLength,
+        aoColumnDefs: itamgSort,
+        lengthMenu: itamgLength,
     });
 })
 

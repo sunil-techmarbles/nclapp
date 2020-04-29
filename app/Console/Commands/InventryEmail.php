@@ -81,7 +81,7 @@ class InventryEmail extends Command
                         array_push($user, $value['email']);
                     }
                 }
-                if(sizeof($user) > 0)
+                if(sizeof($user) > 0 && $r['dlv_time'] && $r["item_name"] && $r["vendor"] && $r["part_num"] && $r["qty"])
                 {
                     $current = Carbon::now();
                     Supplies::updateMailSentTime($r["id"],$current);

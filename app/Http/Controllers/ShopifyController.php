@@ -263,160 +263,6 @@ class ShopifyController extends Controller
 
 		$priceList = [];
 		$productIds = [];
-		$productsUrl = $this->baseUrl."/admin/api/2019-04/products.json?limit=250";
-		try
-		{
-			$products = json_decode(file_get_contents($productsUrl),true);
-		}
-		catch (\Exception $e)
-		{
-			$message = $e->getCode().' '.$e->getMessage();
-			\Session::flash('error', $message);
-		}
-		if(!empty($products['products']))
-		{
-			foreach($products['products'] as $p)
-			{
-				if(!empty($p['variants'][0]['price'])) $priceList[$p['id']] = $p['variants'][0]['price'];
-				if(!empty($p['variants'][0]['sku']))
-				{
-					$sku = $p['variants'][0]['sku'];
-					ListData::updateShopifyProductId($p['id'], $sku);
-					$productIds[$p['variants'][0]['sku']] = $p['id'];
-				}
-			}
-		}
-
-		ListData::updateShopifyAsinId($asinValue='', $model='none');
-		$data = ListData::getSelectedFields($fields= ['id','asset','mid','technology'], $query= ['asin' => '']);
-		foreach($data as $itm)
-		{
-			$asset = trim($itm['asset']);
-			$file = "";
-			$this->wipeData2 = $this->basePath.'/wipe-data2';
-			if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
-			{
-				$file = $this->wipeData2.'/'.$asset.'.xml';
-			}
-			elseif(File::exists($this->wipeData2.'/bios-data/'.$asset.'.xml'))
-			{
-				$file = $this->wipeData2.'/bios-data/'.$asset.'.xml';
-			}
-			if($file)
-			{
-				$xml = '';
-				if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
-				{
-				$xml = simplexml_load_file($this->wipeData2.'/'.$asset.'.xml');
-				}
-
-				if($xml)
-				{
-					$xmlData = [];
-					$i = 0;
-					if(is_array($xml->component))
-					{
-						foreach ($xml->component as $c)
-						{
-							$i++;
-							$key = strval($c["name"]);
-							if(!isset($xmlData[$key])) 
-								$xmlData[$key]=[];
-							if(!in_array(strval($c),$xmlData[$key])) 
-								$xmlData[$key][] = strval($c);
-						}
-					}
-					if(!empty($xmlData["Model"][0]))
-					{
-						$model = trim(str_ireplace([
-							' non-vPro',
-							' DT',
-							' CMT',
-							' SFF',
-							' USDT',
-							' DM',
-							' TWR',
-							' MT',
-							' AIO'], '' , $xmlData["Model"][0])
-						);
-						$fields = ['model' => $model];
-						$query = ["id" => $itm['id']];
-						ListData::updateSelectedFields($fields, $query);
-					}
-					else
-					{
-						$model = "none";
-					}
-					if(!empty($xmlData["ProcessorModel_Speed"][0]) && $model !='none')
-					{
-						// $debug .= $asset.": CPU Data found\n";
-						$cpu = $xmlData["ProcessorModel_Speed"][0];
-						$parts1 = explode("_",$cpu);
-						$parts2 = explode("-",$parts1[0]);
-						if(count($parts1)==2 && count($parts2)==2)
-						{
-						// $debug .= $asset.": CPU Data parced ".$cpu." \n";
-							$gen = substr($parts2[1],0,1);
-							if($itm['mid'])
-							{
-								$query = ["id" => $itm['mid']];
-								$field = 'technology';
-								$ff = FormModel::pluckCustomField($query, $field);
-								if(count($ff) > 0)
-								{
-									$ff = $ff[0];
-								}
-							}
-							else
-							{
-								$ff = $itm['technology'];
-							} 
-							if(!empty($parts1[1]) && !empty($parts2[1]) && !empty($ff))
-							{
-							// $debug .= $asset.": Data Validated ".$ff." \n";
-								$update = [
-									'model' => $model,
-									'cpu' => $cpu,
-									'cpu_core' => $parts2[0],
-									'cpu_model' => $parts2[1],
-									'cpu_speed' => $parts1[1],
-									'cpu_gen' => $gen,
-									'technology' => $ff
-								];
-								$asin = createAsinFromData($update);
-								$update['asin'] = $asin;
-								if(!empty($product_ids[$asin]))
-								{
-									$update['shopify_product_id'] = $product_ids[$asin];
-								}
-								if(!$itm['mid'])
-								{
-									$mid = ListData::getSelectedFields($fields = ["mid"], 
-										$query = ['asin'=> $asin, 'mid[>]' => 0]
-									);
-									if($mid)
-									{
-										$update['mid'] = $mid;
-									} 
-								}
-								ListData::updateSelectedFields($update, $query = ["id"=>$itm['id']]);
-								// $debug .= $db->last()."\n\n";
-							}
-						}
-					}
-				}
-			}
-		}
-
-		ListData::updateSelectedFields($fields= ['shopify_product_id' => ''], $query= ['shopify_product_id' => '0']);
-		$data = ListData::getSelectedFieldsByGroupBy($fields= ['asin','shopify_product_id']);
-		foreach($data as $d)
-		{
-			$spi = $d['shopify_product_id'];
-			$asin = $d['asin'];
-			ListData::updateSelectedFields($fields= ['shopify_product_id' => $spi], $query= ['shopify_product_id'=> '', 'asin'=> $asin]);
-		}
-		ListData::updateShopifyAsinId($asinValue='', $model='none');
 		$upcCount = ShopifyBarCode::countEmptyAsinId($asin='');
 		$upcCount = ($upcCount) ? $upcCount->toArray() : ['0'];
 		$mdlList = [];
@@ -488,8 +334,159 @@ class ShopifyController extends Controller
 		asort($cpuList);
 		if($request->dtable)
 		{
-			$deleterecycletwo = "'deleterecycletwocategory'";
-            $assetLookup = "'Asset Lookup Category'";
+			$productsUrl = $this->baseUrl."/admin/api/2019-04/products.json?limit=250";
+			try
+			{
+				$products = json_decode(file_get_contents($productsUrl),true);
+			}
+			catch (\Exception $e)
+			{
+				$message = $e->getCode().' '.$e->getMessage();
+				\Session::flash('error', $message);
+			}
+			if(!empty($products['products']))
+			{
+				foreach($products['products'] as $p)
+				{
+					if(!empty($p['variants'][0]['price'])) $priceList[$p['id']] = $p['variants'][0]['price'];
+					if(!empty($p['variants'][0]['sku']))
+					{
+						$sku = $p['variants'][0]['sku'];
+						ListData::updateShopifyProductId($p['id'], $sku);
+						$productIds[$p['variants'][0]['sku']] = $p['id'];
+					}
+				}
+			}
+			ListData::updateShopifyAsinId($asinValue='', $model='none');
+			$data = ListData::getSelectedFields($fields= ['id','asset','mid','technology'], $query= ['asin' => '']);
+			foreach($data as $itm)
+			{
+				$asset = trim($itm['asset']);
+				$file = "";
+				$this->wipeData2 = $this->basePath.'/wipe-data2';
+				if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
+				{
+					$file = $this->wipeData2.'/'.$asset.'.xml';
+				}
+				elseif(File::exists($this->wipeData2.'/bios-data/'.$asset.'.xml'))
+				{
+					$file = $this->wipeData2.'/bios-data/'.$asset.'.xml';
+				}
+				if($file)
+				{
+					$xml = '';
+					if (File::exists($this->wipeData2.'/'.$asset.'.xml'))
+					{
+					$xml = simplexml_load_file($this->wipeData2.'/'.$asset.'.xml');
+					}
+
+					if($xml)
+					{
+						$xmlData = [];
+						$i = 0;
+						if(is_array($xml->component))
+						{
+							foreach ($xml->component as $c)
+							{
+								$i++;
+								$key = strval($c["name"]);
+								if(!isset($xmlData[$key])) 
+									$xmlData[$key]=[];
+								if(!in_array(strval($c),$xmlData[$key])) 
+									$xmlData[$key][] = strval($c);
+							}
+						}
+						if(!empty($xmlData["Model"][0]))
+						{
+							$model = trim(str_ireplace([
+								' non-vPro',
+								' DT',
+								' CMT',
+								' SFF',
+								' USDT',
+								' DM',
+								' TWR',
+								' MT',
+								' AIO'], '' , $xmlData["Model"][0])
+							);
+							$fields = ['model' => $model];
+							$query = ["id" => $itm['id']];
+							ListData::updateSelectedFields($fields, $query);
+						}
+						else
+						{
+							$model = "none";
+						}
+						if(!empty($xmlData["ProcessorModel_Speed"][0]) && $model !='none')
+						{
+							// $debug .= $asset.": CPU Data found\n";
+							$cpu = $xmlData["ProcessorModel_Speed"][0];
+							$parts1 = explode("_",$cpu);
+							$parts2 = explode("-",$parts1[0]);
+							if(count($parts1)==2 && count($parts2)==2)
+							{
+							// $debug .= $asset.": CPU Data parced ".$cpu." \n";
+								$gen = substr($parts2[1],0,1);
+								if($itm['mid'])
+								{
+									$query = ["id" => $itm['mid']];
+									$field = 'technology';
+									$ff = FormModel::pluckCustomField($query, $field);
+									if(count($ff) > 0)
+									{
+										$ff = $ff[0];
+									}
+								}
+								else
+								{
+									$ff = $itm['technology'];
+								} 
+								if(!empty($parts1[1]) && !empty($parts2[1]) && !empty($ff))
+								{
+								// $debug .= $asset.": Data Validated ".$ff." \n";
+									$update = [
+										'model' => $model,
+										'cpu' => $cpu,
+										'cpu_core' => $parts2[0],
+										'cpu_model' => $parts2[1],
+										'cpu_speed' => $parts1[1],
+										'cpu_gen' => $gen,
+										'technology' => $ff
+									];
+									$asin = createAsinFromData($update);
+									$update['asin'] = $asin;
+									if(!empty($product_ids[$asin]))
+									{
+										$update['shopify_product_id'] = $product_ids[$asin];
+									}
+									if(!$itm['mid'])
+									{
+										$mid = ListData::getSelectedFields($fields = ["mid"], 
+											$query = ['asin'=> $asin, 'mid[>]' => 0]
+										);
+										if($mid)
+										{
+											$update['mid'] = $mid;
+										} 
+									}
+									ListData::updateSelectedFields($update, $query = ["id"=>$itm['id']]);
+									// $debug .= $db->last()."\n\n";
+								}
+							}
+						}
+					}
+				}
+			}
+
+			ListData::updateSelectedFields($fields= ['shopify_product_id' => ''], $query= ['shopify_product_id' => '0']);
+			$data = ListData::getSelectedFieldsByGroupBy($fields= ['asin','shopify_product_id']);
+			foreach($data as $d)
+			{
+				$spi = $d['shopify_product_id'];
+				$asin = $d['asin'];
+				ListData::updateSelectedFields($fields= ['shopify_product_id' => $spi], $query= ['shopify_product_id'=> '', 'asin'=> $asin]);
+			}
+			ListData::updateShopifyAsinId($asinValue='', $model='none');			
             $v = DataTables::of($runningList)->make(true);
             return $v;
 		}

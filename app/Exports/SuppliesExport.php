@@ -12,12 +12,11 @@ class SuppliesExport implements FromCollection, WithHeadings, ShouldAutoSize
     use Exportable;
 
     public function collection()
-    { 
+    {
         $supplieWithEmails = [];
-
         $abc = Supplies::getExportResult();
-
-        foreach ($abc as $key => $value) {
+        foreach ($abc as $key => $value)
+        {
             $keys = array_keys($value->toArray());
             foreach ($keys as $k => $v) {
                 if($v == 'get_supplie_emails')
@@ -30,12 +29,37 @@ class SuppliesExport implements FromCollection, WithHeadings, ShouldAutoSize
             {
                 $emails = implodeSupplieEmails($value['getSupplieEmails']);
             }
-            else{
+            else
+            {
                 $emails = '';
             }
             $supplieWithEmails[$key]['emails'] = $emails;
-        }        
-        return collect($supplieWithEmails);
+        }
+        $v = [
+            'id',
+            'item_name',
+            'item_url',
+            'qty',
+            'part_num',
+            'description',
+            'dept',
+            'price',
+            'vendor',
+            'low_stock',
+            'reorder_qty',
+            'dlv_time',
+            'bulk_options',
+            'emails',
+            'email_subj',
+            'email_tpl',
+        ];
+        $allkeys = [];
+        foreach ($supplieWithEmails as $key => $value)
+        {
+            $keys = array_fill_keys($v, '');
+            $allkeys[] = array_replace($keys, array_intersect_key($value, $keys));
+        }
+        return collect($allkeys);
     }
 
     public function headings(): array
@@ -54,9 +78,9 @@ class SuppliesExport implements FromCollection, WithHeadings, ShouldAutoSize
             "Reorder Qty",
             "Delivery Time",
             "Bulk Opts",
+            "Emails",
             "Subject",
             "Template",
-            "Emails",
         ];
     }
 
