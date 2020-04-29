@@ -40,7 +40,6 @@ class CommonController extends Controller
 	{
 		$response = [];
 		$response['status'] = false;
-		$returnFiles = [];
 		$returnFilesBlancco = [];
 		$returnFilesWipe = [];
 
@@ -54,7 +53,9 @@ class CommonController extends Controller
 				$files = glob($search_path);
 				foreach ($files as $file)
 				{
-					if (stripos($file, $searchedAsset) !== false)
+					$fileName = substr($file, strrpos($file, '/') + 1);
+                    $lotNumber  = explode("-", $fileName);
+					if (trim($lotNumber[0] ) == trim($searchedAsset))
 					{
 						$fileName = substr($file, strrpos($file, '/') + 1);
 						if( $key == "wipe-data" )
@@ -67,8 +68,6 @@ class CommonController extends Controller
 							$returnFilesBlancco[$fileName]['url'] = URL($key.'/'.$fileName);
 							$returnFilesBlancco[$fileName]['path'] = $file;
 						}
-						// $returnFiles[$fileName]['url'] = URL($key.'/'.$fileName);
-						// $returnFiles[$fileName]['path'] = $file;
 					}
 				}
 			}
@@ -145,9 +144,23 @@ class CommonController extends Controller
 		
 		foreach ($files as $name => $file)
 		{
-			$relativePath = 'wipereport/' . substr($file, strlen($path) + 1);
-			$relativePath =  str_replace("/data","", $relativePath);
-			$zip->addFile($file, $relativePath);
+			if(strpos($file, 'wipe-data') !== false)
+			 {
+			     $name = substr($file, strlen($this->basePath.'/wipe-data') + 1);
+			 }
+			 else
+			 {
+			     $name = substr($file, strlen($this->basePath.'/blancco/pdf-data') + 1);
+			 }
+			 $relativePath = 'wipereport/' . $name;
+			 $relativePath =  str_replace("/data","", $relativePath);
+			 $zip->addFile($file, $relativePath);
+
+			//$relativePath = 'wipereport/' . substr($file, strlen($path) + 1);
+			//$relativePath =  str_replace("/data","", $relativePath);
+			//$zip->addFile($file, $relativePath);
+
+
 		}
 		$zip->close();
 		return response()->download($zip_file)->deleteFileAfterSend(true);

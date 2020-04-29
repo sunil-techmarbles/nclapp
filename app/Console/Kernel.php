@@ -51,8 +51,8 @@ class Kernel extends ConsoleKernel
         $schedule->command('AsinPrice:update')
             ->twiceDaily(1, 13);
 
-        $schedule->command('Inventry:email')
-            ->dailyAt('3:00'); 
+        // $schedule->command('Inventry:email')
+            // ->dailyAt('3:00'); 
 
         $schedule->command('Shopify:sync')
             ->twiceDaily(1, 13);

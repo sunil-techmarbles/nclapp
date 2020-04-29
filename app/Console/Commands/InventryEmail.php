@@ -51,6 +51,7 @@ class InventryEmail extends Command
         {
                 $m->to( $emailsToSend )->subject($subject);
         });
+
         $reorderQty = 0;
         $dt = date("Y-m-d",strtotime("-7 days"));
         $supplyDatas = Supplies::getEmailsAndSupplyrecord($dt);
@@ -75,7 +76,10 @@ class InventryEmail extends Command
                 $user = [];
                 foreach ($r['get_supplie_emails'] as $key => $value)
                 {
-                    array_push($user, $value['email']);
+                    if (filter_var($value['email'], FILTER_VALIDATE_EMAIL))
+                    {
+                        array_push($user, $value['email']);
+                    }
                 }
                 if(sizeof($user) > 0)
                 {
@@ -92,3 +96,4 @@ class InventryEmail extends Command
         die('done');
     } 
 }
+
