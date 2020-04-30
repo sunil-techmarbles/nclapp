@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 	<div class="table-responsive">
-		<table id="itamg_inventory_value" class="asset-lookup-list table table-bordered table-striped">
+		<table id="itamg_inventory_value" class="asset-lookup-list table table-responsive table-bordered table-striped">
 			<thead>
 				<tr>
 					<th class="first_heading noExport"><input type="checkbox" class="select_all_to_delete" name="select_all_to_delete"></th>

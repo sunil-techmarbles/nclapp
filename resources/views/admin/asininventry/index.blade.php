@@ -10,7 +10,7 @@
 		<a class="btn btn-info" href="{{route('asininventry.exportinventry',['pageaction' => request()->get('pageaction')])}}">Export To Excel</a>
 	</div>
 	<h3>Items In session</h3>
-	<table class="asinInventryTable-Itmg wrap table table-bordered table-striped" id="asinInventryTable-Itmg">
+	<table class="asinInventryTable-Itmg wrap table table-responsive table-bordered table-striped" id="asinInventryTable-Itmg">
 		<thead>
 			<th>ASIN</th>
 			<th>Model</th>

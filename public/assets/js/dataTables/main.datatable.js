@@ -1,13 +1,9 @@
 $(document).ready(function(){
-	$.extend( $.fn.dataTable.defaults, {
-	    language: {
-	        processing: "Loading. Please wait..."
-	    },
-	 
-	});
+	
 	$('#supplies-list').DataTable({
         processing : true,
         serverSide : true,
+        order: [[ 1, "desc" ]],
         ajax : {
             url:'/'+prefix+'/supplies?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
@@ -43,6 +39,7 @@ $(document).ready(function(){
     $('#asins-list').DataTable({
         processing : true,
         serverSide : true,
+        order: [[ 1, "desc" ]],
         ajax : {
             url:'/'+prefix+'/asin?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
@@ -80,6 +77,7 @@ $(document).ready(function(){
     $('#users-table').DataTable({
         processing : true,
         serverSide : true,
+        order: [[ 1, "desc" ]],
         ajax : {
             url:'/'+prefix+'/users?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
@@ -117,8 +115,7 @@ $(document).ready(function(){
         },
         "rowCallback": function( row, data ) {
         	let shopifyProductId = (data.shopify_product_id) ? 'no' : 'yes';
-        	$(row).css('font-weight','bold');
-        	// $(row).addClass("nlrow");
+        	$(row).css('font-weight','bold');        	
         	$(row).addClass(data.asin);
         	$(row).attr("data-img",data.images);
         	$(row).attr("data-mdl",data.model);
@@ -449,8 +446,6 @@ $(document).ready(function(){
 	});
 
 	var asinInventryTableItmg = $('#asinInventryTable-Itmg').DataTable({
-		responsive: true,
-		autoWidth: false,
         processing : true,
         serverSide : true,             
         order: [[ 1, "desc" ]],
@@ -635,7 +630,7 @@ function asinInventoryItems(argument,el,asinClass)
 {
 	var html = '';
 	html = html.concat('<tr class="asset'+asinClass+'" style="display: none;">');
-  	html = html.concat('<td colspan="6"><b>Asset Numbers:</b>'+argument.toString()+'</td>');
+  	html = html.concat('<td colspan="6"><b>Asset Numbers:</b>'+argument.toString()+'</td>');  	
 	html = html.concat('</tr>');
 	$(html).insertAfter(el+' tr.'+asinClass);
 }

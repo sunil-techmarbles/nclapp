@@ -100,11 +100,11 @@ $(document).ready(function(){
         } 
     })
 
-    $('.asset-lookup-list').DataTable({
-        dom: 'lipBf',
-        "processing" : true,
-        "serverSide" : true,
-        "ajax" : {
+    $('.asset-lookup-list').DataTable({        
+        processing : true,
+        serverSide : true,
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+recyclePrefix+'?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
@@ -124,14 +124,14 @@ $(document).ready(function(){
         ],
         buttons: itamgButton,
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
-    $('.failed-search-result').DataTable({
-        dom: 'lipBf',
-        "processing" : true,
-        "serverSide" : true,
-        "ajax" : {
+    $('.failed-search-result').DataTable({        
+        processing : true,
+        serverSide : true,
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+recyclePrefix+'/failedsearch?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
@@ -146,14 +146,14 @@ $(document).ready(function(){
         ],
         buttons: itamgButton,
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
-    $('.catageory-list-result').DataTable({
-        dom: 'lipBf',
-        "processing" : true,
-        "serverSide" : true,
-        "ajax" : {
+    $('.catageory-list-result').DataTable({        
+        processing : true,
+        serverSide : true,
+        order: [[ 1, "desc" ]],
+        ajax : {
             url:'/'+recyclePrefix+'/category?pageaction='+pageaction+'&dtable='+dItamgTable,
             type:"POST"
         },
@@ -167,7 +167,7 @@ $(document).ready(function(){
         ],        
         buttons: itamgButton,
         aoColumnDefs: itamgSort,
-        "lengthMenu": itamgLength,
+        lengthMenu: itamgLength,
     });
 
     $(document).on("click",".edit_faildsearch_address", function(e){

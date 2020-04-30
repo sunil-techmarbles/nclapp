@@ -588,6 +588,13 @@ function getAssetData(fId)
 
 $(document).ready(function()
 {
+	$.extend( $.fn.dataTable.defaults, {
+	    language: {
+	        processing: "Loading. Please wait..."
+	    },
+	 
+	});
+	
 	if($('#sel-bs').length > 0)
 	{
 		$('#sel-bs').selectpicker();
