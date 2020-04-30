@@ -339,8 +339,7 @@ class SuppliesController extends Controller
                 'impfile.mimes' => 'Only csv and excel file allowed',
             ]
         );
-    	Excel::import(new SuppliesImport,request()->file('impfile'));
-        die;
+    	Excel::import(new SuppliesImport,request()->file('impfile'));        
         return redirect()->route('supplies',['pageaction' => $pageaction])->with('success','Record import successfully');
     }
 
