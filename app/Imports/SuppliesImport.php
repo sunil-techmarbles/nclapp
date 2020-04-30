@@ -61,7 +61,7 @@ class SuppliesImport implements ToModel, WithStartRow
                 SupplieEmail::addSupplieEmail($email, $supplieID);
             }
         }
-        Supplies::deleteBulkSupplieBelowDate($currentDate);        
+        // Supplies::deleteBulkSupplieBelowDate($currentDate);        
         return;
     }
 
