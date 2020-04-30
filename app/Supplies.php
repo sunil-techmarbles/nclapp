@@ -136,13 +136,14 @@ class Supplies extends Model
 
     public static function deleteBulkSupplieBelowDate($updatedAt)
     {
-        return false;
+        $result = false;
         $bulkSupplyID = self::where('updated_at', '<' ,$updatedAt)->pluck('id');
         if($bulkSupplyID)
         {
             self::whereIn('id',$bulkSupplyID)->delete();
-            return true;
+            $result = true;
         }
+        return $result;
     }
 
     public static function getSupplieByLowQty($dt)
@@ -161,7 +162,6 @@ class Supplies extends Model
         {
             $result = true;
         }
-
         return $result;
     }
 

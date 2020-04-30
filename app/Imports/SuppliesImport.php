@@ -50,16 +50,18 @@ class SuppliesImport implements ToModel, WithStartRow
         if(ifnull($row[13]) != '')
         {
             $supplieEmails = array_filter(explode(',',$row[13]));
+            // echo $supplieID." supplie id >".$emailNew." \n";            
             if($emailNew)
             {
-                SupplieEmail::deleteBulkSupplieEmail($supplieID);
+                // echo 'i am here'."\n";
+                SupplieEmail::deleteBulkSupplieEmail(intval($supplieID));
             }
             foreach ($supplieEmails as $key => $email)
             {
                 SupplieEmail::addSupplieEmail($email, $supplieID);
             }
         }
-        Supplies::deleteBulkSupplieBelowDate($currentDate);
+        Supplies::deleteBulkSupplieBelowDate($currentDate);        
         return;
     }
 

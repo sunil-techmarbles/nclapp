@@ -340,6 +340,7 @@ class SuppliesController extends Controller
             ]
         );
     	Excel::import(new SuppliesImport,request()->file('impfile'));
+        die;
         return redirect()->route('supplies',['pageaction' => $pageaction])->with('success','Record import successfully');
     }
 
