@@ -61,11 +61,13 @@ Route::middleware(['changereportheader', 'checkadminpermissions'])->group(functi
 Route::middleware(['checkadminpermissions','revalidate'])->group(function () {
 	Route::prefix('admin')->group(function () {
 	    // Users Section
+	    Route::any('/setting','MainController@SettingIndex')->name('setting');
+	    Route::post('/savesetting','MainController@SettingIndex')->name('save.setting');
 	    Route::any('/users', 'UsersController@index')->name('users');
 	    Route::any('/profile', 'UsersController@editProfile')->name('edit.profile');
 		Route::any('/changepassowrd','UsersController@changePassowrd')->name('change.passowrd');
-	    Route::get('/messagelog', 'MainController@index')->name('message.log');
-	    Route::any('/manageemail', 'UsersController@manageEmail')->name('manage.emails');
+	    Route::get('/message-log', 'MainController@index')->name('message.log');
+	    Route::any('/manage-email', 'UsersController@manageEmail')->name('manage.emails');
 	    Route::get('/edituser/{userid}', 'UsersController@edituser')->name('edit.user');
 	    Route::post('/edituserHandle/{userid}', 'UsersController@edituserHandle')->name('edit.edituserHandle');
 	    Route::get('/DeleteUser/{userid}', 'UsersController@DeleteUser');

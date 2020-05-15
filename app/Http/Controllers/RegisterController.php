@@ -4,6 +4,7 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\User;
+use App\UserCronJob;
 
 class RegisterController extends Controller
 {
@@ -90,7 +91,16 @@ class RegisterController extends Controller
         }
         if($request->type == 'new')
         {
-            $emails = config('constants.userConfirmAdminEmail');
+            $emails = ;
+            $e_mails = [];
+            $emails = UserCronJob::getCronJobUserEmails('newUser');
+            if($emails->count() > 0)
+            {
+                foreach ($emails as $key => $value) {
+                    $e_mails[] = $value->email;
+                }
+            }
+            $emails = ($emails->count() > 0) ? $e_mails : config('constants.userConfirmAdminEmail')
             $subject = 'New User';
             $data = [
                 'name' => $request->fname.''.$request->lname,

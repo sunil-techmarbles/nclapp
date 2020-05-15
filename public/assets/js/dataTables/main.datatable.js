@@ -107,7 +107,7 @@ $(document).ready(function(){
     	responsive: true,
 		autoWidth: false,
         processing : true,
-        serverSide : true,        
+        serverSide : true,
         order: [[ 1, "desc" ]],
         ajax : {
             url:'/'+prefix+'/inventory?pageaction='+pageaction+'&dtable='+dItamgTable,
@@ -351,7 +351,7 @@ $(document).ready(function(){
 			},
 			{
 				targets: 9,
-				render: function (data, type, row, meta) {
+				render: function (data, type, row, meta){
 					var html = '';
 					if (row.shopify_product_id)
 					{

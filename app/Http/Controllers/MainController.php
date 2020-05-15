@@ -75,14 +75,14 @@ class MainController extends Controller
                     $message = $e->getCode().' '.$e->getMessage();
                     $status = 'error';
                 }
-                catch (\Exception $ex)
+                catch (\Exception $e)
                 {
-                    $message = $ex->getCode().' '.$ex->getMessage();
+                    $message = $e->getCode().' '.$e->getMessage();
                     $status = 'error';
                 }
-                catch (\Error $er)
+                catch (\Error $e)
                 {
-                    $message = $er->getCode().' '.$er->getMessage();
+                    $message = $e->getCode().' '.$e->getMessage();
                     $status = 'error';
                 }
                 return redirect()->back()->with($status,$message);
@@ -91,6 +91,19 @@ class MainController extends Controller
             {
                 return redirect()->back()->with('error',"Sorry, there was an error uploading your file.");
             }
+        }
+    }
+
+    public function SettingIndex(Request $request)
+    {
+        if ($request->isMethod('post'))
+        {
+            // return $request->all();
+        }
+        else
+        {
+            $cronJob = config('cronjob.cronJobList');
+            return view('admin.setting',compact('cronJob'));
         }
     }
 }

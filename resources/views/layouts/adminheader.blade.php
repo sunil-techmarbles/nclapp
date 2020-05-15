@@ -116,13 +116,18 @@
 			@endif
 		</ul>
 		<ul class="navbar-nav ml-auto">
+			@if($user_role == 'admin')
+				<!-- <li class="nav-item">
+					<a class="nav-link" href="{{route('setting',['pageaction' => request()->get('pageaction')])}}" title="General Settings"><i class="fa fa-cog" aria-hidden="true"></i></a>
+				</li> -->
+			@endif
 			<li class="nav-item dropdown float-right">
 				<a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					<strong>{{$currentUser}}</strong>
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a class="dropdown-item" href="{{route('edit.profile')}}">Profile</a>
-					<a class="dropdown-item" href="{{route('change.passowrd',['t'=>1])}}">Change Password</a>
+					<a class="dropdown-item" href="{{route('edit.profile',['pageaction' => request()->get('pageaction')])}}">Profile</a>
+					<a class="dropdown-item" href="{{route('change.passowrd',['t'=>1,'pageaction' => request()->get('pageaction')])}}">Change Password</a>
 					<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
 				</div>
 			</li>
