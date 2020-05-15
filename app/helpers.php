@@ -13,14 +13,14 @@ function userVerifiedString($value)
 {
     switch ($value) {
         case 0:
-            $status = 'unverified';
-            break;
+        $status = 'unverified';
+        break;
         case 1:
-            $status = 'verified';
-            break;
+        $status = 'verified';
+        break;
         default:
-            $status = 'N/A';
-            break;
+        $status = 'N/A';
+        break;
     }
     return $status;
 }
@@ -29,14 +29,14 @@ function userVerifiedClass($value)
 {
     switch ($value) {
         case 0:
-            $class = 'text-danger';
-            break;
+        $class = 'text-danger';
+        break;
         case 1:
-            $class = 'text-primary';
-            break;
+        $class = 'text-primary';
+        break;
         default:
-            $class = 'text-muted';
-            break;
+        $class = 'text-muted';
+        break;
     }
     return $class;
 }
@@ -391,19 +391,19 @@ function getXMLContent($xmlFilePath)
 
     try{
              //load xml
-            $fileContentObject = simplexml_load_string($fileContent, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
+        $fileContentObject = simplexml_load_string($fileContent, 'SimpleXmlElement', LIBXML_NOERROR + LIBXML_ERR_FATAL + LIBXML_ERR_NONE);
             //check if XML is valid
-            if (false === $fileContentObject) {
-                return false;
-            }
-            //converting to array
-            $fileContentArray = json_decode(json_encode($fileContentObject), 1);
-            return $fileContentArray;
-
-        }   catch( Exception $e )
-        {
-            // pr( $e); die("**");
+        if (false === $fileContentObject) {
+            return false;
         }
+            //converting to array
+        $fileContentArray = json_decode(json_encode($fileContentObject), 1);
+        return $fileContentArray;
+
+    }   catch( Exception $e )
+    {
+            // pr( $e); die("**");
+    }
 
 }
 
@@ -534,9 +534,10 @@ function getJobOprationServiceParfrmed($jobUserFields, $attributeIndex)
     }
 }
 
-function getMakorServiecsQueueStatus($jobOperationDataArray, $productName)
+function getMakorServiecsQueueStatus( $jobOperationDataArray, $productName )
 {
     $smartData = "";
+    
     if ($productName == "Server")
     {
         foreach ($jobOperationDataArray as $key => $jobOperationData)
@@ -578,6 +579,30 @@ function getMakorServiecsQueueStatus($jobOperationDataArray, $productName)
         }
     }
 
+    if( !isset($smartData) || empty( $smartData ))
+    {
+        if( isset( $jobOperationDataArray[1]['ActionResult'] ))
+        {
+            $actionresult = $jobOperationDataArray[1]['ActionResult'];
+        }
+        else if( isset( $jobOperationDataArray[0]['ActionResult'] ) )
+        {
+            $actionresult = $jobOperationDataArray[0]['ActionResult'];
+        }
+        else if( isset( $jobOperationDataArray['ActionResult'] ) )
+        {
+            $actionresult = $jobOperationDataArray['ActionResult'];
+        }
+
+        if (strtolower($actionresult) == "failure")
+        {
+            $smartData = "Failure";
+        }
+        elseif (strtolower($actionresult) == "success")
+        {
+            $smartData = "Success";
+        }
+    }
     return $smartData;
 }
 
@@ -659,67 +684,58 @@ function MBToGB($speed)
 function getRAMString($RAM) 
 {
     //covert to GB
-    if (strpos($RAM['TotalCapacity'], 'GiB') || strpos($RAM['TotalCapacity'], 'GB'))
-    {
-        $ramString = (int) $RAM['TotalCapacity'];
+    if (strpos($RAM['TotalCapacity'], 'GiB') || strpos($RAM['TotalCapacity'], 'GB')) {
+        $ram_string = (int) $RAM['TotalCapacity'];
+    } else {
+        $ram_string = (int) $RAM['TotalCapacity'] / 1024;
     }
-    else
-    {
-        $ramString = (int) $RAM['TotalCapacity'] / 1024;
-    }
-    $ramString .= "GB:";
-    $ramSizes = array();
-    if (isset($RAM['Stick'][0]))
-    {
-        foreach ($RAM['Stick'] as $key => $stick)
-        {
-            if (strpos(strtolower($stick['Capacity']), 'gb'))
-            {
-                $stickCapacity = (int) $stick['Capacity'];
-            }
-            else
-            {
-                $stickCapacity = (int) $stick['Capacity'] / 1024;
-            }
-            $stickCapacityGb = $stickCapacity . "GB";
-            $ramSizes[$stickCapacityGb][] = $key;
-        }
-    }
-    elseif (isset($RAM['Stick']))
-    {
-        if (strpos(strtolower($RAM['Stick']['Capacity']), 'gb'))
-        {
-            $stickCapacity = (int) $RAM['Stick']['Capacity'];
-        }
-        else
-        {
-            $stickCapacity = (int) $RAM['Stick']['Capacity'] / 1024;
-        }
-        $stickCapacityGb = $stickCapacity . "GB";
-        $ramSizes[$stickCapacityGb][] = 1;
-    }
-    elseif (isset($RAM['TotalCapacity']))
-    {
-        $ramSizes[$RAM['TotalCapacity']][] = 1;
-        $count = 1;
-        $totalRamSizes = count($ramSizes);
-        foreach ($ramSizes as $key => $ramSize)
-        {
-            if ($count == 1) 
-            {
-                $ramString .= "_";
+
+    $ram_string .= "GB:";
+
+    $ram_sizes = array();
+    if (isset($RAM['Stick'][0])) {
+        foreach ($RAM['Stick'] as $key => $stick) {
+
+            if (strpos(strtolower($stick['Capacity']), 'gb')) {
+                $stick_capacity = (int) $stick['Capacity'];
+            } else {
+                $stick_capacity = (int) $stick['Capacity'] / 1024;
             }
 
-            $ramString .= $key . "_x_" . count($ramSize);
-            if ($count < $totalRamSizes)
-            {
-                $ramString .= ";";
-            }
-            $count++;
+            $stick_capacity_gb = $stick_capacity . "GB";
+
+            $ram_sizes[$stick_capacity_gb][] = $key;
         }
-        $ramString = str_replace("GiB", "GB", $ramString);
-        return $ramString;
+    } elseif (isset($RAM['Stick'])) {
+        if (strpos(strtolower($RAM['Stick']['Capacity']), 'gb')) {
+            $stick_capacity = (int) $RAM['Stick']['Capacity'];
+        } else {
+            $stick_capacity = (int) $RAM['Stick']['Capacity'] / 1024;
+        }
+        $stick_capacity_gb = $stick_capacity . "GB";
+        $ram_sizes[$stick_capacity_gb][] = 1;
+    } elseif (isset($RAM['TotalCapacity'])) {
+        $ram_sizes[$RAM['TotalCapacity']][] = 1;
     }
+
+    $count = 1;
+    $total_ram_sizes = count($ram_sizes);
+
+    foreach ($ram_sizes as $key => $ram_size) {
+        if ($count == 1) {
+            $ram_string .= "_";
+        }
+
+        $ram_string .= $key . "_x_" . count($ram_size);
+        if ($count < $total_ram_sizes) {
+            $ram_string .= ";";
+        }
+        $count++;
+    }
+
+    $ram_string = str_replace("GiB", "GB", $ram_string);
+
+    return $ram_string;
 }
 
 function getMakorRAMType($RAM)

@@ -28,6 +28,7 @@ trait CommonWipeBiosMakorApiTraits
         	$this->SaveBiosDataArrayLaptop();
         	$this->CreateBiosLaptopXml();
         }
+
         $this->apiData['xml_data'] = $this->audit->asXML();
         $this->apiData['saveDataArray'] = $this->saveDataArray;
         return $this->apiData;

@@ -17,6 +17,7 @@ trait CommonWipeMakorApiTraits
     public function init($wipeFileContent, $additionalFileContent, $productName, $type)
     {
         $this->apiData = [];
+        
         $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName, $type);
 
         if($type == 'Computer')
@@ -60,9 +61,10 @@ trait CommonWipeMakorApiTraits
             $this->CreateMakorAppleXml();
             $this->apiData['xml_data'] = $this->appleAudit->asXML();
         }
+       
         $this->apiData['saveDataArray'] = $this->saveDataArray;
         return $this->apiData;
-    }
+    } 
 
 
     // Functions for Makor Apple XML data . 
@@ -1627,8 +1629,6 @@ trait CommonWipeMakorApiTraits
             $this->jobData = $this->data['Report']['Jobs']['Job'];
         } 
 
-    
-
         $this->SetCommonData();
         $this->SetAppleData();
         $this->SetProcessorData();
@@ -1731,7 +1731,7 @@ trait CommonWipeMakorApiTraits
             //product ChassisType
         $this->apiData['chassistype'] = $this->hardwareData['ChassisType'];
 
-             //model
+            //model
         if (strtolower(trim($this->hardwareData['ComputerVendor'])) == "lenovo")
         {
             $modelString = LenovoModelData::getLenovoManufacturerModel($this->hardwareData['ComputerModel']);
@@ -2259,7 +2259,7 @@ trait CommonWipeMakorApiTraits
             {
                 $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation'][0]['Method'];
             }
-            else
+            else if( isset( $this->jobData['Operation']['Method'] ))
             {
                 $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation']['Method'];
             }
@@ -2281,9 +2281,10 @@ trait CommonWipeMakorApiTraits
                 $this->apiData['hard_drive'][$key]['size'] = 'N/A';
             }
 
-                //set hard drive service queue status
+            //set hard drive service queue status
             $this->apiData['hard_drive'][$key]['service_queue_status'] = getMakorServiecsQueueStatus($this->jobData['Operation'], $this->productName);
         }
+
     }
 
 

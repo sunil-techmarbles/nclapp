@@ -38,7 +38,7 @@ class AuditController extends Controller
                 $this->e_mails[] = $value->email;
             }
         }
-        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : Config::get('constants.adminEmail')
+        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : Config::get('constants.adminEmail');
 		$this->sandboxMode = false;
 		$this->basePath = base_path().'/public';
 		$this->current = Carbon::now();
