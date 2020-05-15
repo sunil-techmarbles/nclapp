@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>38C65C2E-17E3-4F3E-95DE-C3202D8F9369</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Apple Inc.</ComputerVendor>
+            <ComputerModel>iMac18,1</ComputerModel>
+            <ComputerSerial>C02TH87LH7JY</ComputerSerial>
+            <MotherboardVendor>Apple Inc.</MotherboardVendor>
+            <MotherboardModel>Mac-4B682C642B45593E</MotherboardModel>
+            <AssetTag></AssetTag>
+            <ChassisType>Laptop</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz</Name>
+                    <Speed>2200 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>128 kB</L1Cache>
+                    <L2Cache>512 kB</L2Cache>
+                    <L3Cache>4096 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>0x802C</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>2133 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x21148113</SerialNumber>
+                    <AssetTag></AssetTag>
+                    <PartNumber>0x344154463531323634485A2D3247334232202020</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>0x802C</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>2133 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x21148114</SerialNumber>
+                    <AssetTag></AssetTag>
+                    <PartNumber>0x344154463531323634485A2D3247334232202020</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>DDR4 SODIMM</Description>
+                <TotalCapacity>8192 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>BCM43602 802.11ac Wireless LAN SoC</Product>
+                    <MACAddress>98:9e:63:29:fc:ea</MACAddress>
+                    <Speed></Speed>
+                    <PciId>14E4:43BA</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme BCM57766 Gigabit Ethernet PCIe</Product>
+                    <MACAddress>a8:60:b6:31:2b:36</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1686</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Apple</Vendor>
+                    <Product>APPLE HDD HTS541010A9E632</Product>
+                    <Serial>JD8002D83136SD</Serial>
+                    <Firmware>JA0AB5N0</Firmware>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204886016</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Iris Plus Graphics 640</Product>
+                    <PciId>8086:5926</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <USBPorts>2</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>1</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>JD8002D83136SD - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>6.4GB, 5 repetitions, runtime: 6 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>3F9B0A9A-1A49-40C5-B5AB-1466D7F40B41</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600659</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="3410477331594913910672071111819180180207">
+                    <UUID>9C1B9E3D-A993-40A9-B1FB-727C8EAD8974</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Thursday, 14 May 2020 18:50:27</StartTime>
+                    <Duration>04:01:41</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>Yes</SecurityFrozen>
+                    <SecurityFrozenRemoved>Yes</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>1</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>1953525168</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>195360016</SectorsVerified>
+                    <NISTMethodType>Purge</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Purge achieved.</NISTMethodTypeReason>
+                    <Vendor>Apple</Vendor>
+                    <Product>APPLE HDD HTS541010A9E632</Product>
+                    <Serial>JD8002D83136SD</Serial>
+                    <Gigabytes>1000.20</Gigabytes>
+                    <Bytes>1000204886016</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

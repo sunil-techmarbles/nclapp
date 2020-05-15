@@ -45,12 +45,12 @@ class InventryEmail extends Command
      */
     public function handle()
     {
-        $subject = 'Inventry:email '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for Inventry:email', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'Inventry:email '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for Inventry:email', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
 
         $reorderQty = 0;
         $dt = date("Y-m-d",strtotime("-7 days"));

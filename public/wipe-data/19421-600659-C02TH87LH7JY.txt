@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac18,1
+Computer Serial: C02TH87LH7JY
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-4B682C642B45593E
+Processor: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, Speed: 2200 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: 98:9e:63:29:fc:ea
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: a8:60:b6:31:2b:36
+Drive 1: Model: APPLE HDD HTS541010A9E632, Serial: JD8002D83136SD, Size: 1000.20 GB, Firmware Version: JA0AB5N0
+Display Adapter: Vendor: Intel Corporation, Model: Iris Plus Graphics 640
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 3F9B0A9A-1A49-40C5-B5AB-1466D7F40B41
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600659
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Apple Model: APPLE HDD HTS541010A9E632
+             Serial: JD8002D83136SD Size: 1000.20 GB
+
+UUID: 9C1B9E3D-A993-40A9-B1FB-727C8EAD8974
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195360016
+Action Start Time: Thursday, 14 May 2020 at 18:50:27
+Action End Time: Thursday, 14 May 2020 at 22:52:08
+Action Duration: 04:01:41
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

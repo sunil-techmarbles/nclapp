@@ -1,0 +1,53 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro14,1
+Computer Serial: C02W91KTHV2H
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-B4831CEBD52A0C4C
+Processor: Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz, Speed: 2200 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4350 802.11ac Wireless Network Adapter, MAC Address: 8c:85:90:c2:8b:c4
+Drive 1: Model: SSD SM0256L, Serial: C088086035KJ7KLAT, Size: 251.00 GB, Firmware Version: CXS4LA0Q
+Display Adapter: Vendor: Intel Corporation, Model: Iris Plus Graphics 640
+Multimedia Adapter: Vendor: Broadcom Inc. and subsidiaries, Model: 720p FaceTime HD Camera
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 0
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 2D36564B-1D9D-4D91-A298-0AD97766AC98
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600760
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Apple Model: SSD SM0256L
+             Serial: C088086035KJ7KLAT Size: 251.00 GB
+
+UUID: 680ACF49-FBC3-4B49-8F7A-08E1C9BA6F2F
+Action: Verify that a disk is clean (all sectors examined).
+Action Start Time: Thursday, 14 May 2020 at 19:04:36
+Action End Time: Thursday, 14 May 2020 at 19:04:36
+Action Duration: 00:00:00
+
+Action Result: Canceled by User
+
+Drive Errors Detected: 0
+Dirty Sectors: 14377
+Sectors Verified: 34176
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>017D095F-37CF-48A8-8352-E7A124158FB4</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Micro-Star International Co., Ltd.</ComputerVendor>
+            <ComputerModel>WS65 9TM</ComputerModel>
+            <ComputerSerial>9S716Q421857ZJ9000041</ComputerSerial>
+            <MotherboardVendor>Micro-Star International Co., Ltd.</MotherboardVendor>
+            <MotherboardModel>MS-16Q4</MotherboardModel>
+            <AssetTag>No Asset Tag</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz</Name>
+                    <Speed>2500 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>6</NumCores>
+                    <NumThreads>12</NumThreads>
+                    <L1Cache>384 kB</L1Cache>
+                    <L2Cache>1536 kB</L2Cache>
+                    <L3Cache>12288 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>SK Hynix</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>2667 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>33F71E64</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>HMA82GS6CJR8N-VK</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>SK Hynix</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>2667 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>33F71E65</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>HMA82GS6CJR8N-VK</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>DDR4 SODIMM</Description>
+                <TotalCapacity>32768 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Wireless-AC 9560 [Jefferson Peak]</Product>
+                    <MACAddress>04:ed:33:f7:13:22</MACAddress>
+                    <Speed></Speed>
+                    <PciId>8086:A370</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Qualcomm Atheros</Vendor>
+                    <Product>QCA8171 Gigabit Ethernet</Product>
+                    <MACAddress>00:d8:61:88:22:88</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>1969:10A1</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Western Digital</Vendor>
+                    <Product>PC SN720 SDAPNTW-1T00</Product>
+                    <Serial>19317F801230</Serial>
+                    <Firmware>10126000</Firmware>
+                    <Gigabytes>1024.21</Gigabytes>
+                    <Bytes>1024209543168</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>001b448b44de69d1</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>NVIDIA Corporation</Product>
+                    <PciId>10DE:1EB5</PciId>
+                </DisplayAdapter>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>UHD Graphics 630 (Mobile)</Product>
+                    <PciId>8086:3E9B</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>NVIDIA Corporation</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Cannon Lake PCH cAVS</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>MSI</Vendor>
+                    <Product>BIF0_9</Product>
+                    <SerialNumber></SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>5297000</CurrentCapacity>
+                    <DesignCapacity>5280000</DesignCapacity>
+                    <FullCapacity>5363000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>3</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>19317F801230 - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>29.6GB, 5 repetitions, runtime: 24 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>F2DBD26C-6046-4D93-A192-7EC47A29A05F</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600774</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="25114287231593780242161312934164195223157">
+                    <UUID>82F7D546-A40C-4021-9F5B-A8F2157ABB66</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Thursday, 14 May 2020 09:02:23</StartTime>
+                    <Duration>00:52:24</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>2000409264</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>200040927</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>Western Digital</Vendor>
+                    <Product>PC SN720 SDAPNTW-1T00</Product>
+                    <Serial>19317F801230</Serial>
+                    <Gigabytes>1024.21</Gigabytes>
+                    <Bytes>1024209543168</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

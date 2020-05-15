@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookPro14,3
+Computer Serial: C02TT3BZHTD7
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-551B86E5744E2388
+Processor: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: 00:90:4c:0d:f4:3e
+Drive 1: Model: SSD SM0256L, Serial: C02722607Y7J1HM1H, Size: 251.00 GB, Firmware Version: CXS5EA0Q
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Baffin [Radeon RX 460/560D / Pro 450/455/460/555/555X/560/560X]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Baffin HDMI/DP Audio [Radeon RX 550 640SP / RX 560/560X]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 100 Series/C230 Series Chipset Family HD Audio Controller
+USB Ports: 2
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: EAD19A0E-5EB2-428E-843E-AD9D2508B293
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600768
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Apple Model: SSD SM0256L
+             Serial: C02722607Y7J1HM1H Size: 251.00 GB
+
+UUID: 666730B0-968B-4777-90F9-E004D75330A5
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 61279344
+Sectors Not Overwritten: 0
+Sectors Verified: 6127935
+Action Start Time: Thursday, 14 May 2020 at 18:42:59
+Action End Time: Thursday, 14 May 2020 at 18:43:39
+Action Duration: 00:00:40
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

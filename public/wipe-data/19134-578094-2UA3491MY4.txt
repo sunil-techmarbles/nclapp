@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP Compaq Pro 6300 SFF
+Computer Serial: 2UA3491MY4
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 339A
+Processor: Intel(R) Core(TM) i3-3220 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 2c:44:fd:26:f7:b0
+DVD-RAM writer: DVD-RAM GHA3N
+Drive 1: Model: WDC WD2500AAKX-60U6AA0, Serial: WD-WCC2EPV89826, Size: 250.06 GB, Firmware Version: 18.01H18
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 08723960-2CDF-4F93-B8AB-24CCB600A31B
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578094
+User3: Avis Budget Group
+User4: 19134
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-60U6AA0
+             Serial: WD-WCC2EPV89826 Size: 250.06 GB
+
+UUID: 66E2D5DF-E060-460B-9EB8-FE05EC774EB0
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Wednesday, 13 May 2020 at 08:43:38
+Action End Time: Wednesday, 13 May 2020 at 09:30:19
+Action Duration: 00:46:41
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

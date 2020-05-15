@@ -18,11 +18,11 @@ DVD-RAM writer: DVD-RAM SW820
 Drive 1: Model: WDC WD2500AAKX-60U6AA0, Serial: WD-WCC2EEX47190, Size: 250.06 GB, Firmware Version: 18.01H18
 Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
 Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
-USB Ports: 3
+USB Ports: 2
 USB2 Ports: 2
 USB3 Ports: 1
 
-Job UUID: 07A65B38-891F-477F-AE07-AB335792155D
+Job UUID: 4CCE3563-3734-4F97-8225-EF32B17326AE
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -34,17 +34,17 @@ User4: 19134
 >> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-60U6AA0
              Serial: WD-WCC2EEX47190 Size: 250.06 GB
 
-UUID: A43965FA-1B78-467B-B3DA-61CD0694D67B
+UUID: AEC6EDE8-1F53-43B2-A0C8-CD8C87E5E2C8
 Action: Wipe
 Wipe Method: NIST 800-88r1, Number of Passes: 1
-Sectors Overwritten: 246599680
-Sectors Not Overwritten: 241797488
-Sectors Verified: 0
-Action Start Time: Friday, 17 Apr 2020 at 13:11:19
-Action End Time: Friday, 17 Apr 2020 at 13:28:15
-Action Duration: 00:16:56
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 48839717
+Action Start Time: Monday, 11 May 2020 at 06:25:49
+Action End Time: Monday, 11 May 2020 at 07:09:34
+Action Duration: 00:43:45
 
-Action Result: Canceled by User
+Action Result: SUCCESS
 
 Pre-wipe SMART health status: PASSED
 Post-wipe SMART health status: PASSED
@@ -58,3 +58,6 @@ HPA Removed: No
 AMAX Detected: No
 AMAX Removed: No
 NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

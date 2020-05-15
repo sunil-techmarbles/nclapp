@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Micro-Star International Co., Ltd.
+Computer Model: WS65 9TM
+Computer Serial: 9S716Q421857ZJ9000041
+Motherboard Vendor: Micro-Star International Co., Ltd.
+Motherboard Model: MS-16Q4
+Processor: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz, Speed: 2500 MHz, Cores: 6, L1 Cache: 384 kB, L2 Cache: 1536 kB
+RAM: 32768 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless-AC 9560 [Jefferson Peak], MAC Address: 04:ed:33:f7:13:22
+NIC: Vendor: Qualcomm Atheros, Model: QCA8171 Gigabit Ethernet, MAC Address: 00:d8:61:88:22:88
+Drive 1: Model: PC SN720 SDAPNTW-1T00, Serial: 19317F801230, Size: 1024.21 GB, Firmware Version: 10126000
+Display Adapter: Vendor: NVIDIA Corporation, Model: NVIDIA Corporation
+Display Adapter: Vendor: Intel Corporation, Model: UHD Graphics 630 (Mobile)
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: NVIDIA Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Cannon Lake PCH cAVS
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: F2DBD26C-6046-4D93-A192-7EC47A29A05F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600774
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Western Digital Model: PC SN720 SDAPNTW-1T00
+             Serial: 19317F801230 Size: 1024.21 GB
+
+UUID: 82F7D546-A40C-4021-9F5B-A8F2157ABB66
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 2000409264
+Sectors Not Overwritten: 0
+Sectors Verified: 200040927
+Action Start Time: Thursday, 14 May 2020 at 09:02:23
+Action End Time: Thursday, 14 May 2020 at 09:54:47
+Action Duration: 00:52:24
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

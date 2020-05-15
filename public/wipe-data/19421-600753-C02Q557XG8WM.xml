@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>91EEFE1B-E00F-4031-90B7-68D65A0422E8</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Apple Inc.</ComputerVendor>
+            <ComputerModel>MacBookPro11,5</ComputerModel>
+            <ComputerSerial>C02Q557XG8WM</ComputerSerial>
+            <MotherboardVendor>Apple Inc.</MotherboardVendor>
+            <MotherboardModel>Mac-06F11F11946D27C5</MotherboardModel>
+            <AssetTag></AssetTag>
+            <ChassisType>Laptop</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz</Name>
+                    <Speed>3800 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>32 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>6144 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>0x802C</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x00000000</SerialNumber>
+                    <AssetTag>Not Specified</AssetTag>
+                    <PartNumber>0x31364B544631473634485A2D314736453120</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>0x802C</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1600 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x00000000</SerialNumber>
+                    <AssetTag>Not Specified</AssetTag>
+                    <PartNumber>0x31364B544631473634485A2D314736453120</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>DDR3 SODIMM</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>BCM43602 802.11ac Wireless LAN SoC</Product>
+                    <MACAddress>a0:99:9b:1b:06:f7</MACAddress>
+                    <Speed></Speed>
+                    <PciId>14E4:43BA</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Apple</Vendor>
+                    <Product>APPLE SSD SM0512G</Product>
+                    <Serial>S29ANYAG622435</Serial>
+                    <Firmware>BXW1SA0Q</Firmware>
+                    <Gigabytes>500.28</Gigabytes>
+                    <Bytes>500277790720</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <TrimType>Indeterminate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Advanced Micro Devices, Inc. [AMD/ATI]</Vendor>
+                    <Product>Venus XT [Radeon HD 8870M / R9 M270X/M370X]</Product>
+                    <PciId>1002:6821</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Advanced Micro Devices, Inc. [AMD/ATI]</Vendor>
+                    <Product>Oland/Hainan/Cape Verde/Pitcairn HDMI Audio [Radeon HD 7000 Series]</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>8 Series/C220 Series Chipset High Definition Audio Controller</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>720p FaceTime HD Camera</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>SMP</Vendor>
+                    <Product>bq20z451</Product>
+                    <SerialNumber></SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>313000</CurrentCapacity>
+                    <DesignCapacity>8755000</DesignCapacity>
+                    <FullCapacity>7728000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>3</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>1</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>2C3FAAF5-9AF2-4391-BF04-3E2263276189</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600753</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="1982231291321882091482994137126251140124158">
+                    <UUID>AEE2D695-90AB-48AA-9B9B-6B3AC4DE868F</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Monday, 16 Jan 2017 18:14:16</StartTime>
+                    <Duration>00:01:01</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>Yes</SecurityFrozen>
+                    <SecurityFrozenRemoved>Yes</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>1</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>977105060</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>97712016</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Secure Erase of an SSD only results in a Clear.</NISTMethodTypeReason>
+                    <Vendor>Apple</Vendor>
+                    <Product>APPLE SSD SM0512G</Product>
+                    <Serial>S29ANYAG622435</Serial>
+                    <Gigabytes>500.28</Gigabytes>
+                    <Bytes>500277790720</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

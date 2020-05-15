@@ -41,12 +41,12 @@ class ShopifySync extends Command
      */
     public function handle()
     {
-        $subject = 'Shopify:sync '. date('Y-m-d h:i:s');
-        $emailsToSend = "sunil.techmarbles@gmail.com";
-        Mail::raw('Test Crons for Shopify:sync', function($m) use ( $subject, $emailsToSend)
-        {
-                $m->to( $emailsToSend )->subject($subject);
-        });
+        // $subject = 'Shopify:sync '. date('Y-m-d h:i:s');
+        // $emailsToSend = "sunil.techmarbles@gmail.com";
+        // Mail::raw('Test Crons for Shopify:sync', function($m) use ( $subject, $emailsToSend)
+        // {
+        //         $m->to( $emailsToSend )->subject($subject);
+        // });
         $stock = [];
         $getRunningList = ListData::getrunningList();
 

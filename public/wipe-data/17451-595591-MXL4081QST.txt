@@ -1,7 +1,7 @@
 
 _________________________________________________________________
-WipeDrive Enterprise 9.1.3 64-bit
-Kernel Version 4.14.65-gentoo
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
 
 Hardware Information
 
@@ -14,38 +14,37 @@ Processor: Intel(R) Core(TM) i5-3337U CPU @ 1.80GHz, Speed: 1800 MHz, Cores: 2, 
 RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
 NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: fc:15:b4:e7:16:ba
 NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: c4:d9:87:52:8c:f3
-Drive 1: Model: SAMSUNG MZMPF032HCFV-000H1, Serial: S19YNYAF105844, Size: 32.02 GB
-Drive 2: Model: HGST HTS725050A7E630, Serial: TF0500WH110DPL, Size: 500.11 GB
+Drive 1: Model: HGST HTS725050A7E630, Serial: TF0500WH110DPL, Size: 500.11 GB, Firmware Version: GH2OA440
+Drive 2: Model: SAMSUNG MZMPF032HCFV-000H1, Serial: S19YNYAF105844, Size: 32.02 GB, Firmware Version: FXM42H2Q
 Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
 Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
 USB Ports: 2
 USB2 Ports: 2
 USB3 Ports: 1
 
-Job UUID: 1DE200FA-F949-44F9-BA35-065AB5C1365E
-Current user: ITAMG
-Computer ID: MXL4081QST
+Job UUID: A89EB2C6-E7EB-4C5B-A780-737630BD5787
+Current user: 
+Computer ID: 
 Custom Field: 
 Username: Randy Prashad
-Asset Number: 595591
-Lot Name: Virtua Health Systems
-Lot Number: 17451
-\"Product\": Laptop
+User2: 595591
+User3: Virtua Health System
+User4: 17451
 
->> Drive #1  Vendor: Samsung Model: SAMSUNG MZMPF032HCFV-000H1
+>> Drive #2  Vendor: Samsung Model: SAMSUNG MZMPF032HCFV-000H1
              Serial: S19YNYAF105844 Size: 32.02 GB
 
-UUID: EAB1E81C-290B-4469-A637-FBD7ACF15434
-Action: Overwrite disk.
-Wipe Method: NIST 800-88r1, Number of Passes: 1
-Sectors Overwritten: 3811328
-Sectors Not Overwritten: 58721968
-Sectors Verified: 0
-Action Start Time: Tuesday, 01 Jan 1980 at 00:08:04
-Action End Time: Tuesday, 01 Jan 1980 at 00:08:21
-Action Duration: 00:00:17
+UUID: 5F700E4F-D8DA-4D42-80D0-7AB9C036D1D0
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 62533296
+Sectors Not Overwritten: 0
+Sectors Verified: 6253330
+Action Start Time: Tuesday, 01 Jan 1980 at 00:02:31
+Action End Time: Tuesday, 01 Jan 1980 at 00:20:10
+Action Duration: 00:17:39
 
-Action Result: Canceled by User
+Action Result: SUCCESS
 
 Pre-wipe SMART health status: PASSED
 Post-wipe SMART health status: PASSED
@@ -57,26 +56,30 @@ HPA Detected: No
 HPA Removed: No
 AMAX Detected: No
 AMAX Removed: No
-NIST Method Type: Unknown
+TRIM Passes: 1
+NIST Method Type: Clear
 
->> Drive #2  Vendor: Hitachi Model: HGST HTS725050A7E630
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #1  Vendor: Hitachi Model: HGST HTS725050A7E630
              Serial: TF0500WH110DPL Size: 500.11 GB
 
-UUID: 7C3ACBFA-745E-44B1-87E0-4246FBF6F938
-Action: Overwrite disk.
+UUID: 12390219-C29D-4BB8-885E-C338A0FDE1A1
+Action: Wipe
 Wipe Method: NIST 800-88r1, Number of Passes: 1
-Sectors Overwritten: 3905536
-Sectors Not Overwritten: 972867632
-Sectors Verified: 0
-Action Start Time: Tuesday, 01 Jan 1980 at 00:08:06
-Action End Time: Tuesday, 01 Jan 1980 at 00:08:22
-Action Duration: 00:00:16
+Sectors Overwritten: 515055616
+Sectors Not Overwritten: 461717552
+Sectors Verified: 4616
+Action Start Time: Tuesday, 01 Jan 1980 at 00:02:32
+Action End Time: Tuesday, 01 Jan 1980 at 00:38:57
+Action Duration: 00:36:25
 
 Action Result: Canceled by User
 
 Pre-wipe SMART health status: PASSED
 Post-wipe SMART health status: PASSED
-Drive Errors Detected: 0
+Drive Errors Detected: 1
 Dirty Sectors: 0
 DCO Detected: No
 DCO Removed: No

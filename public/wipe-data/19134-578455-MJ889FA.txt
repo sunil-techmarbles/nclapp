@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3660E2U
+Computer Serial: MJ889FA
+Motherboard Vendor: LENOVO
+Motherboard Model: 
+Processor: Intel(R) Core(TM) i3-2130 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 74:27:ea:68:f9:47
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVD-RAM GHA2N
+Drive 1: Model: ST500DM002-1BD142, Serial: S2AEYT43, Size: 500.11 GB, Firmware Version: KC65
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 40F80EF8-81B1-43B6-A98E-46625AFEE1CA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578455
+User3: Avis Budget Group
+User4: 19134
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: S2AEYT43 Size: 500.11 GB
+
+UUID: 51CCD107-3DD3-4D02-8107-91BE862D11E3
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Monday, 11 May 2020 at 08:02:33
+Action End Time: Monday, 11 May 2020 at 09:35:52
+Action Duration: 01:33:19
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

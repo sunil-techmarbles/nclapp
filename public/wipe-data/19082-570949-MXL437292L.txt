@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ProDesk 600 G1 SFF
+Computer Serial: MXL437292L
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18E7
+Processor: Intel(R) Core(TM) i5-4590 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: c4:34:6b:5f:71:fa
+DVD-RAM writer: CDDVDW SN-208FB
+Drive 1: Model: ST500DM002-1BD142, Serial: Z6E88L8T, Size: 500.11 GB, Firmware Version: HP74
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 75E33CA7-DB2A-40C4-9284-920FF2151EED
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 570949
+User3: Overbrook Management Corporation
+User4: 19082
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z6E88L8T Size: 500.11 GB
+
+UUID: 470BDC4A-19C8-4917-AE4B-BCD5A412C9D3
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Thursday, 14 May 2020 at 01:38:28
+Action End Time: Thursday, 14 May 2020 at 03:01:47
+Action Duration: 01:23:19
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

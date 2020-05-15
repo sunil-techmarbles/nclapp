@@ -114,8 +114,12 @@ class WipeMakor extends Command
                         {
                             $hardwareData = $wipeFileContent['Report'];
                         }
-                        
-                        $assetTag = getJobUserData($jobData['UserFields']['UserField'], 2);
+
+                        if( isset( $jobData['UserFields']['UserField'] ))   {
+                            $assetTag = getJobUserData($jobData['UserFields']['UserField'], 2);
+                        } else {
+                            $assetTag =  $travelerId;
+                        }
                         
                         $additionalDataFile = $this->wipeAdditionalDataDir . "/" . $assetTag . ".xml";
                         if(!File::exists($additionalDataFile))
@@ -123,7 +127,7 @@ class WipeMakor extends Command
                             $error = 'No Additional data file found for' . $wipeDataFile . ".";
                             MessageLog::addLogMessageRecord($error,$type="WipeMakor", $status="failure");
                             continue;
-                        }
+                        }   
 
                         $additionalFileContent = getXMLContent($additionalDataFile);
 
@@ -173,7 +177,11 @@ class WipeMakor extends Command
                             $productName = 'Makor_Apple';
                         }
 
-                        switch ($productName)
+                        pr(  $wipeDataFilePath );
+                        pr(  $additionalDataFile );
+                        pr( $productName );   die; 
+
+                        switch ($productName) 
                         {
                             case 'Computer':
                             $ApidataObject = $this->init($wipeFileContent, $additionalFileContent, $productName, 'Computer');
@@ -197,6 +205,8 @@ class WipeMakor extends Command
                             break;
                         }
 
+                        pr( $ApidataObject );  
+
                         if (!isset($ApidataObject['xml_data']) && !empty($ApidataObject['xml_data']))
                         {
                             $error = 'Invalid XML file for Wipe Makor Api , enable to convert > ' . $wipeDataFile;
@@ -208,10 +218,12 @@ class WipeMakor extends Command
 
                         if ($WipeMakorResponse == 200)
                         {
-                            $this->executedFiles++;
+                            $this->executedFiles++; 
 
                             $RequestFile = $this->WipeMakorRequestFileDir .'/' . $assetTag . ".xml";
                             WriteDataFile($RequestFile, $ApidataObject['xml_data']);
+
+                            // pr( $RequestFile );
 
                             $destinationWipeReportExecutedFile = $this->wipeExecutedFileDir . '/' . $wipeDataFile;
                             rename($wipeDataFilePath, $destinationWipeReportExecutedFile);
@@ -220,10 +232,15 @@ class WipeMakor extends Command
                             rename($additionalDataFile, $destinationAdditionalWipeExecutedFile);
 
                             $wipeResponseFile = $this->wipeResponseFileDIr .'/' . $assetTag . '.xml';
-                            $this->CreateWipeReportXmlResponseFIle($wipeResponseFile, $ApidataObject);
+                            $this->CreateWipeReportXmlResponseFIle( $wipeResponseFile, $ApidataObject );
+
+                            // pr(  $wipeResponseFile ); 
 
                             $success = 'Wipe Makor API Successfull for wipe data  ' . $wipeDataFile;
                             MessageLog::addLogMessageRecord($success,$type="WipeMakor", $status="success");
+
+
+                            // die("**********");   
                             
                         }
                         elseif ($WipeMakorResponse == 400)

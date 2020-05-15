@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 3660E2U
+Computer Serial: MJ741XH
+Motherboard Vendor: LENOVO
+Motherboard Model: 
+Processor: Intel(R) Core(TM) i3-2130 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 74:27:ea:68:57:04
+DVD-RAM writer: DVD-RW DH16ACSH
+Drive 1: Model: WDC WD5000AAKX-08ERMA0, Serial: WD-WMC2E4774574, Size: 500.11 GB, Firmware Version: 19.01H19
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: A9CF1B42-CD04-4334-93A1-48A47F4DEE77
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578264
+User3: Avis Budget Group
+User4: 19134
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD5000AAKX-08ERMA0
+             Serial: WD-WMC2E4774574 Size: 500.11 GB
+
+UUID: 00969449-C585-42BB-8A67-1B37A4EDE44B
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97677317
+Action Start Time: Tuesday, 12 May 2020 at 08:24:29
+Action End Time: Tuesday, 12 May 2020 at 09:59:13
+Action Duration: 01:34:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

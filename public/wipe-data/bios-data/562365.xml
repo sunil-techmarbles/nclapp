@@ -73,7 +73,7 @@
      <version>6.5.5</version>
      <serial>0002-0655-0000-0000-0000-0000</serial>
      <slot>None</slot>
-     <size units="Hz">1328645000</size>
+     <size units="Hz">1458171000</size>
      <capacity units="Hz">2400000000</capacity>
      <width units="bits">64</width>
      <clock units="Hz">133000000</clock>
@@ -366,7 +366,7 @@
      <businfo>cpu@1</businfo>
      <version>6.5.5</version>
      <serial>0002-0655-0000-0000-0000-0000</serial>
-     <size units="Hz">1462912000</size>
+     <size units="Hz">1438824000</size>
      <capacity units="Hz">2400000000</capacity>
      <configuration>
       <setting id="id" value="1" />
@@ -673,23 +673,7 @@
            <capabilities>
             <capability id="usb-2.00" >USB 2.0</capability>
            </capabilities>
-            <node id="usb:0" claimed="true" class="input" handle="USB:1:3">
-             <description>Human interface device</description>
-             <product>KEYLOK HID Mode Dongle</product>
-             <vendor>Microcomputer Applications, Inc.</vendor>
-             <physid>2</physid>
-             <businfo>usb@1:1.2</businfo>
-             <version>0.02</version>
-             <configuration>
-              <setting id="driver" value="usbhid" />
-              <setting id="maxpower" value="34mA" />
-              <setting id="speed" value="2Mbit/s" />
-             </configuration>
-             <capabilities>
-              <capability id="usb-2.00" >USB 2.0</capability>
-             </capabilities>
-            </node>
-            <node id="usb:1" class="generic" handle="USB:1:4">
+            <node id="usb:0" class="generic" handle="USB:1:3">
              <description>Generic USB device</description>
              <product>Biometric Coprocessor</product>
              <vendor>UPEK</vendor>
@@ -704,7 +688,7 @@
               <capability id="usb-1.01" />
              </capabilities>
             </node>
-            <node id="usb:2" class="communication" handle="USB:1:5">
+            <node id="usb:1" class="communication" handle="USB:1:4">
              <description>Bluetooth wireless interface</description>
              <product>Broadcom Bluetooth Device</product>
              <vendor>Broadcom Corp</vendor>
@@ -720,7 +704,7 @@
               <capability id="usb-2.00" >USB 2.0</capability>
              </capabilities>
             </node>
-            <node id="usb:3" class="multimedia" handle="USB:1:6">
+            <node id="usb:2" class="multimedia" handle="USB:1:5">
              <description>Video</description>
              <product>Integrated Camera</product>
              <vendor>Chicony Electronics Co., Ltd.</vendor>
@@ -924,7 +908,7 @@
              <businfo>usb@2:1.2</businfo>
              <logicalname>scsi6</logicalname>
              <version>1.00</version>
-             <serial>08606E6D4077FF7037149FB9</serial>
+             <serial>60A44C413B99FF31C9980339</serial>
              <configuration>
               <setting id="driver" value="usb-storage" />
               <setting id="maxpower" value="100mA" />
@@ -946,7 +930,7 @@
                <configuration>
                 <setting id="logicalsectorsize" value="512" />
                 <setting id="sectorsize" value="512" />
-                <setting id="signature" value="5740c4cf" />
+                <setting id="signature" value="2424c52f" />
                </configuration>
                <capabilities>
                 <capability id="partitioned" >Partitioned disk</capability>
@@ -961,7 +945,7 @@
                  <logicalname>/mnt/hw</logicalname>
                  <dev>8:1</dev>
                  <version>FAT32</version>
-                 <serial>822d-dcd5</serial>
+                 <serial>1607-cad3</serial>
                  <size units="bytes">7743620096</size>
                  <capacity>7746349056</capacity>
                  <configuration>

@@ -1,0 +1,96 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP ProDesk 600 G1 SFF
+Computer Serial: 2UA42316CF
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18E7
+Processor: Intel(R) Core(TM) i5-4570 CPU @ 3.20GHz, Speed: 3200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I217-LM, MAC Address: a0:d3:c1:2d:c4:e4
+DVD-RAM writer: DVD-RAM UJ8E1
+Drive 1: Model: WDC WD5000AAKX-60U6AA0, Serial: WD-WCC2ER92RV49, Size: 500.11 GB, Firmware Version: 18.01H18
+Drive 2: Model: KINGSTON SKC300S37A120G, Serial: 50026B724401F18E, Size: 120.03 GB, Firmware Version: 524ABBF0
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: CB27A12C-6C90-490B-BAB4-60F364FE12E1
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 570951
+User3: Overbrook Management Corporation
+User4: 19082
+
+>> Drive #2  Vendor: Western Digital Model: WDC WD5000AAKX-60U6AA0
+             Serial: WD-WCC2ER92RV49 Size: 500.11 GB
+
+UUID: D657795B-1224-4C35-B7F0-2A365EB884CF
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97677317
+Action Start Time: Wednesday, 13 May 2020 at 14:51:41
+Action End Time: Wednesday, 13 May 2020 at 16:21:25
+Action Duration: 01:29:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #1  Vendor: Kingston Model: KINGSTON SKC300S37A120G
+             Serial: 50026B724401F18E Size: 120.03 GB
+
+UUID: 9E337569-9554-4B8F-8392-B969FD6D8E92
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 234441648
+Sectors Not Overwritten: 0
+Sectors Verified: 23444165
+Action Start Time: Wednesday, 13 May 2020 at 14:51:41
+Action End Time: Wednesday, 13 May 2020 at 14:54:38
+Action Duration: 00:02:57
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

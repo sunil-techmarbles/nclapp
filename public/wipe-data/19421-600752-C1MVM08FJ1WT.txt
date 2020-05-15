@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: MacBookAir7,2
+Computer Serial: C1MVM08FJ1WT
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-937CB26E2E02BB01
+Processor: Intel(R) Core(TM) i7-5650U CPU @ 2.20GHz, Speed: 3100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: 
+Drive 1: Model: APPLE SSD SM0128G, Serial: S2XUNY2JA87899, Size: 121.33 GB, Firmware Version: BXZ33A0Q
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 6000
+Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
+Multimedia Adapter: Vendor: Broadcom Inc. and subsidiaries, Model: 720p FaceTime HD Camera
+USB Ports: 7
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: B985DA07-52AB-4D97-83E6-010E54980B43
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600752
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD SM0128G
+             Serial: S2XUNY2JA87899 Size: 121.33 GB
+
+UUID: 8D70F764-CEC0-4DC7-8C20-9D7CC76B0AB5
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 236978176
+Sectors Not Overwritten: 0
+Sectors Verified: 23697824
+Action Start Time: Thursday, 14 May 2020 at 16:58:26
+Action End Time: Thursday, 14 May 2020 at 16:59:00
+Action Duration: 00:00:34
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

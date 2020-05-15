@@ -1,0 +1,94 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac13,1
+Computer Serial: D25L82BFDNML
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-00BE6ED71E35EB86
+Processor: Intel(R) Core(TM) i5-3330S CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 4, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 10:dd:b1:ef:23:83
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4331 802.11a/b/g/n, MAC Address: ec:35:86:53:df:1e
+Drive 1: Model: APPLE SSD SM128E, Serial: S0XDNYAD428345, Size: 121.33 GB, Firmware Version: CXM09A1Q
+Drive 2: Model: APPLE HDD ST1000LM024, Serial: S2V4J9BD719552, Size: 1000.20 GB, Firmware Version: 2AR20008
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107M [GeForce GT 640M Mac Edition]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GK107 HDMI Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: A66DA5AB-EF0C-4E29-9ACA-2BDD848968AA
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600655
+User3: Best Made Co
+User4: 19421
+
+>> Drive #2  Vendor: Apple Model: APPLE SSD SM128E
+             Serial: S0XDNYAD428345 Size: 121.33 GB
+
+UUID: 78985187-7EDF-4845-B139-246F65CD2681
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 236978176
+Sectors Not Overwritten: 0
+Sectors Verified: 23697824
+Action Start Time: Thursday, 14 May 2020 at 13:22:58
+Action End Time: Thursday, 14 May 2020 at 13:33:39
+Action Duration: 00:10:41
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #1  Vendor: Seagate Model: APPLE HDD ST1000LM024
+             Serial: S2V4J9BD719552 Size: 1000.20 GB
+
+UUID: 5EC03628-E5FC-4946-82D6-E0A534CB7582
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195360016
+Action Start Time: Thursday, 14 May 2020 at 13:22:58
+Action End Time: Thursday, 14 May 2020 at 17:18:51
+Action Duration: 03:55:53
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,84 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 8.3.2 64-bit
+Kernel Version 4.16.15-gentoo
+
+Hardware Information
+
+Computer Vendor: Apple Inc.
+Computer Model: iMac17,1
+Computer Serial: C02RC1TVGG7L
+Motherboard Vendor: Apple Inc.
+Motherboard Model: Mac-DB15BD556843C820
+Processor: Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz, Speed: 3500 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Broadcom Limited, Model: BCM43602 802.11ac Wireless LAN SoC, MAC Address: 28:f0:76:42:bd:44
+NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM57766 Gigabit Ethernet PCIe, MAC Address: 38:c9:86:44:7c:d6
+Drive 1: Model: APPLE SSD AP0032H, Serial: C0860440247GWM2AQ, Size: 24.00 GB
+Drive 2: Model: APPLE HDD ST1000DM003, Serial: Z4YCPTK4, Size: 1000.20 GB
+Display Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Pitcairn PRO [Radeon HD 7850 / R7 265 / R9 270 1024SP]
+Multimedia Adapter: Vendor: Advanced Micro Devices, Inc. [AMD/ATI], Model: Cape Verde/Pitcairn HDMI Audio [Radeon HD 7700/7800 Series]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-H HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 38D7412E-ED65-4722-A2A7-D9623659468B
+Current user: 
+Computer ID: 
+Custom Field: 
+
+>> Drive #1  Vendor: Apple Model: APPLE SSD AP0032H
+             Serial: C0860440247GWM2AQ Size: 24.00 GB
+
+UUID: 54A9F314-8441-43CD-BF3E-6CF6293F7D3A
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 3
+Date & time operation was started: Friday, 10 Apr 2020 at 18:36:05
+Date & time operation was completed: Friday, 10 Apr 2020 at 18:48:12
+Total elapsed time (HH:MM:SS): 00:12:07
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #2  Vendor: Apple Model: APPLE HDD ST1000DM003
+             Serial: Z4YCPTK4 Size: 1000.20 GB
+
+UUID: 53D4E23A-7C7B-4EBA-BF76-45CE3469D711
+Operation: Overwrite disk.
+Wipe Type: NIST 800-88r1, Number of wipes: 1
+Date & time operation was started: Friday, 10 Apr 2020 at 18:36:05
+Date & time operation was completed: Friday, 10 Apr 2020 at 20:40:45
+Total elapsed time (HH:MM:SS): 02:04:40
+
+Operation result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Total disk sector read/write errors: 0
+Total dirty or unreadable disk sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA present: No
+HPA removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

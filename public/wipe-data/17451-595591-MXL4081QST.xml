@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <Reports>
-    <Report Product="WipeDrive Enterprise 9.1.3 64-bit">
-        <KernelVersion>4.14.65-gentoo</KernelVersion>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>9F4C8912-16F1-4360-BC7D-EEEBC162AD8D</GroupUUID>
         <Hardware>
             <ComputerVendor>Hewlett-Packard</ComputerVendor>
             <ComputerModel>HP EliteBook Folio 9470m</ComputerModel>
@@ -47,6 +48,7 @@
                     <PartNumber>M471B1G73QH0-YK0</PartNumber>
                 </Stick>
                 <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
                 <Description>DDR3 SODIMM</Description>
                 <TotalCapacity>16384 MB</TotalCapacity>
             </RAM>
@@ -62,23 +64,12 @@
                     <Vendor>Intel Corporation</Vendor>
                     <Product>Centrino Advanced-N 6235</Product>
                     <MACAddress>c4:d9:87:52:8c:f3</MACAddress>
-                    <Speed>Unavailable</Speed>
+                    <Speed>1Gbit/s</Speed>
                     <PciId>8086:88E</PciId>
                 </NIC>
             </NICs>
             <Devices>
-                <Device index="1">
-                    <Vendor>Samsung</Vendor>
-                    <Product>SAMSUNG MZMPF032HCFV-000H1</Product>
-                    <Serial>S19YNYAF105844</Serial>
-                    <Firmware>FXM42H2Q</Firmware>
-                    <Gigabytes>32.02</Gigabytes>
-                    <Bytes>32017047552</Bytes>
-                    <IsSSD>Yes</IsSSD>
-                    <DriveMediaType>SSD</DriveMediaType>
-                    <Interface>SATA</Interface>
-                </Device>
-                <Device index="2">
+                <Device>
                     <Vendor>Hitachi</Vendor>
                     <Product>HGST HTS725050A7E630</Product>
                     <Serial>TF0500WH110DPL</Serial>
@@ -88,6 +79,21 @@
                     <IsSSD>No</IsSSD>
                     <DriveMediaType>Platter</DriveMediaType>
                     <Interface>SATA</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                </Device>
+                <Device>
+                    <Vendor>Samsung</Vendor>
+                    <Product>SAMSUNG MZMPF032HCFV-000H1</Product>
+                    <Serial>S19YNYAF105844</Serial>
+                    <Firmware>FXM42H2Q</Firmware>
+                    <Gigabytes>32.02</Gigabytes>
+                    <Bytes>32017047552</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>SSD</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <TrimType>Indeterminate</TrimType>
+                    <PSID></PSID>
                 </Device>
             </Devices>
             <DisplayAdapters>
@@ -103,14 +109,6 @@
                     <Product>7 Series/C216 Chipset Family High Definition Audio Controller</Product>
                 </MultimediaCard>
             </MultimediaCards>
-            <StorageControllers>
-                <StorageController>
-                    <Vendor>Intel Corporation</Vendor>
-                    <Product>7 Series Chipset Family 6-port SATA Controller [AHCI mode]</Product>
-                    <Description>SATA controller</Description>
-                    <PciId>8086:1E03</PciId>
-                </StorageController>
-            </StorageControllers>
             <USBPorts>2</USBPorts>
             <USB2Ports>2</USB2Ports>
             <USB3Ports>1</USB3Ports>
@@ -119,46 +117,109 @@
             <Thunderbolt2Ports>0</Thunderbolt2Ports>
             <Thunderbolt3Ports>0</Thunderbolt3Ports>
         </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Skipped</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Skipped</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes></Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>14.1GB, 5 repetitions, runtime: 19 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
         <Jobs>
             <Job>
-                <UUID>1DE200FA-F949-44F9-BA35-065AB5C1365E</UUID>
-                <UserName>ITAMG</UserName>
-                <ComputerID>MXL4081QST</ComputerID>
+                <UUID>A89EB2C6-E7EB-4C5B-A780-737630BD5787</UUID>
                 <UserFields>
                     <UserField index="1">
                         <Name>Username</Name>
                         <Value>Randy Prashad</Value>
                     </UserField>
                     <UserField index="2">
-                        <Name>Asset Number</Name>
+                        <Name>User2</Name>
                         <Value>595591</Value>
                     </UserField>
                     <UserField index="3">
-                        <Name>Lot Name</Name>
-                        <Value>Virtua Health Systems</Value>
+                        <Name>User3</Name>
+                        <Value>Virtua Health System</Value>
                     </UserField>
                     <UserField index="4">
-                        <Name>Lot Number</Name>
+                        <Name>User4</Name>
                         <Value>17451</Value>
                     </UserField>
-                    <UserField index="5">
-                        <Name>\&quot;Product\&quot;</Name>
-                        <Value>Laptop</Value>
-                    </UserField>
                 </UserFields>
-                <Operation DeviceIndex="1" SecurityCode="155542016621817011317454188197253647533">
-                    <UUID>EAB1E81C-290B-4469-A637-FBD7ACF15434</UUID>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="140576118852442081944214913699140137249">
+                    <UUID>5F700E4F-D8DA-4D42-80D0-7AB9C036D1D0</UUID>
                     <DiskOperationType Index="1">Wipe</DiskOperationType>
                     <Method>NIST 800-88r1</Method>
                     <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
                     <MethodValue>N</MethodValue>
-                    <StartTime>Tuesday, 01 Jan 1980 00:08:04</StartTime>
-                    <Duration>00:00:17</Duration>
-                    <ActionResult Index="3">Canceled</ActionResult>
-                    <FailureReason>Canceled by User</FailureReason>
+                    <StartTime>Tuesday, 01 Jan 1980 00:02:31</StartTime>
+                    <Duration>00:17:39</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
                     <DirtySectors>0</DirtySectors>
                     <DriveErrorsDetected>0</DriveErrorsDetected>
                     <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
                     <DCOFound>No</DCOFound>
                     <DCORemoved>No</DCORemoved>
                     <HPAFound>No</HPAFound>
@@ -167,23 +228,26 @@
                     <AMAXRemoved>No</AMAXRemoved>
                     <SecurityLocked>No</SecurityLocked>
                     <SecurityFrozen>Yes</SecurityFrozen>
-                    <Passes>1</Passes>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
                     <SecureErasePasses>0</SecureErasePasses>
                     <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
                     <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
                     <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
                     <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
-                    <SectorsOverwritten>3811328</SectorsOverwritten>
-                    <SectorsNotOverwritten>58721968</SectorsNotOverwritten>
-                    <SectorsVerified>0</SectorsVerified>
-                    <NISTMethodType>Unknown</NISTMethodType>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>62533296</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>6253330</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
                     <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
-                    <NISTMethodTypeReason>Wipe did not complete successfully.</NISTMethodTypeReason>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
                     <Vendor>Samsung</Vendor>
                     <Product>SAMSUNG MZMPF032HCFV-000H1</Product>
                     <Serial>S19YNYAF105844</Serial>
                     <Gigabytes>32.02</Gigabytes>
                     <Bytes>32017047552</Bytes>
+                    <SectorSize>512</SectorSize>
                     <IsSSD>Yes</IsSSD>
                     <DriveMediaType>SSD</DriveMediaType>
                     <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
@@ -223,7 +287,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>4910</RawValue>
+                            <RawValue>4913</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>12</ID>
@@ -235,7 +299,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>804</RawValue>
+                            <RawValue>806</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>170</ID>
@@ -295,7 +359,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>162</RawValue>
+                            <RawValue>164</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>183</ID>
@@ -349,13 +413,13 @@
                             <ID>190</ID>
                             <Name>Airflow_Temperature_Cel</Name>
                             <Flag>0x0022</Flag>
-                            <Value>062</Value>
+                            <Value>070</Value>
                             <Worst>038</Worst>
                             <Threshold>000</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>38</RawValue>
+                            <RawValue>30</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>196</ID>
@@ -430,7 +494,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>4910</RawValue>
+                            <RawValue>4913</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>12</ID>
@@ -442,7 +506,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>804</RawValue>
+                            <RawValue>806</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>170</ID>
@@ -490,7 +554,7 @@
                             <Type>Pre-fail</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1</RawValue>
+                            <RawValue>7</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>174</ID>
@@ -502,7 +566,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>162</RawValue>
+                            <RawValue>164</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>183</ID>
@@ -556,13 +620,13 @@
                             <ID>190</ID>
                             <Name>Airflow_Temperature_Cel</Name>
                             <Flag>0x0022</Flag>
-                            <Value>054</Value>
+                            <Value>042</Value>
                             <Worst>038</Worst>
                             <Threshold>000</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>46</RawValue>
+                            <RawValue>58</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>196</ID>
@@ -602,19 +666,20 @@
                         </SMARTAttribute>
                     </PostWipeSmartAttributes>
                 </Operation>
-                <Operation DeviceIndex="2" SecurityCode="168145112382172356914122465158147712523134">
-                    <UUID>7C3ACBFA-745E-44B1-87E0-4246FBF6F938</UUID>
+                <Operation SecurityCode="1084101687154511362082411246220626213119">
+                    <UUID>12390219-C29D-4BB8-885E-C338A0FDE1A1</UUID>
                     <DiskOperationType Index="1">Wipe</DiskOperationType>
                     <Method>NIST 800-88r1</Method>
                     <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
                     <MethodValue>N</MethodValue>
-                    <StartTime>Tuesday, 01 Jan 1980 00:08:06</StartTime>
-                    <Duration>00:00:16</Duration>
+                    <StartTime>Tuesday, 01 Jan 1980 00:02:32</StartTime>
+                    <Duration>00:36:25</Duration>
                     <ActionResult Index="3">Canceled</ActionResult>
-                    <FailureReason>Canceled by User</FailureReason>
+                    <FailureReason>Failure writing data to device Wipe canceled on error because Dirty Sectors or Errors were detected on your drive option set</FailureReason>
                     <DirtySectors>0</DirtySectors>
-                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DriveErrorsDetected>1</DriveErrorsDetected>
                     <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
                     <DCOFound>No</DCOFound>
                     <DCORemoved>No</DCORemoved>
                     <HPAFound>No</HPAFound>
@@ -623,15 +688,18 @@
                     <AMAXRemoved>No</AMAXRemoved>
                     <SecurityLocked>No</SecurityLocked>
                     <SecurityFrozen>Yes</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
                     <Passes>1</Passes>
                     <SecureErasePasses>0</SecureErasePasses>
                     <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
                     <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
                     <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
                     <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
-                    <SectorsOverwritten>3905536</SectorsOverwritten>
-                    <SectorsNotOverwritten>972867632</SectorsNotOverwritten>
-                    <SectorsVerified>0</SectorsVerified>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>515055616</SectorsOverwritten>
+                    <SectorsNotOverwritten>461717552</SectorsNotOverwritten>
+                    <SectorsVerified>4616</SectorsVerified>
+                    <RemappedWarning>This drive contains 256 remapped sectors which were not overwritten.  These sectors were flagged as bad by the drive and are not included in the user accessible portion of the drive.</RemappedWarning>
                     <NISTMethodType>Unknown</NISTMethodType>
                     <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
                     <NISTMethodTypeReason>Wipe did not complete successfully.</NISTMethodTypeReason>
@@ -640,6 +708,7 @@
                     <Serial>TF0500WH110DPL</Serial>
                     <Gigabytes>500.11</Gigabytes>
                     <Bytes>500107862016</Bytes>
+                    <SectorSize>512</SectorSize>
                     <IsSSD>No</IsSSD>
                     <DriveMediaType>Platter</DriveMediaType>
                     <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
@@ -679,7 +748,7 @@
                             <Type>Pre-fail</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>0</RawValue>
+                            <RawValue>1</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>4</ID>
@@ -691,7 +760,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>800</RawValue>
+                            <RawValue>802</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>5</ID>
@@ -763,7 +832,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>797</RawValue>
+                            <RawValue>799</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>183</ID>
@@ -799,7 +868,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>196730978256526</RawValue>
+                            <RawValue>196730978256527</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>188</ID>
@@ -811,19 +880,19 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>23</RawValue>
+                            <RawValue>4295098391</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>190</ID>
                             <Name>Airflow_Temperature_Cel</Name>
                             <Flag>0x0022</Flag>
-                            <Value>073</Value>
+                            <Value>079</Value>
                             <Worst>056</Worst>
                             <Threshold>045</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>27 (Min/Max 22/27)</RawValue>
+                            <RawValue>21 (Min/Max 20/21)</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>191</ID>
@@ -859,7 +928,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>33953</RawValue>
+                            <RawValue>33959</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>196</ID>
@@ -970,7 +1039,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>800</RawValue>
+                            <RawValue>803</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>5</ID>
@@ -982,7 +1051,7 @@
                             <Type>Pre-fail</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>208 (0 23)</RawValue>
+                            <RawValue>256 (0 24)</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>7</ID>
@@ -1018,7 +1087,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>4803</RawValue>
+                            <RawValue>4804</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>10</ID>
@@ -1042,7 +1111,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>797</RawValue>
+                            <RawValue>799</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>183</ID>
@@ -1072,13 +1141,13 @@
                             <ID>187</ID>
                             <Name>Reported_Uncorrect</Name>
                             <Flag>0x0032</Flag>
-                            <Value>001</Value>
+                            <Value>100</Value>
                             <Worst>001</Worst>
                             <Threshold>000</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>196730978256527</RawValue>
+                            <RawValue>196730978518671</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>188</ID>
@@ -1090,19 +1159,19 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>4295098391</RawValue>
+                            <RawValue>4295163929</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>190</ID>
                             <Name>Airflow_Temperature_Cel</Name>
                             <Flag>0x0022</Flag>
-                            <Value>072</Value>
+                            <Value>063</Value>
                             <Worst>056</Worst>
                             <Threshold>045</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>28 (Min/Max 22/28)</RawValue>
+                            <RawValue>37 (Min/Max 20/38)</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>191</ID>
@@ -1114,7 +1183,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>304</RawValue>
+                            <RawValue>309</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>192</ID>
@@ -1138,7 +1207,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>33953</RawValue>
+                            <RawValue>33960</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>196</ID>
@@ -1150,19 +1219,19 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>26</RawValue>
+                            <RawValue>30</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>197</ID>
                             <Name>Current_Pending_Sector</Name>
                             <Flag>0x0032</Flag>
-                            <Value>001</Value>
+                            <Value>003</Value>
                             <Worst>001</Worst>
                             <Threshold>000</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>3088</RawValue>
+                            <RawValue>2432</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>198</ID>

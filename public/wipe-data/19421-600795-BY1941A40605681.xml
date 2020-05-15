@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>A5117784-3F7F-4912-B649-28F427214F67</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Razer</ComputerVendor>
+            <ComputerModel>Blade 15 Studio Edition - Late 2019</ComputerModel>
+            <ComputerSerial>BY1941A40605681</ComputerSerial>
+            <MotherboardVendor>Razer</MotherboardVendor>
+            <MotherboardModel>CH541</MotherboardModel>
+            <AssetTag></AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz</Name>
+                    <Speed>2500 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>6</NumCores>
+                    <NumThreads>12</NumThreads>
+                    <L1Cache>384 kB</L1Cache>
+                    <L2Cache>1536 kB</L2Cache>
+                    <L3Cache>12288 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>2667 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>1360B7C7</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>M471A2K43DB1-CTD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>2667 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>1360B80F</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>M471A2K43DB1-CTD</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>DDR4 SODIMM</Description>
+                <TotalCapacity>32768 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Intel Corporation</Product>
+                    <MACAddress>04:ed:33:62:3e:87</MACAddress>
+                    <Speed></Speed>
+                    <PciId>8086:2723</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>3c:18:a0:06:13:6c</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:2723</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZVLB1T0HALR-00A00</Product>
+                    <Serial>S56VNA0M900321</Serial>
+                    <Firmware>EXA7301Q</Firmware>
+                    <Gigabytes>1024.21</Gigabytes>
+                    <Bytes>1024209543168</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>002538899102a3b7</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>NVIDIA Corporation</Product>
+                    <PciId>10DE:1EB5</PciId>
+                </DisplayAdapter>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>UHD Graphics 630 (Mobile)</Product>
+                    <PciId>8086:3E9B</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>NVIDIA Corporation</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Cannon Lake PCH cAVS</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>Razer</Vendor>
+                    <Product>Blade</Product>
+                    <SerialNumber>CNB1RC30-024899G00313-A04</SerialNumber>
+                    <Type>Unknown</Type>
+                    <CurrentCapacity>5289000</CurrentCapacity>
+                    <DesignCapacity>5209000</DesignCapacity>
+                    <FullCapacity>5289000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>4</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>1</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>S56VNA0M900321 - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>29.7GB, 5 repetitions, runtime: 25 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>55CBE7F3-7F82-470C-9084-AA13EC953FE3</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600795</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="1151121563721218393491421502212072159237">
+                    <UUID>628505C7-37BE-4BEB-AC6C-D7986324658C</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Thursday, 14 May 2020 06:05:18</StartTime>
+                    <Duration>00:53:58</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>2000409264</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>200040927</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZVLB1T0HALR-00A00</Product>
+                    <Serial>S56VNA0M900321</Serial>
+                    <Gigabytes>1024.21</Gigabytes>
+                    <Bytes>1024209543168</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

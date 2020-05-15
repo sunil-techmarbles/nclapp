@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>3AE75FFA-88E4-4566-A0C0-4566539D6266</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Apple Inc.</ComputerVendor>
+            <ComputerModel>MacBookPro14,3</ComputerModel>
+            <ComputerSerial>C02TT3BZHTD7</ComputerSerial>
+            <MotherboardVendor>Apple Inc.</MotherboardVendor>
+            <MotherboardModel>Mac-551B86E5744E2388</MotherboardModel>
+            <AssetTag></AssetTag>
+            <ChassisType>Laptop</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>6144 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>0x802C</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>2133 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x00000000</SerialNumber>
+                    <AssetTag></AssetTag>
+                    <PartNumber>0x4D5435324C31473332443450472D30393320</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>0x802C</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>2133 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x00000000</SerialNumber>
+                    <AssetTag></AssetTag>
+                    <PartNumber>0x4D5435324C31473332443450472D30393320</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>LPDDR3 SODIMM</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>BCM43602 802.11ac Wireless LAN SoC</Product>
+                    <MACAddress>00:90:4c:0d:f4:3e</MACAddress>
+                    <Speed></Speed>
+                    <PciId>14E4:43BA</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Apple</Vendor>
+                    <Product>SSD SM0256L</Product>
+                    <Serial>C02722607Y7J1HM1H</Serial>
+                    <Firmware>CXS5EA0Q</Firmware>
+                    <Gigabytes>251.00</Gigabytes>
+                    <Bytes>251000193024</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>00253838df244c13</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Advanced Micro Devices, Inc. [AMD/ATI]</Vendor>
+                    <Product>Baffin [Radeon RX 460/560D / Pro 450/455/460/555/555X/560/560X]</Product>
+                    <PciId>1002:67EF</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Advanced Micro Devices, Inc. [AMD/ATI]</Vendor>
+                    <Product>Baffin HDMI/DP Audio [Radeon RX 550 640SP / RX 560/560X]</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>100 Series/C230 Series Chipset Family HD Audio Controller</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>SMP</Vendor>
+                    <Product>bq20z451</Product>
+                    <SerialNumber></SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>3871000</CurrentCapacity>
+                    <DesignCapacity>6669000</DesignCapacity>
+                    <FullCapacity>5739000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>2</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>2</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>EAD19A0E-5EB2-428E-843E-AD9D2508B293</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600768</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="678014618491160321671074701781386912346">
+                    <UUID>666730B0-968B-4777-90F9-E004D75330A5</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Thursday, 14 May 2020 18:42:59</StartTime>
+                    <Duration>00:00:40</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>1</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>61279344</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>6127935</SectorsVerified>
+                    <NISTMethodType>Purge</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Purge achieved.</NISTMethodTypeReason>
+                    <Vendor>Apple</Vendor>
+                    <Product>SSD SM0256L</Product>
+                    <Serial>C02722607Y7J1HM1H</Serial>
+                    <Gigabytes>251.00</Gigabytes>
+                    <Bytes>251000193024</Bytes>
+                    <SectorSize>4096</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

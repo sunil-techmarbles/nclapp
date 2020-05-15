@@ -18,7 +18,7 @@ trait CommonWipeMakorApiTraits
     {
         $this->apiData = [];
         $this->AddCommomData($wipeFileContent, $additionalFileContent, $productName, $type);
-        
+
         if($type == 'Computer')
         {
             $this->SetGraphic();
@@ -35,7 +35,7 @@ trait CommonWipeMakorApiTraits
         }
         elseif ($type == 'Laptop')
         {
-            $this->SetBatteryStatusLaptop();
+            $this->SetBatteryStatusLaptop(); 
             $this->SetResolution();
             $this->CreateLaptopXml();
             $this->apiData['xml_data'] = $this->audit->asXML();
@@ -176,8 +176,30 @@ trait CommonWipeMakorApiTraits
 
             $this->apiData['hard_drive'][$key]['interface'] = $interface;
 
+            
             $this->apiData['hard_drive'][$key]['power_hours'] = getMakorSmartAttribute($this->jobData['Operation']);
-            $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation']['Method'];
+
+             //set hard drive service performed
+            $serviceParfrmedData = getJobOprationServiceParfrmed($this->jobData['Operation'], 1);
+
+            if (!empty($serviceParfrmedData))
+            {
+                $this->apiData['hard_drive'][$key]['service_parfrmed'] = $serviceParfrmedData;
+            }
+            else if( isset( $this->jobData['Operation'][1]['Method'] )) 
+            {
+                $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation'][1]['Method'];
+            }
+            else if( isset( $this->jobData['Operation'][0]['Method'] )) 
+            {
+                $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation'][0]['Method'];
+            }
+            else
+            {
+                $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation']['Method'];
+            }
+ 
+            // $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation']['Method'];
             $this->apiData['hard_drive'][$key]['removed'] = "No";
 
             $type = '';
@@ -1603,7 +1625,10 @@ trait CommonWipeMakorApiTraits
         else
         {
             $this->jobData = $this->data['Report']['Jobs']['Job'];
-        }
+        } 
+
+    
+
         $this->SetCommonData();
         $this->SetAppleData();
         $this->SetProcessorData();
@@ -2218,12 +2243,21 @@ trait CommonWipeMakorApiTraits
                 //set hard drive power hours
             $this->apiData['hard_drive'][$key]['power_hours'] = getMakorSmartAttribute($this->jobData['Operation']);
 
-                 //set hard drive service performed
+
+            //set hard drive service performed
             $serviceParfrmedData = getJobOprationServiceParfrmed($this->jobData['Operation'], 1);
 
             if (!empty($serviceParfrmedData))
             {
                 $this->apiData['hard_drive'][$key]['service_parfrmed'] = $serviceParfrmedData;
+            }
+            else if( isset( $this->jobData['Operation'][1]['Method'] )) 
+            {
+                $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation'][1]['Method'];
+            }
+            else if( isset( $this->jobData['Operation'][0]['Method'] )) 
+            {
+                $this->apiData['hard_drive'][$key]['service_parfrmed'] = $this->jobData['Operation'][0]['Method'];
             }
             else
             {
