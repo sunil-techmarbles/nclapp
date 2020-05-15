@@ -90,8 +90,7 @@ class RegisterController extends Controller
             $user->save();
         }
         if($request->type == 'new')
-        {
-            $emails = ;
+        {            
             $e_mails = [];
             $emails = UserCronJob::getCronJobUserEmails('newUser');
             if($emails->count() > 0)
