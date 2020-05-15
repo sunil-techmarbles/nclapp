@@ -472,7 +472,7 @@ function checkModel()
 			}
 		}
 	}
-} 
+}
 
 function showHint(fId)
 {
@@ -730,7 +730,6 @@ $(document).ready(function()
 	        });
 		});
 	}
-
 
 	if($("#edit-record-form").length > 0)
 	{

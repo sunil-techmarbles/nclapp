@@ -16,12 +16,13 @@ use App\Asin;
 use App\FormData;
 use App\Session;
 use App\SessionData;
+use App\UserCronJob;
 use App\ListData;
 
 class AuditController extends Controller
 {
 
-	public $basePath, $formData, $sandboxMode, $wipeDataAdditional, $wipeDataMobile, $adminEmails;
+	public $basePath, $formData, $e_mails, $sandboxMode, $wipeDataAdditional, $wipeDataMobile, $adminEmails;
 	/**
      * Create a new controller instance.
      *
@@ -29,7 +30,15 @@ class AuditController extends Controller
      */
 	public function __construct()
 	{
-		$this->adminEmails = Config::get('constants.adminEmail');
+		$this->e_mails = [];
+        $this->adminEmails = UserCronJob::getCronJobUserEmails('newItemAdditionRequest');
+        if($this->adminEmails->count() > 0)
+        {
+            foreach ($this->adminEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : Config::get('constants.adminEmail')
 		$this->sandboxMode = false;
 		$this->basePath = base_path().'/public';
 		$this->current = Carbon::now();

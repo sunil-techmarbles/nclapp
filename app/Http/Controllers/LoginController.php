@@ -19,7 +19,7 @@ class LoginController extends Controller
     } 
 
     public function forgetPassword()
-    { 
+    {
         return view('auth.forgetPassword'); 
     }
 
@@ -47,22 +47,27 @@ class LoginController extends Controller
                 {
                     return redirect()->route('dashboard');
                 }
-                else 
+                else
                 {
                     return redirect()->back()->with(['error' => 'Wrong Credentials']);
                 }
             }
-            catch (ThrottlingException $e)
+            catch (\ThrottlingException $e)
             {
                 return redirect()->back()->with(['error' => $e->getMessage()]);
             }
-            catch (NotActivatedException $e)
+            catch (\NotActivatedException $e)
+            {
+                return redirect()->back()->with(['error' => $e->getMessage()]);
+            }
+            catch (\Error $e)
             {
                 return redirect()->back()->with(['error' => $e->getMessage()]);
             }
             return redirect('/');
         }
-        else{
+        else
+        {
             return redirect()->back()->with(['error' => 'User not verified yet']);
         }
     }
@@ -128,7 +133,8 @@ class LoginController extends Controller
         });
     }
 
-    public function resetPasswordForm($token) {
+    public function resetPasswordForm($token)
+    {
         $checktoken = PasswordReset::ValidatePasswordResetToken($token);
         if($checktoken)
         {

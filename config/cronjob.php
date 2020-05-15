@@ -18,6 +18,9 @@ return [
 		'shopifyEmails' => 'Shopify Emails',
 		'shipmentEmails' => 'Shipment Emails',
 		'coaEmails' => 'COA Emails',
+		'newItemAdditionRequest' => 'New item addition request',
+		'recycleShipmentDetail' => 'Recycle Shipment Detail',
+		'newUser' => 'New User',
 	]
 ];
 

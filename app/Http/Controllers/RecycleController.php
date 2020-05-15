@@ -23,11 +23,12 @@ use App\RecycleRecord;
 use App\RecycleRecordLine;
 use App\ItamgRecycleInventory;
 use App\SiteOptions;
+use App\UserCronJob;
 
 class RecycleController extends Controller
 {
     use CommenRecycleTraits;
-    public $basePath, $current, $wipeData2, $filePath, $logo, $returlPath, $rootPath;
+    public $basePath, $current, $e_mails, $adminEmails, $wipeData2, $filePath, $logo, $returlPath, $rootPath;
 
     /**
      * Instantiate a new RecycleController instance.
@@ -47,6 +48,15 @@ class RecycleController extends Controller
         $this->filePath = $this->basePath.'/recycle/files/pdf';
         $this->returlPath = '/recycle/files/pdf';
         $this->logo = url('/').'/recycle/logo.jpg';
+        $this->e_mails = [];
+        $this->adminEmails = UserCronJob::getCronJobUserEmails('recycleShipmentDetail');
+        if($this->adminEmails->count() > 0)
+        {
+            foreach ($this->adminEmails as $key => $value) {
+                $this->e_mails[] = $value->email;
+            }
+        }
+        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : config('constants.recycleReportMailAddress')
     }
 
     public function recycleEditSettings(Request $request)
@@ -885,7 +895,7 @@ class RecycleController extends Controller
                     'status' => '0'
                 ];
                 RecycleRecord::updateRecord($query, $fields);
-                $emails = config('constants.recycleReportMailAddress');
+                $emails = $this->adminEmails;
                 $message = "Hi,
                             The Recycle shipment have been created.
                             Please find the attachment. ";

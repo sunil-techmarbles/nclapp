@@ -301,3 +301,97 @@ div#navbarSupportedContent {
 .wipeReportSection .wipeReportForms{
     margin-right: 10px
 }
+/* The switch - the box around the slider */
+.itamg-setting .switch {
+    position: relative;
+    display: inline-block;
+    width: 90px;
+    height: 34px;
+    float:right;
+}
+/* Hide default HTML checkbox */
+.itamg-setting .switch input {
+    display:none;
+}
+/* The slider */
+.itamg-setting .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.itamg-setting .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 55px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.itamg-setting input.primary:checked + .slider {
+    background-color: #2196F3;
+}
+.itamg-setting input.success:checked + .slider {
+    background-color: #8bc34a;
+}
+.itamg-setting input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+.itamg-setting input:checked + .slider:before {
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
+}
+/* Rounded sliders */
+.itamg-setting .slider.round {
+    border-radius: 34px;
+}
+
+/*------ ADDED CSS ---------*/
+.itamg-setting .on{
+    display: none;
+}
+.itamg-setting label{
+    margin: 0 auto;
+}
+.itamg-setting .on, .itamg-setting .off{
+    color: white;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    font-size: 10px;
+    font-family: Verdana, sans-serif;
+}
+.itamg-setting input:checked+ .slider .on{
+    display: block;
+}
+.itamg-setting input:checked + .slider .off{
+    display: none;
+}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.itamg-setting .slider.round {
+    border-radius: 34px;
+}
+.itamg-setting .slider.round:before {
+    border-radius: 50%;
+}
+.itamg-setting .itamg-center{
+    position: relative;
+    top: 10px;
+}
+.swal2-container.swal2-center {
+    z-index: 99999;
+}
