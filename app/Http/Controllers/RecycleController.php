@@ -56,7 +56,7 @@ class RecycleController extends Controller
                 $this->e_mails[] = $value->email;
             }
         }
-        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : config('constants.recycleReportMailAddress')
+        $this->adminEmails = ($this->adminEmails->count() > 0) ? $this->e_mails : config('constants.recycleReportMailAddress');
     }
 
     public function recycleEditSettings(Request $request)

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20L7005FUS
+Computer Serial: PC105F35
+Motherboard Vendor: LENOVO
+Motherboard Model: 20L7005FUS
+Processor: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, Speed: 1800 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: 98:3b:8f:b2:8c:2f
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (4) I219-V, MAC Address: e8:6a:64:6c:0a:f9
+Drive 1: Model: INTEL SSDPEKKF256G8L, Serial: BTHH84110W0H256B, Size: 256.06 GB, Firmware Version: L13P
+Display Adapter: Vendor: Intel Corporation, Model: UHD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 0313D42F-B03D-43AB-815D-98921472B5DC
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600794
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Intel Corporation Model: INTEL SSDPEKKF256G8L
+             Serial: BTHH84110W0H256B Size: 256.06 GB
+
+UUID: 6C46BDFA-0AE0-4653-9ED2-97596ED2FBD7
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Friday, 15 May 2020 at 12:07:28
+Action End Time: Friday, 15 May 2020 at 12:30:49
+Action Duration: 00:23:21
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20L7002CUS
+Computer Serial: PF0YZ020
+Motherboard Vendor: LENOVO
+Motherboard Model: 20L7002CUS
+Processor: Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz, Speed: 1700 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: a0:c5:89:b6:d2:a8
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (4) I219-LM, MAC Address: 8c:16:45:4c:99:a2
+Drive 1: Model: SAMSUNG MZVLW256HEHP-000L7, Serial: S35ENA0K357079, Size: 256.06 GB, Firmware Version: 5L7QCXB7
+Display Adapter: Vendor: Intel Corporation, Model: UHD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: A98448AF-A9DA-4085-B43C-D4259F8424E2
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600790
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Samsung Electronics Co Ltd Model: SAMSUNG MZVLW256HEHP-000L7
+             Serial: S35ENA0K357079 Size: 256.06 GB
+
+UUID: F5A0E25C-AA15-4BF4-ADFA-F553CE08747E
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Friday, 15 May 2020 at 12:08:13
+Action End Time: Friday, 15 May 2020 at 12:55:01
+Action Duration: 00:46:48
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -8,7 +8,7 @@ use App\NewProcessors;
 use App\MacDataRaw;
 
 trait CommonWipeMakorApiTraits
-{
+{ 
     public $data, $additionalData, $hardwareData, $jobData, $productName, $appleData, $appleDataError;
     public $isError = false;
     public $apiData, $audit, $mainComponents, $saveDataArray;

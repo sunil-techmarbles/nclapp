@@ -13,16 +13,17 @@ Motherboard Model: Mac-937CB26E2E02BB01
 Processor: Intel(R) Core(TM) i5-5350U CPU @ 1.80GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
 RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
 NIC: Vendor: Broadcom Inc. and subsidiaries, Model: BCM4360 802.11ac Wireless Network Adapter, MAC Address: 
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 00:e0:4c:68:6e:ea
 Drive 1: Model: APPLE SSD SM0256G, Serial: S2XVNY1J708981, Size: 251.00 GB, Firmware Version: BXZ33A0Q
 Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 6000
 Multimedia Adapter: Vendor: Intel Corporation, Model: Broadwell-U Audio Controller
 Multimedia Adapter: Vendor: Intel Corporation, Model: Wildcat Point-LP High Definition Audio Controller
 Multimedia Adapter: Vendor: Broadcom Inc. and subsidiaries, Model: 720p FaceTime HD Camera
-USB Ports: 6
+USB Ports: 12
 USB2 Ports: 0
 USB3 Ports: 0
 
-Job UUID: A45330AA-62A9-48ED-92C8-01ABF4CE544C
+Job UUID: 832C7935-B170-4AE9-9BA5-C01FE27453E6
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -34,15 +35,15 @@ User4: 19421
 >> Drive #1  Vendor: Apple Model: APPLE SSD SM0256G
              Serial: S2XVNY1J708981 Size: 251.00 GB
 
-UUID: A9C4B806-1E5F-4049-A502-DF129FE70880
+UUID: 158D2FE6-1AE2-426D-9215-BB6A660591EC
 Action: Wipe
 Wipe Method: NIST 800-88r1, Number of Passes: 1
 Sectors Overwritten: 490234752
 Sectors Not Overwritten: 0
 Sectors Verified: 49024016
-Action Start Time: Tuesday, 01 Jan 2019 at 00:33:50
-Action End Time: Tuesday, 01 Jan 2019 at 00:34:48
-Action Duration: 00:00:58
+Action Start Time: Wednesday, 02 Jan 2019 at 02:17:54
+Action End Time: Wednesday, 02 Jan 2019 at 02:18:41
+Action Duration: 00:00:47
 
 Action Result: SUCCESS
 

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 
 
 class WipeMakor extends Command
-{
+{ 
     use CommonWipeMakorApiTraits;
 
      public $basePath, $wipeDataDir , $wipeAdditionalDataDir, $wipeExecutedFileDir, $wipeAdditionalExecutedDir, $wipeResponseFileDIr, $WipeMakorRequestFileDir, $executedFiles;

@@ -1,7 +1,7 @@
 
 _________________________________________________________________
-WipeDrive Enterprise 8.3 32-bit
-Kernel Version 4.12.12-gentoo
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
 
 Hardware Information
 
@@ -14,25 +14,18 @@ Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, 
 Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
 Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
 Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
-RAM: 524288 MB, Memory banks: 32, DDR3 DIMM
-NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:52:4a:d7
-NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:52:4a:d8
-NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:52:4a:d5
-NIC: Vendor: Broadcom Limited, Model: NetXtreme BCM5720 Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:52:4a:d6
-NIC: Vendor: Broadcom Limited, Model: BCM57840 NetXtreme II 10 Gigabit Ethernet, MAC Address: 00:0e:1e:57:56:60
-NIC: Vendor: Broadcom Limited, Model: BCM57840 NetXtreme II 10 Gigabit Ethernet, MAC Address: 00:0e:1e:57:56:62
-NIC: Vendor: Broadcom Limited, Model: BCM57840 NetXtreme II 10 Gigabit Ethernet, MAC Address: 00:0e:1e:57:55:50
-NIC: Vendor: Broadcom Limited, Model: BCM57840 NetXtreme II 10 Gigabit Ethernet, MAC Address: 00:0e:1e:57:55:52
-NIC: Vendor: Unavailable, Model: Unavailable, MAC Address: 00:e0:4c:68:89:94
+RAM: 524288 MB, Memory banks: 48, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5720 2-port Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:52:4a:d7
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5720 2-port Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:52:4a:d5
 DVD reader: DVD-ROM DS-8D9SH
 Drive 1: Model: PERC H310, Serial: 007b774709c5e1fc2500ebc850c0110b, Size: 299.44 GB
 Drive 2: Model: Internal Dual SD, Serial: 0123456789AB, Size: 1.02 GB
 Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
-USB Ports: 6
+USB Ports: 4
 USB2 Ports: 2
 USB3 Ports: 0
 
-Job UUID: E82CD906-7900-4625-A604-BE96975EB8DE
+Job UUID: 2D9B8DA8-B94D-41D5-B772-2CFDBD0E805F
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -40,54 +33,63 @@ Username: Randy Prashad
 User2: 548774
 User3: Metropolitan Museum of Art
 User4: 17594
-\"Product\": Server
 
->> Drive #1  Vendor: DELL Model: PERC H310
+>> Raid device #2  Vendor: DELL Model: PERC H310
              Serial: 007b774709c5e1fc2500ebc850c0110b Size: 299.44 GB
+    >>> Raid member #1  Vendor: HITACHI Model: HUC109030CSS600 
+             Serial: KLVUJ95F Size: 278.875 GB  [ 32:0 ]
 
-UUID: D3DCA919-9BB8-4C35-9362-5296BF266267
-Operation: Overwrite disk.
-Wipe Type: NIST 800-88r1, Number of wipes: 1
-Date & time operation was started: Thursday, 12 Mar 2020 at 12:14:29
-Date & time operation was completed: Thursday, 12 Mar 2020 at 12:50:06
-Total elapsed time (HH:MM:SS): 00:35:37
+UUID: 96E8A53C-7FAE-44CD-8613-9D812010DC86
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Friday, 15 May 2020 at 20:05:24
+Action End Time: Friday, 15 May 2020 at 22:20:39
+Action Duration: 02:15:15
 
-Operation result: SUCCESS
+Action Result: SUCCESS
 
-Total disk sector read/write errors: 0
-Total dirty or unreadable disk sectors: 0
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
 DCO Detected: No
 DCO Removed: No
-HPA present: No
-HPA removed: No
+HPA Detected: No
+HPA Removed: No
 AMAX Detected: No
 AMAX Removed: No
-NIST Method Type: Clear
-
-NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
-and reformatted before it can be used again.
-
->> Drive #2  Vendor: Dell Model: Internal Dual SD
-             Serial: 0123456789AB Size: 1.02 GB
-
-UUID: D296ECB7-42B3-42F1-8771-9279712F2C4C
-Operation: Overwrite disk.
-Wipe Type: NIST 800-88r1, Number of wipes: 2
-Date & time operation was started: Thursday, 12 Mar 2020 at 12:14:29
-Date & time operation was completed: Thursday, 12 Mar 2020 at 12:47:38
-Total elapsed time (HH:MM:SS): 00:33:09
-
-Operation result: SUCCESS
-
-Total disk sector read/write errors: 0
-Total dirty or unreadable disk sectors: 0
-DCO Detected: No
-DCO Removed: No
-HPA present: No
-HPA removed: No
-AMAX Detected: No
-AMAX Removed: No
-NIST Method Type: Clear
+NIST Method Type: Unknown
 
 NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #1  Vendor: Dell Model: Internal Dual SD
+             Serial: 0123456789AB Size: 1.02 GB
+
+UUID: 34AF3258-8DCE-47E2-8D4B-811EE7B1DBA4
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1990656
+Sectors Not Overwritten: 0
+Sectors Verified: 1990656
+Action Start Time: Friday, 15 May 2020 at 20:05:25
+Action End Time: Friday, 15 May 2020 at 20:22:35
+Action Duration: 00:17:10
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
 and reformatted before it can be used again.

@@ -38,12 +38,12 @@ trait CommonWipeBiosMakorApiTraits
     public function CreateBiosLaptopXml()
     {
     	//Set Optical Drive
-        $component = $this->mainComponents->addChild('component', $this->apiData['optical_drive']);
+        $component = $this->mainComponents->addChild('component', htmlspecialchars( $this->apiData['optical_drive'] ) );
         $component->addAttribute('name', 'OpticalDrive');
         $component->addAttribute('type', 'string');
 
         //Set CombinedRAM
-        $component = $this->mainComponents->addChild('component', $this->apiData['CombinedRAM']);
+        $component = $this->mainComponents->addChild('component', htmlspecialchars( $this->apiData['CombinedRAM'] ) );
         $component->addAttribute('name', 'CombinedRAM');
         $component->addAttribute('type', 'string');
 
@@ -58,47 +58,47 @@ trait CommonWipeBiosMakorApiTraits
             $component->addAttribute('name', 'Processor');
 
 			//Set ProcessorCount
-            $component6 = $component->addChild('component', $processorData['processor_qty']);
+            $component6 = $component->addChild('component', htmlspecialchars( $processorData['processor_qty'] ) );
             $component6->addAttribute('name', 'Quantity');
             $component6->addAttribute('type', 'string');
 
 			//Set Manufacturer
-            $component1 = $component->addChild('component', $processorData['processor_manufacturer']);
+            $component1 = $component->addChild('component', htmlspecialchars( $processorData['processor_manufacturer'] ) );
             $component1->addAttribute('name', 'Manufacturer');
             $component1->addAttribute('type', 'string');
 
 			//Set ProcessorName
-            $component2 = $component->addChild('component', $processorData['processor_model']);
+            $component2 = $component->addChild('component', htmlspecialchars( $processorData['processor_model'] ) );
             $component2->addAttribute('name', 'Model');
             $component2->addAttribute('type', 'string');
 
 			//Set ProcessorType
-            $component3 = $component->addChild('component', $processorData['processor_type']);
+            $component3 = $component->addChild('component', htmlspecialchars( $processorData['processor_type'] ) );
             $component3->addAttribute('name', 'Type');
             $component3->addAttribute('type', 'string');
 
 			//Set ProcessorCore
-            $component4 = $component->addChild('component', $processorData['processor_core']);
+            $component4 = $component->addChild('component', htmlspecialchars( $processorData['processor_core'] ) );
             $component4->addAttribute('name', 'Core');
             $component4->addAttribute('type', 'string');
 
 			//Set ProcessorSpeed
-            $component5 = $component->addChild('component', $processorData['processor_speed']);
+            $component5 = $component->addChild('component', htmlspecialchars( $processorData['processor_speed'] ) );
             $component5->addAttribute('name', 'Speed');
             $component5->addAttribute('type', 'string');
 
 			//Set ProcessorGeneration
-            $component6 = $component->addChild('component', $processorData['processor_generation']);
+            $component6 = $component->addChild('component', htmlspecialchars( $processorData['processor_generation'] ) );
             $component6->addAttribute('name', 'Generation');
             $component6->addAttribute('type', 'string');
 
 			//Set ProcessorCodename
-            $component7 = $component->addChild('component', $processorData['processor_codename']);
+            $component7 = $component->addChild('component', htmlspecialchars( $processorData['processor_codename'] ) );
             $component7->addAttribute('name', 'Codename');
             $component7->addAttribute('type', 'string');
 
 			//Set ProcessorSocket
-            $component8 = $component->addChild('component', $processorData['processor_socket']);
+            $component8 = $component->addChild('component', htmlspecialchars( $processorData['processor_socket'] ) );
             $component8->addAttribute('name', 'Socket');
             $component8->addAttribute('type', 'string');
         }
@@ -116,38 +116,39 @@ trait CommonWipeBiosMakorApiTraits
                 $component->addAttribute('name', 'Memory');
 
 				//Set Capacity
-                $component1 = $component->addChild('component', $memoryData['capacity']);
+                $component1 = $component->addChild('component', htmlspecialchars( $memoryData['capacity'] ) );
                 $component1->addAttribute('name', 'Capacity');
                 $component1->addAttribute('type', 'string');
 
 				//Set Capacity
-                $component2 = $component->addChild('component', $memoryData['type']);
+                $component2 = $component->addChild('component', htmlspecialchars( $memoryData['type'] ) );
                 $component2->addAttribute('name', 'Type');
                 $component2->addAttribute('type', 'string');
 
 				//Set Capacity
-                $component3 = $component->addChild('component', $memoryData['partnumber']);
+                $component3 = $component->addChild('component', htmlspecialchars( $memoryData['partnumber'] ) );
                 $component3->addAttribute('name', 'PartNumber');
                 $component3->addAttribute('type', 'string');
 
 				//Set Capacity
-                $component4 = $component->addChild('component', $memoryData['slots']);
+                $component4 = $component->addChild('component', htmlspecialchars( $memoryData['slots'] ) );
                 $component4->addAttribute('name', 'Slots');
                 $component4->addAttribute('type', 'string');
 
 				//Set Capacity
-                $component5 = $component->addChild('component', $memoryData['max_memory']);
+                $component5 = $component->addChild('component', htmlspecialchars( $memoryData['max_memory'] ) );
                 $component5->addAttribute('name', 'MaximumMemoryCapacity');
                 $component5->addAttribute('type', 'string');
 
 				//Set Capacity
-                $component6 = $component->addChild('component', $memoryData['speed']);
+                $component6 = $component->addChild('component', htmlspecialchars( $memoryData['speed'] ) );
                 $component6->addAttribute('name', 'Speed');
                 $component6->addAttribute('type', 'string');
             }
         }
 
-		// component  Video Outputs
+		
+        // component  Video Outputs
         $components = $this->audit->addChild('components');
         $components->addAttribute('name', 'Video Outputs');
 
@@ -158,12 +159,12 @@ trait CommonWipeBiosMakorApiTraits
             $component->addAttribute('name', 'Video Output');
 
 			//Set Capacity
-            $component1 = $component->addChild('component', $videoOutput['Processor']);
+            $component1 = $component->addChild('component', htmlspecialchars( $videoOutput['Processor'] ) );
             $component1->addAttribute('name', 'GraphicsProcessor');
             $component1->addAttribute('type', 'string');
 
 			//Set Capacity
-            $component2 = $component->addChild('component', $videoOutput['Ports']);
+            $component2 = $component->addChild('component', htmlspecialchars ( $videoOutput['Ports'] ) );
             $component2->addAttribute('name', 'AvailablePorts');
             $component2->addAttribute('type', 'string');
         }
@@ -177,17 +178,17 @@ trait CommonWipeBiosMakorApiTraits
         $component->addAttribute('name', 'Screen/Resolution');
 
         //Set Size
-        $component1 = $component->addChild('component', $this->apiData['Size']);
+        $component1 = $component->addChild('component', htmlspecialchars( $this->apiData['Size'] ) );
         $component1->addAttribute('name', 'Size');
         $component1->addAttribute('type', 'string');
 
         //Set Resolution
-        $component2 = $component->addChild('component', $this->apiData['Resolution']);
+        $component2 = $component->addChild('component', htmlspecialchars( $this->apiData['Resolution'] ) );
         $component2->addAttribute('name', 'Resolution');
         $component2->addAttribute('type', 'string');
 
         //Set Touchscreen
-        $component3 = $component->addChild('component', $this->apiData['Touchscreen']);
+        $component3 = $component->addChild('component', htmlspecialchars( $this->apiData['Touchscreen'] ) );
         $component3->addAttribute('name', 'Touchscreen');
         $component3->addAttribute('type', 'string');
 
@@ -200,27 +201,27 @@ trait CommonWipeBiosMakorApiTraits
         $component->addAttribute('name', 'Peripherals');
 
         //Set Type
-        $component1 = $component->addChild('component', $this->apiData['battery']);
+        $component1 = $component->addChild('component', htmlspecialchars( $this->apiData['battery'] ) );
         $component1->addAttribute('name', 'Battery');
         $component1->addAttribute('type', 'string');
 
         //Set BatteriesStatus
-        $component2 = $component->addChild('component', $this->apiData['battery_condition']);
+        $component2 = $component->addChild('component', htmlspecialchars( $this->apiData['battery_condition'] ) );
         $component2->addAttribute('name', 'BatteryCondition');
         $component2->addAttribute('type', 'string');
 
         //Set BatteriesStatus
-        $component2 = $component->addChild('component', $this->apiData['Backlit_Keyboard']);
+        $component2 = $component->addChild('component',htmlspecialchars( $this->apiData['Backlit_Keyboard'] ) );
         $component2->addAttribute('name', 'BacklitKeyboard');
         $component2->addAttribute('type', 'string');
 
         //Set BatteriesStatus
-        $component2 = $component->addChild('component', $this->apiData['Fingerprint_Scanner']);
+        $component2 = $component->addChild('component', htmlspecialchars( $this->apiData['Fingerprint_Scanner'] ) );
         $component2->addAttribute('name', 'FingerprintScanner');
         $component2->addAttribute('type', 'string');
 
         //Set BatteriesStatus
-        $component2 = $component->addChild('component', $this->apiData['Webcam']);
+        $component2 = $component->addChild('component', htmlspecialchars( $this->apiData['Webcam'] ) );
         $component2->addAttribute('name', 'Webcam');
         $component2->addAttribute('type', 'string');
     }
@@ -580,12 +581,12 @@ trait CommonWipeBiosMakorApiTraits
     public function CreateBiosComputerXml()
     {
     	 //Set Optical Drive
-        $component = $this->mainComponents->addChild('component', $this->apiData['optical_drive']);
+        $component = $this->mainComponents->addChild('component',  htmlspecialchars ( $this->apiData['optical_drive'] ) );
         $component->addAttribute('name', 'OpticalDrive');
         $component->addAttribute('type', 'string');
 
         //Set CombinedRAM
-        $component = $this->mainComponents->addChild('component', $this->apiData['CombinedRAM']);
+        $component = $this->mainComponents->addChild('component', htmlspecialchars ( $this->apiData['CombinedRAM'] ) );
         $component->addAttribute('name', 'CombinedRAM');
         $component->addAttribute('type', 'string');
 
@@ -600,47 +601,47 @@ trait CommonWipeBiosMakorApiTraits
             $component->addAttribute('name', 'Processor');
 
         	//Set ProcessorCount
-            $component6 = $component->addChild('component', $processorData['processor_qty']);
+            $component6 = $component->addChild('component',htmlspecialchars( $processorData['processor_qty'] ) );
             $component6->addAttribute('name', 'Quantity');
             $component6->addAttribute('type', 'string');
 
 			//Set Manufacturer
-            $component1 = $component->addChild('component', $processorData['processor_manufacturer']);
+            $component1 = $component->addChild('component', htmlspecialchars( $processorData['processor_manufacturer'] ) );
             $component1->addAttribute('name', 'Manufacturer');
             $component1->addAttribute('type', 'string');
 
 			//Set ProcessorName
-            $component2 = $component->addChild('component', $processorData['processor_model']);
+            $component2 = $component->addChild('component',htmlspecialchars( $processorData['processor_model'] ) );
             $component2->addAttribute('name', 'Model');
             $component2->addAttribute('type', 'string');
 
 			//Set ProcessorType
-            $component3 = $component->addChild('component', $processorData['processor_type']);
+            $component3 = $component->addChild('component', htmlspecialchars($processorData['processor_type'] ) );
             $component3->addAttribute('name', 'Type');
             $component3->addAttribute('type', 'string');
 
 			//Set ProcessorCore
-            $component4 = $component->addChild('component', $processorData['processor_core']);
+            $component4 = $component->addChild('component', htmlspecialchars($processorData['processor_core']));
             $component4->addAttribute('name', 'Core');
             $component4->addAttribute('type', 'string');
 
 			//Set ProcessorSpeed
-            $component5 = $component->addChild('component', $processorData['processor_speed']);
+            $component5 = $component->addChild('component', htmlspecialchars($processorData['processor_speed']));
             $component5->addAttribute('name', 'Speed');
             $component5->addAttribute('type', 'string');
 
 			//Set ProcessorGeneration
-            $component6 = $component->addChild('component', $processorData['processor_generation']);
+            $component6 = $component->addChild('component', htmlspecialchars($processorData['processor_generation']));
             $component6->addAttribute('name', 'Generation');
             $component6->addAttribute('type', 'string');
 
 			//Set processorData
-            $component7 = $component->addChild('component', $processorData['processor_codename']);
+            $component7 = $component->addChild('component', htmlspecialchars($processorData['processor_codename']));
             $component7->addAttribute('name', 'Codename');
             $component7->addAttribute('type', 'string');
 
 			//Set ProcessorSocket
-            $component8 = $component->addChild('component', $processorData['processor_socket']);
+            $component8 = $component->addChild('component', htmlspecialchars($processorData['processor_socket']));
             $component8->addAttribute('name', 'Socket');
             $component8->addAttribute('type', 'string');
         }
@@ -656,32 +657,32 @@ trait CommonWipeBiosMakorApiTraits
             $component->addAttribute('name', 'Memory');
 
 			//Set Capacity
-            $component1 = $component->addChild('component', $memoryData['capacity']);
+            $component1 = $component->addChild('component', htmlspecialchars($memoryData['capacity']));
             $component1->addAttribute('name', 'Capacity');
             $component1->addAttribute('type', 'string');
 
 			//Set Type
-            $component2 = $component->addChild('component', $memoryData['type']);
+            $component2 = $component->addChild('component', htmlspecialchars( $memoryData['type'] ) );
             $component2->addAttribute('name', 'Type');
             $component2->addAttribute('type', 'string');
 
 			//Set PartNumber
-            $component3 = $component->addChild('component', $memoryData['partnumber']);
+            $component3 = $component->addChild('component', htmlspecialchars( $memoryData['partnumber']));
             $component3->addAttribute('name', 'PartNumber');
             $component3->addAttribute('type', 'string');
 
 			//Set Slots
-            $component4 = $component->addChild('component', $memoryData['slots']);
+            $component4 = $component->addChild('component', htmlspecialchars($memoryData['slots']));
             $component4->addAttribute('name', 'Slots');
             $component4->addAttribute('type', 'string');
 
 			//Set MaximumMemoryCapacity
-            $component5 = $component->addChild('component', $memoryData['max_memory']);
+            $component5 = $component->addChild('component', htmlspecialchars($memoryData['max_memory']));
             $component5->addAttribute('name', 'MaximumMemoryCapacity');
             $component5->addAttribute('type', 'string');
 
 			//Set Speed
-            $component6 = $component->addChild('component', $memoryData['speed']);
+            $component6 = $component->addChild('component', htmlspecialchars($memoryData['speed']));
             $component6->addAttribute('name', 'Speed');
             $component6->addAttribute('type', 'string');
         }
@@ -697,12 +698,12 @@ trait CommonWipeBiosMakorApiTraits
             $component->addAttribute('name', 'Video Output');
 
 			//Set Capacity
-            $component1 = $component->addChild('component', $videoOutput['Processor']);
+            $component1 = $component->addChild('component', htmlspecialchars($videoOutput['Processor']));
             $component1->addAttribute('name', 'GraphicsProcessor');
             $component1->addAttribute('type', 'string');
 
 			//Set Capacity
-            $component2 = $component->addChild('component', $videoOutput['Ports']);
+            $component2 = $component->addChild('component', htmlspecialchars($videoOutput['Ports']));
             $component2->addAttribute('name', 'AvailablePorts');
             $component2->addAttribute('type', 'string');
         }
@@ -716,12 +717,12 @@ trait CommonWipeBiosMakorApiTraits
         $component->addAttribute('name', 'GraphicCard');
 
 		//Set GraphicsCardOutput
-        $component1 = $component->addChild('component', $this->apiData['GraphicsCardOutput']);
+        $component1 = $component->addChild('component', htmlspecialchars($this->apiData['GraphicsCardOutput']));
         $component1->addAttribute('name', 'GraphicsCardOutput');
         $component1->addAttribute('type', 'string');
 
 		//Set GraphicsCard
-        $component2 = $component->addChild('component', $this->apiData['GraphicsCard']);
+        $component2 = $component->addChild('component', htmlspecialchars($this->apiData['GraphicsCard']));
         $component2->addAttribute('name', 'GraphicsCard');
         $component2->addAttribute('type', 'string');
     }
@@ -1465,142 +1466,142 @@ trait CommonWipeBiosMakorApiTraits
         $component->addAttribute('type', 'string');
 
 		//Set AssetTag
-        $component = $components->addChild('component', $this->apiData['asset_tag']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['asset_tag']));
         $component->addAttribute('name', 'Asset');
         $component->addAttribute('type', 'string');
 
 		//Set Class
-        $component = $components->addChild('component', $this->productName);
+        $component = $components->addChild('component', htmlspecialchars($this->productName));
         $component->addAttribute('name', 'Class');
         $component->addAttribute('type', 'string');
 
 		//Set Serial
-        $component = $components->addChild('component', $this->apiData['serial']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['serial']));
         $component->addAttribute('name', 'Serial');
         $component->addAttribute('type', 'string');
 
 		//Set manufacturer
-        $component = $components->addChild('component', $this->apiData['manufacturer']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['manufacturer']));
         $component->addAttribute('name', 'Manufacturer');
         $component->addAttribute('type', 'string');
 
 		//Set Model
-        $component = $components->addChild('component', $this->apiData['model']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['model']));
         $component->addAttribute('name', 'Model');
         $component->addAttribute('type', 'string');
 
 		//Set Model#
-        $component = $components->addChild('component', $this->apiData['model#']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['model#']));
         $component->addAttribute('name', 'Model#');
         $component->addAttribute('type', 'string');
 
 		//Set Customer Asset
-        $component = $components->addChild('component', $this->apiData['customer_asset_tag']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['customer_asset_tag']));
         $component->addAttribute('name', 'CustomerAsset#');
         $component->addAttribute('type', 'string');
 
 		//Set Weight
-        $component = $components->addChild('component', $this->apiData['weight']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['weight']));
         $component->addAttribute('name', 'ItemNetWeight');
         $component->addAttribute('type', 'string');
 
 		//Set Grade
-        $component = $components->addChild('component', $this->apiData['grade']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['grade']));
         $component->addAttribute('name', 'Grade');
         $component->addAttribute('type', 'string');
 
 		//set NextProcess
-        $component = $components->addChild('component', $this->apiData['next_process']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['next_process']));
         $component->addAttribute('name', 'NextProcess');
         $component->addAttribute('type', 'string');
 
 		//set ComplianceLabel
-        $component = $components->addChild('component', $this->apiData['compliance_label']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['compliance_label']));
         $component->addAttribute('name', 'ComplianceLabel');
         $component->addAttribute('type', 'string');
 
 		//Set Condition
-        $component = $components->addChild('component', $this->apiData['condition']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['condition']));
         $component->addAttribute('name', 'Condition');
         $component->addAttribute('type', 'string');
 
 		//Set FormFactor
-        $component = $components->addChild('component', $this->apiData['form_factor']);
+        $component = $components->addChild('component',htmlspecialchars($this->apiData['form_factor']));
         $component->addAttribute('name', 'FormFactor');
         $component->addAttribute('type', 'string');
 
 		//Set Color
-        $component = $components->addChild('component', $this->apiData['color']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['color']));
         $component->addAttribute('name', 'Color');
         $component->addAttribute('type', 'string');
 
 		//set OperatingSystem
-        $component = $components->addChild('component', $this->apiData['oprating_system']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['oprating_system']));
         $component->addAttribute('name', 'OperatingSystem');
         $component->addAttribute('type', 'string');
 
 		//Set RJ-45
-        $component = $components->addChild('component', $this->apiData['RJ-45']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['RJ-45']));
         $component->addAttribute('name', 'RJ-45');
         $component->addAttribute('type', 'string');
 
 		//Set USB 2.0
-        $component = $components->addChild('component', $this->apiData['USB2.0']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['USB2.0']));
         $component->addAttribute('name', 'USB2.0');
         $component->addAttribute('type', 'string');
 
 		//Set USB 3.0
-        $component = $components->addChild('component', $this->apiData['USB3.0']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['USB3.0']));
         $component->addAttribute('name', 'USB3.0');
         $component->addAttribute('type', 'string');
 
 		//Set USB-C
-        $component = $components->addChild('component', $this->apiData['USB-C']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['USB-C']));
         $component->addAttribute('name', 'USB-C');
         $component->addAttribute('type', 'string');
 
 		//Set SD Card Reader
-        $component = $components->addChild('component', $this->apiData['SD_card_reader']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['SD_card_reader']));
         $component->addAttribute('name', 'SDCardReader');
         $component->addAttribute('type', 'string');
 
 		//Set Headphone Jack
-        $component = $components->addChild('component', $this->apiData['Headphone_Jack']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['Headphone_Jack']));
         $component->addAttribute('name', 'HeadphoneJack');
         $component->addAttribute('type', 'string');
 
 		//Set Microphone Jack
-        $component = $components->addChild('component', $this->apiData['Microphone_Jack']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['Microphone_Jack']));
         $component->addAttribute('name', 'MicrophoneJack');
         $component->addAttribute('type', 'string');
 
 		//Set Height
-        $component = $components->addChild('component', $this->apiData['height']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['height']));
         $component->addAttribute('name', 'Height');
         $component->addAttribute('type', 'string');
 
 		//Set Width
-        $component = $components->addChild('component', $this->apiData['width']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['width']));
         $component->addAttribute('name', 'Width');
         $component->addAttribute('type', 'string');
 
 		//Set Length
-        $component = $components->addChild('component', $this->apiData['length']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['length']));
         $component->addAttribute('name', 'Length');
         $component->addAttribute('type', 'string');
 
 		//Set CombinedHDP/N
-        $component = $components->addChild('component', $this->apiData['CombinedHDP/N']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['CombinedHDP/N']));
         $component->addAttribute('name', 'CombinedHDP/N');
         $component->addAttribute('type', 'string');
 
         //Set CombinedHDP/N
-        $component = $components->addChild('component', $this->apiData['CombinedHD']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['CombinedHD']));
         $component->addAttribute('name', 'CombinedHD');
         $component->addAttribute('type', 'string');
 
 		//Set CombinedRAMP/N
-        $component = $components->addChild('component', $this->apiData['CombinedRAMP/N']);
+        $component = $components->addChild('component', htmlspecialchars($this->apiData['CombinedRAMP/N']));
         $component->addAttribute('name', 'CombinedRAMP/N');
         $component->addAttribute('type', 'string');
         
@@ -1633,42 +1634,42 @@ trait CommonWipeBiosMakorApiTraits
         $component->addAttribute('name', 'Miscellaneous');
 
 		//Set Case
-        $component1 = $component->addChild('component', $this->apiData['Case']);
+        $component1 = $component->addChild('component', htmlspecialchars($this->apiData['Case']));
         $component1->addAttribute('name', 'Case');
         $component1->addAttribute('type', 'string');
 
 		//Set Screen
-        $component2 = $component->addChild('component', $this->apiData['Screen']);
+        $component2 = $component->addChild('component', htmlspecialchars($this->apiData['Screen']));
         $component2->addAttribute('name', 'Screen');
         $component2->addAttribute('type', 'string');
 
 		//set Missing
-        $component3 = $component->addChild('component', $this->apiData['Missing']);
+        $component3 = $component->addChild('component', htmlspecialchars($this->apiData['Missing']));
         $component3->addAttribute('name', 'Missing');
         $component3->addAttribute('type', 'string');
 
 		//Set Cosemtic
-        $component4 = $component->addChild('component', $this->apiData['Cosmetic']);
+        $component4 = $component->addChild('component', htmlspecialchars($this->apiData['Cosmetic']));
         $component4->addAttribute('name', 'Cosmetic');
         $component4->addAttribute('type', 'string');
 
 		//Set Input/Output 
-        $component5 = $component->addChild('component', $this->apiData['Input/Output']);
+        $component5 = $component->addChild('component', htmlspecialchars($this->apiData['Input/Output']));
         $component5->addAttribute('name', 'Input/Output');
         $component5->addAttribute('type', 'string');
 
 		//Set Other
-        $component6 = $component->addChild('component', $this->apiData['Other']);
+        $component6 = $component->addChild('component', htmlspecialchars($this->apiData['Other']));
         $component6->addAttribute('name', 'Other');
         $component6->addAttribute('type', 'string');
 
 		//Set note
-        $component7 = $component->addChild('component', $this->apiData['notes']);
+        $component7 = $component->addChild('component', htmlspecialchars($this->apiData['notes']));
         $component7->addAttribute('name', 'Notes');
         $component7->addAttribute('type', 'string');
 
 		//Set Functional
-        $component8 = $component->addChild('component', $this->apiData['functional']);
+        $component8 = $component->addChild('component', htmlspecialchars($this->apiData['functional']));
         $component8->addAttribute('name', 'Functional');
         $component8->addAttribute('type', 'string');
 
@@ -1683,12 +1684,12 @@ trait CommonWipeBiosMakorApiTraits
             $component->addAttribute('name', 'Video Output');
 
             //Set Capacity
-            $component1 = $component->addChild('component', $videoOutput['Processor']);
+            $component1 = $component->addChild('component', htmlspecialchars($videoOutput['Processor']));
             $component1->addAttribute('name', 'GraphicsProcessor');
             $component1->addAttribute('type', 'string');
 
             //Set Capacity
-            $component2 = $component->addChild('component', $videoOutput['Ports']);
+            $component2 = $component->addChild('component', htmlspecialchars($videoOutput['Ports']));
             $component2->addAttribute('name', 'AvailablePorts');
             $component2->addAttribute('type', 'string');
         }

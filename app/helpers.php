@@ -23,7 +23,7 @@ function userVerifiedString($value)
         break;
     }
     return $status;
-}
+} 
 
 function userVerifiedClass($value)
 {
@@ -1220,9 +1220,16 @@ function getBiosRAMSpeed($ramType, $ramSpeed)
 
 function getCore($data)
 {
+    $cores = '';
+    if( isset( $data['@attributes']['id'] )  && $data['@attributes']['id'] == 'cores' )
+    {
+        $cores = $value['@attributes']['value'];
+        return $cores;
+    }
+
     foreach ($data as $key => $value)
     {
-        if ($value['@attributes']['id'] == 'cores')
+        if ( isset( $value['@attributes']['id'] ) && $value['@attributes']['id'] == 'cores')
         {
             $cores = $value['@attributes']['value'];
             break;
@@ -1233,6 +1240,7 @@ function getCore($data)
 
 function getOpticle($data)
 {
+    $opticle = '';
     foreach ($data as $value)
     {
         if (($value['@attributes']['id'] == 'scsi:1' && $value['@attributes']['class'] == 'storage') || ($value['@attributes']['id'] == 'scsi' && $value['@attributes']['class'] == 'storage'))
@@ -1249,31 +1257,30 @@ function getOpticle($data)
 
 function getMakorRAMString($ram)
 {
-    $ramString = "";
-    foreach ($ram as $key => $value)
-    {
-        $stickCapacity = (int) $value;
-        $stickCapacityGB = $stickCapacity . "GB";
-        $ramSizes[$stickCapacityGB][] = $key;
-        $ramString += (int) $value;
+    $ram_string = "";
+    foreach ($ram as $key => $value) {
+        $stick_capacity = (int) $value;
+        $stick_capacity_gb = $stick_capacity . "GB";
+        $ram_sizes[$stick_capacity_gb][] = $key;
+        $ram_string += (int) $value;
     }
-    $ramString .= "GB:";
+    $ram_string .= "GB:";
+
     $count = 1;
-    $totalRamSizes = count($ramSizes);
-    foreach ($ramSizes as $key => $ramSize)
-    {
-        if ($count == 1)
-        {
-            $ramString .= "_";
+    $total_ram_sizes = count($ram_sizes);
+
+    foreach ($ram_sizes as $key => $ram_size) {
+        if ($count == 1) {
+            $ram_string .= "_";
         }
-        $ramString .= $key . "_x_" . count($ramSize);
-        if ($count < $totalRamSizes)
-        {
-            $ramString .= ";";
+        $ram_string .= $key . "_x_" . count($ram_size);
+        if ($count < $total_ram_sizes) {
+            $ram_string .= ";";
         }
         $count++;
     }
-    return $ramString;
+
+    return $ram_string;
 }
 
 function getBiosLaptopData($data)

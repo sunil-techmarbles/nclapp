@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>BCA7A129-9ADA-4F3B-AA00-27285DE28BA4</GroupUUID>
+        <Hardware>
+            <ComputerVendor>HP</ComputerVendor>
+            <ComputerModel>HP Spectre x360 Convertible 13-ac0XX</ComputerModel>
+            <ComputerSerial>5CD72063DF</ComputerSerial>
+            <MotherboardVendor>HP</MotherboardVendor>
+            <MotherboardModel>827E</MotherboardModel>
+            <AssetTag>Not Specified</AssetTag>
+            <ChassisType>Convertible</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz</Name>
+                    <Speed>3500 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>128 kB</L1Cache>
+                    <L2Cache>512 kB</L2Cache>
+                    <L3Cache>4096 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>Row Of Chips</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>Not Available</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>K4EBE304EB-EGCF</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>Row Of Chips</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>Not Available</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>K4EBE304EB-EGCF</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>LPDDR3 Row Of Chips</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Wireless 8265 / 8275</Product>
+                    <MACAddress>f8:59:71:3d:3b:46</MACAddress>
+                    <Speed></Speed>
+                    <PciId>8086:24FD</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZVLW512HMJP-000H1</Product>
+                    <Serial>S36ENX0J405624</Serial>
+                    <Firmware>CXY70H1Q</Firmware>
+                    <Gigabytes>512.11</Gigabytes>
+                    <Bytes>512110190592</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>002538b471b2e54b</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>HD Graphics 620</Product>
+                    <PciId>8086:5916</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>Hewlett-Packard</Vendor>
+                    <Product>Primary</Product>
+                    <SerialNumber></SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>2688000</CurrentCapacity>
+                    <DesignCapacity>4736000</DesignCapacity>
+                    <FullCapacity>4736000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>7</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>B0F562DE-80BB-4B13-9F79-0F7D53DA4AF8</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600784</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="72250245365561145259016816013677175113130">
+                    <UUID>FB7986AF-1359-4FCD-95A3-C0C4A71F9201</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Friday, 15 May 2020 11:26:02</StartTime>
+                    <Duration>00:50:09</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>1000215216</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>100021522</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZVLW512HMJP-000H1</Product>
+                    <Serial>S36ENX0J405624</Serial>
+                    <Gigabytes>512.11</Gigabytes>
+                    <Bytes>512110190592</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

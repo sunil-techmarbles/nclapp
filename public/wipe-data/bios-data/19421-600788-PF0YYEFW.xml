@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>56ABD315-5798-4086-A752-ECF74B779412</GroupUUID>
+        <Hardware>
+            <ComputerVendor>LENOVO</ComputerVendor>
+            <ComputerModel>20L7002CUS</ComputerModel>
+            <ComputerSerial>PF0YYEFW</ComputerSerial>
+            <MotherboardVendor>LENOVO</MotherboardVendor>
+            <MotherboardModel>20L7002CUS</MotherboardModel>
+            <AssetTag>No Asset Information</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz</Name>
+                    <Speed>1700 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>6144 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>2400 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>00000000</SerialNumber>
+                    <AssetTag>None</AssetTag>
+                    <PartNumber>M471A1K43BB1-CRC</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>1</CurrentBanksUsed>
+                <Description>DDR4 SODIMM</Description>
+                <TotalCapacity>8192 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Wireless 8265 / 8275</Product>
+                    <MACAddress>a0:c5:89:b5:c8:22</MACAddress>
+                    <Speed></Speed>
+                    <PciId>8086:24FD</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Ethernet Connection (4) I219-LM</Product>
+                    <MACAddress>8c:16:45:4c:98:05</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:15D7</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZVLW256HEHP-000L7</Product>
+                    <Serial>S35ENA0K357184</Serial>
+                    <Firmware>5L7QCXB7</Firmware>
+                    <Gigabytes>256.06</Gigabytes>
+                    <Bytes>256060514304</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>002538b38100edac</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>UHD Graphics 620</Product>
+                    <PciId>8086:5917</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>SMP</Vendor>
+                    <Product>01AV479</Product>
+                    <SerialNumber>925</SerialNumber>
+                    <Type>Li-poly</Type>
+                    <CurrentCapacity>5860000</CurrentCapacity>
+                    <DesignCapacity>57020000</DesignCapacity>
+                    <FullCapacity>51960000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>10</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>1</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>E5E2B8C5-59CB-4904-AB08-3F9EB4F04BD7</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600788</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="186186577419919989234215153225142343524434">
+                    <UUID>7F9542A9-973E-4147-A0E7-7438632FD5F4</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Friday, 15 May 2020 13:24:48</StartTime>
+                    <Duration>00:46:43</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>500118192</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>50011820</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear. This drive is capable of getting Purge, but didn't due to an error.</NISTMethodTypeReason>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZVLW256HEHP-000L7</Product>
+                    <Serial>S35ENA0K357184</Serial>
+                    <Gigabytes>256.06</Gigabytes>
+                    <Bytes>256060514304</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

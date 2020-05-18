@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20L7002CUS
+Computer Serial: PC0XZAEB
+Motherboard Vendor: LENOVO
+Motherboard Model: 20L7002CUS
+Processor: Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz, Speed: 1700 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: 64:5d:86:60:ce:f8
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection (4) I219-LM, MAC Address: e8:6a:64:ea:69:10
+Drive 1: Model: SAMSUNG MZVLB256HAHQ-000L7, Serial: S41GNA0K902585, Size: 256.06 GB, Firmware Version: 0L2QEXD7
+Display Adapter: Vendor: Intel Corporation, Model: UHD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 4
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 78B4FC96-90A3-43BC-896D-82B5E7AEF37D
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600793
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Samsung Electronics Co Ltd Model: SAMSUNG MZVLB256HAHQ-000L7
+             Serial: S41GNA0K902585 Size: 256.06 GB
+
+UUID: CD4EE5C7-26B7-44A8-BF9A-0CB6FB9CACB3
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Friday, 15 May 2020 at 08:51:43
+Action End Time: Friday, 15 May 2020 at 09:12:57
+Action Duration: 00:21:14
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

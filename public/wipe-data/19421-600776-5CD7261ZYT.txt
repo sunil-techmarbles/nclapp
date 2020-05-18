@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: HP
+Computer Model: HP Spectre x360 Convertible 13-ac0XX
+Computer Serial: 5CD7261ZYT
+Motherboard Vendor: HP
+Motherboard Model: 827E
+Processor: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, Speed: 3500 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 16384 MB, Memory banks: 2, LPDDR3 Row Of Chips
+NIC: Vendor: Intel Corporation, Model: Wireless 8265 / 8275, MAC Address: f8:59:71:5d:86:85
+Drive 1: Model: SAMSUNG MZVLW512HMJP-000H1, Serial: S36ENB0J566515, Size: 512.11 GB, Firmware Version: CXY73H1Q
+Display Adapter: Vendor: Intel Corporation, Model: HD Graphics 620
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 3
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 22386206-A489-4C24-BA41-66652C192DDB
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 600776
+User3: Best Made Co
+User4: 19421
+
+>> Drive #1  Vendor: Samsung Electronics Co Ltd Model: SAMSUNG MZVLW512HMJP-000H1
+             Serial: S36ENB0J566515 Size: 512.11 GB
+
+UUID: 9F1F764B-BB81-46D5-AB50-7D660A378F5B
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 1000215216
+Sectors Not Overwritten: 0
+Sectors Verified: 100021522
+Action Start Time: Friday, 15 May 2020 at 11:00:05
+Action End Time: Friday, 15 May 2020 at 11:48:32
+Action Duration: 00:48:27
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

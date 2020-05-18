@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>3B920EB1-B506-47BE-9596-D25C993E79F8</GroupUUID>
+        <Hardware>
+            <ComputerVendor>LENOVO</ComputerVendor>
+            <ComputerModel>20L7002CUS</ComputerModel>
+            <ComputerSerial>PC0YBY1B</ComputerSerial>
+            <MotherboardVendor>LENOVO</MotherboardVendor>
+            <MotherboardModel>20L7002CUS</MotherboardModel>
+            <AssetTag>No Asset Information</AssetTag>
+            <ChassisType>Notebook</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i5-8350U CPU @ 1.70GHz</Name>
+                    <Speed>1700 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>6144 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>2400 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>DDR4</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>00000000</SerialNumber>
+                    <AssetTag>None</AssetTag>
+                    <PartNumber>M471A1K43BB1-CRC</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>1</CurrentBanksUsed>
+                <Description>DDR4 SODIMM</Description>
+                <TotalCapacity>8192 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Wireless 8265 / 8275</Product>
+                    <MACAddress>48:a4:72:ae:3b:61</MACAddress>
+                    <Speed></Speed>
+                    <PciId>8086:24FD</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Ethernet Connection (4) I219-LM</Product>
+                    <MACAddress>e8:6a:64:29:79:2f</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:15D7</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>INTEL SSDPEKKF256G8L</Product>
+                    <Serial>BTHH83040TP0256B</Serial>
+                    <Firmware>L08P</Firmware>
+                    <Gigabytes>256.06</Gigabytes>
+                    <Bytes>256060514304</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>5cd2e42981a0078a</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>UHD Graphics 620</Product>
+                    <PciId>8086:5917</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>SMP</Vendor>
+                    <Product>01AV479</Product>
+                    <SerialNumber>2208</SerialNumber>
+                    <Type>Li-poly</Type>
+                    <CurrentCapacity>980000</CurrentCapacity>
+                    <DesignCapacity>57020000</DesignCapacity>
+                    <FullCapacity>56800000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>4</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>1</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>91C6C242-772B-4AD3-BEC7-2B40621C4363</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600792</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="108132229148251162158226139792314438169202147">
+                    <UUID>B36ABC40-0DF5-4D64-937B-31F58F7A2D4D</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Friday, 15 May 2020 09:41:44</StartTime>
+                    <Duration>00:24:19</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>2</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>1</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>500118192</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>50011820</SectorsVerified>
+                    <NISTMethodType>Purge</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Purge achieved.</NISTMethodTypeReason>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>INTEL SSDPEKKF256G8L</Product>
+                    <Serial>BTHH83040TP0256B</Serial>
+                    <Gigabytes>256.06</Gigabytes>
+                    <Bytes>256060514304</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>4E9CA7CF-05FF-4E67-9422-1C25950CC8E5</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Apple Inc.</ComputerVendor>
+            <ComputerModel>MacBookPro13,1</ComputerModel>
+            <ComputerSerial>C02T3043GVC8</ComputerSerial>
+            <MotherboardVendor>Apple Inc.</MotherboardVendor>
+            <MotherboardModel>Mac-473D31EABEB93F9B</MotherboardModel>
+            <AssetTag></AssetTag>
+            <ChassisType>Laptop</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i5-6360U CPU @ 2.00GHz</Name>
+                    <Speed>2000 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>512 kB</L2Cache>
+                    <L3Cache>4096 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>0x80AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x00000000</SerialNumber>
+                    <AssetTag></AssetTag>
+                    <PartNumber>0x483943434E4E4E434C544D4C41522D4E5544</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>0x80AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>0x00000000</SerialNumber>
+                    <AssetTag></AssetTag>
+                    <PartNumber>0x483943434E4E4E434C544D4C41522D4E5544</PartNumber>
+                </Stick>
+                <MemoryBanks>2</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>LPDDR3 SODIMM</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>BCM4350 802.11ac Wireless Network Adapter</Product>
+                    <MACAddress>f4:0f:24:0f:ea:0f</MACAddress>
+                    <Speed></Speed>
+                    <PciId>14E4:43A3</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Apple</Vendor>
+                    <Product>SSD AP0512J</Product>
+                    <Serial>C08645702WCGXR5AH</Serial>
+                    <Firmware>12.93.01</Firmware>
+                    <Gigabytes>500.28</Gigabytes>
+                    <Bytes>500277792768</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>cb48535476020500</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+                <Device>
+                    <Vendor>Apple</Vendor>
+                    <Product>SSD AP0512J</Product>
+                    <Serial>C08645702WCGXR5AH</Serial>
+                    <Firmware>12.93.01</Firmware>
+                    <Gigabytes>0.00</Gigabytes>
+                    <Bytes>8192</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>cb48535476020500</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Iris Graphics 540</Product>
+                    <PciId>8086:1926</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>720p FaceTime HD Camera</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>DSY</Vendor>
+                    <Product>bq20z451</Product>
+                    <SerialNumber></SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>498000</CurrentCapacity>
+                    <DesignCapacity>4790000</DesignCapacity>
+                    <FullCapacity>4043000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>0</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>1</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>FAE7C07E-7E27-4A10-AD9C-3B88A96A830C</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>600765</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Best Made Co</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19421</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="471625523222292101143254742513653149158244">
+                    <UUID>FC8B606F-3CBE-4917-9E07-4BDFD07D5118</UUID>
+                    <DiskOperationType Index="2">Verify</DiskOperationType>
+                    <Method>Verify</Method>
+                    <StartTime>Sunday, 01 Jan 2017 00:17:37</StartTime>
+                    <Duration>00:00:00</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>0</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>2</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>Apple</Vendor>
+                    <Product>SSD AP0512J</Product>
+                    <Serial>C08645702WCGXR5AH</Serial>
+                    <Gigabytes>0.00</Gigabytes>
+                    <Bytes>8192</Bytes>
+                    <SectorSize>4096</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                </Operation>
+                <Operation SecurityCode="18823895183148172202237186108112156195645694">
+                    <UUID>8CA49897-79AB-4706-995D-6223A509EB85</UUID>
+                    <DiskOperationType Index="2">Verify</DiskOperationType>
+                    <Method>Verify</Method>
+                    <StartTime>Sunday, 01 Jan 2017 00:17:37</StartTime>
+                    <Duration>00:00:01</Duration>
+                    <ActionResult Index="3">Canceled</ActionResult>
+                    <FailureReason>Data read from device was not correct</FailureReason>
+                    <DirtySectors>38229</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>0</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>40064</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>Apple</Vendor>
+                    <Product>SSD AP0512J</Product>
+                    <Serial>C08645702WCGXR5AH</Serial>
+                    <Gigabytes>500.28</Gigabytes>
+                    <Bytes>500277792768</Bytes>
+                    <SectorSize>4096</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

@@ -74,7 +74,6 @@ class WipeBiosMakor extends Command
                 $wipeBiosDataFilePath = $this->wipeBiosDataDir . "/" . $wipeBiosDataFile;
                 try
                 {
-
                     //read XML file
                     $wipeBiosFileContent = getXMLContent($wipeBiosDataFilePath);
 
@@ -124,13 +123,6 @@ class WipeBiosMakor extends Command
 
                     $allDataArray = $wipeBiosFileContent['node'];
 
-
-                   pr( $wipeBiosDataFilePath ); 
-
-                   pr( $BiosAdditionalDataFile ); 
-
-                   pr( $productName ); 
-
                     switch ($productName) {
                         case 'Computer':
                             $apiDataObject = $this->init($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber);
@@ -144,8 +136,6 @@ class WipeBiosMakor extends Command
                             continue;
                             break;
                     }
-
-                    pr( $apiDataObject );  die; 
 
                     if (!isset($apiDataObject['xml_data']) && !empty($apiDataObject['xml_data']))
                     {
