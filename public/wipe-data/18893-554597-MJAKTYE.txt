@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 7033C37
+Computer Serial: MJAKTYE
+Motherboard Vendor: LENOVO
+Motherboard Model: 
+Processor: Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz, Speed: 3100 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 8192 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 44:37:e6:55:95:d1
+DVD-RAM writer: DVD-RW DH16ABSH
+Drive 1: Model: WDC WD2500AAKX-083CA1, Serial: WD-WCAYV0968298, Size: 250.06 GB, Firmware Version: 17.01H17
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D6B4C4F9-4EE1-4D1A-B075-9332AF070DF9
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 554597
+User3: Tishman Speyer
+User4: 18893
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-083CA1
+             Serial: WD-WCAYV0968298 Size: 250.06 GB
+
+UUID: 2B4BDB92-BB6E-4FC6-A801-3ED54AE65829
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 488397168
+Sectors Not Overwritten: 0
+Sectors Verified: 488397168
+Action Start Time: Monday, 18 May 2020 at 11:06:22
+Action End Time: Monday, 18 May 2020 at 13:56:28
+Action Duration: 02:50:06
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

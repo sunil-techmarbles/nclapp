@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2356GB9
+Computer Serial: R9V1689
+Motherboard Vendor: LENOVO
+Motherboard Model: 2356GB9
+Processor: Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz, Speed: 2900 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 3c:97:0e:6b:9b:d1
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 60:67:20:b7:32:58
+DVD-RAM writer: DVD RW AD-7940H
+Drive 1: Model: ST320LT007-9ZV142, Serial: W0Q6EBFS, Size: 320.07 GB, Firmware Version: 0004LVM1
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF117M [GeForce 610M/710M/810M/820M / GT 620M/625M/630M/720M]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: E60B863A-FD0D-428F-8753-8DEED531A588
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 545041
+User3: Perkins Eastman
+User4: 18934
+
+>> Drive #1  Vendor: Seagate Model: ST320LT007-9ZV142
+             Serial: W0Q6EBFS Size: 320.07 GB
+
+UUID: 2F0E0569-3349-485C-ACEC-92AAB3EC767C
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62528016
+Action Start Time: Wednesday, 20 May 2020 at 15:46:08
+Action End Time: Wednesday, 20 May 2020 at 16:54:52
+Action Duration: 01:08:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

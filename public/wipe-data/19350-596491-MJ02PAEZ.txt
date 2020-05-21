@@ -22,7 +22,7 @@ USB Ports: 0
 USB2 Ports: 2
 USB3 Ports: 1
 
-Job UUID: E187485E-79C1-43FE-B69D-CBA8CCA3B382
+Job UUID: 5B2CA5D0-C646-447D-B96F-7EBDC0C2034C
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -34,15 +34,15 @@ User4: 19350
 >> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
              Serial: Z6EL78JL Size: 500.11 GB
 
-UUID: 56F872A6-82F2-4F0B-9216-863A5102D1E5
+UUID: B5E6E63B-A99B-41D4-9578-136B4D49B2B2
 Action: Wipe
 Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
 Sectors Overwritten: 976773168
 Sectors Not Overwritten: 0
 Sectors Verified: 976773168
-Action Start Time: Friday, 15 May 2020 at 14:25:19
-Action End Time: Friday, 15 May 2020 at 19:49:03
-Action Duration: 05:23:44
+Action Start Time: Monday, 18 May 2020 at 09:53:19
+Action End Time: Monday, 18 May 2020 at 15:17:06
+Action Duration: 05:23:47
 
 Action Result: SUCCESS
 

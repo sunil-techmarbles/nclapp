@@ -1,0 +1,133 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R820
+Computer Serial: 69MMBY1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0YWR73
+Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+RAM: 524288 MB, Memory banks: 48, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: b8:ca:3a:65:7e:28
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: b8:ca:3a:65:7e:2a
+NIC: Vendor: QLogic Corp., Model: ISP8324 1/10GbE Converged Network Controller, MAC Address: 00:0e:1e:14:25:e0
+NIC: Vendor: QLogic Corp., Model: 8300 Series 10GbE Converged Network Adapter (iSCSI), MAC Address: 00:0e:1e:14:25:e0
+NIC: Vendor: QLogic Corp., Model: ISP8324 1/10GbE Converged Network Controller, MAC Address: 00:0e:1e:14:25:f0
+NIC: Vendor: QLogic Corp., Model: 8300 Series 10GbE Converged Network Adapter (iSCSI), MAC Address: 00:0e:1e:14:25:f0
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: e0:db:55:0f:32:a3
+DVD-RAM writer: DVD+-RW DS-8A9SH
+Drive 1: Model: PERC H310, Serial: 00e8117146e303fc25003e27f7a0a38c, Size: 299.44 GB
+Drive 2: Model: PERC H310, Serial: 00e6cb0e47ed03fc25003e27f7a0a38c, Size: 299.44 GB
+Drive 3: Model: Internal Dual SD, Serial: 0123456789AB, Size: 1.02 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 7
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: D1F6EBAA-0AFC-449C-9B96-78344604032C
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548775
+User3: Metropolitan Museum of Art
+User4: 17594
+
+>> Raid device #3  Vendor: DELL Model: PERC H310
+             Serial: 00e6cb0e47ed03fc25003e27f7a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: ATA Model: INTEL SSDSC2BB300G4T
+             Serial: PHWL44920135300PGN Size: 278.875 GB  [ 32:7 ]
+
+UUID: 1FA0F5B4-91A9-4FAF-959C-160994B49587
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 17:14:15
+Action End Time: Monday, 18 May 2020 at 18:31:16
+Action Duration: 01:17:01
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: DELL Model: PERC H310
+             Serial: 00e8117146e303fc25003e27f7a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST300MM0006     
+             Serial: S0K0NQK0 Size: 278.875 GB  [ 32:0 ]
+
+UUID: 7F20B57B-32FE-4848-B712-E0459642BD4F
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 17:14:15
+Action End Time: Monday, 18 May 2020 at 17:33:14
+Action Duration: 00:18:59
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #1  Vendor: Dell Model: Internal Dual SD
+             Serial: 0123456789AB Size: 1.02 GB
+
+UUID: A6CC2FC8-071C-4C33-AF35-7DD7C15F287A
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1990656
+Sectors Not Overwritten: 0
+Sectors Verified: 1990656
+Action Start Time: Monday, 18 May 2020 at 17:14:15
+Action End Time: Monday, 18 May 2020 at 17:31:47
+Action Duration: 00:17:32
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 3
+Computer Serial: 028880243153
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 3
+Processor: Intel(R) Core(TM) i7-4650U CPU @ 1.70GHz, Speed: 2900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88W8897 [AVASTAR] 802.11ac Wireless, MAC Address: 
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 28:18:78:bb:c5:e1
+Drive 1: Model: SAMSUNG MZMTE512HMHP-000MV, Serial: S1F2NYAF708106, Size: 512.11 GB, Firmware Version: EXT41M0Q
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 8
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: AB5541CA-A3D2-4058-845B-A8C4279D97C8
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 601014
+User3: Owens Corning
+User4: 19443
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZMTE512HMHP-000MV
+             Serial: S1F2NYAF708106 Size: 512.11 GB
+
+UUID: 6A3D9850-78AF-4661-8107-1901FC438D98
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1000215216
+Sectors Not Overwritten: 0
+Sectors Verified: 100021522
+Action Start Time: Thursday, 01 Jan 2009 at 00:02:34
+Action End Time: Thursday, 01 Jan 2009 at 00:08:03
+Action Duration: 00:05:29
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

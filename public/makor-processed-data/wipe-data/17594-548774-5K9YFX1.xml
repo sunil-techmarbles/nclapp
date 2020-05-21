@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <Reports>
-    <Report Product="WipeDrive Enterprise 8.3 32-bit">
-        <KernelVersion>4.12.12-gentoo</KernelVersion>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>3CBF0BCD-D82F-4FF5-9B82-D08E6CEB2528</GroupUUID>
         <Hardware>
             <ComputerVendor>Dell Inc.</ComputerVendor>
             <ComputerModel>PowerEdge R820</ComputerModel>
@@ -15,7 +16,7 @@
                     <Vendor>Intel</Vendor>
                     <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
                     <Speed>2700 MHz</Speed>
-                    <ID>CPU4</ID>
+                    <ID>CPU1</ID>
                     <NumCores>8</NumCores>
                     <NumThreads>16</NumThreads>
                     <L1Cache>256 kB</L1Cache>
@@ -26,7 +27,7 @@
                     <Vendor>Intel</Vendor>
                     <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
                     <Speed>2700 MHz</Speed>
-                    <ID>CPU4</ID>
+                    <ID>CPU2</ID>
                     <NumCores>8</NumCores>
                     <NumThreads>16</NumThreads>
                     <L1Cache>256 kB</L1Cache>
@@ -37,7 +38,7 @@
                     <Vendor>Intel</Vendor>
                     <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
                     <Speed>2700 MHz</Speed>
-                    <ID>CPU4</ID>
+                    <ID>CPU3</ID>
                     <NumCores>8</NumCores>
                     <NumThreads>16</NumThreads>
                     <L1Cache>256 kB</L1Cache>
@@ -60,7 +61,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -71,7 +72,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -82,7 +83,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -93,7 +94,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -104,7 +105,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -115,7 +116,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -126,7 +127,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -137,7 +138,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -148,7 +149,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -159,7 +160,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -170,7 +171,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -181,7 +182,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -192,7 +193,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -203,7 +204,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -214,7 +215,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -225,7 +226,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -236,7 +237,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -247,7 +248,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -258,7 +259,7 @@
                 <Stick>
                     <Vendor>031604B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -269,7 +270,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -280,7 +281,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -291,7 +292,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -302,7 +303,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -313,7 +314,7 @@
                 <Stick>
                     <Vendor>00AD04B300AD</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -324,7 +325,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -335,7 +336,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -346,7 +347,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -357,7 +358,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -368,7 +369,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -379,7 +380,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -390,7 +391,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -401,7 +402,7 @@
                 <Stick>
                     <Vendor>002C04B3002C</Vendor>
                     <Capacity>16384 MB</Capacity>
-                    <Speed>1333 MHz</Speed>
+                    <Speed>1333 MT/s</Speed>
                     <FormFactor>DIMM</FormFactor>
                     <Type>DDR3</Type>
                     <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
@@ -409,73 +410,25 @@
                     <AssetTag>0F133221</AssetTag>
                     <PartNumber>36KSF2G72PZ-1G4E1</PartNumber>
                 </Stick>
-                <MemoryBanks>32</MemoryBanks>
+                <MemoryBanks>48</MemoryBanks>
+                <CurrentBanksUsed>32</CurrentBanksUsed>
                 <Description>DDR3 DIMM</Description>
                 <TotalCapacity>524288 MB</TotalCapacity>
             </RAM>
             <NICs>
                 <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>NetXtreme BCM5720 Gigabit Ethernet PCIe</Product>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme BCM5720 2-port Gigabit Ethernet PCIe</Product>
                     <MACAddress>90:b1:1c:52:4a:d7</MACAddress>
                     <Speed>1Gbit/s</Speed>
                     <PciId>14E4:165F</PciId>
                 </NIC>
                 <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>NetXtreme BCM5720 Gigabit Ethernet PCIe</Product>
-                    <MACAddress>90:b1:1c:52:4a:d8</MACAddress>
-                    <Speed>1Gbit/s</Speed>
-                    <PciId>14E4:165F</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>NetXtreme BCM5720 Gigabit Ethernet PCIe</Product>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme BCM5720 2-port Gigabit Ethernet PCIe</Product>
                     <MACAddress>90:b1:1c:52:4a:d5</MACAddress>
                     <Speed>1Gbit/s</Speed>
                     <PciId>14E4:165F</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>NetXtreme BCM5720 Gigabit Ethernet PCIe</Product>
-                    <MACAddress>90:b1:1c:52:4a:d6</MACAddress>
-                    <Speed>1Gbit/s</Speed>
-                    <PciId>14E4:165F</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>BCM57840 NetXtreme II 10 Gigabit Ethernet</Product>
-                    <MACAddress>00:0e:1e:57:56:60</MACAddress>
-                    <Speed>Unavailable</Speed>
-                    <PciId>14E4:16A1</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>BCM57840 NetXtreme II 10 Gigabit Ethernet</Product>
-                    <MACAddress>00:0e:1e:57:56:62</MACAddress>
-                    <Speed>Unavailable</Speed>
-                    <PciId>14E4:16A1</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>BCM57840 NetXtreme II 10 Gigabit Ethernet</Product>
-                    <MACAddress>00:0e:1e:57:55:50</MACAddress>
-                    <Speed>Unavailable</Speed>
-                    <PciId>14E4:16A1</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Broadcom Limited</Vendor>
-                    <Product>BCM57840 NetXtreme II 10 Gigabit Ethernet</Product>
-                    <MACAddress>00:0e:1e:57:55:52</MACAddress>
-                    <Speed>Unavailable</Speed>
-                    <PciId>14E4:16A1</PciId>
-                </NIC>
-                <NIC>
-                    <Vendor>Unavailable</Vendor>
-                    <Product>Unavailable</Product>
-                    <MACAddress>00:e0:4c:68:89:94</MACAddress>
-                    <Speed>1Gbit/s</Speed>
-                    <PciId>Unavailable</PciId>
                 </NIC>
             </NICs>
             <OpticalDrives>
@@ -487,23 +440,41 @@
                 </OpticalDrive>
             </OpticalDrives>
             <Devices>
-                <Device index="1">
+                <Device>
                     <Vendor>DELL</Vendor>
                     <Product>PERC H310</Product>
                     <Serial>007b774709c5e1fc2500ebc850c0110b</Serial>
                     <Firmware></Firmware>
                     <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
                     <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
                     <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 32:0 ]</Location>
+                            <Vendor>HITACHI</Vendor>
+                            <Product>HUC109030CSS600 </Product>
+                            <Serial>KLVUJ95F</Serial>
+                            <Firmware>N440</Firmware>
+                            <Gigabytes>278.875</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
                 </Device>
-                <Device index="2">
+                <Device>
                     <Vendor>Dell</Vendor>
                     <Product>Internal Dual SD</Product>
                     <Serial>0123456789AB</Serial>
                     <Firmware></Firmware>
                     <Gigabytes>1.02</Gigabytes>
+                    <Bytes>1019215872</Bytes>
                     <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
                     <Interface>USB</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
                 </Device>
             </Devices>
             <DisplayAdapters>
@@ -513,30 +484,86 @@
                     <PciId>102B:534</PciId>
                 </DisplayAdapter>
             </DisplayAdapters>
-            <StorageControllers>
-                <StorageController>
-                    <Vendor>LSI Logic / Symbios Logic</Vendor>
-                    <Product>MegaRAID SAS 2008 [Falcon]</Product>
-                    <Description>RAID bus controller</Description>
-                    <PciId>1000:73</PciId>
-                </StorageController>
-                <StorageController>
-                    <Vendor>Intel Corporation</Vendor>
-                    <Product>C600/X79 series chipset 6-Port SATA AHCI Controller</Product>
-                    <Description>SATA controller</Description>
-                    <PciId>8086:1D02</PciId>
-                </StorageController>
-            </StorageControllers>
-            <USBPorts>6</USBPorts>
+            <USBPorts>4</USBPorts>
             <USB2Ports>2</USB2Ports>
             <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
             <ThunderboltPorts>0</ThunderboltPorts>
             <Thunderbolt2Ports>0</Thunderbolt2Ports>
             <Thunderbolt3Ports>0</Thunderbolt3Ports>
         </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>007b774709c5e1fc2500ebc850c0110b - SMART Health Skipped,
+0123456789AB - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>499.2GB, 5 repetitions, runtime: 33:12</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
         <Jobs>
             <Job>
-                <UUID>E82CD906-7900-4625-A604-BE96975EB8DE</UUID>
+                <UUID>2D9B8DA8-B94D-41D5-B772-2CFDBD0E805F</UUID>
                 <UserFields>
                     <UserField index="1">
                         <Name>Username</Name>
@@ -554,22 +581,21 @@
                         <Name>User4</Name>
                         <Value>17594</Value>
                     </UserField>
-                    <UserField index="5">
-                        <Name>\&quot;Product\&quot;</Name>
-                        <Value>Server</Value>
-                    </UserField>
                 </UserFields>
-                <Operation DeviceIndex="1" SecurityCode="247824942215129185140168177988949125198">
-                    <UUID>D3DCA919-9BB8-4C35-9362-5296BF266267</UUID>
-                    <DiskOperationType>Wipe</DiskOperationType>
-                    <Method>NIST 800-88r1</Method>
-                    <MethodValue>N</MethodValue>
-                    <StartTime>Thursday, 12 Mar 2020 12:14:29</StartTime>
-                    <Duration>00:35:37</Duration>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="8593231170120559318817396277721522417016">
+                    <UUID>96E8A53C-7FAE-44CD-8613-9D812010DC86</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Friday, 15 May 2020 20:05:24</StartTime>
+                    <Duration>02:15:15</Duration>
                     <ActionResult Index="2">Success</ActionResult>
                     <DirtySectors>0</DirtySectors>
                     <DriveErrorsDetected>0</DriveErrorsDetected>
                     <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
                     <DCOFound>No</DCOFound>
                     <DCORemoved>No</DCORemoved>
                     <HPAFound>No</HPAFound>
@@ -578,35 +604,45 @@
                     <AMAXRemoved>No</AMAXRemoved>
                     <SecurityLocked>No</SecurityLocked>
                     <SecurityFrozen>No</SecurityFrozen>
-                    <Passes>1</Passes>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
                     <SecureErasePasses>0</SecureErasePasses>
                     <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
                     <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
                     <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
                     <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
                     <SectorsOverwritten>584843264</SectorsOverwritten>
                     <SectorsNotOverwritten>0</SectorsNotOverwritten>
-                    <SectorsVerified>58484327</SectorsVerified>
-                    <NISTMethodType>Clear</NISTMethodType>
+                    <SectorsVerified>584843264</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
                     <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
-                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
                     <Vendor>DELL</Vendor>
                     <Product>PERC H310</Product>
                     <Serial>007b774709c5e1fc2500ebc850c0110b</Serial>
                     <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <SectorSize>512</SectorSize>
                     <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
                 </Operation>
-                <Operation DeviceIndex="2" SecurityCode="1910010113122190148971584677389834136248">
-                    <UUID>D296ECB7-42B3-42F1-8771-9279712F2C4C</UUID>
-                    <DiskOperationType>Wipe</DiskOperationType>
-                    <Method>NIST 800-88r1</Method>
-                    <MethodValue>N</MethodValue>
-                    <StartTime>Thursday, 12 Mar 2020 12:14:29</StartTime>
-                    <Duration>00:33:09</Duration>
+                <Operation SecurityCode="626021212516771392865813717922218793166">
+                    <UUID>34AF3258-8DCE-47E2-8D4B-811EE7B1DBA4</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Friday, 15 May 2020 20:05:25</StartTime>
+                    <Duration>00:17:10</Duration>
                     <ActionResult Index="2">Success</ActionResult>
                     <DirtySectors>0</DirtySectors>
                     <DriveErrorsDetected>0</DriveErrorsDetected>
                     <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
                     <DCOFound>No</DCOFound>
                     <DCORemoved>No</DCORemoved>
                     <HPAFound>No</HPAFound>
@@ -615,23 +651,29 @@
                     <AMAXRemoved>No</AMAXRemoved>
                     <SecurityLocked>No</SecurityLocked>
                     <SecurityFrozen>No</SecurityFrozen>
-                    <Passes>2</Passes>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
                     <SecureErasePasses>0</SecureErasePasses>
                     <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
                     <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
                     <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
                     <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
                     <SectorsOverwritten>1990656</SectorsOverwritten>
                     <SectorsNotOverwritten>0</SectorsNotOverwritten>
-                    <SectorsVerified>199066</SectorsVerified>
-                    <NISTMethodType>Clear</NISTMethodType>
+                    <SectorsVerified>1990656</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
                     <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
-                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
                     <Vendor>Dell</Vendor>
                     <Product>Internal Dual SD</Product>
                     <Serial>0123456789AB</Serial>
                     <Gigabytes>1.02</Gigabytes>
+                    <Bytes>1019215872</Bytes>
+                    <SectorSize>512</SectorSize>
                     <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
                 </Operation>
             </Job>
         </Jobs>

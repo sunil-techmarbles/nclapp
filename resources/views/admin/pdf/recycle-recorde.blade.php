@@ -86,7 +86,7 @@
 			  <td style="font-size:16px;text-align: center;padding:10px;display:block;"><strong>ITAMG - RECYCLE SHIPMENT BOL</strong></td>
 			</tr>
 		</table>
-		<table class="page-break" width="700" style="margin: 0px auto; border: 1px solid #ccc;">
+		<table class="" width="700" style="margin: 0px auto; border: 1px solid #ccc;">
 			<tr style="background: #f00; display: block; width: 100%;">
 				<th style="font-size:16px;padding:5px; text-align: left; width: 100px;">Pallet</th>
 				<th style="font-size:16px;padding:5px; text-align: left; width: 200px;">Scrap Category</th>
@@ -108,7 +108,7 @@
 				</tr>
 			@endforeach
 		</table>
-		<table width="250" style="margin: 0px auto; border: 1px solid #ccc;">
+		<table width="250" style="margin: 30px auto; border: 1px solid #ccc;">
 			<tr style="border-bottom: 1px solid #ccc; display: block; width: 100%;">
 				<td style="font-size:16px;padding: 5px;width:80px;">Carrier:</td>
 				<td style="font-size:16px;padding: 5px;">DPB Trucking</td>
@@ -118,9 +118,13 @@
 				<td style="font-size:16px;padding: 5px;">631-831-0232</td>
 			</tr>
 		</table>
-		<table width="700" style="margin: 0 auto;">
+		<table width="700" style="margin: 10px;">
 			<tr style="">
 				<td style="font-size:16px;padding-top: 40px;"><span style="border-top: 1px solid #000; display: block; text-align: center; padding-top: 5px;">Driver Signature</span></td>
+				<td style="font-size:16px;padding-top: 40px; float:right; text-align:right;"><span style="width:170px; border-top: 1px solid #000; display: block; text-align: center; padding-top: 5px;">Date</span></td>
+			</tr>
+			<tr style="">
+				<td style="font-size:16px;padding-top: 40px;"><span style="border-top: 1px solid #000; display: block; text-align: center; padding-top: 5px;">Shipper Siganture </span></td>
 				<td style="font-size:16px;padding-top: 40px; float:right; text-align:right;"><span style="width:170px; border-top: 1px solid #000; display: block; text-align: center; padding-top: 5px;">Date</span></td>
 			</tr>
 		</table>

@@ -1,0 +1,787 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>8B1D6D49-5A34-4C01-9C37-95AF30D2F71E</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Dell Inc.</ComputerVendor>
+            <ComputerModel>PowerEdge R820</ComputerModel>
+            <ComputerSerial>69MMBY1</ComputerSerial>
+            <MotherboardVendor>Dell Inc.</MotherboardVendor>
+            <MotherboardModel>0YWR73</MotherboardModel>
+            <AssetTag>Not Specified</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>CPU1</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>2048 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>CPU2</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>2048 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>CPU3</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>2048 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-4650 0 @ 2.70GHz</Name>
+                    <Speed>2700 MHz</Speed>
+                    <ID>CPU4</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>2048 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13A001BA</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FEF44</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF852</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF8E6</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FEFA5</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF8EB</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FEB26</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF143</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13A001FB</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF380</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF2E5</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13A001FC</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FEB53</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FEFA9</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>13A001FF</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF702</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>369412D6</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FF541</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36941382</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>369413A4</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FFA09</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE00B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>139FFA3B</SerialNumber>
+                    <AssetTag>03133363</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36941148</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36941147</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>369401CC</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36941149</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36940DF9</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>369413A6</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36940D36</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>369413A2</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36941077</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE04B300CE</Vendor>
+                    <Capacity>16384 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>36941127</SerialNumber>
+                    <AssetTag>02133321</AssetTag>
+                    <PartNumber>M393B2G70BH0-YH9</PartNumber>
+                </Stick>
+                <MemoryBanks>48</MemoryBanks>
+                <CurrentBanksUsed>32</CurrentBanksUsed>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>524288 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>b8:ca:3a:65:7e:28</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>b8:ca:3a:65:7e:2a</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>QLogic Corp.</Vendor>
+                    <Product>ISP8324 1/10GbE Converged Network Controller</Product>
+                    <MACAddress>00:0e:1e:14:25:e0</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>1077:8030</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>QLogic Corp.</Vendor>
+                    <Product>8300 Series 10GbE Converged Network Adapter (iSCSI)</Product>
+                    <MACAddress>00:0e:1e:14:25:e0</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>1077:8032</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>QLogic Corp.</Vendor>
+                    <Product>ISP8324 1/10GbE Converged Network Controller</Product>
+                    <MACAddress>00:0e:1e:14:25:f0</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>1077:8030</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>QLogic Corp.</Vendor>
+                    <Product>8300 Series 10GbE Converged Network Adapter (iSCSI)</Product>
+                    <MACAddress>00:0e:1e:14:25:f0</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>1077:8032</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>e0:db:55:0f:32:a3</MACAddress>
+                    <Speed>10Gbit/s</Speed>
+                    <PciId>1077:8032</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>PLDS</Vendor>
+                    <Description>DVD-RAM writer</Description>
+                    <Product>DVD+-RW DS-8A9SH</Product>
+                    <Capabilities>removable audio cd-r cd-rw dvd dvd-r dvd-ram</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device>
+                    <Vendor>DELL</Vendor>
+                    <Product>PERC H310</Product>
+                    <Serial>00e8117146e303fc25003e27f7a0a38c</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 32:0 ]</Location>
+                            <Vendor>SEAGATE</Vendor>
+                            <Product>ST300MM0006     </Product>
+                            <Serial>S0K0NQK0</Serial>
+                            <Firmware>LS08</Firmware>
+                            <Gigabytes>278.875</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device>
+                    <Vendor>DELL</Vendor>
+                    <Product>PERC H310</Product>
+                    <Serial>00e6cb0e47ed03fc25003e27f7a0a38c</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 32:7 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>INTEL SSDSC2BB300G4T</Product>
+                            <Serial>PHWL44920135300PGN</Serial>
+                            <Firmware>D201DL13</Firmware>
+                            <Gigabytes>278.875</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device>
+                    <Vendor>Dell</Vendor>
+                    <Product>Internal Dual SD</Product>
+                    <Serial>0123456789AB</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>1.02</Gigabytes>
+                    <Bytes>1019215872</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>USB</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>G200eR2</Product>
+                    <PciId>102B:534</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <USBPorts>7</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>00e8117146e303fc25003e27f7a0a38c - SMART Health Skipped,
+00e6cb0e47ed03fc25003e27f7a0a38c - SMART Health Skipped,
+0123456789AB - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>498.5GB, 5 repetitions, runtime: 34:58</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>D1F6EBAA-0AFC-449C-9B96-78344604032C</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>548775</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Metropolitan Museum of Art</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>17594</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="25417919774921985246255351482132011835197">
+                    <UUID>1FA0F5B4-91A9-4FAF-959C-160994B49587</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Monday, 18 May 2020 17:14:15</StartTime>
+                    <Duration>01:17:01</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>584843264</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>584843264</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>DELL</Vendor>
+                    <Product>PERC H310</Product>
+                    <Serial>00e6cb0e47ed03fc25003e27f7a0a38c</Serial>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+                <Operation SecurityCode="49910522132021994892402097268116239">
+                    <UUID>7F20B57B-32FE-4848-B712-E0459642BD4F</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Monday, 18 May 2020 17:14:15</StartTime>
+                    <Duration>00:18:59</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>584843264</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>584843264</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>DELL</Vendor>
+                    <Product>PERC H310</Product>
+                    <Serial>00e8117146e303fc25003e27f7a0a38c</Serial>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+                <Operation SecurityCode="9513190147381412232305018024413718287244172">
+                    <UUID>A6CC2FC8-071C-4C33-AF35-7DD7C15F287A</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Monday, 18 May 2020 17:14:15</StartTime>
+                    <Duration>00:17:32</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>1990656</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>1990656</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>Dell</Vendor>
+                    <Product>Internal Dual SD</Product>
+                    <Serial>0123456789AB</Serial>
+                    <Gigabytes>1.02</Gigabytes>
+                    <Bytes>1019215872</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

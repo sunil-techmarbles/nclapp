@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 10B7001RUS
+Computer Serial: MJ02P9YM
+Motherboard Vendor: LENOVO
+Motherboard Model: 
+Processor: Intel(R) Core(TM) i3-4130 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 90:fb:a6:7a:40:e9
+DVD-RAM writer: DVD-RAM GHC0N
+Drive 1: Model: ST500DM002-1BD142, Serial: Z6ELBJFJ, Size: 500.11 GB, Firmware Version: KC66
+Display Adapter: Vendor: Intel Corporation, Model: 4th Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: C2E11865-8D58-4123-B5E9-E2020E268FD0
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 598573
+User3: Northwell Health
+User4: 19397
+
+>> Drive #1  Vendor: Seagate Model: ST500DM002-1BD142
+             Serial: Z6ELBJFJ Size: 500.11 GB
+
+UUID: AD656695-48AD-4EB8-920C-E76356212D28
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 976773168
+Action Start Time: Monday, 18 May 2020 at 10:03:14
+Action End Time: Monday, 18 May 2020 at 15:07:43
+Action Duration: 05:04:29
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

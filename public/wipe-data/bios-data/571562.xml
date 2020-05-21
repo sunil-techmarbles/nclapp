@@ -71,7 +71,7 @@
      <version>6.10.7</version>
      <serial>0002-06A7-0000-0000-0000-0000</serial>
      <slot>CPU 1</slot>
-     <size units="Hz">1620503000</size>
+     <size units="Hz">1642090000</size>
      <capacity units="Hz">4000000000</capacity>
      <width units="bits">64</width>
      <clock units="Hz">100000000</clock>
@@ -379,7 +379,7 @@
      <businfo>cpu@1</businfo>
      <version>6.10.7</version>
      <serial>0002-06A7-0000-0000-0000-0000</serial>
-     <size units="Hz">1608504000</size>
+     <size units="Hz">3293136000</size>
      <capacity units="Hz">3300000000</capacity>
      <configuration>
       <setting id="id" value="2" />
@@ -888,37 +888,87 @@
            <capabilities>
             <capability id="usb-2.00" >USB 2.0</capability>
            </capabilities>
-            <node id="usb:0" claimed="true" class="input" handle="USB:2:3">
-             <description>Keyboard</description>
-             <product>HP Business Slim Keyboard</product>
-             <vendor>Chicony</vendor>
-             <physid>5</physid>
-             <businfo>usb@2:1.5</businfo>
-             <version>0.11</version>
+            <node id="usb" claimed="true" class="bus" handle="USB:2:3">
+             <description>USB hub</description>
+             <product>USB2.1 Hub</product>
+             <vendor>GenesysLogic</vendor>
+             <physid>2</physid>
+             <businfo>usb@2:1.2</businfo>
+             <version>6.53</version>
              <configuration>
-              <setting id="driver" value="usbhid" />
+              <setting id="driver" value="hub" />
               <setting id="maxpower" value="100mA" />
-              <setting id="speed" value="2Mbit/s" />
+              <setting id="slots" value="4" />
+              <setting id="speed" value="480Mbit/s" />
              </configuration>
              <capabilities>
-              <capability id="usb-2.00" >USB 2.0</capability>
+              <capability id="usb-2.10" />
              </capabilities>
-            </node>
-            <node id="usb:1" claimed="true" class="input" handle="USB:2:4">
-             <description>Keyboard</description>
-             <product>Symbol Bar Code Scanner</product>
-             <physid>6</physid>
-             <businfo>usb@2:1.6</businfo>
-             <version>0.02</version>
-             <serial>S/N:1C7E055F034FB64C8ED1CC4734D38FAD Rev:NBRPUAAP3</serial>
-             <configuration>
-              <setting id="driver" value="usbhid" />
-              <setting id="maxpower" value="400mA" />
-              <setting id="speed" value="12Mbit/s" />
-             </configuration>
-             <capabilities>
-              <capability id="usb-2.00" >USB 2.0</capability>
-             </capabilities>
+              <node id="usb:0" claimed="true" class="input" handle="USB:2:4">
+               <description>Keyboard</description>
+               <product>Symbol Bar Code Scanner</product>
+               <physid>1</physid>
+               <businfo>usb@2:1.2.1</businfo>
+               <version>0.02</version>
+               <serial>S/N:1C7E055F034FB64C8ED1CC4734D38FAD Rev:NBRPUAAP3</serial>
+               <configuration>
+                <setting id="driver" value="usbhid" />
+                <setting id="maxpower" value="400mA" />
+                <setting id="speed" value="12Mbit/s" />
+               </configuration>
+               <capabilities>
+                <capability id="usb-2.00" >USB 2.0</capability>
+               </capabilities>
+              </node>
+              <node id="usb:1" claimed="true" class="input" handle="USB:2:5">
+               <description>Keyboard</description>
+               <product>HP Business Slim Keyboard</product>
+               <vendor>Chicony</vendor>
+               <physid>2</physid>
+               <businfo>usb@2:1.2.2</businfo>
+               <version>0.11</version>
+               <configuration>
+                <setting id="driver" value="usbhid" />
+                <setting id="maxpower" value="100mA" />
+                <setting id="speed" value="2Mbit/s" />
+               </configuration>
+               <capabilities>
+                <capability id="usb-2.00" >USB 2.0</capability>
+               </capabilities>
+              </node>
+              <node id="usb:2" claimed="true" class="input" handle="USB:2:6">
+               <description>Keyboard</description>
+               <product>Dell Universal Receiver</product>
+               <vendor>Dell</vendor>
+               <physid>3</physid>
+               <businfo>usb@2:1.2.3</businfo>
+               <version>11.19</version>
+               <configuration>
+                <setting id="driver" value="usbhid" />
+                <setting id="maxpower" value="100mA" />
+                <setting id="speed" value="12Mbit/s" />
+               </configuration>
+               <capabilities>
+                <capability id="usb-2.00" >USB 2.0</capability>
+               </capabilities>
+              </node>
+              <node id="usb:3" class="communication" handle="USB:2:7">
+               <description>Communication device</description>
+               <product>USB 10/100/1000 LAN</product>
+               <vendor>Realtek</vendor>
+               <physid>4</physid>
+               <businfo>usb@2:1.2.4</businfo>
+               <version>30.00</version>
+               <serial>000001</serial>
+               <configuration>
+                <setting id="maxpower" value="350mA" />
+                <setting id="speed" value="480Mbit/s" />
+               </configuration>
+               <capabilities>
+                <capability id="usb-2.10" />
+                <capability id="ethernet" >Ethernet networking</capability>
+               </capabilities>
+              </node>
             </node>
           </node>
         </node>

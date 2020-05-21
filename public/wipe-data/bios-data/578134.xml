@@ -73,14 +73,14 @@
      <version>6.10.7</version>
      <serial>0002-06A7-0000-0000-0000-0000</serial>
      <slot>CPU 1</slot>
-     <size units="Hz">1700386000</size>
+     <size units="Hz">1669600000</size>
      <capacity units="Hz">3100000000</capacity>
      <width units="bits">64</width>
      <clock units="Hz">100000000</clock>
      <configuration>
       <setting id="cores" value="2" />
       <setting id="enabledcores" value="1" />
-      <setting id="id" value="2" />
+      <setting id="id" value="1" />
       <setting id="threads" value="2" />
      </configuration>
      <capabilities>
@@ -205,129 +205,129 @@
         <capability id="unified" >Unified cache</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:0" claimed="true" class="processor" handle="CPU:2.0">
+      <node id="logicalcpu:0" claimed="true" class="processor" handle="CPU:1.0">
        <description>Logical CPU</description>
-       <physid>2.1</physid>
+       <physid>1.1</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:1" claimed="true" class="processor" handle="CPU:2.1">
+      <node id="logicalcpu:1" claimed="true" class="processor" handle="CPU:1.1">
        <description>Logical CPU</description>
-       <physid>2.2</physid>
+       <physid>1.2</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:2" claimed="true" class="processor" handle="CPU:2.2">
+      <node id="logicalcpu:2" claimed="true" class="processor" handle="CPU:1.2">
        <description>Logical CPU</description>
-       <physid>2.3</physid>
+       <physid>1.3</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:3" claimed="true" class="processor" handle="CPU:2.3">
+      <node id="logicalcpu:3" claimed="true" class="processor" handle="CPU:1.3">
        <description>Logical CPU</description>
-       <physid>2.4</physid>
+       <physid>1.4</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:4" claimed="true" class="processor" handle="CPU:2.4">
+      <node id="logicalcpu:4" claimed="true" class="processor" handle="CPU:1.4">
        <description>Logical CPU</description>
-       <physid>2.5</physid>
+       <physid>1.5</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:5" claimed="true" class="processor" handle="CPU:2.5">
+      <node id="logicalcpu:5" claimed="true" class="processor" handle="CPU:1.5">
        <description>Logical CPU</description>
-       <physid>2.6</physid>
+       <physid>1.6</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:6" claimed="true" class="processor" handle="CPU:2.6">
+      <node id="logicalcpu:6" claimed="true" class="processor" handle="CPU:1.6">
        <description>Logical CPU</description>
-       <physid>2.7</physid>
+       <physid>1.7</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:7" claimed="true" class="processor" handle="CPU:2.7">
+      <node id="logicalcpu:7" claimed="true" class="processor" handle="CPU:1.7">
        <description>Logical CPU</description>
-       <physid>2.8</physid>
+       <physid>1.8</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:8" claimed="true" class="processor" handle="CPU:2.8">
+      <node id="logicalcpu:8" claimed="true" class="processor" handle="CPU:1.8">
        <description>Logical CPU</description>
-       <physid>2.9</physid>
+       <physid>1.9</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:9" claimed="true" class="processor" handle="CPU:2.9">
+      <node id="logicalcpu:9" claimed="true" class="processor" handle="CPU:1.9">
        <description>Logical CPU</description>
-       <physid>2.a</physid>
+       <physid>1.a</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:10" claimed="true" class="processor" handle="CPU:2.10">
+      <node id="logicalcpu:10" claimed="true" class="processor" handle="CPU:1.10">
        <description>Logical CPU</description>
-       <physid>2.b</physid>
+       <physid>1.b</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:11" claimed="true" class="processor" handle="CPU:2.11">
+      <node id="logicalcpu:11" claimed="true" class="processor" handle="CPU:1.11">
        <description>Logical CPU</description>
-       <physid>2.c</physid>
+       <physid>1.c</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:12" claimed="true" class="processor" handle="CPU:2.12">
+      <node id="logicalcpu:12" claimed="true" class="processor" handle="CPU:1.12">
        <description>Logical CPU</description>
-       <physid>2.d</physid>
+       <physid>1.d</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:13" claimed="true" class="processor" handle="CPU:2.13">
+      <node id="logicalcpu:13" claimed="true" class="processor" handle="CPU:1.13">
        <description>Logical CPU</description>
-       <physid>2.e</physid>
+       <physid>1.e</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:14" claimed="true" class="processor" handle="CPU:2.14">
+      <node id="logicalcpu:14" claimed="true" class="processor" handle="CPU:1.14">
        <description>Logical CPU</description>
-       <physid>2.f</physid>
+       <physid>1.f</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:15" claimed="true" class="processor" handle="CPU:2.15">
+      <node id="logicalcpu:15" claimed="true" class="processor" handle="CPU:1.15">
        <description>Logical CPU</description>
-       <physid>2.10</physid>
+       <physid>1.10</physid>
        <width units="bits">64</width>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
@@ -383,124 +383,124 @@
      <businfo>cpu@1</businfo>
      <version>6.10.7</version>
      <serial>0002-06A7-0000-0000-0000-0000</serial>
-     <size units="Hz">1642340000</size>
+     <size units="Hz">1596664000</size>
      <capacity units="Hz">3100000000</capacity>
      <configuration>
-      <setting id="id" value="2" />
+      <setting id="id" value="1" />
      </configuration>
      <capabilities>
       <capability id="vmx" >CPU virtualization (Vanderpool)</capability>
       <capability id="ht" >HyperThreading</capability>
       <capability id="cpufreq" >CPU Frequency scaling</capability>
      </capabilities>
-      <node id="logicalcpu:0" claimed="true" class="processor" handle="CPU:2.0">
+      <node id="logicalcpu:0" claimed="true" class="processor" handle="CPU:1.0">
        <description>Logical CPU</description>
-       <physid>2.1</physid>
+       <physid>1.1</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:1" claimed="true" class="processor" handle="CPU:2.1">
+      <node id="logicalcpu:1" claimed="true" class="processor" handle="CPU:1.1">
        <description>Logical CPU</description>
-       <physid>2.2</physid>
+       <physid>1.2</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:2" claimed="true" class="processor" handle="CPU:2.2">
+      <node id="logicalcpu:2" claimed="true" class="processor" handle="CPU:1.2">
        <description>Logical CPU</description>
-       <physid>2.3</physid>
+       <physid>1.3</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:3" claimed="true" class="processor" handle="CPU:2.3">
+      <node id="logicalcpu:3" claimed="true" class="processor" handle="CPU:1.3">
        <description>Logical CPU</description>
-       <physid>2.4</physid>
+       <physid>1.4</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:4" claimed="true" class="processor" handle="CPU:2.4">
+      <node id="logicalcpu:4" claimed="true" class="processor" handle="CPU:1.4">
        <description>Logical CPU</description>
-       <physid>2.5</physid>
+       <physid>1.5</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:5" claimed="true" class="processor" handle="CPU:2.5">
+      <node id="logicalcpu:5" claimed="true" class="processor" handle="CPU:1.5">
        <description>Logical CPU</description>
-       <physid>2.6</physid>
+       <physid>1.6</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:6" claimed="true" class="processor" handle="CPU:2.6">
+      <node id="logicalcpu:6" claimed="true" class="processor" handle="CPU:1.6">
        <description>Logical CPU</description>
-       <physid>2.7</physid>
+       <physid>1.7</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:7" claimed="true" class="processor" handle="CPU:2.7">
+      <node id="logicalcpu:7" claimed="true" class="processor" handle="CPU:1.7">
        <description>Logical CPU</description>
-       <physid>2.8</physid>
+       <physid>1.8</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:8" claimed="true" class="processor" handle="CPU:2.8">
+      <node id="logicalcpu:8" claimed="true" class="processor" handle="CPU:1.8">
        <description>Logical CPU</description>
-       <physid>2.9</physid>
+       <physid>1.9</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:9" claimed="true" class="processor" handle="CPU:2.9">
+      <node id="logicalcpu:9" claimed="true" class="processor" handle="CPU:1.9">
        <description>Logical CPU</description>
-       <physid>2.a</physid>
+       <physid>1.a</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:10" claimed="true" class="processor" handle="CPU:2.10">
+      <node id="logicalcpu:10" claimed="true" class="processor" handle="CPU:1.10">
        <description>Logical CPU</description>
-       <physid>2.b</physid>
+       <physid>1.b</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:11" claimed="true" class="processor" handle="CPU:2.11">
+      <node id="logicalcpu:11" claimed="true" class="processor" handle="CPU:1.11">
        <description>Logical CPU</description>
-       <physid>2.c</physid>
+       <physid>1.c</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:12" claimed="true" class="processor" handle="CPU:2.12">
+      <node id="logicalcpu:12" claimed="true" class="processor" handle="CPU:1.12">
        <description>Logical CPU</description>
-       <physid>2.d</physid>
+       <physid>1.d</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:13" claimed="true" class="processor" handle="CPU:2.13">
+      <node id="logicalcpu:13" claimed="true" class="processor" handle="CPU:1.13">
        <description>Logical CPU</description>
-       <physid>2.e</physid>
+       <physid>1.e</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:14" claimed="true" class="processor" handle="CPU:2.14">
+      <node id="logicalcpu:14" claimed="true" class="processor" handle="CPU:1.14">
        <description>Logical CPU</description>
-       <physid>2.f</physid>
+       <physid>1.f</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
       </node>
-      <node id="logicalcpu:15" claimed="true" class="processor" handle="CPU:2.15">
+      <node id="logicalcpu:15" claimed="true" class="processor" handle="CPU:1.15">
        <description>Logical CPU</description>
-       <physid>2.10</physid>
+       <physid>1.10</physid>
        <capabilities>
         <capability id="logical" >Logical CPU</capability>
        </capabilities>
@@ -829,27 +829,11 @@
              <capabilities>
               <capability id="usb-2.10" />
              </capabilities>
-              <node id="usb:0" claimed="true" class="input" handle="USB:2:4">
-               <description>Keyboard</description>
-               <product>HP Business Slim Keyboard</product>
-               <vendor>Chicony</vendor>
-               <physid>1</physid>
-               <businfo>usb@2:1.4.1</businfo>
-               <version>0.11</version>
-               <configuration>
-                <setting id="driver" value="usbhid" />
-                <setting id="maxpower" value="100mA" />
-                <setting id="speed" value="2Mbit/s" />
-               </configuration>
-               <capabilities>
-                <capability id="usb-2.00" >USB 2.0</capability>
-               </capabilities>
-              </node>
-              <node id="usb:1" claimed="true" class="input" handle="USB:2:5">
+              <node id="usb:0" claimed="true" class="input" handle="USB:2:7">
                <description>Keyboard</description>
                <product>Symbol Bar Code Scanner</product>
-               <physid>3</physid>
-               <businfo>usb@2:1.4.3</businfo>
+               <physid>1</physid>
+               <businfo>usb@2:1.4.1</businfo>
                <version>0.02</version>
                <serial>S/N:1C7E055F034FB64C8ED1CC4734D38FAD Rev:NBRPUAAP3</serial>
                <configuration>
@@ -861,7 +845,39 @@
                 <capability id="usb-2.00" >USB 2.0</capability>
                </capabilities>
               </node>
-              <node id="usb:2" class="communication" handle="USB:2:6">
+              <node id="usb:1" claimed="true" class="input" handle="USB:2:4">
+               <description>Keyboard</description>
+               <product>HP Business Slim Keyboard</product>
+               <vendor>Chicony</vendor>
+               <physid>2</physid>
+               <businfo>usb@2:1.4.2</businfo>
+               <version>0.11</version>
+               <configuration>
+                <setting id="driver" value="usbhid" />
+                <setting id="maxpower" value="100mA" />
+                <setting id="speed" value="2Mbit/s" />
+               </configuration>
+               <capabilities>
+                <capability id="usb-2.00" >USB 2.0</capability>
+               </capabilities>
+              </node>
+              <node id="usb:2" claimed="true" class="input" handle="USB:2:5">
+               <description>Keyboard</description>
+               <product>Dell Universal Receiver</product>
+               <vendor>Dell</vendor>
+               <physid>3</physid>
+               <businfo>usb@2:1.4.3</businfo>
+               <version>11.19</version>
+               <configuration>
+                <setting id="driver" value="usbhid" />
+                <setting id="maxpower" value="100mA" />
+                <setting id="speed" value="12Mbit/s" />
+               </configuration>
+               <capabilities>
+                <capability id="usb-2.00" >USB 2.0</capability>
+               </capabilities>
+              </node>
+              <node id="usb:3" class="communication" handle="USB:2:6">
                <description>Communication device</description>
                <product>USB 10/100/1000 LAN</product>
                <vendor>Realtek</vendor>

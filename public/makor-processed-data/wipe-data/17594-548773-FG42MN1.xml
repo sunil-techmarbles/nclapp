@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.1.3 64-bit">
+        <KernelVersion>4.14.65-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>Dell Inc.</ComputerVendor>
+            <ComputerModel>PowerEdge R710</ComputerModel>
+            <ComputerSerial>FG42MN1</ComputerSerial>
+            <MotherboardVendor>Dell Inc.</MotherboardVendor>
+            <MotherboardModel>00NH4P</MotherboardModel>
+            <AssetTag>Unavailable</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz</Name>
+                    <Speed>2400 MHz</Speed>
+                    <ID>CPU2</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>128 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>12288 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz</Name>
+                    <Speed>2400 MHz</Speed>
+                    <ID>CPU2</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>128 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>12288 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD08</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD51</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD0C</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD0A</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD54</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD02</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD07</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CCBD</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CCE8</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CCE6</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CCEC</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00CE000080CE</Vendor>
+                    <Capacity>1024 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Unbuffered (Unregistered)</TypeDetail>
+                    <SerialNumber>47A8CD01</SerialNumber>
+                    <AssetTag>01100900</AssetTag>
+                    <PartNumber>M391B2873FH0-YH9</PartNumber>
+                </Stick>
+                <MemoryBanks>12</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>12288 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>84:2b:2b:4f:59:5e</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>84:2b:2b:4f:59:60</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>84:2b:2b:4f:59:62</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>84:2b:2b:4f:59:64</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82576 Gigabit Network Connection</Product>
+                    <MACAddress>00:1b:21:76:31:d8</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10C9</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82576 Gigabit Network Connection</Product>
+                    <MACAddress>00:1b:21:76:31:d9</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10C9</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82576 Gigabit Network Connection</Product>
+                    <MACAddress>00:1b:21:76:13:d4</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10C9</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82576 Gigabit Network Connection</Product>
+                    <MACAddress>00:1b:21:76:13:d5</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10C9</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>TEAC</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>DVD-ROM DV-28SW</Product>
+                    <Capabilities>removable audio dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device index="1">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9146803SS     </Product>
+                    <Serial>6SD1JZ3A</Serial>
+                    <Firmware>FS62</Firmware>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:0 ]</Location>
+                            <Vendor>SEAGATE</Vendor>
+                            <Product>ST9146803SS     </Product>
+                            <Serial>6SD1JZ3A</Serial>
+                            <Firmware>FS62</Firmware>
+                            <Gigabytes>136.125</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="2">
+                    <Vendor>FUJITSU</Vendor>
+                    <Product>MBD2147RC       </Product>
+                    <Serial>D0A4PA802T4H</Serial>
+                    <Firmware>D807</Firmware>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:1 ]</Location>
+                            <Vendor>FUJITSU</Vendor>
+                            <Product>MBD2147RC       </Product>
+                            <Serial>D0A4PA802T4H</Serial>
+                            <Firmware>D807</Firmware>
+                            <Gigabytes>136.125</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="3">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN00PYG</Serial>
+                    <Firmware>FM07</Firmware>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:2 ]</Location>
+                            <Vendor>SEAGATE</Vendor>
+                            <Product>ST9600204SS     </Product>
+                            <Serial>6WN00PYG</Serial>
+                            <Firmware>FM07</Firmware>
+                            <Gigabytes>558.375</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="4">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN01HHW</Serial>
+                    <Firmware>FM07</Firmware>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:3 ]</Location>
+                            <Vendor>SEAGATE</Vendor>
+                            <Product>ST9600204SS     </Product>
+                            <Serial>6WN01HHW</Serial>
+                            <Firmware>FM07</Firmware>
+                            <Gigabytes>558.375</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="5">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN01GG6</Serial>
+                    <Firmware>FM07</Firmware>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:4 ]</Location>
+                            <Vendor>SEAGATE</Vendor>
+                            <Product>ST9600204SS     </Product>
+                            <Serial>6WN01GG6</Serial>
+                            <Firmware>FM07</Firmware>
+                            <Gigabytes>558.375</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="6">
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN00F76</Serial>
+                    <Firmware>FM07</Firmware>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:5 ]</Location>
+                            <Vendor>SEAGATE</Vendor>
+                            <Product>ST9600204SS     </Product>
+                            <Serial>6WN00F76</Serial>
+                            <Firmware>FM07</Firmware>
+                            <Gigabytes>558.375</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>MGA G200eW WPCM450</Product>
+                    <PciId>102B:532</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>LSI Logic / Symbios Logic</Vendor>
+                    <Product>MegaRAID SAS 2108 [Liberator]</Product>
+                    <Description>RAID bus controller</Description>
+                    <PciId>1000:79</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82801IB (ICH9) 2 port SATA Controller [IDE mode]</Product>
+                    <Description>IDE interface</Description>
+                    <PciId>8086:2921</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>8</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>6830F3F7-5C36-4332-8EAA-6C57E633DA81</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>Unavailable</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>548773</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Metropolitan Museum of Art</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>17594</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Server</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="12022318024813711424017820917798220157211243109">
+                    <UUID>7C965FCE-093B-4365-8CF2-47513C65D0F5</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 13:01:39</StartTime>
+                    <Duration>01:31:26</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>285474816</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285474816</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9146803SS     </Product>
+                    <Serial>6SD1JZ3A</Serial>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="2" SecurityCode="1279200242023520341021742161322051032369">
+                    <UUID>ECF964D2-E711-42B5-BD08-637E2C914820</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 13:01:39</StartTime>
+                    <Duration>01:32:55</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>285474816</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285474816</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>FUJITSU</Vendor>
+                    <Product>MBD2147RC       </Product>
+                    <Serial>D0A4PA802T4H</Serial>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="3" SecurityCode="1647922887471629920110722816187159141130242">
+                    <UUID>5000C72E-6096-4C30-ABA2-4EFDA7F054FF</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 13:01:39</StartTime>
+                    <Duration>06:11:19</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1170997248</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>1170997248</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN00PYG</Serial>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="4" SecurityCode="24052071347126156151791464239591103224">
+                    <UUID>2C65E657-DA71-4EC0-AFE8-4D3AE8A53630</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 13:01:39</StartTime>
+                    <Duration>05:45:27</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1170997248</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>1170997248</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN01HHW</Serial>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="5" SecurityCode="21313081809430621952191637688623115220">
+                    <UUID>5DE41A69-FB6E-4F6E-846F-21AF5E15B764</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 13:01:39</StartTime>
+                    <Duration>05:57:01</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1170997248</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>1170997248</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN01GG6</Serial>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="6" SecurityCode="5024419776238206137118172139140165371096221">
+                    <UUID>F38EE023-6C65-4CD8-B6C7-EC29368030FB</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 13:01:39</StartTime>
+                    <Duration>05:59:26</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>1170997248</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>1170997248</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>SEAGATE</Vendor>
+                    <Product>ST9600204SS     </Product>
+                    <Serial>6WN00F76</Serial>
+                    <Gigabytes>599.55</Gigabytes>
+                    <Bytes>599550590976</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

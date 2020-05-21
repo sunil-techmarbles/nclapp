@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6430
+Computer Serial: 3P1FNX1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0H3MT5
+Processor: Intel(R) Core(TM) i5-3340M CPU @ 2.70GHz, Speed: 2700 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: f0:1f:af:30:f1:3d
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 6c:88:14:e7:87:04
+DVD-RAM writer: DVD+-RW DU-8A5HH
+Drive 1: Model: M4-CT256M4SSD2, Serial: 000000001309092E09EE, Size: 256.06 GB, Firmware Version: 040H
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF108GLM [NVS 5200M]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 5A265989-A7DE-4C55-8EFE-3D4F3594D24A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 594129
+User3: Levittown Union Free Sch Dist
+User4: 19297
+
+>> Drive #1  Vendor:  Model: M4-CT256M4SSD2
+             Serial: 000000001309092E09EE Size: 256.06 GB
+
+UUID: 993D0D0A-A76C-40C1-8DC5-2C7EF7225DD7
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Monday, 20 May 2013 at 12:43:44
+Action End Time: Monday, 20 May 2013 at 12:46:34
+Action Duration: 00:02:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,159 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R610
+Computer Serial: B0ZNXQ1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0F0XJ6
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 49152 MB, Memory banks: 6, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 14:fe:b5:da:36:93
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 14:fe:b5:da:36:95
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 14:fe:b5:da:36:97
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 14:fe:b5:da:36:99
+NIC: Vendor: Cavium QLogic, Model: 1010/1020/1007/1741 10Gbps CNA, MAC Address: Unavailable
+NIC: Vendor: Cavium QLogic, Model: 1010/1020/1007/1741 10Gbps CNA, MAC Address: Unavailable
+DVD reader: DVD-ROM DS-8D3SH
+Drive 1: Model: WD1460BKFG-18P2V, Serial: WXP1E21KDT82, Size: 146.16 GB
+Drive 2: Model: WD1460BKFG-18P2V, Serial: WXP1E21KDR98, Size: 146.16 GB
+Drive 3: Model: MBF2300RC       , Serial: EB03PB3034DN, Size: 299.44 GB
+Drive 4: Model: MBF2300RC       , Serial: EB03PC60N55W, Size: 299.44 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 877E7D85-0B34-4C38-9033-312FD567BE3A
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 548769
+Lot Name: Metropolitan Museum of Art
+Lot Number: 17594
+\"Product\": Server
+
+>> Raid device #1  Vendor: WD Model: WD1460BKFG-18P2V
+             Serial: WXP1E21KDT82 Size: 146.16 GB
+    >>> Raid member #1  Vendor: WD Model: WD1460BKFG-18P2V
+             Serial: WXP1E21KDT82 Size: 136.125 GB  [ 32:0 ]
+
+UUID: 22E41ABC-C8D8-4402-A2C3-1EC062C400A2
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 285474816
+Action Start Time: Wednesday, 11 Mar 2020 at 14:25:23
+Action End Time: Wednesday, 11 Mar 2020 at 15:54:19
+Action Duration: 01:28:56
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: WD Model: WD1460BKFG-18P2V
+             Serial: WXP1E21KDR98 Size: 146.16 GB
+    >>> Raid member #1  Vendor: WD Model: WD1460BKFG-18P2V
+             Serial: WXP1E21KDR98 Size: 136.125 GB  [ 32:1 ]
+
+UUID: 193C8919-6E4A-470F-8E1A-8720673EF998
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 285474816
+Action Start Time: Wednesday, 11 Mar 2020 at 14:25:23
+Action End Time: Wednesday, 11 Mar 2020 at 15:50:27
+Action Duration: 01:25:04
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: TOSHIBA Model: MBF2300RC       
+             Serial: EB03PB3034DN Size: 299.44 GB
+    >>> Raid member #1  Vendor: TOSHIBA Model: MBF2300RC       
+             Serial: EB03PB3034DN Size: 278.875 GB  [ 32:2 ]
+
+UUID: E10F6BD0-A5FD-4ADE-A423-AC85F59A9783
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Wednesday, 11 Mar 2020 at 14:25:23
+Action End Time: Wednesday, 11 Mar 2020 at 16:56:26
+Action Duration: 02:31:03
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: TOSHIBA Model: MBF2300RC       
+             Serial: EB03PC60N55W Size: 299.44 GB
+    >>> Raid member #1  Vendor: TOSHIBA Model: MBF2300RC       
+             Serial: EB03PC60N55W Size: 278.875 GB  [ 32:3 ]
+
+UUID: 9CAD2523-A6F8-4CFD-8C8C-5237C981F6C6
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Wednesday, 11 Mar 2020 at 14:25:23
+Action End Time: Wednesday, 11 Mar 2020 at 16:59:56
+Action Duration: 02:34:33
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

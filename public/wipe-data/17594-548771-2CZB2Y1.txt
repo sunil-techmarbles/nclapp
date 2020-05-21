@@ -1,0 +1,546 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R720
+Computer Serial: 2CZB2Y1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0C4Y3R
+Processor: Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz, Speed: 2900 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+Processor: Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz, Speed: 2900 MHz, Cores: 8, L1 Cache: 256 kB, L2 Cache: 2048 kB
+RAM: 65536 MB, Memory banks: 24, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5720 2-port Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:44:f7:88
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme BCM5720 2-port Gigabit Ethernet PCIe, MAC Address: 90:b1:1c:44:f7:86
+Drive 1: Model: PERC H710, Serial: 0061f5c26e45135526009108e5a0a38c, Size: 299.44 GB
+Drive 2: Model: PERC H710, Serial: 00dd4bb76e44135526009108e5a0a38c, Size: 299.44 GB
+Drive 3: Model: PERC H710, Serial: 00623ed76e46135526009108e5a0a38c, Size: 299.44 GB
+Drive 4: Model: PERC H710, Serial: 00cc0df96e48135526009108e5a0a38c, Size: 72.75 GB
+Drive 5: Model: PERC H710, Serial: 0032a9eb6e48135526009108e5a0a38c, Size: 299.44 GB
+Drive 6: Model: PERC H710, Serial: 0041dbe46e47135526009108e5a0a38c, Size: 299.44 GB
+Drive 7: Model: PERC H710, Serial: 009ea4056f49135526009108e5a0a38c, Size: 299.44 GB
+Drive 8: Model: PERC H710, Serial: 000032bd6e44135526009108e5a0a38c, Size: 299.44 GB
+Drive 9: Model: PERC H710, Serial: 004d5cd06e46135526009108e5a0a38c, Size: 299.44 GB
+Drive 10: Model: PERC H710, Serial: 003794c96e45135526009108e5a0a38c, Size: 299.44 GB
+Drive 11: Model: PERC H710, Serial: 009753f26e48135526009108e5a0a38c, Size: 299.44 GB
+Drive 12: Model: PERC H710, Serial: 009cc31a6f4b135526009108e5a0a38c, Size: 299.44 GB
+Drive 13: Model: PERC H710, Serial: 00ee25de6e47135526009108e5a0a38c, Size: 299.44 GB
+Drive 14: Model: PERC H710, Serial: 005bd80c6f4a135526009108e5a0a38c, Size: 299.44 GB
+Drive 15: Model: PERC H710, Serial: 00a774ff6e49135526009108e5a0a38c, Size: 72.75 GB
+Drive 16: Model: PERC H710, Serial: 005453146f4a135526009108e5a0a38c, Size: 299.44 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: B50D398B-AF9F-4253-A147-81BBC3BB8B8E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 548771
+User3: Metropolitan Museum of Art
+User4: 17594
+
+>> Raid device #9  Vendor: DELL Model: PERC H710
+             Serial: 004d5cd06e46135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN6150W Size: 278.875 GB  [ 32:4 ]
+
+UUID: FE1B305F-A6D4-4F80-AA88-EE02172EA1C9
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:32:19
+Action Duration: 01:56:46
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #9 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #4  Vendor: DELL Model: PERC H710
+             Serial: 00cc0df96e48135526009108e5a0a38c Size: 72.75 GB
+
+UUID: 4C458419-475A-4F79-9E49-9CC09A58A4B4
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 142082048
+Sectors Not Overwritten: 0
+Sectors Verified: 142082048
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 10:09:41
+Action Duration: 00:34:08
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #11  Vendor: DELL Model: PERC H710
+             Serial: 009753f26e48135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN614PG Size: 278.875 GB  [ 32:9 ]
+
+UUID: 14C53AF9-C16F-43BA-8813-E7A060A7FA92
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:32:24
+Action Duration: 01:56:51
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #11 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #12  Vendor: DELL Model: PERC H710
+             Serial: 009cc31a6f4b135526009108e5a0a38c Size: 299.44 GB
+
+UUID: 04DA51B3-132C-4DC5-8A14-4FECC793A868
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 12:47:14
+Action Duration: 03:11:41
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #12 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #14  Vendor: DELL Model: PERC H710
+             Serial: 005bd80c6f4a135526009108e5a0a38c Size: 299.44 GB
+
+UUID: AE3FB3E4-DE9C-4BD1-A702-4B2E8B8DB79C
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 12:06:23
+Action Duration: 02:30:50
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #14 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #16  Vendor: DELL Model: PERC H710
+             Serial: 005453146f4a135526009108e5a0a38c Size: 299.44 GB
+
+UUID: 089C2761-3238-46E0-A1D0-D6F216B08118
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 12:47:20
+Action Duration: 03:11:47
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #16 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #7  Vendor: DELL Model: PERC H710
+             Serial: 009ea4056f49135526009108e5a0a38c Size: 299.44 GB
+
+UUID: 47B8C79B-83DB-4E2D-ABC1-F723BE637AB8
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 12:42:38
+Action Duration: 03:07:05
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #7 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: DELL Model: PERC H710
+             Serial: 0032a9eb6e48135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN3EJ2N Size: 278.875 GB  [ 32:8 ]
+
+UUID: A6EECE4C-3038-4C4F-8C72-808A7B36BF93
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:32:17
+Action Duration: 01:56:44
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #10  Vendor: DELL Model: PERC H710
+             Serial: 003794c96e45135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN48PXR Size: 278.875 GB  [ 32:3 ]
+
+UUID: 4C0EC6DC-8087-4274-BFCA-221DE361277B
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:32:03
+Action Duration: 01:56:30
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #10 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Drive #15  Vendor: DELL Model: PERC H710
+             Serial: 00a774ff6e49135526009108e5a0a38c Size: 72.75 GB
+
+UUID: 9527024C-67E3-4871-942F-8D3E7A160A4D
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 142082048
+Sectors Not Overwritten: 0
+Sectors Verified: 142082048
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 10:09:53
+Action Duration: 00:34:20
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #15 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #13  Vendor: DELL Model: PERC H710
+             Serial: 00ee25de6e47135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN3EJCZ Size: 278.875 GB  [ 32:6 ]
+
+UUID: 23945053-086A-4178-A2D0-D0A72C9B9633
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:33:26
+Action Duration: 01:57:53
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #13 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #1  Vendor: DELL Model: PERC H710
+             Serial: 0061f5c26e45135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN3DFD0 Size: 278.875 GB  [ 32:2 ]
+
+UUID: 77BBD63C-252C-475D-A953-76610AF16A21
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:31:54
+Action Duration: 01:56:21
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: DELL Model: PERC H710
+             Serial: 0041dbe46e47135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN37MHD Size: 278.875 GB  [ 32:7 ]
+
+UUID: AD8181FD-FC2D-4DEB-8B4C-55FBF6FD268E
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:31:55
+Action Duration: 01:56:22
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #8  Vendor: DELL Model: PERC H710
+             Serial: 000032bd6e44135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: TOSHIBA Model: MBF2300RC       
+             Serial: EB03PB607DJ1 Size: 278.875 GB  [ 32:1 ]
+
+UUID: A3D22511-347C-49BD-B7CA-A28F2F5CA5FC
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 12:12:37
+Action Duration: 02:37:04
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #8 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: DELL Model: PERC H710
+             Serial: 00623ed76e46135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9300653SS     
+             Serial: 6XN3DF7X Size: 278.875 GB  [ 32:5 ]
+
+UUID: 01F03756-BA38-4547-94F6-F70D66D43550
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 11:31:52
+Action Duration: 01:56:19
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: DELL Model: PERC H710
+             Serial: 00dd4bb76e44135526009108e5a0a38c Size: 299.44 GB
+    >>> Raid member #1  Vendor: TOSHIBA Model: MBF2300RC       
+             Serial: EB03PB3034DT Size: 278.875 GB  [ 32:0 ]
+
+UUID: E639C677-0313-428B-A97F-BA890CFFDC9A
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 584843264
+Sectors Not Overwritten: 0
+Sectors Verified: 584843264
+Action Start Time: Monday, 18 May 2020 at 09:35:33
+Action End Time: Monday, 18 May 2020 at 12:07:54
+Action Duration: 02:32:21
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

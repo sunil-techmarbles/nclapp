@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20B7S0FV11
+Computer Serial: PC02MJYY
+Motherboard Vendor: LENOVO
+Motherboard Model: 20B7S0FV11
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 68:f7:28:37:a4:de
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: e8:b1:fc:ed:88:43
+Drive 1: Model: ST500LM021-1KJ152, Serial: W622BBLT, Size: 500.11 GB, Firmware Version: 0002LIM1
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 82910AD9-501A-4DE9-AD7A-56E288109952
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 597330
+User3: Wunderman Thompson
+User4: 19370
+
+>> Drive #1  Vendor: Seagate Model: ST500LM021-1KJ152
+             Serial: W622BBLT Size: 500.11 GB
+
+UUID: 04A68DF1-8FDE-4DA4-8AA9-FFB0E116FE51
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Wednesday, 20 May 2020 at 16:05:49
+Action End Time: Wednesday, 20 May 2020 at 17:35:41
+Action Duration: 01:29:52
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

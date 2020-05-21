@@ -1,0 +1,60 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Vostro 470
+Computer Serial: FKYYPS1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0YJPT1
+Processor: Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz, Speed: 3400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 4096 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Qualcomm Atheros, Model: AR9485 Wireless Network Adapter, MAC Address: 08:ed:b9:4f:d7:9d
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 5c:f9:dd:6d:b9:a4
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: DVD+-RW DH-16ACS
+Drive 1: Model: ST_M13FQBL, Serial: QNR_BFW, Size: 4.14 GB, Firmware Version: 11171413
+Display Adapter: Vendor: NVIDIA Corporation, Model: G98 [GeForce 9300 GE]
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 3C767F47-8626-4649-A450-F99570D155CD
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 570955
+User3: Overbrook Management Corporation
+User4: 19082
+
+>> Drive #1  Vendor: Seagate Model: ST_M13FQBL
+             Serial: QNR_BFW Size: 4.14 GB
+
+UUID: 423FE6C3-AC08-4AFC-B0D8-BFA378BA178E
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 0
+Sectors Not Overwritten: 8089950
+Sectors Verified: 0
+Action Start Time: Tuesday, 19 May 2020 at 15:03:02
+Action End Time: Tuesday, 19 May 2020 at 15:03:14
+Action Duration: 00:00:-1
+
+Action Result: Canceled by User
+
+Pre-wipe SMART health status: UNKNOWN!
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 3
+Computer Serial: 042498151353
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 3
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88W8897 [AVASTAR] 802.11ac Wireless, MAC Address: 
+Drive 1: Model: SAMSUNG MZMTE128HMGR-000MV, Serial: S1F0NSAG316562, Size: 128.04 GB, Firmware Version: EXT42M0Q
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 6
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: C2C9D9A4-6658-48DF-8536-C83BFAF9E355
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 601000
+User3: Owens Corning
+User4: 19443
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZMTE128HMGR-000MV
+             Serial: S1F0NSAG316562 Size: 128.04 GB
+
+UUID: FE41B7A9-1FB9-4C1E-95A1-740E641D3D07
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Thursday, 22 Aug 2013 at 00:55:07
+Action End Time: Thursday, 22 Aug 2013 at 00:57:42
+Action Duration: 00:02:35
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

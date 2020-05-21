@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7440
+Computer Serial: DP7JG12
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 091TRH
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 1900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: ec:f4:bb:4d:a0:09
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: a0:a8:cd:91:5f:0a
+Drive 1: Model: SanDisk X110 MSATA 128GB, Serial: 141821403969, Size: 128.04 GB, Firmware Version: X232212
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 3
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: 4C75C121-52B7-4DF1-8099-621A21A0C9D9
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 594809
+User3: Owens Corning
+User4: 19322
+
+>> Drive #1  Vendor: SanDisk Model: SanDisk X110 MSATA 128GB
+             Serial: 141821403969 Size: 128.04 GB
+
+UUID: BB175421-CF94-46FF-8C7B-EDC93233B97F
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Wednesday, 20 May 2020 at 08:35:18
+Action End Time: Wednesday, 20 May 2020 at 08:49:04
+Action Duration: 00:13:46
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

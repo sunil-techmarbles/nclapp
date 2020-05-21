@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>345AF058-58DA-43C3-9CD9-836A00C16ADD</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Dell Inc.</ComputerVendor>
+            <ComputerModel>Vostro 470</ComputerModel>
+            <ComputerSerial>FKYYPS1</ComputerSerial>
+            <MotherboardVendor>Dell Inc.</MotherboardVendor>
+            <MotherboardModel>0YJPT1</MotherboardModel>
+            <AssetTag>Not Specified</AssetTag>
+            <ChassisType>Desktop</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz</Name>
+                    <Speed>3400 MHz</Speed>
+                    <ID>CPU 1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>8192 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Hynix/Hyundai</Vendor>
+                    <Capacity>2048 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>1E6B8C79</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>HMT325U6CFR8C-H9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix/Hyundai</Vendor>
+                    <Capacity>2048 MB</Capacity>
+                    <Speed>1333 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>1E6B8C8D</SerialNumber>
+                    <AssetTag>9876543210</AssetTag>
+                    <PartNumber>HMT325U6CFR8C-H9</PartNumber>
+                </Stick>
+                <MemoryBanks>4</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>4096 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Qualcomm Atheros</Vendor>
+                    <Product>AR9485 Wireless Network Adapter</Product>
+                    <MACAddress>08:ed:b9:4f:d7:9d</MACAddress>
+                    <Speed></Speed>
+                    <PciId>168C:32</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Realtek Semiconductor Co., Ltd.</Vendor>
+                    <Product>RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller</Product>
+                    <MACAddress>5c:f9:dd:6d:b9:a4</MACAddress>
+                    <Speed></Speed>
+                    <PciId>10EC:8168</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>00:e0:4c:68:89:94</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>10EC:8168</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>PLDS</Vendor>
+                    <Description>DVD-RAM writer</Description>
+                    <Product>DVD+-RW DH-16ACS</Product>
+                    <Capabilities>removable audio cd-r cd-rw dvd dvd-r dvd-ram</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device>
+                    <Vendor>Seagate</Vendor>
+                    <Product>ST_M13FQBL</Product>
+                    <Serial>QNR_BFW</Serial>
+                    <Firmware>11171413</Firmware>
+                    <Gigabytes>4.14</Gigabytes>
+                    <Bytes>4142054400</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SATA</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>G98 [GeForce 9300 GE]</Product>
+                    <PciId>10DE:6E0</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>7 Series/C216 Chipset Family High Definition Audio Controller</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <USBPorts>0</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>1</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Fail</Result>
+                    <Notes>QNR_BFW - Read Fail</Notes>
+                </Read>
+                <Write>
+                    <Result>Fail</Result>
+                    <Notes>QNR_BFW - Write Fail</Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>QNR_BFW - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>2.6GB, 5 repetitions, runtime: 3 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>3C767F47-8626-4649-A450-F99570D155CD</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>570955</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Overbrook Management Corporation</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19082</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="16315622214211636252381603780831223843111">
+                    <UUID>423FE6C3-AC08-4AFC-B0D8-BFA378BA178E</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 19 May 2020 15:03:02</StartTime>
+                    <Duration>-00:00:01</Duration>
+                    <ActionResult Index="3">Canceled</ActionResult>
+                    <FailureReason>Failure writing data to device</FailureReason>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>1</DriveErrorsDetected>
+                    <DCOLocked>Yes</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>0</SectorsOverwritten>
+                    <SectorsNotOverwritten>8089950</SectorsNotOverwritten>
+                    <SectorsVerified>0</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason></NISTMethodTypeReason>
+                    <Vendor>Seagate</Vendor>
+                    <Product>ST_M13FQBL</Product>
+                    <Serial>QNR_BFW</Serial>
+                    <Gigabytes>4.14</Gigabytes>
+                    <Bytes>4142054400</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>UNKNOWN!</PreWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

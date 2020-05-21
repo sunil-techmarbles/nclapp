@@ -135,7 +135,7 @@
      <version>6.14.3</version>
      <serial>0004-06E3-0000-0000-0000-0000</serial>
      <slot>U3E1</slot>
-     <size units="Hz">1950453000</size>
+     <size units="Hz">2903687000</size>
      <capacity units="Hz">3000000000</capacity>
      <width units="bits">64</width>
      <clock units="Hz">100000000</clock>
@@ -395,15 +395,15 @@
      <description>System Memory</description>
      <physid>46</physid>
      <slot>System board or motherboard</slot>
-     <size units="bytes">8589934592</size>
+     <size units="bytes">4294967296</size>
       <node id="bank:0" claimed="true" class="memory" handle="DMI:0047">
        <description>SODIMM Synchronous 2133 MHz (0.5 ns)</description>
-       <product>16ATF1G64HZ-2G1B1</product>
-       <vendor>Micron</vendor>
+       <product>M471A5143EB0-CPB</product>
+       <vendor>Samsung</vendor>
        <physid>0</physid>
        <serial>12161215</serial>
        <slot>DIMM A</slot>
-       <size units="bytes">8589934592</size>
+       <size units="bytes">4294967296</size>
        <width units="bits">64</width>
        <clock units="Hz">2133000000</clock>
       </node>
@@ -418,7 +418,7 @@
      <businfo>cpu@1</businfo>
      <version>6.14.3</version>
      <serial>0004-06E3-0000-0000-0000-0000</serial>
-     <size units="Hz">1628443000</size>
+     <size units="Hz">2900215000</size>
      <capacity units="Hz">3000000000</capacity>
      <configuration>
       <setting id="id" value="0" />
@@ -655,7 +655,7 @@
            <businfo>usb@1:1</businfo>
            <logicalname>scsi2</logicalname>
            <version>1.00</version>
-           <serial>08606E6D3FEAFF7037A1DD0C</serial>
+           <serial>001E4FB6FD9CFF703753452A</serial>
            <configuration>
             <setting id="driver" value="usb-storage" />
             <setting id="maxpower" value="100mA" />
@@ -677,7 +677,7 @@
              <configuration>
               <setting id="logicalsectorsize" value="512" />
               <setting id="sectorsize" value="512" />
-              <setting id="signature" value="2422336c" />
+              <setting id="signature" value="63a615dd" />
              </configuration>
              <capabilities>
               <capability id="partitioned" >Partitioned disk</capability>
@@ -692,7 +692,7 @@
                <logicalname>/mnt/hw</logicalname>
                <dev>8:1</dev>
                <version>FAT32</version>
-               <serial>64a3-8b12</serial>
+               <serial>42e8-bf28</serial>
                <size units="bytes">7743620096</size>
                <capacity>7746349056</capacity>
                <configuration>
@@ -846,8 +846,8 @@
        </resources>
       </node>
       <node id="storage" claimed="true" class="storage" handle="PCI:0000:00:17.0">
-       <description>SATA controller</description>
-       <product>Intel Corporation</product>
+       <description>RAID bus controller</description>
+       <product>82801 Mobile SATA Controller [RAID mode]</product>
        <vendor>Intel Corporation</vendor>
        <physid>17</physid>
        <businfo>pci@0000:00:17.0</businfo>
@@ -862,7 +862,6 @@
         <capability id="storage" />
         <capability id="msi" >Message Signalled Interrupts</capability>
         <capability id="pm" >Power Management</capability>
-        <capability id="ahci_1.0" />
         <capability id="bus_master" >bus mastering</capability>
         <capability id="cap_list" >PCI capabilities listing</capability>
        </capabilities>

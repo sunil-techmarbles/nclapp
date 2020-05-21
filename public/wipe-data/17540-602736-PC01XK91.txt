@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 20AR0011US
+Computer Serial: PC01XK91
+Motherboard Vendor: LENOVO
+Motherboard Model: 20AR0011US
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz, Speed: 2100 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 Chip
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I218-LM, MAC Address: 68:f7:28:0c:da:3a
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: e8:b1:fc:95:2c:2f
+Drive 1: Model: SAMSUNG MZ7TE256HMHP-000L7, Serial: S1K7NSBF922341, Size: 256.06 GB, Firmware Version: EXT09L6Q
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 4
+USB2 Ports: 1
+USB3 Ports: 1
+
+Job UUID: BAEB0D43-CDAF-4308-A9FB-331819FF0DEE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+: 602736
+: Goodwin Procter LLP
+: 17540
+
+>> Drive #1  Vendor: Samsung Model: SAMSUNG MZ7TE256HMHP-000L7
+             Serial: S1K7NSBF922341 Size: 256.06 GB
+
+UUID: 7E69D9EF-CAD6-4D5B-A60A-B97BCCCDEADA
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 2
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Monday, 18 May 2020 at 10:48:39
+Action End Time: Monday, 18 May 2020 at 12:12:40
+Action Duration: 01:24:01
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+OPAL Crypto Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

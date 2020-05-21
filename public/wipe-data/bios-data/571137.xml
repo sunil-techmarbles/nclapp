@@ -69,7 +69,7 @@
      <version>6.7.10</version>
      <serial>0001-067A-0000-0000-0000-0000</serial>
      <slot>XU1 PROCESSOR</slot>
-     <size units="Hz">2021825000</size>
+     <size units="Hz">2006003000</size>
      <capacity units="Hz">2833000000</capacity>
      <width units="bits">64</width>
      <clock units="Hz">1333000000</clock>
@@ -259,7 +259,7 @@
      <businfo>cpu@1</businfo>
      <version>6.7.10</version>
      <serial>0001-067A-0000-0000-0000-0000</serial>
-     <size units="Hz">1995037000</size>
+     <size units="Hz">1995020000</size>
      <capacity units="Hz">2833000000</capacity>
      <configuration>
       <setting id="id" value="1" />
@@ -303,7 +303,7 @@
      <businfo>cpu@2</businfo>
      <version>6.7.10</version>
      <serial>0001-067A-0000-0000-0000-0000</serial>
-     <size units="Hz">1995079000</size>
+     <size units="Hz">1994997000</size>
      <capacity units="Hz">2833000000</capacity>
      <configuration>
       <setting id="id" value="1" />
@@ -347,7 +347,7 @@
      <businfo>cpu@3</businfo>
      <version>6.7.10</version>
      <serial>0001-067A-0000-0000-0000-0000</serial>
-     <size units="Hz">1995075000</size>
+     <size units="Hz">1995059000</size>
      <capacity units="Hz">2833000000</capacity>
      <configuration>
       <setting id="id" value="1" />
@@ -708,8 +708,8 @@
            <description>USB hub</description>
            <product>USB2.1 Hub</product>
            <vendor>GenesysLogic</vendor>
-           <physid>3</physid>
-           <businfo>usb@1:3</businfo>
+           <physid>2</physid>
+           <businfo>usb@1:2</businfo>
            <version>6.53</version>
            <configuration>
             <setting id="driver" value="hub" />
@@ -725,7 +725,7 @@
              <product>HP Business Slim Keyboard</product>
              <vendor>Chicony</vendor>
              <physid>1</physid>
-             <businfo>usb@1:3.1</businfo>
+             <businfo>usb@1:2.1</businfo>
              <version>0.11</version>
              <configuration>
               <setting id="driver" value="usbhid" />
@@ -739,8 +739,8 @@
             <node id="usb:1" claimed="true" class="input" handle="USB:1:4">
              <description>Keyboard</description>
              <product>Symbol Bar Code Scanner</product>
-             <physid>3</physid>
-             <businfo>usb@1:3.3</businfo>
+             <physid>2</physid>
+             <businfo>usb@1:2.2</businfo>
              <version>0.02</version>
              <serial>S/N:1C7E055F034FB64C8ED1CC4734D38FAD Rev:NBRPUAAP3</serial>
              <configuration>
@@ -752,12 +752,28 @@
               <capability id="usb-2.00" >USB 2.0</capability>
              </capabilities>
             </node>
-            <node id="usb:2" class="communication" handle="USB:1:5">
+            <node id="usb:2" claimed="true" class="input" handle="USB:1:5">
+             <description>Keyboard</description>
+             <product>Dell Universal Receiver</product>
+             <vendor>Dell</vendor>
+             <physid>3</physid>
+             <businfo>usb@1:2.3</businfo>
+             <version>11.19</version>
+             <configuration>
+              <setting id="driver" value="usbhid" />
+              <setting id="maxpower" value="100mA" />
+              <setting id="speed" value="12Mbit/s" />
+             </configuration>
+             <capabilities>
+              <capability id="usb-2.00" >USB 2.0</capability>
+             </capabilities>
+            </node>
+            <node id="usb:3" class="communication" handle="USB:1:6">
              <description>Communication device</description>
              <product>USB 10/100/1000 LAN</product>
              <vendor>Realtek</vendor>
              <physid>4</physid>
-             <businfo>usb@1:3.4</businfo>
+             <businfo>usb@1:2.4</businfo>
              <version>30.00</version>
              <serial>000001</serial>
              <configuration>

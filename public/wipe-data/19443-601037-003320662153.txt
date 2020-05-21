@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 4
+Computer Serial: 003320662153
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 4
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 1000 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 4, LPDDR3 SODIMM
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88W8897 [AVASTAR] 802.11ac Wireless, MAC Address: 98:5f:d3:c5:0b:f2
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 28:18:78:b9:f6:8d
+Drive 1: Model: SAMSUNG MZFLV256HCHP-000MV, Serial: S245NXBH361436, Size: 256.06 GB, Firmware Version: BXV75M0Q
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Imaging Unit
+Multimedia Adapter: Vendor: Intel Corporation, Model: Intel Corporation
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 71C5FB0C-A018-4888-97F6-18C8A85A402E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 601037
+User3: Owens Corning
+User4: 19443
+
+>> Drive #1  Vendor: Samsung Electronics Co Ltd Model: SAMSUNG MZFLV256HCHP-000MV
+             Serial: S245NXBH361436 Size: 256.06 GB
+
+UUID: 0A94DB35-D44B-4750-9AED-3EC0BFD06F8B
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Friday, 24 Feb 2017 at 00:03:06
+Action End Time: Friday, 24 Feb 2017 at 00:05:28
+Action Duration: 00:02:22
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

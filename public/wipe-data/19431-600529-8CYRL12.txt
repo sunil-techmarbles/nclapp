@@ -1,0 +1,65 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Dell Precision M3800
+Computer Serial: 8CYRL12
+Motherboard Vendor: Dell Inc.
+Motherboard Model: Dell Precision M3800
+Processor: Intel(R) Core(TM) i7-4702HQ CPU @ 2.20GHz, Speed: 2200 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 7260, MAC Address: 28:b2:bd:90:a4:52
+Drive 1: Model: LITEONIT LMT-512L9M-11 MSATA 512GB, Serial: TW0099H45508547S0592, Size: 512.11 GB, Firmware Version: HM9110B
+Display Adapter: Vendor: NVIDIA Corporation, Model: GK107GLM [Quadro K1100M]
+Display Adapter: Vendor: Intel Corporation, Model: 4th Gen Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v3/4th Gen Core Processor HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series/C220 Series Chipset High Definition Audio Controller
+USB Ports: 3
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: FE5078CC-8561-42DB-8038-0DC5D2E5FD11
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+: 600529
+: Owens Corning
+: 19431
+
+>> Drive #1  Vendor: Lite-On Model: LITEONIT LMT-512L9M-11 MSATA 512GB
+             Serial: TW0099H45508547S0592 Size: 512.11 GB
+
+UUID: A8A5B73A-4CAB-4459-AF85-E7504EC76DB3
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1000215216
+Sectors Not Overwritten: 0
+Sectors Verified: 100021522
+Action Start Time: Wednesday, 20 May 2020 at 17:11:31
+Action End Time: Wednesday, 20 May 2020 at 17:16:34
+Action Duration: 00:05:03
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

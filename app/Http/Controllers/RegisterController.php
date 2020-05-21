@@ -99,7 +99,7 @@ class RegisterController extends Controller
                     $e_mails[] = $value->email;
                 }
             }
-            $emails = ($emails->count() > 0) ? $e_mails : config('constants.userConfirmAdminEmail')
+            $emails = ($emails->count() > 0) ? $e_mails : config('constants.userConfirmAdminEmail');
             $subject = 'New User';
             $data = [
                 'name' => $request->fname.''.$request->lname,

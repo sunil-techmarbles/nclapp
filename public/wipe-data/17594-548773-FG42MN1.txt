@@ -1,0 +1,224 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.1.3 64-bit
+Kernel Version 4.14.65-gentoo
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: PowerEdge R710
+Computer Serial: FG42MN1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 00NH4P
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz, Speed: 2400 MHz, Cores: 4, L1 Cache: 128 kB, L2 Cache: 1024 kB
+RAM: 12288 MB, Memory banks: 12, DDR3 DIMM
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 84:2b:2b:4f:59:5e
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 84:2b:2b:4f:59:60
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 84:2b:2b:4f:59:62
+NIC: Vendor: Broadcom Inc. and subsidiaries, Model: NetXtreme II BCM5709 Gigabit Ethernet, MAC Address: 84:2b:2b:4f:59:64
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:76:31:d8
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:76:31:d9
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:76:13:d4
+NIC: Vendor: Intel Corporation, Model: 82576 Gigabit Network Connection, MAC Address: 00:1b:21:76:13:d5
+DVD reader: DVD-ROM DV-28SW
+Drive 1: Model: ST9146803SS     , Serial: 6SD1JZ3A, Size: 146.16 GB
+Drive 2: Model: MBD2147RC       , Serial: D0A4PA802T4H, Size: 146.16 GB
+Drive 3: Model: ST9600204SS     , Serial: 6WN00PYG, Size: 599.55 GB
+Drive 4: Model: ST9600204SS     , Serial: 6WN01HHW, Size: 599.55 GB
+Drive 5: Model: ST9600204SS     , Serial: 6WN01GG6, Size: 599.55 GB
+Drive 6: Model: ST9600204SS     , Serial: 6WN00F76, Size: 599.55 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: MGA G200eW WPCM450
+USB Ports: 8
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 6830F3F7-5C36-4332-8EAA-6C57E633DA81
+Current user: ITAMG
+Computer ID: Unavailable
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 548773
+Lot Name: Metropolitan Museum of Art
+Lot Number: 17594
+\"Product\": Server
+
+>> Raid device #1  Vendor: SEAGATE Model: ST9146803SS     
+             Serial: 6SD1JZ3A Size: 146.16 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9146803SS     
+             Serial: 6SD1JZ3A Size: 136.125 GB  [ 32:0 ]
+
+UUID: 7C965FCE-093B-4365-8CF2-47513C65D0F5
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 285474816
+Action Start Time: Wednesday, 11 Mar 2020 at 13:01:39
+Action End Time: Wednesday, 11 Mar 2020 at 14:33:05
+Action Duration: 01:31:26
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: FUJITSU Model: MBD2147RC       
+             Serial: D0A4PA802T4H Size: 146.16 GB
+    >>> Raid member #1  Vendor: FUJITSU Model: MBD2147RC       
+             Serial: D0A4PA802T4H Size: 136.125 GB  [ 32:1 ]
+
+UUID: ECF964D2-E711-42B5-BD08-637E2C914820
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285474816
+Sectors Not Overwritten: 0
+Sectors Verified: 285474816
+Action Start Time: Wednesday, 11 Mar 2020 at 13:01:39
+Action End Time: Wednesday, 11 Mar 2020 at 14:34:34
+Action Duration: 01:32:55
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #3  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN00PYG Size: 599.55 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN00PYG Size: 558.375 GB  [ 32:2 ]
+
+UUID: 5000C72E-6096-4C30-ABA2-4EFDA7F054FF
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1170997248
+Sectors Not Overwritten: 0
+Sectors Verified: 1170997248
+Action Start Time: Wednesday, 11 Mar 2020 at 13:01:39
+Action End Time: Wednesday, 11 Mar 2020 at 19:12:58
+Action Duration: 06:11:19
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #4  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN01HHW Size: 599.55 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN01HHW Size: 558.375 GB  [ 32:3 ]
+
+UUID: 2C65E657-DA71-4EC0-AFE8-4D3AE8A53630
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1170997248
+Sectors Not Overwritten: 0
+Sectors Verified: 1170997248
+Action Start Time: Wednesday, 11 Mar 2020 at 13:01:39
+Action End Time: Wednesday, 11 Mar 2020 at 18:47:06
+Action Duration: 05:45:27
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #4 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #5  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN01GG6 Size: 599.55 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN01GG6 Size: 558.375 GB  [ 32:4 ]
+
+UUID: 5DE41A69-FB6E-4F6E-846F-21AF5E15B764
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1170997248
+Sectors Not Overwritten: 0
+Sectors Verified: 1170997248
+Action Start Time: Wednesday, 11 Mar 2020 at 13:01:39
+Action End Time: Wednesday, 11 Mar 2020 at 18:58:40
+Action Duration: 05:57:01
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #5 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #6  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN00F76 Size: 599.55 GB
+    >>> Raid member #1  Vendor: SEAGATE Model: ST9600204SS     
+             Serial: 6WN00F76 Size: 558.375 GB  [ 32:5 ]
+
+UUID: F38EE023-6C65-4CD8-B6C7-EC29368030FB
+Action: Overwrite disk.
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 1170997248
+Sectors Not Overwritten: 0
+Sectors Verified: 1170997248
+Action Start Time: Wednesday, 11 Mar 2020 at 13:01:39
+Action End Time: Wednesday, 11 Mar 2020 at 19:01:05
+Action Duration: 05:59:26
+
+Action Result: SUCCESS
+
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #6 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E6430
+Computer Serial: FVPQYW1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0CPWYR
+Processor: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 2048 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 74:86:7a:6d:92:5c
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 84:3a:4b:9d:29:98
+DVD-RAM writer: DVD+-RW DU-8A5HH
+Drive 1: Model: ST320LT007-9ZV142, Serial: W0Q8NVQD, Size: 320.07 GB, Firmware Version: 0007DEM1
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 2D9BAD05-57EC-4035-910A-ADB51DB34CBB
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 572967
+User3: EnviroBusiness, Inc.
+User4: 19103
+
+>> Drive #1  Vendor: Seagate Model: ST320LT007-9ZV142
+             Serial: W0Q8NVQD Size: 320.07 GB
+
+UUID: 214A092D-5AB5-45C9-9731-386CBF18ECF0
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62528016
+Action Start Time: Wednesday, 20 May 2020 at 12:06:05
+Action End Time: Wednesday, 20 May 2020 at 13:13:13
+Action Duration: 01:07:08
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

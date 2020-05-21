@@ -1,0 +1,63 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7470
+Computer Serial: HFR0PF2
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0T6HHJ
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: f0:d5:bf:e4:7d:9d
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 18:db:f2:43:b2:d5
+Drive 1: Model: SK hynix SC300 M.2 2280 256GB, Serial: FI62N045212202G5C, Size: 256.06 GB, Firmware Version: 20100P00
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 5ABDAD71-CD34-4742-8212-B1481FCE4D8A
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 575929
+User3: PRA Health Sciences
+User4: 19122
+
+>> Drive #1  Vendor: SK hynix Model: SK hynix SC300 M.2 2280 256GB
+             Serial: FI62N045212202G5C Size: 256.06 GB
+
+UUID: C736AB96-11B1-43C5-BA1F-B27373E5F5EC
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 50011820
+Action Start Time: Wednesday, 20 May 2020 at 11:40:46
+Action End Time: Wednesday, 20 May 2020 at 11:43:43
+Action Duration: 00:02:57
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

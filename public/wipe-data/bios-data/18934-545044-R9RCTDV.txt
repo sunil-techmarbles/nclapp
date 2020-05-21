@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: qqqq5UU
+Computer Serial: R9RCTDV
+Motherboard Vendor: LENOVO
+Motherboard Model: qqqq5UU
+Processor: Intel(R) Core(TM) i5-3210M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 3c:97:0e:43:8d:25
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 8c:70:5a:f4:50:44
+DVD-RAM writer: DVD RW AD-7940H
+Drive 1: Model: HITACHI HTS725050A7E630, Serial: TF1501Y9GM5T8F, Size: 500.11 GB, Firmware Version: GH2ZB390
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF117M [GeForce 610M/710M/810M/820M / GT 620M/625M/630M/720M]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: EAF687EA-29E6-48E7-BEEA-809136695BCE
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 545044
+User3: Perkins Eastman
+User4: 18934
+
+>> Drive #1  Vendor: Hitachi Model: HITACHI HTS725050A7E630
+             Serial: TF1501Y9GM5T8F Size: 500.11 GB
+
+UUID: 7FAB52A0-F2CE-4BCA-B13B-D78F4FEB54DD
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Wednesday, 20 May 2020 at 15:30:10
+Action End Time: Wednesday, 20 May 2020 at 17:02:20
+Action Duration: 01:32:10
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

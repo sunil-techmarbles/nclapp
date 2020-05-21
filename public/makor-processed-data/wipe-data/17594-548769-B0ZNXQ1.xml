@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.1.3 64-bit">
+        <KernelVersion>4.14.65-gentoo</KernelVersion>
+        <Hardware>
+            <ComputerVendor>Dell Inc.</ComputerVendor>
+            <ComputerModel>PowerEdge R610</ComputerModel>
+            <ComputerSerial>B0ZNXQ1</ComputerSerial>
+            <MotherboardVendor>Dell Inc.</MotherboardVendor>
+            <MotherboardModel>0F0XJ6</MotherboardModel>
+            <AssetTag>Unavailable</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5620  @ 2.40GHz</Name>
+                    <Speed>2400 MHz</Speed>
+                    <ID>CPU1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>128 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>12288 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>00AD04B380AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>4BB027F3</SerialNumber>
+                    <AssetTag>01122511</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00AD04B380AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>4B802831</SerialNumber>
+                    <AssetTag>01122511</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00AD04B380AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>2DC0FEDD</SerialNumber>
+                    <AssetTag>01122511</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00AD04B380AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>4BB027F5</SerialNumber>
+                    <AssetTag>01122511</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00AD04B380AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>2D40FEED</SerialNumber>
+                    <AssetTag>01122511</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>00AD04B380AD</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1066 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Synchronous Registered (Buffered)</TypeDetail>
+                    <SerialNumber>2D31019D</SerialNumber>
+                    <AssetTag>01122511</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <MemoryBanks>6</MemoryBanks>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>49152 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>14:fe:b5:da:36:93</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>14:fe:b5:da:36:95</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>14:fe:b5:da:36:97</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>14:fe:b5:da:36:99</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Cavium QLogic</Vendor>
+                    <Product>1010/1020/1007/1741 10Gbps CNA</Product>
+                    <MACAddress>Unavailable</MACAddress>
+                    <Speed>Unavailable</Speed>
+                    <PciId>1657:14</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Cavium QLogic</Vendor>
+                    <Product>1010/1020/1007/1741 10Gbps CNA</Product>
+                    <MACAddress>Unavailable</MACAddress>
+                    <Speed>Unavailable</Speed>
+                    <PciId>1657:14</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>PLDS</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>DVD-ROM DS-8D3SH</Product>
+                    <Capabilities>removable audio dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device index="1">
+                    <Vendor>WD</Vendor>
+                    <Product>WD1460BKFG-18P2V</Product>
+                    <Serial>WXP1E21KDT82</Serial>
+                    <Firmware>D1E4</Firmware>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:0 ]</Location>
+                            <Vendor>WD</Vendor>
+                            <Product>WD1460BKFG-18P2V</Product>
+                            <Serial>WXP1E21KDT82</Serial>
+                            <Firmware>D1E4</Firmware>
+                            <Gigabytes>136.125</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="2">
+                    <Vendor>WD</Vendor>
+                    <Product>WD1460BKFG-18P2V</Product>
+                    <Serial>WXP1E21KDR98</Serial>
+                    <Firmware>D1E4</Firmware>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:1 ]</Location>
+                            <Vendor>WD</Vendor>
+                            <Product>WD1460BKFG-18P2V</Product>
+                            <Serial>WXP1E21KDR98</Serial>
+                            <Firmware>D1E4</Firmware>
+                            <Gigabytes>136.125</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="3">
+                    <Vendor>TOSHIBA</Vendor>
+                    <Product>MBF2300RC       </Product>
+                    <Serial>EB03PB3034DN</Serial>
+                    <Firmware>DA05</Firmware>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:2 ]</Location>
+                            <Vendor>TOSHIBA</Vendor>
+                            <Product>MBF2300RC       </Product>
+                            <Serial>EB03PB3034DN</Serial>
+                            <Firmware>DA05</Firmware>
+                            <Gigabytes>278.875</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device index="4">
+                    <Vendor>TOSHIBA</Vendor>
+                    <Product>MBF2300RC       </Product>
+                    <Serial>EB03PC60N55W</Serial>
+                    <Firmware>DA07</Firmware>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <RaidDrives>
+                        <RaidDrive index="1">
+                            <Location>[ 32:3 ]</Location>
+                            <Vendor>TOSHIBA</Vendor>
+                            <Product>MBF2300RC       </Product>
+                            <Serial>EB03PC60N55W</Serial>
+                            <Firmware>DA07</Firmware>
+                            <Gigabytes>278.875</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>MGA G200eW WPCM450</Product>
+                    <PciId>102B:532</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <StorageControllers>
+                <StorageController>
+                    <Vendor>LSI Logic / Symbios Logic</Vendor>
+                    <Product>MegaRAID SAS 2108 [Liberator]</Product>
+                    <Description>RAID bus controller</Description>
+                    <PciId>1000:79</PciId>
+                </StorageController>
+                <StorageController>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82801IB (ICH9) 2 port SATA Controller [IDE mode]</Product>
+                    <Description>IDE interface</Description>
+                    <PciId>8086:2921</PciId>
+                </StorageController>
+            </StorageControllers>
+            <USBPorts>8</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <Jobs>
+            <Job>
+                <UUID>877E7D85-0B34-4C38-9033-312FD567BE3A</UUID>
+                <UserName>ITAMG</UserName>
+                <ComputerID>Unavailable</ComputerID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>Asset Number</Name>
+                        <Value>548769</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>Lot Name</Name>
+                        <Value>Metropolitan Museum of Art</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>Lot Number</Name>
+                        <Value>17594</Value>
+                    </UserField>
+                    <UserField index="5">
+                        <Name>\&quot;Product\&quot;</Name>
+                        <Value>Server</Value>
+                    </UserField>
+                </UserFields>
+                <Operation DeviceIndex="1" SecurityCode="50107703250261303587817313519668254255">
+                    <UUID>22E41ABC-C8D8-4402-A2C3-1EC062C400A2</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 14:25:23</StartTime>
+                    <Duration>01:28:56</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>285474816</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285474816</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>WD</Vendor>
+                    <Product>WD1460BKFG-18P2V</Product>
+                    <Serial>WXP1E21KDT82</Serial>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="2" SecurityCode="691941872491313393875024420230671297202">
+                    <UUID>193C8919-6E4A-470F-8E1A-8720673EF998</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 14:25:23</StartTime>
+                    <Duration>01:25:04</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>285474816</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285474816</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>WD</Vendor>
+                    <Product>WD1460BKFG-18P2V</Product>
+                    <Serial>WXP1E21KDR98</Serial>
+                    <Gigabytes>146.16</Gigabytes>
+                    <Bytes>146163105792</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="3" SecurityCode="992233819795233451201952372269133239">
+                    <UUID>E10F6BD0-A5FD-4ADE-A423-AC85F59A9783</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 14:25:23</StartTime>
+                    <Duration>02:31:03</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>584843264</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>584843264</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>TOSHIBA</Vendor>
+                    <Product>MBF2300RC       </Product>
+                    <Serial>EB03PB3034DN</Serial>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+                <Operation DeviceIndex="4" SecurityCode="1371702421721013116325213153245198833064106">
+                    <UUID>9CAD2523-A6F8-4CFD-8C8C-5237C981F6C6</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Wednesday, 11 Mar 2020 14:25:23</StartTime>
+                    <Duration>02:34:33</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <SectorsOverwritten>584843264</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>584843264</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Drives in a RAID configuration cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>TOSHIBA</Vendor>
+                    <Product>MBF2300RC       </Product>
+                    <Serial>EB03PC60N55W</Serial>
+                    <Gigabytes>299.44</Gigabytes>
+                    <Bytes>299439751168</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

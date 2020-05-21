@@ -135,7 +135,7 @@
      <version>6.14.3</version>
      <serial>0004-06E3-0000-0000-0000-0000</serial>
      <slot>U3E1</slot>
-     <size units="Hz">1360095000</size>
+     <size units="Hz">2839113000</size>
      <capacity units="Hz">3000000000</capacity>
      <width units="bits">64</width>
      <clock units="Hz">100000000</clock>
@@ -417,7 +417,7 @@
      <businfo>cpu@1</businfo>
      <version>6.14.3</version>
      <serial>0004-06E3-0000-0000-0000-0000</serial>
-     <size units="Hz">563231000</size>
+     <size units="Hz">1909508000</size>
      <capacity units="Hz">3000000000</capacity>
      <configuration>
       <setting id="id" value="2" />
@@ -654,7 +654,7 @@
            <businfo>usb@1:1</businfo>
            <logicalname>scsi2</logicalname>
            <version>1.00</version>
-           <serial>60A44C413B99FF31C9980339</serial>
+           <serial>001E4FB6FD9CFF703753452A</serial>
            <configuration>
             <setting id="driver" value="usb-storage" />
             <setting id="maxpower" value="100mA" />
@@ -676,7 +676,7 @@
              <configuration>
               <setting id="logicalsectorsize" value="512" />
               <setting id="sectorsize" value="512" />
-              <setting id="signature" value="2424c52f" />
+              <setting id="signature" value="63a615dd" />
              </configuration>
              <capabilities>
               <capability id="partitioned" >Partitioned disk</capability>
@@ -691,7 +691,7 @@
                <logicalname>/mnt/hw</logicalname>
                <dev>8:1</dev>
                <version>FAT32</version>
-               <serial>1607-cad3</serial>
+               <serial>42e8-bf28</serial>
                <size units="bytes">7743620096</size>
                <capacity>7746349056</capacity>
                <configuration>
