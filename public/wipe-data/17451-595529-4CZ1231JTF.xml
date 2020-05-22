@@ -2,7 +2,7 @@
 <Reports>
     <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
         <KernelVersion>5.2.11-mac</KernelVersion>
-        <GroupUUID>7F7F72BF-7B9A-4583-AF95-E1007F125AC0</GroupUUID>
+        <GroupUUID>3DBB0BEA-EB98-4817-9404-4274E73CF05D</GroupUUID>
         <Hardware>
             <ComputerVendor>Hewlett-Packard</ComputerVendor>
             <ComputerModel>HP ProBook 6560b</ComputerModel>
@@ -93,18 +93,7 @@
                     <Product>6 Series/C200 Series Chipset Family High Definition Audio Controller</Product>
                 </MultimediaCard>
             </MultimediaCards>
-            <Batteries>
-                <Battery index="0">
-                    <Vendor>Hewlett-Packard</Vendor>
-                    <Product>Primary</Product>
-                    <SerialNumber>01524 2011/11/18</SerialNumber>
-                    <Type>Li-ion</Type>
-                    <CurrentCapacity>3445000</CurrentCapacity>
-                    <DesignCapacity>3641000</DesignCapacity>
-                    <FullCapacity>3641000</FullCapacity>
-                </Battery>
-            </Batteries>
-            <USBPorts>0</USBPorts>
+            <USBPorts>3</USBPorts>
             <USB2Ports>2</USB2Ports>
             <USB3Ports>0</USB3Ports>
             <FirewirePorts>1</FirewirePorts>
@@ -112,77 +101,10 @@
             <Thunderbolt2Ports>0</Thunderbolt2Ports>
             <Thunderbolt3Ports>0</Thunderbolt3Ports>
         </Hardware>
-        <HardwareTest>
-            <Processor>
-                <MMX>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </MMX>
-                <SSE>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </SSE>
-                <SSE2>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </SSE2>
-                <SSE3>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </SSE3>
-                <SSE4.1>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </SSE4.1>
-                <SSE4.2>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </SSE4.2>
-                <AVX>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </AVX>
-                <AVX2>
-                    <Result>Not Supported</Result>
-                    <Notes></Notes>
-                </AVX2>
-                <Prime>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </Prime>
-                <FPU>
-                    <Result>Pass</Result>
-                    <Notes></Notes>
-                </FPU>
-                <AES>
-                    <Result>Not Supported</Result>
-                    <Notes></Notes>
-                </AES>
-            </Processor>
-            <Storage>
-                <Read>
-                    <Result>Skipped</Result>
-                    <Notes></Notes>
-                </Read>
-                <Write>
-                    <Result>Skipped</Result>
-                    <Notes></Notes>
-                </Write>
-                <SMARTHealth>
-                    <Result>Skipped</Result>
-                    <Notes></Notes>
-                </SMARTHealth>
-            </Storage>
-            <Memory>
-                <Memory>
-                    <Result>Pass</Result>
-                    <Notes>2.5GB, 5 repetitions, runtime: 5 seconds</Notes>
-                </Memory>
-            </Memory>
-        </HardwareTest>
+        <HardwareTest/>
         <Jobs>
             <Job>
-                <UUID>FBFC2A60-AD21-4F56-B9BD-B4B8C2CFEE25</UUID>
+                <UUID>EEB1B22E-EFD9-44DF-ACA2-3A1058F9EF0B</UUID>
                 <UserFields>
                     <UserField index="1">
                         <Name>Username</Name>
@@ -202,14 +124,14 @@
                     </UserField>
                 </UserFields>
                 <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
-                <Operation SecurityCode="102208251109633641977824724815211106238216">
-                    <UUID>012319D9-229E-43E3-8097-B95212B59E13</UUID>
+                <Operation SecurityCode="25019010184229233223224253192222173231174205210">
+                    <UUID>FF8CCB5A-A868-43ED-9570-7BD20011CB37</UUID>
                     <DiskOperationType Index="1">Wipe</DiskOperationType>
                     <Method>NIST 800-88r1</Method>
                     <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
                     <MethodValue>N</MethodValue>
-                    <StartTime>Tuesday, 01 Jan 1980 00:44:46</StartTime>
-                    <Duration>01:05:07</Duration>
+                    <StartTime>Tuesday, 01 Jan 1980 21:23:25</StartTime>
+                    <Duration>01:05:03</Duration>
                     <ActionResult Index="2">Success</ActionResult>
                     <DirtySectors>0</DirtySectors>
                     <DriveErrorsDetected>0</DriveErrorsDetected>
@@ -276,7 +198,7 @@
                             <ID>3</ID>
                             <Name>Spin_Up_Time</Name>
                             <Flag>0x0023</Flag>
-                            <Value>243</Value>
+                            <Value>253</Value>
                             <Worst>100</Worst>
                             <Threshold>033</Threshold>
                             <Type>Pre-fail</Type>
@@ -294,7 +216,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1365</RawValue>
+                            <RawValue>1370</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>5</ID>
@@ -342,7 +264,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>5673</RawValue>
+                            <RawValue>5677</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>10</ID>
@@ -366,7 +288,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1362</RawValue>
+                            <RawValue>1366</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>183</ID>
@@ -414,19 +336,19 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1428</RawValue>
+                            <RawValue>1433</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>190</ID>
                             <Name>Airflow_Temperature_Cel</Name>
                             <Flag>0x0022</Flag>
-                            <Value>070</Value>
+                            <Value>071</Value>
                             <Worst>056</Worst>
                             <Threshold>045</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>30 (Min/Max 30/30)</RawValue>
+                            <RawValue>29 (Min/Max 29/30)</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>191</ID>
@@ -438,7 +360,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>2266</RawValue>
+                            <RawValue>2279</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>192</ID>
@@ -462,7 +384,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>5176</RawValue>
+                            <RawValue>5189</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>196</ID>
@@ -555,7 +477,7 @@
                             <ID>3</ID>
                             <Name>Spin_Up_Time</Name>
                             <Flag>0x0023</Flag>
-                            <Value>243</Value>
+                            <Value>253</Value>
                             <Worst>100</Worst>
                             <Threshold>033</Threshold>
                             <Type>Pre-fail</Type>
@@ -573,7 +495,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1366</RawValue>
+                            <RawValue>1371</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>5</ID>
@@ -621,7 +543,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>5674</RawValue>
+                            <RawValue>5678</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>10</ID>
@@ -645,7 +567,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1362</RawValue>
+                            <RawValue>1366</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>183</ID>
@@ -693,19 +615,19 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>1429</RawValue>
+                            <RawValue>1434</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>190</ID>
                             <Name>Airflow_Temperature_Cel</Name>
                             <Flag>0x0022</Flag>
-                            <Value>060</Value>
+                            <Value>058</Value>
                             <Worst>056</Worst>
                             <Threshold>045</Threshold>
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>40 (Min/Max 30/41)</RawValue>
+                            <RawValue>42 (Min/Max 29/42)</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>191</ID>
@@ -717,7 +639,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>2279</RawValue>
+                            <RawValue>2280</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>192</ID>
@@ -741,7 +663,7 @@
                             <Type>Old_age</Type>
                             <Updated>Always</Updated>
                             <WhenFailed>-</WhenFailed>
-                            <RawValue>5178</RawValue>
+                            <RawValue>5191</RawValue>
                         </SMARTAttribute>
                         <SMARTAttribute>
                             <ID>196</ID>

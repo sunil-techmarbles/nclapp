@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: LENOVO
+Computer Model: 2349G4U
+Computer Serial: PBH3Z45
+Motherboard Vendor: LENOVO
+Motherboard Model: 2349G4U
+Processor: Intel(R) Core(TM) i5-3320M CPU @ 2.60GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 28:d2:44:20:20:f3
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: a4:4e:31:3d:f0:80
+DVD-RAM writer: DVD-RW DS8A8SH
+Drive 1: Model: TOSHIBA MQ01ACF032, Serial: 83IAW465T, Size: 320.07 GB, Firmware Version: AV001E
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF108M [NVS 5400M]
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 5
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 343D40F2-A687-436F-931C-4D029E526BC8
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 578990
+User3: Avis Budget Group
+User4: 19134
+
+>> Drive #1  Vendor: Toshiba Model: TOSHIBA MQ01ACF032
+             Serial: 83IAW465T Size: 320.07 GB
+
+UUID: 126F07F6-C3A6-468A-B031-AFAB8FDB13A8
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62528016
+Action Start Time: Thursday, 21 May 2020 at 09:57:13
+Action End Time: Thursday, 21 May 2020 at 11:01:47
+Action Duration: 01:04:34
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Secure Erase Passes: 1
+NIST Method Type: Purge
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

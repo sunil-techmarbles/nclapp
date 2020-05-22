@@ -1,0 +1,502 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>C46D686D-49EB-464C-8BD8-79905F72B343</GroupUUID>
+        <Hardware>
+            <ComputerVendor>IBM</ComputerVendor>
+            <ComputerModel>IBM System x3550 M4: -[7914AC1]-</ComputerModel>
+            <ComputerSerial>E2BL875</ComputerSerial>
+            <MotherboardVendor>IBM</MotherboardVendor>
+            <MotherboardModel>00KG553</MotherboardModel>
+            <AssetTag>none</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2690 v2 @ 3.00GHz</Name>
+                    <Speed>3000 MHz</Speed>
+                    <ID>Socket 1</ID>
+                    <NumCores>10</NumCores>
+                    <NumThreads>20</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>25600 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2690 v2 @ 3.00GHz</Name>
+                    <Speed>3000 MHz</Speed>
+                    <ID>Socket 2</ID>
+                    <NumCores>10</NumCores>
+                    <NumThreads>20</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>25600 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>4099EC8F</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FEC3</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF5F</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FEC6</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FED4</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FFB8</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FED6</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF93</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF3C</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF3B</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF41</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF5D</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FFD9</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FEE9</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FF07</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>1866 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>50A2FECB</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT41GR7BFR4C-RD</PartNumber>
+                </Stick>
+                <MemoryBanks>24</MemoryBanks>
+                <CurrentBanksUsed>16</CurrentBanksUsed>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>131072 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>6c:ae:8b:55:b5:62</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>6c:ae:8b:55:b5:64</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>6e:ae:8b:55:b5:61</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>IBM SATA</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>DEVICE 81Y3682</Product>
+                    <Capabilities>removable audio dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>007b45b40e42685926a049c209b00506</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.26</Gigabytes>
+                    <Bytes>146263769088</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 62:0 ]</Location>
+                            <Vendor>IBM-ESXS</Vendor>
+                            <Product>ST9146853SS     </Product>
+                            <Serial>6XM4D7YR0000M5274MUZ</Serial>
+                            <Firmware>B63K</Firmware>
+                            <Gigabytes>136.218</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00347abc0e43685926a049c209b00506</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.26</Gigabytes>
+                    <Bytes>146263769088</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 62:1 ]</Location>
+                            <Vendor>IBM-ESXS</Vendor>
+                            <Product>ST9146853SS     </Product>
+                            <Serial>6XM4DX8V0000M526G0JP</Serial>
+                            <Firmware>B63K</Firmware>
+                            <Gigabytes>136.218</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>G200eR2</Product>
+                    <PciId>102B:534</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <USBPorts>6</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>007b45b40e42685926a049c209b00506 - SMART Health Skipped,
+00347abc0e43685926a049c209b00506 - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>123.3GB, 5 repetitions, runtime: 04:22</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>1E4520DC-B2DD-4B42-94A1-527DE9F28EF9</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>592146</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Northwell Health</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19250</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="30902547149182052471801051268873163208123">
+                    <UUID>7B0C53A8-4BF6-4405-B85B-907210E850CB</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 16:27:08</StartTime>
+                    <Duration>00:57:39</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>285671424</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285671424</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00347abc0e43685926a049c209b00506</Serial>
+                    <Gigabytes>146.26</Gigabytes>
+                    <Bytes>146263769088</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+                <Operation SecurityCode="1163163133150386414935116921922024235">
+                    <UUID>A2DF0D11-2557-483F-99CB-EAD6B0B73D2D</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 16:27:08</StartTime>
+                    <Duration>00:58:03</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>285671424</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285671424</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>007b45b40e42685926a049c209b00506</Serial>
+                    <Gigabytes>146.26</Gigabytes>
+                    <Bytes>146263769088</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

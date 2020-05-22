@@ -1,0 +1,409 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>E41034D5-B54E-47BA-BD9A-D86E8ED970DB</GroupUUID>
+        <Hardware>
+            <ComputerVendor>IBM</ComputerVendor>
+            <ComputerModel>IBM System x3550 M4 Server -[7914AC1]-</ComputerModel>
+            <ComputerSerial>KQ4HA5R</ComputerSerial>
+            <MotherboardVendor>IBM</MotherboardVendor>
+            <MotherboardModel>00Y8603</MotherboardModel>
+            <AssetTag>none</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz</Name>
+                    <Speed>2900 MHz</Speed>
+                    <ID>Socket 1</ID>
+                    <NumCores>8</NumCores>
+                    <NumThreads>16</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>20480 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1600 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>1217384A</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT351R7EFR4C-PB</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1600 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>2E42AF22</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT351R7EFR8C-PB</PartNumber>
+                </Stick>
+                <MemoryBanks>24</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>8192 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>40:f2:e9:10:ae:d4</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>I350 Gigabit Network Connection</Product>
+                    <MACAddress>40:f2:e9:10:ae:d6</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>42:f2:e9:10:ae:d3</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1521</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>IBM SATA</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>DEVICE 81Y3673</Product>
+                    <Capabilities>removable audio dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00e5957b0e455c5926701b3207b00506</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.00</Gigabytes>
+                    <Bytes>145999527936</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 252:2 ]</Location>
+                            <Vendor>IBM-ESXS</Vendor>
+                            <Product>ST9146853SS     </Product>
+                            <Serial>6XM3DBTG0000B421AFGV</Serial>
+                            <Firmware>B63E</Firmware>
+                            <Gigabytes>135.972</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00be46770e445c5926701b3207b00506</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.00</Gigabytes>
+                    <Bytes>145999527936</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 252:1 ]</Location>
+                            <Vendor>IBM-ESXS</Vendor>
+                            <Product>ST9146853SS     </Product>
+                            <Serial>6XM3D7J40000B420H0X6</Serial>
+                            <Firmware>B63E</Firmware>
+                            <Gigabytes>135.972</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+                <Device>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00ae58730e445c5926701b3207b00506</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>146.00</Gigabytes>
+                    <Bytes>145999527936</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 252:0 ]</Location>
+                            <Vendor>IBM-ESXS</Vendor>
+                            <Product>ST9146853SS     </Product>
+                            <Serial>6XM3DAQG0000B420H57Y</Serial>
+                            <Firmware>B63E</Firmware>
+                            <Gigabytes>135.972</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>G200eR2</Product>
+                    <PciId>102B:534</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <USBPorts>6</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>00e5957b0e455c5926701b3207b00506 - SMART Health Skipped,
+00be46770e445c5926701b3207b00506 - SMART Health Skipped,
+00ae58730e445c5926701b3207b00506 - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>6.3GB, 5 repetitions, runtime: 8 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>352B5BE2-F1EB-4C09-8236-BF967F8178D4</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>592173</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Northwell Health</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19250</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="391186215343641731221598121824154144156209">
+                    <UUID>B8635867-D770-4678-83BE-F0A15EF06F6C</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 15:35:57</StartTime>
+                    <Duration>00:58:18</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>285155328</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285155328</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00e5957b0e455c5926701b3207b00506</Serial>
+                    <Gigabytes>146.00</Gigabytes>
+                    <Bytes>145999527936</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+                <Operation SecurityCode="17261541381051911961511942331241473510223832">
+                    <UUID>DD3DABF7-7C83-42BE-99B6-CC39925A18EF</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 15:35:57</StartTime>
+                    <Duration>01:12:13</Duration>
+                    <ActionResult Index="3">Canceled</ActionResult>
+                    <FailureReason>Failure reading data from device Wipe canceled on error because Dirty Sectors or Errors were detected on your drive option set</FailureReason>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>1</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>285155328</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>284896256</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00be46770e445c5926701b3207b00506</Serial>
+                    <Gigabytes>146.00</Gigabytes>
+                    <Bytes>145999527936</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+                <Operation SecurityCode="2172623717621235422862237162757166113">
+                    <UUID>F69A751D-ECF5-41D5-9968-DCB963F7BCCF</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 15:35:57</StartTime>
+                    <Duration>00:57:27</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>285155328</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>285155328</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>IBM</Vendor>
+                    <Product>ServeRAID M5110</Product>
+                    <Serial>00ae58730e445c5926701b3207b00506</Serial>
+                    <Gigabytes>146.00</Gigabytes>
+                    <Bytes>145999527936</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

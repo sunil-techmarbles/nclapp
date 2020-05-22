@@ -18,11 +18,11 @@ DVD-RAM writer: CDDVDW TS-L633J
 Drive 1: Model: Hitachi HTS723225A7A364, Serial: E3824562C0288M, Size: 250.06 GB, Firmware Version: ECBOA60W
 Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
 Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
-USB Ports: 0
+USB Ports: 3
 USB2 Ports: 2
 USB3 Ports: 0
 
-Job UUID: FBFC2A60-AD21-4F56-B9BD-B4B8C2CFEE25
+Job UUID: EEB1B22E-EFD9-44DF-ACA2-3A1058F9EF0B
 Current user: 
 Computer ID: 
 Custom Field: 
@@ -34,15 +34,15 @@ User4: 17451
 >> Drive #1  Vendor: Hitachi Model: Hitachi HTS723225A7A364
              Serial: E3824562C0288M Size: 250.06 GB
 
-UUID: 012319D9-229E-43E3-8097-B95212B59E13
+UUID: FF8CCB5A-A868-43ED-9570-7BD20011CB37
 Action: Wipe
 Wipe Method: NIST 800-88r1, Number of Passes: 1
 Sectors Overwritten: 488397168
 Sectors Not Overwritten: 0
 Sectors Verified: 48839717
-Action Start Time: Tuesday, 01 Jan 1980 at 00:44:46
-Action End Time: Tuesday, 01 Jan 1980 at 01:49:53
-Action Duration: 01:05:07
+Action Start Time: Tuesday, 01 Jan 1980 at 21:23:25
+Action End Time: Tuesday, 01 Jan 1980 at 22:28:28
+Action Duration: 01:05:03
 
 Action Result: SUCCESS
 

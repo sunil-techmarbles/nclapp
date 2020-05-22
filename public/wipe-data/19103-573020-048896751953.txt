@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 3
+Computer Serial: 048896751953
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 3
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88W8897 [AVASTAR] 802.11ac Wireless, MAC Address: c0:33:5e:32:a5:0b
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 28:18:78:b9:ee:91
+Drive 1: Model: HFS128G3AMNB-2200A, Serial: EJ53N874613203R2W, Size: 128.04 GB, Firmware Version: 10108L00
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 9
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 7AEF1AA0-1339-437A-8850-6E8A3F8B311E
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 573020
+User3: EnviroBusiness, Inc.
+User4: 19103
+
+>> Drive #1  Vendor:  Model: HFS128G3AMNB-2200A
+             Serial: EJ53N874613203R2W Size: 128.04 GB
+
+UUID: 0ABF921B-D051-48E7-AF2D-91AEB6A31A3D
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Thursday, 01 Jan 2009 at 00:05:18
+Action End Time: Thursday, 01 Jan 2009 at 01:34:50
+Action Duration: 01:29:32
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+TRIM Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

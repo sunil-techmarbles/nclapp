@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Microsoft Corporation
+Computer Model: Surface Pro 3
+Computer Serial: 041141351953
+Motherboard Vendor: Microsoft Corporation
+Motherboard Model: Surface Pro 3
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz, Speed: 2600 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Marvell Technology Group Ltd., Model: 88W8897 [AVASTAR] 802.11ac Wireless, MAC Address: c0:33:5e:32:9b:f1
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 28:18:78:b9:cc:3f
+Drive 1: Model: HFS128G3AMNB-2200A, Serial: EJ54N010313004329, Size: 128.04 GB, Firmware Version: 10108L00
+Display Adapter: Vendor: Intel Corporation, Model: Haswell-ULT Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: Haswell-ULT HD Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 8 Series HD Audio Controller
+USB Ports: 11
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 3326C16B-0E8A-46B2-9F16-CC20FC2D5BFF
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 573018
+User3: EnviroBusiness, Inc.
+User4: 19103
+
+>> Drive #1  Vendor:  Model: HFS128G3AMNB-2200A
+             Serial: EJ54N010313004329 Size: 128.04 GB
+
+UUID: 177FBE7D-233D-4605-AE79-A5443ABD1E4A
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 3
+Sectors Overwritten: 250069680
+Sectors Not Overwritten: 0
+Sectors Verified: 25006969
+Action Start Time: Thursday, 21 May 2020 at 10:14:16
+Action End Time: Thursday, 21 May 2020 at 11:15:59
+Action Duration: 01:01:43
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+DCO Locked: Yes
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+TRIM Passes: 1
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

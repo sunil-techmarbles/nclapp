@@ -1,0 +1,58 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: OptiPlex 7010
+Computer Serial: 7LS5PW1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0GXM1W
+Processor: Intel(R) Core(TM) i5-3550 CPU @ 3.30GHz, Speed: 3300 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 2048 MB, Memory banks: 4, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 90:b1:1c:77:8f:1f
+DVD reader: DVD-ROM DS-8D9SH
+Drive 1: Model: WDC WD2500AAKX-75U6AA0, Serial: WD-WCC2E0UULRF3, Size: 250.06 GB, Firmware Version: 20.01H20
+Display Adapter: Vendor: Intel Corporation, Model: Xeon E3-1200 v2/3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 0
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: BA6257C7-11F1-4D39-8634-7F804905E1A7
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 592497
+User3: Movado Group, Inc.
+User4: 19276
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD2500AAKX-75U6AA0
+             Serial: WD-WCC2E0UULRF3 Size: 250.06 GB
+
+UUID: 9CD77824-B2AA-4665-95D1-9F1CA4FDF6D6
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 3577065
+Sectors Not Overwritten: 484820103
+Sectors Verified: 0
+Action Start Time: Wednesday, 19 Sep 2012 at 10:45:18
+Action End Time: Wednesday, 19 Sep 2012 at 10:45:35
+Action Duration: 00:00:17
+
+Action Result: Canceled by User
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown

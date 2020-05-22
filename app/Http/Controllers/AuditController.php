@@ -361,7 +361,7 @@ class AuditController extends Controller
 					if ( stripos($f,$travelerId ) !== false )
 					{	
 						try
-						{	
+						{	$ram = '';
 							$ramstr="";
 							$hddstr="";
 							$xml = simplexml_load_file($f);

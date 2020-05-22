@@ -1,0 +1,127 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: IBM System x3550 M4 Server -[7914AC1]-
+Computer Serial: KQ4HA5R
+Motherboard Vendor: IBM
+Motherboard Model: 00Y8603
+Processor: Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz, Speed: 2900 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 8192 MB, Memory banks: 24, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 40:f2:e9:10:ae:d4
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 40:f2:e9:10:ae:d6
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 42:f2:e9:10:ae:d3
+DVD reader: DEVICE 81Y3673
+Drive 1: Model: ServeRAID M5110, Serial: 00e5957b0e455c5926701b3207b00506, Size: 146.00 GB
+Drive 2: Model: ServeRAID M5110, Serial: 00be46770e445c5926701b3207b00506, Size: 146.00 GB
+Drive 3: Model: ServeRAID M5110, Serial: 00ae58730e445c5926701b3207b00506, Size: 146.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 352B5BE2-F1EB-4C09-8236-BF967F8178D4
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 592173
+User3: Northwell Health
+User4: 19250
+
+>> Raid device #1  Vendor: IBM Model: ServeRAID M5110
+             Serial: 00e5957b0e455c5926701b3207b00506 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM-ESXS Model: ST9146853SS     
+             Serial: 6XM3DBTG0000B421AFGV Size: 135.972 GB  [ 252:2 ]
+
+UUID: B8635867-D770-4678-83BE-F0A15EF06F6C
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285155328
+Sectors Not Overwritten: 0
+Sectors Verified: 285155328
+Action Start Time: Thursday, 21 May 2020 at 15:35:57
+Action End Time: Thursday, 21 May 2020 at 16:34:15
+Action Duration: 00:58:18
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #2  Vendor: IBM Model: ServeRAID M5110
+             Serial: 00be46770e445c5926701b3207b00506 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM-ESXS Model: ST9146853SS     
+             Serial: 6XM3D7J40000B420H0X6 Size: 135.972 GB  [ 252:1 ]
+
+UUID: DD3DABF7-7C83-42BE-99B6-CC39925A18EF
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285155328
+Sectors Not Overwritten: 0
+Sectors Verified: 284896256
+Action Start Time: Thursday, 21 May 2020 at 15:35:57
+Action End Time: Thursday, 21 May 2020 at 16:48:10
+Action Duration: 01:12:13
+
+Action Result: Canceled by User
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 1
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+>> Raid device #3  Vendor: IBM Model: ServeRAID M5110
+             Serial: 00ae58730e445c5926701b3207b00506 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM-ESXS Model: ST9146853SS     
+             Serial: 6XM3DAQG0000B420H57Y Size: 135.972 GB  [ 252:0 ]
+
+UUID: F69A751D-ECF5-41D5-9968-DCB963F7BCCF
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285155328
+Sectors Not Overwritten: 0
+Sectors Verified: 285155328
+Action Start Time: Thursday, 21 May 2020 at 15:35:57
+Action End Time: Thursday, 21 May 2020 at 16:33:24
+Action Duration: 00:57:27
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #3 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

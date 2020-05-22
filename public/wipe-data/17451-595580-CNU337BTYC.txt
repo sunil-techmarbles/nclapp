@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook Folio 9470m
+Computer Serial: CNU337BTYC
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 18DF
+Processor: Intel(R) Core(TM) i5-3337U CPU @ 1.80GHz, Speed: 1800 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: a0:48:1c:dd:97:8c
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6235, MAC Address: b4:b6:76:c7:59:7f
+Drive 1: Model: HGST HTS725050A7E630, Serial: TF1501WHKKKGSS, Size: 500.11 GB, Firmware Version: GH2OA440
+Display Adapter: Vendor: Intel Corporation, Model: 3rd Gen Core processor Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 7 Series/C216 Chipset Family High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 1
+
+Job UUID: 2631DC03-3304-4A4B-9B23-3675C6E20966
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 595580
+User3: Virtua Health System
+User4: 17451
+
+>> Drive #1  Vendor: Hitachi Model: HGST HTS725050A7E630
+             Serial: TF1501WHKKKGSS Size: 500.11 GB
+
+UUID: 39C7BBA6-C590-4B41-9863-4D7F1AF56602
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 976773168
+Sectors Not Overwritten: 0
+Sectors Verified: 97680016
+Action Start Time: Thursday, 21 May 2020 at 11:45:48
+Action End Time: Thursday, 21 May 2020 at 13:15:31
+Action Duration: 01:29:43
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

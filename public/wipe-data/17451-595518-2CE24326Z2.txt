@@ -1,0 +1,61 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Hewlett-Packard
+Computer Model: HP EliteBook 2760p
+Computer Serial: 2CE24326Z2
+Motherboard Vendor: Hewlett-Packard
+Motherboard Model: 162A
+Processor: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, Speed: 2500 MHz, Cores: 2, L1 Cache: 32 kB, L2 Cache: 256 kB
+RAM: 4096 MB, Memory banks: 2, DDR3 SODIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: 2c:27:d7:82:5c:05
+NIC: Vendor: Intel Corporation, Model: Centrino Advanced-N 6205 [Taylor Peak], MAC Address: 60:67:20:bb:11:54
+Drive 1: Model: Hitachi HTS723232A7A364, Serial: E38345632182SN, Size: 320.07 GB, Firmware Version: EC2OA60W
+Display Adapter: Vendor: Intel Corporation, Model: 2nd Generation Core Processor Family Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 6 Series/C200 Series Chipset Family High Definition Audio Controller
+USB Ports: 4
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 559ABE79-5524-43E0-A86C-A0C09E62AF5D
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 595518
+User3: Virtua Health System
+User4: 17451
+
+>> Drive #1  Vendor: Hitachi Model: Hitachi HTS723232A7A364
+             Serial: E38345632182SN Size: 320.07 GB
+
+UUID: 9E3BA042-80B1-4124-8EC0-229484843EA6
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 625142448
+Sectors Not Overwritten: 0
+Sectors Verified: 62514245
+Action Start Time: Thursday, 21 May 2020 at 09:54:32
+Action End Time: Thursday, 21 May 2020 at 11:05:59
+Action Duration: 01:11:27
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

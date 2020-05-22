@@ -1,0 +1,62 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: HP-Pavilion
+Computer Model: AY022AA-ABA p6330f
+Computer Serial: MXU9520FVQ
+Motherboard Vendor: MSI
+Motherboard Model: IONA
+Processor: Intel(R) Core(TM) i3 CPU         530  @ 2.93GHz, Speed: 2900 MHz, Cores: 2, L1 Cache: 128 kB, L2 Cache: 512 kB
+RAM: 4096 MB, Memory banks: 4, SDRAM DIMM
+NIC: Vendor: Realtek Semiconductor Co., Ltd., Model: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller, MAC Address: 40:61:86:5e:6c:d1
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 00:e0:4c:68:89:94
+DVD-RAM writer: CDDVDW TS-H653R
+Drive 1: Model: WDC WD10EADS-65M2B0, Serial: WD-WCAV55077414, Size: 1000.20 GB, Firmware Version: 01.00A01
+Display Adapter: Vendor: Intel Corporation, Model: Core Processor Integrated Graphics Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: 5 Series/3400 Series Chipset High Definition Audio
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: AF90D9BA-6E2F-46CD-A396-1B98A3730744
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 568582
+User3: Family Service League
+User4: 18687
+
+>> Drive #1  Vendor: Western Digital Model: WDC WD10EADS-65M2B0
+             Serial: WD-WCAV55077414 Size: 1000.20 GB
+
+UUID: 04D865B2-3FE8-46DE-B2E7-BBFEF8C02E42
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 1953525168
+Sectors Not Overwritten: 0
+Sectors Verified: 195352517
+Action Start Time: Thursday, 21 May 2020 at 09:58:15
+Action End Time: Thursday, 21 May 2020 at 13:41:04
+Action Duration: 03:42:49
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

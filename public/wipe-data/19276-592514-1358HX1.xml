@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>FF910E07-B401-4A86-AFA6-9F6B5242D8EA</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Dell Inc.</ComputerVendor>
+            <ComputerModel>Precision T7600</ComputerModel>
+            <ComputerSerial>1358HX1</ComputerSerial>
+            <MotherboardVendor>Dell Inc.</MotherboardVendor>
+            <MotherboardModel>082WXT</MotherboardModel>
+            <AssetTag>Not Specified</AssetTag>
+            <ChassisType>Tower</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GH</Name>
+                    <Speed>2400 MHz</Speed>
+                    <ID>CPU 1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>10240 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GH</Name>
+                    <Speed>2400 MHz</Speed>
+                    <ID>CPU 2</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>256 kB</L1Cache>
+                    <L2Cache>1024 kB</L2Cache>
+                    <L3Cache>10240 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung-00CE</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1067 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>86D68720</SerialNumber>
+                    <AssetTag>021246</AssetTag>
+                    <PartNumber>M393B5273DH0-YK0</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung-00CE</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1067 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>86D687EE</SerialNumber>
+                    <AssetTag>021246</AssetTag>
+                    <PartNumber>M393B5273DH0-YK0</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung-00CE</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1067 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>86D68729</SerialNumber>
+                    <AssetTag>021246</AssetTag>
+                    <PartNumber>M393B5273DH0-YK0</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung-00CE</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>1067 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>DDR3</Type>
+                    <TypeDetail>Registered (Buffered)</TypeDetail>
+                    <SerialNumber>86D6872A</SerialNumber>
+                    <AssetTag>021246</AssetTag>
+                    <PartNumber>M393B5273DH0-YK0</PartNumber>
+                </Stick>
+                <MemoryBanks>16</MemoryBanks>
+                <CurrentBanksUsed>4</CurrentBanksUsed>
+                <Description>DDR3 DIMM</Description>
+                <TotalCapacity>16384 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82579LM Gigabit Network Connection (Lewisville)</Product>
+                    <MACAddress>b8:ca:3a:88:4e:a8</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:1502</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>82574L Gigabit Network Connection</Product>
+                    <MACAddress>b8:ca:3a:88:4e:ab</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>8086:10D3</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>PLDS</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>DVD-ROM DS-8D9SH</Product>
+                    <Capabilities>removable audio dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device>
+                    <Vendor>DELL</Vendor>
+                    <Product>PERC H310</Product>
+                    <Serial>0025f772115631541900d4afe9a0a38c</Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>255.42</Gigabytes>
+                    <Bytes>255416336384</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                    <RaidDrives>
+                        <RaidDrive>
+                            <Location>[ 0 ]</Location>
+                            <Vendor>ATA</Vendor>
+                            <Product>LITEONIT LCT-256M3S 2.5 7mm 256GB</Product>
+                            <Serial>TW0DFVVG550853586002</Serial>
+                            <Firmware>VRDC    </Firmware>
+                            <Gigabytes>237.875</Gigabytes>
+                        </RaidDrive>
+                    </RaidDrives>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>GF100GL [Quadro 4000]</Product>
+                    <PciId>10DE:6DD</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>NVIDIA Corporation</Vendor>
+                    <Product>GF110 High Definition Audio Controller</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>C600/X79 series chipset High Definition Audio Controller</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <USBPorts>2</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes>0025f772115631541900d4afe9a0a38c - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>14.2GB, 5 repetitions, runtime: 35 seconds</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>8CB76298-3B37-4746-95F1-141058A8F300</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>592514</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Movado Group, Inc.</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19276</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="8973230203204223164175580152346157158143">
+                    <UUID>EA673E93-A09E-4DC4-876D-5CEA40B2E3D4</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 11:12:21</StartTime>
+                    <Duration>00:39:26</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>498860032</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>49886004</SectorsVerified>
+                    <NISTMethodType>Unknown</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Unknown drive types cannot be classified as Purge or Clear.</NISTMethodTypeReason>
+                    <Vendor>DELL</Vendor>
+                    <Product>PERC H310</Product>
+                    <Serial>0025f772115631541900d4afe9a0a38c</Serial>
+                    <Gigabytes>255.42</Gigabytes>
+                    <Bytes>255416336384</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Unknown</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

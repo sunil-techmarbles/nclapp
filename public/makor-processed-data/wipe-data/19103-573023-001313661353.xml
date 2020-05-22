@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>42C77EF0-02D8-46A1-91E5-5BBEEE9BEC3C</GroupUUID>
+        <Hardware>
+            <ComputerVendor>Microsoft Corporation</ComputerVendor>
+            <ComputerModel>Surface Pro 4</ComputerModel>
+            <ComputerSerial>001313661353</ComputerSerial>
+            <MotherboardVendor>Microsoft Corporation</MotherboardVendor>
+            <MotherboardModel>Surface Pro 4</MotherboardModel>
+            <AssetTag></AssetTag>
+            <ChassisType>Laptop</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz</Name>
+                    <Speed>2400 MHz</Speed>
+                    <ID>U3E1</ID>
+                    <NumCores>2</NumCores>
+                    <NumThreads>4</NumThreads>
+                    <L1Cache>64 kB</L1Cache>
+                    <L2Cache>512 kB</L2Cache>
+                    <L3Cache>3072 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>2048 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>55000000</SerialNumber>
+                    <AssetTag>Not Specified</AssetTag>
+                    <PartNumber></PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>2048 MB</Capacity>
+                    <Speed>1867 MT/s</Speed>
+                    <FormFactor>SODIMM</FormFactor>
+                    <Type>LPDDR3</Type>
+                    <TypeDetail>Synchronous</TypeDetail>
+                    <SerialNumber>55000000</SerialNumber>
+                    <AssetTag>Not Specified</AssetTag>
+                    <PartNumber></PartNumber>
+                </Stick>
+                <MemoryBanks>4</MemoryBanks>
+                <CurrentBanksUsed>2</CurrentBanksUsed>
+                <Description>LPDDR3 SODIMM</Description>
+                <TotalCapacity>4096 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Marvell Technology Group Ltd.</Vendor>
+                    <Product>88W8897 [AVASTAR] 802.11ac Wireless</Product>
+                    <MACAddress></MACAddress>
+                    <Speed></Speed>
+                    <PciId>11AB:2B38</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>28:18:78:b9:c9:1c</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>11AB:2B38</PciId>
+                </NIC>
+            </NICs>
+            <Devices>
+                <Device>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZFLV128HCGR-000MV</Product>
+                    <Serial>S244NXAH108236</Serial>
+                    <Firmware>BXV75M0Q</Firmware>
+                    <Gigabytes>128.04</Gigabytes>
+                    <Bytes>128035676160</Bytes>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <EUI64>0025384161b04160</EUI64>
+                    <Interface>Undetermined</Interface>
+                    <TrimType>Determinate</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Skylake GT2 [HD Graphics 520]</Product>
+                    <PciId>8086:1916</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <MultimediaCards>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Imaging Unit</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Intel Corporation</Product>
+                </MultimediaCard>
+                <MultimediaCard>
+                    <Vendor>Intel Corporation</Vendor>
+                    <Product>Sunrise Point-LP HD Audio</Product>
+                </MultimediaCard>
+            </MultimediaCards>
+            <Batteries>
+                <Battery index="0">
+                    <Vendor>DYN</Vendor>
+                    <Product>X910528</Product>
+                    <SerialNumber>10935</SerialNumber>
+                    <Type>Li-ion</Type>
+                    <CurrentCapacity>4425000</CurrentCapacity>
+                    <DesignCapacity>38152000</DesignCapacity>
+                    <FullCapacity>27892000</FullCapacity>
+                </Battery>
+            </Batteries>
+            <USBPorts>4</USBPorts>
+            <USB2Ports>0</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest/>
+        <Jobs>
+            <Job>
+                <UUID>B451872B-4E57-4F6C-BAE2-F590D160D7A8</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>573023</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>EnviroBusiness, Inc.</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19103</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;use-write-same=1;</Options>
+                <Operation SecurityCode="64368142785923116126122731841362501322">
+                    <UUID>C54E26B7-8281-4440-A194-67CAA2D0FE5A</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>NIST 800-88r1</Method>
+                    <MethodFullName>NIST 800-88r1 (recommended)</MethodFullName>
+                    <MethodValue>N</MethodValue>
+                    <StartTime>Tuesday, 06 Dec 2016 00:30:08</StartTime>
+                    <Duration>00:10:18</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>1</Passes>
+                    <SecureErasePasses>1</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>1</TrimPasses>
+                    <SectorsOverwritten>250069680</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>25006969</SectorsVerified>
+                    <NISTMethodType>Purge</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>Purge achieved.</NISTMethodTypeReason>
+                    <Vendor>Samsung Electronics Co Ltd</Vendor>
+                    <Product>SAMSUNG MZFLV128HCGR-000MV</Product>
+                    <Serial>S244NXAH108236</Serial>
+                    <Gigabytes>128.04</Gigabytes>
+                    <Bytes>128035676160</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>Yes</IsSSD>
+                    <DriveMediaType>NVME</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

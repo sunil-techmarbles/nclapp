@@ -1,0 +1,98 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: IBM
+Computer Model: IBM System x3550 M4 Server -[7914AC1]-
+Computer Serial: KQ5Y9ZX
+Motherboard Vendor: IBM
+Motherboard Model: 00J6273
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+Processor: Intel(R) Xeon(R) CPU E5-2680 0 @ 2.70GHz, Speed: 2700 MHz, Cores: 8, L1 Cache: 64 kB, L2 Cache: 256 kB
+RAM: 65536 MB, Memory banks: 24, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 40:f2:e9:07:e2:b2
+NIC: Vendor: Intel Corporation, Model: I350 Gigabit Network Connection, MAC Address: 40:f2:e9:07:e2:b4
+NIC: Vendor: Ethernet, Model: Ethernet, MAC Address: 42:f2:e9:07:e2:b1
+DVD reader: DEVICE 81Y3673
+Drive 1: Model: ServeRAID M5110, Serial: 00082efa104668592690a2df05b00506, Size: 146.00 GB
+Drive 2: Model: ServeRAID M5110, Serial: 00dcd5f6104668592690a2df05b00506, Size: 146.00 GB
+Display Adapter: Vendor: Matrox Electronics Systems Ltd., Model: G200eR2
+USB Ports: 6
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 45D174BD-9820-46D6-82CA-73C432B0E28F
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 592172
+User3: Northwell Health
+User4: 19250
+
+>> Raid device #2  Vendor: IBM Model: ServeRAID M5110
+             Serial: 00dcd5f6104668592690a2df05b00506 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM-ESXS Model: HUC156014CSS20  
+             Serial: 0TJ2TZAP Size: 135.972 GB  [ 252:0 ]
+
+UUID: 1C0184A6-1622-4CE5-98DF-667FA273910A
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285155328
+Sectors Not Overwritten: 0
+Sectors Verified: 285155328
+Action Start Time: Thursday, 21 May 2020 at 16:27:12
+Action End Time: Thursday, 21 May 2020 at 17:08:41
+Action Duration: 00:41:29
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #2 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
+
+>> Raid device #1  Vendor: IBM Model: ServeRAID M5110
+             Serial: 00082efa104668592690a2df05b00506 Size: 146.00 GB
+    >>> Raid member #1  Vendor: IBM-ESXS Model: MK1401GRRB      
+             Serial: Z2M0A0ABFQ93 Size: 135.972 GB  [ 252:1 ]
+
+UUID: 1ABFDFC8-7607-46AF-BC62-711B85D6B2A8
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 285155328
+Sectors Not Overwritten: 0
+Sectors Verified: 285155328
+Action Start Time: Thursday, 21 May 2020 at 16:27:12
+Action End Time: Thursday, 21 May 2020 at 17:22:24
+Action Duration: 00:55:12
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

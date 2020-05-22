@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><root><report>
     <blancco_data>
         <description>
-            <document_id>d26d69a2-163d-4ce7-9f23-c75a2aafaaa8</document_id>
+            <document_id>e293d3bb-09b3-4ac4-9334-6031bcb1386b</document_id>
             <document_log>
                 <log_entry>
                     <author>
@@ -9,8 +9,8 @@
                         <product_version>4.2.2</product_version>
                         <product_revision>4.2.2</product_revision>
                     </author>
-                    <date>2020-03-11T13:46:37+0000</date>
-                    <integrity>CUwjtQ49YQhRj6WPBmt8Nb2/bquhSIxVm7qqNNd8Mi1XTByoWVvbmr9TJXwl9WHFjLtu6ynqElXOV7LH1fXEZUOy7yivXaKXiqZnY5EpVdi78T8xYSInJkUGb2pxHF4smrABUU86lRubD0tJdk8UVdiBN/AEDu0xnmwghDSA9eEb6e9Q0g0jkUhRU3Lakrbazr8ZvbqbIydIvOIlLPlX2GhzIL72qSolgtibWaknm184YP02f9TzC70qrnqMkcqXqh0eAURXz9aUxjN329O+XI3wLL5Ed4/ImqdETH4HbTFN8IjRxdLOWk9FrPYKdv1j21X+HyiH6y/MnXQ1olsl2g==</integrity>
+                    <date>2020-03-04T20:05:51+0000</date>
+                    <integrity>Lq/9+LuLTQ5zAp9v/7MDq+W7+3xodRGJG39elZzDU1oWGhJApzkPTO2+0I9/Q3ismR6rThQJ8P8YXDNcDJ+jlHsRQ3BIBjei2AjxheafpKBoywGp8Dsdlntant3aQwDYUiQ9RMLFJMQnSiF7+fDp0HNIll7Rt3zxDftQa0einSirLBRrFsG5gOfQIJdH3YFhSHUoDzoSS9uQrdBSg+QF9O0Et9qiVF2nI0k33jGcOg4EyfuyIkM2MzacPuKlfQyehDvjq3Zs0bZpUFaQEMksO3sLMa92d391wSIE9zPQDEKtJPrpL/fMvabDHmjmOad2WLeEfP8znulGH9zmFKbTfg==</integrity>
                     <key identifier="300"></key>
                 </log_entry>
                 <log_entry>
@@ -19,8 +19,8 @@
                         <product_version>5.3.2</product_version>
                         <product_revision>7a3325aea61a+</product_revision>
                     </author>
-                    <date>2020-03-11T13:46:45+0000</date>
-                    <integrity>TjLvNuzwZ5A2yhtwnXywD8jdkC8K2vlbETbXt2ihwowuqC+GufcPfB64Exi0zUH7nL2wA2npj0CB36XXdmIrG7X3wUXA0zlaxlYojf8FEnBTU45yDN8vjQXLF8mtUqAOUkE7ccAAVQ0viCYX3aEQDMM7r0mgKUihni4LRQ0CyqITU7tx18UE8Q5ELSWQd0CBieON4XjrRnfRj/EYJ58QOk1gCaD8MZS3svQLzZEgHGND/xmpDRuG0Nk5otffo8zg6UxuvZsFuuGRIS7FuRD3WFP4asZBx/D/F5MWQ9Hqi8fvWZslz6Nk0AZboWm2ewlsO9xZHBkcs8e7ZZNnY1COkQ==</integrity>
+                    <date>2020-03-04T20:05:53+0000</date>
+                    <integrity>SwQUa+fcIXkCKqk+3MHSTF+vnkA+g/HKgywW4oV1dP2pCmuTKRiLOlSsq1OdFP7Gxcug3jyy0ii5Vqo/NIJhRYxNkIaijYoTenenFpXiRDOy3uGBdrYlpLUhZiJ9Oi6kk3hgZzzCSC0A9A7aS3bJWK6focbYedy5kK9Z/ydAlmHulkySDlwb+d64d1mXwfzUYQ0eEx+RYUJMp/1b5Bb3iII8auL3UALp24IzRvvHYyzXhjrSK0i4erBcqndw/jHTRn7l/J4WB9KWbiBpKwqcGvsyCTmnIXIfOG9C2+iVWsJlrmllFpmVNHfyzrmHLW2ofRr8wyFrBrV1cW/b7Ol03A==</integrity>
                     <key identifier="100"></key>
                 </log_entry>
             </document_log>
@@ -37,17 +37,22 @@
         <blancco_erasure_report>
             <entries name="erasures">
                 <entries name="erasure">
-                    <entry name="timestamp" type="string">2020-03-11T13:38:21+0000</entry>
-                    <entry name="start_time" type="string">2020-03-11 13:38:21</entry>
-                    <entry name="end_time" type="string">2020-03-11 13:45:50</entry>
-                    <entry name="elapsed_time" type="string">00:07:29</entry>
+                    <entry name="timestamp" type="string">2020-03-04T20:05:45+0000</entry>
+                    <entry name="start_time" type="string">2020-03-04 20:05:45</entry>
+                    <entry name="end_time" type="string">2020-03-04 20:05:51</entry>
+                    <entry name="elapsed_time" type="string">00:00:05</entry>
                     <entry name="erasure_standard_name" type="string">NIST 800-88 Purge</entry>
-                    <entry name="state" type="string">Successful</entry>
+                    <entry name="state" type="string">Failed</entry>
                     <entries name="target">
                         <entry name="type" type="string">Internal memory</entry>
                         <entry name="capacity" type="uint">128000000000</entry>
                         <entry name="serial" type="string">IMEI:352071077802523</entry>
                         <entry name="vendor" type="string"></entry>
+                    </entries>
+                    <entries name="erasure_details">
+                        <entries name="failure">
+                            <entry name="message" type="string"></entry>
+                        </entries>
                     </entries>
                 </entries>
             </entries>
@@ -67,7 +72,7 @@
                 <entry name="serial" type="string">DMPT23BFG5YP</entry>
                 <entry name="internal_model" type="string">MH312</entry>
                 <entry name="a_model_number" type="string">A1567</entry>
-                <entry name="firmware_version" type="string">13.3.1</entry>
+                <entry name="firmware_version" type="string">12.1</entry>
                 <entry name="region" type="string">LL/A</entry>
                 <entry name="region_code" type="string">LL/A</entry>
                 <entry name="region_name" type="string">USA, Canada, [replacement unit]</entry>
@@ -100,11 +105,11 @@
                 <entry name="battery_manufacture_date" type="string">201652</entry>
                 <entry name="battery_cycles" type="uint">43</entry>
                 <entry name="battery_capacity_design" type="uint">7340</entry>
-                <entry name="battery_capacity_current" type="uint">6878</entry>
-                <entry name="battery_capacity_wear_level" type="uint">6</entry>
-                <entry name="battery_capacity_health_level" type="uint">94</entry>
-                <entry name="battery_temperature" type="string">29</entry>
-                <entry name="battery_charge_level" type="uint">66</entry>
+                <entry name="battery_capacity_current" type="uint">7015</entry>
+                <entry name="battery_capacity_wear_level" type="uint">4</entry>
+                <entry name="battery_capacity_health_level" type="uint">96</entry>
+                <entry name="battery_temperature" type="string">25</entry>
+                <entry name="battery_charge_level" type="uint">70</entry>
             </entries>
             <entries name="cameras">
                 <entries name="camera">
@@ -121,8 +126,8 @@
         </blancco_hardware_report>
         <blancco_software_report>
             <entries name="operating_system">
-                <entry name="name" type="string">iPadOS</entry>
-                <entry name="version" type="string">13.3.1</entry>
+                <entry name="name" type="string">iOS</entry>
+                <entry name="version" type="string">12.1</entry>
             </entries>
         </blancco_software_report>
     </blancco_data>

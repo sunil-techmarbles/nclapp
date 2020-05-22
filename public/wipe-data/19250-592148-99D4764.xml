@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<Reports>
+    <Report Product="WipeDrive Enterprise 9.3.2.1 64-bit">
+        <KernelVersion>5.2.11-mac</KernelVersion>
+        <GroupUUID>1DB891F7-9A6A-48D6-AB1C-D016AA120EC1</GroupUUID>
+        <Hardware>
+            <ComputerVendor>IBM</ComputerVendor>
+            <ComputerModel>System x3550 M2 -[7946AC1]-</ComputerModel>
+            <ComputerSerial>99D4764</ComputerSerial>
+            <MotherboardVendor>IBM</MotherboardVendor>
+            <MotherboardModel>90Y6495</MotherboardModel>
+            <AssetTag>none</AssetTag>
+            <ChassisType>Rack Mount Chassis</ChassisType>
+            <Processors>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz</Name>
+                    <Speed>2300 MHz</Speed>
+                    <ID>Node 1 Socket 1</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>32 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>8192 kB</L3Cache>
+                </Processor>
+                <Processor>
+                    <Vendor>Intel(R) Corporation</Vendor>
+                    <Name>Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz</Name>
+                    <Speed>2300 MHz</Speed>
+                    <ID>Node 1 Socket 2</ID>
+                    <NumCores>4</NumCores>
+                    <NumThreads>8</NumThreads>
+                    <L1Cache>32 kB</L1Cache>
+                    <L2Cache>256 kB</L2Cache>
+                    <L3Cache>8192 kB</L3Cache>
+                </Processor>
+            </Processors>
+            <RAM>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>FABE2642</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>853F6052</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7BFR4C-H9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>1BF2642</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>ACAC1886</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B1K70CH0-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>3B7D2642</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>C0BE2642</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>FCF42442</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Hynix</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>D103351C</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>HMT31GR7BFR8C-G7</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>3C7D2642</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Micron</Vendor>
+                    <Capacity>8192 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>8D6C70DA</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>36JSZF1G72PDZ1G1D1</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>C2BE2642</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <Stick>
+                    <Vendor>Samsung</Vendor>
+                    <Capacity>4096 MB</Capacity>
+                    <Speed>800 MT/s</Speed>
+                    <FormFactor>DIMM</FormFactor>
+                    <Type>Other</Type>
+                    <TypeDetail>Unknown</TypeDetail>
+                    <SerialNumber>CF52442</SerialNumber>
+                    <AssetTag>Unknown</AssetTag>
+                    <PartNumber>M393B5170EH1-CH9</PartNumber>
+                </Stick>
+                <MemoryBanks>16</MemoryBanks>
+                <CurrentBanksUsed>12</CurrentBanksUsed>
+                <Description>Other DIMM</Description>
+                <TotalCapacity>65536 MB</TotalCapacity>
+            </RAM>
+            <NICs>
+                <NIC>
+                    <Vendor>Broadcom Inc. and subsidiaries</Vendor>
+                    <Product>NetXtreme II BCM5709 Gigabit Ethernet</Product>
+                    <MACAddress>e4:1f:13:6b:96:70</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+                <NIC>
+                    <Vendor>Ethernet</Vendor>
+                    <Product>Ethernet</Product>
+                    <MACAddress>00:e0:4c:68:70:06</MACAddress>
+                    <Speed>1Gbit/s</Speed>
+                    <PciId>14E4:1639</PciId>
+                </NIC>
+            </NICs>
+            <OpticalDrives>
+                <OpticalDrive>
+                    <Vendor>MATSHITA</Vendor>
+                    <Description>DVD reader</Description>
+                    <Product>UJDA782 DVD/CDRW</Product>
+                    <Capabilities>removable audio cd-r cd-rw dvd</Capabilities>
+                </OpticalDrive>
+            </OpticalDrives>
+            <Devices>
+                <Device>
+                    <Vendor>LSILOGIC</Vendor>
+                    <Product>Logical Volume</Product>
+                    <Serial></Serial>
+                    <Firmware></Firmware>
+                    <Gigabytes>72.00</Gigabytes>
+                    <Bytes>71999422464</Bytes>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <Interface>SAS</Interface>
+                    <TrimType>Not Supported</TrimType>
+                    <PSID></PSID>
+                </Device>
+            </Devices>
+            <DisplayAdapters>
+                <DisplayAdapter>
+                    <Vendor>Matrox Electronics Systems Ltd.</Vendor>
+                    <Product>MGA G200EV</Product>
+                    <PciId>102B:530</PciId>
+                </DisplayAdapter>
+            </DisplayAdapters>
+            <USBPorts>9</USBPorts>
+            <USB2Ports>2</USB2Ports>
+            <USB3Ports>0</USB3Ports>
+            <FirewirePorts>0</FirewirePorts>
+            <ThunderboltPorts>0</ThunderboltPorts>
+            <Thunderbolt2Ports>0</Thunderbolt2Ports>
+            <Thunderbolt3Ports>0</Thunderbolt3Ports>
+        </Hardware>
+        <HardwareTest>
+            <Processor>
+                <MMX>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </MMX>
+                <SSE>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE>
+                <SSE2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE2>
+                <SSE3>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE3>
+                <SSE4.1>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.1>
+                <SSE4.2>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </SSE4.2>
+                <AVX>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX>
+                <AVX2>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AVX2>
+                <Prime>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Prime>
+                <FPU>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </FPU>
+                <AES>
+                    <Result>Not Supported</Result>
+                    <Notes></Notes>
+                </AES>
+            </Processor>
+            <Storage>
+                <Read>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Read>
+                <Write>
+                    <Result>Pass</Result>
+                    <Notes></Notes>
+                </Write>
+                <SMARTHealth>
+                    <Result>Skipped</Result>
+                    <Notes> - SMART Health Skipped</Notes>
+                </SMARTHealth>
+            </Storage>
+            <Memory>
+                <Memory>
+                    <Result>Pass</Result>
+                    <Notes>61.1GB, 5 repetitions, runtime: 02:30</Notes>
+                </Memory>
+            </Memory>
+        </HardwareTest>
+        <Jobs>
+            <Job>
+                <UUID>A4DD24D6-3D98-4BFC-8E16-F58F71727AD3</UUID>
+                <UserFields>
+                    <UserField index="1">
+                        <Name>Username</Name>
+                        <Value>Randy Prashad</Value>
+                    </UserField>
+                    <UserField index="2">
+                        <Name>User2</Name>
+                        <Value>592148</Value>
+                    </UserField>
+                    <UserField index="3">
+                        <Name>User3</Name>
+                        <Value>Northwell Health</Value>
+                    </UserField>
+                    <UserField index="4">
+                        <Name>User4</Name>
+                        <Value>19250</Value>
+                    </UserField>
+                </UserFields>
+                <Options>fail-on-smart-fail=1;max-drive-errors=1;quick-verify-percent=10;use-write-same=1;</Options>
+                <Operation SecurityCode="1965481541911536452191238235244978138207">
+                    <UUID>0EF428E5-495F-4D46-B751-4053185F858F</UUID>
+                    <DiskOperationType Index="1">Wipe</DiskOperationType>
+                    <Method>DoD 5220.22-M - 3 Pass</Method>
+                    <MethodFullName>Department of Defense 5220.22-M - 3 Pass</MethodFullName>
+                    <MethodValue>2</MethodValue>
+                    <StartTime>Thursday, 21 May 2020 15:29:31</StartTime>
+                    <Duration>00:39:28</Duration>
+                    <ActionResult Index="2">Success</ActionResult>
+                    <DirtySectors>0</DirtySectors>
+                    <DriveErrorsDetected>0</DriveErrorsDetected>
+                    <DCOLocked>No</DCOLocked>
+                    <DCOLockRemoved>No</DCOLockRemoved>
+                    <DCOFound>No</DCOFound>
+                    <DCORemoved>No</DCORemoved>
+                    <HPAFound>No</HPAFound>
+                    <HPARemoved>No</HPARemoved>
+                    <AMAXFound>No</AMAXFound>
+                    <AMAXRemoved>No</AMAXRemoved>
+                    <SecurityLocked>No</SecurityLocked>
+                    <SecurityFrozen>No</SecurityFrozen>
+                    <SecurityFrozenRemoved>No</SecurityFrozenRemoved>
+                    <Passes>3</Passes>
+                    <SecureErasePasses>0</SecureErasePasses>
+                    <SanitizeDeviceCryptoErasePasses>0</SanitizeDeviceCryptoErasePasses>
+                    <SanitizeDeviceBlockErasePasses>0</SanitizeDeviceBlockErasePasses>
+                    <SanitizeDeviceOverwritePasses>0</SanitizeDeviceOverwritePasses>
+                    <OPALCryptoErasePasses>0</OPALCryptoErasePasses>
+                    <TrimPasses>0</TrimPasses>
+                    <SectorsOverwritten>140623872</SectorsOverwritten>
+                    <SectorsNotOverwritten>0</SectorsNotOverwritten>
+                    <SectorsVerified>140623872</SectorsVerified>
+                    <NISTMethodType>Clear</NISTMethodType>
+                    <NISTRequiredMethodType>Unknown</NISTRequiredMethodType>
+                    <NISTMethodTypeReason>A verified overwrite results in Clear.</NISTMethodTypeReason>
+                    <Vendor>LSILOGIC</Vendor>
+                    <Product>Logical Volume</Product>
+                    <Serial></Serial>
+                    <Gigabytes>72.00</Gigabytes>
+                    <Bytes>71999422464</Bytes>
+                    <SectorSize>512</SectorSize>
+                    <IsSSD>No</IsSSD>
+                    <DriveMediaType>Platter</DriveMediaType>
+                    <SSDPercentageOfLifeUsed>-1</SSDPercentageOfLifeUsed>
+                    <PreWipeSMARTStatus>PASSED</PreWipeSMARTStatus>
+                    <PostWipeSMARTStatus>PASSED</PostWipeSMARTStatus>
+                </Operation>
+            </Job>
+        </Jobs>
+    </Report>
+</Reports>

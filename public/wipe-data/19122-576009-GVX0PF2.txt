@@ -1,0 +1,64 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Latitude E7470
+Computer Serial: GVX0PF2
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 0T6HHJ
+Processor: Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz, Speed: 2400 MHz, Cores: 2, L1 Cache: 64 kB, L2 Cache: 512 kB
+RAM: 8192 MB, Memory banks: 2, DDR4 SODIMM
+NIC: Vendor: Intel Corporation, Model: Wireless 8260, MAC Address: f0:d5:bf:e4:95:53
+NIC: Vendor: Intel Corporation, Model: Ethernet Connection I219-LM, MAC Address: 18:db:f2:43:b3:4c
+Drive 1: Model: INTEL SSDSCKKF256H6 SATA 256GB, Serial: CVLY642202WU256J, Size: 256.06 GB, Firmware Version: LBFD07N
+Display Adapter: Vendor: Intel Corporation, Model: Skylake GT2 [HD Graphics 520]
+Multimedia Adapter: Vendor: Intel Corporation, Model: Sunrise Point-LP HD Audio
+USB Ports: 5
+USB2 Ports: 0
+USB3 Ports: 0
+
+Job UUID: 2189C886-290A-4176-BBE8-356EC0A5D66E
+Current user: ITAMG
+Computer ID: Not Specified
+Custom Field: 
+Username: Randy Prashad
+Asset Number: 576009
+Lot Name: PRA Health Sciences
+Lot Number: 19122
+\"Product\": Laptop
+
+>> Drive #1  Vendor: Intel Model: INTEL SSDSCKKF256H6 SATA 256GB
+             Serial: CVLY642202WU256J Size: 256.06 GB
+
+UUID: 07DAA18A-8D57-4792-9DE7-56DF29A10D30
+Action: Wipe
+Wipe Method: DoD 5220.22-M - 3 Pass, Number of Passes: 3
+Sectors Overwritten: 500118192
+Sectors Not Overwritten: 0
+Sectors Verified: 500118192
+Action Start Time: Thursday, 21 May 2020 at 12:40:50
+Action End Time: Thursday, 21 May 2020 at 14:27:42
+Action Duration: 01:46:52
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: FAILED!
+Post-wipe SMART health status: FAILED!
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+Sanitize Device Block Erase Passes: 1
+TRIM Passes: 1
+NIST Method Type: Clear
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.

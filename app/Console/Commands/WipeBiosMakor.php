@@ -123,6 +123,12 @@ class WipeBiosMakor extends Command
 
                     $allDataArray = $wipeBiosFileContent['node'];
 
+                    pr( $wipeBiosDataFilePath ); 
+
+                    pr( $BiosAdditionalDataFile );
+
+                    pr( $productName );  
+
                     switch ($productName) {
                         case 'Computer':
                             $apiDataObject = $this->init($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber);
@@ -144,39 +150,41 @@ class WipeBiosMakor extends Command
                         continue;
                     }
 
-                    $WipeBiosMakorResponse = $this->BiosWipeMakorAPIRequest($apiDataObject, $assetNumber);
+                 
 
-                    if ($WipeBiosMakorResponse == 200)
-                    {
-                        $this->executedFiles++;
+                    // $WipeBiosMakorResponse = $this->BiosWipeMakorAPIRequest($apiDataObject, $assetNumber);
 
-                        $destinationBiosWipeReportExecutedFile = $this->wipeBiosExecutedFileDir . '/' . $wipeBiosDataFile;
-                        rename($wipeBiosDataFilePath, $destinationBiosWipeReportExecutedFile);
+                    // if ($WipeBiosMakorResponse == 200)
+                    // {
+                    //     $this->executedFiles++;
 
-                        $destinationBiosAdditionalWipeExecutedFile = $this->wipeBiosAdditionalExecutedDir . '/' . $assetNumber . ".xml";
-                        rename($BiosAdditionalDataFile, $destinationBiosAdditionalWipeExecutedFile);
+                    //     $destinationBiosWipeReportExecutedFile = $this->wipeBiosExecutedFileDir . '/' . $wipeBiosDataFile;
+                    //     rename($wipeBiosDataFilePath, $destinationBiosWipeReportExecutedFile);
 
-                        $RequestFile = $this->WipeBiosMakorRequestFileDir .'/' . $assetNumber . ".xml";
-                        WriteDataFile($RequestFile, $apiDataObject['xml_data']);
+                    //     $destinationBiosAdditionalWipeExecutedFile = $this->wipeBiosAdditionalExecutedDir . '/' . $assetNumber . ".xml";
+                    //     rename($BiosAdditionalDataFile, $destinationBiosAdditionalWipeExecutedFile);
 
-                        $wipeBiosResponseFile = $this->wipeBiosResponseFileDIr .'/' . $assetNumber . '.xml';
-                        $this->CreateBiosWipeReportXmlResponseFIle($wipeBiosResponseFile, $apiDataObject);
+                    //     $RequestFile = $this->WipeBiosMakorRequestFileDir .'/' . $assetNumber . ".xml";
+                    //     WriteDataFile($RequestFile, $apiDataObject['xml_data']);
 
-                        $success = 'Wipe Bios Makor API Successfull for wipe data  ' . $wipeBiosDataFile;
-                        MessageLog::addLogMessageRecord($success,$type="WipeBiosMakor", $status="success");
-                    }
-                    elseif ($WipeBiosMakorResponse == 400)
-                    {
-                        $error = 'Makor ERP system received the message, but was not able to process the report for ' . $wipeBiosDataFile;
-                        MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
-                        continue;
-                    }
-                    else
-                    {
-                        $error = 'Unknown API Error for ' . $wipeBiosDataFile;
-                        MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
-                        continue;
-                    }
+                    //     $wipeBiosResponseFile = $this->wipeBiosResponseFileDIr .'/' . $assetNumber . '.xml';
+                    //     $this->CreateBiosWipeReportXmlResponseFIle($wipeBiosResponseFile, $apiDataObject);
+
+                    //     $success = 'Wipe Bios Makor API Successfull for wipe data  ' . $wipeBiosDataFile;
+                    //     MessageLog::addLogMessageRecord($success,$type="WipeBiosMakor", $status="success");
+                    // }
+                    // elseif ($WipeBiosMakorResponse == 400)
+                    // {
+                    //     $error = 'Makor ERP system received the message, but was not able to process the report for ' . $wipeBiosDataFile;
+                    //     MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
+                    //     continue;
+                    // }
+                    // else
+                    // {
+                    //     $error = 'Unknown API Error for ' . $wipeBiosDataFile;
+                    //     MessageLog::addLogMessageRecord($error,$type="WipeBiosMakor", $status="failure");
+                    //     continue;
+                    // }
                 }
                 catch (\Execption $e)
                 {
@@ -185,6 +193,8 @@ class WipeBiosMakor extends Command
                     continue;
                 }
             }
+
+            die( ' @@@@@ '); 
         }
         else
         {

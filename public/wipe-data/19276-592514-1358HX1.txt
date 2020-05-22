@@ -1,0 +1,66 @@
+
+_________________________________________________________________
+WipeDrive Enterprise 9.3.2.1 64-bit
+Kernel Version 5.2.11-mac
+
+Hardware Information
+
+Computer Vendor: Dell Inc.
+Computer Model: Precision T7600
+Computer Serial: 1358HX1
+Motherboard Vendor: Dell Inc.
+Motherboard Model: 082WXT
+Processor: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GH, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+Processor: Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GH, Speed: 2400 MHz, Cores: 4, L1 Cache: 256 kB, L2 Cache: 1024 kB
+RAM: 16384 MB, Memory banks: 16, DDR3 DIMM
+NIC: Vendor: Intel Corporation, Model: 82579LM Gigabit Network Connection (Lewisville), MAC Address: b8:ca:3a:88:4e:a8
+NIC: Vendor: Intel Corporation, Model: 82574L Gigabit Network Connection, MAC Address: b8:ca:3a:88:4e:ab
+DVD reader: DVD-ROM DS-8D9SH
+Drive 1: Model: PERC H310, Serial: 0025f772115631541900d4afe9a0a38c, Size: 255.42 GB
+Display Adapter: Vendor: NVIDIA Corporation, Model: GF100GL [Quadro 4000]
+Multimedia Adapter: Vendor: NVIDIA Corporation, Model: GF110 High Definition Audio Controller
+Multimedia Adapter: Vendor: Intel Corporation, Model: C600/X79 series chipset High Definition Audio Controller
+USB Ports: 2
+USB2 Ports: 2
+USB3 Ports: 0
+
+Job UUID: 8CB76298-3B37-4746-95F1-141058A8F300
+Current user: 
+Computer ID: 
+Custom Field: 
+Username: Randy Prashad
+User2: 592514
+User3: Movado Group, Inc.
+User4: 19276
+
+>> Raid device #1  Vendor: DELL Model: PERC H310
+             Serial: 0025f772115631541900d4afe9a0a38c Size: 255.42 GB
+    >>> Raid member #1  Vendor: ATA Model: LITEONIT LCT-256M3S 2.5 7mm 256GB
+             Serial: TW0DFVVG550853586002 Size: 237.875 GB  [ 0 ]
+
+UUID: EA673E93-A09E-4DC4-876D-5CEA40B2E3D4
+Action: Wipe
+Wipe Method: NIST 800-88r1, Number of Passes: 1
+Sectors Overwritten: 498860032
+Sectors Not Overwritten: 0
+Sectors Verified: 49886004
+Action Start Time: Thursday, 21 May 2020 at 11:12:21
+Action End Time: Thursday, 21 May 2020 at 11:51:47
+Action Duration: 00:39:26
+
+Action Result: SUCCESS
+
+Pre-wipe SMART health status: PASSED
+Post-wipe SMART health status: PASSED
+Drive Errors Detected: 0
+Dirty Sectors: 0
+DCO Detected: No
+DCO Removed: No
+HPA Detected: No
+HPA Removed: No
+AMAX Detected: No
+AMAX Removed: No
+NIST Method Type: Unknown
+
+NOTE: Physical Drive #1 has been wiped, but it must be repartitioned
+and reformatted before it can be used again.
