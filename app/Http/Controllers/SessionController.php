@@ -234,47 +234,67 @@ class SessionController extends Controller
 		$parts = [];
 		$sessions = [];
 		$assets = [];
+		$request->session()->put('pageaction', $pageaction);
 		if ($request->isMethod('post'))
 		{
-			$validator = Validator::make($request->all(),[
-	            'session_file' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
-	        ],
-	    	[
-	    		'session_file.required' => 'Please upload file',
-	    		'session_file.mimes' => 'Only csv and excel files are allowed'
-	    	]);
-	        if ($validator->fails())
-	        {
-	        	return redirect()->back()->with('error', $validator->messages()->first());
-	        }
-			if($request->has('session_file'))
+			if($request->get('bulk_upload') && !$request->get('new_session'))
 			{
-				if($request->hasFile('session_file'))
+				$validator = Validator::make($request->all(),[
+		            'session_file' => 'required|max:50000|mimes:xlsx,csv,xls,txt'
+		        ],
+		    	[
+		    		'session_file.required' => 'Please upload file',
+		    		'session_file.mimes' => 'Only csv and excel files are allowed'
+		    	]);
+		        if ($validator->fails())
+		        {
+		        	$status = 'error';
+		            $message =  $validator->messages()->first();
+		            \Session::flash($status, $message);
+		        	return redirect()->route('sessions',['pageaction' => $pageaction]);
+		        	// return redirect()->back()->with('error', $validator->messages()->first());
+		        }
+				if($request->has('session_file'))
 				{
-					$currentSession = Session::getOpenStatucRecord($request, $status='open');
-					try
-					{	
-						$import = new SessionsImport();
-						Excel::import($import,request()->file('session_file'));
-						$resposeMessage = $this->getAssetsAsinId($import->data, $currentSession);
-						foreach ($resposeMessage as $key => $value)
-						{
-							\Session::flash('bulksession', $value);
+					if($request->hasFile('session_file'))
+					{
+						$currentSession = Session::getOpenStatucRecord($request, $status='open');
+						try
+						{	
+							$import = new SessionsImport();
+							Excel::import($import,request()->file('session_file'));
+							$resposeMessage = $this->getAssetsAsinId($import->data, $currentSession);
+							foreach ($resposeMessage as $key => $value)
+							{
+								\Session::flash('bulksession', $value);
+							}
 						}
+						
+						catch (\Maatwebsite\Excel\Validators\ValidationException $e)
+		                {
+		                	$status = 'error';
+				            $message =  $e->getMessage();
+				            \Session::flash($status, $message);
+				        	return redirect()->route('sessions',['pageaction' => $pageaction]);
+		                    // return redirect()->back()->with('error', $e->getMessage());
+		                }
+		                catch (\Exception $e)
+		                {
+		                	$status = 'error';
+				            $message =  $e->getMessage();
+				            \Session::flash($status, $message);
+				        	return redirect()->route('sessions',['pageaction' => $pageaction]);
+		                	// return redirect()->back()->with('error', $e->getMessage());
+		                }
+		                catch (\Error $e)
+		                {
+		                	$status = 'error';
+				            $message =  $e->getMessage();
+				            \Session::flash($status, $message);
+				        	return redirect()->route('sessions',['pageaction' => $pageaction]);
+		                	// return redirect()->back()->with('error', $e->getMessage());
+		                }
 					}
-					
-					catch (\Maatwebsite\Excel\Validators\ValidationException $e)
-	                {
-	                    return redirect()->back()->with('error', $e->getMessage());
-	                }
-	                catch (\Exception $e)
-	                {
-	                	return redirect()->back()->with('error', $e->getMessage());
-	                }
-	                catch (\Error $e)
-	                {
-	                	return redirect()->back()->with('error', $e->getMessage());
-	                }
 				}
 			}
 		}
@@ -358,7 +378,7 @@ class SessionController extends Controller
 	            }
 	        }
 		}
-		return view('admin.sessions.list', compact('sessionName', 'sessions', 'pageMessage', 'assets', 'parts','items'));
+		return view('admin.sessions.list', compact('sessionName', 'sessions', 'pageMessage', 'assets', 'parts','items', 'pageaction'));
 	}
 
 	public function fetchParts(Request $request)

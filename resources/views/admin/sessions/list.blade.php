@@ -4,20 +4,20 @@
 <div class="mte_content">
 	<div class="container">
 		<form method="post" class="form-inline" enctype="multipart/form-data" action="{{route('sessions')}}" style="max-height: 250px;overflow: auto;">
-			<input type="hidden" name="pageaction" id="pageaction" value="{{request()->get('pageaction')}}"/>
+			<input type="hidden" name="pageaction" id="pageaction" value="{{(request()->get('pageaction')) ? request()->get('pageaction') : $pageaction}}"/>
 			@csrf
 			<div class="w-100 row mb-3 mt-3">
 				<div class="col-md-7 mr-0">
 					<div class="form-group">
 						<input class="form-control" type="file" accept=".csv,.xls,.xlsx" name="session_file" id="bulk_data"/>
-						<input type="submit" value="Bulk Upload" class="btn btn-warning ml-1" name="bulk_upload"/>
+						<button class="btn btn-warning ml-1" name="bulk_upload" value="1" type="submit">Bulk Upload</button>
 						<a target="_blank" class="btn btn-warning ml-1" href="{{URL('/sample-files/sample.xlsx')}}">Sample</a>
 					</div>					
 				</div>
 				<div class="col-md-5">
 					<div class="form-group float-right">
 						<input class="form-control" placeholder="Session Name" type="text" name="session_name" id="session_name"/>
-						<button class="btn btn-warning" name="new_session" value="1" type="submit">New Session</button>
+						<button class="btn btn-warning ml-2" name="new_session" value="1" type="submit">New Session</button>
 					</div>
 				</div>
 			</div>
