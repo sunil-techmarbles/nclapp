@@ -381,8 +381,6 @@ trait CommonWipeBiosMakorApiTraits
 
                         $this->apiData['memory_data'][$key]['capacity'] = $capacity . "GB";
                         $this->apiData['memory_data'][$key]['partnumber'] = $memory['product'];
-
-                        $this->CombinedRAM[$key] = $capacity;
                         $this->apiData['memory_data'][$key]['type'] = $ramType;
                         $this->apiData['memory_data'][$key]['speed'] = HzToMHz($memory['clock']);
                         
@@ -567,7 +565,7 @@ trait CommonWipeBiosMakorApiTraits
             $this->apiData['Video_Outputs'][0]['Ports'] = "N/A";
         }
 
-        if (isset($this->apiData['CombinedRAM']))
+        if (isset($this->CombinedRAM))
         {
             $this->apiData['CombinedRAM'] = getMakorRAMString($this->CombinedRAM);
         }
@@ -646,45 +644,49 @@ trait CommonWipeBiosMakorApiTraits
             $component8->addAttribute('type', 'string');
         }
 
+        if (isset($this->apiData['memory_data']))
+        {
+
 		// component Memorys
-        $components = $this->audit->addChild('components');
-        $components->addAttribute('name', 'Memorys');
+            $components = $this->audit->addChild('components');
+            $components->addAttribute('name', 'Memorys');
 
-        foreach ($this->apiData['memory_data'] as $memoryData) {
-			
-			// child component Memory
-            $component = $components->addChild('components');
-            $component->addAttribute('name', 'Memory');
+            foreach ($this->apiData['memory_data'] as $memoryData) {
+    			
+    			// child component Memory
+                $component = $components->addChild('components');
+                $component->addAttribute('name', 'Memory');
 
-			//Set Capacity
-            $component1 = $component->addChild('component', htmlspecialchars($memoryData['capacity']));
-            $component1->addAttribute('name', 'Capacity');
-            $component1->addAttribute('type', 'string');
+    			//Set Capacity
+                $component1 = $component->addChild('component', htmlspecialchars($memoryData['capacity']));
+                $component1->addAttribute('name', 'Capacity');
+                $component1->addAttribute('type', 'string');
 
-			//Set Type
-            $component2 = $component->addChild('component', htmlspecialchars( $memoryData['type'] ) );
-            $component2->addAttribute('name', 'Type');
-            $component2->addAttribute('type', 'string');
+    			//Set Type
+                $component2 = $component->addChild('component', htmlspecialchars( $memoryData['type'] ) );
+                $component2->addAttribute('name', 'Type');
+                $component2->addAttribute('type', 'string');
 
-			//Set PartNumber
-            $component3 = $component->addChild('component', htmlspecialchars( $memoryData['partnumber']));
-            $component3->addAttribute('name', 'PartNumber');
-            $component3->addAttribute('type', 'string');
+    			//Set PartNumber
+                $component3 = $component->addChild('component', htmlspecialchars( $memoryData['partnumber']));
+                $component3->addAttribute('name', 'PartNumber');
+                $component3->addAttribute('type', 'string');
 
-			//Set Slots
-            $component4 = $component->addChild('component', htmlspecialchars($memoryData['slots']));
-            $component4->addAttribute('name', 'Slots');
-            $component4->addAttribute('type', 'string');
+    			//Set Slots
+                $component4 = $component->addChild('component', htmlspecialchars($memoryData['slots']));
+                $component4->addAttribute('name', 'Slots');
+                $component4->addAttribute('type', 'string');
 
-			//Set MaximumMemoryCapacity
-            $component5 = $component->addChild('component', htmlspecialchars($memoryData['max_memory']));
-            $component5->addAttribute('name', 'MaximumMemoryCapacity');
-            $component5->addAttribute('type', 'string');
+    			//Set MaximumMemoryCapacity
+                $component5 = $component->addChild('component', htmlspecialchars($memoryData['max_memory']));
+                $component5->addAttribute('name', 'MaximumMemoryCapacity');
+                $component5->addAttribute('type', 'string');
 
-			//Set Speed
-            $component6 = $component->addChild('component', htmlspecialchars($memoryData['speed']));
-            $component6->addAttribute('name', 'Speed');
-            $component6->addAttribute('type', 'string');
+    			//Set Speed
+                $component6 = $component->addChild('component', htmlspecialchars($memoryData['speed']));
+                $component6->addAttribute('name', 'Speed');
+                $component6->addAttribute('type', 'string');
+            }
         }
 
 		// component  Video Outputs
@@ -748,6 +750,7 @@ trait CommonWipeBiosMakorApiTraits
     public function SetBiosComputerData()
     {
     	$this->apiDataArray = getBiosData($this->data);
+ 
         if (isset($this->apiDataArray['memory']))
         {
             foreach ($this->apiDataArray['memory'] as $memoryData)
@@ -787,6 +790,7 @@ trait CommonWipeBiosMakorApiTraits
                         }
 
                         $capacity = BToGB($memory['size']);
+                        
                         $this->CombinedRAM[$key] = $capacity;
                         
                         $this->apiData['memory_data'][$key]['capacity'] = $capacity . "GB";
@@ -1024,7 +1028,13 @@ trait CommonWipeBiosMakorApiTraits
             $this->apiData['Video_Outputs'][0]['Processor'] = $videoOutput;
             $this->apiData['Video_Outputs'][0]['Ports'] = "N/A";
         }
-        $this->apiData['CombinedRAM'] = getMakorRAMString($this->CombinedRAM);
+
+        if( isset( $this->CombinedRAM ) && !empty( $this->CombinedRAM ) ) {
+             $this->apiData['CombinedRAM'] = getMakorRAMString($this->CombinedRAM);
+         } else {
+             $this->apiData['CombinedRAM'] = '';
+         }
+       
     }
 
     public function AddCommomBiosData($allDataArray, $BiosAdditionalFileContent, $productName, $assetNumber)
@@ -1251,21 +1261,38 @@ trait CommonWipeBiosMakorApiTraits
 
         if (isset($this->additionalData['Description']['Input_Output']))
         {
-            $this->apiData['Input/Output'] = implode(",", $this->additionalData['Description']['Input_Output']);
+            if (is_array($this->additionalData['Description']['Input_Output']))
+            {
+                $Input_Output = implode(",", $this->additionalData['Description']['Input_Output']);
+            }
+            else
+            {
+                $Input_Output = $this->additionalData['Description']['Input_Output'];
+            }
+            $this->apiData['Input/Output'] = $Input_Output;
         }
         else
         {
             $this->apiData['Input/Output'] = "N/A";
         }
 
-        if (isset($this->additionalData['Description']['Other']))
+          if (isset($this->additionalData['Description']['Other']))
         {
-            $this->apiData['Other'] = $this->additionalData['Description']['Other'];
+            if (is_array($this->additionalData['Description']['Other']))
+            {
+                $Other = implode(",", $this->additionalData['Description']['Other']);
+            }
+            else
+            {
+                $Other = $this->additionalData['Description']['Other'];
+            }
+            $this->apiData['Other'] = $Other;
         }
         else
         {
             $this->apiData['Other'] = "N/A";
         }
+
 
         if (isset($this->additionalData['Description']['Functional']))
         {

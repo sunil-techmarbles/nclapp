@@ -1258,14 +1258,15 @@ function getOpticle($data)
 function getMakorRAMString($ram)
 {
     $ram_string = "";
+    $ram_capacity = 0;
     foreach ($ram as $key => $value) {
         $stick_capacity = (int) $value;
         $stick_capacity_gb = $stick_capacity . "GB";
         $ram_sizes[$stick_capacity_gb][] = $key;
-        $ram_string += (int) $value;
+        $ram_capacity += (int) $value;
     }
-    $ram_string .= "GB:";
 
+    $ram_string .= $ram_capacity . "GB:";
     $count = 1;
     $total_ram_sizes = count($ram_sizes);
 
@@ -1279,7 +1280,6 @@ function getMakorRAMString($ram)
         }
         $count++;
     }
-
     return $ram_string;
 }
 
