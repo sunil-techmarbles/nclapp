@@ -87,10 +87,10 @@ class ShipmentsData extends Model
     	return self::select('shipments_data.aid', 'shipments_data.sid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
 			->selectSub('count(shipments_data.id)', 'cnt')
     		->join('asins as a', function($join) use($shipmentName, $status){
-                $join->on('shipments_data.aid', '=', 'a.id')
-                        ->where('shipments_data.sid','=', $shipmentName)
-                        ->where('shipments_data.status','=', $status);
-                })
+                $join->on('shipments_data.aid', '=', 'a.id');                        
+            })
+            ->where('shipments_data.sid','=', $shipmentName)
+            ->where('shipments_data.status','=', $status)
     		->groupBy('shipments_data.aid')
             ->get();
     }
@@ -99,11 +99,11 @@ class ShipmentsData extends Model
     {
     	return self::select('shipments_data.aid', 'shipments_data.sid', 'shipments_data.old_coa', 'shipments_data.new_coa', 'shipments_data.win8_activated', 'shipments_data.asset', 'shipments_data.sn', 'shipments_data.added_on','a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
     		->join('asins as a', function($join) use($shipmentName, $status, $aid){
-                $join->on('shipments_data.aid', '=', 'a.id')
-                        ->where('shipments_data.sid','=',$shipmentName)
-                        ->where('shipments_data.status','=',$status)
-                        ->where('shipments_data.aid','=',$aid);
-                })
+                $join->on('shipments_data.aid', '=', 'a.id');
+            })
+            ->where('shipments_data.sid','=',$shipmentName)
+            ->where('shipments_data.status','=',$status)
+            ->where('shipments_data.aid','=',$aid)
     		->orderBy('shipments_data.aid')
     		->orderBy('shipments_data.asset')
             ->get();
@@ -128,28 +128,28 @@ class ShipmentsData extends Model
         return self::select('shipments_data.aid', 's.id', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
             ->selectSub('count(shipments_data.id)', 'cnt')
             ->join('asins as a', function($join) use ($currentSession, $status){
-                $join->on('shipments_data.aid', '=', 'a.id')
-                    ->where('shipments_data.sid','=', $currentSession)
-                    ->where('shipments_data.status','=', $status);
+                $join->on('shipments_data.aid', '=', 'a.id');
             })
             ->join('shipments as s', function($join) use ($currentSession){
-                $join->on('shipments_data.aid', '=', 's.id');
+                $join->on('shipments_data.sid', '=', 's.id');
             })
+            ->where('shipments_data.sid','=', $currentSession)
+            ->where('shipments_data.status','=', $status)
             ->groupBy('shipments_data.aid')
             ->get();
     }
 
     public static function sessionItems($currentSession, $status)
     {
-        return self::select('shipments_data.aid', 's.id', 'shipments_data.old_coa',  'shipments_data.new_coa', 'shipments_data.win8_activated', 'shipments_data.asset', 'shipments_data.sn', 'shipments_data.added_on', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
+        return self::select('shipments_data.aid', 's.id', 'shipments_data.old_coa',  'shipments_data.new_coa', 'shipments_data.win8_activated', 'shipments_data.asset', 'shipments_data.sn', 'shipments_data.added_on', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
             ->join('asins as a', function($join) use ($currentSession, $status){
-                $join->on('shipments_data.aid', '=', 'a.id')
-                    ->where('shipments_data.sid','=', $currentSession)
-                    ->where('shipments_data.status','=', $status);
+                $join->on('shipments_data.aid', '=', 'a.id');
             })
-            ->join('shipments as s', function($join) use ($currentSession){
-                $join->on('shipments_data.aid', '=', 's.id');
+            ->join('shipments as s', function($join) use ($currentSession, $status){
+                $join->on('shipments_data.sid', '=', 's.id');
             })
+            ->where('shipments_data.sid','=', $currentSession)
+            ->where('shipments_data.status','=', $status)
             ->orderBy('shipments_data.aid', 'DESC')
             ->orderBy('shipments_data.asset', 'DESC')
             ->get();
@@ -167,10 +167,10 @@ class ShipmentsData extends Model
                 $join->on('i.id', '=', 'p.supplie_id');
             })
             ->join('shipments_data as d', function($join) use ($currentSession, $status){
-                $join->on('d.aid', '=', 'p.asin_model_id')
-                    ->where('d.sid','=', $currentSession)
-                    ->where('d.status','=', $status);
+                $join->on('d.aid', '=', 'p.asin_model_id');                    ;
             })
+            ->where('d.sid','=', $currentSession)
+            ->where('d.status','=', $status)
             ->groupBy('i.id')
             ->get();
     }

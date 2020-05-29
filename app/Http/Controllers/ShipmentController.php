@@ -288,8 +288,7 @@ class ShipmentController extends Controller
 					}
 				}
 				if($aid && strlen($asset)>3)
-				{
-					// echo 'i ma here';
+				{					
 					$data = [
 						"sid" => $sess,
 						"aid" => $aid,
@@ -300,11 +299,9 @@ class ShipmentController extends Controller
 						"asset" => $asset,
 						"added_by" => Sentinel::getUser()->first_name
 					];
-					// print_r($data);
 					ShipmentsData::deleteOldShipmentData($sess,$asset);
 					ShipmentsData::addShipmentData((object) $data, $this->current);
 					SessionData::updateSessiontStatus($asset, $status='removed');
-					// ShipmentsData::updateShipmentData($asset, );
 					$assetNumber .= ",#" .$asset;
 					$result = ['status' => true, 'message' => 'ASIN Record added for asset'.$assetNumber];
 				}
@@ -432,8 +429,7 @@ class ShipmentController extends Controller
 			"tems" => $sessionSummary, 
 			"summary" => $sessionSummary,
 			"name" => $shipmentName
-		];
-
+		];		
 		if (!File::exists($this->sessionReports))
 		{
 			File::makeDirectory($this->sessionReports, 0777, true, true);
@@ -441,7 +437,7 @@ class ShipmentController extends Controller
 
 		$fp = fopen($this->sessionReports.'/coa'.$currentSession.'.csv', "w");
 		fputcsv($fp, ["Shipment ID","Asset","S/N","Old COA","New COA","WIN8","Model","CPU","Added"]);
-		foreach ($sessionSummary as $i) {
+		foreach ($sessionItems as $i) {
 		    $itm = [
 		    	$i["id"],
 		    	$i["asset"],
@@ -458,7 +454,7 @@ class ShipmentController extends Controller
 		fclose($fp);
 		$fp = fopen($this->sessionReports.'/shipment'.$currentSession.'.csv', "w");
 		fputcsv($fp, ["ASIN","Asset","Model","Form Factor","S/N","CPU","Price","Added"]);
-		foreach ($sessionSummary as $i)
+		foreach ($sessionItems as $i)
 		{
 		    $fields = [
 		    	$i["asin"],
@@ -476,14 +472,13 @@ class ShipmentController extends Controller
 		fclose($fp);
 		$shipmentEmails = $this->shipmentEmails;
 		$subject = 'Shipment details';
-		$name = $currentSession.'.csv';
-		$files[] = $this->sessionReports.'/shipment'.$name;
-		$files[] = $this->sessionReports.'/coa'.$name;
-		Mail::send('admin.emails.shipmail', $data, function ($m) use ($subject, $shipmentEmails, $files, $name) {
+		$files[] = array('url' => $this->sessionReports.'/'.'shipment'.$currentSession.'.csv', 'name' => 'shipment'.$currentSession.'.csv');
+		$files[] = array('url' => $this->sessionReports.'/'.'coa'.$currentSession.'.csv', 'name' => 'coa'.$currentSession.'.csv');		
+		Mail::send('admin.emails.shipmail', $data, function ($m) use ($subject, $shipmentEmails, $files) {
             $m->to($shipmentEmails)->subject($subject);
             foreach($files as $file) {
-                $m->attach($file, array(
-                    'as' => $name,
+                $m->attach($file['url'], array(
+                    'as' => $file['name'],
                     'mime' => 'csv')
                 );
             }
