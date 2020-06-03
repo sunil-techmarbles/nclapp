@@ -177,15 +177,15 @@ class SessionController extends Controller
 				$pdf->save($this->sessionReports.'/session'.$currentSession.'.pdf');
 				$sessionEmails = $this->sessionEmails;
 				$subject = 'Session details';
-				$name = $currentSession.'.csv';
-				$name2 = $currentSession.'.pdf';
+				$name = 'session'.$currentSession.'.csv';
+				$name2 = 'session'.$currentSession.'.pdf';
 				$files[] = [
-					'url' => $this->sessionReports.'/session'.$name, 
+					'url' => $this->sessionReports.'/'.$name, 
 					'name' =>  $name,
 					'extension' => substr($name, strpos($name, ".") + 1)
 				];
 				$files[] = [
-					'url' => $this->sessionReports.'/session'.$name2,
+					'url' => $this->sessionReports.'/'.$name2,
 					'name' => $name2,
 					'extension' => substr($name2, strpos($name2, ".") + 1)
 				];

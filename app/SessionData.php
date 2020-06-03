@@ -130,10 +130,10 @@ class SessionData extends Model
     	return self::select('session_data.aid', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link')
 			->selectSub('count(session_data.aid)', 'cnt')
     		->join('asins as a', function($join) use($currentSession){
-                $join->on('session_data.aid', '=', 'a.id')
-                        ->where('session_data.sid','=', $currentSession)
-                        ->where('session_data.status','=', 'active');
-                })
+                $join->on('session_data.aid', '=', 'a.id');
+            })
+            ->where('session_data.sid','=', $currentSession)
+            ->where('session_data.status','=', 'active')
     		->groupBy('session_data.aid')
             ->get();
     }
@@ -143,10 +143,10 @@ class SessionData extends Model
     	return self::select('session_data.aid', 'session_data.asset', 'a.asin', 'a.price', 'a.model', 'a.form_factor', 'a.cpu_core', 'a.cpu_model', 'a.cpu_speed', 'a.ram', 'a.hdd', 'a.os', 'a.webcam', 'a.notes', 'a.link', 'session_data.added_on')
 			->selectSub('count(session_data.aid)', 'cnt')
     		->join('asins as a', function($join) use($currentSession){
-                $join->on('session_data.aid', '=', 'a.id')
-                        ->where('session_data.sid','=', $currentSession)
-                        ->where('session_data.status','=', 'active');
-                })
+                $join->on('session_data.aid', '=', 'a.id');
+            })
+            ->where('session_data.sid','=', $currentSession)
+            ->where('session_data.status','=', 'active')
     		->orderBy('session_data.aid', 'DESC')
     		->orderBy('session_data.asset', 'DESC')
             ->get();
@@ -164,10 +164,10 @@ class SessionData extends Model
                 $join->on('i.id', '=', 'p.supplie_id');
             })
             ->join('session_data as d', function($join) use($currentSession){
-                $join->on('d.aid', '=', 'p.asin_model_id')
-                    ->where('d.sid','=', $currentSession)
-                    ->where('d.status','=', 'active');
+                $join->on('d.aid', '=', 'p.asin_model_id');
             })
+            ->where('session_data.sid','=', $currentSession)
+            ->where('session_data.status','=', 'active')
             ->groupBy('i.id')
             ->get();
     }
